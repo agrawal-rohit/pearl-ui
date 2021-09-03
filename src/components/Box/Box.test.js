@@ -4,6 +4,8 @@ import { ThemeProvider } from "@shopify/restyle";
 import theme from "../../theme";
 import renderer from "react-test-renderer";
 
+jest.useFakeTimers();
+
 describe("<Box />", () => {
   it("exists", () => {
     const tree = renderer
