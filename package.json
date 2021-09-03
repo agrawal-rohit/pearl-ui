@@ -1,5 +1,5 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "lib/commonjs/index.js",
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@react-native-community/bob": "^0.17.1",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
@@ -38,6 +37,7 @@
     "@types/react-native": "~0.63.2",
     "babel-loader": "^8.2.2",
     "jest-expo": "^42.1.0",
+    "react-native-builder-bob": "^0.18.1",
     "react-native-storybook-loader": "^2.0.4",
     "react-test-renderer": "^17.0.2",
     "typescript": "~4.0.0"
