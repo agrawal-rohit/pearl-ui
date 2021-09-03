@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1630656070216" clover="3.2.0">
+  <project timestamp="1630656070216" name="All files">
+    <metrics statements="14" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="0" elements="22" coveredelements="3" complexity="0" loc="14" ncloc="14" packages="5" files="8" classes="8"/>
+    <package name="nen-ui">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="App.tsx" path="/Users/rohitagrawal/Dev/Personal/nen-ui/App.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="commitlint.config.js" path="/Users/rohitagrawal/Dev/Personal/nen-ui/commitlint.config.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="nen-ui.src">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="theme.ts" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/theme.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="nen-ui.src.components.Box">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Box.tsx" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/components/Box/Box.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="nen-ui.src.components.Button">
+      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="Button.story.js" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/components/Button/Button.story.js">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="Button.tsx" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/components/Button/Button.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="nen-ui.src.components.Text">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Text.tsx" path="/Users/rohitagrawal/Dev/Personal/nen-ui/src/components/Text/Text.tsx">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
