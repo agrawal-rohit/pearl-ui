@@ -1,4 +1,3 @@
-// Button.tsx
 import React from "react";
 import { BoxProps, TextProps } from "@shopify/restyle";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
@@ -23,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     <Box
       py="m"
       px="xl"
-      backgroundColor="primary"
+      backgroundColor="primary500"
       borderRadius={8}
       shadowOffset={{ height: 2, width: 0 }}
       shadowRadius={5}
