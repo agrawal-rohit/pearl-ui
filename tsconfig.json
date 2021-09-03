@@ -9,7 +9,7 @@
     "dist",
     "lib",
     "**/*.spec.ts",
-    "**/*.stories.[tj]sx",
+    "**/*.story.[tj]sx",
     "**/*.test.[tj]sx",
     "App.test.tsx",
     "App.tsx"
