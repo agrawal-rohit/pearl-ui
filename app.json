@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nen-ui",
-    "slug": "nen-ui",
+    "name": "ninpo-ui",
+    "slug": "ninpo-ui",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
