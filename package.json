@@ -9,7 +9,7 @@
     "eject": "expo eject",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
-    "test": "jest --watch --coverage=false --detectOpenHandles",
+    "test": "jest --coverage=false --detectOpenHandles",
     "testDebug": "jest -o --watch --coverage=false",
     "testFinal": "jest --detectOpenHandles",
     "updateSnapshots": "jest -u --coverage=false",
