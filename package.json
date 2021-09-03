@@ -12,7 +12,10 @@
     "test": "jest --watch --coverage=false",
     "testDebug": "jest -o --watch --coverage=false",
     "testFinal": "jest",
-    "updateSnapshots": "jest -u --coverage=false"
+    "updateSnapshots": "jest -u --coverage=false",
+    "prepare": "bob build",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
@@ -26,6 +29,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
@@ -36,10 +43,14 @@
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.2",
     "jest-expo": "^42.1.0",
     "react-native-builder-bob": "^0.18.1",
     "react-native-storybook-loader": "^2.0.4",
     "react-test-renderer": "^17.0.2",
+    "semantic-release": "^17.4.7",
     "typescript": "~4.0.0"
   },
   "private": true,
@@ -51,6 +62,9 @@
       ],
       "pattern": "**/*.story.js",
       "outputFile": "./storybook/storyLoader.js"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "jest": {
@@ -67,6 +81,53 @@
       "!**/storybook/**",
       "!**/assets/**",
       "!**/jest.setup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  },
+  "react-native": "src/index.ts",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "dist/**/*.{js,ts}",
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
+      }
     ]
   }
 }
