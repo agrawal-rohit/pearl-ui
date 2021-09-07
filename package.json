@@ -20,13 +20,18 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@shopify/restyle": "^1.4.0",
+    "@storybook/addon-a11y": "^6.3.8",
+    "@storybook/addon-controls": "^6.3.8",
+    "@storybook/addon-docs": "^6.3.8",
+    "@storybook/addon-toolbars": "^6.3.8",
     "expo": "~42.0.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-aria": "^0.2.3",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "storybook": "^6.3.8"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

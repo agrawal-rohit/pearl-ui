@@ -26,14 +26,13 @@ const Button: React.FC<ButtonProps> = ({
       borderRadius={8}
       shadowOffset={{ height: 2, width: 0 }}
       shadowRadius={5}
-      shadowColor="black"
       shadowOpacity={0.2}
       {...props}
     >
       {loading ? (
         <ActivityIndicator color="white" />
       ) : (
-        <Text color="white" {...textProps}>
+        <Text color="buttonTextColor" {...textProps}>
           {children}
         </Text>
       )}

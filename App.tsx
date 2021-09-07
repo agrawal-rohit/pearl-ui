@@ -1,11 +1,9 @@
 import React from "react";
-import { ThemeProvider } from "@shopify/restyle";
-
+import { ThemeProvider } from "./src/themeContext";
 import Storybook from "./storybook";
-import theme from "./src/theme";
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <Storybook />
   </ThemeProvider>
 );
