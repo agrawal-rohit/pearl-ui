@@ -4,10 +4,21 @@ import { text } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 import Button from "./Button";
 import Text from "../Text/Text";
-import CenterView from "../../../storybook/stories/CenterView";
+import { View } from "react-native";
 
 storiesOf("Button", module)
-  .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
+  .addDecorator((getStory) => (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#F5FCFF",
+      }}
+    >
+      {getStory()}
+    </View>
+  ))
   .add("with text", () => (
     <Button onPress={action("clicked-text")}>
       <Text>{text("Button text", "Hello Button")}</Text>

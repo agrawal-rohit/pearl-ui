@@ -1,0 +1,24 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [0],
+    "global-require": [0],
+    "react/jsx-props-no-spreading": [0],
+    "react/prop-types": [0],
+    "no-shadow": [0],
+    "react/no-children-prop": [0],
+    "import/prefer-default-export": [0],
+    "no-console": [0],
+    "react/display-name": [1]
+  }
+}

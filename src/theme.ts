@@ -1,11 +1,6 @@
 import { createTheme } from "@shopify/restyle";
 
-const palette = {
-  black: "#0B0B0B",
-  white: "#F0F2F3",
-};
-
-const theme = createTheme({
+export const baseTheme = createTheme({
   colors: {
     primary50: "#e5e8ff",
     primary100: "#e1e5ff",
@@ -29,7 +24,9 @@ const theme = createTheme({
     secondary800: "#662a4f",
     secondary900: "#331528",
 
-    ...palette,
+    mainBackground: "#F0F2F3",
+    textColor: "#0B0B0B",
+    buttonTextColor: "#F0F2F3",
   },
   spacing: {
     s: 8,
@@ -39,9 +36,80 @@ const theme = createTheme({
   },
   breakpoints: {
     phone: 0,
+    longPhone: {
+      width: 0,
+      height: 812,
+    },
     tablet: 768,
+    largeTablet: 1024,
+  },
+  textVariants: {
+    header: {
+      fontFamily: "Jost-Bold",
+      fontWeight: "bold",
+      fontSize: 34,
+      lineHeight: 42.5,
+      color: "textColor",
+    },
+    subheader: {
+      fontFamily: "Jost-SemiBold",
+      fontWeight: "600",
+      fontSize: 24,
+      lineHeight: 36,
+      color: "textColor",
+    },
+    title: {
+      fontFamily: "Jost-Medium",
+      fontWeight: "500",
+      fontSize: 20,
+      lineHeight: 34,
+      color: "textColor",
+    },
+    subtitle: {
+      fontFamily: "Jost-Medium",
+      fontWeight: "500",
+      fontSize: 17,
+      lineHeight: 36,
+      color: "textColor",
+    },
+    body1: {
+      fontFamily: "Jost-Medium",
+      fontWeight: "500",
+      fontSize: 15,
+      lineHeight: 36,
+      color: "textColor",
+    },
+    body2: {
+      fontFamily: "Jost-Regular",
+      fontWeight: "400",
+      fontSize: 15,
+      lineHeight: 36,
+      color: "textColor",
+    },
+    caption: {
+      fontFamily: "Jost-Regular",
+      fontWeight: "400",
+      fontSize: 12,
+      lineHeight: 36,
+      color: "textColor",
+    },
+    button: {
+      fontFamily: "Jost-Medium",
+      fontWeight: "500",
+      fontSize: 16,
+      lineHeight: 36,
+      color: "buttonTextColor",
+    },
   },
 });
 
-export type Theme = typeof theme;
-export default theme;
+export type Theme = typeof baseTheme;
+
+export const darkTheme: Theme = {
+  ...baseTheme,
+  colors: {
+    ...baseTheme.colors,
+    mainBackground: "#0B0B0B",
+    textColor: "#F0F2F3",
+  },
+};
