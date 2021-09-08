@@ -6,6 +6,7 @@
 function loadStories() {
   require("../src/components/ActivityIndicator/ActivityIndicator.story");
   require("../src/components/Button/Button.story");
+  require("../src/components/Center/Center.story");
   require("../src/components/OfflineNotice/OfflineNotice.story");
   require("../src/components/Screen/Screen.story");
 }
@@ -13,6 +14,7 @@ function loadStories() {
 const stories = [
   "../src/components/ActivityIndicator/ActivityIndicator.story",
   "../src/components/Button/Button.story",
+  "../src/components/Center/Center.story",
   "../src/components/OfflineNotice/OfflineNotice.story",
   "../src/components/Screen/Screen.story",
 ];
