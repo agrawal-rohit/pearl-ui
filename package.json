@@ -18,18 +18,22 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@shopify/restyle": "^1.4.0",
     "@storybook/addon-a11y": "^6.3.8",
     "@storybook/addon-controls": "^6.3.8",
     "@storybook/addon-docs": "^6.3.8",
     "@storybook/addon-toolbars": "^6.3.8",
+    "@types/react-native-indicators": "^0.16.1",
     "expo": "~42.0.1",
+    "expo-app-loading": "^1.1.2",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-aria": "^0.2.3",
+    "react-native-indicators": "^0.17.0",
     "react-native-web": "~0.13.12",
     "storybook": "^6.3.8"
   },
