@@ -4,21 +4,10 @@ import { text } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 import Button from "./Button";
 import Text from "../Text/Text";
-import { View } from "react-native";
+import Screen from "../Screen/Screen";
 
 storiesOf("Button", module)
-  .addDecorator((getStory) => (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
-      }}
-    >
-      {getStory()}
-    </View>
-  ))
+  .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("with text", () => (
     <Button onPress={action("clicked-text")}>
       <Text>{text("Button text", "Hello Button")}</Text>

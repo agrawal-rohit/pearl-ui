@@ -21,18 +21,17 @@ const Button: React.FC<ButtonProps> = ({
   <TouchableHighlight underlayColor="transparent" onPress={onPress}>
     <Box
       py="m"
-      px="xl"
+      px="m"
       backgroundColor="primary500"
-      borderRadius={8}
-      shadowOffset={{ height: 2, width: 0 }}
-      shadowRadius={5}
-      shadowOpacity={0.2}
+      borderRadius={5}
+      alignItems="center"
+      justifyContent="center"
       {...props}
     >
       {loading ? (
         <ActivityIndicator color="white" />
       ) : (
-        <Text color="buttonTextColor" {...textProps}>
+        <Text color="buttonTextColor" variant="button">
           {children}
         </Text>
       )}

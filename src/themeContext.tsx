@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { ThemeProvider as RestyleThemeProvider } from "@shopify/restyle";
 import { baseTheme, darkTheme, Theme } from "./theme";
-import { ReactElement } from "react-color/node_modules/@types/react";
 
 type ThemeType = "light" | "dark" | "system";
 

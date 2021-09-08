@@ -1,8 +1,7 @@
 import React from "react";
 import Box from "./Box";
-import { ThemeProvider } from "@shopify/restyle";
-import theme from "../../theme";
 import renderer from "react-test-renderer";
+import { ThemeProvider } from "../../themeContext";
 
 jest.useFakeTimers();
 
@@ -10,7 +9,7 @@ describe("<Box />", () => {
   it("exists", () => {
     const tree = renderer
       .create(
-        <ThemeProvider theme={theme}>
+        <ThemeProvider>
           <Box>asdasd</Box>
         </ThemeProvider>
       )
