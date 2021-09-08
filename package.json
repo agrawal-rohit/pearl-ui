@@ -20,6 +20,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
     "@react-native-async-storage/async-storage": "~1.15.0",
+    "@react-native-community/netinfo": "^6.0.2",
     "@shopify/restyle": "^1.4.0",
     "@storybook/addon-a11y": "^6.3.8",
     "@storybook/addon-controls": "^6.3.8",
