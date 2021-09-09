@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
-import Screen from "../Screen/Screen";
+import Screen from "./Screen";
 
 storiesOf("Screen", module)
   .addDecorator((getStory) => getStory())

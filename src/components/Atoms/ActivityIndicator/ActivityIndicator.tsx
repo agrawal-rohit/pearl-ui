@@ -18,7 +18,7 @@ import {
   UIActivityIndicator,
   WaveIndicator,
 } from "react-native-indicators";
-import { Theme } from "../../theme";
+import { Theme } from "../../../theme";
 
 const restyleFunctions = [spacing, layout];
 type IActivityIndicatorProps = SpacingProps<Theme> &

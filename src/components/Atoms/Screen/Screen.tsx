@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "../..";
+import Box from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
 
 interface ScreenProps {}

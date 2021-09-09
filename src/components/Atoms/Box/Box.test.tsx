@@ -1,11 +1,11 @@
 import React from "react";
 import Box from "./Box";
-import { ThemeProvider } from "../../themeContext";
 import { render } from "@testing-library/react-native";
+import { ThemeProvider } from "../../../themeContext";
 
 jest.useFakeTimers();
 
-describe("<Box />", () => {
+describe("Atoms/Box", () => {
   it("exists", () => {
     const tree = render(
       <ThemeProvider>

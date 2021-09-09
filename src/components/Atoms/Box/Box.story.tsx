@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
 import Screen from "../Screen/Screen";
-import OfflineNotice from "./OfflineNotice";
+import Box from "../Box/Box";
 
-storiesOf("OfflineNotice", module)
+storiesOf("Box", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
-  .add("no internet", () => <OfflineNotice />);
+  .add("Basic box", () => <Box>This is a sample box</Box>);
