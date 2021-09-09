@@ -9,19 +9,19 @@ import OfflineNotice from "./src/components/OfflineNotice/OfflineNotice";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
-    "Jost-Regular": require("./src/fonts/Jost-Regular.ttf"),
-    "Jost-SemiBold": require("./src/fonts/Jost-SemiBold.ttf"),
-    "Jost-Bold": require("./src/fonts/Jost-Bold.ttf"),
-    "Jost-ExtraBold": require("./src/fonts/Jost-ExtraBold.ttf"),
-    "Jost-ExtraLight": require("./src/fonts/Jost-ExtraLight.ttf"),
-    "Jost-Light": require("./src/fonts/Jost-Light.ttf"),
-    "Jost-Medium": require("./src/fonts/Jost-Medium.ttf"),
-    "Jost-Thin": require("./src/fonts/Jost-Thin.ttf"),
+    "Poppins-Regular": require("./src/fonts/Poppins-Regular.ttf"),
+    "Poppins-SemiBold": require("./src/fonts/Poppins-SemiBold.ttf"),
+    "Poppins-Bold": require("./src/fonts/Poppins-Bold.ttf"),
+    "Poppins-ExtraBold": require("./src/fonts/Poppins-ExtraBold.ttf"),
+    "Poppins-ExtraLight": require("./src/fonts/Poppins-ExtraLight.ttf"),
+    "Poppins-Light": require("./src/fonts/Poppins-Light.ttf"),
+    "Poppins-Medium": require("./src/fonts/Poppins-Medium.ttf"),
+    "Poppins-Thin": require("./src/fonts/Poppins-Thin.ttf"),
   });
 
   if (haveFontsLoaded) {
     return (
-      <ThemeProvider defaultMode="dark">
+      <ThemeProvider defaultColorMode="dark">
         <Storybook />
         {/* <OfflineNotice />
         <Screen>

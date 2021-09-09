@@ -9,6 +9,7 @@ function loadStories() {
   require("../src/components/Center/Center.story");
   require("../src/components/OfflineNotice/OfflineNotice.story");
   require("../src/components/Screen/Screen.story");
+  require("../src/components/Text/Text.story");
 }
 
 const stories = [
@@ -17,6 +18,7 @@ const stories = [
   "../src/components/Center/Center.story",
   "../src/components/OfflineNotice/OfflineNotice.story",
   "../src/components/Screen/Screen.story",
+  "../src/components/Text/Text.story",
 ];
 
 module.exports = {

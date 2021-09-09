@@ -72,13 +72,13 @@ const palette = {
   danger900: "#7A0C2C",
 };
 
-export const baseTheme = createTheme({
+export const baseLightTheme = createTheme({
   colors: {
     ...palette,
 
     mainBackground: palette.neutral100,
-    textColor: "#0B0B0B",
-    buttonTextColor: "#F0F2F3",
+    textColor: palette.neutral800,
+    buttonTextColor: palette.neutral100,
   },
   spacing: {
     s: 8,
@@ -96,52 +96,88 @@ export const baseTheme = createTheme({
     largeTablet: 1024,
   },
   textVariants: {
-    header: {
-      fontFamily: "Jost-Bold",
+    h1: {
+      fontFamily: "Poppins-Bold",
       fontWeight: "bold",
-      fontSize: 34,
+      fontSize: 42,
       color: "textColor",
     },
-    subheader: {
-      fontFamily: "Jost-SemiBold",
+    h2: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 36,
+      color: "textColor",
+    },
+    h3: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 32,
+      color: "textColor",
+    },
+    h4: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 30,
+      color: "textColor",
+    },
+    h5: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 26,
+      color: "textColor",
+    },
+    h6: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 22,
+      color: "textColor",
+    },
+    s1: {
+      fontFamily: "Poppins-SemiBold",
       fontWeight: "600",
-      fontSize: 24,
+      fontSize: 22,
       color: "textColor",
     },
-    title: {
-      fontFamily: "Jost-Medium",
-      fontWeight: "500",
-      fontSize: 20,
+    s2: {
+      fontFamily: "Poppins-SemiBold",
+      fontWeight: "600",
+      fontSize: 19,
       color: "textColor",
     },
-    subtitle: {
-      fontFamily: "Jost-Medium",
+    p1: {
+      fontFamily: "Poppins-Regular",
+      fontWeight: "400",
+      fontSize: 19,
+      color: "textColor",
+    },
+    p2: {
+      fontFamily: "Poppins-Regular",
+      fontWeight: "400",
+      fontSize: 17,
+      color: "textColor",
+    },
+    c1: {
+      fontFamily: "Poppins-Regular",
+      fontWeight: "400",
+      fontSize: 17,
+      color: "textColor",
+    },
+    c2: {
+      fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 17,
       color: "textColor",
     },
-    body1: {
-      fontFamily: "Jost-Medium",
-      fontWeight: "500",
-      fontSize: 15,
-      color: "textColor",
-    },
-    body2: {
-      fontFamily: "Jost-Regular",
-      fontWeight: "400",
-      fontSize: 15,
-      color: "textColor",
-    },
-    caption: {
-      fontFamily: "Jost-Regular",
-      fontWeight: "400",
-      fontSize: 12,
+    label: {
+      fontFamily: "Poppins-Bold",
+      fontWeight: "bold",
+      fontSize: 17,
       color: "textColor",
     },
     button: {
-      fontFamily: "Jost-Medium",
+      fontFamily: "Poppins-Medium",
       fontWeight: "500",
-      fontSize: 16,
+      fontSize: 17,
       color: "buttonTextColor",
     },
   },
@@ -161,12 +197,12 @@ export const baseTheme = createTheme({
   },
 });
 
-export type Theme = typeof baseTheme;
+export type Theme = typeof baseLightTheme;
 
-export const darkTheme: Theme = {
-  ...baseTheme,
+export const baseDarkTheme: Theme = {
+  ...baseLightTheme,
   colors: {
-    ...baseTheme.colors,
+    ...baseLightTheme.colors,
     mainBackground: palette.neutral700,
     textColor: "#F0F2F3",
   },
