@@ -3,8 +3,8 @@ import { action } from "@storybook/addon-actions";
 import { text } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 import Button from "./Button";
-import Text from "../Text/Text";
-import Screen from "../Screen/Screen";
+import Text from "../../Atoms/Text/Text";
+import Screen from "../../Atoms/Screen/Screen";
 
 storiesOf("Button", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)

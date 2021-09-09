@@ -1,8 +1,8 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 import { NetInfoStateType, useNetInfo } from "@react-native-community/netinfo";
-import { Box, Text } from "../..";
+import Box from "../../Atoms/Box/Box";
+import Text from "../../Atoms/Text/Text";
 
 export default function OfflineNotice() {
   const netInfo = useNetInfo();

@@ -1,11 +1,11 @@
 import React from "react";
 import Text from "./Text";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../themeContext";
+import { ThemeProvider } from "../../../themeContext";
 
 jest.useFakeTimers();
 
-describe("<Text />", () => {
+describe("Atoms/Text", () => {
   it("exists", () => {
     const component = render(
       <ThemeProvider>

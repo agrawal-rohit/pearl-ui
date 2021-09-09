@@ -2,10 +2,7 @@ import React from "react";
 import { ThemeProvider } from "./src/themeContext";
 import Storybook from "./storybook";
 import { useFonts } from "expo-font";
-import { Button } from "./src";
 import AppLoading from "expo-app-loading";
-import Screen from "./src/components/Screen/Screen";
-import OfflineNotice from "./src/components/OfflineNotice/OfflineNotice";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
