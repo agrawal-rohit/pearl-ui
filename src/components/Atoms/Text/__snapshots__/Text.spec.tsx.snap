@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> exists 1`] = `
+exports[`Atoms/Text exists 1`] = `
 <Text
   style={
     Array [

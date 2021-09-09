@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Center exists 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+      },
+      Array [
+        Object {
+          "display": "flex",
+        },
+      ],
+    ]
+  }
+>
+  This is centered
+</View>
+`;
