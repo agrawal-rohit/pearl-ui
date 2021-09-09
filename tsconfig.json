@@ -2,7 +2,8 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "noEmit": false
+    "noEmit": false,
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules",
@@ -12,6 +13,7 @@
     "**/*.story.[tj]sx",
     "**/*.test.[tj]sx",
     "App.test.tsx",
-    "App.tsx"
+    "App.tsx",
+    "documentationwebsite/*"
   ]
 }

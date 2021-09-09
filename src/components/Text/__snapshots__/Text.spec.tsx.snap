@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> exists 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "display": "flex",
+      },
+    ]
+  }
+>
+  Hi I am a text
+</Text>
+`;
