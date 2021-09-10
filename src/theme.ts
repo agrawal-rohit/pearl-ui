@@ -1,7 +1,11 @@
 import { createTheme } from "@shopify/restyle";
 import namedColors from "./namedColors.json";
 
-const palette = {
+export interface IColor {
+  [key: string]: string;
+}
+
+export const palette = {
   primary100: "#E1E6FF",
   primary200: "#C3CCFF",
   primary300: "#A5B1FF",
@@ -178,6 +182,12 @@ export const baseLightTheme = createTheme({
       color: "textColor",
     },
     button: {
+      fontFamily: "Poppins-Medium",
+      fontWeight: "500",
+      fontSize: 17,
+      color: "buttonTextColor",
+    },
+    notifications: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 17,

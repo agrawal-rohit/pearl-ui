@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Text exists 1`] = `
+exports[`Atoms/Text passes the snapshot test 1`] = `
 <Text
   style={
     Array [

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Screen passes the snapshot test 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "column",
+        "padding": 16,
+      },
+      Array [
+        Object {
+          "display": "flex",
+        },
+      ],
+    ]
+  }
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+        "paddingTop": 0,
+      }
+    }
+  >
+    asdasd
+  </RCTSafeAreaView>
+</View>
+`;

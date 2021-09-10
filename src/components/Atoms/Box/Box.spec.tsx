@@ -6,7 +6,7 @@ import { ThemeProvider } from "../../../themeContext";
 jest.useFakeTimers();
 
 describe("Atoms/Box", () => {
-  it("exists", () => {
+  it("passes the snapshot test", () => {
     const tree = render(
       <ThemeProvider>
         <Box>asdasd</Box>

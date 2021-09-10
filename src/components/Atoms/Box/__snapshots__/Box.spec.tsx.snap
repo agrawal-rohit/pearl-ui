@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Box exists 1`] = `
+exports[`Atoms/Box passes the snapshot test 1`] = `
 <View
   style={
     Array [

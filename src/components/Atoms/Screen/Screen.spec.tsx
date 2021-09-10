@@ -1,15 +1,15 @@
 import React from "react";
+import Screen from "./Screen";
 import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../themeContext";
-import Center from "./Center";
 
 jest.useFakeTimers();
 
-describe("Atoms/Center", () => {
+describe("Atoms/Screen", () => {
   it("passes the snapshot test", () => {
     const tree = render(
       <ThemeProvider>
-        <Center>This is centered</Center>
+        <Screen>asdasd</Screen>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

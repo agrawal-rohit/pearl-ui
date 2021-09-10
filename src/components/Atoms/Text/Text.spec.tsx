@@ -6,7 +6,7 @@ import { ThemeProvider } from "../../../themeContext";
 jest.useFakeTimers();
 
 describe("Atoms/Text", () => {
-  it("exists", () => {
+  it("passes the snapshot test", () => {
     const component = render(
       <ThemeProvider>
         <Text>Hi I am a text</Text>
