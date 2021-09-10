@@ -12,3 +12,5 @@ assignees: agrawal-rohit
 - [ ] Functionality
 - [ ] Storybook story
 - [ ] Unit tests
+- [ ] Component documentation
+- [ ] Docusaurus documentation
