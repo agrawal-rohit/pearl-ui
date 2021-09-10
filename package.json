@@ -1,5 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "name": "pearl-ui",
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
@@ -15,7 +16,7 @@
     "updateSnapshots": "jest -u --coverage=false",
     "prepare": "bob build",
     "commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches main"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
@@ -152,5 +153,10 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
       }
     ]
+  },
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agrawal-rohit/pearl-ui.git"
   }
 }
