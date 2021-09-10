@@ -141,7 +141,15 @@
   "release": {
     "branches": [
       "main",
-      "beta"
+      {
+        "name": "beta",
+        "channel": "beta",
+        "prerelease": "beta"
+      },
+      {
+        "name": "next",
+        "channel": "next"
+      }
     ],
     "prepare": [
       "@semantic-release/changelog",
