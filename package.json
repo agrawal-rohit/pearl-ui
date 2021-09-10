@@ -1,6 +1,9 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
+  "version": "1.0.0",
+  "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
+  "private": false,
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
@@ -70,7 +73,6 @@
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   },
-  "private": true,
   "config": {
     "react-native-storybook-loader": {
       "searchDir": [
@@ -165,10 +167,5 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
       }
     ]
-  },
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/agrawal-rohit/pearl-ui.git"
   }
 }
