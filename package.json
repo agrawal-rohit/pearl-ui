@@ -1,8 +1,9 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
-  "version": "1.0.0",
+  "version": "0.0.1-development",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "prestorybook": "rnstl",
@@ -145,12 +146,11 @@
       "main",
       {
         "name": "beta",
-        "channel": "beta",
-        "prerelease": "beta"
+        "prerelease": true
       },
       {
-        "name": "next",
-        "channel": "next"
+        "name": "alpha",
+        "prerelease": true
       }
     ],
     "prepare": [
