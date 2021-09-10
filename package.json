@@ -16,7 +16,7 @@
     "updateSnapshots": "jest -u --coverage=false",
     "prepare": "bob build",
     "commit": "git-cz",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
@@ -139,6 +139,10 @@
     }
   },
   "release": {
+    "branches": [
+      "main",
+      "beta"
+    ],
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
