@@ -99,6 +99,7 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx,ts,tsx}",
       "!App.tsx",
+      "!**/*.{json,md}",
       "!commitlint.config.js",
       "!**/*.story.{js,jsx,ts,tsx}",
       "!**/coverage/**",
