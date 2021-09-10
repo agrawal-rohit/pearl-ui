@@ -1,15 +1,20 @@
 import React from "react";
 import Constants from "expo-constants";
-import { NetInfoStateType, useNetInfo } from "@react-native-community/netinfo";
+import { useNetInfo } from "@react-native-community/netinfo";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
+import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
+import { Theme } from "../../../theme";
 
-export default function OfflineNotice() {
+type OfflineNoticeProps = BoxProps<Theme>;
+
+const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
+  const props = useRestyle(boxRestyleFunctions, rest);
   const netInfo = useNetInfo();
 
   if (
-    netInfo.type === NetInfoStateType.unknown ||
-    netInfo.isInternetReachable === false
+    netInfo &&
+    (netInfo.type === "unknown" || netInfo.isInternetReachable === false)
   ) {
     return (
       <Box
@@ -21,11 +26,14 @@ export default function OfflineNotice() {
         width="100%"
         position="absolute"
         zIndex={2}
+        {...props}
       >
-        <Text variant="button">No Internet Connection!</Text>
+        <Text variant="notifications">No Internet Connection!</Text>
       </Box>
     );
   }
 
   return null;
-}
+};
+
+export default OfflineNotice;
