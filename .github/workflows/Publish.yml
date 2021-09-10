@@ -101,7 +101,7 @@ jobs:
           # API project token to retrieve your remote Codacy configuration for the project being analyzed
           project-token: ${{ secrets.CODACY_API_TOKEN }}
           # Optional comma separated list of coverage reports to send to Codacy
-          coverage-reports: coverage.xml
+          coverage-reports: coverage/coverage-final.json
 
       #----------------------------------------------
       # Build dist package
