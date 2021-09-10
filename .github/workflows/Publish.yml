@@ -18,14 +18,23 @@ jobs:
       - name: Begin CI
         uses: actions/checkout@v2
 
+      #----------------------------------------------
+      # Setup Kernel for React Native
+      #----------------------------------------------
       - name: Setup kernel for react native, increase watchers
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
+      #----------------------------------------------
+      # Setup Node Environment
+      #----------------------------------------------
       - name: Use Node ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
+      #----------------------------------------------
+      # Cache modules
+      #----------------------------------------------
       - name: Use cached node_modules
         uses: actions/cache@v1
         with:
@@ -34,14 +43,17 @@ jobs:
           restore-keys: |
             nodeModules-
 
+      #----------------------------------------------
+      # Install Dependencies
+      #----------------------------------------------
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      #----------------------------------------------
+      # Run unit tests
+      #----------------------------------------------
       - name: Test
         run: yarn testFinal
-
-      - name: Build
-        run: yarn prepare
 
   publish:
     runs-on: ubuntu-latest
@@ -49,11 +61,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      #----------------------------------------------
+      # Setup Node Environment
+      #----------------------------------------------
       - name: Use NodeJs 14.x
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
 
+      #----------------------------------------------
+      # Cache modules
+      #----------------------------------------------
       - name: Use cached node_modules
         uses: actions/cache@v1
         with:
@@ -62,12 +80,65 @@ jobs:
           restore-keys: |
             nodeModules-
 
+      #----------------------------------------------
+      # Install dependencies
+      #----------------------------------------------
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        
+      
+      #----------------------------------------------
+      # Run unit tests
+      #----------------------------------------------
+      - name: Test
+        run: yarn testFinal
+
+      #----------------------------------------------
+      # Store coverage
+      #----------------------------------------------
+      - name: Upload coverage to Codacy
+        uses: codacy/codacy-coverage-reporter-action@1.0.0
+        with:
+          # API project token to retrieve your remote Codacy configuration for the project being analyzed
+          project-token: ${{ secrets.CODACY_API_TOKEN }}
+          # Optional comma separated list of coverage reports to send to Codacy
+          coverage-reports: coverage.xml
+
+      #----------------------------------------------
+      # Build dist package
+      #----------------------------------------------
       - name: Build
         run: yarn prepare
+
+      #----------------------------------------------
+      # Codacy Security Analysis
+      #----------------------------------------------
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@1.1.0
+        with:
+          # Check https://github.com/codacy/codacy-analysis-cli#project-token to get your project token from your Codacy repository
+          # You can also omit the token and run the tools that support default configurations
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          verbose: true
+          output: results.sarif
+          format: sarif
+          # Adjust severity of non-security issues
+          gh-code-scanning-compat: true
+          # Force 0 exit code to allow SARIF file generation
+          # This will handover control about PR rejection to the GitHub side
+          max-allowed-issues: 2147483647
+
+
+      #----------------------------------------------
+      # Upload the SARIF file generated in the previous step
+      #----------------------------------------------
+      - name: Upload SARIF results file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: results.sarif
         
+      #----------------------------------------------
+      # Publish package
+      #----------------------------------------------
       - name: Semantic Release
         run: yarn semantic-release
         env:
