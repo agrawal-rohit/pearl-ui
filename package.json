@@ -91,6 +91,9 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,jsx,ts,tsx}",
+      "!App.tsx",
+      "!commitlint.config.js",
+      "!**/*.story.{js,jsx,ts,tsx}",
       "!**/coverage/**",
       "!**/node_modules/**",
       "!**/babel.config.js",
@@ -99,7 +102,8 @@
       "!**/jest.setup.js"
     ],
     "modulePathIgnorePatterns": [
-      "<rootDir>/lib/"
+      "<rootDir>/lib/",
+      "<rootDir>/documentationwebsite/"
     ]
   },
   "react-native": "src/index.ts",

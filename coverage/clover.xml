@@ -1,98 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1631199327009" clover="3.2.0">
-  <project timestamp="1631199327009" name="All files">
-    <metrics statements="165" coveredstatements="18" conditionals="62" coveredconditionals="4" methods="72" coveredmethods="3" elements="299" coveredelements="25" complexity="0" loc="165" ncloc="165" packages="13" files="28" classes="28"/>
-    <package name="pearl-ui">
-      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="App.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/App.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-      </file>
-      <file name="commitlint.config.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/commitlint.config.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="pearl-ui.documentationwebsite">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="docusaurus.config.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/docusaurus.config.js">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-      </file>
-      <file name="sidebars.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/sidebars.js">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="12" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="pearl-ui.documentationwebsite..docusaurus">
-      <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="0"/>
-      <file name="client-modules.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/.docusaurus/client-modules.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="docusaurus.config.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/.docusaurus/docusaurus.config.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="registry.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/.docusaurus/registry.js">
-        <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-      </file>
-      <file name="routes.js" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/.docusaurus/routes.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="pearl-ui.documentationwebsite.src.components">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="HomepageFeatures.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/src/components/HomepageFeatures.tsx">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="pearl-ui.documentationwebsite.src.pages">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="index.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/documentationwebsite/src/pages/index.tsx">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="pearl-ui.src">
+<coverage generated="1631245934489" clover="3.2.0">
+  <project timestamp="1631245934489" name="All files">
+    <metrics statements="84" coveredstatements="18" conditionals="60" coveredconditionals="4" methods="10" coveredmethods="3" elements="154" coveredelements="25" complexity="0" loc="84" ncloc="84" packages="8" files="11" classes="11"/>
+    <package name="src">
       <metrics statements="48" coveredstatements="13" conditionals="12" coveredconditionals="4" methods="5" coveredmethods="2"/>
       <file name="index.ts" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -155,22 +65,8 @@
         <line num="77" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Atoms.ActivityIndicator">
-      <metrics statements="34" coveredstatements="0" conditionals="40" coveredconditionals="0" methods="11" coveredmethods="0"/>
-      <file name="ActivityIndicator.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/ActivityIndicator/ActivityIndicator.story.tsx">
-        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Atoms.ActivityIndicator">
+      <metrics statements="23" coveredstatements="0" conditionals="40" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="ActivityIndicator.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/ActivityIndicator/ActivityIndicator.tsx">
         <metrics statements="23" coveredstatements="0" conditionals="40" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="23" count="0" type="stmt"/>
@@ -198,27 +94,15 @@
         <line num="120" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Atoms.Box">
-      <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="Box.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Box/Box.story.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Atoms.Box">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Box.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Box/Box.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Atoms.Center">
-      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="Center.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Center/Center.story.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Atoms.Center">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Center.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Center/Center.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
@@ -226,62 +110,31 @@
         <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Atoms.Screen">
-      <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="Screen.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Screen/Screen.story.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Atoms.Screen">
+      <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="Screen.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Screen/Screen.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Atoms.Text">
-      <metrics statements="9" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <file name="Text.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Text/Text.story.tsx">
-        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Atoms.Text">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Text.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Atoms/Text/Text.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Molecules.Button">
-      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-      <file name="Button.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Molecules/Button/Button.story.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Molecules.Button">
+      <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="Button.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Molecules/Button/Button.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="14" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="pearl-ui.src.components.Molecules.OfflineNotice">
-      <metrics statements="7" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="OfflineNotice.story.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Molecules/OfflineNotice/OfflineNotice.story.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-      </file>
+    <package name="src.components.Molecules.OfflineNotice">
+      <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="OfflineNotice.tsx" path="/Users/rohitagrawal/Dev/Personal/pearl-ui/src/components/Molecules/OfflineNotice/OfflineNotice.tsx">
         <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>

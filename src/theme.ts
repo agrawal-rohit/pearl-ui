@@ -1,4 +1,5 @@
 import { createTheme } from "@shopify/restyle";
+import namedColors from "./namedColors.json";
 
 const palette = {
   primary100: "#E1E6FF",
@@ -70,6 +71,8 @@ const palette = {
   danger700: "#B72133",
   danger800: "#93152E",
   danger900: "#7A0C2C",
+
+  ...namedColors,
 };
 
 export const baseLightTheme = createTheme({
