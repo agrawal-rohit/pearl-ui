@@ -38,6 +38,18 @@ type IActivityIndicatorProps = SpacingProps<Theme> &
     loading?: boolean;
   };
 
+const IndicatorTypeToComponentMap = {
+  ball: BallIndicator,
+  bar: BarIndicator,
+  dot: DotIndicator,
+  spinner: MaterialIndicator,
+  pacman: PacmanIndicator,
+  pulse: PulseIndicator,
+  skype: SkypeIndicator,
+  activity: UIActivityIndicator,
+  wave: WaveIndicator,
+};
+
 const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
   color = undefined,
   size = "m",
@@ -52,78 +64,14 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 
   const { primary500 } = theme.colors;
 
-  if (variant === "ball")
-    return (
-      <BallIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "bar")
-    return (
-      <BarIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "dot")
-    return (
-      <DotIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "pacman")
-    return (
-      <PacmanIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "pulse")
-    return (
-      <PulseIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "skype")
-    return (
-      <SkypeIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "activity")
-    return (
-      <UIActivityIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-  if (variant === "wave")
-    return (
-      <WaveIndicator
-        color={color ? color : primary500}
-        size={theme.activityIndicatorSize[size].size}
-        {...props}
-      />
-    );
-
-  return (
-    <MaterialIndicator
-      color={color ? color : primary500}
-      size={theme.activityIndicatorSize[size].size}
-      {...props}
-    />
-  );
+  return React.createElement(IndicatorTypeToComponentMap[variant], {
+    color: color ? color : primary500,
+    size:
+      variant === "dot"
+        ? theme.activityIndicatorSize[size].size / 5
+        : theme.activityIndicatorSize[size].size,
+    ...props,
+  });
 };
 
 export default ActivityIndicator;
