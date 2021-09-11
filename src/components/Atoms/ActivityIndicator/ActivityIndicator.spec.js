@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react-native";
 import React from "react";
 import renderer from "react-test-renderer";
-import { ThemeProvider } from "../../../themeContext";
+import { ThemeProvider } from "../../../theme/themeContext";
 import ActivityIndicator from "./ActivityIndicator";
 
 jest.useFakeTimers();

@@ -4,7 +4,7 @@ import { useNetInfo } from "@react-native-community/netinfo";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
-import { Theme } from "../../../theme";
+import { Theme } from "../../../theme/theme";
 
 type OfflineNoticeProps = BoxProps<Theme>;
 

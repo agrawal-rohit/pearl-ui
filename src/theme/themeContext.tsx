@@ -15,8 +15,8 @@ interface IThemeContext {
 }
 
 interface ThemeProviderProps {
-  /** Default color mode for the theme */
-  defaultColorMode?: ThemeType;
+  /** Initial color mode for the theme (light, dark, system) */
+  initialColorMode?: ThemeType;
   /** The configuration object for light theme */
   lightTheme?: Theme;
   /** The configuration object for dark theme */
@@ -29,13 +29,13 @@ export const themeContext = createContext({} as IThemeContext);
  * The main provider component which controls the theme and color mode of the components in the entire application.
  */
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  defaultColorMode = "light",
+  initialColorMode = "light",
   lightTheme = baseLightTheme,
   darkTheme = baseDarkTheme,
   children,
 }) => {
+  const [colorMode, setColorMode] = useState<ThemeType>(initialColorMode);
   const [activeTheme, setActiveTheme] = useState<Theme>(lightTheme);
-  const [colorMode, setColorMode] = useState<ThemeType>(defaultColorMode);
   const systemThemeStyle = useColorScheme() as ThemeType;
 
   const toggleTheme = () => {
@@ -49,8 +49,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   };
 
   useEffect(() => {
-    // Set theme
-    if (defaultColorMode === "system") {
+    // Set initial Theme
+
+    if (colorMode === "light") {
+      setColorMode("light");
+      setActiveTheme(lightTheme);
+    } else if (colorMode === "dark") {
+      setColorMode("dark");
+      setActiveTheme(darkTheme);
+    } else if (colorMode === "system") {
       setColorMode(systemThemeStyle);
       setActiveTheme(systemThemeStyle === "light" ? lightTheme : darkTheme);
     }
