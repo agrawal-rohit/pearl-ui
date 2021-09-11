@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "./Box";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../themeContext";
+import { ThemeProvider } from "../../../theme/themeContext";
 
 jest.useFakeTimers();
 

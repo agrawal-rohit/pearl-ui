@@ -1,7 +1,7 @@
 import React from "react";
 import { BoxProps, TextProps } from "@shopify/restyle";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
-import { Theme } from "../../../theme";
+import { Theme } from "../../../theme/theme";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 
