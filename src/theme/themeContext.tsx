@@ -11,7 +11,7 @@ interface IThemeContext {
   /** Active color mode */
   colorMode: ThemeType;
   /** Function to toggle the active color mode and corresponding theme */
-  toggleTheme(theme: string): void;
+  toggleTheme(): void;
 }
 
 interface ThemeProviderProps {
