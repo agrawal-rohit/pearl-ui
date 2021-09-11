@@ -1,2 +1,2 @@
 export { generateTintsandShades } from "./utils";
-export { ThemeProvider } from "./themeContext";
+export { ThemeProvider, useTheme } from "./themeContext";
