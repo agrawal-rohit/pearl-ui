@@ -1,6 +1,6 @@
 import { BoxProps, boxRestyleFunctions, useRestyle } from "@shopify/restyle";
 import React from "react";
-import { Theme } from "../../../theme";
+import { Theme } from "../../../theme/theme";
 import Box from "../Box/Box";
 
 const Center: React.FC<BoxProps<Theme>> = ({ children, ...rest }) => {

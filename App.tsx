@@ -1,8 +1,11 @@
 import React from "react";
-import { ThemeProvider } from "./src/themeContext";
+import { ThemeProvider } from "./src/theme/themeContext";
 import Storybook from "./storybook";
 import { useFonts } from "expo-font";
+import Screen from "./src/components/Atoms/Screen/Screen";
 import AppLoading from "expo-app-loading";
+import OfflineNotice from "./src/components/Molecules/OfflineNotice/OfflineNotice";
+import Button from "./src/components/Molecules/Button/Button";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -18,7 +21,7 @@ const App = () => {
 
   if (haveFontsLoaded) {
     return (
-      <ThemeProvider defaultColorMode="dark">
+      <ThemeProvider initialColorMode="dark">
         <Storybook />
         {/* <OfflineNotice />
         <Screen>

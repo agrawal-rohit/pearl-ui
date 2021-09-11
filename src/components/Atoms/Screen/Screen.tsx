@@ -2,7 +2,7 @@ import React from "react";
 import Box from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
 import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
-import { Theme } from "../../../theme";
+import { Theme } from "../../../theme/theme";
 
 type ScreenProps = BoxProps<Theme>;
 

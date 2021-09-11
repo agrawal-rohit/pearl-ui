@@ -217,6 +217,6 @@ export const baseDarkTheme: Theme = {
   colors: {
     ...baseLightTheme.colors,
     mainBackground: palette.neutral700,
-    textColor: "#F0F2F3",
+    textColor: palette.neutral100,
   },
 };

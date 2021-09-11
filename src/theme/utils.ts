@@ -73,3 +73,5 @@ export const generateTintsandShades = (
 
   return shades;
 };
+
+const extendTheme = (updatedConfig: object) => {};
