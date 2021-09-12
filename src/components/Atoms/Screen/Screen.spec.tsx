@@ -1,7 +1,7 @@
 import React from "react";
 import Screen from "./Screen";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/themeContext";
+import { ThemeProvider } from "../../../theme/src/themeContext";
 
 jest.useFakeTimers();
 
