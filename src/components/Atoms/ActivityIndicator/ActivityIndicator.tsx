@@ -18,11 +18,11 @@ import {
   UIActivityIndicator,
   WaveIndicator,
 } from "react-native-indicators";
-import { Theme } from "../../../theme/theme";
+import { PearlTheme } from "../../../theme/src/theme";
 
 const restyleFunctions = [spacing, layout];
-type IActivityIndicatorProps = SpacingProps<Theme> &
-  LayoutProps<Theme> & {
+type IActivityIndicatorProps = SpacingProps<PearlTheme> &
+  LayoutProps<PearlTheme> & {
     color?: string;
     size?: "s" | "m" | "l" | "xl";
     variant?:
@@ -59,7 +59,7 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 }) => {
   if (!loading) return null;
 
-  const theme = useTheme<Theme>();
+  const theme = useTheme<PearlTheme>();
   const props = useRestyle(restyleFunctions, rest);
 
   const { primary500 } = theme.colors;
