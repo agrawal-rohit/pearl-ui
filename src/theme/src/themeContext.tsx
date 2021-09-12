@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { ThemeProvider as RestyleThemeProvider } from "@shopify/restyle";
-import { baseLightTheme, baseDarkTheme, Theme } from "./theme";
+import { baseLightTheme, baseDarkTheme, PearlTheme } from "./theme";
 
 type ThemeType = "light" | "dark" | "system";
 
-interface IThemeContext {
+export interface IThemeContext {
   /** Theme configuration object for the active color mode */
-  theme: Theme;
+  theme: PearlTheme;
   /** Active color mode */
   colorMode: ThemeType;
   /** Function to toggle the active color mode and corresponding theme */
@@ -18,9 +18,9 @@ interface ThemeProviderProps {
   /** Initial color mode for the theme (light, dark, system) */
   initialColorMode?: ThemeType;
   /** The configuration object for light theme */
-  lightTheme?: Theme;
+  lightTheme?: PearlTheme;
   /** The configuration object for dark theme */
-  darkTheme?: Theme;
+  darkTheme?: PearlTheme;
 }
 
 export const themeContext = createContext({} as IThemeContext);
@@ -35,7 +35,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
 }) => {
   const [colorMode, setColorMode] = useState<ThemeType>(initialColorMode);
-  const [activeTheme, setActiveTheme] = useState<Theme>(lightTheme);
+  const [activeTheme, setActiveTheme] = useState<PearlTheme>(lightTheme);
   const systemThemeStyle = useColorScheme() as ThemeType;
 
   const toggleTheme = () => {
@@ -73,8 +73,3 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     </themeContext.Provider>
   );
 };
-
-/**
- * Hook to get access to the active theme object, active color mode, and a function to toggle the active theme
- */
-export const useTheme = () => useContext(themeContext);

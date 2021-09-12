@@ -2,9 +2,9 @@ import React from "react";
 import Box from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
 import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
-import { Theme } from "../../../theme/theme";
+import { PearlTheme } from "../../../theme/src/theme";
 
-type ScreenProps = BoxProps<Theme>;
+type ScreenProps = BoxProps<PearlTheme>;
 
 const Screen: React.FC<ScreenProps> = ({ children, ...rest }) => {
   const props = useRestyle(boxRestyleFunctions, rest);

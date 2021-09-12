@@ -1,5 +1,5 @@
 import { createTheme } from "@shopify/restyle";
-import namedColors from "./namedColors.json";
+import namedColors from "../utils/namedColors.json";
 
 export interface IColor {
   [key: string]: string;
@@ -210,9 +210,9 @@ export const baseLightTheme = createTheme({
   },
 });
 
-export type Theme = typeof baseLightTheme;
+export type PearlTheme = typeof baseLightTheme;
 
-export const baseDarkTheme: Theme = {
+export const baseDarkTheme: PearlTheme = {
   ...baseLightTheme,
   colors: {
     ...baseLightTheme.colors,

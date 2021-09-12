@@ -1,5 +1,5 @@
 import { ColorInput, TinyColor } from "@ctrl/tinycolor";
-import { IColor } from "./theme";
+import { IColor } from "../src/theme";
 
 /**
  *
