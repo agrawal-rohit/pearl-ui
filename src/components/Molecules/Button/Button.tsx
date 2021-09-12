@@ -1,15 +1,15 @@
 import React from "react";
 import { BoxProps, TextProps } from "@shopify/restyle";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
-import { Theme } from "../../../theme/theme";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
+import { PearlTheme } from "../../../theme/src/theme";
 
 type ButtonProps = {
   onPress: () => void;
   loading?: boolean;
-  textProps?: TextProps<Theme>;
-} & Partial<BoxProps<Theme>>;
+  textProps?: TextProps<PearlTheme>;
+} & Partial<BoxProps<PearlTheme>>;
 
 const Button: React.FC<ButtonProps> = ({
   children,
