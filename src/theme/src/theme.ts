@@ -1,9 +1,5 @@
-import { createTheme } from "@shopify/restyle";
 import namedColors from "../utils/namedColors.json";
-
-export interface IColor {
-  [key: string]: string;
-}
+import { IBasePearlTheme } from "./types";
 
 export const palette = {
   primary100: "#E1E6FF",
@@ -79,7 +75,7 @@ export const palette = {
   ...namedColors,
 };
 
-export const baseLightTheme = createTheme({
+export const baseLightTheme: IBasePearlTheme = {
   colors: {
     ...palette,
 
@@ -93,16 +89,7 @@ export const baseLightTheme = createTheme({
     l: 24,
     xl: 40,
   },
-  breakpoints: {
-    phone: 0,
-    longPhone: {
-      width: 0,
-      height: 812,
-    },
-    tablet: 768,
-    largeTablet: 1024,
-  },
-  textVariants: {
+  typography: {
     h1: {
       fontFamily: "Poppins-Bold",
       fontWeight: "bold",
@@ -194,21 +181,10 @@ export const baseLightTheme = createTheme({
       color: "buttonTextColor",
     },
   },
-  activityIndicatorSize: {
-    s: {
-      size: 10,
-    },
-    m: {
-      size: 30,
-    },
-    l: {
-      size: 50,
-    },
-    xl: {
-      size: 70,
-    },
+  components: {
+    button: {},
   },
-});
+};
 
 export type PearlTheme = typeof baseLightTheme;
 
