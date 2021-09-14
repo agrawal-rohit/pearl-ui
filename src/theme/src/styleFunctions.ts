@@ -14,7 +14,7 @@ import {
 } from "./styleProperties";
 import { IBasePearlTheme } from "./types";
 
-const createStyleFunction = ({
+export const createStyleFunction = ({
   property,
   transform,
   styleProperty,
