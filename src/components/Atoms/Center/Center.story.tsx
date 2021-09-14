@@ -8,6 +8,6 @@ storiesOf("Center", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("any elements", () => (
     <Center height={100} backgroundColor="primary100">
-      {/* <Text>asdlalsdknl</Text> */}
+      <Text variant="h1">asdlalsdknl</Text>
     </Center>
   ));
