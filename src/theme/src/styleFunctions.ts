@@ -202,6 +202,8 @@ export interface BackgroundColorProps<Theme extends IBasePearlTheme> {
   bg?: keyof Theme["colors"];
 }
 
+const a: keyof IBasePearlTheme["spacing"] = "a";
+
 type SpacingPropsBase<Theme extends IBasePearlTheme> = {
   [Key in keyof typeof spacingProperties]?: keyof Theme["spacing"];
 };

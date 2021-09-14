@@ -4,12 +4,12 @@ import Screen from "../Screen/Screen";
 import Box from "./Box";
 
 storiesOf("Box", module)
-  .addDecorator((getStory) => getStory())
+  .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("Basic box", () => (
     <Box
-      padding="s"
-      height={300}
-      width={100}
-      backgroundColor="primary100"
+      backgroundColor="turquoise"
+      borderRadius={20}
+      width="40%"
+      height={200}
     ></Box>
   ));
