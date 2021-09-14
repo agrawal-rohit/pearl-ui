@@ -1,6 +1,6 @@
-import { createText } from "@shopify/restyle";
-import { PearlTheme } from "../../../theme/src/theme";
+// import { createText } from "@shopify/restyle";
+// import { IBasePearlTheme } from "../../../theme/src/types";
 
-const Text = createText<PearlTheme>();
+// const Text = createText<IBasePearlTheme>();
 
-export default Text;
+// export default Text;
