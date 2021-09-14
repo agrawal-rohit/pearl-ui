@@ -1,5 +1,5 @@
 import namedColors from "../utils/namedColors.json";
-import { IBasePearlTheme } from "./types";
+import { createTheme } from "./themeFunctions";
 
 export const palette = {
   primary100: "#E1E6FF",
@@ -75,7 +75,7 @@ export const palette = {
   ...namedColors,
 };
 
-export const baseLightTheme: IBasePearlTheme = {
+export const baseLightTheme = createTheme({
   colors: {
     ...palette,
 
@@ -184,11 +184,9 @@ export const baseLightTheme: IBasePearlTheme = {
   components: {
     button: {},
   },
-};
+});
 
-export type PearlTheme = typeof baseLightTheme;
-
-export const baseDarkTheme: PearlTheme = {
+export const baseDarkTheme = {
   ...baseLightTheme,
   colors: {
     ...baseLightTheme.colors,
