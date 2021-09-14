@@ -1,5 +1,7 @@
 import { ViewStyle, TextStyle, ImageStyle } from "react-native";
 
+export type SafeVariants<T> = Omit<T, keyof IBasePearlTheme>;
+
 export interface IBasePearlTheme {
   colors: {
     [key: string]: string;
