@@ -12,50 +12,42 @@ import {
   textShadowProperties,
   typographyProperties,
 } from "./styleProperties";
-import { IBasePearlTheme, RestyleFunction, RNStyleProperty } from "./types";
+import { IBasePearlTheme } from "./types";
 
-export type StyleTransformFunction<TVal> = (params: {
-  value: TVal | undefined | null;
-}) => TVal | undefined | null;
-
-const createRestyleFunction = <
-  Theme extends IBasePearlTheme = IBasePearlTheme,
-  TProps extends Record<string, any> = Record<string, any>,
-  P extends keyof TProps = keyof TProps,
-  K extends keyof Theme | undefined = undefined,
-  S extends RNStyleProperty = RNStyleProperty
->({
+const createStyleFunction = ({
   property,
   transform,
   styleProperty,
   themeKey,
-}: {
-  property: P;
-  transform?: StyleTransformFunction<TProps[P]>;
-  styleProperty?: S;
-  themeKey?: K;
-}) => {
+}: any) => {
   const styleProp = styleProperty || property.toString();
 
-  const func: RestyleFunction<TProps, Theme> = (props, theme) => {
+  const func = (props: any, theme: any) => {
+    // Initial value is the raw prop value
     let value = props[property];
+
+    // Transform the value if transformation function exists
     if (transform) {
-      value = transform({ value: value }) as TProps[P];
+      value = transform({ value: value });
     }
+
+    // Check if this value refers to a key in the theme config
     if (isThemeKey(theme, themeKey)) {
+      // Throw error if the target value is undefined
       if (value && theme[themeKey][value] === undefined)
         throw new Error(
-          `Value '${value}' does not exist in theme['${themeKey}']`
+          `Value '${value}' does not exist in theme['${String(themeKey)}']`
         );
 
-      return value ? theme[themeKey][value] : value;
+      // Finalize the value to be assigned to the component style
+      value = value ? theme[themeKey][value] : value;
     }
 
     if (value === undefined) return {};
 
     return {
       [styleProp]: value,
-    } as { [key in S | P]?: typeof value };
+    };
   };
 
   return {
@@ -67,58 +59,56 @@ const createRestyleFunction = <
 };
 
 export const backgroundColor = [
-  createRestyleFunction({
+  createStyleFunction({
     property: "backgroundColor",
     themeKey: "colors",
   }),
-  createRestyleFunction({
+  createStyleFunction({
     property: "bg",
     styleProperty: "backgroundColor",
     themeKey: "colors",
   }),
 ];
 
-export const color = createRestyleFunction({
+export const color = createStyleFunction({
   property: "color",
   themeKey: "colors",
 });
 
-export const opacity = createRestyleFunction({
+export const opacity = createStyleFunction({
   property: "opacity",
 });
 
-export const visible = createRestyleFunction({
+export const visible = createStyleFunction({
   property: "visible",
   styleProperty: "display",
-  transform: ({ value }) => (value === false ? "none" : "flex"),
+  transform: ({ value }: any) => (value === false ? "none" : "flex"),
 });
 
 export const typography = getKeys(typographyProperties).map((property) => {
-  return createRestyleFunction({
+  return createStyleFunction({
     property,
   });
 });
 
 export const layout = getKeys(layoutProperties).map((property) => {
-  return createRestyleFunction({
+  return createStyleFunction({
     property,
   });
 });
 
 export const spacing = [
   ...getKeys(spacingProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
       themeKey: "spacing",
     });
   }),
 
   ...getKeys(spacingPropertiesShorthand).map((property) => {
-    const styleProperty = spacingPropertiesShorthand[
-      property
-    ] as RNStyleProperty;
+    const styleProperty = spacingPropertiesShorthand[property];
 
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
       styleProperty,
       themeKey: "spacing",
@@ -128,11 +118,11 @@ export const spacing = [
 
 export const position = [
   ...getKeys(positionProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
     });
   }),
-  createRestyleFunction({
+  createStyleFunction({
     property: "zIndex",
     themeKey: "zIndices",
   }),
@@ -140,18 +130,18 @@ export const position = [
 
 export const border = [
   ...getKeys(borderProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
     });
   }),
   ...getKeys(borderColorProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
       themeKey: "colors",
     });
   }),
   ...getKeys(borderRadiusProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
       themeKey: "borderRadii",
     });
@@ -160,11 +150,11 @@ export const border = [
 
 export const shadow = [
   ...getKeys(shadowProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
     });
   }),
-  createRestyleFunction({
+  createStyleFunction({
     property: "shadowColor",
     themeKey: "colors",
   }),
@@ -172,11 +162,11 @@ export const shadow = [
 
 export const textShadow = [
   ...getKeys(textShadowProperties).map((property) => {
-    return createRestyleFunction({
+    return createStyleFunction({
       property,
     });
   }),
-  createRestyleFunction({
+  createStyleFunction({
     property: "textShadowColor",
     themeKey: "colors",
   }),
