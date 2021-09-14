@@ -33,7 +33,7 @@ const filterRestyleProps = <
   }, {} as TProps);
 };
 
-const useRestyle = <
+const useStyleProps = <
   Theme extends IBasePearlTheme,
   TRestyleProps extends Record<string, any>,
   TProps extends TRestyleProps & { style?: StyleProp<RNStyle> }
@@ -61,4 +61,4 @@ const useRestyle = <
   return cleanProps;
 };
 
-export default useRestyle;
+export default useStyleProps;
