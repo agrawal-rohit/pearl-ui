@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react-native";
 import { useNetInfo } from "@react-native-community/netinfo";
-import { ThemeProvider } from "../../../theme/themeContext";
+import { ThemeProvider } from "../../../theme/src/themeContext";
 import OfflineNotice from "./OfflineNotice";
 
 jest.useFakeTimers();
