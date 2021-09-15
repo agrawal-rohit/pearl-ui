@@ -2,14 +2,14 @@ import { ViewStyle, TextStyle, ImageStyle } from "react-native";
 
 export type SafeVariants<T> = Omit<T, keyof BasePearlTheme>;
 
-interface ComponentConfig {
-  basestyle?: {
+export interface ComponentConfig {
+  baseStyle: {
     [key: string]: any;
   };
-  sizes?: {
+  sizes: {
     [key: string]: any;
   };
-  variants?: {
+  variants: {
     [key: string]: any;
   };
   defaults: {

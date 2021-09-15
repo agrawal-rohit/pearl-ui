@@ -27,16 +27,7 @@ const indicatorStyleFunctions = [color, spacing, layout];
 type IActivityIndicatorProps = SpacingProps<BasePearlTheme> &
   LayoutProps & {
     size?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["sizes"];
-    variant?:
-      | "ball"
-      | "bar"
-      | "dot"
-      | "spinner"
-      | "pacman"
-      | "pulse"
-      | "skype"
-      | "activity"
-      | "wave";
+    variant?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"];
     loading?: boolean;
   };
 
@@ -53,26 +44,45 @@ const IndicatorTypeToComponentMap = {
 };
 
 const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
-  variant = "spinner",
   loading = true,
   ...rest
 }) => {
   if (!loading) return null;
 
-  const props = useStyledProps(indicatorStyleFunctions, rest);
+  const receivedStyledProps = useStyledProps(indicatorStyleFunctions, rest);
   const componentSpecificProps = useComponentConfig(
     "ActivityIndicator",
     {
       size: rest["size"],
+      variant: rest["variant"],
     },
     indicatorStyleFunctions
   );
 
-  return React.createElement(IndicatorTypeToComponentMap[variant], {
-    color: componentSpecificProps.style[0].color,
-    ...componentSpecificProps,
-    ...props.style,
+  console.log(receivedStyledProps);
+  console.log(componentSpecificProps);
+  console.log({
+    ...componentSpecificProps.style[0],
+    ...receivedStyledProps.style[0],
   });
+
+  return React.createElement(
+    IndicatorTypeToComponentMap[
+      receivedStyledProps[
+        "variant"
+      ] as keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"]
+    ],
+    {
+      color: componentSpecificProps.style[0].color,
+      size: componentSpecificProps.sizeMultiplier
+        ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
+        : componentSpecificProps.size,
+      style: {
+        ...componentSpecificProps.style[0],
+        ...receivedStyledProps.style[0],
+      },
+    }
+  );
 };
 
 export default ActivityIndicator;
