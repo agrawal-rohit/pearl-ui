@@ -200,9 +200,22 @@ export const baseLightTheme = createTheme({
           size: 70,
         },
       },
-      variants: {},
+      variants: {
+        ball: {},
+        bar: {},
+        dot: {
+          sizeMultiplier: 0.2,
+        },
+        spinner: {},
+        pacman: {},
+        pulse: {},
+        skype: {},
+        activity: {},
+        wave: {},
+      },
       defaults: {
         size: "m",
+        variant: "spinner",
       },
     },
   },
