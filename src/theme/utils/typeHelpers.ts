@@ -1,8 +1,8 @@
-import { IBasePearlTheme } from "../src/types";
+import { BasePearlTheme } from "../src/types";
 
 export const getKeys = <T>(object: T) => Object.keys(object) as (keyof T)[];
 
-// export function isThemeKey<Theme extends IBasePearlTheme>(
+// export function isThemeKey<Theme extends BasePearlTheme>(
 //   theme: Theme,
 //   K: keyof Theme | undefined
 // ): boolean {
@@ -11,7 +11,7 @@ export const getKeys = <T>(object: T) => Object.keys(object) as (keyof T)[];
 //   return false;
 // }
 
-export function isThemeKey<Theme extends IBasePearlTheme>(
+export function isThemeKey<Theme extends BasePearlTheme>(
   theme: Theme,
   K: keyof Theme | undefined
 ): K is keyof Theme {
