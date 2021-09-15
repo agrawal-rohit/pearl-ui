@@ -45,6 +45,7 @@ const IndicatorTypeToComponentMap = {
 
 const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
   loading = true,
+  variant = "spinner",
   ...rest
 }) => {
   if (!loading) return null;
@@ -54,23 +55,14 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
     "ActivityIndicator",
     {
       size: rest["size"],
-      variant: rest["variant"],
+      variant: variant,
     },
     indicatorStyleFunctions
   );
 
-  console.log(receivedStyledProps);
-  console.log(componentSpecificProps);
-  console.log({
-    ...componentSpecificProps.style[0],
-    ...receivedStyledProps.style[0],
-  });
-
   return React.createElement(
     IndicatorTypeToComponentMap[
-      receivedStyledProps[
-        "variant"
-      ] as keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"]
+      variant as keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"]
     ],
     {
       color: componentSpecificProps.style[0].color,
