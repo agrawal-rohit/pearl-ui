@@ -16,16 +16,17 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import createVariant, { VariantProps } from "../../../theme/src/styleVariants";
-import { IBasePearlTheme } from "../../../theme/src/types";
+import { createTextVariants } from "../../../theme/src/styleVariants";
+import { BasePearlTheme } from "../../../theme/src/types";
 
-export type TextProps<Theme extends IBasePearlTheme> = ColorProps<Theme> &
+export type TextProps<Theme extends BasePearlTheme> = ColorProps<Theme> &
   OpacityProps &
   VisibleProps &
   TypographyProps &
   SpacingProps<Theme> &
-  TextShadowProps<Theme> &
-  VariantProps<Theme, "typography">;
+  TextShadowProps<Theme> & {
+    variant?: keyof Omit<Theme["typography"], "defaults">;
+  };
 
 export const textStyleFunctions = [
   color,
@@ -34,14 +35,14 @@ export const textStyleFunctions = [
   typography,
   spacing,
   textShadow,
-  createVariant({ themeKey: "typography" }),
+  createTextVariants(),
 ];
 
 /**
  * Text is the most abstract  text component.
  */
 const createText = <
-  Theme extends IBasePearlTheme,
+  Theme extends BasePearlTheme,
   Props = React.ComponentProps<typeof RNText> & {
     children?: React.ReactNode;
   }

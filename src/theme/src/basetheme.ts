@@ -182,7 +182,29 @@ export const baseLightTheme = createTheme({
     },
   },
   components: {
-    button: {},
+    ActivityIndicator: {
+      baseStyle: {
+        color: "primary500",
+      },
+      sizes: {
+        s: {
+          size: 10,
+        },
+        m: {
+          size: 30,
+        },
+        l: {
+          size: 50,
+        },
+        xl: {
+          size: 70,
+        },
+      },
+      variants: {},
+      defaults: {
+        size: "m",
+      },
+    },
   },
 });
 

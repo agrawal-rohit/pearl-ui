@@ -21,13 +21,10 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import {
-  IBasePearlTheme,
-  RestyleFunctionContainer,
-} from "../../../theme/src/types";
+import { BasePearlTheme } from "../../../theme/src/types";
 
 export type BoxProps<
-  Theme extends IBasePearlTheme
+  Theme extends BasePearlTheme
 > = BackgroundColorProps<Theme> &
   OpacityProps &
   VisibleProps &
@@ -54,10 +51,10 @@ export const boxStyleFunctions = [
 type ViewProps = React.ComponentProps<typeof View> & {
   children?: React.ReactNode;
 };
-type ComponentProps<Theme extends IBasePearlTheme> = BoxProps<Theme> &
+type ComponentProps<Theme extends BasePearlTheme> = BoxProps<Theme> &
   Omit<ViewProps, keyof BoxProps<Theme>>;
 
-const createBox = <Theme extends IBasePearlTheme>() => {
+const createBox = <Theme extends BasePearlTheme>() => {
   const StyledBox = React.forwardRef(
     (props: ComponentProps<Theme>, ref: any) => {
       const passedProps = useStyledProps(boxStyleFunctions, props);

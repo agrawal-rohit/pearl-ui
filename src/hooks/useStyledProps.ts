@@ -18,12 +18,12 @@ const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
-const useStyledProps = (restyleFunctions: any, props: any) => {
+const useStyledProps = (styleFunctions: any, props: any) => {
   const { theme } = useTheme();
 
   const buildStyleProperties = useMemo(
-    () => composeStyleProps(restyleFunctions),
-    [restyleFunctions]
+    () => composeStyleProps(styleFunctions),
+    [styleFunctions]
   );
 
   const style = buildStyleProperties.buildStyle(props, theme);
