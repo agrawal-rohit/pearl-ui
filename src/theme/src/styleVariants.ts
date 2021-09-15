@@ -1,20 +1,12 @@
-import { IBasePearlTheme, SafeVariants } from "./types";
+import { BasePearlTheme, SafeVariants } from "./types";
 import composeStyleProps from "./composeStyleProps";
 import { all, createStyleFunction } from "./styleFunctions";
 
-const allRestyleFunctions = composeStyleProps(all);
+const allStyleFunctions = composeStyleProps(all);
 
-// With Custom Prop Name
-function createVariant(params: {
-  property: any;
-  themeKey: any;
-  defaults?: any;
-}): any;
-
-// Without Custom Prop Name
-function createVariant(params: { themeKey: any; defaults?: any }): any;
-
-function createVariant({ property = "variant", themeKey, defaults }: any) {
+export const createTextVariants = () => {
+  const property: any = "variant";
+  const themeKey = "typography";
   const styleFunction = createStyleFunction({
     property,
     themeKey,
@@ -24,9 +16,9 @@ function createVariant({ property = "variant", themeKey, defaults }: any) {
 
     const variantDefaults = theme[themeKey] ? theme[themeKey].defaults : {};
 
-    if (!expandedProps && !defaults && !variantDefaults) return {};
-    return allRestyleFunctions.buildStyle(
-      { ...defaults, ...variantDefaults, ...expandedProps },
+    if (!expandedProps && !variantDefaults) return {};
+    return allStyleFunctions.buildStyle(
+      { ...variantDefaults, ...expandedProps },
       theme
     );
   };
@@ -36,14 +28,11 @@ function createVariant({ property = "variant", themeKey, defaults }: any) {
     variant: true,
     func,
   };
-}
-
-export type VariantProps<
-  Theme extends IBasePearlTheme,
-  K extends keyof Theme,
-  Property extends keyof any = "variant"
-> = {
-  [key in Property]?: keyof Omit<Theme[K], "defaults">;
 };
 
-export default createVariant;
+export type ComponentVariantProps<
+  Theme extends BasePearlTheme,
+  K extends keyof Theme["components"]["variants"]
+> = {
+  variant?: keyof Theme["components"]["variants"][K];
+};

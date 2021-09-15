@@ -1,14 +1,11 @@
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
-import { ThemeProvider as RestyleThemeProvider } from "@shopify/restyle";
 import { baseLightTheme, baseDarkTheme } from "./basetheme";
-import { IBasePearlTheme } from "./types";
+import { BasePearlTheme } from "./types";
 
 type ThemeType = "light" | "dark" | "system";
 
-export interface IThemeContext<
-  Theme extends IBasePearlTheme = IBasePearlTheme
-> {
+export interface IThemeContext<Theme extends BasePearlTheme = BasePearlTheme> {
   /** Theme configuration object for the active color mode */
   theme: Theme;
   /** Active color mode */
@@ -17,7 +14,7 @@ export interface IThemeContext<
   toggleTheme(): void;
 }
 
-interface ThemeProviderProps<Theme extends IBasePearlTheme = IBasePearlTheme> {
+interface ThemeProviderProps<Theme extends BasePearlTheme = BasePearlTheme> {
   /** Initial color mode for the theme (light, dark, system) */
   initialColorMode?: ThemeType;
   /** The configuration object for light theme */

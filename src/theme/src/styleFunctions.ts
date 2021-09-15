@@ -12,7 +12,7 @@ import {
   textShadowProperties,
   typographyProperties,
 } from "./styleProperties";
-import { IBasePearlTheme } from "./types";
+import { BasePearlTheme } from "./types";
 
 export const createStyleFunction = ({
   property,
@@ -186,7 +186,7 @@ export const all = [
 ];
 
 // PropTypes
-export interface ColorProps<Theme extends IBasePearlTheme> {
+export interface ColorProps<Theme extends BasePearlTheme> {
   color?: keyof Theme["colors"];
 }
 export interface OpacityProps {
@@ -197,23 +197,23 @@ export interface VisibleProps {
   visible?: boolean;
 }
 
-export interface BackgroundColorProps<Theme extends IBasePearlTheme> {
+export interface BackgroundColorProps<Theme extends BasePearlTheme> {
   backgroundColor?: keyof Theme["colors"];
   bg?: keyof Theme["colors"];
 }
 
-const a: keyof IBasePearlTheme["spacing"] = "a";
+const a: keyof BasePearlTheme["spacing"] = "a";
 
-type SpacingPropsBase<Theme extends IBasePearlTheme> = {
+type SpacingPropsBase<Theme extends BasePearlTheme> = {
   [Key in keyof typeof spacingProperties]?: keyof Theme["spacing"];
 };
 
-type SpacingShorthandProps<Theme extends IBasePearlTheme> = {
+type SpacingShorthandProps<Theme extends BasePearlTheme> = {
   [Key in keyof typeof spacingPropertiesShorthand]?: keyof Theme["spacing"];
 };
 
 export type SpacingProps<
-  Theme extends IBasePearlTheme
+  Theme extends BasePearlTheme
 > = SpacingPropsBase<Theme> & SpacingShorthandProps<Theme>;
 
 export type TypographyProps = {
@@ -224,13 +224,13 @@ export type LayoutProps = {
   [Key in keyof typeof layoutProperties]?: FlexStyle[Key];
 };
 
-export type PositionProps<Theme extends IBasePearlTheme> = {
+export type PositionProps<Theme extends BasePearlTheme> = {
   [Key in keyof typeof positionProperties]?: FlexStyle[Key];
 } & {
   zIndex?: Theme["zIndices"] extends {} ? keyof Theme["zIndices"] : number;
 };
 
-export type BorderProps<Theme extends IBasePearlTheme> = {
+export type BorderProps<Theme extends BasePearlTheme> = {
   [Key in keyof typeof borderProperties]?: ViewStyle[Key];
 } &
   {
@@ -242,20 +242,20 @@ export type BorderProps<Theme extends IBasePearlTheme> = {
       : number;
   };
 
-export type ShadowProps<Theme extends IBasePearlTheme> = {
+export type ShadowProps<Theme extends BasePearlTheme> = {
   [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
 } & {
   shadowColor?: keyof Theme["colors"];
 };
 
-export type TextShadowProps<Theme extends IBasePearlTheme> = {
+export type TextShadowProps<Theme extends BasePearlTheme> = {
   [Key in keyof typeof textShadowProperties]?: TextStyle[Key];
 } & {
   textShadowColor?: keyof Theme["colors"];
 };
 
 export type AllProps<
-  Theme extends IBasePearlTheme
+  Theme extends BasePearlTheme
 > = BackgroundColorProps<Theme> &
   ColorProps<Theme> &
   OpacityProps &

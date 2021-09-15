@@ -1,15 +1,15 @@
-const composeStyleProps = (restyleFunctions: any) => {
-  const flattenedRestyleFunctions = restyleFunctions.reduce(
+const composeStyleProps = (styleFunctions: any) => {
+  const flattenedStyleFunctions = styleFunctions.reduce(
     (acc: any, item: any) => {
       return acc.concat(item);
     },
     []
   );
 
-  const properties = flattenedRestyleFunctions.map((styleFunc: any) => {
+  const properties = flattenedStyleFunctions.map((styleFunc: any) => {
     return styleFunc.property;
   });
-  const funcs = flattenedRestyleFunctions
+  const funcs = flattenedStyleFunctions
     .sort(
       (styleFuncA: any, styleFuncB: any) =>
         Number(styleFuncB.variant) - Number(styleFuncA.variant)
@@ -24,6 +24,7 @@ const composeStyleProps = (restyleFunctions: any) => {
       return Object.assign(acc, func(props, theme));
     }, {});
   };
+
   return {
     buildStyle,
     properties,

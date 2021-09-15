@@ -2,7 +2,7 @@ import React from "react";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text, { TextProps } from "../../Atoms/Text/Text";
-import { IBasePearlTheme } from "../../../theme/src/types";
+import { BasePearlTheme } from "../../../theme/src/types";
 import { baseLightTheme } from "../../../theme/src/basetheme";
 
 type ButtonProps = BoxProps<typeof baseLightTheme> & {

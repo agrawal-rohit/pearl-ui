@@ -1,8 +1,24 @@
 import { ViewStyle, TextStyle, ImageStyle } from "react-native";
 
-export type SafeVariants<T> = Omit<T, keyof IBasePearlTheme>;
+export type SafeVariants<T> = Omit<T, keyof BasePearlTheme>;
 
-export interface IBasePearlTheme {
+interface ComponentConfig {
+  basestyle?: {
+    [key: string]: any;
+  };
+  sizes?: {
+    [key: string]: any;
+  };
+  variants?: {
+    [key: string]: any;
+  };
+  defaults: {
+    size?: string;
+    variant?: string;
+  };
+}
+
+export interface BasePearlTheme {
   colors: {
     [key: string]: string;
   };
@@ -13,7 +29,7 @@ export interface IBasePearlTheme {
     [key: string]: any;
   };
   components: {
-    [key: string]: any;
+    [key: string]: ComponentConfig;
   };
   zIndices?: {
     [key: string]: number;
@@ -24,21 +40,21 @@ export interface IBasePearlTheme {
 }
 
 // Style Functions
-export interface RestyleFunctionContainer<
+export interface StyleFunctionContainer<
   TProps extends Record<string, any>,
-  Theme extends IBasePearlTheme = IBasePearlTheme,
+  Theme extends BasePearlTheme = BasePearlTheme,
   P extends keyof TProps = keyof TProps,
   K extends keyof Theme | undefined = keyof Theme | undefined
 > {
   property: P;
   themeKey: K | undefined;
   variant: boolean;
-  func: RestyleFunction<TProps, Theme>;
+  func: StyleFunction<TProps, Theme>;
 }
 
-export type RestyleFunction<
+export type StyleFunction<
   TProps extends Record<string, any> = Record<string, any>,
-  Theme extends IBasePearlTheme = IBasePearlTheme,
+  Theme extends BasePearlTheme = BasePearlTheme,
   S extends keyof any = string
 > = (
   props: TProps,
