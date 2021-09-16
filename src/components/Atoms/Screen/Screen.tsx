@@ -1,13 +1,14 @@
 import React from "react";
-import Box from "../Box/Box";
+import Box, { BoxProps, boxStyleFunctions } from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
-import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
-import { Theme } from "../../../theme/theme";
+import useStyledProps from "../../../hooks/useStyledProps";
+import { baseLightTheme } from "../../../theme/src/basetheme";
 
-type ScreenProps = BoxProps<Theme>;
-
-const Screen: React.FC<ScreenProps> = ({ children, ...rest }) => {
-  const props = useRestyle(boxRestyleFunctions, rest);
+const Screen: React.FC<BoxProps<typeof baseLightTheme>> = ({
+  children,
+  ...rest
+}) => {
+  const props = useStyledProps(boxStyleFunctions, rest);
 
   return (
     <Box

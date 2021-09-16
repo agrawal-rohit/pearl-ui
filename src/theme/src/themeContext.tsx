@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext, createContext } from "react";
+import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
-import { ThemeProvider as RestyleThemeProvider } from "@shopify/restyle";
-import { baseLightTheme, baseDarkTheme, Theme } from "./theme";
+import { baseLightTheme, baseDarkTheme } from "./basetheme";
+import { BasePearlTheme } from "./types";
 
 type ThemeType = "light" | "dark" | "system";
 
-interface IThemeContext {
+export interface IThemeContext<Theme extends BasePearlTheme = BasePearlTheme> {
   /** Theme configuration object for the active color mode */
   theme: Theme;
   /** Active color mode */
@@ -14,67 +14,72 @@ interface IThemeContext {
   toggleTheme(): void;
 }
 
-interface ThemeProviderProps {
+interface ThemeProviderProps<Theme extends BasePearlTheme = BasePearlTheme> {
   /** Initial color mode for the theme (light, dark, system) */
   initialColorMode?: ThemeType;
   /** The configuration object for light theme */
   lightTheme?: Theme;
   /** The configuration object for dark theme */
   darkTheme?: Theme;
+  /**React children */
+  children: React.ReactNode;
 }
 
 export const themeContext = createContext({} as IThemeContext);
 
+export const receivedThemeType = <Theme extends BasePearlTheme>(
+  theme: Theme
+): Theme => theme;
+
 /**
  * The main provider component which controls the theme and color mode of the components in the entire application.
  */
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+export const ThemeProvider = ({
   initialColorMode = "light",
   lightTheme = baseLightTheme,
   darkTheme = baseDarkTheme,
   children,
-}) => {
+}: ThemeProviderProps) => {
   const [colorMode, setColorMode] = useState<ThemeType>(initialColorMode);
-  const [activeTheme, setActiveTheme] = useState<Theme>(lightTheme);
+  const [activeTheme, setActiveTheme] = useState<typeof lightTheme>(lightTheme);
   const systemThemeStyle = useColorScheme() as ThemeType;
 
-  const toggleTheme = () => {
-    if (colorMode === "light") {
+  const changeThemeTo = (colorMode: ThemeType) => {
+    if (colorMode === "dark") {
       setColorMode("dark");
       setActiveTheme(darkTheme);
+      receivedThemeType<typeof darkTheme>(darkTheme);
     } else {
       setColorMode("light");
       setActiveTheme(lightTheme);
+      receivedThemeType<typeof lightTheme>(lightTheme);
+    }
+  };
+
+  const toggleTheme = () => {
+    if (colorMode === "light") {
+      changeThemeTo("dark");
+    } else {
+      changeThemeTo("light");
     }
   };
 
   useEffect(() => {
     // Set initial Theme
-
     if (colorMode === "light") {
-      setColorMode("light");
-      setActiveTheme(lightTheme);
+      changeThemeTo("light");
     } else if (colorMode === "dark") {
-      setColorMode("dark");
-      setActiveTheme(darkTheme);
+      changeThemeTo("dark");
     } else if (colorMode === "system") {
-      setColorMode(systemThemeStyle);
-      setActiveTheme(systemThemeStyle === "light" ? lightTheme : darkTheme);
+      changeThemeTo(systemThemeStyle);
     }
-  }, []);
+  }, [colorMode, lightTheme, darkTheme]);
 
   return (
     <themeContext.Provider
       value={{ theme: activeTheme, colorMode, toggleTheme } as IThemeContext}
     >
-      <RestyleThemeProvider theme={activeTheme}>
-        {children}
-      </RestyleThemeProvider>
+      {children}
     </themeContext.Provider>
   );
 };
-
-/**
- * Hook to get access to the active theme object, active color mode, and a function to toggle the active theme
- */
-export const useTheme = () => useContext(themeContext);

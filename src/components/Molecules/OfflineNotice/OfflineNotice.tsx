@@ -1,15 +1,15 @@
 import React from "react";
 import Constants from "expo-constants";
 import { useNetInfo } from "@react-native-community/netinfo";
-import Box from "../../Atoms/Box/Box";
+import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import { BoxProps, useRestyle, boxRestyleFunctions } from "@shopify/restyle";
-import { Theme } from "../../../theme/theme";
+import { baseLightTheme } from "../../../theme/src/basetheme";
+import useStyledProps from "../../../hooks/useStyledProps";
 
-type OfflineNoticeProps = BoxProps<Theme>;
+type OfflineNoticeProps = BoxProps<typeof baseLightTheme>;
 
 const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
-  const props = useRestyle(boxRestyleFunctions, rest);
+  const props = useStyledProps(boxStyleFunctions, rest);
   const netInfo = useNetInfo();
 
   if (
