@@ -1,4 +1,4 @@
-import { generateTintsandShades } from "../utils/utils";
+import { generateTintsandShades } from "./utils";
 
 jest.useFakeTimers();
 

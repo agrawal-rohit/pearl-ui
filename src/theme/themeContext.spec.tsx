@@ -1,11 +1,10 @@
 import React from "react";
-import Text from "../../components/Atoms/Text/Text";
+import Text from "../components/Atoms/Text/Text";
 import { render, fireEvent } from "@testing-library/react-native";
-import { ThemeProvider } from "../src/themeContext";
-import Box from "../../components/Atoms/Box/Box";
-import Button from "../../components/Molecules/Button/Button";
-import { useTheme } from "../../hooks/useTheme";
-import { palette } from "../utils/basePalette";
+import { ThemeProvider, useTheme } from "./themeContext";
+import Box from "../components/Atoms/Box/Box";
+import { palette } from "./theme";
+import Button from "../components/Molecules/Button/Button";
 
 jest.useFakeTimers();
 

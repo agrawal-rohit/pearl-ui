@@ -1,19 +1,21 @@
 import React from "react";
+import { BoxProps, TextProps } from "@shopify/restyle";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
-import Text, { TextProps } from "../../Atoms/Text/Text";
-import { BasePearlTheme } from "../../../theme/src/types";
-import { baseLightTheme } from "../../../theme/src/basetheme";
+import { Theme } from "../../../theme/theme";
+import Box from "../../Atoms/Box/Box";
+import Text from "../../Atoms/Text/Text";
 
-type ButtonProps = BoxProps<typeof baseLightTheme> & {
+type ButtonProps = {
   onPress: () => void;
   loading?: boolean;
-};
+  textProps?: TextProps<Theme>;
+} & Partial<BoxProps<Theme>>;
 
 const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
   loading,
+  textProps,
   ...props
 }) => (
   <TouchableHighlight underlayColor="transparent" onPress={onPress}>
