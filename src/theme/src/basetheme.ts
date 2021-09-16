@@ -151,7 +151,7 @@ export const baseDarkTheme = {
   ...baseLightTheme,
   colors: {
     ...baseLightTheme.colors,
-    mainBackground: palette.neutral700,
+    mainBackground: palette.neutral800,
     textColor: palette.neutral100,
   },
 };
