@@ -27,6 +27,10 @@ interface ThemeProviderProps<Theme extends BasePearlTheme = BasePearlTheme> {
 
 export const themeContext = createContext({} as IThemeContext);
 
+export const receivedThemeType = <Theme extends BasePearlTheme>(
+  theme: Theme
+): Theme => theme;
+
 /**
  * The main provider component which controls the theme and color mode of the components in the entire application.
  */
@@ -40,29 +44,36 @@ export const ThemeProvider = ({
   const [activeTheme, setActiveTheme] = useState<typeof lightTheme>(lightTheme);
   const systemThemeStyle = useColorScheme() as ThemeType;
 
-  const toggleTheme = () => {
-    if (colorMode === "light") {
+  const changeThemeTo = (colorMode: ThemeType) => {
+    if (colorMode === "dark") {
       setColorMode("dark");
       setActiveTheme(darkTheme);
+      receivedThemeType<typeof darkTheme>(darkTheme);
     } else {
       setColorMode("light");
       setActiveTheme(lightTheme);
+      receivedThemeType<typeof lightTheme>(lightTheme);
+    }
+  };
+
+  const toggleTheme = () => {
+    if (colorMode === "light") {
+      changeThemeTo("dark");
+    } else {
+      changeThemeTo("light");
     }
   };
 
   useEffect(() => {
     // Set initial Theme
     if (colorMode === "light") {
-      setColorMode("light");
-      setActiveTheme(lightTheme);
+      changeThemeTo("light");
     } else if (colorMode === "dark") {
-      setColorMode("dark");
-      setActiveTheme(darkTheme);
+      changeThemeTo("dark");
     } else if (colorMode === "system") {
-      setColorMode(systemThemeStyle);
-      setActiveTheme(systemThemeStyle === "light" ? lightTheme : darkTheme);
+      changeThemeTo(systemThemeStyle);
     }
-  }, []);
+  }, [colorMode, lightTheme, darkTheme]);
 
   return (
     <themeContext.Provider
