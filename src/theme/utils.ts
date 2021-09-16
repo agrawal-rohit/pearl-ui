@@ -1,8 +1,5 @@
 import { ColorInput, TinyColor } from "@ctrl/tinycolor";
-
-export interface IColors {
-  [key: string]: string;
-}
+import { IColor } from "./theme";
 
 /**
  *
@@ -17,7 +14,7 @@ export const generateTintsandShades = (
   count: number = 9
 ) => {
   const tinyColor = new TinyColor(color);
-  const shades: IColors = {};
+  const shades: IColor = {};
 
   // Even number of colors
   if (count % 2 == 0) {
@@ -76,3 +73,5 @@ export const generateTintsandShades = (
 
   return shades;
 };
+
+const extendTheme = (updatedConfig: object) => {};

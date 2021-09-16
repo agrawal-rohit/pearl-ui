@@ -1,3 +1,11 @@
+import {
+  layout,
+  LayoutProps,
+  spacing,
+  SpacingProps,
+  useTheme,
+  useRestyle,
+} from "@shopify/restyle";
 import React from "react";
 import {
   BallIndicator,
@@ -10,24 +18,23 @@ import {
   UIActivityIndicator,
   WaveIndicator,
 } from "react-native-indicators";
-import useStyledProps from "../../../hooks/useStyledProps";
-import { useTheme } from "../../../hooks/useTheme";
-import {
-  color,
-  layout,
-  LayoutProps,
-  spacing,
-  SpacingProps,
-} from "../../../theme/src/styleFunctions";
-import { BasePearlTheme } from "../../../theme/src/types";
-import { baseLightTheme } from "../../../theme/src/basetheme";
-import useComponentConfig from "../../../hooks/useComponentConfig";
+import { Theme } from "../../../theme/theme";
 
-const indicatorStyleFunctions = [color, spacing, layout];
-type IActivityIndicatorProps = SpacingProps<BasePearlTheme> &
-  LayoutProps & {
-    size?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["sizes"];
-    variant?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"];
+const restyleFunctions = [spacing, layout];
+type IActivityIndicatorProps = SpacingProps<Theme> &
+  LayoutProps<Theme> & {
+    color?: string;
+    size?: "s" | "m" | "l" | "xl";
+    variant?:
+      | "ball"
+      | "bar"
+      | "dot"
+      | "spinner"
+      | "pacman"
+      | "pulse"
+      | "skype"
+      | "activity"
+      | "wave";
     loading?: boolean;
   };
 
@@ -44,37 +51,27 @@ const IndicatorTypeToComponentMap = {
 };
 
 const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
-  loading = true,
+  color = undefined,
+  size = "m",
   variant = "spinner",
+  loading = true,
   ...rest
 }) => {
   if (!loading) return null;
 
-  const receivedStyledProps = useStyledProps(indicatorStyleFunctions, rest);
-  const componentSpecificProps = useComponentConfig(
-    "ActivityIndicator",
-    {
-      size: rest["size"],
-      variant: variant,
-    },
-    indicatorStyleFunctions
-  );
+  const theme = useTheme<Theme>();
+  const props = useRestyle(restyleFunctions, rest);
 
-  return React.createElement(
-    IndicatorTypeToComponentMap[
-      variant as keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"]
-    ],
-    {
-      color: componentSpecificProps.style[0].color,
-      size: componentSpecificProps.sizeMultiplier
-        ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
-        : componentSpecificProps.size,
-      style: {
-        ...componentSpecificProps.style[0],
-        ...receivedStyledProps.style[0],
-      },
-    }
-  );
+  const { primary500 } = theme.colors;
+
+  return React.createElement(IndicatorTypeToComponentMap[variant], {
+    color: color ? color : primary500,
+    size:
+      variant === "dot"
+        ? theme.activityIndicatorSize[size].size / 5
+        : theme.activityIndicatorSize[size].size,
+    ...props,
+  });
 };
 
 export default ActivityIndicator;

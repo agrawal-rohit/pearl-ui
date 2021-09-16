@@ -9,6 +9,11 @@ exports[`Atoms/Center passes the snapshot test 1`] = `
         "display": "flex",
         "justifyContent": "center",
       },
+      Array [
+        Object {
+          "display": "flex",
+        },
+      ],
     ]
   }
 >

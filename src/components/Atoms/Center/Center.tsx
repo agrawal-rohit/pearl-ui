@@ -1,13 +1,13 @@
+import { BoxProps, boxRestyleFunctions, useRestyle } from "@shopify/restyle";
 import React from "react";
-import { baseLightTheme } from "../../../theme/src/basetheme";
-import Box, { BoxProps } from "../Box/Box";
+import { Theme } from "../../../theme/theme";
+import Box from "../Box/Box";
 
-const Center: React.FC<BoxProps<typeof baseLightTheme>> = ({
-  children,
-  ...rest
-}) => {
+const Center: React.FC<BoxProps<Theme>> = ({ children, ...rest }) => {
+  const props = useRestyle(boxRestyleFunctions, rest);
+
   return (
-    <Box alignItems="center" justifyContent="center" {...rest}>
+    <Box alignItems="center" justifyContent="center" {...props}>
       {children}
     </Box>
   );
