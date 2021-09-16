@@ -69,6 +69,6 @@ const createBox = <Theme extends BasePearlTheme>() => {
   };
 };
 
-const Box = createBox<typeof baseLightTheme>();
+const Box = createBox();
 
 export default Box;

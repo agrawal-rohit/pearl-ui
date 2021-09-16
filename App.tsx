@@ -19,7 +19,7 @@ const App = () => {
 
   if (haveFontsLoaded) {
     return (
-      <ThemeProvider>
+      <ThemeProvider initialColorMode="dark">
         <Storybook />
         {/* <OfflineNotice />
         <Screen>
