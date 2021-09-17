@@ -1,11 +1,10 @@
 import React from "react";
-import { ActivityIndicator, TouchableHighlight } from "react-native";
+import { TouchableHighlight } from "react-native";
+import ActivityIndicator from "../../Atoms/ActivityIndicator/ActivityIndicator";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text, { TextProps } from "../../Atoms/Text/Text";
-import { BasePearlTheme } from "../../../theme/src/types";
-import { baseLightTheme } from "../../../theme/src/basetheme";
 
-type ButtonProps = BoxProps<typeof baseLightTheme> & {
+type ButtonProps = BoxProps & {
   onPress: () => void;
   loading?: boolean;
 };
@@ -18,20 +17,18 @@ const Button: React.FC<ButtonProps> = ({
 }) => (
   <TouchableHighlight underlayColor="transparent" onPress={onPress}>
     <Box
-      py="m"
-      px="m"
-      backgroundColor="primary500"
-      borderRadius={5}
+      py="l"
+      px="l"
+      backgroundColor="primary-500"
+      borderRadius="s"
       alignItems="center"
       justifyContent="center"
       {...props}
     >
       {loading ? (
-        <ActivityIndicator color="white" />
+        <ActivityIndicator color="neutral-100" />
       ) : (
-        <Text color="buttonTextColor" variant="button">
-          {children}
-        </Text>
+        <Text variant="button">{children}</Text>
       )}
     </Box>
   </TouchableHighlight>

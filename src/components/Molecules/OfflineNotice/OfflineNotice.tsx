@@ -3,10 +3,9 @@ import Constants from "expo-constants";
 import { useNetInfo } from "@react-native-community/netinfo";
 import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import { baseLightTheme } from "../../../theme/src/basetheme";
 import useStyledProps from "../../../hooks/useStyledProps";
 
-type OfflineNoticeProps = BoxProps<typeof baseLightTheme>;
+type OfflineNoticeProps = BoxProps;
 
 const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
   const props = useStyledProps(boxStyleFunctions, rest);
@@ -18,7 +17,7 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
   ) {
     return (
       <Box
-        backgroundColor="danger500"
+        backgroundColor="danger-500"
         height={50}
         top={Constants.statusBarHeight}
         alignItems="center"

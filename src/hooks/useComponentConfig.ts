@@ -42,6 +42,7 @@ const useComponentConfig = (
   );
 
   const componentStyleConfig = theme.components[themeComponentKey];
+
   const componentTypeConfig: ComponentConfig["defaults"] = {};
   componentTypeConfig.size = componentTypeProps.size
     ? componentTypeProps.size
@@ -73,17 +74,15 @@ const useComponentConfig = (
   };
 
   const style = buildStyleProperties.buildStyle(finalComponentProps, theme);
-  const cleanStyleProps: Record<string, any> & {
-    style: Record<string, any>[];
-  } = {
+  const cleanStyleProps: Record<string, any> = {
     ...filterComponentProps(
       finalComponentProps,
       buildStyleProperties.properties
     ),
-    style: [],
+    style: {},
   };
 
-  cleanStyleProps.style = [style, finalComponentProps.style].filter(Boolean);
+  cleanStyleProps.style = style;
   return cleanStyleProps;
 };
 

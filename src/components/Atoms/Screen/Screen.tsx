@@ -2,21 +2,18 @@ import React from "react";
 import Box, { BoxProps, boxStyleFunctions } from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
 import useStyledProps from "../../../hooks/useStyledProps";
-import { baseLightTheme } from "../../../theme/src/basetheme";
+import useComponentConfig from "../../../hooks/useComponentConfig";
 
-const Screen: React.FC<BoxProps<typeof baseLightTheme>> = ({
-  children,
-  ...rest
-}) => {
-  const props = useStyledProps(boxStyleFunctions, rest);
+const Screen: React.FC<BoxProps> = ({ children, ...rest }) => {
+  const componentStyles = useComponentConfig("Screen", {});
 
   return (
     <Box
       padding="m"
-      backgroundColor="mainBackground"
       flex={1}
       flexDirection="column"
-      {...props}
+      {...rest}
+      {...componentStyles}
     >
       <SafeAreaView
         style={{

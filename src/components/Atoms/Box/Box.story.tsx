@@ -7,8 +7,8 @@ storiesOf("Box", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("Basic box", () => (
     <Box
-      backgroundColor="turquoise"
-      borderRadius={20}
+      backgroundColor="neutral-300"
+      borderRadius="l"
       width="40%"
       height={200}
     ></Box>

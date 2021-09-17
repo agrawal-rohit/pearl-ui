@@ -14,20 +14,21 @@ import useStyledProps from "../../../hooks/useStyledProps";
 import { useTheme } from "../../../hooks/useTheme";
 import {
   color,
+  ColorProps,
   layout,
   LayoutProps,
   spacing,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
-import { BasePearlTheme } from "../../../theme/src/types";
-import { baseLightTheme } from "../../../theme/src/basetheme";
+import { baseTheme } from "../../../theme/src/basetheme";
 import useComponentConfig from "../../../hooks/useComponentConfig";
 
 const indicatorStyleFunctions = [color, spacing, layout];
-type IActivityIndicatorProps = SpacingProps<BasePearlTheme> &
+type IActivityIndicatorProps = ColorProps &
+  SpacingProps &
   LayoutProps & {
-    size?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["sizes"];
-    variant?: keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"];
+    size?: keyof typeof baseTheme["components"]["ActivityIndicator"]["sizes"];
+    variant?: keyof typeof baseTheme["components"]["ActivityIndicator"]["variants"];
     loading?: boolean;
   };
 
@@ -62,15 +63,17 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 
   return React.createElement(
     IndicatorTypeToComponentMap[
-      variant as keyof typeof baseLightTheme["components"]["ActivityIndicator"]["variants"]
+      variant as keyof typeof baseTheme["components"]["ActivityIndicator"]["variants"]
     ],
     {
-      color: componentSpecificProps.style[0].color,
+      color: receivedStyledProps.style.color
+        ? receivedStyledProps.style.color
+        : componentSpecificProps.style.color,
       size: componentSpecificProps.sizeMultiplier
         ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
         : componentSpecificProps.size,
       style: {
-        ...componentSpecificProps.style[0],
+        ...componentSpecificProps.style,
         ...receivedStyledProps.style[0],
       },
     }
