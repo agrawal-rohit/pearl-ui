@@ -26,7 +26,7 @@ export const generateTintsandShades = (
     const tintStep = 100 / (numTints * 1.2);
 
     for (var i = 1; i <= numTints; i++) {
-      const shadeLabel = label.concat(i.toString().concat("00"));
+      const shadeLabel = label.concat("-").concat(i.toString().concat("00"));
       shades[shadeLabel] = tinyColor
         .tint(tintStep * (numTints - i + 1))
         .toHexString();
@@ -37,7 +37,9 @@ export const generateTintsandShades = (
     var darkenStep = 100 / (numShades * 1.2);
 
     for (var i = 1; i <= numShades; i++) {
-      const shadeLabel = label.concat((numTints + i).toString().concat("00"));
+      const shadeLabel = label
+        .concat("-")
+        .concat((numTints + i).toString().concat("00"));
       shades[shadeLabel] = tinyColor.shade(darkenStep * i).toHexString();
     }
   }
@@ -49,7 +51,7 @@ export const generateTintsandShades = (
     const tintStep = 100 / (numTints * 1.2);
 
     for (var i = 1; i <= numTints; i++) {
-      const shadeLabel = label.concat(i.toString().concat("00"));
+      const shadeLabel = label.concat("-").concat(i.toString().concat("00"));
       shades[shadeLabel] = tinyColor
         .tint(tintStep * (numTints - i + 1))
         .toHexString();
@@ -57,9 +59,9 @@ export const generateTintsandShades = (
 
     // Middle shade
     const middleShadeIdx = Math.floor(count / 2) + 1;
-    const middleShadeLabel = label.concat(
-      middleShadeIdx.toString().concat("00")
-    );
+    const middleShadeLabel = label
+      .concat("-")
+      .concat(middleShadeIdx.toString().concat("00"));
     shades[middleShadeLabel] = tinyColor.toHexString();
 
     // Generate dark shades
@@ -67,9 +69,9 @@ export const generateTintsandShades = (
     var darkenStep = 100 / (numShades * 1.2);
 
     for (var i = 1; i <= numShades; i++) {
-      const shadeLabel = label.concat(
-        (middleShadeIdx + i).toString().concat("00")
-      );
+      const shadeLabel = label
+        .concat("-")
+        .concat((middleShadeIdx + i).toString().concat("00"));
       shades[shadeLabel] = tinyColor.shade(darkenStep * i).toHexString();
     }
   }
