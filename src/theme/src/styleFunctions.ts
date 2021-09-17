@@ -1,4 +1,5 @@
-import { FlexStyle, TextStyle, ViewStyle } from "react-native";
+import { useColorModeValue } from "./../../hooks/useColorModeValue";
+import { ColorValue, FlexStyle, TextStyle, ViewStyle } from "react-native";
 import { getKeys, isThemeKey } from "../utils/typeHelpers";
 import {
   borderColorProperties,
@@ -12,7 +13,7 @@ import {
   textShadowProperties,
   typographyProperties,
 } from "./styleProperties";
-import { BasePearlTheme } from "./types";
+import { BasePearlTheme, ColorModeColor } from "./types";
 
 export const createStyleFunction = ({
   property,
@@ -28,7 +29,7 @@ export const createStyleFunction = ({
 
     // Transform the value if transformation function exists
     if (transform) {
-      value = transform({ value: value });
+      value = transform(value);
     }
 
     // Check if this value refers to a key in the theme config
@@ -61,18 +62,42 @@ export const createStyleFunction = ({
 export const backgroundColor = [
   createStyleFunction({
     property: "backgroundColor",
-    themeKey: "colors",
+    themeKey: "palette",
+    transform: (value: ColorModeColor | ColorValue) => {
+      // Color Mode color provided
+      if (typeof value === "object") {
+        return useColorModeValue(value.light, value.dark);
+      }
+
+      return value;
+    },
   }),
   createStyleFunction({
     property: "bg",
     styleProperty: "backgroundColor",
-    themeKey: "colors",
+    themeKey: "palette",
+    transform: (value: ColorModeColor | ColorValue) => {
+      // Color Mode color provided
+      if (typeof value === "object") {
+        return useColorModeValue(value.light, value.dark);
+      }
+
+      return value;
+    },
   }),
 ];
 
 export const color = createStyleFunction({
   property: "color",
-  themeKey: "colors",
+  themeKey: "palette",
+  transform: (value: ColorModeColor | ColorValue) => {
+    // Color Mode color provided
+    if (typeof value === "object") {
+      return useColorModeValue(value.light, value.dark);
+    }
+
+    return value;
+  },
 });
 
 export const opacity = createStyleFunction({
@@ -82,7 +107,7 @@ export const opacity = createStyleFunction({
 export const visible = createStyleFunction({
   property: "visible",
   styleProperty: "display",
-  transform: ({ value }: any) => (value === false ? "none" : "flex"),
+  transform: (value: any) => (value === false ? "none" : "flex"),
 });
 
 export const typography = getKeys(typographyProperties).map((property) => {
@@ -137,7 +162,7 @@ export const border = [
   ...getKeys(borderColorProperties).map((property) => {
     return createStyleFunction({
       property,
-      themeKey: "colors",
+      themeKey: "palette",
     });
   }),
   ...getKeys(borderRadiusProperties).map((property) => {
@@ -156,7 +181,7 @@ export const shadow = [
   }),
   createStyleFunction({
     property: "shadowColor",
-    themeKey: "colors",
+    themeKey: "palette",
   }),
 ];
 
@@ -168,7 +193,7 @@ export const textShadow = [
   }),
   createStyleFunction({
     property: "textShadowColor",
-    themeKey: "colors",
+    themeKey: "palette",
   }),
 ];
 
@@ -186,8 +211,8 @@ export const all = [
 ];
 
 // PropTypes
-export interface ColorProps<Theme extends BasePearlTheme> {
-  color?: keyof Theme["colors"];
+export interface ColorProps {
+  color?: keyof BasePearlTheme["palette"];
 }
 export interface OpacityProps {
   opacity?: number;
@@ -197,24 +222,20 @@ export interface VisibleProps {
   visible?: boolean;
 }
 
-export interface BackgroundColorProps<Theme extends BasePearlTheme> {
-  backgroundColor?: keyof Theme["colors"];
-  bg?: keyof Theme["colors"];
+export interface BackgroundColorProps {
+  backgroundColor?: keyof BasePearlTheme["palette"];
+  bg?: keyof BasePearlTheme["palette"];
 }
 
-const a: keyof BasePearlTheme["spacing"] = "a";
-
-type SpacingPropsBase<Theme extends BasePearlTheme> = {
-  [Key in keyof typeof spacingProperties]?: keyof Theme["spacing"];
+type SpacingPropsBase = {
+  [Key in keyof typeof spacingProperties]?: keyof BasePearlTheme["spacing"];
 };
 
-type SpacingShorthandProps<Theme extends BasePearlTheme> = {
-  [Key in keyof typeof spacingPropertiesShorthand]?: keyof Theme["spacing"];
+type SpacingShorthandProps = {
+  [Key in keyof typeof spacingPropertiesShorthand]?: keyof BasePearlTheme["spacing"];
 };
 
-export type SpacingProps<
-  Theme extends BasePearlTheme
-> = SpacingPropsBase<Theme> & SpacingShorthandProps<Theme>;
+export type SpacingProps = SpacingPropsBase & SpacingShorthandProps;
 
 export type TypographyProps = {
   [Key in keyof typeof typographyProperties]?: TextStyle[Key];
@@ -224,45 +245,45 @@ export type LayoutProps = {
   [Key in keyof typeof layoutProperties]?: FlexStyle[Key];
 };
 
-export type PositionProps<Theme extends BasePearlTheme> = {
+export type PositionProps = {
   [Key in keyof typeof positionProperties]?: FlexStyle[Key];
 } & {
-  zIndex?: Theme["zIndices"] extends {} ? keyof Theme["zIndices"] : number;
+  zIndex?: BasePearlTheme["zIndices"] extends {}
+    ? keyof BasePearlTheme["zIndices"]
+    : number;
 };
 
-export type BorderProps<Theme extends BasePearlTheme> = {
+export type BorderProps = {
   [Key in keyof typeof borderProperties]?: ViewStyle[Key];
 } &
   {
-    [Key in keyof typeof borderColorProperties]?: keyof Theme["colors"];
+    [Key in keyof typeof borderColorProperties]?: keyof BasePearlTheme["palette"];
   } &
   {
-    [Key in keyof typeof borderRadiusProperties]?: Theme["borderRadii"] extends {}
-      ? keyof Theme["borderRadii"]
+    [Key in keyof typeof borderRadiusProperties]?: BasePearlTheme["borderRadii"] extends {}
+      ? keyof BasePearlTheme["borderRadii"]
       : number;
   };
 
-export type ShadowProps<Theme extends BasePearlTheme> = {
+export type ShadowProps = {
   [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
 } & {
-  shadowColor?: keyof Theme["colors"];
+  shadowColor?: keyof BasePearlTheme["palette"];
 };
 
-export type TextShadowProps<Theme extends BasePearlTheme> = {
+export type TextShadowProps = {
   [Key in keyof typeof textShadowProperties]?: TextStyle[Key];
 } & {
-  textShadowColor?: keyof Theme["colors"];
+  textShadowColor?: keyof BasePearlTheme["palette"];
 };
 
-export type AllProps<
-  Theme extends BasePearlTheme
-> = BackgroundColorProps<Theme> &
-  ColorProps<Theme> &
+export type AllProps = BackgroundColorProps &
+  ColorProps &
   OpacityProps &
-  SpacingProps<Theme> &
+  SpacingProps &
   TypographyProps &
   LayoutProps &
-  PositionProps<Theme> &
-  BorderProps<Theme> &
-  ShadowProps<Theme> &
-  TextShadowProps<Theme>;
+  PositionProps &
+  BorderProps &
+  ShadowProps &
+  TextShadowProps;

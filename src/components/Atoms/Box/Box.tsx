@@ -1,8 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import useStyledProps from "../../../hooks/useStyledProps";
-import { useTheme } from "../../../hooks/useTheme";
-import { baseLightTheme } from "../../../theme/src/basetheme";
+import { baseTheme } from "../../../theme/src/basetheme";
 import {
   backgroundColor,
   BackgroundColorProps,
@@ -23,16 +22,14 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { BasePearlTheme } from "../../../theme/src/types";
 
-export type BoxProps<
-  Theme extends BasePearlTheme
-> = BackgroundColorProps<Theme> &
+export type BoxProps = BackgroundColorProps &
   OpacityProps &
   VisibleProps &
   LayoutProps &
-  SpacingProps<Theme> &
-  BorderProps<Theme> &
-  ShadowProps<Theme> &
-  PositionProps<Theme>;
+  SpacingProps &
+  BorderProps &
+  ShadowProps &
+  PositionProps;
 
 export const boxStyleFunctions = [
   backgroundColor,
@@ -51,17 +48,14 @@ export const boxStyleFunctions = [
 type ViewProps = React.ComponentProps<typeof View> & {
   children?: React.ReactNode;
 };
-type ComponentProps<Theme extends BasePearlTheme> = BoxProps<Theme> &
-  Omit<ViewProps, keyof BoxProps<Theme>>;
+type ComponentProps = BoxProps & Omit<ViewProps, keyof BoxProps>;
 
-const createBox = <Theme extends BasePearlTheme>() => {
-  const StyledBox = React.forwardRef(
-    (props: ComponentProps<Theme>, ref: any) => {
-      const passedProps = useStyledProps(boxStyleFunctions, props);
+const createBox = () => {
+  const StyledBox = React.forwardRef((props: ComponentProps, ref: any) => {
+    const passedProps = useStyledProps(boxStyleFunctions, props);
 
-      return <View ref={ref} {...passedProps} />;
-    }
-  );
+    return <View ref={ref} {...passedProps} />;
+  });
 
   type StyledBoxComponentType = typeof StyledBox;
   return StyledBox as StyledBoxComponentType & {

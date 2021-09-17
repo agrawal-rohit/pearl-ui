@@ -1,7 +1,8 @@
 import React from "react";
 import { Text as RNText } from "react-native";
+import useComponentConfig from "../../../hooks/useComponentConfig";
 import useStyledProps from "../../../hooks/useStyledProps";
-import { baseLightTheme } from "../../../theme/src/basetheme";
+import { baseTheme } from "../../../theme/src/basetheme";
 import {
   color,
   ColorProps,
@@ -16,16 +17,16 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { createTextVariants } from "../../../theme/src/styleVariants";
 import { BasePearlTheme } from "../../../theme/src/types";
 
-export type TextProps<Theme extends BasePearlTheme> = ColorProps<Theme> &
+export type TextProps = ColorProps &
   OpacityProps &
   VisibleProps &
   TypographyProps &
-  SpacingProps<Theme> &
-  TextShadowProps<Theme> & {
-    variant?: keyof Omit<Theme["typography"], "defaults">;
+  SpacingProps &
+  TextShadowProps & {
+    size?: string;
+    variant?: string;
   };
 
 export const textStyleFunctions = [
@@ -35,7 +36,6 @@ export const textStyleFunctions = [
   typography,
   spacing,
   textShadow,
-  createTextVariants(),
 ];
 
 /**
@@ -48,13 +48,17 @@ const createText = <
   }
 >() => {
   const StyledText = React.forwardRef(
-    (
-      props: TextProps<Theme> & Omit<Props, keyof TextProps<Theme>>,
-      ref: any
-    ) => {
+    (props: TextProps & Omit<Props, keyof TextProps>, ref: any) => {
       const passedProps = useStyledProps(textStyleFunctions, props);
+      const componentSpecificProps = useComponentConfig(
+        "Text",
+        {
+          variant: props.variant,
+        },
+        textStyleFunctions
+      );
 
-      return <RNText ref={ref} {...passedProps} />;
+      return <RNText ref={ref} {...passedProps} {...componentSpecificProps} />;
     }
   );
 
@@ -64,6 +68,6 @@ const createText = <
   };
 };
 
-const Text = createText<typeof baseLightTheme>();
+const Text = createText<typeof baseTheme>();
 
 export default Text;
