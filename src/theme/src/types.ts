@@ -1,6 +1,25 @@
-import { ViewStyle, TextStyle, ImageStyle } from "react-native";
+import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
+import { basePalette } from "../utils/basePalette";
 
 export type SafeVariants<T> = Omit<T, keyof BasePearlTheme>;
+
+export interface TypographyConfig {
+  baseStyle:
+    | TextStyle
+    | {
+        color?: ColorModeColor | ColorValue;
+      };
+  variants: {
+    [key: string]:
+      | TextStyle
+      | {
+          color?: ColorModeColor | ColorValue;
+        };
+  };
+  defaults: {
+    variant?: string;
+  };
+}
 
 export interface ComponentConfig {
   baseStyle: {
@@ -18,15 +37,30 @@ export interface ComponentConfig {
   };
 }
 
+type Colors = keyof typeof basePalette;
+
+export type ColorModeColor = {
+  light: ColorValue;
+  dark: ColorValue;
+};
+
 export interface BasePearlTheme {
-  colors: {
-    [key: string]: string;
+  palette: {
+    [key in Colors]: string;
   };
   spacing: {
-    [key: string]: number;
-  };
-  typography: {
-    [key: string]: TextStyle;
+    s: number;
+    m: number;
+    l: number;
+    xl: number;
+    "2xl": number;
+    "3xl": number;
+    "4xl": number;
+    "5xl": number;
+    "6xl": number;
+    "7xl": number;
+    "8xl": number;
+    "9xl": number;
   };
   components: {
     [key: string]: ComponentConfig;
@@ -46,31 +80,32 @@ export interface BasePearlTheme {
     tooltip: 1800;
     [key: string]: number;
   };
-  borderRadii?: {
-    [key: string]: number;
+  borderRadii: {
+    s: number;
+    m: number;
+    l: number;
+    xl: number;
   };
 }
 
 // Style Functions
 export interface StyleFunctionContainer<
   TProps extends Record<string, any>,
-  Theme extends BasePearlTheme = BasePearlTheme,
   P extends keyof TProps = keyof TProps,
-  K extends keyof Theme | undefined = keyof Theme | undefined
+  K extends keyof BasePearlTheme | undefined = keyof BasePearlTheme | undefined
 > {
   property: P;
   themeKey: K | undefined;
   variant: boolean;
-  func: StyleFunction<TProps, Theme>;
+  func: StyleFunction<TProps>;
 }
 
 export type StyleFunction<
   TProps extends Record<string, any> = Record<string, any>,
-  Theme extends BasePearlTheme = BasePearlTheme,
   S extends keyof any = string
 > = (
   props: TProps,
-  theme: Theme
+  theme: BasePearlTheme
 ) => {
   [key in S]?: any;
 };

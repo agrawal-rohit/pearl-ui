@@ -32,7 +32,7 @@ const useStyledProps = (styleFunctions: any, props: any) => {
     buildStyleProperties.properties
   );
 
-  cleanStyleProps.style = [style, props.style].filter(Boolean);
+  cleanStyleProps.style = { ...style, ...props.style };
   return cleanStyleProps;
 };
 

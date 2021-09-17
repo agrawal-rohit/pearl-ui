@@ -41,8 +41,6 @@ storiesOf("Typography", module)
   ))
   .add("Button Text", () => (
     <Box flex={1}>
-      <Text variant="button" color="textColor">
-        Button text
-      </Text>
+      <Text variant="button">Button text</Text>
     </Box>
   ));

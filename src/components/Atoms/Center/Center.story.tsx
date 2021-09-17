@@ -7,7 +7,7 @@ import Text from "../Text/Text";
 storiesOf("Center", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("any elements", () => (
-    <Center height={100} backgroundColor="primary100">
+    <Center height={100} backgroundColor="primary-100">
       <Text>asdlalsdknl</Text>
     </Center>
   ));
