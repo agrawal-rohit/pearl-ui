@@ -3,11 +3,13 @@
 exports[`Atoms/Text passes the snapshot test 1`] = `
 <Text
   style={
-    Array [
-      Object {
-        "display": "flex",
-      },
-    ]
+    Object {
+      "color": "#1A2138",
+      "display": "flex",
+      "fontFamily": "Poppins-Regular",
+      "fontSize": 19,
+      "fontWeight": "400",
+    }
   }
 >
   Hi I am a text

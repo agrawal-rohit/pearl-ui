@@ -23,7 +23,7 @@ export const createStyleFunction = ({
 }: any) => {
   const styleProp = styleProperty || property.toString();
 
-  const func = (props: any, theme: any) => {
+  const func = (props: any, theme: any): any => {
     // Initial value is the raw prop value
     let value = props[property];
 
@@ -54,50 +54,37 @@ export const createStyleFunction = ({
   return {
     property,
     themeKey,
-    variant: false,
     func,
   };
+};
+
+const transformColorValue = (value: ColorModeColor | ColorValue) => {
+  // Color Mode color provided
+  if (typeof value === "object") {
+    return useColorModeValue(value.light, value.dark);
+  }
+
+  return value;
 };
 
 export const backgroundColor = [
   createStyleFunction({
     property: "backgroundColor",
     themeKey: "palette",
-    transform: (value: ColorModeColor | ColorValue) => {
-      // Color Mode color provided
-      if (typeof value === "object") {
-        return useColorModeValue(value.light, value.dark);
-      }
-
-      return value;
-    },
+    transform: transformColorValue,
   }),
   createStyleFunction({
     property: "bg",
     styleProperty: "backgroundColor",
     themeKey: "palette",
-    transform: (value: ColorModeColor | ColorValue) => {
-      // Color Mode color provided
-      if (typeof value === "object") {
-        return useColorModeValue(value.light, value.dark);
-      }
-
-      return value;
-    },
+    transform: transformColorValue,
   }),
 ];
 
 export const color = createStyleFunction({
   property: "color",
   themeKey: "palette",
-  transform: (value: ColorModeColor | ColorValue) => {
-    // Color Mode color provided
-    if (typeof value === "object") {
-      return useColorModeValue(value.light, value.dark);
-    }
-
-    return value;
-  },
+  transform: transformColorValue,
 });
 
 export const opacity = createStyleFunction({
@@ -163,6 +150,7 @@ export const border = [
     return createStyleFunction({
       property,
       themeKey: "palette",
+      transform: transformColorValue,
     });
   }),
   ...getKeys(borderRadiusProperties).map((property) => {
@@ -182,6 +170,7 @@ export const shadow = [
   createStyleFunction({
     property: "shadowColor",
     themeKey: "palette",
+    transform: transformColorValue,
   }),
 ];
 
@@ -194,6 +183,7 @@ export const textShadow = [
   createStyleFunction({
     property: "textShadowColor",
     themeKey: "palette",
+    transform: transformColorValue,
   }),
 ];
 
@@ -212,7 +202,7 @@ export const all = [
 
 // PropTypes
 export interface ColorProps {
-  color?: keyof BasePearlTheme["palette"];
+  color?: keyof BasePearlTheme["palette"] | ColorModeColor;
 }
 export interface OpacityProps {
   opacity?: number;
@@ -223,8 +213,8 @@ export interface VisibleProps {
 }
 
 export interface BackgroundColorProps {
-  backgroundColor?: keyof BasePearlTheme["palette"];
-  bg?: keyof BasePearlTheme["palette"];
+  backgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+  bg?: keyof BasePearlTheme["palette"] | ColorModeColor;
 }
 
 type SpacingPropsBase = {
