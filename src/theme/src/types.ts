@@ -21,6 +21,17 @@ export interface TypographyConfig {
   };
 }
 
+export interface ElevationConfig {
+  shadowColor: ColorModeColor | ColorValue;
+  shadowOffset: {
+    width: number;
+    height: number;
+  };
+  shadowOpacity: number;
+  shadowRadius: number;
+  elevation: number;
+}
+
 export interface ComponentConfig {
   baseStyle: {
     [key: string]: any;
@@ -63,14 +74,29 @@ export interface BasePearlTheme {
   components: {
     [key: string]: ComponentConfig;
   };
+  elevation: {
+    [key: string]: ElevationConfig;
+  };
   zIndices: {
-    [key: string]: number;
+    hide: number;
+    base: number;
+    docked: number;
+    dropdown: number;
+    sticky: number;
+    banner: number;
+    overlay: number;
+    modal: number;
+    popover: number;
+    skipLink: number;
+    toast: number;
+    tooltip: number;
   };
   borderRadii: {
     s: number;
     m: number;
     l: number;
     xl: number;
+    "2xl": number;
   };
 }
 

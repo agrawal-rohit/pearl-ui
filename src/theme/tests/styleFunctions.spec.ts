@@ -121,11 +121,16 @@ describe("createStyleFunctions", () => {
   });
 
   it("maps shadow props correctly", () => {
-    const props = { shadowColor: "black" };
-    const shadowColorStyle = shadow[shadow.length - 1].func(props, baseTheme);
+    const props = { boxShadow: "s" };
+    const shadowStyle = shadow[0].func(props, baseTheme);
+
+    expect(shadowStyle).toBe(baseTheme[shadow[0].themeKey].s);
+
+    const shadowColor = { shadowColor: shadowStyle.shadowColor };
+    const shadowColorStyle = shadow[1].func(shadowColor, baseTheme);
 
     expect(shadowColorStyle.shadowColor).toBe(
-      baseTheme[shadow[shadow.length - 1].themeKey].black
+      baseTheme[shadow[1].themeKey][shadowStyle.shadowColor]
     );
   });
 
