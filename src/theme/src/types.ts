@@ -37,8 +37,6 @@ export interface ComponentConfig {
   };
 }
 
-type Colors = keyof typeof basePalette;
-
 export type ColorModeColor = {
   light: ColorValue;
   dark: ColorValue;
@@ -46,7 +44,7 @@ export type ColorModeColor = {
 
 export interface BasePearlTheme {
   palette: {
-    [key in Colors]: string;
+    [key: string]: string;
   };
   spacing: {
     s: number;
@@ -65,19 +63,7 @@ export interface BasePearlTheme {
   components: {
     [key: string]: ComponentConfig;
   };
-  zIndices?: {
-    hide: -1;
-    base: 0;
-    docked: 10;
-    dropdown: 1000;
-    sticky: 1100;
-    banner: 1200;
-    overlay: 1300;
-    modal: 1400;
-    popover: 1500;
-    skipLink: 1600;
-    toast: 1700;
-    tooltip: 1800;
+  zIndices: {
     [key: string]: number;
   };
   borderRadii: {
@@ -96,7 +82,6 @@ export interface StyleFunctionContainer<
 > {
   property: P;
   themeKey: K | undefined;
-  variant: boolean;
   func: StyleFunction<TProps>;
 }
 
