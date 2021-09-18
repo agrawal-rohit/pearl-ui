@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = ({
 }) => (
   <TouchableHighlight underlayColor="transparent" onPress={onPress}>
     <Box
-      py="l"
-      px="l"
+      py="m"
+      px="m"
       backgroundColor="primary-500"
       borderRadius="s"
       alignItems="center"

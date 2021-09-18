@@ -3,11 +3,9 @@
 exports[`Atoms/Box passes the snapshot test 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "display": "flex",
-      },
-    ]
+    Object {
+      "display": "flex",
+    }
   }
 >
   asdasd

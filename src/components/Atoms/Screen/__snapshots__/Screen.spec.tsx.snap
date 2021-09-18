@@ -3,20 +3,13 @@
 exports[`Atoms/Screen passes the snapshot test 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "backgroundColor": "#FFFFFF",
-        "display": "flex",
-        "flex": 1,
-        "flexDirection": "column",
-        "padding": 16,
-      },
-      Array [
-        Object {
-          "display": "flex",
-        },
-      ],
-    ]
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "display": "flex",
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 16,
+    }
   }
 >
   <RCTSafeAreaView
