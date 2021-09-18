@@ -46,9 +46,13 @@ export const createStyleFunction = ({
 
     if (value === undefined) return {};
 
-    return {
-      [styleProp]: value,
-    };
+    if (typeof styleProperty !== "object") {
+      return {
+        [styleProp]: value,
+      };
+    } else {
+      return value;
+    }
   };
 
   return {
@@ -162,10 +166,10 @@ export const border = [
 ];
 
 export const shadow = [
-  ...getKeys(shadowProperties).map((property) => {
-    return createStyleFunction({
-      property,
-    });
+  createStyleFunction({
+    property: "boxShadow",
+    themeKey: "elevation",
+    styleProperty: {},
   }),
   createStyleFunction({
     property: "shadowColor",
@@ -255,9 +259,14 @@ export type BorderProps = {
       : number;
   };
 
+// export type ShadowProps = {
+//   [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
+// } & {
+//   shadowColor?: keyof BasePearlTheme["palette"];
+// };
+
 export type ShadowProps = {
-  [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
-} & {
+  boxShadow?: keyof BasePearlTheme["elevation"];
   shadowColor?: keyof BasePearlTheme["palette"];
 };
 
