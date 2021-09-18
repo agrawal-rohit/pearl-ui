@@ -27,6 +27,49 @@ export const baseTheme = createTheme({
     m: 8,
     l: 16,
     xl: 24,
+    "2xl": 32,
+  },
+  elevation: {
+    s: {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 4,
+      elevation: 2,
+    },
+    m: {
+      shadowColor: "#373D40",
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 8,
+      elevation: 4,
+    },
+    l: {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 8,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 16,
+      elevation: 6,
+    },
+    xl: {
+      shadowColor: "#373D40",
+      shadowOffset: {
+        width: 0,
+        height: 16,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 32,
+      elevation: 8,
+    },
   },
   zIndices: {
     hide: -1,

@@ -61,7 +61,7 @@ export const ThemeProvider = ({
     } else if (colorMode === "system") {
       changeThemeTo(systemThemeStyle);
     }
-  }, [colorMode, theme]);
+  }, [colorMode, initialColorMode, theme]);
 
   return (
     <themeContext.Provider
