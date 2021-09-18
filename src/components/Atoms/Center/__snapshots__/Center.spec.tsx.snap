@@ -3,13 +3,11 @@
 exports[`Atoms/Center passes the snapshot test 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-      },
-    ]
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "center",
+    }
   }
 >
   This is centered

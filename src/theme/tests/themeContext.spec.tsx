@@ -5,17 +5,16 @@ import { ThemeProvider } from "../src/themeContext";
 import Box from "../../components/Atoms/Box/Box";
 import Button from "../../components/Molecules/Button/Button";
 import { useTheme } from "../../hooks/useTheme";
-import { palette } from "../utils/basePalette";
 
 jest.useFakeTimers();
 
 const ThemeTestComponent: React.FC = () => {
-  const { theme, colorMode, toggleTheme } = useTheme();
+  const { colorMode, toggleColorMode } = useTheme();
 
   return (
     <Box>
-      <Text>{colorMode}</Text>;<Text>{theme.colors.mainBackground}</Text>;
-      <Button onPress={toggleTheme}>Toggle theme</Button>
+      <Text>{colorMode}</Text>;
+      <Button onPress={toggleColorMode}>Toggle mode</Button>
     </Box>
   );
 };
@@ -28,7 +27,6 @@ describe("Theme Context", () => {
       </ThemeProvider>
     );
     expect(getByText("light")).toBeTruthy();
-    expect(getByText(palette.neutral100)).toBeTruthy();
   });
 
   it("loads the dark theme when overriden", () => {
@@ -39,7 +37,6 @@ describe("Theme Context", () => {
     );
 
     expect(getByText("dark")).toBeTruthy();
-    expect(getByText(palette.neutral700)).toBeTruthy();
   });
 
   it("loads the theme automatically based on the system theme", () => {
