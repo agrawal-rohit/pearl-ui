@@ -5,8 +5,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
   title: "Pearl UI",
-  tagline: "Blazing fast mobile development",
-  url: "https://your-docusaurus-test-site.com",
+  tagline:
+    "A simple and modular UI framework for building gorgeous mobile apps",
+  url: "https://pearl-ui.vercel.app",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -37,17 +38,52 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
+      image: "img/logo.png",
+      metadatas: [
+        { name: "og:type", content: "website" },
+        {
+          name: "og:title",
+          content: "Pearl UI",
+        },
+        {
+          name: "og:description",
+          content:
+            "A simple and accessible UI toolkit for cross platform mobile apps",
+        },
+        { name: "og:image", content: "img/logo.png" },
+        { name: "og:url", content: "https://pearl-ui.vercel.app" },
+        { name: "og:site_name", content: "Pearl UI" },
+
+        { name: "twitter:title", content: "Pearl UI" },
+        {
+          name: "twitter:description",
+          content:
+            "A simple and accessible UI toolkit for cross platform mobile apps",
+        },
+        { name: "twitter:image", content: "img/logo.png" },
+        { name: "twitter:site", content: "https://pearl-ui.vercel.app" },
+        { name: "twitter:creator", content: "@_rohitagrawal_" },
+      ],
       navbar: {
-        title: "Pearl UI",
         logo: {
           alt: "Pearl UI Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
+          srcDark: "img/logoDark.png",
         },
         items: [
           {
             to: "/docs/introduction", // ./docs/Intro.md
             label: "Docs",
             position: "left",
+          },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
           },
           {
             href: "https://github.com/agrawal-rohit/pearl-ui",
@@ -58,27 +94,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Docs",
-                to: "/docs/introduction",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Pearl UI, Inc. Built by Rohit Agrawal.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Pearl UI, Inc. Proudly built in <span style="margin-right: 5px">🇮🇳</span>  by Rohit Agrawal.`,
       },
       prism: {
         theme: lightCodeTheme,
