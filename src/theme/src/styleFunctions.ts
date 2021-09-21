@@ -259,12 +259,6 @@ export type BorderProps = {
       : number;
   };
 
-// export type ShadowProps = {
-//   [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
-// } & {
-//   shadowColor?: keyof BasePearlTheme["palette"];
-// };
-
 export type ShadowProps = {
   boxShadow?: keyof BasePearlTheme["elevation"];
   shadowColor?: keyof BasePearlTheme["palette"];
