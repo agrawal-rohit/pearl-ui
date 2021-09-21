@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableHighlight } from "react-native";
 import ActivityIndicator from "../../Atoms/ActivityIndicator/ActivityIndicator";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
-import Text, { TextProps } from "../../Atoms/Text/Text";
+import Text from "../../Atoms/Text/Text";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;

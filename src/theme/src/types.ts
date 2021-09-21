@@ -1,5 +1,4 @@
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
-import { basePalette } from "../utils/basePalette";
 
 export type SafeVariants<T> = Omit<T, keyof BasePearlTheme>;
 

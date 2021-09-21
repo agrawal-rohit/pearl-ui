@@ -18,7 +18,7 @@ const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
-const useStyledProps = (styleFunctions: any, props: any) => {
+export const useStyledProps = (styleFunctions: any, props: any) => {
   const { theme } = useTheme();
 
   const buildStyleProperties = useMemo(
@@ -35,5 +35,3 @@ const useStyledProps = (styleFunctions: any, props: any) => {
   cleanStyleProps.style = { ...style, ...props.style };
   return cleanStyleProps;
 };
-
-export default useStyledProps;
