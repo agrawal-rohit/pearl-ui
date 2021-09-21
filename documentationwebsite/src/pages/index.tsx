@@ -19,15 +19,15 @@ function HomepageHeader() {
         </h1>
         <p className={styles.heroDescription}>
           Pearl UI is a design-system-driven framework for developers to build
-          beautiful, accessible mobile apps straight out of the box. Take your
-          idea from an MVP to a finished product at the speed of light!
+          beautiful, accessible mobile apps right out of the box. Take your idea
+          from an MVP to a finished product at the speed of light!
         </p>
         <Link
           className={clsx(
             "button button--primary button--lg",
             styles.heroButton
           )}
-          to="/docs/introduction"
+          to="/docs/getting-started/installation"
           style={{ marginRight: 10 }}
         >
           Get Started

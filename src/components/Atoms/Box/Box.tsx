@@ -1,7 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import useStyledProps from "../../../hooks/useStyledProps";
-import { baseTheme } from "../../../theme/src/basetheme";
+import { useStyledProps } from "../../../hooks/useStyledProps";
 import {
   backgroundColor,
   BackgroundColorProps,
@@ -20,7 +19,6 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { BasePearlTheme } from "../../../theme/src/types";
 
 export type BoxProps = BackgroundColorProps &
   OpacityProps &

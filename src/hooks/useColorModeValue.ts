@@ -2,7 +2,7 @@ import { ColorValue } from "react-native";
 import { useTheme } from "./useTheme";
 
 /**
- * Hook to
+ * Hook to get the appropriate value based on the current color mode
  */
 export const useColorModeValue = (
   lightColor: ColorValue,

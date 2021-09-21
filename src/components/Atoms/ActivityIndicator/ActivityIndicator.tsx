@@ -10,8 +10,6 @@ import {
   UIActivityIndicator,
   WaveIndicator,
 } from "react-native-indicators";
-import useStyledProps from "../../../hooks/useStyledProps";
-import { useTheme } from "../../../hooks/useTheme";
 import {
   color,
   ColorProps,
@@ -21,7 +19,8 @@ import {
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
 import { baseTheme } from "../../../theme/src/basetheme";
-import useComponentConfig from "../../../hooks/useComponentConfig";
+import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useComponentConfig } from "../../../hooks/useComponentConfig";
 
 const indicatorStyleFunctions = [color, spacing, layout];
 type IActivityIndicatorProps = ColorProps &
@@ -61,6 +60,11 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
     indicatorStyleFunctions
   );
 
+  const finalStyle = {
+    ...componentSpecificProps.style,
+    ...receivedStyledProps.style,
+  };
+
   return React.createElement(
     IndicatorTypeToComponentMap[
       variant as keyof typeof baseTheme["components"]["ActivityIndicator"]["variants"]
@@ -72,10 +76,7 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
       size: componentSpecificProps.sizeMultiplier
         ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
         : componentSpecificProps.size,
-      style: {
-        ...componentSpecificProps.style,
-        ...receivedStyledProps.style[0],
-      },
+      style: finalStyle,
     }
   );
 };

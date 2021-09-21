@@ -17,19 +17,15 @@ const App = () => {
     "Poppins-Thin": require("./src/fonts/Poppins-Thin.ttf"),
   });
 
-  if (haveFontsLoaded) {
-    return (
-      <ThemeProvider initialColorMode="light">
-        <Storybook />
-        {/* <OfflineNotice />
-        <Screen>
-          <Button onPress={() => console.log(2)}>Test</Button>
-        </Screen> */}
-      </ThemeProvider>
-    );
-  }
-
-  return <AppLoading />;
+  return (
+    <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
+      <Storybook />
+      {/* <OfflineNotice />
+      <Screen>
+        <Button onPress={() => console.log(2)}>Test</Button>
+      </Screen> */}
+    </ThemeProvider>
+  );
 };
 
 export default App;

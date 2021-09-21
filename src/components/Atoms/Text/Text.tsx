@@ -1,7 +1,7 @@
 import React from "react";
 import { Text as RNText } from "react-native";
-import useComponentConfig from "../../../hooks/useComponentConfig";
-import useStyledProps from "../../../hooks/useStyledProps";
+import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import { baseTheme } from "../../../theme/src/basetheme";
 import {
   color,
@@ -58,7 +58,19 @@ const createText = <
         textStyleFunctions
       );
 
-      return <RNText ref={ref} {...passedProps} {...componentSpecificProps} />;
+      const finalStyle = {
+        ...componentSpecificProps.style,
+        ...passedProps.style,
+      };
+
+      return (
+        <RNText
+          ref={ref}
+          {...componentSpecificProps}
+          {...passedProps}
+          style={finalStyle}
+        />
+      );
     }
   );
 

@@ -3,12 +3,11 @@ import Constants from "expo-constants";
 import { useNetInfo } from "@react-native-community/netinfo";
 import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import useStyledProps from "../../../hooks/useStyledProps";
+import { useStyledProps } from "../../../hooks/useStyledProps";
 
 type OfflineNoticeProps = BoxProps;
 
 const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
-  const props = useStyledProps(boxStyleFunctions, rest);
   const netInfo = useNetInfo();
 
   if (
@@ -24,10 +23,10 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
         justifyContent="center"
         width="100%"
         position="absolute"
-        zIndex={2}
-        {...props}
+        zIndex="banner"
+        {...rest}
       >
-        <Text variant="notifications">No Internet Connection!</Text>
+        <Text>No Internet Connection!</Text>
       </Box>
     );
   }
