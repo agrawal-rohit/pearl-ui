@@ -58,7 +58,7 @@ function FeaturesSection() {
     {
       title: "Accessible",
       description:
-        "Every components follows the official Android and Apple accessibility guidelines and provides screen reader support.",
+        "All components follow the official Android and Apple accessibility guidelines, as well as support for screen readers.",
       icon: <IoAccessibility fontSize={30} />,
     },
     {

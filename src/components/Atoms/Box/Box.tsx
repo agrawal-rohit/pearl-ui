@@ -48,19 +48,10 @@ type ViewProps = React.ComponentProps<typeof View> & {
 };
 type ComponentProps = BoxProps & Omit<ViewProps, keyof BoxProps>;
 
-const createBox = () => {
-  const StyledBox = React.forwardRef((props: ComponentProps, ref: any) => {
-    const passedProps = useStyledProps(boxStyleFunctions, props);
+const Box = React.forwardRef((props: ComponentProps, ref: any) => {
+  const passedProps = useStyledProps(boxStyleFunctions, props);
 
-    return <View ref={ref} {...passedProps} />;
-  });
-
-  type StyledBoxComponentType = typeof StyledBox;
-  return StyledBox as StyledBoxComponentType & {
-    defaultProps?: Partial<React.ComponentProps<StyledBoxComponentType>>;
-  };
-};
-
-const Box = createBox();
+  return <View ref={ref} {...passedProps} />;
+});
 
 export default Box;
