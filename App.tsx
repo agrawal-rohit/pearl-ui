@@ -1,20 +1,25 @@
 import React from "react";
 import Storybook from "./storybook";
-import { useFonts } from "expo-font";
+import {
+  useFonts,
+  Poppins_300Light,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+  Poppins_700Bold,
+  Poppins_800ExtraBold,
+} from "@expo-google-fonts/poppins";
 import Screen from "./src/components/Atoms/Screen/Screen";
-import AppLoading from "expo-app-loading";
 import { ThemeProvider } from "./src/theme/src/themeContext";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
-    "Poppins-Regular": require("./src/fonts/Poppins-Regular.ttf"),
-    "Poppins-SemiBold": require("./src/fonts/Poppins-SemiBold.ttf"),
-    "Poppins-Bold": require("./src/fonts/Poppins-Bold.ttf"),
-    "Poppins-ExtraBold": require("./src/fonts/Poppins-ExtraBold.ttf"),
-    "Poppins-ExtraLight": require("./src/fonts/Poppins-ExtraLight.ttf"),
-    "Poppins-Light": require("./src/fonts/Poppins-Light.ttf"),
-    "Poppins-Medium": require("./src/fonts/Poppins-Medium.ttf"),
-    "Poppins-Thin": require("./src/fonts/Poppins-Thin.ttf"),
+    "Poppins-Light": Poppins_300Light,
+    "Poppins-Regular": Poppins_400Regular,
+    "Poppins-Medium": Poppins_500Medium,
+    "Poppins-SemiBold": Poppins_600SemiBold,
+    "Poppins-Bold": Poppins_700Bold,
+    "Poppins-ExtraBold": Poppins_800ExtraBold,
   });
 
   return (

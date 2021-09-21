@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableHighlight } from "react-native";
+import { Pressable } from "react-native";
 import ActivityIndicator from "../../Atoms/ActivityIndicator/ActivityIndicator";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   loading,
   ...props
 }) => (
-  <TouchableHighlight underlayColor="transparent" onPress={onPress}>
+  <Pressable onPress={onPress}>
     <Box
       py="m"
       px="m"
@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
         <Text variant="button">{children}</Text>
       )}
     </Box>
-  </TouchableHighlight>
+  </Pressable>
 );
 
 export default Button;

@@ -43,6 +43,7 @@ const IndicatorTypeToComponentMap = {
   wave: WaveIndicator,
 };
 
+/** A spinner component which can be used to display a loading status to the user */
 const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
   loading = true,
   variant = "spinner",

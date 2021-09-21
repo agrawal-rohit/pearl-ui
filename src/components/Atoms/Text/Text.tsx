@@ -25,7 +25,6 @@ export type TextProps = ColorProps &
   TypographyProps &
   SpacingProps &
   TextShadowProps & {
-    size?: string;
     variant?: string;
   };
 
@@ -38,48 +37,38 @@ export const textStyleFunctions = [
   textShadow,
 ];
 
-/**
- * Text is the most abstract  text component.
- */
-const createText = <
-  Theme extends BasePearlTheme,
-  Props = React.ComponentProps<typeof RNText> & {
-    children?: React.ReactNode;
-  }
->() => {
-  const StyledText = React.forwardRef(
-    (props: TextProps & Omit<Props, keyof TextProps>, ref: any) => {
-      const passedProps = useStyledProps(textStyleFunctions, props);
-      const componentSpecificProps = useComponentConfig(
-        "Text",
-        {
-          variant: props.variant,
-        },
-        textStyleFunctions
-      );
-
-      const finalStyle = {
-        ...componentSpecificProps.style,
-        ...passedProps.style,
-      };
-
-      return (
-        <RNText
-          ref={ref}
-          {...componentSpecificProps}
-          {...passedProps}
-          style={finalStyle}
-        />
-      );
-    }
-  );
-
-  type StyledTextComponentType = typeof StyledText;
-  return StyledText as StyledTextComponentType & {
-    defaultProps?: Partial<React.ComponentProps<StyledTextComponentType>>;
-  };
+type RNTextProps = React.ComponentProps<typeof RNText> & {
+  children?: React.ReactNode;
 };
 
-const Text = createText<typeof baseTheme>();
+type ComponentProps = TextProps & Omit<RNTextProps, keyof TextProps>;
+
+/**
+ * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
+ */
+const Text = React.forwardRef((props: ComponentProps, ref: any) => {
+  const passedProps = useStyledProps(textStyleFunctions, props);
+  const componentSpecificProps = useComponentConfig(
+    "Text",
+    {
+      variant: props.variant,
+    },
+    textStyleFunctions
+  );
+
+  const finalStyle = {
+    ...componentSpecificProps.style,
+    ...passedProps.style,
+  };
+
+  return (
+    <RNText
+      ref={ref}
+      {...componentSpecificProps}
+      {...passedProps}
+      style={finalStyle}
+    />
+  );
+});
 
 export default Text;
