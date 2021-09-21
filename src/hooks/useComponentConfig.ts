@@ -29,7 +29,7 @@ const filterComponentProps = <
   }, {} as StyleProps);
 };
 
-const useComponentConfig = (
+export const useComponentConfig = (
   themeComponentKey: string,
   componentTypeProps: ComponentConfig["defaults"],
   styleFunctions: any = boxStyleFunctions
@@ -85,5 +85,3 @@ const useComponentConfig = (
   cleanStyleProps.style = style;
   return cleanStyleProps;
 };
-
-export default useComponentConfig;

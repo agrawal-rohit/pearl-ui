@@ -1,8 +1,7 @@
 import React from "react";
-import Box, { BoxProps, boxStyleFunctions } from "../Box/Box";
+import Box, { BoxProps } from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
-import useStyledProps from "../../../hooks/useStyledProps";
-import useComponentConfig from "../../../hooks/useComponentConfig";
+import { useComponentConfig } from "../../../hooks/useComponentConfig";
 
 const Screen: React.FC<BoxProps> = ({ children, ...rest }) => {
   const componentStyles = useComponentConfig("Screen", {});
@@ -12,8 +11,8 @@ const Screen: React.FC<BoxProps> = ({ children, ...rest }) => {
       padding="m"
       flex={1}
       flexDirection="column"
-      {...rest}
       {...componentStyles}
+      {...rest}
     >
       <SafeAreaView
         style={{

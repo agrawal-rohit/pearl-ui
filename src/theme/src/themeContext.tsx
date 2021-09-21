@@ -1,3 +1,4 @@
+import AppLoading from "expo-app-loading";
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./basetheme";
@@ -19,6 +20,8 @@ interface ThemeProviderProps {
   initialColorMode?: ThemeType;
   /** The configuration object for light theme */
   theme?: BasePearlTheme;
+  /** The flag received from Expo's useFonts hook that describes the loading status of the custom fonts */
+  haveFontsLoaded?: boolean;
   /**React children */
   children: React.ReactNode;
 }
@@ -31,6 +34,7 @@ export const themeContext = createContext({} as IThemeContext);
 export const ThemeProvider = ({
   initialColorMode = "light",
   theme = baseTheme,
+  haveFontsLoaded = true,
   children,
 }: ThemeProviderProps) => {
   const [colorMode, setColorMode] = useState<ThemeType>(initialColorMode);
@@ -63,11 +67,15 @@ export const ThemeProvider = ({
     }
   }, [colorMode, initialColorMode, theme]);
 
-  return (
-    <themeContext.Provider
-      value={{ theme, colorMode, toggleColorMode } as IThemeContext}
-    >
-      {children}
-    </themeContext.Provider>
-  );
+  if (haveFontsLoaded) {
+    return (
+      <themeContext.Provider
+        value={{ theme, colorMode, toggleColorMode } as IThemeContext}
+      >
+        {children}
+      </themeContext.Provider>
+    );
+  }
+
+  return <AppLoading />;
 };
