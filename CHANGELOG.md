@@ -1,3 +1,18 @@
+# [1.0.0-beta.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2021-09-21)
+
+
+### Bug Fixes
+
+* **hotreloading:** fixed app hot reload on updating the theme object ([c7f3dd2](https://github.com/agrawal-rohit/pearl-ui/commit/c7f3dd29ba707d3dbb97926964067c37bd7ed9cd))
+* **themeprovider:** fixed perpetual light theme error in theme provider ([f9aac72](https://github.com/agrawal-rohit/pearl-ui/commit/f9aac72133fe8b38be68be2946b8d7a553473c75))
+
+
+### Features
+
+* **colormodecolors:** added ability to add color-mode based colors directly into theme config ([95a9c24](https://github.com/agrawal-rohit/pearl-ui/commit/95a9c245e8880f8e4cb9afc47e9871ff485dde59))
+* **componentconfig:** added component specific configuration to the theme ([0a5c7f8](https://github.com/agrawal-rohit/pearl-ui/commit/0a5c7f8adab18f127c97c86bf7c194a8f72e102c))
+* **elevation:** added elevation config to theme and a custom prop 'boxShadow' to Box components ([a2bbbd8](https://github.com/agrawal-rohit/pearl-ui/commit/a2bbbd8c6bd18c0550fb88a6905df7dac233f587))
+
 # 1.0.0-beta.1 (2021-09-10)
 
 
