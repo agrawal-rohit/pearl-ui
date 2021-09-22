@@ -57,18 +57,7 @@ export interface BasePearlTheme {
     [key: string]: string;
   };
   spacing: {
-    s: number;
-    m: number;
-    l: number;
-    xl: number;
-    "2xl": number;
-    "3xl": number;
-    "4xl": number;
-    "5xl": number;
-    "6xl": number;
-    "7xl": number;
-    "8xl": number;
-    "9xl": number;
+    [key: string]: number;
   };
   components: {
     [key: string]: ComponentConfig;
@@ -77,25 +66,10 @@ export interface BasePearlTheme {
     [key: string]: ElevationConfig;
   };
   zIndices: {
-    hide: number;
-    base: number;
-    docked: number;
-    dropdown: number;
-    sticky: number;
-    banner: number;
-    overlay: number;
-    modal: number;
-    popover: number;
-    skipLink: number;
-    toast: number;
-    tooltip: number;
+    [key: string]: number;
   };
   borderRadii: {
-    s: number;
-    m: number;
-    l: number;
-    xl: number;
-    "2xl": number;
+    [key: string]: number;
   };
 }
 
