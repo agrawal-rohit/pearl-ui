@@ -12,11 +12,14 @@
 </p>
 
 # Installation
+Inside your React Native/Expo project directory, install Pearl UI by running:
 
+**NPM**
 ```shell
 $ npm install pearl-ui
 ```
 
+**Yarn**
 ```shell
 $ yarn add pearl-ui
 ```
