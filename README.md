@@ -16,3 +16,7 @@
 ```shell
 $ npm install pearl-ui
 ```
+
+```shell
+$ yarn add pearl-ui
+```
