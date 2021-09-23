@@ -15,7 +15,10 @@ const Button: React.FC<ButtonProps> = ({
   loading,
   ...props
 }) => (
-  <Pressable onPress={onPress}>
+  <Pressable
+    style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1.0 }]}
+    onPress={onPress}
+  >
     <Box
       py="m"
       px="m"

@@ -8,6 +8,7 @@ import styles from "./index.module.css";
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
+import Head from "@docusaurus/Head";
 
 function HomepageHeader() {
   return (
@@ -115,6 +116,9 @@ export default function Home(): JSX.Element {
       beautiful, accessible mobile apps straight out of the box. Take your
       idea from an MVP to a finished product at the speed of light!"
     >
+      {/* <Head>
+        <script async src="https://snack.expo.dev/embed.js"></script>
+      </Head> */}
       <HomepageHeader />
       <br />
       <br />
