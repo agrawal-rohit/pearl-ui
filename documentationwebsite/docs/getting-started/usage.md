@@ -29,7 +29,7 @@ const App = () => {
 
 | Name | Type | Default | Description |
 |-----|-----|-----|-----|
-| initialColorMode | `string` | `"light"` | Initial color mode for the theme (light, dark, system) |
+| defaultColorMode | `string` | `"light"` | Default color mode for the app (light, dark, system) |
 | theme | `PearlTheme` | `baseTheme` | The theme configuration object |
 | fonts | `object` | `baseFont` | A mapping object of the fonts used by the theme | 
 

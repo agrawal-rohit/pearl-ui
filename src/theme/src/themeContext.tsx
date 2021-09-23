@@ -25,8 +25,8 @@ export interface IThemeContext {
 }
 
 interface ThemeProviderProps {
-  /** Initial color mode for the theme (light, dark, system) */
-  initialColorMode?: ThemeType;
+  /** Default color mode for the theme (light, dark, system) */
+  defaultColorMode?: ThemeType;
   /** The theme configuration object */
   theme?: BasePearlTheme;
   /** A mapping object of the fonts used by the theme */
@@ -50,12 +50,12 @@ export const themeContext = createContext({} as IThemeContext);
  * The main provider component which controls the theme and color mode of the components in the entire application.
  */
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  initialColorMode = "light",
+  defaultColorMode = "light",
   theme = baseTheme,
   fonts = baseFonts,
   children,
 }) => {
-  const [colorMode, setColorMode] = useState<ThemeType>(initialColorMode);
+  const [colorMode, setColorMode] = useState<ThemeType>(defaultColorMode);
   const systemThemeStyle = useColorScheme() as ThemeType;
   const [haveFontsLoaded] = useFonts(fonts);
 
@@ -84,7 +84,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     } else if (colorMode === "system") {
       changeThemeTo(systemThemeStyle);
     }
-  }, [colorMode, initialColorMode, theme]);
+  }, [colorMode, defaultColorMode, theme]);
 
   if (haveFontsLoaded) {
     return (

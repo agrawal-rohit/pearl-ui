@@ -5,7 +5,7 @@ import { ThemeProvider } from "./src/theme/src/themeContext";
 
 const App = () => {
   return (
-    <ThemeProvider initialColorMode="light">
+    <ThemeProvider defaultColorMode="light">
       <Storybook />
       {/* <OfflineNotice />
       <Screen>
