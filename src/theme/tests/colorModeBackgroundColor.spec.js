@@ -37,7 +37,7 @@ describe("Color mode based color", () => {
   it("uses the light value in light theme", () => {
     const tree = renderer
       .create(
-        <ThemeProvider initialColorMode="dark">
+        <ThemeProvider defaultColorMode="dark">
           <Box
             shadowColor={{
               light: "blue",

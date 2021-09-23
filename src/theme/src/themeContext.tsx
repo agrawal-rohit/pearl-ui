@@ -1,13 +1,4 @@
 import AppLoading from "expo-app-loading";
-import {
-  useFonts,
-  Poppins_300Light,
-  Poppins_400Regular,
-  Poppins_500Medium,
-  Poppins_600SemiBold,
-  Poppins_700Bold,
-  Poppins_800ExtraBold,
-} from "@expo-google-fonts/poppins";
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./basetheme";
@@ -29,20 +20,11 @@ interface ThemeProviderProps {
   defaultColorMode?: ThemeType;
   /** The theme configuration object */
   theme?: BasePearlTheme;
-  /** A mapping object of the fonts used by the theme */
-  fonts?: object;
+  /** A flag that describes the loading status of the custom fonts */
+  haveFontsLoaded?: boolean;
   /**React children */
   children: React.ReactNode;
 }
-
-const baseFonts = {
-  "Poppins-Light": Poppins_300Light,
-  "Poppins-Regular": Poppins_400Regular,
-  "Poppins-Medium": Poppins_500Medium,
-  "Poppins-SemiBold": Poppins_600SemiBold,
-  "Poppins-Bold": Poppins_700Bold,
-  "Poppins-ExtraBold": Poppins_800ExtraBold,
-};
 
 export const themeContext = createContext({} as IThemeContext);
 
@@ -52,12 +34,11 @@ export const themeContext = createContext({} as IThemeContext);
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   defaultColorMode = "light",
   theme = baseTheme,
-  fonts = baseFonts,
+  haveFontsLoaded = true,
   children,
 }) => {
   const [colorMode, setColorMode] = useState<ThemeType>(defaultColorMode);
   const systemThemeStyle = useColorScheme() as ThemeType;
-  const [haveFontsLoaded] = useFonts(fonts);
 
   const changeThemeTo = (colorMode: ThemeType) => {
     if (colorMode === "dark") {
