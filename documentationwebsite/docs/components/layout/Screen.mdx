@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+---
+
+# Screen
+
+Screen is a layout component that you can use to wrap all the views in your app. By default, it renders a [Box](./box) element.
+
+## Import
+
+```jsx
+import { Screen } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Screen>This is the screen</Screen>
+```
+
+## Default Configuration
+
+```json
+{
+  "baseStyle": {
+    "backgroundColor": {
+      "light": "neutral-100",
+      "dark": "neutral-800"
+    },
+    "padding": "m"
+  },
+  "sizes": {},
+  "variants": {},
+  "defaults": {}
+}
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/screen-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/screen-dark" />
+
+</TabItem>
+</Tabs>

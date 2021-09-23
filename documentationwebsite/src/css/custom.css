@@ -25,6 +25,12 @@
 
   --hero-description-text-color: rgba(0, 0, 0, 0.5);
   --feature-card-background: #f7fafc;
+
+  --table-header-bgcolor: #f7fafc;
+  --table-row-separator-color: #e2e8f0;
+
+  --code-text-bgcolor: rgb(99, 86, 229, 0.05);
+  --code-text-color: var(--ifm-color-primary);
 }
 
 html[data-theme="dark"] {
@@ -40,6 +46,12 @@ html[data-theme="dark"] {
 
   --hero-description-text-color: rgba(255, 255, 255, 0.5);
   --feature-card-background: #2d3748;
+
+  --table-header-bgcolor: rgb(255, 255, 255, 0.04);
+  --table-row-separator-color: rgba(255, 255, 255, 0.16);
+
+  --code-text-bgcolor: rgb(99, 86, 229, 0.2);
+  --code-text-color: var(--ifm-color-primary-lightest);
 }
 
 html[data-theme="dark"] .docusaurus-highlight-code-line {
@@ -47,9 +59,61 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 code {
-  background-color: rgb(99, 86, 229, 0.1);
+  background-color: var(--code-text-bgcolor);
   padding: 2px 5px;
+  color: var(--code-text-color);
+}
+
+highlight {
   color: var(--ifm-color-primary);
+}
+
+table,
+thead,
+tr,
+th,
+td {
+  border: none !important;
+}
+
+table thead tr th {
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+tbody tr {
+  background-color: transparent !important;
+  font-size: 14px;
+}
+
+tr {
+  border-bottom: 1px solid var(--table-row-separator-color) !important;
+}
+
+tbody tr td {
+  padding: 10px 10px;
+}
+
+thead tr {
+  background-color: var(--table-header-bgcolor);
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+h3 {
+  font-size: large;
+}
+
+h4 {
+  font-size: larger;
 }
 
 .docusaurus-highlight-code-line {

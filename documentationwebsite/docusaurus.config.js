@@ -93,7 +93,7 @@
         },
         footer: {
           style: "dark",
-          copyright: `Copyright © ${new Date().getFullYear()} Pearl UI, Inc. Proudly built in <span style="margin-right: 5px">🇮🇳</span>  by Rohit Agrawal.`,
+          copyright: `Copyright © ${new Date().getFullYear()} Pearl UI, Inc. Proudly built in <span style="margin-right: 5px">🇮🇳</span>  by <a href="https://twitter.com/_rohitagrawal_" target="_blank">Rohit Agrawal</a>.`,
         },
         prism: {
           theme: require("prism-react-renderer/themes/palenight"),
