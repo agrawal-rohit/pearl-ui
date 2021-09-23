@@ -16,8 +16,40 @@
   --ifm-color-primary-lightest: #afa8f2;
   --ifm-code-font-size: 90%;
 
+  --prop-name-background: rgb(99, 86, 229, 0.15);
+  --prop-name-text-color: #2c1dbf;
+
+  --sidebar-title-color: rgba(0, 0, 0, 0.8);
+
+  --props-divider-color: rgb(0, 0, 0, 0.1);
+
   --hero-description-text-color: rgba(0, 0, 0, 0.5);
   --feature-card-background: #f7fafc;
+}
+
+html[data-theme="dark"] {
+  --ifm-background-color: #1a202c;
+  --ifm-background-surface-color: #1a202c;
+
+  --sidebar-title-color: #ffffff;
+
+  --props-divider-color: rgb(255, 255, 255, 0.1);
+
+  --prop-name-background: rgb(99, 86, 229, 0.15);
+  --prop-name-text-color: #b1abf2;
+
+  --hero-description-text-color: rgba(255, 255, 255, 0.5);
+  --feature-card-background: #2d3748;
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+code {
+  background-color: rgb(99, 86, 229, 0.1);
+  padding: 2px 5px;
+  color: var(--ifm-color-primary);
 }
 
 .docusaurus-highlight-code-line {
@@ -27,16 +59,16 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme="dark"] {
-  --ifm-background-color: #1a202c;
-  --ifm-background-surface-color: #1a202c;
-
-  --hero-description-text-color: rgba(255, 255, 255, 0.5);
-  --feature-card-background: #2d3748;
+.theme-doc-sidebar-item-category {
+  margin-bottom: 30px;
 }
 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+a.menu__link:not([href]) {
+  margin: 10px 0px;
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: var(--sidebar-title-color);
 }
 
 /* Adjust footer link colors */
