@@ -6,10 +6,28 @@ sidebar_position: 1
 
 Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a `View` element.
 
-The Box component is useful because it helps with creating flexible layouts with ease. It also provides an easier way to pass styles via props.
+**The Box component improves the development experience in the following ways:**
 
-### Import
+1. Create flexible layouts with ease.
+2. Provides an easier way to pass styles via props (`backgroundColor` can be passed as a prop instead of using [React Stylesheet](https://reactjs.org/docs/faq-styling.html) or inline styles). Shorthand props are also supported (`bg` instead of `backgroundColor`).
+3. Create more complex components using `Box` as the base component, instead of `View` (All components in Pearl UI use `Box` under the hood).
+
+## Import
 
 ```jsx
 import { Box } from "pearl-ui";
 ```
+
+## Usage
+
+```jsx
+<Box width="100%" height={200} backgroundColor="primary-500" marginBottom="m">
+  This is a box
+</Box>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/box" />

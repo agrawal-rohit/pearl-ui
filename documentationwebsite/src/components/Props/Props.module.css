@@ -1,0 +1,41 @@
+.propName {
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 5px;
+  color: var(--prop-name-text-color);
+  background-color: var(--prop-name-background);
+}
+
+.divider {
+  margin: 0px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  border: none;
+  height: 2px;
+  background-color: var(--props-divider-color);
+}
+
+.attribute_title {
+  font-size: smaller;
+  color: var(--sidebar-title-color);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: -5px;
+}
+
+.infoTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contentContainer {
+  width: 85%;
+}
+
+.content {
+  font-size: 16px;
+}

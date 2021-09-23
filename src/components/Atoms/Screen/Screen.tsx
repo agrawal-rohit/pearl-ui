@@ -8,13 +8,7 @@ const Screen: React.FC<BoxProps> = ({ children, ...rest }) => {
   const componentStyles = useComponentConfig("Screen", {});
 
   return (
-    <Box
-      padding="m"
-      flex={1}
-      flexDirection="column"
-      {...componentStyles}
-      {...rest}
-    >
+    <Box flex={1} flexDirection="column" {...componentStyles} {...rest}>
       <SafeAreaView
         style={{
           flex: 1,

@@ -8,6 +8,7 @@ import styles from "./index.module.css";
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
+import Head from "@docusaurus/Head";
 
 function HomepageHeader() {
   return (
@@ -58,13 +59,13 @@ function FeaturesSection() {
     {
       title: "Accessible",
       description:
-        "All components follow the official Android and Apple accessibility guidelines, as well as support for screen readers.",
+        "All components follow the official Android and Apple accessibility guidelines, while providing support for screen readers.",
       icon: <IoAccessibility fontSize={30} />,
     },
     {
       title: "Dark Mode",
       description:
-        "Enable multiple color modes in your app. Let it be light, dark, or based on users' system preferences.",
+        "Out of the box support for multiple color modes. Let it be light, dark, or based on users' system preferences.",
       icon: <IoMoon fontSize={30} />,
     },
     {
@@ -115,6 +116,9 @@ export default function Home(): JSX.Element {
       beautiful, accessible mobile apps straight out of the box. Take your
       idea from an MVP to a finished product at the speed of light!"
     >
+      {/* <Head>
+        <script async src="https://snack.expo.dev/embed.js"></script>
+      </Head> */}
       <HomepageHeader />
       <br />
       <br />
