@@ -31,7 +31,7 @@ describe("Theme Context", () => {
 
   it("loads the dark theme when overriden", () => {
     const { getByText } = render(
-      <ThemeProvider initialColorMode="dark">
+      <ThemeProvider defaultColorMode="dark">
         <ThemeTestComponent />
       </ThemeProvider>
     );
@@ -41,7 +41,7 @@ describe("Theme Context", () => {
 
   it("loads the theme automatically based on the system theme", () => {
     const { getByText } = render(
-      <ThemeProvider initialColorMode="system">
+      <ThemeProvider defaultColorMode="system">
         <ThemeTestComponent />
       </ThemeProvider>
     );
@@ -51,7 +51,7 @@ describe("Theme Context", () => {
 
   it("toggles the theme (light -> dark) correctly", () => {
     const { getByText } = render(
-      <ThemeProvider initialColorMode="light">
+      <ThemeProvider defaultColorMode="light">
         <ThemeTestComponent />
       </ThemeProvider>
     );
@@ -64,7 +64,7 @@ describe("Theme Context", () => {
 
   it("toggles the theme (dark -> light) correctly", () => {
     const { getByText } = render(
-      <ThemeProvider initialColorMode="dark">
+      <ThemeProvider defaultColorMode="dark">
         <ThemeTestComponent />
       </ThemeProvider>
     );
