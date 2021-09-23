@@ -27,10 +27,6 @@
   margin-bottom: -5px;
 }
 
-highlight {
-  color: var(--ifm-color-primary);
-}
-
 .infoTitle {
   font-size: 14px;
   font-weight: bold;

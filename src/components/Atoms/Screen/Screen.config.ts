@@ -4,6 +4,7 @@ export default {
       light: "neutral-100",
       dark: "neutral-800",
     },
+    padding: "m",
   },
   sizes: {},
   variants: {},

@@ -10,12 +10,26 @@ const Snack: React.FC<ExpoSnackProps> = ({ snackId }) => {
   const { isDarkTheme } = useThemeContext();
 
   return (
-    <ExpoSnack
-      id={snackId}
-      preview={true}
-      platform="web"
-      theme={isDarkTheme ? "dark" : "light"}
-    />
+    <div>
+      <ExpoSnack
+        id={snackId}
+        preview={true}
+        platform="web"
+        theme={isDarkTheme ? "dark" : "light"}
+      />
+      <a
+        className="button button--primary button--md"
+        href={`https://snack.expo.dev/${snackId}`}
+        style={{
+          fontWeight: 500,
+          padding: "5px 10px",
+          marginLeft: 5,
+        }}
+        target="_blank"
+      >
+        Embed not loading? Click here
+      </a>
+    </div>
   );
 };
 
