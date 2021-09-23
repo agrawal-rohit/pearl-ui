@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.0.0...v1.0.1) (2021-09-23)
+
+
+### Bug Fixes
+
+* **themeprovider:** renamed prop to defaultColorMode ([d9b113f](https://github.com/agrawal-rohit/pearl-ui/commit/d9b113fc4a67bcbf2420b7df49321ef8a4e8576f))
+
 # 1.0.0 (2021-09-22)
 
 
