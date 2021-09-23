@@ -7,7 +7,7 @@ title: Customize Theme
 
 ### Updating the font family
 
-Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the font family in the default theme configuration (More information in the **Theme** section). The font can be easily added to your app through the following steps:
+Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the font family in the default theme configuration *(For more information, check out the [Theme](./default-theme) section)*.
 
 #### Download the [Poppins](https://fonts.google.com/specimen/Poppins) family
 
