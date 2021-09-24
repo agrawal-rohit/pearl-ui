@@ -93,26 +93,26 @@ The sections below list the supported style props and their expected values.
 </Box>
 ```
 
-| Prop             | Stylesheet property | Type                                                                                          |
-| ---------------- | ------------------- | --------------------------------------------------------------------------------------------- |
-| `width`          | `width`             | `number` \| `string`                                                                          |
-| `height`         | `height`            | `number` \| `string`                                                                          |
-| `minWidth`       | `minWidth`          | `number` \| `string`                                                                          |
-| `maxWidth`       | `maxWidth`          | `number` \| `string`                                                                          |
-| `minHeight`      | `minHeight`         | `number` \| `string`                                                                          |
-| `maxHeight`      | `maxHeight`         | `number` \| `string`                                                                          |
-| `overflow`       | `overflow`          | 'visible' \| 'hidden' \| 'scroll'                                                             |
-| `aspectRatio`    | `aspectRatio`       | `number`                                                                                      |
-| `alignContent`   | `alignContent`      | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'space-between' \| 'space-around'      |
-| `alignItems`     | `alignItems`        | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                             |
-| `alignSelf`      | `alignSelf`         | 'auto' \| 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                   |
-| `justifyContent` | `justifyContent`    | 'flex-start' \| 'flex-end' \| 'center' \| 'space-between' \| 'space-around' \| 'space-evenly' |
-| `flex`           | `flex`              | `number`                                                                                      |
-| `flexBasis`      | `flexBasis`         | `number` \| `string`                                                                          |
-| `flexDirection`  | `flexDirection`     | 'row' \| 'column' \| 'row-reverse' \| 'column-reverse'                                        |
-| `flexGrow`       | `flexGrow`          | `number`                                                                                      |
-| `flexShrink`     | `flexShrink`        | `number`                                                                                      |
-| `flexWrap`       | `flexWrap`          | 'wrap' \| 'nowrap' \| 'wrap-reverse'                                                          |
+| Prop                | Stylesheet property | Type                                                                                          |
+| ------------------- | ------------------- | --------------------------------------------------------------------------------------------- |
+| `w`, `width`        | `width`             | `number` \| `string`                                                                          |
+| `h`, `height`       | `height`            | `number` \| `string`                                                                          |
+| `minW`, `minWidth`  | `minWidth`          | `number` \| `string`                                                                          |
+| `maxW`, `maxWidth`  | `maxWidth`          | `number` \| `string`                                                                          |
+| `minH`, `minHeight` | `minHeight`         | `number` \| `string`                                                                          |
+| `maxH`, `maxHeight` | `maxHeight`         | `number` \| `string`                                                                          |
+| `overflow`          | `overflow`          | 'visible' \| 'hidden' \| 'scroll'                                                             |
+| `aspectRatio`       | `aspectRatio`       | `number`                                                                                      |
+| `alignContent`      | `alignContent`      | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'space-between' \| 'space-around'      |
+| `alignItems`        | `alignItems`        | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                             |
+| `alignSelf`         | `alignSelf`         | 'auto' \| 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                   |
+| `justifyContent`    | `justifyContent`    | 'flex-start' \| 'flex-end' \| 'center' \| 'space-between' \| 'space-around' \| 'space-evenly' |
+| `flex`              | `flex`              | `number`                                                                                      |
+| `flexBasis`         | `flexBasis`         | `number` \| `string`                                                                          |
+| `flexDirection`     | `flexDirection`     | 'row' \| 'column' \| 'row-reverse' \| 'column-reverse'                                        |
+| `flexGrow`          | `flexGrow`          | `number`                                                                                      |
+| `flexShrink`        | `flexShrink`        | `number`                                                                                      |
+| `flexWrap`          | `flexWrap`          | 'wrap' \| 'nowrap' \| 'wrap-reverse'                                                          |
 
 ### Position
 

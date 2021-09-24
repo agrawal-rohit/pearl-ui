@@ -6,6 +6,7 @@ import {
   borderProperties,
   borderRadiusProperties,
   layoutProperties,
+  layoutPropertiesShorthand,
   positionProperties,
   shadowProperties,
   spacingProperties,
@@ -107,11 +108,21 @@ export const typography = getKeys(typographyProperties).map((property) => {
   });
 });
 
-export const layout = getKeys(layoutProperties).map((property) => {
-  return createStyleFunction({
-    property,
-  });
-});
+export const layout = [
+  ...getKeys(layoutProperties).map((property) => {
+    return createStyleFunction({
+      property,
+    });
+  }),
+  ...getKeys(layoutPropertiesShorthand).map((property) => {
+    const styleProperty = layoutPropertiesShorthand[property];
+
+    return createStyleFunction({
+      property,
+      styleProperty,
+    });
+  }),
+];
 
 export const spacing = [
   ...getKeys(spacingProperties).map((property) => {
@@ -240,9 +251,15 @@ export type TypographyProps = {
   [Key in keyof typeof typographyProperties]?: TextStyle[Key];
 };
 
-export type LayoutProps = {
+type LayoutPropsBase = {
   [Key in keyof typeof layoutProperties]?: FlexStyle[Key];
 };
+
+type LayoutShorthandProps = {
+  [Key in keyof typeof layoutPropertiesShorthand]?: FlexStyle[typeof layoutPropertiesShorthand[Key]];
+};
+
+export type LayoutProps = LayoutPropsBase & LayoutShorthandProps;
 
 export type PositionProps = {
   [Key in keyof typeof positionProperties]?: FlexStyle[Key];
