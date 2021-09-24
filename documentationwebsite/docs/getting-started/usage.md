@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Usage
 ---
 
@@ -27,15 +27,15 @@ const App = () => {
 
 ### ThemeProvider Props
 
-| Name | Type | Default | Description |
-|-----|-----|-----|-----|
-| defaultColorMode | `string` | `"light"` | Default color mode for the app (light, dark, system) |
-| theme | `PearlTheme` | `baseTheme` | The theme configuration object |
-| haveFontsLoaded | `boolean` | `true` | A flag that describes the loading status of the custom fonts | 
+| Name             | Type         | Default     | Description                                                  |
+| ---------------- | ------------ | ----------- | ------------------------------------------------------------ |
+| defaultColorMode | `string`     | `"light"`   | Default color mode for the app (light, dark, system)         |
+| theme            | `PearlTheme` | `baseTheme` | The theme configuration object                               |
+| haveFontsLoaded  | `boolean`    | `true`      | A flag that describes the loading status of the custom fonts |
 
 ## Loading default fonts
 
-Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the font family in the default theme *(For more information, check out the [Theme](../theming/default-theme) section)*. 
+Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the font family in the default theme _(For more information, check out the [Theme](../theming/default-theme) section)_.
 
 To include the font family into the app, we use the [@expo/google-fonts](https://github.com/expo/google-fonts) package:
 
@@ -76,7 +76,6 @@ const App = () => {
   );
 }
 ```
-
 
 <br />
 
