@@ -74,6 +74,15 @@ export const layoutProperties = {
   flexWrap: true,
 };
 
+export const layoutPropertiesShorthand = {
+  w: "width",
+  h: "height",
+  minW: "minWidth",
+  maxW: "maxWidth",
+  minH: "minHeight",
+  maxH: "maxHeight",
+} as const;
+
 export const positionProperties = {
   position: true,
   top: true,
