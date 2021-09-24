@@ -31,6 +31,8 @@
 
   --code-text-bgcolor: rgb(99, 86, 229, 0.05);
   --code-text-color: var(--ifm-color-primary);
+
+  --variable-type-color: #86b805;
 }
 
 html[data-theme="dark"] {
@@ -52,6 +54,8 @@ html[data-theme="dark"] {
 
   --code-text-bgcolor: rgb(99, 86, 229, 0.2);
   --code-text-color: var(--ifm-color-primary-lightest);
+
+  --variable-type-color: #a2d608;
 }
 
 html[data-theme="dark"] .docusaurus-highlight-code-line {
@@ -116,6 +120,11 @@ h3 {
 
 h4 {
   font-size: larger;
+}
+
+t {
+  font-weight: 500;
+  color: var(--variable-type-color);
 }
 
 .docusaurus-highlight-code-line {

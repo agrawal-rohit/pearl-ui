@@ -19,26 +19,26 @@ The sections below list the supported style props and their expected values.
 <Box pt="xl">Red</Box>
 ```
 
-| Prop                      | Stylesheet property | Type                    |
-| ------------------------- | ------------------- | ----------------------- |
-| `m`, `margin`             | `margin`            | `PearlTheme['spacing']` |
-| `mt`, `marginTop`         | `marginTop`         | `PearlTheme['spacing']` |
-| `mr`, `marginRight`       | `marginRight`       | `PearlTheme['spacing']` |
-| `mb`, `marginBottom`      | `marginBottom`      | `PearlTheme['spacing']` |
-| `ml`, `marginLeft`        | `marginLeft`        | `PearlTheme['spacing']` |
-| `mx`, `marginHorizontal`  | `marginHorizontal`  | `PearlTheme['spacing']` |
-| `my`, `marginVertical`    | `marginVertical`    | `PearlTheme['spacing']` |
-| `ms`, `marginStart`       | `marginStart`       | `PearlTheme['spacing']` |
-| `me`, `marginEnd`         | `marginEnd`         | `PearlTheme['spacing']` |
-| `p`, `padding`            | `padding`           | `PearlTheme['spacing']` |
-| `pt`, `paddingTop`        | `paddingTop`        | `PearlTheme['spacing']` |
-| `pr`, `paddingRight`      | `paddingRight`      | `PearlTheme['spacing']` |
-| `pb`, `paddingBottom`     | `paddingBottom`     | `PearlTheme['spacing']` |
-| `pl`, `paddingLeft`       | `paddingLeft`       | `PearlTheme['spacing']` |
-| `px`, `paddingHorizontal` | `paddingHorizontal` | `PearlTheme['spacing']` |
-| `py`, `paddingVertical`   | `paddingVertical`   | `PearlTheme['spacing']` |
-| `ps`, `paddingStart`      | `paddingStart`      | `PearlTheme['spacing']` |
-| `pe`, `paddingEnd`        | `paddingEnd`        | `PearlTheme['spacing']` |
+| Prop                      | Stylesheet property | Type                         |
+| ------------------------- | ------------------- | ---------------------------- |
+| `m`, `margin`             | `margin`            | <t>PearlTheme['spacing']</t> |
+| `mt`, `marginTop`         | `marginTop`         | <t>PearlTheme['spacing']</t> |
+| `mr`, `marginRight`       | `marginRight`       | <t>PearlTheme['spacing']</t> |
+| `mb`, `marginBottom`      | `marginBottom`      | <t>PearlTheme['spacing']</t> |
+| `ml`, `marginLeft`        | `marginLeft`        | <t>PearlTheme['spacing']</t> |
+| `mx`, `marginHorizontal`  | `marginHorizontal`  | <t>PearlTheme['spacing']</t> |
+| `my`, `marginVertical`    | `marginVertical`    | <t>PearlTheme['spacing']</t> |
+| `ms`, `marginStart`       | `marginStart`       | <t>PearlTheme['spacing']</t> |
+| `me`, `marginEnd`         | `marginEnd`         | <t>PearlTheme['spacing']</t> |
+| `p`, `padding`            | `padding`           | <t>PearlTheme['spacing']</t> |
+| `pt`, `paddingTop`        | `paddingTop`        | <t>PearlTheme['spacing']</t> |
+| `pr`, `paddingRight`      | `paddingRight`      | <t>PearlTheme['spacing']</t> |
+| `pb`, `paddingBottom`     | `paddingBottom`     | <t>PearlTheme['spacing']</t> |
+| `pl`, `paddingLeft`       | `paddingLeft`       | <t>PearlTheme['spacing']</t> |
+| `px`, `paddingHorizontal` | `paddingHorizontal` | <t>PearlTheme['spacing']</t> |
+| `py`, `paddingVertical`   | `paddingVertical`   | <t>PearlTheme['spacing']</t> |
+| `ps`, `paddingStart`      | `paddingStart`      | <t>PearlTheme['spacing']</t> |
+| `pe`, `paddingEnd`        | `paddingEnd`        | <t>PearlTheme['spacing']</t> |
 
 ### Color and Background Color
 
@@ -55,10 +55,10 @@ The sections below list the supported style props and their expected values.
 <Box color={{ light: "neutral-200", dark: "primary-100" }}>Red</Box>
 ```
 
-| Prop                    | Stylesheet property | Type                                        |
-| ----------------------- | ------------------- | ------------------------------------------- |
-| `bg`, `backgroundColor` | `backgroundColor`   | `PearlTheme['palette']` \| `ColorModeColor` |
-| `color`                 | `color`             | `PearlTheme['palette']` \| `ColorModeColor` |
+| Prop                    | Stylesheet property | Type                                           |
+| ----------------------- | ------------------- | ---------------------------------------------- |
+| `bg`, `backgroundColor` | `backgroundColor`   | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `color`                 | `color`             | <t>PearlTheme['palette'] \| ColorModeColor</t> |
 
 ### Opacity and Visibility
 
@@ -68,10 +68,10 @@ The sections below list the supported style props and their expected values.
 <Box visible={false}>Hidden Box</Box>
 ```
 
-| Prop      | Stylesheet property | Type      |
-| --------- | ------------------- | --------- |
-| `opacity` | `opacity`           | `number`  |
-| `visible` | `visible`           | `boolean` |
+| Prop      | Stylesheet property | Type           |
+| --------- | ------------------- | -------------- |
+| `opacity` | `opacity`           | <t>number</t>  |
+| `visible` | `visible`           | <t>boolean</t> |
 
 ### Layout
 
@@ -84,35 +84,35 @@ The sections below list the supported style props and their expected values.
   <Box width={20} height={50}>
     1
   </Box>
-  <Box width={50} height={50}>
+  <Box w={50} h={30} maxHeight={50}>
     2
   </Box>
-  <Box width={30} height={50}>
+  <Box w={30} maxW={40} height={50}>
     3
   </Box>
 </Box>
 ```
 
-| Prop                | Stylesheet property | Type                                                                                          |
-| ------------------- | ------------------- | --------------------------------------------------------------------------------------------- |
-| `w`, `width`        | `width`             | `number` \| `string`                                                                          |
-| `h`, `height`       | `height`            | `number` \| `string`                                                                          |
-| `minW`, `minWidth`  | `minWidth`          | `number` \| `string`                                                                          |
-| `maxW`, `maxWidth`  | `maxWidth`          | `number` \| `string`                                                                          |
-| `minH`, `minHeight` | `minHeight`         | `number` \| `string`                                                                          |
-| `maxH`, `maxHeight` | `maxHeight`         | `number` \| `string`                                                                          |
-| `overflow`          | `overflow`          | 'visible' \| 'hidden' \| 'scroll'                                                             |
-| `aspectRatio`       | `aspectRatio`       | `number`                                                                                      |
-| `alignContent`      | `alignContent`      | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'space-between' \| 'space-around'      |
-| `alignItems`        | `alignItems`        | 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                             |
-| `alignSelf`         | `alignSelf`         | 'auto' \| 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline'                   |
-| `justifyContent`    | `justifyContent`    | 'flex-start' \| 'flex-end' \| 'center' \| 'space-between' \| 'space-around' \| 'space-evenly' |
-| `flex`              | `flex`              | `number`                                                                                      |
-| `flexBasis`         | `flexBasis`         | `number` \| `string`                                                                          |
-| `flexDirection`     | `flexDirection`     | 'row' \| 'column' \| 'row-reverse' \| 'column-reverse'                                        |
-| `flexGrow`          | `flexGrow`          | `number`                                                                                      |
-| `flexShrink`        | `flexShrink`        | `number`                                                                                      |
-| `flexWrap`          | `flexWrap`          | 'wrap' \| 'nowrap' \| 'wrap-reverse'                                                          |
+| Prop                | Stylesheet property | Type                                                                                                 |
+| ------------------- | ------------------- | ---------------------------------------------------------------------------------------------------- |
+| `w`, `width`        | `width`             | <t>number \| string</t>                                                                              |
+| `h`, `height`       | `height`            | <t>number \| string</t>                                                                              |
+| `minW`, `minWidth`  | `minWidth`          | <t>number \| string</t>                                                                              |
+| `maxW`, `maxWidth`  | `maxWidth`          | <t>number \| string</t>                                                                              |
+| `minH`, `minHeight` | `minHeight`         | <t>number \| string</t>                                                                              |
+| `maxH`, `maxHeight` | `maxHeight`         | <t>number \| string</t>                                                                              |
+| `overflow`          | `overflow`          | <t>'visible' \| 'hidden' \| 'scroll' </t>                                                            |
+| `aspectRatio`       | `aspectRatio`       | <t>number</t>                                                                                        |
+| `alignContent`      | `alignContent`      | <t>'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'space-between' \| 'space-around'</t>      |
+| `alignItems`        | `alignItems`        | <t>'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline' </t>                            |
+| `alignSelf`         | `alignSelf`         | <t>'auto' \| 'flex-start' \| 'flex-end' \| 'center' \| 'stretch' \| 'baseline' </t>                  |
+| `justifyContent`    | `justifyContent`    | <t>'flex-start' \| 'flex-end' \| 'center' \| 'space-between' \| 'space-around' \| 'space-evenly'</t> |
+| `flex`              | `flex`              | <t>number </t>                                                                                       |
+| `flexBasis`         | `flexBasis`         | <t>number \| string</t>                                                                              |
+| `flexDirection`     | `flexDirection`     | <t>'row' \| 'column' \| 'row-reverse' \| 'column-reverse' </t>                                       |
+| `flexGrow`          | `flexGrow`          | <t>number</t>                                                                                        |
+| `flexShrink`        | `flexShrink`        | <t>number</t>                                                                                        |
+| `flexWrap`          | `flexWrap`          | <t>'wrap' \| 'nowrap' \| 'wrap-reverse' </t>                                                         |
 
 ### Position
 
@@ -128,16 +128,16 @@ The sections below list the supported style props and their expected values.
 </Box>
 ```
 
-| Prop       | Stylesheet property | Type                                 |
-| ---------- | ------------------- | ------------------------------------ |
-| `position` | `position`          | 'absolute' \| 'relative'             |
-| `top`      | `top`               | `number` \| `string`                 |
-| `right`    | `right`             | `number` \| `string`                 |
-| `bottom`   | `bottom`            | `number` \| `string`                 |
-| `left`     | `left`              | `number` \| `string`                 |
-| `start`    | `start`             | `number` \| `string`                 |
-| `end`      | `end`               | `number` \| `string`                 |
-| `zIndex`   | `zIndex`            | `PearlTheme['zIndices']` \| `number` |
+| Prop       | Stylesheet property | Type                                    |
+| ---------- | ------------------- | --------------------------------------- |
+| `position` | `position`          | <t>'absolute' \| 'relative' </t>        |
+| `top`      | `top`               | <t>number \| string</t>                 |
+| `right`    | `right`             | <t>number \| string</t>                 |
+| `bottom`   | `bottom`            | <t>number \| string</t>                 |
+| `left`     | `left`              | <t>number \| string</t>                 |
+| `start`    | `start`             | <t>number \| string</t>                 |
+| `end`      | `end`               | <t>number \| string</t>                 |
+| `zIndex`   | `zIndex`            | <t>PearlTheme['zIndices'] \| number</t> |
 
 ### Border
 
@@ -157,32 +157,32 @@ The sections below list the supported style props and their expected values.
 </Box>
 ```
 
-| Prop                      | Stylesheet property       | Type                                        |
-| ------------------------- | ------------------------- | ------------------------------------------- |
-| `borderBottomWidth`       | `borderBottomWidth`       | `number`                                    |
-| `borderLeftWidth`         | `borderLeftWidth`         | `number`                                    |
-| `borderRightWidth`        | `borderRightWidth`        | `number`                                    |
-| `borderStyle`             | `borderStyle`             | 'solid' \| 'dotted' \| 'dashed'             |
-| `borderTopWidth`          | `borderTopWidth`          | `number`                                    |
-| `borderStartWidth`        | `borderStartWidth`        | `number`                                    |
-| `borderEndWidth`          | `borderEndWidth`          | `number`                                    |
-| `borderWidth`             | `borderWidth`             | `number`                                    |
-| `borderColor`             | `borderColor`             | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderTopColor`          | `borderTopColor`          | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderRightColor`        | `borderRightColor`        | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderLeftColor`         | `borderLeftColor`         | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderBottomColor`       | `borderBottomColor`       | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderStartColor`        | `borderStartColor`        | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderEndColor`          | `borderEndColor`          | `PearlTheme['palette']` \| `ColorModeColor` |
-| `borderRadius`            | `borderRadius`            | `PearlTheme['borderRadii']` \| `number`     |
-| `borderBottomLeftRadius`  | `borderBottomLeftRadius`  | `PearlTheme['borderRadii']` \| `number`     |
-| `borderBottomRightRadius` | `borderBottomRightRadius` | `PearlTheme['borderRadii']` \| `number`     |
-| `borderTopLeftRadius`     | `borderTopLeftRadius`     | `PearlTheme['borderRadii']` \| `number`     |
-| `borderTopRightRadius`    | `borderTopRightRadius`    | `PearlTheme['borderRadii']` \| `number`     |
-| `borderBottomStartRadius` | `borderBottomStartRadius` | `PearlTheme['borderRadii']` \| `number`     |
-| `borderBottomEndRadius`   | `borderBottomEndRadius`   | `PearlTheme['borderRadii']` \| `number`     |
-| `borderTopStartRadius`    | `borderTopStartRadius`    | `PearlTheme['borderRadii']` \| `number`     |
-| `borderTopEndRadius`      | `borderTopEndRadius`      | `PearlTheme['borderRadii']` \| `number`     |
+| Prop                      | Stylesheet property       | Type                                           |
+| ------------------------- | ------------------------- | ---------------------------------------------- |
+| `borderBottomWidth`       | `borderBottomWidth`       | <t>number</t>                                  |
+| `borderLeftWidth`         | `borderLeftWidth`         | <t>number</t>                                  |
+| `borderRightWidth`        | `borderRightWidth`        | <t>number</t>                                  |
+| `borderStyle`             | `borderStyle`             | <t>'solid' \| 'dotted' \| 'dashed'</t>         |
+| `borderTopWidth`          | `borderTopWidth`          | <t>number</t>                                  |
+| `borderStartWidth`        | `borderStartWidth`        | <t>number</t>                                  |
+| `borderEndWidth`          | `borderEndWidth`          | <t>number</t>                                  |
+| `borderWidth`             | `borderWidth`             | <t>number</t>                                  |
+| `borderColor`             | `borderColor`             | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderTopColor`          | `borderTopColor`          | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderRightColor`        | `borderRightColor`        | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderLeftColor`         | `borderLeftColor`         | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderBottomColor`       | `borderBottomColor`       | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderStartColor`        | `borderStartColor`        | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderEndColor`          | `borderEndColor`          | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `borderRadius`            | `borderRadius`            | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderBottomLeftRadius`  | `borderBottomLeftRadius`  | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderBottomRightRadius` | `borderBottomRightRadius` | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderTopLeftRadius`     | `borderTopLeftRadius`     | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderTopRightRadius`    | `borderTopRightRadius`    | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderBottomStartRadius` | `borderBottomStartRadius` | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderBottomEndRadius`   | `borderBottomEndRadius`   | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderTopStartRadius`    | `borderTopStartRadius`    | <t>PearlTheme['borderRadii'] \| number</t>     |
+| `borderTopEndRadius`      | `borderTopEndRadius`      | <t>PearlTheme['borderRadii'] \| number</t>     |
 
 ### Typography
 
@@ -198,21 +198,21 @@ The sections below list the supported style props and their expected values.
 </Text>
 ```
 
-| Prop                  | Stylesheet property   | Type                                                                                                |
-| --------------------- | --------------------- | --------------------------------------------------------------------------------------------------- |
-| `fontFamily`          | `fontFamily`          | `string`                                                                                            |
-| `fontSize`            | `fontSize`            | `number`                                                                                            |
-| `fontStyle`           | `fontStyle`           | 'normal' \| 'italic'                                                                                |
-| `fontWeight`          | `fontWeight`          | 'normal' \| 'bold' \| '100' \| '200' \| '300' \| '400' \| '500' \| '600' \| '700' \| '800' \| '900' |
-| `letterSpacing`       | `letterSpacing`       | 'solid' \| 'dotted' \| 'dashed'                                                                     |
-| `lineHeight`          | `lineHeight`          | `number`                                                                                            |
-| `textAlign`           | `textAlign`           | 'auto' \| 'left' \| 'right' \| 'center' \| 'justify'                                                |
-| `textDecorationLine`  | `textDecorationLine`  | 'none' \| 'underline' \| 'line-through' \| 'underline line-through'                                 |
-| `textDecorationStyle` | `textDecorationStyle` | 'solid' \| 'double' \| 'dotted' \| 'dashed'                                                         |
-| `textTransform`       | `textTransform`       | 'none' \| 'capitalize' \| 'uppercase' \| 'lowercase'                                                |
-| `textShadowOffset`    | `textShadowOffset`    | { width: `number`, height: `number` }                                                               |
-| `textShadowRadius`    | `textShadowRadius`    | `number`                                                                                            |
-| `textShadowColor`     | `textShadowColor`     | `PearlTheme['palette']` \| `ColorModeColor`                                                         |
+| Prop                  | Stylesheet property   | Type                                                                                                       |
+| --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `fontFamily`          | `fontFamily`          | <t>string</t>                                                                                              |
+| `fontSize`            | `fontSize`            | <t>number</t>                                                                                              |
+| `fontStyle`           | `fontStyle`           | <t>'normal' \| 'italic'</t>                                                                                |
+| `fontWeight`          | `fontWeight`          | <t>'normal' \| 'bold' \| '100' \| '200' \| '300' \| '400' \| '500' \| '600' \| '700' \| '800' \| '900'</t> |
+| `letterSpacing`       | `letterSpacing`       | <t>'solid' \| 'dotted' \| 'dashed' </t>                                                                    |
+| `lineHeight`          | `lineHeight`          | <t>number</t>                                                                                              |
+| `textAlign`           | `textAlign`           | <t>'auto' \| 'left' \| 'right' \| 'center' \| 'justify' </t>                                               |
+| `textDecorationLine`  | `textDecorationLine`  | <t>'none' \| 'underline' \| 'line-through' \| 'underline line-through' </t>                                |
+| `textDecorationStyle` | `textDecorationStyle` | <t>'solid' \| 'double' \| 'dotted' \| 'dashed' </t>                                                        |
+| `textTransform`       | `textTransform`       | <t>'none' \| 'capitalize' \| 'uppercase' \| 'lowercase' </t>                                               |
+| `textShadowOffset`    | `textShadowOffset`    | <t>{ width: number; height: number }</t>                                                                   |
+| `textShadowRadius`    | `textShadowRadius`    | <t>number</t>                                                                                              |
+| `textShadowColor`     | `textShadowColor`     | <t>PearlTheme['palette'] \| ColorModeColor</t>                                                             |
 
 ### Shadow
 
@@ -231,10 +231,10 @@ The sections below list the supported style props and their expected values.
 </Box>
 ```
 
-| Prop            | Stylesheet property                                                             | Type                                        |
-| --------------- | ------------------------------------------------------------------------------- | ------------------------------------------- |
-| `boxShadow`     | `shadowOffset` + `shadowOpacity` + `shadowRadius` + `elevation` + `shadowColor` | `PearlTheme['elevation']`                   |
-| `shadowColor`   | `shadowColor`                                                                   | `PearlTheme['palette']` \| `ColorModeColor` |
-| `shadowOffset`  | `shadowOffset`                                                                  | { width: `number`, height: `number` }       |
-| `shadowOpacity` | `shadowOpacity`                                                                 | `number`                                    |
-| `shadowRadius`  | `shadowRadius`                                                                  | `number`                                    |
+| Prop            | Stylesheet property                                                             | Type                                           |
+| --------------- | ------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `boxShadow`     | `shadowOffset` + `shadowOpacity` + `shadowRadius` + `elevation` + `shadowColor` | <t>PearlTheme['elevation']</t>                 |
+| `shadowColor`   | `shadowColor`                                                                   | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `shadowOffset`  | `shadowOffset`                                                                  | <t>{ width: number; height: number }</t>       |
+| `shadowOpacity` | `shadowOpacity`                                                                 | <t>number</t>                                  |
+| `shadowRadius`  | `shadowRadius`                                                                  | <t>number</t>                                  |
