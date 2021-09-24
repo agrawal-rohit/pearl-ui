@@ -65,7 +65,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     } else if (colorMode === "system") {
       changeThemeTo(systemThemeStyle);
     }
-  }, [colorMode, defaultColorMode, theme]);
+  }, [defaultColorMode, colorMode, theme]);
 
   if (haveFontsLoaded) {
     return (

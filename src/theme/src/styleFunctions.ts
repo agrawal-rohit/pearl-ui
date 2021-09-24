@@ -166,6 +166,11 @@ export const border = [
 ];
 
 export const shadow = [
+  ...getKeys(shadowProperties).map((property) => {
+    return createStyleFunction({
+      property,
+    });
+  }),
   createStyleFunction({
     property: "boxShadow",
     themeKey: "elevation",
@@ -249,17 +254,17 @@ export type PositionProps = {
 
 export type BorderProps = {
   [Key in keyof typeof borderProperties]?: ViewStyle[Key];
-} &
-  {
-    [Key in keyof typeof borderColorProperties]?: keyof BasePearlTheme["palette"];
-  } &
-  {
-    [Key in keyof typeof borderRadiusProperties]?: BasePearlTheme["borderRadii"] extends {}
-      ? keyof BasePearlTheme["borderRadii"]
-      : number;
-  };
+} & {
+  [Key in keyof typeof borderColorProperties]?: keyof BasePearlTheme["palette"];
+} & {
+  [Key in keyof typeof borderRadiusProperties]?: BasePearlTheme["borderRadii"] extends {}
+    ? keyof BasePearlTheme["borderRadii"]
+    : number;
+};
 
 export type ShadowProps = {
+  [Key in keyof typeof shadowProperties]?: ViewStyle[Key];
+} & {
   boxShadow?: keyof BasePearlTheme["elevation"];
   shadowColor?: keyof BasePearlTheme["palette"];
 };

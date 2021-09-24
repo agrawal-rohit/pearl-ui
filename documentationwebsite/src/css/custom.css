@@ -105,10 +105,12 @@ h1 {
 }
 
 h2 {
+  margin-top: 40px !important;
   font-size: x-large;
 }
 
 h3 {
+  margin-top: 40px !important;
   font-size: large;
 }
 

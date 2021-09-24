@@ -6,6 +6,10 @@ sidebar_position: 2
 
 Screen is a layout component that you can use to wrap all the views in your app. By default, it renders a [Box](./box) element.
 
+The Screen component also implements a `SafeAreaView` under the hood. This allows the content wrapped by the Screen component to
+always be within the safe areas of the device. (This is especially helpful for keeping your app accessible on devices with rounded corners
+or camera notches)
+
 ## Import
 
 ```jsx
