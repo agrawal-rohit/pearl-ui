@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.0.1...v1.1.0) (2021-09-25)
+
+
+### Bug Fixes
+
+* **generatepalette:** updated generateTintsAndShades function, added docs ([48fa6c2](https://github.com/agrawal-rohit/pearl-ui/commit/48fa6c2fd94c67afa9daf3960af9c024896cb2e4))
+
+
+### Features
+
+* **extendtheme:** added function to extend the baseTheme ([6c6765b](https://github.com/agrawal-rohit/pearl-ui/commit/6c6765bf1681aa0f08859ed2a1456c93989a0c50))
+* **layoutprops:** added shorthand support for layout props ([e1d78c6](https://github.com/agrawal-rohit/pearl-ui/commit/e1d78c654b0987bcdf3dd67c2e4e21a3e3a3e162))
+
 ## [1.0.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.0.0...v1.0.1) (2021-09-23)
 
 
