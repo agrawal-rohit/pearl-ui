@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  width: 33.333%;
+  height: 50px;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.swatch {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 13px;
+}
+
+.colorName {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.colorValue {
+  margin-top: -3px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+}

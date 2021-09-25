@@ -1,0 +1,289 @@
+---
+sidebar_position: 1
+title: Default Theme
+---
+
+The theme object is where you define your app's color palette, spacing scale, typography variants, border radius scales, and more.
+
+It can also be used to create and manage style variants for any components created using Pearl UI.
+
+## Color palette
+
+Add a `theme.palette` object to provide colors for your project. By default, these colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor`.
+
+We recommend adding a palette that ranges from `100` to `900`. Tools like [Themera](https://themera.vercel.app/), [Smart Swatch](https://smart-swatch.netlify.app/), [Coolors](https://coolors.co/faa275-ff8c61-ce6a85-985277-5c374c), [Eva Color Generator](https://colors.eva.design/) or [Palx](https://palx.jxnblk.com/) can be used to generate these palettes. You can also use the [generatePalette function](../others/generatePalette) included in the Pearl UI library.
+
+```jsx
+// theme.js
+export default {
+  palette: {
+    "primary-100": "#E1E6FF",
+    "primary-200": "#C3CCFF",
+    "primary-300": "#A5B1FF",
+    "primary-400": "#8F9DFF",
+    "primary-500": "#6A7BFF",
+    "primary-600": "#4D5BDB",
+    "primary-700": "#3541B7",
+    "primary-800": "#212A93",
+    "primary-900": "#141B7A",
+    // ...
+  },
+};
+```
+
+Pearl UI provides a sensible default theme, but you can fully customize it to fit your design.
+
+import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
+
+### Primary
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Primary 100" colorValue="#E1E6FF" />
+  <PaletteColor colorName="Primary 200" colorValue="#C3CCFF" />
+  <PaletteColor colorName="Primary 300" colorValue="#A5B1FF" />
+  <PaletteColor colorName="Primary 400" colorValue="#8F9DFF" />
+  <PaletteColor colorName="Primary 500" colorValue="#6A7BFF" />
+  <PaletteColor colorName="Primary 600" colorValue="#4D5BDB" />
+  <PaletteColor colorName="Primary 700" colorValue="#3541B7" />
+  <PaletteColor colorName="Primary 800" colorValue="#212A93" />
+  <PaletteColor colorName="Primary 900" colorValue="#141B7A" />
+</div>
+
+### Secondary
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Secondary 100" colorValue="#FFE1E7" />
+  <PaletteColor colorName="Secondary 200" colorValue="#FFC3D6" />
+  <PaletteColor colorName="Secondary 300" colorValue="#FFA5CB" />
+  <PaletteColor colorName="Secondary 400" colorValue="#FF8FC9" />
+  <PaletteColor colorName="Secondary 500" colorValue="#FF6AC6" />
+  <PaletteColor colorName="Secondary 600" colorValue="#DB4DB3" />
+  <PaletteColor colorName="Secondary 700" colorValue="#B7359F" />
+  <PaletteColor colorName="Secondary 800" colorValue="#93218A" />
+  <PaletteColor colorName="Secondary 900" colorValue="#78147A" />
+</div>
+
+### Neutrals
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor
+    colorName="Neutral 100"
+    colorValue="#FFFFFF"
+    border="1px solid #E4E9F2"
+  />
+  <PaletteColor colorName="Neutral 200" colorValue="#F7F9FC" />
+  <PaletteColor colorName="Neutral 300" colorValue="#EDF1F7" />
+  <PaletteColor colorName="Neutral 400" colorValue="#E4E9F2" />
+  <PaletteColor colorName="Neutral 500" colorValue="#C5CEE0" />
+  <PaletteColor colorName="Neutral 600" colorValue="#8F9BB3" />
+  <PaletteColor colorName="Neutral 700" colorValue="#2E3A59" />
+  <PaletteColor colorName="Neutral 800" colorValue="#222B45" />
+  <PaletteColor colorName="Neutral 900" colorValue="#1A2138" />
+</div>
+
+### Alerts
+
+#### Success
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Success 100" colorValue="#F5FCCC" />
+  <PaletteColor colorName="Success 200" colorValue="#EAFA9A" />
+  <PaletteColor colorName="Success 300" colorValue="#D6F266" />
+  <PaletteColor colorName="Success 400" colorValue="#C0E640" />
+  <PaletteColor colorName="Success 500" colorValue="#A2D608" />
+  <PaletteColor colorName="Success 600" colorValue="#86B805" />
+  <PaletteColor colorName="Success 700" colorValue="#6C9A04" />
+  <PaletteColor colorName="Success 800" colorValue="#537C02" />
+  <PaletteColor colorName="Success 900" colorValue="#426601" />
+</div>
+
+#### Info
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Info 100" colorValue="#D8FEFB" />
+  <PaletteColor colorName="Info 200" colorValue="#B2FEFC" />
+  <PaletteColor colorName="Info 300" colorValue="#8CF6FC" />
+  <PaletteColor colorName="Info 400" colorValue="#6FE8FA" />
+  <PaletteColor colorName="Info 500" colorValue="#40D2F7" />
+  <PaletteColor colorName="Info 600" colorValue="#2EA6D4" />
+  <PaletteColor colorName="Info 700" colorValue="#207EB1" />
+  <PaletteColor colorName="Info 800" colorValue="#145B8F" />
+  <PaletteColor colorName="Info 900" colorValue="#0C4176" />
+</div>
+
+#### Warning
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Warning 100" colorValue="#FFF7D6" />
+  <PaletteColor colorName="Warning 200" colorValue="#FFEDAE" />
+  <PaletteColor colorName="Warning 300" colorValue="#FFE085" />
+  <PaletteColor colorName="Warning 400" colorValue="#FFD367" />
+  <PaletteColor colorName="Warning 500" colorValue="#FFBF35" />
+  <PaletteColor colorName="Warning 600" colorValue="#DB9C26" />
+  <PaletteColor colorName="Warning 700" colorValue="#B77B1A" />
+  <PaletteColor colorName="Warning 800" colorValue="#935D10" />
+  <PaletteColor colorName="Warning 900" colorValue="#7A480A" />
+</div>
+
+#### Danger
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Danger 100" colorValue="#FFE7D9" />
+  <PaletteColor colorName="Danger 200" colorValue="#FFCAB3" />
+  <PaletteColor colorName="Danger 300" colorValue="#FFA68D" />
+  <PaletteColor colorName="Danger 400" colorValue="#FF8371" />
+  <PaletteColor colorName="Danger 500" colorValue="#FF4B42" />
+  <PaletteColor colorName="Danger 600" colorValue="#DB3036" />
+  <PaletteColor colorName="Danger 700" colorValue="#B72133" />
+  <PaletteColor colorName="Danger 800" colorValue="#93152E" />
+  <PaletteColor colorName="Danger 900" colorValue="#7A0C2C" />
+</div>
+
+### Named Colors
+
+Pearl UI supports the following CSS named colors by adding them to the default theme palette:
+
+```json
+{
+  "aliceblue": "#f0f8ff",
+  "antiquewhite": "#faebd7",
+  "cyan": "#00ffff",
+  "aquamarine": "#7fffd4",
+  "azure": "#f0ffff",
+  "beige": "#f5f5dc",
+  "bisque": "#ffe4c4",
+  "black": "#000000",
+  "blanchedalmond": "#ffebcd",
+  "blue": "#0000ff",
+  "blueviolet": "#8a2be2",
+  "brown": "#a52a2a",
+  "burlywood": "#deb887",
+  "cadetblue": "#5f9ea0",
+  "chartreuse": "#7fff00",
+  "chocolate": "#d2691e",
+  "coral": "#ff7f50",
+  "cornflowerblue": "#6495ed",
+  "cornsilk": "#fff8dc",
+  "crimson": "#dc143c",
+  "darkblue": "#00008b",
+  "darkcyan": "#008b8b",
+  "darkgoldenrod": "#b8860b",
+  "darkgray": "#a9a9a9",
+  "darkgreen": "#006400",
+  "darkkhaki": "#bdb76b",
+  "darkmagenta": "#8b008b",
+  "darkolivegreen": "#556b2f",
+  "darkorange": "#ff8c00",
+  "darkorchid": "#9932cc",
+  "darkred": "#8b0000",
+  "darksalmon": "#e9967a",
+  "darkseagreen": "#8fbc8f",
+  "darkslateblue": "#483d8b",
+  "darkslategray": "#2f4f4f",
+  "darkturquoise": "#00ced1",
+  "darkviolet": "#9400d3",
+  "deeppink": "#ff1493",
+  "deepskyblue": "#00bfff",
+  "dimgray": "#696969",
+  "dodgerblue": "#1e90ff",
+  "firebrick": "#b22222",
+  "floralwhite": "#fffaf0",
+  "forestgreen": "#228b22",
+  "fuchsia": "#ff00ff",
+  "gainsboro": "#dcdcdc",
+  "ghostwhite": "#f8f8ff",
+  "goldenrod": "#daa520",
+  "gold": "#ffd700",
+  "gray": "#808080",
+  "green": "#008000",
+  "greenyellow": "#adff2f",
+  "honeydew": "#f0fff0",
+  "hotpink": "#ff69b4",
+  "indianred": "#cd5c5c",
+  "indigo": "#4b0082",
+  "ivory": "#fffff0",
+  "khaki": "#f0e68c",
+  "lavenderblush": "#fff0f5",
+  "lavender": "#e6e6fa",
+  "lawngreen": "#7cfc00",
+  "lemonchiffon": "#fffacd",
+  "lightblue": "#add8e6",
+  "lightcoral": "#f08080",
+  "lightcyan": "#e0ffff",
+  "lightgoldenrodyellow": "#fafad2",
+  "lightgreen": "#90ee90",
+  "lightgrey": "#d3d3d3",
+  "lightpink": "#ffb6c1",
+  "lightsalmon": "#ffa07a",
+  "lightseagreen": "#20b2aa",
+  "lightskyblue": "#87cefa",
+  "lightslategray": "#778899",
+  "lightsteelblue": "#b0c4de",
+  "lightyellow": "#ffffe0",
+  "lime": "#00ff00",
+  "limegreen": "#32cd32",
+  "linen": "#faf0e6",
+  "magenta": "#ff00ff",
+  "maroon": "#800000",
+  "mediumaquamarine": "#66cdaa",
+  "mediumblue": "#0000cd",
+  "mediumorchid": "#ba55d3",
+  "mediumpurple": "#9370db",
+  "mediumseagreen": "#3cb371",
+  "mediumslateblue": "#7b68ee",
+  "mediumspringgreen": "#00fa9a",
+  "mediumturquoise": "#48d1cc",
+  "mediumvioletred": "#c71585",
+  "midnightblue": "#191970",
+  "mintcream": "#f5fffa",
+  "mistyrose": "#ffe4e1",
+  "moccasin": "#ffe4b5",
+  "navajowhite": "#ffdead",
+  "navy": "#000080",
+  "oldlace": "#fdf5e6",
+  "olive": "#808000",
+  "olivedrab": "#6b8e23",
+  "orange": "#ffa500",
+  "orangered": "#ff4500",
+  "orchid": "#da70d6",
+  "palegoldenrod": "#eee8aa",
+  "palegreen": "#98fb98",
+  "paleturquoise": "#afeeee",
+  "palevioletred": "#db7093",
+  "papayawhip": "#ffefd5",
+  "peachpuff": "#ffdab9",
+  "peru": "#cd853f",
+  "pink": "#ffc0cb",
+  "plum": "#dda0dd",
+  "powderblue": "#b0e0e6",
+  "purple": "#800080",
+  "rebeccapurple": "#663399",
+  "red": "#ff0000",
+  "rosybrown": "#bc8f8f",
+  "royalblue": "#4169e1",
+  "saddlebrown": "#8b4513",
+  "salmon": "#fa8072",
+  "sandybrown": "#f4a460",
+  "seagreen": "#2e8b57",
+  "seashell": "#fff5ee",
+  "sienna": "#a0522d",
+  "silver": "#c0c0c0",
+  "skyblue": "#87ceeb",
+  "slateblue": "#6a5acd",
+  "slategray": "#708090",
+  "snow": "#fffafa",
+  "springgreen": "#00ff7f",
+  "steelblue": "#4682b4",
+  "tan": "#d2b48c",
+  "teal": "#008080",
+  "thistle": "#d8bfd8",
+  "tomato": "#ff6347",
+  "turquoise": "#40e0d0",
+  "violet": "#ee82ee",
+  "wheat": "#f5deb3",
+  "white": "#ffffff",
+  "whitesmoke": "#f5f5f5",
+  "yellow": "#ffff00",
+  "yellowgreen": "#9acd32"
+}
+```
