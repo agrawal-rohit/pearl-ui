@@ -1,8 +1,5 @@
 // Hooks
-export { useColorModeValue } from "./hooks/useColorModeValue";
-export { useComponentConfig } from "./hooks/useComponentConfig";
-export { useStyledProps } from "./hooks/useStyledProps";
-export { useTheme } from "./hooks/useTheme";
+export * from "./hooks/index";
 
 // Components
 export * from "./components/index";
