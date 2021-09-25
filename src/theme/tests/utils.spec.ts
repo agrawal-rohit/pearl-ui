@@ -1,10 +1,10 @@
-import { generateTintsandShades } from "../utils/utils";
+import { generatePalette } from "../utils/utils";
 
 jest.useFakeTimers();
 
-describe("generateTintsandShades", () => {
+describe("generatePalette", () => {
   it("works as expected for odd number of shades", () => {
-    const generatedShades = generateTintsandShades("#6a7bff", "test", 7);
+    const generatedShades = generatePalette("#6a7bff", "test", 7);
 
     expect(Object.keys(generatedShades).length).toEqual(7);
     expect(Object.keys(generatedShades)[0].includes("test-100")).toBeTruthy();
@@ -16,7 +16,7 @@ describe("generateTintsandShades", () => {
   });
 
   it("works as expected for even number of shades", () => {
-    const generatedShades = generateTintsandShades("#6a7bff", "test", 4);
+    const generatedShades = generatePalette("#6a7bff", "test", 4);
 
     expect(Object.keys(generatedShades).length).toEqual(4);
     expect(Object.keys(generatedShades)[0].includes("test-100")).toBeTruthy();

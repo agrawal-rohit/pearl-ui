@@ -20,7 +20,7 @@ export { ThemeProvider } from "./src/themeContext";
 export { baseTheme } from "./src/basetheme";
 
 // Utils
-export { generateTintsandShades } from "./utils/utils";
+export { generatePalette } from "./utils/utils";
 
 // Types
 export { BasePearlTheme as PearlTheme } from "./src/types";
