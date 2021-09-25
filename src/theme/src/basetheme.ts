@@ -2,11 +2,7 @@ import ActivityIndicatorConfig from "../../components/Atoms/ActivityIndicator/Ac
 import ScreenConfig from "../../components/Atoms/Screen/Screen.config";
 import TextConfig from "../../components/Atoms/Text/Text.config";
 import { basePalette } from "../utils/basePalette";
-import { generatePalette } from "../utils/utils";
 import { createTheme } from "./themeFunctions";
-
-const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
-console.log(colorPalette);
 
 export const baseTheme = createTheme({
   palette: {

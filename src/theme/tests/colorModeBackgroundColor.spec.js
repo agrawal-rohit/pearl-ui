@@ -18,7 +18,7 @@ describe("Color mode based color", () => {
             }}
             borderColor={{
               light: "tomato",
-              dark: "aqua",
+              dark: "cyan",
             }}
             backgroundColor={{
               light: "white",
@@ -45,7 +45,7 @@ describe("Color mode based color", () => {
             }}
             borderColor={{
               light: "tomato",
-              dark: "aqua",
+              dark: "cyan",
             }}
             backgroundColor={{
               light: "white",
@@ -57,7 +57,7 @@ describe("Color mode based color", () => {
       .toJSON();
 
     expect(tree.props.style.shadowColor).toBe(baseTheme.palette.brown);
-    expect(tree.props.style.borderColor).toBe(baseTheme.palette.aqua);
+    expect(tree.props.style.borderColor).toBe(baseTheme.palette.cyan);
     expect(tree.props.style.backgroundColor).toBe(baseTheme.palette.black);
   });
 });

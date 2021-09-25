@@ -173,6 +173,31 @@ const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
   <PaletteColor colorName="Accent 1400" colorValue="#000000" />
 </div>
 
+### Adding palette to theme
+
+You can insert the generated palette into your theme object as follows. The values `accent-100`, `accent-200`, `accent-300`, etc. would then be available to the props which query the <t>PearlTheme['palette']</t> values.
+
+```js
+// theme.js
+export default {
+  palette: {
+    "primary-100": "#E1E6FF",
+    "primary-200": "#C3CCFF",
+    "primary-300": "#A5B1FF",
+    "primary-400": "#8F9DFF",
+    "primary-500": "#6A7BFF",
+    "primary-600": "#4D5BDB",
+    "primary-700": "#3541B7",
+    "primary-800": "#212A93",
+    "primary-900": "#141B7A",
+
+    ...colorPalette,
+
+    // ...
+  },
+};
+```
+
 ## Props
 
 | Name       | Required | Type          | Default | Description                                                                                                                                                                       |
