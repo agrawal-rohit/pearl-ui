@@ -27,6 +27,7 @@ export const baseTheme: BasePearlTheme = {
     ...basePalette,
   },
   spacing: {
+    xs: 4,
     s: 8,
     m: 16,
     l: 24,
@@ -41,6 +42,7 @@ export const baseTheme: BasePearlTheme = {
     "9xl": 96,
   },
   borderRadii: {
+    xs: 2,
     s: 4,
     m: 8,
     l: 16,
@@ -48,45 +50,85 @@ export const baseTheme: BasePearlTheme = {
     "2xl": 32,
   },
   elevation: {
-    s: {
+    xs: {
       shadowColor: "neutral-900",
       shadowOffset: {
         width: 0,
         height: 2,
       },
-      shadowOpacity: 0.16,
-      shadowRadius: 4,
+      shadowOpacity: 0.08,
+      shadowRadius: 2,
       elevation: 2,
     },
-    m: {
-      shadowColor: "#373D40",
+    s: {
+      shadowColor: "neutral-900",
       shadowOffset: {
         width: 0,
         height: 4,
       },
-      shadowOpacity: 0.16,
-      shadowRadius: 8,
+      shadowOpacity: 0.08,
+      shadowRadius: 4,
       elevation: 4,
     },
-    l: {
+    m: {
       shadowColor: "neutral-900",
       shadowOffset: {
         width: 0,
         height: 8,
       },
-      shadowOpacity: 0.16,
-      shadowRadius: 16,
-      elevation: 6,
+      shadowOpacity: 0.08,
+      shadowRadius: 8,
+      elevation: 8,
+    },
+    l: {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 12,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 12,
+      elevation: 12,
     },
     xl: {
-      shadowColor: "#373D40",
+      shadowColor: "neutral-900",
       shadowOffset: {
         width: 0,
         height: 16,
       },
+      shadowOpacity: 0.08,
+      shadowRadius: 16,
+      elevation: 16,
+    },
+    "2xl": {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 20,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 20,
+      elevation: 20,
+    },
+    "3xl": {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 24,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 24,
+      elevation: 24,
+    },
+    "4xl": {
+      shadowColor: "neutral-900",
+      shadowOffset: {
+        width: 0,
+        height: 28,
+      },
       shadowOpacity: 0.16,
-      shadowRadius: 32,
-      elevation: 8,
+      shadowRadius: 28,
+      elevation: 28,
     },
   },
   zIndices: {

@@ -1,5 +1,5 @@
 // Theme functions
-export { extendTheme } from "./src/baseTheme";
+export { extendTheme } from "./src/basetheme";
 
 // Style functions
 export {

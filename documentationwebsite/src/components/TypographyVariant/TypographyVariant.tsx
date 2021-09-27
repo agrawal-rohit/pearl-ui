@@ -14,23 +14,29 @@ const TypographyVariant: React.FC<TypographyVariantProps> = ({
 }) => {
   const renderMetaData = (metadata: object) => {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className={styles.metaDataContainer}>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
           }}
         >
-          <p className={styles.metaDataKey} style={{ fontSize: 15 }}>
+          <p
+            className={styles.metaDataKey}
+            style={{
+              fontSize: 15,
+              color: "var(--hero-description-text-color)",
+            }}
+          >
             Variant:{" "}
           </p>
-          <p className={styles.metaData} style={{ fontSize: 15 }}>
+          <p
+            className={styles.metaData}
+            style={{
+              fontSize: 15,
+              color: "var(--hero-description-text-color)",
+            }}
+          >
             {variantName}
           </p>
         </div>
@@ -39,6 +45,7 @@ const TypographyVariant: React.FC<TypographyVariantProps> = ({
           style={{
             display: "flex",
             flexDirection: "row",
+            flexWrap: "wrap",
           }}
         >
           {Object.keys(metadata).map((key, i) => {

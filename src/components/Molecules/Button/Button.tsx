@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
       py="m"
       px="m"
       backgroundColor="primary-500"
-      borderRadius="s"
+      borderRadius="m"
       alignItems="center"
       justifyContent="center"
       {...props}
