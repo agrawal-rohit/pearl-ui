@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.0...v1.1.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **elevation:** updated default elevation system, added default theme docs ([45422e5](https://github.com/agrawal-rohit/pearl-ui/commit/45422e5cf1f624677c35e43d87fa5eae4ae9556b))
+* **text:** fixed text responsive size, added typography docs, updated default typography ([7942f5b](https://github.com/agrawal-rohit/pearl-ui/commit/7942f5bdb50ba8db1379ffed5793a6c793b74144))
+
 # [1.1.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.0.1...v1.1.0) (2021-09-25)
 
 
