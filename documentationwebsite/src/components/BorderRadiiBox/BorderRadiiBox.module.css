@@ -1,29 +1,25 @@
 .container {
   display: flex;
-  width: 33.333%;
+  width: 20%;
   height: 100px;
-  flex-direction: row;
+  flex-direction: column;
+  margin-right: 40px;
   margin-bottom: 40px;
 }
 
 .swatch {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  width: 100%;
+  height: 150px;
   background-color: #edf1f7;
   border-radius: 8px;
   margin-right: 13px;
-}
 
-.colorName {
   font-size: 15px;
   font-weight: 600;
-  margin: 0;
-}
-
-.colorValue {
-  margin-top: -3px;
-  font-size: 15px;
-  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  color: #1a2138;
 }
 
 @media screen and (max-width: 425px) {

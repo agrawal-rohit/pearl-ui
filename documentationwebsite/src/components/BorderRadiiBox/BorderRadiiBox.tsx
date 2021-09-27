@@ -9,16 +9,8 @@ interface BorderRadiiBoxProps {
 const BorderRadiiBox: React.FC<BorderRadiiBoxProps> = ({ keyName, radius }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.swatch} style={{ borderRadius: radius }}></div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignSelf: "center",
-        }}
-      >
-        <p className={styles.colorName}>"{keyName}"</p>
-        <p className={styles.colorValue}>{radius}</p>
+      <div className={styles.swatch} style={{ borderRadius: radius }}>
+        "{keyName}"
       </div>
     </div>
   );
