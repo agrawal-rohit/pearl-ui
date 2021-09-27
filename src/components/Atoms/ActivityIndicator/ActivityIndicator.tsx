@@ -18,16 +18,16 @@ import {
   spacing,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
-import { baseTheme } from "../../../theme/src/basetheme";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import ActivityIndicatorConfig from "./ActivityIndicator.config";
 
 const indicatorStyleFunctions = [color, spacing, layout];
 type IActivityIndicatorProps = ColorProps &
   SpacingProps &
   LayoutProps & {
-    size?: keyof typeof baseTheme["components"]["ActivityIndicator"]["sizes"];
-    variant?: keyof typeof baseTheme["components"]["ActivityIndicator"]["variants"];
+    size?: keyof typeof ActivityIndicatorConfig["sizes"];
+    variant?: keyof typeof ActivityIndicatorConfig["variants"];
     loading?: boolean;
   };
 
@@ -68,7 +68,7 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 
   return React.createElement(
     IndicatorTypeToComponentMap[
-      variant as keyof typeof baseTheme["components"]["ActivityIndicator"]["variants"]
+      variant as keyof typeof ActivityIndicatorConfig["variants"]
     ],
     {
       color: receivedStyledProps.style.color

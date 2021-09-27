@@ -8,6 +8,7 @@
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 0px;
+  color: var(--hero-description-text-color);
 }
 
 .metaData {
@@ -16,4 +17,17 @@
   margin-left: 3px;
   margin-right: 3px;
   margin-bottom: 0px;
+  color: var(--hero-description-text-color);
+}
+
+.metaDataContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .metaDataContainer {
+    flex-direction: column;
+  }
 }

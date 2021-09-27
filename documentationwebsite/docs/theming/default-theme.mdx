@@ -9,7 +9,7 @@ It can also be used to create and manage style variants for any components creat
 
 ## Color palette
 
-The theme object contains a `theme.palette` object for providing colors for your project. By default, these colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor` style properties.
+The theme contains a `theme.palette` object for providing colors for your project. By default, these colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor` style properties.
 
 We recommend adding a palette that ranges from `100` to `900`. Tools like [Themera](https://themera.vercel.app/), [Smart Swatch](https://smart-swatch.netlify.app/), [Coolors](https://coolors.co/faa275-ff8c61-ce6a85-985277-5c374c), [Eva Color Generator](https://colors.eva.design/) or [Palx](https://palx.jxnblk.com/) can be used to generate these palettes. You can also use the [generatePalette function](../others/generatePalette) included in the Pearl UI library.
 
@@ -290,7 +290,7 @@ Pearl UI supports the following CSS named colors by adding them to the default t
 
 ## Typography
 
-Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the default theme font and provides the following text variants:
+The typography system for the theme is created by setting the [Component Style](./component-styles) of `Text`. Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the default theme font and provides the following text variants:
 
 import TypographyVariant from "../../src/components/TypographyVariant/TypographyVariant";
 
@@ -507,3 +507,222 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
   }}
   exampleText="Caption"
 />
+
+## Spacing
+
+The theme contains a `theme.spacing` object which controls the spacing system. By default, these colors can be referenced by the `padding`, and `margin` style properties.
+We adopt a t-shirt size naming convention for our sizing system, but you can customize it to whatever fits your fancy.
+
+```js
+// theme.js
+export default {
+  xs: 4,
+  s: 8,
+  m: 16,
+  l: 24,
+  xl: 32,
+  "2xl": 40,
+  "3xl": 48,
+  "4xl": 56,
+  "5xl": 64,
+  "6xl": 72,
+  "7xl": 80,
+  "8xl": 88,
+  "9xl": 96,
+};
+```
+
+import SpacingBox from "../../src/components/SpacingBox/SpacingBox";
+
+| Name  | Space |                           |
+| ----- | ----- | ------------------------- |
+| `xs`  | 4     | <SpacingBox width={5} />  |
+| `s`   | 8     | <SpacingBox width={8} />  |
+| `m`   | 16    | <SpacingBox width={16} /> |
+| `l`   | 24    | <SpacingBox width={24} /> |
+| `xl`  | 32    | <SpacingBox width={32} /> |
+| `2xl` | 40    | <SpacingBox width={40} /> |
+| `3xl` | 48    | <SpacingBox width={48} /> |
+| `4xl` | 56    | <SpacingBox width={56} /> |
+| `5xl` | 64    | <SpacingBox width={64} /> |
+| `6xl` | 72    | <SpacingBox width={72} /> |
+| `7xl` | 80    | <SpacingBox width={80} /> |
+| `8xl` | 88    | <SpacingBox width={88} /> |
+| `9xl` | 96    | <SpacingBox width={96} /> |
+
+## Border Radius
+
+The theme contains a `theme.borderRadii` object which controls the system for border radii. By default, these colors can be referenced by the `borderRadius` style properties.
+We adopt a t-shirt size naming convention here as well.
+
+```js
+// theme.js
+export default {
+  xs: 2,
+  s: 4,
+  m: 8,
+  l: 16,
+  xl: 24,
+  "2xl": 32,
+};
+```
+
+import BorderRadiiBox from "../../src/components/BorderRadiiBox/BorderRadiiBox";
+
+<div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <BorderRadiiBox keyName="xs" radius={2} />
+  <BorderRadiiBox keyName="s" radius={4} />
+  <BorderRadiiBox keyName="m" radius={8} />
+  <BorderRadiiBox keyName="l" radius={16} />
+  <BorderRadiiBox keyName="xl" radius={24} />
+  <BorderRadiiBox keyName="2xl" radius={32} />
+</div>
+
+## Shadow/Elevation
+
+The theme contains a `theme.elevation` object which controls the shadow/elevation system. By default, these colors can be referenced by the `boxShadow` style properties.
+We adopt a t-shirt size naming convention here as well.
+
+```js
+// theme.js
+export default {
+  xs: {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  s: {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  m: {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  l: {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 12,
+  },
+  xl: {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 16,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    elevation: 16,
+  },
+  "2xl": {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 20,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 20,
+    elevation: 20,
+  },
+  "3xl": {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 24,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 24,
+    elevation: 24,
+  },
+  "4xl": {
+    shadowColor: "neutral-900",
+    shadowOffset: {
+      width: 0,
+      height: 28,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 28,
+    elevation: 28,
+  },
+};
+```
+
+import ElevationBox from "../../src/components/ElevationBox/ElevationBox";
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginTop: 40,
+  }}
+>
+  <ElevationBox keyName="xs" shadowValue="0px 2px 2px 0px rgb(26,33,56,0.06)" />
+  <ElevationBox keyName="s" shadowValue="0px 4px 4px 0px rgb(26,33,56,0.08)" />
+  <ElevationBox keyName="m" shadowValue="0px 8px 8px 0px rgb(26,33,56,0.08)" />
+  <ElevationBox
+    keyName="l"
+    shadowValue="0px 12px 12px 0px rgb(26,33,56,0.08)"
+  />
+  <ElevationBox
+    keyName="xl"
+    shadowValue="0px 16px 16px 0px rgb(26,33,56,0.08)"
+  />
+  <ElevationBox
+    keyName="2xl"
+    shadowValue="0px 20px 20px 0px rgb(26,33,56,0.1)"
+  />
+  <ElevationBox
+    keyName="3xl"
+    shadowValue="0px 24px 24px 0px rgb(26,33,56,0.1)"
+  />
+  <ElevationBox
+    keyName="4xl"
+    shadowValue="0px 28px 28px 0px rgb(26,33,56,0.16)"
+  />
+</div>
+
+## z-index values
+
+The theme contains a `theme.zIndices` object that provides pre-defined z-index values (inspired from [Chakra UI](https://chakra-ui.com/docs/theming/theme#z-index-values)). These values can help you control the stacking order of components and solve stacking issues very efficiently.
+
+```js
+// theme.js
+export default {
+    hide: -1,
+    auto: "auto",
+    base: 0,
+    docked: 10,
+    dropdown: 1000,
+    sticky: 1100,
+    banner: 1200,
+    overlay: 1300,
+    modal: 1400,
+    popover: 1500,
+    skipLink: 1600,
+    toast: 1700,
+    tooltip: 1800,
+  },
+```

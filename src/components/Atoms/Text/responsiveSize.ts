@@ -40,7 +40,7 @@ const responsiveSize = (size: number) => {
     }
     // catch larger devices
     // ie iphone 6s plus / 7 plus / mi note 等等
-    return size * 1.27;
+    return size * 1.2;
   }
   if (pixelRatio >= 3.5) {
     // catch Android font scaling on small machines
