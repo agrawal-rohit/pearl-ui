@@ -2,9 +2,27 @@ import ActivityIndicatorConfig from "../../components/Atoms/ActivityIndicator/Ac
 import ScreenConfig from "../../components/Atoms/Screen/Screen.config";
 import TextConfig from "../../components/Atoms/Text/Text.config";
 import { basePalette } from "../utils/basePalette";
-import { createTheme } from "./themeFunctions";
+import { BasePearlTheme } from "./types";
 
-export const baseTheme = createTheme({
+/**
+ * Override particular parts of the baseTheme to create a custom theme as per you app's needs
+ * @param customTheme custom theme object to be combined with the baseTheme
+ * @returns
+ */
+export const extendTheme = (
+  customTheme: Partial<BasePearlTheme>
+): BasePearlTheme => {
+  return {
+    palette: { ...baseTheme.palette, ...customTheme.palette },
+    spacing: { ...baseTheme.spacing, ...customTheme.spacing },
+    components: { ...baseTheme.components, ...customTheme.components },
+    elevation: { ...baseTheme.elevation, ...customTheme.elevation },
+    zIndices: { ...baseTheme.zIndices, ...customTheme.zIndices },
+    borderRadii: { ...baseTheme.borderRadii, ...customTheme.borderRadii },
+  };
+};
+
+export const baseTheme: BasePearlTheme = {
   palette: {
     ...basePalette,
   },
@@ -90,4 +108,4 @@ export const baseTheme = createTheme({
     Screen: ScreenConfig,
     ActivityIndicator: ActivityIndicatorConfig,
   },
-});
+};

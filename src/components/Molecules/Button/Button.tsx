@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
       {loading ? (
         <ActivityIndicator color="neutral-100" />
       ) : (
-        <Text variant="button">{children}</Text>
+        <Text variant="btn3">{children}</Text>
       )}
     </Box>
   </Pressable>

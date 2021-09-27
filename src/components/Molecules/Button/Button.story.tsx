@@ -10,16 +10,14 @@ storiesOf("Button", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("with text", () => (
     <Button onPress={action("clicked-text")}>
-      <Text variant="button">{text("Button text", "Hello Button")}</Text>
+      {text("Button text", "Hello Button")}
     </Button>
   ))
   .add("with some emoji", () => (
-    <Button onPress={action("clicked-emoji")}>
-      <Text variant="button">😀 😎 👍 💯</Text>
-    </Button>
+    <Button onPress={action("clicked-emoji")}>😀 😎 👍 💯</Button>
   ))
   .add("loading", () => (
     <Button onPress={action("loading")} loading>
-      <Text variant="button">Test</Text>
+      Test
     </Button>
   ));

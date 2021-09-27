@@ -7,8 +7,9 @@ exports[`Atoms/Text passes the snapshot test 1`] = `
       "color": "#1A2138",
       "display": "flex",
       "fontFamily": "Poppins-Regular",
-      "fontSize": 19,
+      "fontSize": 20,
       "fontWeight": "400",
+      "lineHeight": 30,
     }
   }
 >

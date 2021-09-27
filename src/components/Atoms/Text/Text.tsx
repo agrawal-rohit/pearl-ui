@@ -17,7 +17,7 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { BasePearlTheme } from "../../../theme/src/types";
+import responsiveSize from "./responsiveSize";
 
 export type TextProps = ColorProps &
   OpacityProps &
@@ -59,6 +59,12 @@ const Text = React.forwardRef((props: ComponentProps, ref: any) => {
   const finalStyle = {
     ...componentSpecificProps.style,
     ...passedProps.style,
+    fontSize: responsiveSize(
+      passedProps.style.fontSize || componentSpecificProps.style.fontSize
+    ),
+    lineHeight: responsiveSize(
+      passedProps.style.lineHeight || componentSpecificProps.style.lineHeight
+    ),
   };
 
   return (
