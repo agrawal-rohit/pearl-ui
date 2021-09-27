@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+.container {
+  margin-top: 10px;
+}
+
+.metaDataKey {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.metaData {
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 0px;
+}

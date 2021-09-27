@@ -9,7 +9,7 @@ It can also be used to create and manage style variants for any components creat
 
 ## Color palette
 
-Add a `theme.palette` object to provide colors for your project. By default, these colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor`.
+The theme object contains a `theme.palette` object for providing colors for your project. By default, these colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor` style properties.
 
 We recommend adding a palette that ranges from `100` to `900`. Tools like [Themera](https://themera.vercel.app/), [Smart Swatch](https://smart-swatch.netlify.app/), [Coolors](https://coolors.co/faa275-ff8c61-ce6a85-985277-5c374c), [Eva Color Generator](https://colors.eva.design/) or [Palx](https://palx.jxnblk.com/) can be used to generate these palettes. You can also use the [generatePalette function](../others/generatePalette) included in the Pearl UI library.
 
@@ -287,3 +287,223 @@ Pearl UI supports the following CSS named colors by adding them to the default t
   "yellowgreen": "#9acd32"
 }
 ```
+
+## Typography
+
+Pearl UI uses [Poppins](https://fonts.google.com/specimen/Poppins) as the default theme font and provides the following text variants:
+
+import TypographyVariant from "../../src/components/TypographyVariant/TypographyVariant";
+
+<br />
+
+### Heading
+
+<TypographyVariant
+  variantName="h1"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 34,
+    lineHeight: 42,
+  }}
+  exampleText="Heading 1"
+/>
+
+<TypographyVariant
+  variantName="h2"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 28,
+    lineHeight: 36,
+  }}
+  exampleText="Heading 2"
+/>
+
+<TypographyVariant
+  variantName="h3"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 22,
+    lineHeight: 30,
+  }}
+  exampleText="Heading 3"
+/>
+
+<TypographyVariant
+  variantName="h4"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 20,
+    lineHeight: 28,
+  }}
+  exampleText="Heading 4"
+/>
+
+<TypographyVariant
+  variantName="h5"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 18,
+    lineHeight: 26,
+  }}
+  exampleText="Heading 5"
+/>
+
+<TypographyVariant
+  variantName="h6"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 16,
+    lineHeight: 24,
+  }}
+  exampleText="Heading 6"
+/>
+
+<br />
+
+### Paragraph
+
+<TypographyVariant
+  variantName="p1"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 20,
+    lineHeight: 28,
+  }}
+  exampleText="Paragraph - Large"
+/>
+
+<TypographyVariant
+  variantName="p2"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 18,
+    lineHeight: 26,
+  }}
+  exampleText="Paragraph - Regular"
+/>
+
+<TypographyVariant
+  variantName="p3"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 16,
+    lineHeight: 24,
+  }}
+  exampleText="Paragraph - Small"
+/>
+
+<TypographyVariant
+  variantName="p4"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 14,
+    lineHeight: 22,
+  }}
+  exampleText="Paragraph - Tiny"
+/>
+
+<br />
+
+### Button
+
+<TypographyVariant
+  variantName="btn1"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 18,
+    lineHeight: 26,
+  }}
+  exampleText="Button - Giant"
+/>
+
+<TypographyVariant
+  variantName="btn2"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 16,
+    lineHeight: 24,
+  }}
+  exampleText="Button - Large"
+/>
+
+<TypographyVariant
+  variantName="btn3"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 14,
+    lineHeight: 22,
+  }}
+  exampleText="Button - Medium"
+/>
+
+<TypographyVariant
+  variantName="btn4"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 12,
+    lineHeight: 20,
+  }}
+  exampleText="Button - Small"
+/>
+
+<TypographyVariant
+  variantName="btn5"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 10,
+    lineHeight: 18,
+  }}
+  exampleText="Button - Tiny"
+/>
+
+<br />
+
+### Others
+
+<TypographyVariant
+  variantName="label"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "500",
+    fontSize: 16,
+    lineHeight: 24,
+  }}
+  exampleText="Form label"
+/>
+
+<TypographyVariant
+  variantName="input"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 14,
+    lineHeight: 22,
+  }}
+  exampleText="Form input"
+/>
+
+<TypographyVariant
+  variantName="caption"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "400",
+    fontSize: 12,
+    lineHeight: 20,
+  }}
+  exampleText="Caption"
+/>

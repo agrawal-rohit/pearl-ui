@@ -1,5 +1,5 @@
 import { baseTheme } from "../src/basetheme";
-import { createTheme, extendTheme } from "../src/themeFunctions";
+import { extendTheme } from "../src/basetheme";
 
 jest.useFakeTimers();
 
@@ -14,9 +14,7 @@ describe("themeFunctions", () => {
       borderRadii: {},
     };
 
-    const finalTheme = createTheme(tempTheme);
-
-    expect(typeof finalTheme).toBe(typeof baseTheme);
+    expect(typeof tempTheme).toBe(typeof baseTheme);
   });
 
   it("returns combined theme using extendTheme", () => {
