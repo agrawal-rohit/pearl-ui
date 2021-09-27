@@ -446,7 +446,7 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
     fontSize: 14,
     lineHeight: 22,
   }}
-  exampleText="Button - Medium"
+  exampleText="Button - Regular"
 />
 
 <TypographyVariant
@@ -702,6 +702,21 @@ import ElevationBox from "../../src/components/ElevationBox/ElevationBox";
     keyName="4xl"
     shadowValue="0px 28px 28px 0px rgb(26,33,56,0.16)"
   />
+</div>
+
+:::info
+The box shadows look slightly different between Android and iOS (They look more saturated on Android as shown below). This is due to the different shadow implementations in React Native for the two operating system.
+:::
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }}
+>
+  <img src="/img/android_elevation.png" alt="welcome" width="40%" />
+  <img src="/img/ios_elevation.png" alt="welcome" width="40%" />
 </div>
 
 ## z-index values
