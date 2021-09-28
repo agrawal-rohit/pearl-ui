@@ -71,7 +71,7 @@
     "husky": "^7.0.2",
     "jest": "^27.2.2",
     "jest-expo": "^42.1.0",
-    "react-native-builder-bob": "^0.18.1",
+    "react-native-builder-bob": "^0.18.2",
     "react-native-storybook-loader": "^2.0.4",
     "react-test-renderer": "^17.0.2",
     "semantic-release": "^17.4.7",
