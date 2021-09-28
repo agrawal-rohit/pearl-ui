@@ -21,19 +21,19 @@ storiesOf("Typography", module)
       <Text variant="input">Form input</Text>
       <Text variant="label">Label</Text>
       <Text variant="caption">Caption</Text>
-      <Box backgroundColor="primary-500">
+      <Box backgroundColor="primary.500">
         <Text variant="btn1">Button 1</Text>
       </Box>
-      <Box backgroundColor="primary-500">
+      <Box backgroundColor="primary.500">
         <Text variant="btn2">Button 2</Text>
       </Box>
-      <Box backgroundColor="primary-500">
+      <Box backgroundColor="primary.500">
         <Text variant="btn3">Button 3</Text>
       </Box>
-      <Box backgroundColor="primary-500">
+      <Box backgroundColor="primary.500">
         <Text variant="btn4">Button 4</Text>
       </Box>
-      <Box backgroundColor="primary-500">
+      <Box backgroundColor="primary.500">
         <Text variant="btn5">Button 5</Text>
       </Box>
     </Box>

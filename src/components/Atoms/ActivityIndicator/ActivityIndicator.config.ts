@@ -1,6 +1,6 @@
 export default {
   baseStyle: {
-    color: "primary-500",
+    color: "primary.500",
   },
   sizes: {
     s: {

@@ -17,15 +17,29 @@ We recommend adding a palette that ranges from `100` to `900`. Tools like [Theme
 // theme.js
 export default {
   palette: {
-    "primary-100": "#E1E6FF",
-    "primary-200": "#C3CCFF",
-    "primary-300": "#A5B1FF",
-    "primary-400": "#8F9DFF",
-    "primary-500": "#6A7BFF",
-    "primary-600": "#4D5BDB",
-    "primary-700": "#3541B7",
-    "primary-800": "#212A93",
-    "primary-900": "#141B7A",
+    primary: {
+      100: "#E1E6FF",
+      200: "#C3CCFF",
+      300: "#A5B1FF",
+      400: "#8F9DFF",
+      500: "#6A7BFF",
+      600: "#4D5BDB",
+      700: "#3541B7",
+      800: "#212A93",
+      900: "#141B7A",
+    },
+
+    secondary: {
+      100: "#FFE1E7",
+      200: "#FFC3D6",
+      300: "#FFA5CB",
+      400: "#FF8FC9",
+      500: "#FF6AC6",
+      600: "#DB4DB3",
+      700: "#B7359F",
+      800: "#93218A",
+      900: "#78147A",
+    },
     // ...
   },
 };
@@ -516,19 +530,21 @@ We adopt a t-shirt size naming convention for our sizing system, but you can cus
 ```js
 // theme.js
 export default {
-  xs: 4,
-  s: 8,
-  m: 16,
-  l: 24,
-  xl: 32,
-  "2xl": 40,
-  "3xl": 48,
-  "4xl": 56,
-  "5xl": 64,
-  "6xl": 72,
-  "7xl": 80,
-  "8xl": 88,
-  "9xl": 96,
+  spacing: {
+    xs: 4,
+    s: 8,
+    m: 16,
+    l: 24,
+    xl: 32,
+    "2xl": 40,
+    "3xl": 48,
+    "4xl": 56,
+    "5xl": 64,
+    "6xl": 72,
+    "7xl": 80,
+    "8xl": 88,
+    "9xl": 96,
+  },
 };
 ```
 
@@ -558,12 +574,14 @@ We adopt a t-shirt size naming convention here as well.
 ```js
 // theme.js
 export default {
-  xs: 2,
-  s: 4,
-  m: 8,
-  l: 16,
-  xl: 24,
-  "2xl": 32,
+  borderRadii: {
+    xs: 2,
+    s: 4,
+    m: 8,
+    l: 16,
+    xl: 24,
+    "2xl": 32,
+  },
 };
 ```
 
@@ -586,85 +604,87 @@ We adopt a t-shirt size naming convention here as well.
 ```js
 // theme.js
 export default {
-  xs: {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 2,
+  elevation: {
+    xs: {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 2,
+      elevation: 2,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 2,
-    elevation: 2,
-  },
-  s: {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 4,
+    s: {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 4,
+      elevation: 4,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 4,
-  },
-  m: {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 8,
+    m: {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 8,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 8,
+      elevation: 8,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    elevation: 8,
-  },
-  l: {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 12,
+    l: {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 12,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 12,
+      elevation: 12,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 12,
-  },
-  xl: {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 16,
+    xl: {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 16,
+      },
+      shadowOpacity: 0.08,
+      shadowRadius: 16,
+      elevation: 16,
     },
-    shadowOpacity: 0.08,
-    shadowRadius: 16,
-    elevation: 16,
-  },
-  "2xl": {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 20,
+    "2xl": {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 20,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 20,
+      elevation: 20,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 20,
-    elevation: 20,
-  },
-  "3xl": {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 24,
+    "3xl": {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 24,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 24,
+      elevation: 24,
     },
-    shadowOpacity: 0.1,
-    shadowRadius: 24,
-    elevation: 24,
-  },
-  "4xl": {
-    shadowColor: "neutral-900",
-    shadowOffset: {
-      width: 0,
-      height: 28,
+    "4xl": {
+      shadowColor: "neutral.900",
+      shadowOffset: {
+        width: 0,
+        height: 28,
+      },
+      shadowOpacity: 0.16,
+      shadowRadius: 28,
+      elevation: 28,
     },
-    shadowOpacity: 0.16,
-    shadowRadius: 28,
-    elevation: 28,
   },
 };
 ```
@@ -705,7 +725,7 @@ import ElevationBox from "../../src/components/ElevationBox/ElevationBox";
 </div>
 
 :::info
-The box shadows look slightly different between Android and iOS (They look more saturated on Android as shown below). This is due to the different shadow implementations in React Native for the two operating system.
+The box shadows look slightly different between Android and iOS (They look more saturated on Android as shown below). This is due to the limitations of the [Android Elevation API](https://developer.android.com/training/material/shadows-clipping).
 :::
 
 <div
@@ -726,6 +746,7 @@ The theme contains a `theme.zIndices` object that provides pre-defined z-index v
 ```js
 // theme.js
 export default {
+  zIndices: {
     hide: -1,
     auto: "auto",
     base: 0,
@@ -740,4 +761,5 @@ export default {
     toast: 1700,
     tooltip: 1800,
   },
+};
 ```

@@ -31,6 +31,12 @@ export interface ElevationConfig {
   elevation: number;
 }
 
+export interface ColorPalette {
+  [key: string]: {
+    [key: number]: string;
+  };
+}
+
 export interface ComponentConfig {
   baseStyle: {
     [key: string]: any;
@@ -54,7 +60,7 @@ export type ColorModeColor = {
 
 export interface BasePearlTheme {
   palette: {
-    [key: string]: string;
+    [key: string]: string | ColorPalette;
   };
   spacing: {
     [key: string]: number;

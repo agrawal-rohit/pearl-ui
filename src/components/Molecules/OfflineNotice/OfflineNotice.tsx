@@ -16,7 +16,7 @@ const OfflineNotice: React.FC<OfflineNoticeProps> = ({ ...rest }) => {
   ) {
     return (
       <Box
-        backgroundColor="danger-500"
+        backgroundColor="danger.500"
         height={50}
         top={Constants.statusBarHeight}
         alignItems="center"

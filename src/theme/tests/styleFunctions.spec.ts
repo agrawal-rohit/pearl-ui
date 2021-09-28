@@ -2,7 +2,7 @@ import {
   borderColorProperties,
   borderProperties,
 } from "../src/styleProperties";
-import { getKeys } from "../utils/typeHelpers";
+import { getKeys, getNestedObject } from "../utils/typeHelpers";
 import { baseTheme } from "../src/basetheme";
 import {
   backgroundColor,
@@ -133,7 +133,11 @@ describe("createStyleFunctions", () => {
     );
 
     expect(shadowColorStyle.shadowColor).toBe(
-      baseTheme[shadow[shadow.length - 1].themeKey][shadowStyle.shadowColor]
+      getNestedObject(baseTheme, [
+        "palette",
+        shadowStyle.shadowColor.split(".")[0],
+        shadowStyle.shadowColor.split(".")[1],
+      ])
     );
   });
 
