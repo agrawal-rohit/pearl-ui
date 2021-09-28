@@ -29,7 +29,7 @@
   --table-header-bgcolor: #f7fafc;
   --table-row-separator-color: #e2e8f0;
 
-  --code-text-bgcolor: rgb(99, 86, 229, 0.05);
+  --code-text-bgcolor: rgb(99, 86, 229, 0.1);
   --code-text-color: var(--ifm-color-primary);
 
   --variable-type-color: #86b805;
@@ -66,6 +66,8 @@ code {
   background-color: var(--code-text-bgcolor);
   padding: 2px 5px;
   color: var(--code-text-color);
+  box-shadow: none;
+  border: none;
 }
 
 highlight {
