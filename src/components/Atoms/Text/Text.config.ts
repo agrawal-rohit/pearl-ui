@@ -1,9 +1,8 @@
-import { backgroundColor } from "./../../../theme/src/styleFunctions";
 export default {
   baseStyle: {
     color: {
-      light: "neutral-900",
-      dark: "neutral-100",
+      light: "neutral.900",
+      dark: "neutral.100",
     },
   },
   sizes: {},
@@ -92,8 +91,8 @@ export default {
       fontSize: 18,
       lineHeight: 26,
       color: {
-        light: "neutral-100",
-        dark: "neutral-900",
+        light: "neutral.100",
+        dark: "neutral.900",
       },
     },
     btn2: {
@@ -102,8 +101,8 @@ export default {
       fontSize: 16,
       lineHeight: 24,
       color: {
-        light: "neutral-100",
-        dark: "neutral-900",
+        light: "neutral.100",
+        dark: "neutral.900",
       },
     },
     btn3: {
@@ -112,8 +111,8 @@ export default {
       fontSize: 14,
       lineHeight: 22,
       color: {
-        light: "neutral-100",
-        dark: "neutral-900",
+        light: "neutral.100",
+        dark: "neutral.900",
       },
     },
     btn4: {
@@ -122,8 +121,8 @@ export default {
       fontSize: 12,
       lineHeight: 20,
       color: {
-        light: "neutral-100",
-        dark: "neutral-900",
+        light: "neutral.100",
+        dark: "neutral.900",
       },
     },
     btn5: {
@@ -132,8 +131,8 @@ export default {
       fontSize: 10,
       lineHeight: 18,
       color: {
-        light: "neutral-100",
-        dark: "neutral-900",
+        light: "neutral.100",
+        dark: "neutral.900",
       },
     },
   },

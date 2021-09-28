@@ -43,8 +43,8 @@ The sections below list the supported style props and their expected values.
 ### Color and Background Color
 
 ```jsx
-// bg="primary-500" refers to the value of `theme.palette["primary-500"]`
-<Box bg="primary-500">Primary Box</Box>
+// bg="primary.500" refers to the value of `theme.palette["primary"]["500"]`
+<Box bg="primary.500">Primary Box</Box>
 
 // You can pass values based on the desired color modes using the following structure
 // type ColorModeColor = {
@@ -52,7 +52,7 @@ The sections below list the supported style props and their expected values.
 //      dark: string
 // }
 // The specified 'light' and 'dark' values get activated based on the current color of the theme
-<Box color={{ light: "neutral-200", dark: "primary-100" }}>Red</Box>
+<Box color={{ light: "neutral.200", dark: "primary.100" }}>Red</Box>
 ```
 
 | Prop                    | Stylesheet property | Type                                           |
@@ -145,7 +145,7 @@ The sections below list the supported style props and their expected values.
 // borderColor="tomato" refers to the value of `theme.palette["tomato"]`
 // borderRadius="l" refers to the value of `theme.borderRadii["l"]`
 <Box
-  backgroundColor="neutral-100"
+  backgroundColor="neutral.100"
   width="40%"
   height={200}
   borderStyle="solid"
@@ -220,10 +220,10 @@ The sections below list the supported style props and their expected values.
 // boxShadow="l" refers to the value of `theme.elevation["l"]`
 <Box boxShadow="l">Theme Shadow box</Box>
 
-// shadowColor="neutral-800" refers to the value of `theme.palette["neutral-800"]`
+// shadowColor="neutral.800" refers to the value of `theme.palette["neutral"]["800"]`
 <Box
   shadowOffset={{width: 20, height: 10}}
-  shadowColor="neutral-800"
+  shadowColor="neutral.800"
   shadowRadius={13}
   shadowOpacity={0.7}
 >

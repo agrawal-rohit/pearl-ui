@@ -1,6 +1,6 @@
 import { useColorModeValue } from "./../../hooks/useColorModeValue";
 import { ColorValue, FlexStyle, TextStyle, ViewStyle } from "react-native";
-import { getKeys, isThemeKey } from "../utils/typeHelpers";
+import { getKeys, getNestedObject, isThemeKey } from "../utils/typeHelpers";
 import {
   borderColorProperties,
   borderProperties,
@@ -35,14 +35,26 @@ export const createStyleFunction = ({
 
     // Check if this value refers to a key in the theme config
     if (isThemeKey(theme, themeKey)) {
-      // Throw error if the target value is undefined
-      if (value && theme[themeKey][value] === undefined)
-        throw new Error(
-          `Value '${value}' does not exist in theme['${String(themeKey)}']`
-        );
+      if (value) {
+        let themeTokenValue = theme[themeKey][value];
 
-      // Finalize the value to be assigned to the component style
-      value = value ? theme[themeKey][value] : value;
+        // For color palettes with multiple shades
+        if (value.includes(".")) {
+          themeTokenValue = getNestedObject(theme, [
+            themeKey,
+            value.split(".")[0],
+            value.split(".")[1],
+          ]);
+        }
+
+        // Throw error if the target value is undefined
+        if (themeTokenValue === undefined)
+          throw new Error(
+            `Value '${value}' does not exist in theme['${String(themeKey)}']`
+          );
+
+        value = themeTokenValue;
+      }
     }
 
     if (value === undefined) return {};

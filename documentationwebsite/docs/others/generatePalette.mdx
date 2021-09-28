@@ -64,15 +64,17 @@ const colorPalette = generatePalette("#00fa9a", "accent");
 ```json
 // colorPalette
 {
-  "accent-100": "#b6fee2",
-  "accent-200": "#89fdd0",
-  "accent-300": "#5bfcbe",
-  "accent-400": "#2efbac",
-  "accent-500": "#00fa9a",
-  "accent-600": "#00cd7f",
-  "accent-700": "#00a163",
-  "accent-800": "#007448",
-  "accent-900": "#00472c"
+  "accent": {
+    "100": "#b6fee2",
+    "200": "#89fdd0",
+    "300": "#5bfcbe",
+    "400": "#2efbac",
+    "500": "#00fa9a",
+    "600": "#00cd7f",
+    "700": "#00a163",
+    "800": "#007448",
+    "900": "#00472c"
+  }
 }
 ```
 
@@ -103,11 +105,13 @@ const colorPalette = generatePalette("#00fa9a", "accent", 5, 4);
 ```json
 // colorPalette
 {
-  "accent-100": "#40fbb3",
-  "accent-200": "#20fba7",
-  "accent-300": "#00fa9a",
-  "accent-400": "#00db87",
-  "accent-500": "#00bc74"
+  "accent": {
+    "100": "#40fbb3",
+    "200": "#20fba7",
+    "300": "#00fa9a",
+    "400": "#00db87",
+    "500": "#00bc74"
+  }
 }
 ```
 
@@ -133,20 +137,22 @@ const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
 ```json
 // colorPalette
 {
-  "accent-100": "#ffffff",
-  "accent-200": "#dbfef1",
-  "accent-300": "#b6fee2",
-  "accent-400": "#92fdd4",
-  "accent-500": "#6dfcc5",
-  "accent-600": "#49fbb7",
-  "accent-700": "#24fba8",
-  "accent-800": "#00d684",
-  "accent-900": "#00b36e",
-  "accent-1000": "#008f58",
-  "accent-1100": "#006b42",
-  "accent-1200": "#00472c",
-  "accent-1300": "#002416",
-  "accent-1400": "#000000"
+  "accent": {
+    "100": "#ffffff",
+    "200": "#dbfef1",
+    "300": "#b6fee2",
+    "400": "#92fdd4",
+    "500": "#6dfcc5",
+    "600": "#49fbb7",
+    "700": "#24fba8",
+    "800": "#00d684",
+    "900": "#00b36e",
+    "1000": "#008f58",
+    "1100": "#006b42",
+    "1200": "#00472c",
+    "1300": "#002416",
+    "1400": "#000000"
+  }
 }
 ```
 
@@ -175,21 +181,23 @@ const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
 
 ### Adding palette to theme
 
-You can insert the generated palette into your theme object as follows. The values `accent-100`, `accent-200`, `accent-300`, etc. would then be available to the props which query the <t>PearlTheme['palette']</t> values.
+You can insert the generated palette into your theme object as follows. The values `accent.100`, `accent.200`, `accent.300`, etc. would then be available to the props which query the <t>PearlTheme['palette']</t> values (ie, `color` and `backgroundColor`).
 
 ```js
 // theme.js
 export default {
   palette: {
-    "primary-100": "#E1E6FF",
-    "primary-200": "#C3CCFF",
-    "primary-300": "#A5B1FF",
-    "primary-400": "#8F9DFF",
-    "primary-500": "#6A7BFF",
-    "primary-600": "#4D5BDB",
-    "primary-700": "#3541B7",
-    "primary-800": "#212A93",
-    "primary-900": "#141B7A",
+    primary: {
+      100: "#E1E6FF",
+      200: "#C3CCFF",
+      300: "#A5B1FF",
+      400: "#8F9DFF",
+      500: "#6A7BFF",
+      600: "#4D5BDB",
+      700: "#3541B7",
+      800: "#212A93",
+      900: "#141B7A",
+    }
 
     ...colorPalette,
 

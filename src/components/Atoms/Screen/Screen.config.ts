@@ -1,8 +1,8 @@
 export default {
   baseStyle: {
     backgroundColor: {
-      light: "neutral-100",
-      dark: "neutral-800",
+      light: "neutral.100",
+      dark: "neutral.800",
     },
     padding: "m",
   },

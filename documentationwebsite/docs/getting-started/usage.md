@@ -13,7 +13,7 @@ Go to the root of your app and do the following:
 import * as React from 'react';
 
 // Import the ThemeProvider component
-import {ThemeProvider} from 'pearl-ui'
+import { ThemeProvider } from 'pearl-ui'
 
 const App = () => {
   return (

@@ -31,7 +31,7 @@ describe("themeFunctions", () => {
 
     expect(typeof combinedTheme).toBe(typeof baseTheme);
     expect(combinedTheme.palette.hasOwnProperty("custom-color")).toBe(true);
-    expect(combinedTheme.palette.hasOwnProperty("primary-100")).toBe(true);
+    expect(combinedTheme.palette.hasOwnProperty("primary")).toBe(true);
     expect(combinedTheme.spacing.hasOwnProperty("custom-xxxl")).toBe(true);
     expect(combinedTheme.spacing.hasOwnProperty("s")).toBe(true);
   });

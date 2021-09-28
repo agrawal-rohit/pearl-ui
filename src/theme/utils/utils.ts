@@ -1,8 +1,5 @@
 import { ColorInput, TinyColor } from "@ctrl/tinycolor";
-
-export interface IColors {
-  [key: string]: string;
-}
+import { ColorPalette } from "../src/types";
 
 /**
  * Generate a number of tints and shades from a single color
@@ -19,7 +16,7 @@ export const generatePalette = (
   similarity: number = 1.4
 ) => {
   const tinyColor = new TinyColor(color);
-  const shades: IColors = {};
+  const shades: ColorPalette = {};
 
   // Even number of colors
   if (count % 2 == 0) {
@@ -28,7 +25,7 @@ export const generatePalette = (
     const tintStep = 100 / (numTints * similarity);
 
     for (var i = 1; i <= numTints; i++) {
-      const shadeLabel = label.concat("-").concat(i.toString().concat("00"));
+      const shadeLabel = parseInt(i.toString().concat("00"));
       shades[shadeLabel] = tinyColor
         .tint(tintStep * (numTints - i + 1))
         .toHexString();
@@ -39,9 +36,7 @@ export const generatePalette = (
     var darkenStep = 100 / (numShades * similarity);
 
     for (var i = 1; i <= numShades; i++) {
-      const shadeLabel = label
-        .concat("-")
-        .concat((numTints + i).toString().concat("00"));
+      const shadeLabel = parseInt((numTints + i).toString().concat("00"));
       shades[shadeLabel] = tinyColor.shade(darkenStep * i).toHexString();
     }
   }
@@ -53,7 +48,7 @@ export const generatePalette = (
     const tintStep = 100 / (numTints * similarity);
 
     for (var i = 1; i <= numTints; i++) {
-      const shadeLabel = label.concat("-").concat(i.toString().concat("00"));
+      const shadeLabel = parseInt(i.toString().concat("00"));
       shades[shadeLabel] = tinyColor
         .tint(tintStep * (numTints - i + 1))
         .toHexString();
@@ -61,9 +56,7 @@ export const generatePalette = (
 
     // Middle shade
     const middleShadeIdx = Math.floor(count / 2) + 1;
-    const middleShadeLabel = label
-      .concat("-")
-      .concat(middleShadeIdx.toString().concat("00"));
+    const middleShadeLabel = parseInt(middleShadeIdx.toString().concat("00"));
     shades[middleShadeLabel] = tinyColor.toHexString();
 
     // Generate dark shades
@@ -71,12 +64,12 @@ export const generatePalette = (
     var darkenStep = 100 / (numShades * similarity);
 
     for (var i = 1; i <= numShades; i++) {
-      const shadeLabel = label
-        .concat("-")
-        .concat((middleShadeIdx + i).toString().concat("00"));
+      const shadeLabel = parseInt((middleShadeIdx + i).toString().concat("00"));
       shades[shadeLabel] = tinyColor.shade(darkenStep * i).toHexString();
     }
   }
 
-  return shades;
+  return {
+    [label]: shades,
+  };
 };
