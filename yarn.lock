@@ -14922,7 +14922,6 @@ pretty-format@^26.0.1, pretty-format@^26.4.0, pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-
 pretty-format@^27.0.0, pretty-format@^27.1.1:
   version "27.1.1"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-27.1.1.tgz#cbaf9ec6cd7cfc3141478b6f6293c0ccdbe968e0"
@@ -15527,10 +15526,10 @@ react-native-aria@^0.2.3:
     "@react-native-aria/toggle" "^0.2.2"
     "@react-native-aria/utils" "^0.2.2"
 
-react-native-builder-bob@^0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/react-native-builder-bob/-/react-native-builder-bob-0.18.1.tgz#43f238e6cb6efffa6e3d23ac449eb7392650c2c3"
-  integrity sha512-cFhgXLE30HaY4APDxaXA/cwuL3xl0Rser75yLrVTfHQquPqCoixNs+cc97Cbk/nInkkDmHzBoJkC3tVItqKRsQ==
+react-native-builder-bob@^0.18.2:
+  version "0.18.2"
+  resolved "https://registry.yarnpkg.com/react-native-builder-bob/-/react-native-builder-bob-0.18.2.tgz#e3a96abe3ead84b167c1c1ea97747ef8ffc2a9f4"
+  integrity sha512-HA7ryoG99tkWh92s7Qb/619qAAfa3TMAKP4Q5l/smqZQwnJ77z5ESiPgRZl8gQMiCnrmmPVb/c5yUscKOL9GdQ==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
