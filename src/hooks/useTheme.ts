@@ -1,4 +1,3 @@
-import { BasePearlTheme } from "./../theme/src/types";
 import { useContext } from "react";
 import { IThemeContext, themeContext } from "../theme/src/themeContext";
 

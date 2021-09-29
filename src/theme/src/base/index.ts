@@ -1,12 +1,16 @@
-import SpinnerConfig from "../../components/Atoms/Spinner/Spinner.config";
-import ScreenConfig from "../../components/Atoms/Screen/Screen.config";
-import TextConfig from "../../components/Atoms/Text/Text.config";
-import { borderRadii } from "./base/borderRadii";
-import { elevation } from "./base/elevation";
-import { palette } from "./base/palette";
-import { spacing } from "./base/spacing";
-import { zIndices } from "./base/zIndices";
-import { BasePearlTheme } from "./types";
+import { borderRadii } from "./borderRadii";
+import { elevation } from "./elevation";
+import { palette } from "./palette";
+import { spacing } from "./spacing";
+import { zIndices } from "./zIndices";
+
+// Component configs
+import SpinnerConfig from "../../../components/Atoms/Spinner/Spinner.config";
+import ScreenConfig from "../../../components/Atoms/Screen/Screen.config";
+import TextConfig from "../../../components/Atoms/Text/Text.config";
+import ButtonConfig from "../../../components/Molecules/Button/Button.config";
+
+import { BasePearlTheme } from "../types";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -36,5 +40,6 @@ export const baseTheme: BasePearlTheme = {
     Text: TextConfig,
     Screen: ScreenConfig,
     Spinner: SpinnerConfig,
+    Button: ButtonConfig,
   },
 };

@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { ThemeProvider } from "../src/themeContext";
 import Box from "../../components/Atoms/Box/Box";
-import { baseTheme } from "../src/basetheme";
+import { baseTheme } from "../src/base/index";
 
 jest.useFakeTimers();
 

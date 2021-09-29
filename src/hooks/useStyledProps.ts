@@ -18,7 +18,7 @@ const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
-export const useStyledProps = (styleFunctions: any, props: any) => {
+export const useStyledProps = (props: any, styleFunctions: any) => {
   const { theme } = useTheme();
 
   const buildStyleProperties = useMemo(

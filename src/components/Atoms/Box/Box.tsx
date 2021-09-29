@@ -49,9 +49,13 @@ type ViewProps = React.ComponentProps<typeof View> & {
 type ComponentProps = BoxProps & Omit<ViewProps, keyof BoxProps>;
 
 const Box = React.forwardRef((props: ComponentProps, ref: any) => {
-  const passedProps = useStyledProps(boxStyleFunctions, props);
+  const passedProps = useStyledProps(props, boxStyleFunctions);
 
-  return <View ref={ref} {...passedProps} />;
+  return (
+    <View ref={ref} {...passedProps}>
+      {props.children}
+    </View>
+  );
 });
 
 export default Box;

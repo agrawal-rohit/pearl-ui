@@ -3,7 +3,7 @@ import {
   borderProperties,
 } from "../src/styleProperties";
 import { getKeys, getNestedObject } from "../utils/typeHelpers";
-import { baseTheme } from "../src/basetheme";
+import { baseTheme } from "../src/base/index";
 import {
   backgroundColor,
   border,

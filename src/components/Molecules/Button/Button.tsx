@@ -1,12 +1,17 @@
 import React from "react";
 import { Pressable } from "react-native";
 import Spinner from "../../Atoms/Spinner/Spinner";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
+import { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
+import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import ButtonConfig from "./Button.config";
+import Center from "../../Atoms/Center/Center";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;
   loading?: boolean;
+  size?: keyof typeof ButtonConfig["sizes"];
+  variant?: keyof typeof ButtonConfig["variants"];
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,27 +19,30 @@ const Button: React.FC<ButtonProps> = ({
   onPress,
   loading,
   ...props
-}) => (
-  <Pressable
-    style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1.0 }]}
-    onPress={onPress}
-  >
-    <Box
-      py="m"
-      px="m"
-      backgroundColor="primary.500"
-      borderRadius="m"
-      alignItems="center"
-      justifyContent="center"
-      {...props}
+}) => {
+  const componentStyles = useComponentConfig(
+    "Button",
+    {
+      size: props["size"],
+      variant: props["variant"],
+    },
+    props
+  );
+
+  return (
+    <Pressable
+      style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1.0 }]}
+      onPress={onPress}
     >
-      {loading ? (
-        <Spinner color="neutral.100" />
-      ) : (
-        <Text variant="btn3">{children}</Text>
-      )}
-    </Box>
-  </Pressable>
-);
+      <Center width="auto" {...componentStyles}>
+        {loading ? (
+          <Spinner color="neutral.100" />
+        ) : (
+          <Text variant="btn3">{children}</Text>
+        )}
+      </Center>
+    </Pressable>
+  );
+};
 
 export default Button;

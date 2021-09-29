@@ -1,6 +1,5 @@
 import React from "react";
 import { Text as RNText } from "react-native";
-import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import {
   backgroundColor,
@@ -50,33 +49,33 @@ type ComponentProps = TextProps & Omit<RNTextProps, keyof TextProps>;
  * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
  */
 const Text = React.forwardRef((props: ComponentProps, ref: any) => {
-  const passedProps = useStyledProps(textStyleFunctions, props);
   const componentSpecificProps = useComponentConfig(
     "Text",
     {
       variant: props.variant,
     },
+    props,
     textStyleFunctions
   );
 
   const finalStyle = {
     ...componentSpecificProps.style,
-    ...passedProps.style,
     fontSize: responsiveSize(
-      passedProps.style.fontSize || componentSpecificProps.style.fontSize
+      componentSpecificProps.style.fontSize ||
+        componentSpecificProps.style.fontSize
     ),
     lineHeight: responsiveSize(
-      passedProps.style.lineHeight || componentSpecificProps.style.lineHeight
+      componentSpecificProps.style.lineHeight ||
+        componentSpecificProps.style.lineHeight
     ),
   };
 
+  // console.log(finalStyle);
+
   return (
-    <RNText
-      ref={ref}
-      {...componentSpecificProps}
-      {...passedProps}
-      style={finalStyle}
-    />
+    <RNText ref={ref} style={finalStyle}>
+      {props.children}
+    </RNText>
   );
 });
 
