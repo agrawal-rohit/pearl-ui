@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.1...v1.1.2) (2021-09-28)
+
+
+### Bug Fixes
+
+* **palette:** refactored base theme, updated theme palette format, added theme docs ([f121edd](https://github.com/agrawal-rohit/pearl-ui/commit/f121edd23b27cfe5787429d6fdc7baa9e0ad0153))
+
 ## [1.1.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.0...v1.1.1) (2021-09-27)
 
 
