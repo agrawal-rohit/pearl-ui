@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Box
 
-Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a `View` element.
+`Box` is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a [React Native View](https://reactnative.dev/docs/view) element.
 
 **The Box component improves the development experience in the following ways:**
 
@@ -31,3 +31,17 @@ import { Box } from "pearl-ui";
 import Snack from "../../../src/components/ExpoSnack";
 
 <Snack snackId="@agrawal-rohit/box" />
+
+## Props
+
+### Supported style props
+
+The `Box` component supports the following style props:
+
+- [backgroundColor](../../getting-started/style-props#color-and-background-color) (Only `backgroundColor` props are supported, not the `color` prop)
+- [layout](../../getting-started/style-props#layout)
+- [position](../../getting-started/style-props#position)
+- [opacity and visiblity](../../getting-started/style-props#opacity-and-visibility)
+- [margin and padding](../../getting-started/style-props#margin-and-padding)
+- [border](../../getting-started/style-props#border)
+- [shadow](../../getting-started/style-props#shadow)

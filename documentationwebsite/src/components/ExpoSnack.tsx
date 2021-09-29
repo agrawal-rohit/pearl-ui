@@ -4,9 +4,10 @@ import React from "react";
 
 interface ExpoSnackProps {
   snackId: string;
+  platform?: string;
 }
 
-const Snack: React.FC<ExpoSnackProps> = ({ snackId }) => {
+const Snack: React.FC<ExpoSnackProps> = ({ snackId, platform = "web" }) => {
   const { isDarkTheme } = useThemeContext();
 
   return (
@@ -14,7 +15,7 @@ const Snack: React.FC<ExpoSnackProps> = ({ snackId }) => {
       <ExpoSnack
         id={snackId}
         preview={true}
-        platform="web"
+        platform={platform}
         theme={isDarkTheme ? "dark" : "light"}
       />
       <a

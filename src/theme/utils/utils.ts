@@ -4,7 +4,7 @@ import { ColorPalette } from "../src/types";
 /**
  * Generate a number of tints and shades from a single color
  * @param color Color to generate tints and shades for
- * @param label Identifier for the generated colors ('primary', 'secondary', etc). Eg, for a label of 'primary', the generated tints and shades be referred as 'primary-100', 'primary-200', etc.
+ * @param label Identifier for the generated colors ('primary', 'secondary', etc). Eg, for a label of 'primary', the generated tints and shades be referred as 'primary.100', 'primary.200', etc.
  * @param count The number of color values to be generated
  * @param similarity The similarity between the generated colors
  * @returns

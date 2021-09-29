@@ -2,8 +2,9 @@ import React from "react";
 import { Text as RNText } from "react-native";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
-import { baseTheme } from "../../../theme/src/basetheme";
 import {
+  backgroundColor,
+  BackgroundColorProps,
   color,
   ColorProps,
   opacity,
@@ -20,6 +21,7 @@ import {
 import responsiveSize from "./responsiveSize";
 
 export type TextProps = ColorProps &
+  BackgroundColorProps &
   OpacityProps &
   VisibleProps &
   TypographyProps &
@@ -30,6 +32,7 @@ export type TextProps = ColorProps &
 
 export const textStyleFunctions = [
   color,
+  backgroundColor,
   opacity,
   visible,
   typography,

@@ -39,7 +39,7 @@ export const createStyleFunction = ({
         let themeTokenValue = theme[themeKey][value];
 
         // For color palettes with multiple shades
-        if (value.includes(".")) {
+        if (typeof value === "string" && value.includes(".")) {
           themeTokenValue = getNestedObject(theme, [
             themeKey,
             value.split(".")[0],

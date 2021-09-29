@@ -238,3 +238,22 @@ The sections below list the supported style props and their expected values.
 | `shadowOffset`  | `shadowOffset`                                                                  | <t>{ width: number; height: number }</t>       |
 | `shadowOpacity` | `shadowOpacity`                                                                 | <t>number</t>                                  |
 | `shadowRadius`  | `shadowRadius`                                                                  | <t>number</t>                                  |
+
+### Text Shadow
+
+```jsx
+// textShadowColor="primary.300" refers to the value of `theme.palette["primary"]["300"]`
+<Text
+  textShadowColor="primary.300"
+  textShadowOffset={{ width: 2, height: 5 }}
+  textShadowRadius={2}
+>
+  Text with some sweet shadow
+</Text>
+```
+
+| Prop               | Stylesheet property | Type                                           |
+| ------------------ | ------------------- | ---------------------------------------------- |
+| `shadowColor`      | `shadowColor`       | <t>PearlTheme['palette'] \| ColorModeColor</t> |
+| `textShadowOffset` | `textShadowOffset`  | <t>{ width: number; height: number }</t>       |
+| `textShadowRadius` | `textShadowRadius`  | <t>number</t>                                  |

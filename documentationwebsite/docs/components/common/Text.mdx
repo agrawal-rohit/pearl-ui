@@ -1,3 +1,77 @@
+---
+sidebar_position: 4
+title: Text
+---
+
+The `Text` component is the used to render text, such as headings and paragraphs, within an interface. By default, it renders a [React Native Text](https://reactnative.dev/docs/text) element.
+
+## Import
+
+```jsx
+import { Text } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+// default variant is set as "p3" in the default Pearl theme
+<Text>This is the default text variant</Text>
+
+// variant="h1" refers to the value of `theme.components["Text"]["h1"]`
+<Text variant="h1">This is a heading</Text>
+
+// variant="p1" refers to the value of `theme.components["Text"]["p1"]`
+// passing style prop color="primary.300" overrides the default component style value of color="neutral.100"
+<Text variant="btn1" color="primary.300">This is a large button text</Text>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/text-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/text-dark" />
+
+</TabItem>
+</Tabs>
+
+## Props
+
+### Supported style props
+
+The `Text` component supports the following style props:
+
+- [color and backgroundColor](../../getting-started/style-props#color-and-background-color)
+- [typography](../../getting-started/style-props#typography)
+- [opacity and visiblity](../../getting-started/style-props#opacity-and-visibility)
+- [margin and padding](../../getting-started/style-props#margin-and-padding)
+- [textShadow](../../getting-started/style-props#text-shadow)
+
+### Other props
+
+| Name    | Required | Type                                          | Default | Description                                              |
+| ------- | -------- | --------------------------------------------- | ------- | -------------------------------------------------------- |
+| variant | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p3"`  | Typography variant to use as defined in the active theme |
+
+## Default Component Style
+
+```js
 export default {
   baseStyle: {
     color: {
@@ -125,3 +199,4 @@ export default {
     variant: "p3",
   },
 };
+```
