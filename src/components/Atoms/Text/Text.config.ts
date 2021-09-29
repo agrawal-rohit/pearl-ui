@@ -5,7 +5,6 @@ export default {
       dark: "neutral.100",
     },
   },
-  sizes: {},
   variants: {
     h1: {
       fontFamily: "Poppins-SemiBold",

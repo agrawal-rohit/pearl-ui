@@ -20,8 +20,14 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import SpinnerConfig from "./Spinner.config";
+import { StyleFunctionContainer } from "../../../theme/src/types";
 
-const indicatorStyleFunctions = [color, spacing, layout];
+const indicatorStyleFunctions = [
+  color,
+  spacing,
+  layout,
+] as StyleFunctionContainer[];
+
 type SpinnerProps = ColorProps &
   SpacingProps &
   LayoutProps & {
@@ -52,15 +58,13 @@ const Spinner: React.FC<SpinnerProps> = ({
 
   const componentSpecificProps = useComponentConfig(
     "Spinner",
+    props,
     {
       size: props["size"],
       variant: variant,
     },
-    props,
     indicatorStyleFunctions
   );
-
-  // console.log(componentSpecificProps);
 
   return React.createElement(
     IndicatorTypeToComponentMap[

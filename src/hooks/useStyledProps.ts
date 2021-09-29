@@ -3,6 +3,8 @@ import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
 import composeStyleProps from "../theme/src/composeStyleProps";
+import { RNStyle, StyleFunctionContainer } from "../theme/src/types";
+import { StyleProp } from "react-native";
 
 const filterStyledProps = (props: any, omitList: any) => {
   const omittedProp = omitList.reduce((acc: any, prop: any) => {
@@ -18,7 +20,10 @@ const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
-export const useStyledProps = (props: any, styleFunctions: any) => {
+export const useStyledProps = (
+  props: { [key: string]: any },
+  styleFunctions: StyleFunctionContainer[]
+) => {
   const { theme } = useTheme();
 
   const buildStyleProperties = useMemo(

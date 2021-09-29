@@ -17,6 +17,7 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
+import { StyleFunctionContainer } from "../../../theme/src/types";
 import responsiveSize from "./responsiveSize";
 
 export type TextProps = ColorProps &
@@ -37,7 +38,7 @@ export const textStyleFunctions = [
   typography,
   spacing,
   textShadow,
-];
+] as StyleFunctionContainer[];
 
 type RNTextProps = React.ComponentProps<typeof RNText> & {
   children?: React.ReactNode;
@@ -51,10 +52,10 @@ type ComponentProps = TextProps & Omit<RNTextProps, keyof TextProps>;
 const Text = React.forwardRef((props: ComponentProps, ref: any) => {
   const componentSpecificProps = useComponentConfig(
     "Text",
+    props,
     {
       variant: props.variant,
     },
-    props,
     textStyleFunctions
   );
 
@@ -69,8 +70,6 @@ const Text = React.forwardRef((props: ComponentProps, ref: any) => {
         componentSpecificProps.style.lineHeight
     ),
   };
-
-  // console.log(finalStyle);
 
   return (
     <RNText ref={ref} style={finalStyle}>

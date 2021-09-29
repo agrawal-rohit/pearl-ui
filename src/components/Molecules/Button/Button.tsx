@@ -20,14 +20,10 @@ const Button: React.FC<ButtonProps> = ({
   loading,
   ...props
 }) => {
-  const componentStyles = useComponentConfig(
-    "Button",
-    {
-      size: props["size"],
-      variant: props["variant"],
-    },
-    props
-  );
+  const componentStyles = useComponentConfig("Button", props, {
+    size: props["size"],
+    variant: props["variant"],
+  });
 
   return (
     <Pressable

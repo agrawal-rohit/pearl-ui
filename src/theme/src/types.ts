@@ -41,13 +41,13 @@ export interface ComponentConfig {
   baseStyle: {
     [key: string]: any;
   };
-  sizes: {
+  sizes?: {
     [key: string]: any;
   };
-  variants: {
+  variants?: {
     [key: string]: any;
   };
-  defaults: {
+  defaults?: {
     size?: string;
     variant?: string;
   };
@@ -80,24 +80,17 @@ export interface BasePearlTheme {
 }
 
 // Style Functions
-export interface StyleFunctionContainer<
-  TProps extends Record<string, any>,
-  P extends keyof TProps = keyof TProps,
-  K extends keyof BasePearlTheme | undefined = keyof BasePearlTheme | undefined
-> {
-  property: P;
-  themeKey: K | undefined;
-  func: StyleFunction<TProps>;
+export interface StyleFunctionContainer {
+  property: string;
+  themeKey?: keyof BasePearlTheme | undefined | undefined;
+  func: StyleFunction;
 }
 
-export type StyleFunction<
-  TProps extends Record<string, any> = Record<string, any>,
-  S extends keyof any = string
-> = (
-  props: TProps,
+export type StyleFunction = (
+  props: Record<string, any>,
   theme: BasePearlTheme
 ) => {
-  [key in S]?: any;
+  [key: string]: any;
 };
 
 // Styles

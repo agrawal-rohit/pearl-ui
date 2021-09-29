@@ -1,7 +1,10 @@
-const composeStyleProps = (styleFunctions: any) => {
+import { AllProps } from "./styleFunctions";
+import { BasePearlTheme, StyleFunctionContainer } from "./types";
+
+const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
   // Create a single array of all property objects
   const flattenedStyleFunctions = styleFunctions.reduce(
-    (acc: any, item: any) => {
+    (acc: StyleFunctionContainer[], item: any) => {
       return acc.concat(item);
     },
     []
@@ -17,7 +20,7 @@ const composeStyleProps = (styleFunctions: any) => {
   });
 
   // Convert the component props to the equivalent style properties
-  const buildStyle = (props: any, theme: any) => {
+  const buildStyle = (props: AllProps, theme: BasePearlTheme) => {
     return funcs.reduce((acc: any, func: any) => {
       return Object.assign(acc, func(props, theme));
     }, {});
