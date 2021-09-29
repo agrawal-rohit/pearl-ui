@@ -13,7 +13,7 @@ const ElevationBox: React.FC<BorderRadiiBoxProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.swatch} style={{ boxShadow: shadowValue }}>
-        "{keyName}"
+        &ldquo;{keyName}&rdquo;
       </div>
     </div>
   );
