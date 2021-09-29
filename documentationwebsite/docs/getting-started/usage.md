@@ -27,11 +27,11 @@ const App = () => {
 
 ### ThemeProvider Props
 
-| Name             | Type              | Default     | Description                                                  |
-| ---------------- | ----------------- | ----------- | ------------------------------------------------------------ |
-| defaultColorMode | <t>string</t>     | `"light"`   | Default color mode for the app (light, dark, system)         |
-| theme            | <t>PearlTheme</t> | `baseTheme` | The theme configuration object                               |
-| haveFontsLoaded  | <t>boolean</t>    | `true`      | A flag that describes the loading status of the custom fonts |
+| Name             | Required | Type              | Default     | Description                                                  |
+| ---------------- | -------- | ----------------- | ----------- | ------------------------------------------------------------ |
+| defaultColorMode | false    | <t>string</t>     | `"light"`   | Default color mode for the app (light, dark, system)         |
+| theme            | false    | <t>PearlTheme</t> | `baseTheme` | The theme configuration object                               |
+| haveFontsLoaded  | false    | <t>boolean</t>    | `true`      | A flag that describes the loading status of the custom fonts |
 
 ## Loading default fonts
 
