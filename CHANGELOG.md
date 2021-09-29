@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.3...v1.1.4) (2021-09-29)
+
+
+### Bug Fixes
+
+* renamed ActivityIndicator component to Spinner ([b1f39ff](https://github.com/agrawal-rohit/pearl-ui/commit/b1f39ff4dac647bdda27aef04c530cfd8ac25e2e))
+
 ## [1.1.3](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.2...v1.1.3) (2021-09-29)
 
 
