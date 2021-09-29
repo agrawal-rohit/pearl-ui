@@ -82,8 +82,8 @@ function FeaturesSection() {
   ];
 
   const renderFeatureCards = (features) => {
-    return features.map((feature) => (
-      <div className="col col--4">
+    return features.map((feature, key) => (
+      <div key={key} className="col col--4">
         <div className={clsx("card", styles.featureCard)}>
           <div className={clsx("card__header", styles.featureCardTitle)}>
             <div className={styles.featureCardIcon}>{feature.icon}</div>
