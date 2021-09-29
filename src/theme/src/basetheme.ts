@@ -1,4 +1,4 @@
-import ActivityIndicatorConfig from "../../components/Atoms/ActivityIndicator/ActivityIndicator.config";
+import SpinnerConfig from "../../components/Atoms/Spinner/Spinner.config";
 import ScreenConfig from "../../components/Atoms/Screen/Screen.config";
 import TextConfig from "../../components/Atoms/Text/Text.config";
 import { borderRadii } from "./base/borderRadii";
@@ -35,6 +35,6 @@ export const baseTheme: BasePearlTheme = {
   components: {
     Text: TextConfig,
     Screen: ScreenConfig,
-    ActivityIndicator: ActivityIndicatorConfig,
+    Spinner: SpinnerConfig,
   },
 };
