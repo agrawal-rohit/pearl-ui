@@ -113,7 +113,8 @@
       "!**/babel.config.js",
       "!**/storybook/**",
       "!**/assets/**",
-      "!**/jest.setup.js"
+      "!**/jest.setup.js",
+      "!**/*.css"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/",
