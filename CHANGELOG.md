@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.2...v1.1.3) (2021-09-29)
+
+
+### Bug Fixes
+
+* added backgroundColor style props to Text, added Text and ActivityIndicator docs ([fd94f92](https://github.com/agrawal-rohit/pearl-ui/commit/fd94f92773dca37d0af2f6df1633a834df75e0bc))
+
 ## [1.1.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.1...v1.1.2) (2021-09-28)
 
 
