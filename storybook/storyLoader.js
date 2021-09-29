@@ -4,7 +4,7 @@
 // https://github.com/elderfo/react-native-storybook-loader.git
 
 function loadStories() {
-  require("../src/components/Atoms/ActivityIndicator/ActivityIndicator.story");
+  require("../src/components/Atoms/Spinner/Spinner.story");
   require("../src/components/Atoms/Box/Box.story");
   require("../src/components/Atoms/Center/Center.story");
   require("../src/components/Atoms/Screen/Screen.story");
@@ -14,7 +14,7 @@ function loadStories() {
 }
 
 const stories = [
-  "../src/components/Atoms/ActivityIndicator/ActivityIndicator.story",
+  "../src/components/Atoms/Spinner/Spinner.story",
   "../src/components/Atoms/Box/Box.story",
   "../src/components/Atoms/Center/Center.story",
   "../src/components/Atoms/Screen/Screen.story",

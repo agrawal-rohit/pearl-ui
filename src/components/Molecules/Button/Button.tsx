@@ -1,6 +1,6 @@
 import React from "react";
 import { Pressable } from "react-native";
-import ActivityIndicator from "../../Atoms/ActivityIndicator/ActivityIndicator";
+import Spinner from "../../Atoms/Spinner/Spinner";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 
@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {loading ? (
-        <ActivityIndicator color="neutral.100" />
+        <Spinner color="neutral.100" />
       ) : (
         <Text variant="btn3">{children}</Text>
       )}

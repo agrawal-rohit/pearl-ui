@@ -1,16 +1,16 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { ThemeProvider } from "../../../theme/src/themeContext";
-import ActivityIndicator from "./ActivityIndicator";
+import Spinner from "./Spinner";
 
 jest.useFakeTimers();
 
-describe("Atoms/ActivityIndicator", () => {
+describe("Atoms/Spinner", () => {
   it("doesn't render when not loading", () => {
     const tree = renderer
       .create(
         <ThemeProvider>
-          <ActivityIndicator loading={false} />
+          <Spinner loading={false} />
         </ThemeProvider>
       )
       .toJSON();
@@ -22,7 +22,7 @@ describe("Atoms/ActivityIndicator", () => {
     renderer.act(() => {
       comp = renderer.create(
         <ThemeProvider>
-          <ActivityIndicator />
+          <Spinner />
         </ThemeProvider>
       );
     });

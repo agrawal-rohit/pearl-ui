@@ -20,14 +20,14 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
-import ActivityIndicatorConfig from "./ActivityIndicator.config";
+import SpinnerConfig from "./Spinner.config";
 
 const indicatorStyleFunctions = [color, spacing, layout];
-type IActivityIndicatorProps = ColorProps &
+type SpinnerProps = ColorProps &
   SpacingProps &
   LayoutProps & {
-    size?: keyof typeof ActivityIndicatorConfig["sizes"];
-    variant?: keyof typeof ActivityIndicatorConfig["variants"];
+    size?: keyof typeof SpinnerConfig["sizes"];
+    variant?: keyof typeof SpinnerConfig["variants"];
     loading?: boolean;
   };
 
@@ -44,7 +44,7 @@ const IndicatorTypeToComponentMap = {
 };
 
 /** A spinner component which can be used to display a loading status to the user */
-const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
+const Spinner: React.FC<SpinnerProps> = ({
   loading = true,
   variant = "spinner",
   ...rest
@@ -53,7 +53,7 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 
   const receivedStyledProps = useStyledProps(indicatorStyleFunctions, rest);
   const componentSpecificProps = useComponentConfig(
-    "ActivityIndicator",
+    "Spinner",
     {
       size: rest["size"],
       variant: variant,
@@ -68,7 +68,7 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
 
   return React.createElement(
     IndicatorTypeToComponentMap[
-      variant as keyof typeof ActivityIndicatorConfig["variants"]
+      variant as keyof typeof SpinnerConfig["variants"]
     ],
     {
       color: receivedStyledProps.style.color
@@ -82,4 +82,4 @@ const ActivityIndicator: React.FC<IActivityIndicatorProps> = ({
   );
 };
 
-export default ActivityIndicator;
+export default Spinner;
