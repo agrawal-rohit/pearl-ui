@@ -79,7 +79,7 @@ const ComponentStyle = {
 };
 ```
 
-For example, let's override the component styles for Pearl UI's [Screen](../components/atoms/Screen) component.
+For example, let's override the component styles for Pearl UI's [Screen](../components/common/Screen) component.
 
 ```js
 // theme.js
