@@ -14,17 +14,30 @@ import {
   textShadowProperties,
   typographyProperties,
 } from "./styleProperties";
-import { BasePearlTheme, ColorModeColor } from "./types";
+import {
+  BasePearlTheme,
+  ColorModeColor,
+  RNStyleProperty,
+  StyleFunction,
+  StyleFunctionContainer,
+} from "./types";
+
+interface CreateStyleFunctionProps {
+  property: string;
+  transform?: any;
+  styleProperty?: RNStyleProperty | "skip";
+  themeKey?: keyof BasePearlTheme | undefined;
+}
 
 export const createStyleFunction = ({
   property,
   transform,
   styleProperty,
   themeKey,
-}: any) => {
+}: CreateStyleFunctionProps): StyleFunctionContainer => {
   const styleProp = styleProperty || property.toString();
 
-  const func = (props: any, theme: any): any => {
+  const func: StyleFunction = (props: any, theme: any): any => {
     // Initial value is the raw prop value
     let value = props[property];
 
@@ -59,7 +72,7 @@ export const createStyleFunction = ({
 
     if (value === undefined) return {};
 
-    if (typeof styleProperty !== "object") {
+    if (styleProperty !== "skip") {
       return {
         [styleProp]: value,
       };
@@ -197,7 +210,7 @@ export const shadow = [
   createStyleFunction({
     property: "boxShadow",
     themeKey: "elevation",
-    styleProperty: {},
+    styleProperty: "skip",
   }),
   createStyleFunction({
     property: "shadowColor",

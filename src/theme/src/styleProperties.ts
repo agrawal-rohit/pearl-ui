@@ -38,7 +38,7 @@ export const spacingPropertiesShorthand = {
   py: "paddingVertical",
   ps: "paddingStart",
   pe: "paddingEnd",
-};
+} as const;
 
 export const typographyProperties = {
   fontFamily: true,

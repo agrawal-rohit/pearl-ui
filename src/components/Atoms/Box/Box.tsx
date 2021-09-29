@@ -19,6 +19,7 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
+import { StyleFunctionContainer } from "../../../theme/src/types";
 
 export type BoxProps = BackgroundColorProps &
   OpacityProps &
@@ -38,7 +39,7 @@ export const boxStyleFunctions = [
   border,
   shadow,
   position,
-];
+] as StyleFunctionContainer[];
 
 /**
  * Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a <View> element.

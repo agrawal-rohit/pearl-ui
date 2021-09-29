@@ -6,7 +6,4 @@ export default {
     },
     padding: "m",
   },
-  sizes: {},
-  variants: {},
-  defaults: {},
 };
