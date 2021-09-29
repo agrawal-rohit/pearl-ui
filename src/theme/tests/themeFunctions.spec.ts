@@ -1,5 +1,4 @@
-import { baseTheme } from "../src/basetheme";
-import { extendTheme } from "../src/basetheme";
+import { baseTheme, extendTheme } from "../src/base/index";
 
 jest.useFakeTimers();
 

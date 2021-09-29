@@ -1,7 +1,7 @@
 import AppLoading from "expo-app-loading";
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
-import { baseTheme } from "./basetheme";
+import { baseTheme } from "./base/index";
 import { BasePearlTheme } from "./types";
 
 type ThemeType = "light" | "dark" | "system";

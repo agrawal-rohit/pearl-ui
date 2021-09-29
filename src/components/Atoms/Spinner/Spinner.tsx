@@ -18,7 +18,6 @@ import {
   spacing,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
-import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import SpinnerConfig from "./Spinner.config";
 
@@ -47,37 +46,34 @@ const IndicatorTypeToComponentMap = {
 const Spinner: React.FC<SpinnerProps> = ({
   loading = true,
   variant = "spinner",
-  ...rest
+  ...props
 }) => {
   if (!loading) return null;
 
-  const receivedStyledProps = useStyledProps(indicatorStyleFunctions, rest);
   const componentSpecificProps = useComponentConfig(
     "Spinner",
     {
-      size: rest["size"],
+      size: props["size"],
       variant: variant,
     },
+    props,
     indicatorStyleFunctions
   );
 
-  const finalStyle = {
-    ...componentSpecificProps.style,
-    ...receivedStyledProps.style,
-  };
+  // console.log(componentSpecificProps);
 
   return React.createElement(
     IndicatorTypeToComponentMap[
       variant as keyof typeof SpinnerConfig["variants"]
     ],
     {
-      color: receivedStyledProps.style.color
-        ? receivedStyledProps.style.color
+      color: componentSpecificProps.style.color
+        ? componentSpecificProps.style.color
         : componentSpecificProps.style.color,
       size: componentSpecificProps.sizeMultiplier
         ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
         : componentSpecificProps.size,
-      style: finalStyle,
+      style: componentSpecificProps,
     }
   );
 };

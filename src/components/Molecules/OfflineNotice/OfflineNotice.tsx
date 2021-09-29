@@ -3,7 +3,6 @@ import Constants from "expo-constants";
 import { useNetInfo } from "@react-native-community/netinfo";
 import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import { useStyledProps } from "../../../hooks/useStyledProps";
 
 type OfflineNoticeProps = BoxProps;
 

@@ -17,7 +17,7 @@ export {
 
 // Theme Context
 export { ThemeProvider } from "./src/themeContext";
-export { baseTheme } from "./src/basetheme";
+export { baseTheme } from "./src/basetheme/index";
 
 // Utils
 export { generatePalette } from "./utils/utils";
