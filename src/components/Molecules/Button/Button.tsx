@@ -3,38 +3,52 @@ import { Pressable } from "react-native";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import { useComponentConfig } from "../../../hooks/useComponentConfig";
-import ButtonConfig from "./Button.config";
 import Center from "../../Atoms/Center/Center";
+import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;
-  loading?: boolean;
-  size?: keyof typeof ButtonConfig["sizes"];
-  variant?: keyof typeof ButtonConfig["variants"];
+  size?: string;
+  variant?: string;
+  isLoading?: boolean;
+  isFullWidth?: boolean;
+  isDisabled?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
-  loading,
+  isLoading = false,
+  isFullWidth = false,
+  isDisabled = false,
   ...props
 }) => {
-  const componentStyles = useComponentConfig("Button", props, {
+  const multiComponentStyles = useMultiComponentConfig("Button", props, {
     size: props["size"],
     variant: props["variant"],
   });
 
+  const disabled = isDisabled ? true : isLoading;
+
   return (
     <Pressable
-      style={({ pressed }) => [{ opacity: pressed ? 0.7 : 1.0 }]}
-      onPress={onPress}
+      style={({ pressed }) => [
+        {
+          opacity: disabled ? 0.5 : pressed ? 0.7 : 1.0,
+          alignSelf: isFullWidth ? "stretch" : "flex-start",
+        },
+      ]}
+      disabled={disabled}
+      onPress={disabled ? onPress : null}
     >
-      <Center width="auto" {...componentStyles}>
-        {loading ? (
-          <Spinner color="neutral.100" />
+      <Center
+        alignSelf={isFullWidth ? "stretch" : "flex-start"}
+        {...multiComponentStyles.root}
+      >
+        {isLoading ? (
+          <Spinner {...multiComponentStyles.spinner} />
         ) : (
-          <Text variant="btn3">{children}</Text>
+          <Text {...multiComponentStyles.text}>{children}</Text>
         )}
       </Center>
     </Pressable>

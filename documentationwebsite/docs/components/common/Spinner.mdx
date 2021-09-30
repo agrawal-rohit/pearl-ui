@@ -69,11 +69,14 @@ The `Spinner` component supports the following style props:
 
 ### Other props
 
-| Name    | Required | Type                                             | Default | Description                                                                                      |
-| ------- | -------- | ------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------ |
-| size    | false    | <t>PearlTheme.components.Spinner["sizes"]</t>    | `"m"`   | size to use as defined in the active theme                                                       |
-| variant | false    | <t>PearlTheme.components.Spinner["variants"]</t> | `"p3"`  | variant to use as defined in the active theme                                                    |
-| loading | false    | <t>boolean</t>                                   | `true`  | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM |
+| Name              | Required | Type                                             | Default | Description                                                                                      |
+| ----------------- | -------- | ------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------ |
+| size              | false    | <t>PearlTheme.components.Spinner["sizes"]</t>    | `"m"`   | size to use as defined in the active theme                                                       |
+| variant           | false    | <t>PearlTheme.components.Spinner["variants"]</t> | `"p3"`  | variant to use as defined in the active theme                                                    |
+| isLoading         | false    | <t>boolean</t>                                   | `true`  | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM |
+| isFullScreen      | false    | <t>boolean</t>                                   | `false` | Spinner container takes the entire screen size and centers the spinner within                    |
+| animationDuration | false    | <t>number</t>                                    | `3600`  | Animation duration in ms                                                                         |
+| animating         | false    | <t>boolean</t>                                   | `true`  | Animation toggle                                                                                 |
 
 ## Default Component Style
 
@@ -81,6 +84,8 @@ The `Spinner` component supports the following style props:
 export default {
   baseStyle: {
     color: "primary.500",
+    animationDuration: 1200,
+    animating: true,
   },
   sizes: {
     s: {
@@ -90,24 +95,25 @@ export default {
       size: 20,
     },
     l: {
-      size: 40,
+      size: 30,
     },
     xl: {
-      size: 60,
+      size: 40,
     },
   },
   variants: {
-    ball: {},
-    bar: {},
+    ball: { count: 8 },
+    bar: { count: 3 },
     dot: {
       sizeMultiplier: 0.2,
+      count: 4,
     },
     spinner: {},
     pacman: {},
     pulse: {},
-    skype: {},
-    activity: {},
-    wave: {},
+    skype: { count: 5, minScale: 0.2, maxScale: 1.0 },
+    activity: { count: 12 },
+    wave: { count: 4, waveFactor: 0.54, waveMode: "fill" },
   },
   defaults: {
     size: "m",

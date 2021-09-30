@@ -20,7 +20,7 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import SpinnerConfig from "./Spinner.config";
-import { StyleFunctionContainer } from "../../../theme/src/types";
+import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
 
 const indicatorStyleFunctions = [
   color,
@@ -33,7 +33,11 @@ type SpinnerProps = ColorProps &
   LayoutProps & {
     size?: keyof typeof SpinnerConfig["sizes"];
     variant?: keyof typeof SpinnerConfig["variants"];
-    loading?: boolean;
+    isLoading?: boolean;
+    isFullScreen?: boolean;
+    animationDuration?: number;
+    animating?: boolean;
+    style?: RNStyle;
   };
 
 const IndicatorTypeToComponentMap = {
@@ -50,11 +54,14 @@ const IndicatorTypeToComponentMap = {
 
 /** A spinner component which can be used to display a loading status to the user */
 const Spinner: React.FC<SpinnerProps> = ({
-  loading = true,
+  isLoading = true,
+  isFullScreen = false,
+  animationDuration = 3600,
+  animating = true,
   variant = "spinner",
   ...props
 }) => {
-  if (!loading) return null;
+  if (!isLoading) return null;
 
   const componentSpecificProps = useComponentConfig(
     "Spinner",
@@ -71,13 +78,14 @@ const Spinner: React.FC<SpinnerProps> = ({
       variant as keyof typeof SpinnerConfig["variants"]
     ],
     {
+      ...componentSpecificProps,
       color: componentSpecificProps.style.color
         ? componentSpecificProps.style.color
         : componentSpecificProps.style.color,
       size: componentSpecificProps.sizeMultiplier
         ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
         : componentSpecificProps.size,
-      style: componentSpecificProps,
+      style: { flex: isFullScreen ? 1 : 0, ...componentSpecificProps.style },
     }
   );
 };

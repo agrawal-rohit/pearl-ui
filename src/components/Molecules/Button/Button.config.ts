@@ -1,32 +1,91 @@
 export default {
+  parts: ["root", "text", "spinner"],
   baseStyle: {
-    backgroundColor: "primary.500",
-    margin: "s",
+    root: {
+      margin: "s",
+    },
   },
   sizes: {
+    xs: {
+      root: {
+        py: "xs",
+        px: "s",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn4",
+      },
+      spinner: {
+        marginVertical: "xs",
+        marginHorizontal: "s",
+        size: "s",
+      },
+    },
     s: {
-      py: "xs",
-      px: "xs",
-      borderRadius: "s",
+      root: {
+        py: "s",
+        px: "s",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn3",
+      },
+      spinner: {
+        marginHorizontal: "s",
+        size: "m",
+      },
     },
     m: {
-      py: "s",
-      px: "s",
-      borderRadius: "s",
+      root: {
+        py: "s",
+        px: "m",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn2",
+      },
+      spinner: {
+        marginVertical: "xs",
+        marginHorizontal: "s",
+        size: "m",
+      },
     },
     l: {
-      py: "m",
-      px: "m",
-      borderRadius: "m",
-    },
-    xl: {
-      py: "m",
-      px: "m",
-      borderRadius: "m",
+      root: {
+        py: "m",
+        px: "m",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn1",
+      },
+      spinner: {
+        marginHorizontal: "l",
+        size: "l",
+      },
     },
   },
   variants: {
-    filled: {},
+    filled: {
+      root: {
+        backgroundColor: "primary.500",
+      },
+      text: { color: "neutral.100" },
+      spinner: {
+        color: "neutral.100",
+      },
+    },
+    outline: {
+      root: {
+        backgroundColor: "transparent",
+        borderWidth: 2,
+        borderColor: "primary.500",
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+    },
   },
   defaults: {
     size: "m",
