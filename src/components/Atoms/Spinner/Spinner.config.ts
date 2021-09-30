@@ -1,7 +1,7 @@
 export default {
   baseStyle: {
     color: "primary.500",
-    animationDuration: 3600,
+    animationDuration: 1200,
     animating: true,
   },
   sizes: {
@@ -9,13 +9,13 @@ export default {
       size: 10,
     },
     m: {
-      size: 20,
+      size: 15,
     },
     l: {
-      size: 30,
+      size: 20,
     },
     xl: {
-      size: 40,
+      size: 30,
     },
   },
   variants: {
@@ -25,7 +25,9 @@ export default {
       sizeMultiplier: 0.2,
       count: 4,
     },
-    spinner: {},
+    spinner: {
+      animationDuration: 3600,
+    },
     pacman: {},
     pulse: {},
     skype: { count: 5, minScale: 0.2, maxScale: 1.0 },
