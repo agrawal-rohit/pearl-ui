@@ -17,7 +17,6 @@ export default {
       },
       spinner: {
         marginVertical: "xs",
-        marginHorizontal: "s",
         size: "s",
       },
     },
@@ -31,7 +30,6 @@ export default {
         variant: "btn3",
       },
       spinner: {
-        marginHorizontal: "s",
         size: "m",
       },
     },
@@ -45,8 +43,6 @@ export default {
         variant: "btn2",
       },
       spinner: {
-        marginVertical: "xs",
-        marginHorizontal: "s",
         size: "m",
       },
     },
@@ -54,13 +50,12 @@ export default {
       root: {
         py: "m",
         px: "m",
-        borderRadius: "s",
+        borderRadius: "m",
       },
       text: {
         variant: "btn1",
       },
       spinner: {
-        marginHorizontal: "l",
         size: "l",
       },
     },

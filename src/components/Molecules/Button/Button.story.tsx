@@ -15,13 +15,28 @@ storiesOf("Button", module)
       <Button onPress={action("clicked-text")} size="xs">
         Button text
       </Button>
+      <Button onPress={action("clicked-text")} size="xs" isLoading>
+        Button text
+      </Button>
+
       <Button onPress={action("clicked-text")} size="s">
         Button text
       </Button>
+      <Button onPress={action("clicked-text")} size="s" isLoading>
+        Button text
+      </Button>
+
       <Button onPress={action("clicked-text")} size="m">
         Button text
       </Button>
+      <Button onPress={action("clicked-text")} size="m" isLoading>
+        Button text
+      </Button>
+
       <Button onPress={action("clicked-text")} size="l">
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} size="l" isLoading>
         Button text
       </Button>
     </>
@@ -53,13 +68,48 @@ storiesOf("Button", module)
       <Button onPress={action("clicked-text")} size="xs" isLoading>
         Button text
       </Button>
+      <Button
+        onPress={action("clicked-text")}
+        size="xs"
+        loadingText="Loading"
+        isLoading
+      >
+        Button text
+      </Button>
       <Button onPress={action("clicked-text")} size="s" isLoading>
+        Button text
+      </Button>
+
+      <Button
+        onPress={action("clicked-text")}
+        size="s"
+        loadingText="Loading"
+        isLoading
+      >
         Button text
       </Button>
       <Button onPress={action("clicked-text")} size="m" isLoading>
         Button text
       </Button>
+
+      <Button
+        onPress={action("clicked-text")}
+        size="m"
+        loadingText="Loading"
+        isLoading
+      >
+        Button text
+      </Button>
       <Button onPress={action("clicked-text")} size="l" isLoading>
+        Button text
+      </Button>
+
+      <Button
+        onPress={action("clicked-text")}
+        size="l"
+        loadingText="Loading"
+        isLoading
+      >
         Button text
       </Button>
     </>

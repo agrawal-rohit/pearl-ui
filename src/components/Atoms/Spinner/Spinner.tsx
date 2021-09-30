@@ -56,7 +56,7 @@ const IndicatorTypeToComponentMap = {
 const Spinner: React.FC<SpinnerProps> = ({
   isLoading = true,
   isFullScreen = false,
-  animationDuration = 3600,
+  animationDuration = 1200,
   animating = true,
   variant = "spinner",
   ...props

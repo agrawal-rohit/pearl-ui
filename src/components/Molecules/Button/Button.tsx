@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable } from "react-native";
 import Spinner from "../../Atoms/Spinner/Spinner";
-import { BoxProps } from "../../Atoms/Box/Box";
+import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 import Center from "../../Atoms/Center/Center";
 import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig";
@@ -10,6 +10,8 @@ type ButtonProps = BoxProps & {
   onPress: () => void;
   size?: string;
   variant?: string;
+  loadingText?: string;
+  spinnerPlacement?: "start" | "end";
   isLoading?: boolean;
   isFullWidth?: boolean;
   isDisabled?: boolean;
@@ -18,6 +20,8 @@ type ButtonProps = BoxProps & {
 const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
+  loadingText = "Loading",
+  spinnerPlacement = "start",
   isLoading = false,
   isFullWidth = false,
   isDisabled = false,
@@ -30,11 +34,44 @@ const Button: React.FC<ButtonProps> = ({
 
   const disabled = isDisabled ? true : isLoading;
 
+  const renderLoadingStatus = () => {
+    if (loadingText) {
+      return (
+        <Box flexDirection="row">
+          {spinnerPlacement === "start" ? (
+            <>
+              <Spinner {...multiComponentStyles.spinner} />
+              <Text
+                marginLeft={multiComponentStyles.root.py}
+                {...multiComponentStyles.text}
+              >
+                {loadingText}
+              </Text>
+            </>
+          ) : (
+            <>
+              <Text
+                marginRight={multiComponentStyles.root.py}
+                {...multiComponentStyles.text}
+              >
+                {loadingText}
+              </Text>
+
+              <Spinner {...multiComponentStyles.spinner} />
+            </>
+          )}
+        </Box>
+      );
+    } else {
+      return <Spinner {...multiComponentStyles.spinner} />;
+    }
+  };
+
   return (
     <Pressable
       style={({ pressed }) => [
         {
-          opacity: disabled ? 0.5 : pressed ? 0.7 : 1.0,
+          opacity: disabled ? 0.5 : 1,
           alignSelf: isFullWidth ? "stretch" : "flex-start",
         },
       ]}
@@ -46,7 +83,7 @@ const Button: React.FC<ButtonProps> = ({
         {...multiComponentStyles.root}
       >
         {isLoading ? (
-          <Spinner {...multiComponentStyles.spinner} />
+          renderLoadingStatus()
         ) : (
           <Text {...multiComponentStyles.text}>{children}</Text>
         )}
