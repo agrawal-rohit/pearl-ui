@@ -4,6 +4,7 @@ import { getKeys } from "../theme/utils/typeHelpers";
 import { useTheme } from "./useTheme";
 import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
+import { checkKeyAvailability } from "./utils/utils";
 
 export const useComponentConfig = (
   themeComponentKey: string,
@@ -19,14 +20,7 @@ export const useComponentConfig = (
   // User overriden props
   const overridenStyles = useStyledProps(receivedProps, styleFunctions);
 
-  if (
-    !theme.components ||
-    !theme.components.hasOwnProperty(themeComponentKey)
-  ) {
-    throw new Error(
-      `Key '${themeComponentKey}' does not exist in theme.components`
-    );
-  }
+  checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
 
   const componentStyleConfig = theme.components[themeComponentKey];
   const activeSizeAndVariantConfig: ComponentConfig["defaults"] = {};
@@ -55,31 +49,27 @@ export const useComponentConfig = (
       (style: any, currProp: keyof typeof activeSizeAndVariantConfig) => {
         let activeSizeAndVariantStyles: Record<string, any>;
         if (currProp === "size") {
-          if (componentStyleConfig.hasOwnProperty("sizes")) {
-            activeSizeAndVariantStyles =
-              componentStyleConfig!.sizes![
-                activeSizeAndVariantConfig[currProp] as string
-              ];
-          } else {
-            throw new Error(
-              `Key 'sizes' does not exist in theme.components['${String(
-                themeComponentKey
-              )}']`
-            );
-          }
+          checkKeyAvailability(
+            "sizes",
+            componentStyleConfig,
+            `theme.components['${String(themeComponentKey)}']`
+          );
+
+          activeSizeAndVariantStyles =
+            componentStyleConfig!.sizes![
+              activeSizeAndVariantConfig[currProp] as string
+            ];
         } else {
-          if (componentStyleConfig.hasOwnProperty("variants")) {
-            activeSizeAndVariantStyles =
-              componentStyleConfig!.variants![
-                activeSizeAndVariantConfig[currProp] as string
-              ];
-          } else {
-            throw new Error(
-              `Key 'variants' does not exist in theme.components['${String(
-                themeComponentKey
-              )}']`
-            );
-          }
+          checkKeyAvailability(
+            "variants",
+            componentStyleConfig,
+            `theme.components['${String(themeComponentKey)}']`
+          );
+
+          activeSizeAndVariantStyles =
+            componentStyleConfig!.variants![
+              activeSizeAndVariantConfig[currProp] as string
+            ];
         }
 
         if (style) {

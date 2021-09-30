@@ -53,6 +53,29 @@ export interface ComponentConfig {
   };
 }
 
+export interface MultiComponentConfig {
+  parts: string[];
+  baseStyle: {
+    [key: string]: {
+      [key: string]: any;
+    };
+  };
+  sizes?: {
+    [key: string]: {
+      [key: string]: any;
+    };
+  };
+  variants?: {
+    [key: string]: {
+      [key: string]: any;
+    };
+  };
+  defaults?: {
+    size?: string;
+    variant?: string;
+  };
+}
+
 export type ColorModeColor = {
   light: ColorValue;
   dark: ColorValue;
@@ -66,7 +89,7 @@ export interface BasePearlTheme {
     [key: string]: number;
   };
   components: {
-    [key: string]: ComponentConfig;
+    [key: string]: ComponentConfig | MultiComponentConfig;
   };
   elevation: {
     [key: string]: ElevationConfig;

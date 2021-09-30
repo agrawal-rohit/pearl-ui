@@ -87,32 +87,25 @@ export default {
     btn1: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
-      fontSize: 18,
-      lineHeight: 26,
-      color: "neutral.100",
-    },
-    btn2: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
       fontSize: 16,
       lineHeight: 24,
       color: "neutral.100",
     },
-    btn3: {
+    btn2: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 14,
       lineHeight: 22,
       color: "neutral.100",
     },
-    btn4: {
+    btn3: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 12,
       lineHeight: 20,
       color: "neutral.100",
     },
-    btn5: {
+    btn4: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 10,

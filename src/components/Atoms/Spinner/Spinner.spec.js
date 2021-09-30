@@ -10,7 +10,7 @@ describe("Atoms/Spinner", () => {
     const tree = renderer
       .create(
         <ThemeProvider>
-          <Spinner loading={false} />
+          <Spinner isLoading={false} />
         </ThemeProvider>
       )
       .toJSON();

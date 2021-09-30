@@ -6,33 +6,61 @@ import Button from "./Button";
 import Screen from "../../Atoms/Screen/Screen";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
+import { View } from "react-native";
 
 storiesOf("Button", module)
-  .addDecorator((getStory) => getStory())
-  .add("with text", () => (
+  .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
+  .add("Sizes", () => (
     <>
+      <Button onPress={action("clicked-text")} size="xs">
+        Button text
+      </Button>
       <Button onPress={action("clicked-text")} size="s">
-        {text("Button text", "Hello Button")}
+        Button text
       </Button>
       <Button onPress={action("clicked-text")} size="m">
-        {text("Button text", "Hello Button")}
+        Button text
       </Button>
       <Button onPress={action("clicked-text")} size="l">
-        {text("Button text", "Hello Button")}
+        Button text
       </Button>
-      <Button onPress={action("clicked-text")} size="xl">
-        {text("Button text", "Hello Button")}
-      </Button>
-      <Box width="auto" height={20} backgroundColor="silver">
-        <Text>asdasdad</Text>
-      </Box>
     </>
   ))
-  .add("with some emoji", () => (
-    <Button onPress={action("clicked-emoji")}>😀 😎 👍 💯</Button>
+  .add("Variants", () => (
+    <>
+      <Button onPress={action("clicked-text")} variant="filled">
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} variant="outline">
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")}>Button text</Button>
+      <Button onPress={action("clicked-text")}>Button text</Button>
+    </>
   ))
-  .add("loading", () => (
-    <Button onPress={action("loading")} loading>
-      Test
-    </Button>
+  .add("Disabled", () => (
+    <>
+      <Button onPress={action("clicked-text")} isDisabled>
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} isFullWidth isDisabled>
+        Button text
+      </Button>
+    </>
+  ))
+  .add("Loading", () => (
+    <>
+      <Button onPress={action("clicked-text")} size="xs" isLoading>
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} size="s" isLoading>
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} size="m" isLoading>
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} size="l" isLoading>
+        Button text
+      </Button>
+    </>
   ));
