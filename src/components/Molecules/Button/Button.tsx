@@ -1,17 +1,19 @@
 import React from "react";
-import { Pressable } from "react-native";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import Center from "../../Atoms/Center/Center";
 import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig";
 import Icon from "../../Atoms/Icon/Icon";
+import { useColorScheme } from "../../../hooks/useColorScheme";
+import Pressable from "../../Atoms/Pressable/Pressable";
+import { useTheme } from "../../../hooks/useTheme";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;
   size?: string;
   variant?: string;
   loadingText?: string;
+  colorScheme?: string;
   spinnerPlacement?: "start" | "end";
   isLoading?: boolean;
   isFullWidth?: boolean;
@@ -24,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
   loadingText = null,
+  colorScheme = "primary",
   spinnerPlacement = "start",
   isLoading = false,
   isFullWidth = false,
@@ -36,6 +39,9 @@ const Button: React.FC<ButtonProps> = ({
     size: props["size"],
     variant: props["variant"],
   });
+  if (colorScheme !== "primary") {
+    useColorScheme(colorScheme, multiComponentStyles);
+  }
 
   const leftIconProps = leftIcon
     ? { ...multiComponentStyles.icon, ...leftIcon.props }
@@ -112,21 +118,14 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Pressable
-      style={({ pressed }) => [
-        {
-          opacity: disabled ? 0.5 : 1,
-          alignSelf: isFullWidth ? "stretch" : "flex-start",
-        },
-      ]}
       disabled={disabled}
-      onPress={disabled ? onPress : null}
+      opacity={disabled ? 0.5 : 1}
+      onPress={onPress}
+      alignSelf={isFullWidth ? "stretch" : "flex-start"}
+      androidRippleConfig={{ color: `${colorScheme}.200` }}
+      {...multiComponentStyles.root}
     >
-      <Center
-        alignSelf={isFullWidth ? "stretch" : "flex-start"}
-        {...multiComponentStyles.root}
-      >
-        {isLoading ? renderLoadingStatus() : renderMainContent()}
-      </Center>
+      {isLoading ? renderLoadingStatus() : renderMainContent()}
     </Pressable>
   );
 };

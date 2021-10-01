@@ -2,7 +2,9 @@ export default {
   parts: ["root", "text", "spinner", "icon"],
   baseStyle: {
     root: {
-      margin: "s",
+      margin: "xxs",
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
   sizes: {
