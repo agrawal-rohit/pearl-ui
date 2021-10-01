@@ -6,12 +6,17 @@ const replaceColorValuesInObject = (
   newValue: string,
   obj: Record<string, any>
 ) => {
+  const updatedObj: Record<string, any> = {};
   for (const [key, value] of Object.entries(obj)) {
-    if (typeof value === "string" && value.includes("primary")) {
-      obj[key] = value.replace("primary", newValue);
+    if (typeof value === "object") {
+      updatedObj[key] = replaceColorValuesInObject(newValue, value);
+    } else if (typeof value === "string" && value.includes("primary")) {
+      updatedObj[key] = value.replace("primary", newValue);
+    } else {
+      updatedObj[key] = value;
     }
   }
-  return obj;
+  return updatedObj;
 };
 
 /**
@@ -20,18 +25,10 @@ const replaceColorValuesInObject = (
 export const useColorScheme = (
   colorSchemeThemeKey: string,
   props: Record<string, any>
-) => {
+): Record<string, any> => {
   const { theme } = useTheme();
 
   checkKeyAvailability(colorSchemeThemeKey, theme.palette, "theme.palette");
 
-  getKeys(props).map((propKey) => {
-    if (typeof props[propKey] === "object") {
-      getKeys(props[propKey]).map((subPropKey) => {
-        return replaceColorValuesInObject(colorSchemeThemeKey, props[propKey]);
-      });
-    }
-
-    return replaceColorValuesInObject(colorSchemeThemeKey, props[propKey]);
-  });
+  return replaceColorValuesInObject(colorSchemeThemeKey, props);
 };

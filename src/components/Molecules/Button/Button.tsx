@@ -35,12 +35,12 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon = null,
   ...props
 }) => {
-  const multiComponentStyles = useMultiComponentConfig("Button", props, {
+  let multiComponentStyles = useMultiComponentConfig("Button", props, {
     size: props["size"],
     variant: props["variant"],
   });
   if (colorScheme !== "primary") {
-    useColorScheme(colorScheme, multiComponentStyles);
+    multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
   }
 
   const leftIconProps = leftIcon
