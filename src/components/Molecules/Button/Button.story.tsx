@@ -4,9 +4,6 @@ import { text } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react-native";
 import Button from "./Button";
 import Screen from "../../Atoms/Screen/Screen";
-import Box from "../../Atoms/Box/Box";
-import Text from "../../Atoms/Text/Text";
-import { View } from "react-native";
 import Icon from "../../Atoms/Icon/Icon";
 
 storiesOf("Button", module)
@@ -126,6 +123,31 @@ storiesOf("Button", module)
         size="l"
         loadingText="Loading"
         isLoading
+      >
+        Button text
+      </Button>
+    </>
+  ))
+  .add("Color Scheme", () => (
+    <>
+      <Button onPress={action("clicked-text")} isFullWidth>
+        Button text
+      </Button>
+      <Button onPress={action("clicked-text")} variant="outline" isFullWidth>
+        Button text
+      </Button>
+      <Button
+        onPress={action("clicked-text")}
+        colorScheme="secondary"
+        isFullWidth
+      >
+        Button text
+      </Button>
+      <Button
+        onPress={action("clicked-text")}
+        variant="outline"
+        colorScheme="secondary"
+        isFullWidth
       >
         Button text
       </Button>

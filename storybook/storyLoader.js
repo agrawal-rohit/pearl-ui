@@ -7,6 +7,7 @@ function loadStories() {
   require("../src/components/Atoms/Box/Box.story");
   require("../src/components/Atoms/Center/Center.story");
   require("../src/components/Atoms/Icon/Icon.story");
+  require("../src/components/Atoms/Pressable/Pressable.story");
   require("../src/components/Atoms/Screen/Screen.story");
   require("../src/components/Atoms/Spinner/Spinner.story");
   require("../src/components/Atoms/Text/Text.story");
@@ -18,6 +19,7 @@ const stories = [
   "../src/components/Atoms/Box/Box.story",
   "../src/components/Atoms/Center/Center.story",
   "../src/components/Atoms/Icon/Icon.story",
+  "../src/components/Atoms/Pressable/Pressable.story",
   "../src/components/Atoms/Screen/Screen.story",
   "../src/components/Atoms/Spinner/Spinner.story",
   "../src/components/Atoms/Text/Text.story",
