@@ -1,5 +1,5 @@
 // Theme functions
-export { extendTheme } from "./src/basetheme";
+export { extendTheme } from "./src/base/index";
 
 // Style functions
 export {
@@ -17,7 +17,7 @@ export {
 
 // Theme Context
 export { ThemeProvider } from "./src/themeContext";
-export { baseTheme } from "./src/basetheme/index";
+export { baseTheme } from "./src/base/index";
 
 // Utils
 export { generatePalette } from "./utils/utils";

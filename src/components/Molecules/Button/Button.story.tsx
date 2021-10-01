@@ -7,6 +7,7 @@ import Screen from "../../Atoms/Screen/Screen";
 import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 import { View } from "react-native";
+import Icon from "../../Atoms/Icon/Icon";
 
 storiesOf("Button", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
@@ -15,28 +16,44 @@ storiesOf("Button", module)
       <Button onPress={action("clicked-text")} size="xs">
         Button text
       </Button>
-      <Button onPress={action("clicked-text")} size="xs" isLoading>
+      <Button
+        onPress={action("clicked-text")}
+        size="xs"
+        leftIcon={<Icon iconFamily="AntDesign" iconName="forward" />}
+      >
         Button text
       </Button>
 
       <Button onPress={action("clicked-text")} size="s">
         Button text
       </Button>
-      <Button onPress={action("clicked-text")} size="s" isLoading>
+      <Button
+        onPress={action("clicked-text")}
+        size="s"
+        leftIcon={<Icon iconFamily="AntDesign" iconName="forward" />}
+      >
         Button text
       </Button>
 
       <Button onPress={action("clicked-text")} size="m">
         Button text
       </Button>
-      <Button onPress={action("clicked-text")} size="m" isLoading>
+      <Button
+        onPress={action("clicked-text")}
+        size="m"
+        leftIcon={<Icon iconFamily="AntDesign" iconName="forward" />}
+      >
         Button text
       </Button>
 
       <Button onPress={action("clicked-text")} size="l">
         Button text
       </Button>
-      <Button onPress={action("clicked-text")} size="l" isLoading>
+      <Button
+        onPress={action("clicked-text")}
+        size="l"
+        leftIcon={<Icon iconFamily="AntDesign" iconName="forward" />}
+      >
         Button text
       </Button>
     </>
