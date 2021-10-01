@@ -1,0 +1,98 @@
+---
+sidebar_position: 6
+title: Icon
+---
+
+The `Icon` component can used to add [Expo Icons](https://icons.expo.fyi/) to your app and customize them using [style props](../../getting-started/style-props).
+
+## Import
+
+```jsx
+import { Icon } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Icon iconFamily="AntDesign" iconName="stepforward" />
+
+// size="l" refers to the value of `theme.components["Icon"]["sizes"]["l"]`
+<Icon iconFamily="AntDesign" iconName="stepforward" size="l" />
+
+// passing style prop color="primary.500" overrides the default component style value of color="neutral.900"
+<Icon iconFamily="AntDesign" iconName="stepforward" size="l" color="primary.500" margin="xl" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/icon-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/icon-dark" />
+
+</TabItem>
+</Tabs>
+
+## Props
+
+### Supported style props
+
+The `Icon` component supports the following style props:
+
+- [color and backgroundColor](../../getting-started/style-props#color-and-background-color)
+- [margin and padding](../../getting-started/style-props#margin-and-padding)
+- [layout](../../getting-started/style-props#layout)
+
+### Other props
+
+| Name       | Required | Type                                                                                                                                                                                                                                     | Default | Description                                              |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- |
+| iconFamily | true     | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> |         | Icon family that contains the icon you want to use       |
+| iconName   | true     | <t>string</t>                                                                                                                                                                                                                            |         | Name of the icon as given in it's respective icon family |
+| size       | false    | <t>PearlTheme.components.Icon["sizes"]</t>                                                                                                                                                                                               | `"m"`   | The size of the icon                                     |
+
+## Default Component Style
+
+```js
+export default {
+  baseStyle: {
+    color: {
+      light: "neutral.900",
+      dark: "neutral.100",
+    },
+  },
+  sizes: {
+    s: {
+      size: 10,
+    },
+    m: {
+      size: 15,
+    },
+    l: {
+      size: 20,
+    },
+    xl: {
+      size: 30,
+    },
+  },
+  defaults: {
+    size: "m",
+  },
+};
+```

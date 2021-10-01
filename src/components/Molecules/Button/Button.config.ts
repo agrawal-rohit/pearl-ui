@@ -1,5 +1,5 @@
 export default {
-  parts: ["root", "text", "spinner"],
+  parts: ["root", "text", "spinner", "icon"],
   baseStyle: {
     root: {
       margin: "s",
@@ -8,22 +8,25 @@ export default {
   sizes: {
     xs: {
       root: {
-        py: "xs",
-        px: "s",
+        py: "xxs",
+        px: "xs",
         borderRadius: "s",
       },
       text: {
         variant: "btn4",
       },
       spinner: {
-        marginVertical: "xs",
+        my: "xxs",
+        size: "s",
+      },
+      icon: {
         size: "s",
       },
     },
     s: {
       root: {
-        py: "s",
-        px: "s",
+        py: "xs",
+        px: "xs",
         borderRadius: "s",
       },
       text: {
@@ -32,17 +35,23 @@ export default {
       spinner: {
         size: "m",
       },
+      icon: {
+        size: "m",
+      },
     },
     m: {
       root: {
         py: "s",
-        px: "m",
-        borderRadius: "s",
+        px: "s",
+        borderRadius: "m",
       },
       text: {
         variant: "btn2",
       },
       spinner: {
+        size: "m",
+      },
+      icon: {
         size: "m",
       },
     },
@@ -58,6 +67,9 @@ export default {
       spinner: {
         size: "l",
       },
+      icon: {
+        size: "l",
+      },
     },
   },
   variants: {
@@ -69,6 +81,9 @@ export default {
       spinner: {
         color: "neutral.100",
       },
+      icon: {
+        color: "neutral.100",
+      },
     },
     outline: {
       root: {
@@ -78,6 +93,9 @@ export default {
       },
       text: { color: "primary.500" },
       spinner: {
+        color: "primary.500",
+      },
+      icon: {
         color: "primary.500",
       },
     },

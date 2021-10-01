@@ -5,6 +5,7 @@ import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 import Center from "../../Atoms/Center/Center";
 import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig";
+import Icon from "../../Atoms/Icon/Icon";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;
@@ -15,16 +16,20 @@ type ButtonProps = BoxProps & {
   isLoading?: boolean;
   isFullWidth?: boolean;
   isDisabled?: boolean;
+  leftIcon?: React.ReactElement;
+  rightIcon?: React.ReactElement;
 };
 
 const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
-  loadingText = "Loading",
+  loadingText = null,
   spinnerPlacement = "start",
   isLoading = false,
   isFullWidth = false,
   isDisabled = false,
+  leftIcon = null,
+  rightIcon = null,
   ...props
 }) => {
   const multiComponentStyles = useMultiComponentConfig("Button", props, {
@@ -32,12 +37,20 @@ const Button: React.FC<ButtonProps> = ({
     variant: props["variant"],
   });
 
+  const leftIconProps = leftIcon
+    ? { ...multiComponentStyles.icon, ...leftIcon.props }
+    : {};
+
+  const rightIconProps = rightIcon
+    ? { ...multiComponentStyles.icon, ...rightIcon.props }
+    : {};
+
   const disabled = isDisabled ? true : isLoading;
 
   const renderLoadingStatus = () => {
     if (loadingText) {
       return (
-        <Box flexDirection="row">
+        <Box alignItems="center" flexDirection="row">
           {spinnerPlacement === "start" ? (
             <>
               <Spinner {...multiComponentStyles.spinner} />
@@ -67,6 +80,36 @@ const Button: React.FC<ButtonProps> = ({
     }
   };
 
+  const renderMainContent = () => {
+    if (leftIcon || rightIcon) {
+      return (
+        <Box flexDirection="row">
+          {leftIcon ? (
+            <Icon
+              iconFamily={leftIcon.props!.iconFamily}
+              iconName={leftIcon.props!.iconName}
+              alignSelf="center"
+              marginRight="xs"
+              {...leftIconProps}
+            />
+          ) : null}
+          <Text {...multiComponentStyles.text}>{children}</Text>
+          {rightIcon ? (
+            <Icon
+              iconFamily={rightIcon.props!.iconFamily}
+              iconName={rightIcon.props!.iconName}
+              alignSelf="center"
+              marginLeft="xs"
+              {...rightIconProps}
+            />
+          ) : null}
+        </Box>
+      );
+    } else {
+      return <Text {...multiComponentStyles.text}>{children}</Text>;
+    }
+  };
+
   return (
     <Pressable
       style={({ pressed }) => [
@@ -82,11 +125,7 @@ const Button: React.FC<ButtonProps> = ({
         alignSelf={isFullWidth ? "stretch" : "flex-start"}
         {...multiComponentStyles.root}
       >
-        {isLoading ? (
-          renderLoadingStatus()
-        ) : (
-          <Text {...multiComponentStyles.text}>{children}</Text>
-        )}
+        {isLoading ? renderLoadingStatus() : renderMainContent()}
       </Center>
     </Pressable>
   );

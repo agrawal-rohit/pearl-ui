@@ -1,3 +1,5 @@
+import { BasePearlTheme } from "../types";
+
 import { borderRadii } from "./borderRadii";
 import { elevation } from "./elevation";
 import { palette } from "./palette";
@@ -9,8 +11,7 @@ import SpinnerConfig from "../../../components/Atoms/Spinner/Spinner.config";
 import ScreenConfig from "../../../components/Atoms/Screen/Screen.config";
 import TextConfig from "../../../components/Atoms/Text/Text.config";
 import ButtonConfig from "../../../components/Molecules/Button/Button.config";
-
-import { BasePearlTheme } from "../types";
+import IconConfig from "../../../components/Atoms/Icon/Icon.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -37,6 +38,7 @@ export const baseTheme: BasePearlTheme = {
   elevation,
   zIndices,
   components: {
+    Icon: IconConfig,
     Text: TextConfig,
     Screen: ScreenConfig,
     Spinner: SpinnerConfig,
