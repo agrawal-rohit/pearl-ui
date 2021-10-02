@@ -8,7 +8,12 @@ import { action } from "@storybook/addon-actions";
 storiesOf("Pressable", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("Screen", () => (
-    <Pressable onPress={action("clicked-text")} backgroundColor="primary.500">
+    <Pressable
+      onPress={action("clicked-text")}
+      p="m"
+      backgroundColor="primary.500"
+      androidRippleConfig={{ color: "primary.800" }}
+    >
       <Text>asdasda</Text>
     </Pressable>
   ));

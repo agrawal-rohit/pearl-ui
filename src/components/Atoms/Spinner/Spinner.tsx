@@ -31,11 +31,17 @@ const indicatorStyleFunctions = [
 type SpinnerProps = ColorProps &
   SpacingProps &
   LayoutProps & {
+    /** Size to use as defined in the active theme */
     size?: keyof typeof SpinnerConfig["sizes"];
+    /** Variant to use as defined in the active theme */
     variant?: keyof typeof SpinnerConfig["variants"];
+    /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
     isLoading?: boolean;
+    /** Spinner container takes the entire screen size and centers the spinner within. */
     isFullScreen?: boolean;
+    /** Animation duration in ms.  */
     animationDuration?: number;
+    /** Toggles the animation status. */
     animating?: boolean;
     style?: RNStyle;
   };
@@ -52,7 +58,7 @@ const IndicatorTypeToComponentMap = {
   wave: WaveIndicator,
 };
 
-/** A spinner component which can be used to display a loading status to the user */
+/** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const Spinner: React.FC<SpinnerProps> = ({
   isLoading = true,
   isFullScreen = false,
