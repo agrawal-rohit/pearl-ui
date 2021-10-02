@@ -3,7 +3,7 @@ import Box, { BoxProps } from "../Box/Box";
 import { SafeAreaView, StatusBar, Platform } from "react-native";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 
-/** A layout component to wrap each screen in your app */
+/** A layout component that you can use to wrap all the views in your app. */
 const Screen: React.FC<BoxProps> = ({ children, ...props }) => {
   const componentStyles = useComponentConfig("Screen", props);
 

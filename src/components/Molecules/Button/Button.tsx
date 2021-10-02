@@ -22,6 +22,7 @@ type ButtonProps = BoxProps & {
   rightIcon?: React.ReactElement;
 };
 
+/**  */
 const Button: React.FC<ButtonProps> = ({
   children,
   onPress,

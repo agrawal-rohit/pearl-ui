@@ -16,7 +16,7 @@ type PressableProps = BoxProps &
     | "unstable_pressDelay"
     | "disabled"
   > & {
-    /** Called after onPressOut. */
+    /** Function to call when the component is pressed. */
     onPress: () => void;
     /** Ripple effect configuration for the android_ripple property. */
     androidRippleConfig?: PressableAndroidRippleConfig;
@@ -35,7 +35,7 @@ const defaultRippleConfig: PressableAndroidRippleConfig = {
   borderless: false,
 };
 
-/** A wrapper around the React Native Pressable which allows you to use it with Style props */
+/** A wrapper around the React Native Pressable component which allows you use Pearl style props */
 const Pressable: React.FC<PressableProps> = ({
   children,
   androidRippleConfig,

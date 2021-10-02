@@ -24,6 +24,7 @@ type IconProps = ColorProps &
   BackgroundColorProps &
   SpacingProps &
   LayoutProps & {
+    /** Icon family that contains the icon you want to use  */
     iconFamily:
       | "AntDesign"
       | "Entypo"
@@ -39,12 +40,14 @@ type IconProps = ColorProps &
       | "Octicons"
       | "SimpleLineIcons"
       | "Zocial";
+    /** Name of the icon as given in it's respective icon family */
     iconName: string;
+    /** The size of the icon */
     size?: string;
     style?: RNStyle;
   };
 
-/** A Icon component which can be used to display Expo Icons */
+/** he `Icon` component can used to add Expo Icons to your app and customize them using style props. */
 const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
