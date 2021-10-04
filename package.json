@@ -30,7 +30,7 @@
     "@storybook/addon-a11y": "^6.3.8",
     "@storybook/addon-controls": "^6.3.8",
     "@storybook/addon-docs": "^6.3.8",
-    "@storybook/addon-toolbars": "^6.3.8",
+    "@storybook/addon-toolbars": "^6.3.9",
     "@types/react-native-indicators": "^0.16.1",
     "@types/react-test-renderer": "^17.0.1",
     "eslint-config-prettier": "^8.3.0",
