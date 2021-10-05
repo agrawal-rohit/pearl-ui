@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.0...v1.2.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* fixing icon implementation ([413369b](https://github.com/agrawal-rohit/pearl-ui/commit/413369beb4d5c6246f9b1a63df67fc037237d60b))
+
 # [1.2.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.4...v1.2.0) (2021-10-05)
 
 
