@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.1...v1.2.2) (2021-10-05)
+
+
+### Bug Fixes
+
+* fixed componentConfig hooks for non-style props, made minor bug fixes, added docs for Button ([4b3053e](https://github.com/agrawal-rohit/pearl-ui/commit/4b3053ef29aaed277463a872caa3b34adafd510b))
+
 ## [1.2.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.0...v1.2.1) (2021-10-05)
 
 
