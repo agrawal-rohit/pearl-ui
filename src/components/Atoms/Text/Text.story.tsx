@@ -33,8 +33,5 @@ storiesOf("Typography", module)
       <Box backgroundColor="primary.500">
         <Text variant="btn4">Button 4</Text>
       </Box>
-      <Box backgroundColor="primary.500">
-        <Text variant="btn5">Button 5</Text>
-      </Box>
     </Box>
   ));

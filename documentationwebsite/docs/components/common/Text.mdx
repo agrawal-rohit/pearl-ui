@@ -15,14 +15,28 @@ import { Text } from "pearl-ui";
 
 ```jsx
 // default variant is set as "p3" in the default Pearl theme
-<Text>This is the default text variant</Text>
+<Text>Heya! I am displaying some text</Text>
+```
 
-// variant="h1" refers to the value of `theme.components["Text"]["h1"]`
+### Text variants
+
+Use the `variant` prop to change the typography style of the Text component. You can set the value to the keys available in <t>PearlTheme.components.Text["variants"]</t>, which are <t>"h1"</t>, <t>"h2"</t>, etc. in the [default theme](../../theming/default-theme#typography).
+
+```jsx
+// variant="h1" refers to the value of `theme.components.Text["variants"]["h1"]`
 <Text variant="h1">This is a heading</Text>
+```
 
-// variant="p1" refers to the value of `theme.components["Text"]["p1"]`
+### Override Style
+
+The Text component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
+// variant="p1" refers to the value of `theme.components.Text["variants"]["p1"]`
 // passing style prop color="primary.300" overrides the default component style value of color="neutral.100"
-<Text variant="btn1" color="primary.300">This is a large button text</Text>
+<Text variant="btn1" color="primary.300">
+  This is a large button text
+</Text>
 ```
 
 ## Example
@@ -50,6 +64,11 @@ import TabItem from "@theme/TabItem";
 
 </TabItem>
 </Tabs>
+
+## Accessibility
+
+- Text has the `role` of `text`.
+- Text has the label set as the text body.
 
 ## Props
 
