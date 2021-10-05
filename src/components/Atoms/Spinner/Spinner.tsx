@@ -21,6 +21,7 @@ import {
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
 import SpinnerConfig from "./Spinner.config";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
+import { AccessibilityRoles } from "../../../hooks/utils/types";
 
 const indicatorStyleFunctions = [
   color,
@@ -43,6 +44,8 @@ type SpinnerProps = ColorProps &
     animationDuration?: number;
     /** Toggles the animation status. */
     animating?: boolean;
+    /** The accessibility label of the icon */
+    accessibilityLabel?: string;
     style?: RNStyle;
   };
 
@@ -65,6 +68,7 @@ const Spinner: React.FC<SpinnerProps> = ({
   animationDuration = 1200,
   animating = true,
   variant = "spinner",
+  accessibilityLabel = null,
   ...props
 }) => {
   if (!isLoading) return null;
@@ -92,6 +96,11 @@ const Spinner: React.FC<SpinnerProps> = ({
         ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
         : componentSpecificProps.size,
       style: { flex: isFullScreen ? 1 : 0, ...componentSpecificProps.style },
+      accessible: true,
+      accessibilityLabel: accessibilityLabel
+        ? accessibilityLabel
+        : "Loading indicator",
+      accessibilityRole: "progressbar" as AccessibilityRoles,
     }
   );
 };

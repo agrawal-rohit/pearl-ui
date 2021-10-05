@@ -44,6 +44,8 @@ type IconProps = ColorProps &
     iconName: string;
     /** The size of the icon */
     size?: string;
+    /** The accessibility label of the icon */
+    accessibilityLabel?: string;
     style?: RNStyle;
   };
 
@@ -52,6 +54,7 @@ const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
   size = "m",
+  accessibilityLabel = null,
   ...props
 }) => {
   const componentSpecificProps = useComponentConfig(
@@ -65,7 +68,16 @@ const Icon: React.FC<IconProps> = ({
 
   const IconToUse = ExpoIcons[iconFamily];
 
-  return <IconToUse name={iconName} {...componentSpecificProps}></IconToUse>;
+  return (
+    <IconToUse
+      accessible={true}
+      accessibilityLabel={
+        accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
+      }
+      name={iconName}
+      {...componentSpecificProps}
+    ></IconToUse>
+  );
 };
 
 export default Icon;

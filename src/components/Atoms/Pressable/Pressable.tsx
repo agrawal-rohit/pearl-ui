@@ -28,6 +28,8 @@ type PressableProps = BoxProps &
     isDisabledAndroidSound?: boolean;
     /** Enables the Android ripple effect and configures its properties. */
     isDisabledAndroidRipple?: boolean;
+    /** A short description of the action that occurs when this element is interacted with (Used for accessibility) */
+    actionDescription?: string;
   };
 
 const defaultRippleConfig: PressableAndroidRippleConfig = {
@@ -43,7 +45,13 @@ const Pressable: React.FC<PressableProps> = ({
   isDisabledAndroidSound = false,
   isDisabled = false,
   isDisabledAndroidRipple = false,
+  accessibilityLabel = "Press me!",
+  actionDescription = "",
+  accessibilityState = null,
   onPress,
+  onPressIn = null,
+  onPressOut = null,
+  onLongPress = null,
   ...props
 }) => {
   const pressableStyles = useStyledProps(props, boxStyleFunctions);
@@ -56,8 +64,18 @@ const Pressable: React.FC<PressableProps> = ({
     <RNPressable
       android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
       onPress={onPress}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      onLongPress={onLongPress}
       disabled={isDisabled}
       android_disableSound={isDisabledAndroidSound}
+      accessible={true}
+      accessibilityLabel={accessibilityLabel}
+      accessibilityHint={actionDescription}
+      accessibilityRole="button"
+      accessibilityState={
+        accessibilityState ? accessibilityState : { disabled: isDisabled }
+      }
       {...pressableStyles}
     >
       {children}
