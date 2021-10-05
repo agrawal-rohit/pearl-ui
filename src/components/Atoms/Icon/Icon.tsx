@@ -52,6 +52,23 @@ type IconProps = ColorProps &
     style?: RNStyle;
   };
 
+const iconFamilyMapping = {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  FontAwesome5,
+  Fontisto,
+  Foundation,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial,
+};
+
 /** he `Icon` component can used to add Expo Icons to your app and customize them using style props. */
 const Icon: React.FC<IconProps> = ({
   iconFamily,
@@ -71,7 +88,7 @@ const Icon: React.FC<IconProps> = ({
     iconStyleFunctions
   );
 
-  const IconToUse = ExpoIcons[iconFamily];
+  const IconToUse = iconFamilyMapping[iconFamily];
 
   return (
     <IconToUse
