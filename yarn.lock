@@ -3463,16 +3463,16 @@
     react-native-modal-selector "^2.0.2"
     tinycolor2 "^1.4.1"
 
-"@storybook/addon-toolbars@^6.3.8":
-  version "6.3.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.3.8.tgz#8ac21e57d8a584055e01381010e4b5ece649c7f4"
-  integrity sha512-jo9w3/TjYSYapSzTluVJzeeATzxf85KpPA/MjuqHl4MvTA1R7ApckZOsfRDcql6xrGEYUfGjUF6MRIicuxojeg==
+"@storybook/addon-toolbars@^6.3.9":
+  version "6.3.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.3.9.tgz#70043db07490d13f0e779ed30b0226dc7dd6849b"
+  integrity sha512-9LgjmHtmOwv5++nKEruVKvHfqfqz23uHr7aht9b3tLf/6oNuRoCakddyIunoxhxw6SIW8rUObgjt8bnGxBSu1g==
   dependencies:
-    "@storybook/addons" "6.3.8"
-    "@storybook/api" "6.3.8"
-    "@storybook/client-api" "6.3.8"
-    "@storybook/components" "6.3.8"
-    "@storybook/theming" "6.3.8"
+    "@storybook/addons" "6.3.9"
+    "@storybook/api" "6.3.9"
+    "@storybook/client-api" "6.3.9"
+    "@storybook/components" "6.3.9"
+    "@storybook/theming" "6.3.9"
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
 
