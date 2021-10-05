@@ -18,7 +18,7 @@ export const useComponentConfig = (
   const { theme } = useTheme();
 
   // User overriden props
-  const overridenStyles = useStyledProps(receivedProps, styleFunctions);
+  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
 
@@ -55,6 +55,12 @@ export const useComponentConfig = (
             `theme.components['${String(themeComponentKey)}']`
           );
 
+          checkKeyAvailability(
+            activeSizeAndVariantConfig["size"] as string,
+            componentStyleConfig!.sizes!,
+            `theme.components['${String(themeComponentKey)}']['sizes']`
+          );
+
           activeSizeAndVariantStyles =
             componentStyleConfig!.sizes![
               activeSizeAndVariantConfig[currProp] as string
@@ -64,6 +70,12 @@ export const useComponentConfig = (
             "variants",
             componentStyleConfig,
             `theme.components['${String(themeComponentKey)}']`
+          );
+
+          checkKeyAvailability(
+            activeSizeAndVariantConfig["variant"] as string,
+            componentStyleConfig!.variants!,
+            `theme.components['${String(themeComponentKey)}']['variants']`
           );
 
           activeSizeAndVariantStyles =
@@ -96,9 +108,10 @@ export const useComponentConfig = (
 
   return {
     ...componentStyles,
+    ...overridenProps,
     style: {
       ...componentStyles.style,
-      ...overridenStyles.style,
+      ...overridenProps.style,
     },
   };
 };

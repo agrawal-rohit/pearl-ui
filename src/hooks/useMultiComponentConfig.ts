@@ -21,7 +21,7 @@ export const useMultiComponentConfig = (
   const { theme } = useTheme();
 
   // User overriden props
-  const overridenStyles = useStyledProps(receivedProps, styleFunctions);
+  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
 
@@ -70,11 +70,19 @@ export const useMultiComponentConfig = (
               );
 
               checkKeyAvailability(
+                activeSizeAndVariantConfig["size"] as string,
+                componentStyleConfig!.sizes!,
+                `theme.components['${String(themeComponentKey)}']['sizes']`
+              );
+
+              checkKeyAvailability(
                 part,
                 componentStyleConfig!.sizes![
                   activeSizeAndVariantConfig[currProp] as string
                 ],
-                `theme.components['${String(themeComponentKey)}']['sizes']`
+                `theme.components['${String(themeComponentKey)}']['sizes'][${
+                  activeSizeAndVariantConfig[currProp]
+                }]`
               );
 
               activeSizeAndVariantStyles =
@@ -89,11 +97,19 @@ export const useMultiComponentConfig = (
               );
 
               checkKeyAvailability(
+                activeSizeAndVariantConfig["variant"] as string,
+                componentStyleConfig!.variants!,
+                `theme.components['${String(themeComponentKey)}']['variants']`
+              );
+
+              checkKeyAvailability(
                 part,
                 componentStyleConfig!.variants![
                   activeSizeAndVariantConfig[currProp] as string
                 ],
-                `theme.components['${String(themeComponentKey)}']['variants']`
+                `theme.components['${String(themeComponentKey)}']['variants'][${
+                  activeSizeAndVariantConfig[currProp]
+                }]`
               );
 
               activeSizeAndVariantStyles =
@@ -125,9 +141,10 @@ export const useMultiComponentConfig = (
         if (!partStyle) {
           finalComponentPartProps = {
             ...currentComponentPartProps,
+            ...overridenProps,
             style: {
               ...currentComponentPartProps.style,
-              ...overridenStyles.style,
+              ...overridenProps.style,
             },
           };
         }

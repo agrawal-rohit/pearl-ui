@@ -63,8 +63,9 @@ storiesOf("Button", module)
       <Button onPress={action("clicked-text")} variant="outline">
         Button text
       </Button>
-      <Button onPress={action("clicked-text")}>Button text</Button>
-      <Button onPress={action("clicked-text")}>Button text</Button>
+      <Button onPress={action("clicked-text")} variant="ghost">
+        Button text
+      </Button>
     </>
   ))
   .add("Disabled", () => (
