@@ -2,6 +2,14 @@
 
 exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
 <View
+  accessibilityHint=""
+  accessibilityLabel="Press me!"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   focusable={true}
   onBlur={[Function]}
@@ -25,6 +33,14 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
 
 exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
 <View
+  accessibilityHint=""
+  accessibilityLabel="Press me!"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   focusable={true}
   onBlur={[Function]}
