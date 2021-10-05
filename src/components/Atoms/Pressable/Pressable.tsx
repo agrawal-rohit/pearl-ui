@@ -8,7 +8,7 @@ import {
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { color } from "../../../theme/src/styleFunctions";
 
-type PressableProps = BoxProps &
+export type PressableProps = BoxProps &
   Omit<
     RNPressableProps,
     | "android_ripple"
@@ -17,7 +17,7 @@ type PressableProps = BoxProps &
     | "disabled"
   > & {
     /** Function to call when the component is pressed. */
-    onPress: () => void;
+    onPress?: () => void;
     /** Ripple effect configuration for the android_ripple property. */
     androidRippleConfig?: PressableAndroidRippleConfig;
     /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
@@ -48,7 +48,7 @@ const Pressable: React.FC<PressableProps> = ({
   accessibilityLabel = "Press me!",
   actionDescription = "",
   accessibilityState = null,
-  onPress,
+  onPress = null,
   onPressIn = null,
   onPressOut = null,
   onLongPress = null,
