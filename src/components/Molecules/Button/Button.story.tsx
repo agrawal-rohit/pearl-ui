@@ -92,17 +92,29 @@ storiesOf("Button", module)
         Button text
       </Button>
       <Button onPress={action("clicked-text")} size="s" isLoading>
-        Button text
+        Rename variable to Bob
       </Button>
 
-      <Button
+      {/* <Button
         onPress={action("clicked-text")}
         size="s"
         loadingText="Loading"
         isLoading
       >
-        Button text
+        Rename variable to Bob
+      </Button> */}
+      <Button
+        backgroundColor="neutral.600"
+        onPress={action("clicked-text")}
+        isLoading={true}
+        size="s"
+        mb="l"
+        loadingText="Renaming"
+        alignSelf="flex-end"
+      >
+        Rename variable to Bob
       </Button>
+
       <Button onPress={action("clicked-text")} size="m" isLoading>
         Button text
       </Button>
