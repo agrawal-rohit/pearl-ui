@@ -2,6 +2,8 @@
 
 exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
 <Text
+  accessibilityLabel="stepforward Icon"
+  accessible={true}
   allowFontScaling={false}
   style={
     Array [
@@ -29,6 +31,8 @@ exports[`Atoms/Icon passes the snapshot test in light mode 1`] = `<Text />`;
 
 exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
 <Text
+  accessibilityLabel="stepforward Icon"
+  accessible={true}
   allowFontScaling={false}
   style={
     Array [
