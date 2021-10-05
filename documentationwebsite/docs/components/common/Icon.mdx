@@ -15,12 +15,30 @@ import { Icon } from "pearl-ui";
 
 ```jsx
 <Icon iconFamily="AntDesign" iconName="stepforward" />
+```
 
-// size="l" refers to the value of `theme.components["Icon"]["sizes"]["l"]`
+### Icon sizes
+
+Use the `size` prop to change the size of icon. You can set the value to the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+
+```jsx
+// size="l" refers to the value of `theme.components.Icon["sizes"]["l"]`
 <Icon iconFamily="AntDesign" iconName="stepforward" size="l" />
+```
 
+### Override Style
+
+The Icon component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
 // passing style prop color="primary.500" overrides the default component style value of color="neutral.900"
-<Icon iconFamily="AntDesign" iconName="stepforward" size="l" color="primary.500" margin="xl" />
+<Icon
+  iconFamily="AntDesign"
+  iconName="stepforward"
+  size="l"
+  color="primary.500"
+  margin="xl"
+/>
 ```
 
 ## Example
@@ -49,6 +67,11 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
+## Accessibility
+
+- Icon has the `role` of `text`.
+- Icon has the default label set as `{iconName} Icon`. A custom label can be specified using the `accessibilityLabel` prop.
+
 ## Props
 
 ### Supported style props
@@ -61,11 +84,12 @@ The `Icon` component supports the following style props:
 
 ### Additional props
 
-| Name       | Required | Type                                                                                                                                                                                                                                     | Default | Description                                              |
-| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- |
-| iconFamily | true     | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> |         | Icon family that contains the icon you want to use       |
-| iconName   | true     | <t>string</t>                                                                                                                                                                                                                            |         | Name of the icon as given in it's respective icon family |
-| size       | false    | <t>PearlTheme.components.Icon["sizes"]</t>                                                                                                                                                                                               | `"m"`   | The size of the icon                                     |
+| Name               | Required | Type                                                                                                                                                                                                                                     | Default | Description                                              |
+| ------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- |
+| iconFamily         | true     | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> |         | Icon family that contains the icon you want to use       |
+| iconName           | true     | <t>string</t>                                                                                                                                                                                                                            |         | Name of the icon as given in it's respective icon family |
+| size               | false    | <t>PearlTheme.components.Icon["sizes"]</t>                                                                                                                                                                                               | `"m"`   | The size of the icon                                     |
+| accessibilityLabel | false    | <t>string</t>                                                                                                                                                                                                                            |         | The accessibility label of the icon                      |
 
 ## Default Component Style
 

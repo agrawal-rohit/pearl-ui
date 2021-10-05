@@ -6,7 +6,6 @@ import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig"
 import Icon from "../../Atoms/Icon/Icon";
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable from "../../Atoms/Pressable/Pressable";
-import { useTheme } from "../../../hooks/useTheme";
 
 type ButtonProps = BoxProps & {
   onPress: () => void;
@@ -119,11 +118,13 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Pressable
-      disabled={disabled}
+      isDisabled={disabled}
       opacity={disabled ? 0.5 : 1}
       onPress={onPress}
       alignSelf={isFullWidth ? "stretch" : "flex-start"}
       androidRippleConfig={{ color: `${colorScheme}.200` }}
+      accessibilityLabel={!isLoading ? children : "Loading"}
+      accessibilityState={{ disabled: isDisabled, busy: isLoading }}
       {...multiComponentStyles.root}
     >
       {isLoading ? renderLoadingStatus() : renderMainContent()}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Text as RNText } from "react-native";
 import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import { AccessibilityRoles } from "../../../hooks/utils/types";
 import {
   backgroundColor,
   BackgroundColorProps,
@@ -72,7 +73,12 @@ const Text = React.forwardRef((props: ComponentProps, ref: any) => {
   };
 
   return (
-    <RNText ref={ref} style={finalStyle}>
+    <RNText
+      ref={ref}
+      style={finalStyle}
+      accessible={true}
+      accessibilityRole="text"
+    >
       {props.children}
     </RNText>
   );
