@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Button 🚧
+title: Button
 ---
 
 `Button` is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
@@ -11,52 +11,107 @@ title: Button 🚧
 import { Button } from "pearl-ui";
 ```
 
-<!-- 
 ## Usage
 
 ```jsx
-<Pressable
-  onPress={() => {
-    console.log("I was pressed!");
-  }}
-  p="m"
-  backgroundColor="primary.500"
+<Button>I'm a button</Button>
+```
+
+### Button sizes
+
+Use the `size` prop to change the size of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Button size="xs">Tiny Button</Button>
+
+<Button size="s">Small Button</Button>
+
+<Button size="m">Regular Button</Button>
+
+<Button size="l">Large Button</Button>
+```
+
+### Button variants
+
+Use the `variant` prop to change the visual style of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Button variant="solid">Solid Button</Button>
+
+<Button variant="outline">Outline Button</Button>
+
+<Button variant="ghost">Ghost Button</Button>
+```
+
+### Button with icon
+
+You can add left and right icons to the Button component using the `leftIcon` and `rightIcon` props respectively.
+
+:::info
+The `leftIcon` and `rightIcon` prop values should be react elements **NOT** strings.
+:::
+
+```jsx
+import { Icon } from "pearl-ui";
+
+<Button
+  leftIcon={<Icon iconFamily="AntDesign" iconName="heart" />}
 >
-  <Text>Press me!</Text>
-</Pressable>
+  Button with left icon
+</Button>
+
+<Button
+  variant="outline"
+  rightIcon={<Icon iconFamily="AntDesign" iconName="cloudupload" />}
+>
+  Button with right icon
+</Button>
+```
+
+### Button loading state
+
+Pass the `isLoading` prop to show a loading state on the button. By default, Button will show a spinner and leave the button's width unchanged.
+
+You can also pass the `loadingText` prop to show a spinner and the loading text. When a `loadingText` is present, you can change the placement of the spinner element to either <t>start</t> or <t>end</t> using the `spinnerPlacement` prop. It is <t>start</t> by default.
+
+```jsx
+<Button isLoading>Basic loading button</Button>
+
+<Button isLoading loadingText="Loading">Button with loading text</Button>
+
+<Button
+  isLoading
+  loadingText="Loading"
+  spinnerPlacement="end"
+>
+  Button with spinner at the end
+</Button>
+```
+
+### Button color scheme
+
+Use the `colorScheme` prop to change the color palette of the button. This is much more powerful than simply passing a `backgroundColor` style prop as the `colorScheme` prop changes all the use color values in a palette through a single prop.
+
+You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Button colorScheme="primary">Primary Button</Button>
+
+<Button colorScheme="secondary">Secondary Button</Button>
 ```
 
 ### Android Ripple effect
 
-In order to preserve the native ripple effect on Android devices, `Pressable` provides a default ripple effect that should work for most scenarios. However:
+In order to preserve the native ripple effect on Android devices, Button provides a default ripple effect that should work for most scenarios. By default, the ripple color is the `200` palette value of the active color scheme.
 
-- this effect can be further customized using the `androidRippleConfig` prop,
-- or disabled altogether using `isDisabledAndroidRipple`, as per your design requirements (Refer to the [props section](#props) for more).
+### Override Style
+
+The Button component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
 
 ```jsx
-// The ripple effect can be customized by passing in a config object
-<Pressable
-  onPress={() => {
-    console.log("I was pressed!");
-  }}
-  p="m"
-  backgroundColor="primary.500"
-  androidRippleConfig={{ color: "primary.800" }}
->
-  <Text>Press me!</Text>
-</Pressable>
-
-// Or the ripple effect can be disabled altogether
-<Pressable
-  onPress={() => {
-    console.log("I was pressed!");
-  }}
-  p="m"
-  backgroundColor="primary.500"
-  isDisabledAndroidRipple
->
-  <Text>Press me!</Text>
-</Pressable>
+// passing style prop m="xl" overrides the default component style value of m="xxs"
+// passing style prop boxShadow="xl" adds a box shadow to the button
+<Button m="xl" boxShadow="3xl" variant="outline" />
 ```
 
 ## Example
@@ -87,30 +142,158 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- Pressable has the `role` of `button`.
-- Pressable has the default label set as 'Press me!'. A custom label can be specified using the `accessibilityLabel` prop.
-- Pressable expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+- Button has the `role` of `button`.
+- Button has the default accessibility label set as text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t> A custom label can be specified using the `accessibilityLabel` prop.
+- Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
 ## Props
 
 ### Supported style props
 
-You can pass all [Box](../common/Box) related props to `Pressable`, in addition to the following.
+Since the Button component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `Button`, in addition to the following.
 
 ### Additional props
 
-| Name                    | Required | Type                                                                                                                | Default                                      | Description                                                                                                                     |
-| ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| onPress                 | true     | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>                             |                                              | Function to call when the component is pressed.                                                                                 |
-| actionDescription       | true     | <t>string</t>                                                                                                       |                                              | A short description of the action that occurs when this element is interacted with (Used for accessibility).                    |
-| onPressIn               | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>                             |                                              | Called immediately when a touch is engaged, before `onPressOut` and `onPress`.                                                  |
-| onPressInDelay          | false    | <t>number</t>                                                                                                       | null                                         | Duration (in milliseconds) to wait after press down before calling onPressIn.                                                   |
-| onPressOut              | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>                             |                                              | Called when a touch is released.                                                                                                |
-| onLongPress             | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>                             |                                              | Called if the time after onPressIn lasts longer than 500 milliseconds. This time period can be customized with `delayLongPress` |
-| delayLongPress          | false    | <t>number</t>                                                                                                       | 500                                          | Duration (in milliseconds) from onPressIn before onLongPress is called                                                          |
-| hitSlop                 | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                                          |                                              | Sets additional distance outside of element in which a press can be detected.                                                   |
-| pressRetentionOffset    | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                                          | { bottom: 30, left: 20, right: 20, top: 20 } | Additional distance outside of this view in which a touch is considered a press before onPressOut is triggered.                 |
-| isDisabled              | false    | <t>boolean</t>                                                                                                      | `false`                                      | Whether the press behavior is disabled.                                                                                         |
-| isDisabledAndroidSound  | false    | <t>boolean</t>                                                                                                      | false                                        | If true, doesn't play Android system sound on press.                                                                            |
-| androidRippleConfig     | false    | <t>{ color: PearlTheme['palette'] \| ColorModeColor, borderless: boolean, radius: number, foreground: boolean }</t> | { color: "#E4E9F2", borderless: false }      | Ripple effect configuration for the android_ripple property.                                                                    |
-| isDisabledAndroidRipple | false    | <t>boolean</t>                                                                                                      | `false`                                      | Enables the Android ripple effect and configures its properties.                                                                | -->
+| Name             | Required | Type                                            | Default     | Description                                                              |
+| ---------------- | -------- | ----------------------------------------------- | ----------- | ------------------------------------------------------------------------ |
+| size             | false    | <t>PearlTheme.components.Button["sizes"]</t>    | `"m"`       | Size of the button.                                                      |
+| variant          | false    | <t>PearlTheme.components.Button["variants"]</t> | `"filled"`  | Variant of the button.                                                   |
+| isLoading        | false    | <t>boolean</t>                                  | `false`     | Whether the button is in a loading state.                                |
+| isFullWidth      | false    | <t>boolean</t>                                  | `false`     | Whether the button should span the entire width of the parent container. |
+| loadingText      | false    | <t>string</t>                                   | `null`      | The text value to display when the button is in a loading state.         |
+| colorScheme      | false    | <t>PearlTheme.palette</t>                       | `"primary"` | Active color palette of the button.                                      |
+| spinnerPlacement | false    | <t>"start" \| "end"</t>                         | `"start"`   | The position of the loading spinner with respect to the `loadingText`.   |
+| leftIcon         | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the left side of the main text.                       |
+| rightIcon        | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the right side of the main text.                      |
+
+## Default component Style
+
+```js
+export default {
+  parts: ["root", "text", "spinner", "icon"],
+  baseStyle: {
+    root: {
+      margin: "xxs",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+  sizes: {
+    xs: {
+      root: {
+        py: "xxs",
+        px: "xs",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn4",
+      },
+      spinner: {
+        my: "xxs",
+        size: "s",
+      },
+      icon: {
+        size: "s",
+      },
+    },
+    s: {
+      root: {
+        py: "xs",
+        px: "xs",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn3",
+      },
+      spinner: {
+        size: "m",
+      },
+      icon: {
+        size: "m",
+      },
+    },
+    m: {
+      root: {
+        py: "s",
+        px: "s",
+        borderRadius: "m",
+      },
+      text: {
+        variant: "btn2",
+      },
+      spinner: {
+        size: "m",
+      },
+      icon: {
+        size: "m",
+      },
+    },
+    l: {
+      root: {
+        py: "m",
+        px: "m",
+        borderRadius: "m",
+      },
+      text: {
+        variant: "btn1",
+      },
+      spinner: {
+        size: "l",
+      },
+      icon: {
+        size: "l",
+      },
+    },
+  },
+  variants: {
+    filled: {
+      root: {
+        backgroundColor: "primary.500",
+      },
+      text: { color: "neutral.100" },
+      spinner: {
+        color: "neutral.100",
+      },
+      icon: {
+        color: "neutral.100",
+      },
+    },
+    outline: {
+      root: {
+        backgroundColor: {
+          light: "neutral.100",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
+        borderColor: "primary.500",
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+    ghost: {
+      root: {
+        backgroundColor: {
+          light: "neutral.100",
+          dark: "neutral.800",
+        },
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+  },
+  defaults: {
+    size: "m",
+    variant: "filled",
+  },
+};
+```

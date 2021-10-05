@@ -71,7 +71,7 @@ function FeaturesSection() {
     {
       title: "Developer Experience",
       description:
-        "Boost your productivity during development with the help of style functions and modular components",
+        "Boost your productivity during development with the help of style props and modular components",
       icon: <HiLightningBolt fontSize={30} />,
     },
     {

@@ -89,9 +89,27 @@ export default {
     },
     outline: {
       root: {
-        backgroundColor: "transparent",
-        borderWidth: 2,
+        backgroundColor: {
+          light: "neutral.100",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
         borderColor: "primary.500",
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+    ghost: {
+      root: {
+        backgroundColor: {
+          light: "neutral.100",
+          dark: "neutral.800",
+        },
       },
       text: { color: "primary.500" },
       spinner: {
