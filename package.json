@@ -28,7 +28,7 @@
     "@react-native-async-storage/async-storage": "~1.15.9",
     "@react-native-community/netinfo": "^6.0.2",
     "@storybook/addon-a11y": "^6.3.9",
-    "@storybook/addon-controls": "^6.3.9",
+    "@storybook/addon-controls": "^6.3.10",
     "@storybook/addon-docs": "^6.3.9",
     "@storybook/addon-toolbars": "^6.3.10",
     "@types/react-native-indicators": "^0.16.1",
