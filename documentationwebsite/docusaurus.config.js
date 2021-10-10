@@ -43,6 +43,19 @@
           respectPrefersColorScheme: false,
         },
         image: "img/logo.png",
+        algolia: {
+          apiKey: "92c72ce8bc4acdda47492dbbe56f0e2d",
+          indexName: "pearl-ui",
+
+          // Optional: see doc section below
+          contextualSearch: true,
+
+          // Optional: see doc section below
+          appId: "BH4D9OD16A",
+
+          // Optional: Algolia search parameters
+          searchParameters: {},
+        },
         metadatas: [
           { name: "og:type", content: "website" },
           {

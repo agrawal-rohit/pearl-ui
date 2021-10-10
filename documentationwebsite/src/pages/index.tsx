@@ -8,7 +8,6 @@ import styles from "./index.module.css";
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
-import Head from "@docusaurus/Head";
 
 function HomepageHeader() {
   return (
@@ -21,7 +20,7 @@ function HomepageHeader() {
         <p className={styles.heroDescription}>
           Pearl UI is a design-system-driven framework for developers to build
           beautiful, accessible mobile apps right out of the box. Take your idea
-          from an MVP to a finished product at the speed of light!
+          from a Figma mockup to a finished product at the speed of light!
         </p>
         <Link
           className={clsx(
@@ -114,7 +113,7 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
       description="Pearl UI is a design-system-driven framework for developers to build
       beautiful, accessible mobile apps straight out of the box. Take your
-      idea from an MVP to a finished product at the speed of light!"
+      idea from a Figma mockup to a finished product at the speed of light!"
     >
       {/* <Head>
         <script async src="https://snack.expo.dev/embed.js"></script>

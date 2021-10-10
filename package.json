@@ -28,9 +28,9 @@
     "@react-native-async-storage/async-storage": "~1.15.9",
     "@react-native-community/netinfo": "^6.0.2",
     "@storybook/addon-a11y": "^6.3.9",
-    "@storybook/addon-controls": "^6.3.9",
     "@storybook/addon-docs": "^6.3.10",
-    "@storybook/addon-toolbars": "^6.3.9",
+    "@storybook/addon-controls": "^6.3.10",
+    "@storybook/addon-toolbars": "^6.3.10",
     "@types/react-native-indicators": "^0.16.1",
     "@types/react-test-renderer": "^17.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -49,7 +49,7 @@
     "storybook": "^6.3.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.15.8",
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@semantic-release/changelog": "^5.0.1",
