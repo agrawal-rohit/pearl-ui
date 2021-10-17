@@ -4,7 +4,7 @@ import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
 import { BasePearlTheme } from "./types";
 
-type ThemeType = "light" | "dark" | "system";
+type ThemeType = "light" | "dark";
 
 export interface IThemeContext {
   /** Theme configuration object for the active color mode */
@@ -17,7 +17,7 @@ export interface IThemeContext {
 
 interface ThemeProviderProps {
   /** Default color mode for the theme (light, dark, system) */
-  defaultColorMode?: ThemeType;
+  defaultColorMode?: ThemeType | "system";
   /** The theme configuration object */
   theme?: BasePearlTheme;
   /** A flag that describes the loading status of the custom fonts */
@@ -37,8 +37,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   haveFontsLoaded = true,
   children,
 }) => {
-  const [colorMode, setColorMode] = useState<ThemeType>(defaultColorMode);
   const systemThemeStyle = useColorScheme() as ThemeType;
+  const [colorMode, setColorMode] = useState<ThemeType>(
+    defaultColorMode === "system" ? systemThemeStyle : defaultColorMode
+  );
 
   const changeThemeTo = (colorMode: ThemeType) => {
     if (colorMode === "dark") {
@@ -60,12 +62,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     // Set initial Theme
     if (colorMode === "light") {
       changeThemeTo("light");
-    } else if (colorMode === "dark") {
+    } else {
       changeThemeTo("dark");
-    } else if (colorMode === "system") {
-      changeThemeTo(systemThemeStyle);
     }
-  }, [defaultColorMode, colorMode, theme]);
+  }, [colorMode, theme]);
 
   if (haveFontsLoaded) {
     return (

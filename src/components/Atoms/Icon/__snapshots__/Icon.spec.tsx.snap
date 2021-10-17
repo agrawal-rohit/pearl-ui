@@ -9,7 +9,7 @@ exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
     Array [
       Object {
         "color": undefined,
-        "fontSize": 15,
+        "fontSize": 18.75,
       },
       Object {
         "color": "#1A2138",
@@ -38,7 +38,7 @@ exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
     Array [
       Object {
         "color": undefined,
-        "fontSize": 15,
+        "fontSize": 18.75,
       },
       Object {
         "color": "#6A7BFF",
