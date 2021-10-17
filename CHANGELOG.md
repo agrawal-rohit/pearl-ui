@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.2...v1.2.3) (2021-10-17)
+
+
+### Bug Fixes
+
+* added tons of docs, Added algolia search, some bug fixes ([315ac12](https://github.com/agrawal-rohit/pearl-ui/commit/315ac129eed02f666004921ad647ab968d3d1fa5))
+* fixed componentConfig hooks for non-style props, made minor bug fixes, added docs for Button ([3b70e7f](https://github.com/agrawal-rohit/pearl-ui/commit/3b70e7f90bb610077af5e4e828f030ab246b33ca))
+* fixing icon implementation ([4d876f5](https://github.com/agrawal-rohit/pearl-ui/commit/4d876f521eb3ce744f5cf92b1e67e7b04d4b110b))
+
 ## [1.2.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.1...v1.2.2) (2021-10-05)
 
 
