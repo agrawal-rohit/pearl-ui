@@ -10,7 +10,7 @@ const BorderRadiiBox: React.FC<BorderRadiiBoxProps> = ({ keyName, radius }) => {
   return (
     <div className={styles.container}>
       <div className={styles.swatch} style={{ borderRadius: radius }}>
-        "{keyName}"
+        &ldquo;{keyName}&rdquo;
       </div>
     </div>
   );

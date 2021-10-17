@@ -241,7 +241,7 @@ export default {
 };
 ```
 
-An example of a molecular component config applied to the [Button](../components/common/Button) component is given below:
+An example of a molecular component config applied to the [Button](../components/forms/Button) component is given below:
 
 ```js
 const newButtonConfig = {

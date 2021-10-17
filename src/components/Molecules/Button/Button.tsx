@@ -5,26 +5,32 @@ import Text from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Icon from "../../Atoms/Icon/Icon";
 import { useColorScheme } from "../../../hooks/useColorScheme";
-import Pressable from "../../Atoms/Pressable/Pressable";
+import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
-type ButtonProps = BoxProps & {
-  onPress: () => void;
+type ButtonProps = PressableProps & {
+  /** Size of the button. */
   size?: string;
+  /** Variant of the button. */
   variant?: string;
-  loadingText?: string;
-  colorScheme?: string;
-  spinnerPlacement?: "start" | "end";
+  /** Whether the button is in a loading state.  */
   isLoading?: boolean;
+  /** Whether the button should span the entire width of the parent container */
   isFullWidth?: boolean;
-  isDisabled?: boolean;
+  /** The text value to display when the button is in a loading state */
+  loadingText?: string;
+  /** Active color palette of the button */
+  colorScheme?: string;
+  /** The position of the loading spinner with respect to the loadingText */
+  spinnerPlacement?: "start" | "end";
+  /** Icon to display on the left side of the main text */
   leftIcon?: React.ReactElement;
+  /** Icon to display on the right side of the main text */
   rightIcon?: React.ReactElement;
 };
 
-/**  */
+/** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
 const Button: React.FC<ButtonProps> = ({
   children,
-  onPress,
   loadingText = null,
   colorScheme = "primary",
   spinnerPlacement = "start",
@@ -82,7 +88,17 @@ const Button: React.FC<ButtonProps> = ({
         </Box>
       );
     } else {
-      return <Spinner {...multiComponentStyles.spinner} />;
+      return (
+        <>
+          <Spinner
+            style={{ position: "absolute" }}
+            {...multiComponentStyles.spinner}
+          />
+          <Text {...multiComponentStyles.text} color="transparent">
+            {children}
+          </Text>
+        </>
+      );
     }
   };
 
@@ -120,9 +136,13 @@ const Button: React.FC<ButtonProps> = ({
     <Pressable
       isDisabled={disabled}
       opacity={disabled ? 0.5 : 1}
-      onPress={onPress}
+      onPress={props.onPress}
       alignSelf={isFullWidth ? "stretch" : "flex-start"}
-      androidRippleConfig={{ color: `${colorScheme}.200` }}
+      androidRippleConfig={
+        props.androidRippleConfig
+          ? props.androidRippleConfig
+          : { color: `${colorScheme}.200` }
+      }
       accessibilityLabel={!isLoading ? children : "Loading"}
       accessibilityState={{ disabled: isDisabled, busy: isLoading }}
       {...multiComponentStyles.root}

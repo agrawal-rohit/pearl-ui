@@ -6,16 +6,16 @@ export default {
   },
   sizes: {
     s: {
-      size: 10,
+      spinnerSize: 10,
     },
     m: {
-      size: 15,
+      spinnerSize: 15,
     },
     l: {
-      size: 20,
+      spinnerSize: 20,
     },
     xl: {
-      size: 30,
+      spinnerSize: 30,
     },
   },
   variants: {
