@@ -4,8 +4,8 @@
   module.exports = {
     title: "Pearl UI",
     tagline:
-      "A simple and modular UI framework for building gorgeous mobile apps",
-    url: "https://pearl-ui.vercel.app",
+      "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
+    url: "https://www.pearl-ui.dev/",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -43,6 +43,19 @@
           respectPrefersColorScheme: false,
         },
         image: "img/logo.png",
+        algolia: {
+          apiKey: "92c72ce8bc4acdda47492dbbe56f0e2d",
+          indexName: "pearl-ui",
+
+          // Optional: see doc section below
+          contextualSearch: true,
+
+          // Optional: see doc section below
+          appId: "BH4D9OD16A",
+
+          // Optional: Algolia search parameters
+          searchParameters: {},
+        },
         metadatas: [
           { name: "og:type", content: "website" },
           {
@@ -52,7 +65,7 @@
           {
             name: "og:description",
             content:
-              "A simple and accessible UI toolkit for cross platform mobile apps",
+              "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
           },
           { name: "og:image", content: "img/logo.png" },
           { name: "og:url", content: "https://pearl-ui.vercel.app" },
@@ -62,7 +75,7 @@
           {
             name: "twitter:description",
             content:
-              "A simple and accessible UI toolkit for cross platform mobile apps",
+              "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
           },
           { name: "twitter:image", content: "img/logo.png" },
           { name: "twitter:site", content: "https://pearl-ui.vercel.app" },
@@ -76,7 +89,7 @@
           },
           items: [
             {
-              to: "/docs/getting-started/installation", // ./docs/Intro.md
+              to: "/docs/getting-started/introduction", // ./docs/Intro.md
               label: "Docs",
               position: "left",
             },

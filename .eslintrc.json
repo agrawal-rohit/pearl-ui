@@ -2,14 +2,17 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
   ],
+  "plugins": ["jest"],
   "rules": {
     "react/jsx-filename-extension": [0],
     "global-require": [0],

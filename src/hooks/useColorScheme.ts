@@ -20,15 +20,18 @@ const replaceColorValuesInObject = (
 };
 
 /**
- * Hook to get the covert an existing prop object to a different color scheme
+ * Hook to covert an existing style props object to a different color scheme from the active theme palette.
+ * @param targetColorScheme  Name of the target color scheme
+ * @param props Style props object
+ * @returns
  */
 export const useColorScheme = (
-  colorSchemeThemeKey: string,
+  targetColorScheme: string,
   props: Record<string, any>
 ): Record<string, any> => {
   const { theme } = useTheme();
 
-  checkKeyAvailability(colorSchemeThemeKey, theme.palette, "theme.palette");
+  checkKeyAvailability(targetColorScheme, theme.palette, "theme.palette");
 
-  return replaceColorValuesInObject(colorSchemeThemeKey, props);
+  return replaceColorValuesInObject(targetColorScheme, props);
 };

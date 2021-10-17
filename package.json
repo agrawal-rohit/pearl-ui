@@ -1,13 +1,14 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
-  "version": "1.1.4",
+  "version": "1.2.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",
   "private": false,
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
+    "start:storybook": "concurrently \"yarn run prestorybook\" \"yarn run storybook\"",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -27,10 +28,10 @@
     "@expo-google-fonts/poppins": "^0.2.0",
     "@react-native-async-storage/async-storage": "~1.15.9",
     "@react-native-community/netinfo": "^6.0.2",
-    "@storybook/addon-a11y": "^6.3.9",
-    "@storybook/addon-controls": "^6.3.9",
-    "@storybook/addon-docs": "^6.3.9",
-    "@storybook/addon-toolbars": "^6.3.9",
+    "@storybook/addon-a11y": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.10",
+    "@storybook/addon-controls": "^6.3.10",
+    "@storybook/addon-toolbars": "^6.3.10",
     "@types/react-native-indicators": "^0.16.1",
     "@types/react-test-renderer": "^17.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -46,7 +47,7 @@
     "react-native-aria": "^0.2.3",
     "react-native-indicators": "^0.17.0",
     "react-native-web": "~0.14.13",
-    "storybook": "^6.3.9"
+    "storybook": "^6.3.12"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -112,7 +113,8 @@
       "!**/babel.config.js",
       "!**/storybook/**",
       "!**/assets/**",
-      "!**/jest.setup.js"
+      "!**/jest.setup.js",
+      "!**/*.css"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/",
