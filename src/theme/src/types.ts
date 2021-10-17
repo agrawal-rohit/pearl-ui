@@ -37,7 +37,7 @@ export interface ColorPalette {
   };
 }
 
-export interface ComponentConfig {
+export interface AtomicComponentConfig {
   baseStyle: {
     [key: string]: any;
   };
@@ -53,7 +53,7 @@ export interface ComponentConfig {
   };
 }
 
-export interface MultiComponentConfig {
+export interface MolecularComponentConfig {
   parts: string[];
   baseStyle: {
     [key: string]: {
@@ -89,7 +89,7 @@ export interface BasePearlTheme {
     [key: string]: number;
   };
   components: {
-    [key: string]: ComponentConfig | MultiComponentConfig;
+    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
   };
   elevation: {
     [key: string]: ElevationConfig;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Text as RNText } from "react-native";
-import { useComponentConfig } from "../../../hooks/useComponentConfig";
-import { AccessibilityRoles } from "../../../hooks/utils/types";
+import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import {
   backgroundColor,
   BackgroundColorProps,
@@ -28,6 +27,9 @@ export type TextProps = ColorProps &
   TypographyProps &
   SpacingProps &
   TextShadowProps & {
+    /** The size of the text */
+    size?: string;
+    /** The variant of the text */
     variant?: string;
   };
 
@@ -51,10 +53,11 @@ type ComponentProps = TextProps & Omit<RNTextProps, keyof TextProps>;
  * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
  */
 const Text = React.forwardRef((props: ComponentProps, ref: any) => {
-  const componentSpecificProps = useComponentConfig(
+  const componentSpecificProps = useAtomicComponentConfig(
     "Text",
     props,
     {
+      size: props.size,
       variant: props.variant,
     },
     textStyleFunctions
