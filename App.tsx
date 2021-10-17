@@ -10,10 +10,6 @@ import {
   Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/themeContext";
-import OfflineNotice from "./src/components/Molecules/OfflineNotice/OfflineNotice";
-import Screen from "./src/components/Atoms/Screen/Screen";
-import Text from "./src/components/Atoms/Text/Text";
-import Box from "./src/components/Atoms/Box/Box";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({

@@ -3,8 +3,7 @@ import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
 import composeStyleProps from "../theme/src/composeStyleProps";
-import { RNStyle, StyleFunctionContainer } from "../theme/src/types";
-import { StyleProp } from "react-native";
+import { StyleFunctionContainer } from "../theme/src/types";
 
 const filterStyledProps = (props: any, omitList: any) => {
   const omittedProp = omitList.reduce((acc: any, prop: any) => {
@@ -20,6 +19,12 @@ const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
+/**
+ * Hook to convert the received style props to appropriate React Native styles
+ * @param props Raw props passed to the component where the hook is being used
+ * @param styleFunctions List of style functions to use for computing the received style props
+ * @returns
+ */
 export const useStyledProps = (
   props: { [key: string]: any },
   styleFunctions: StyleFunctionContainer[]
