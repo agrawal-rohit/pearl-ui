@@ -10,7 +10,22 @@ import {
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
-import * as ExpoIcons from "@expo/vector-icons";
+import {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  FontAwesome5,
+  Fontisto,
+  Foundation,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial,
+} from "@expo/vector-icons";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import responsiveSize from "../Text/responsiveSize";
 
