@@ -38,7 +38,7 @@ export default {
         size: "m",
       },
       icon: {
-        size: "m",
+        size: "s",
       },
     },
     m: {
@@ -70,7 +70,7 @@ export default {
         size: "l",
       },
       icon: {
-        size: "l",
+        size: "m",
       },
     },
   },

@@ -11,7 +11,8 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
 import * as ExpoIcons from "@expo/vector-icons";
-import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
+import responsiveSize from "../Text/responsiveSize";
 
 const iconStyleFunctions = [
   color,
@@ -44,6 +45,8 @@ type IconProps = ColorProps &
     iconName: string;
     /** The size of the icon */
     size?: string;
+    /** The variant of the icon */
+    variant?: string;
     /** The accessibility label of the icon */
     accessibilityLabel?: string;
     style?: RNStyle;
@@ -54,14 +57,16 @@ const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
   size = "m",
+  variant = undefined,
   accessibilityLabel = null,
   ...props
 }) => {
-  const componentSpecificProps = useComponentConfig(
+  const componentSpecificProps = useAtomicComponentConfig(
     "Icon",
     props,
     {
       size: size,
+      variant: variant,
     },
     iconStyleFunctions
   );
@@ -76,6 +81,7 @@ const Icon: React.FC<IconProps> = ({
       }
       name={iconName}
       {...componentSpecificProps}
+      size={responsiveSize(componentSpecificProps.size)}
     ></IconToUse>
   );
 };
