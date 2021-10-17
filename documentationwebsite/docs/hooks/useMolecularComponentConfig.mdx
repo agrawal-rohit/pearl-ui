@@ -54,28 +54,44 @@ As you can see, the hook returns the appropriate props in their respective bucke
 
 Let's update the `ColorView` example mentioned in the [useAtomicComponentConfig](./useAtomicComponentConfig#usage) section to a molecular component built using 2 atomic components:
 
-1. [Box](../components/common/Box)
+1. [View](https://reactnative.dev/docs/view)
 2. [Text](../components/common/Text)
 
 ```js
 import { extendTheme } from "pearl-ui";
 
 const colorViewConfig = {
+  parts: ["view", "text"],
   baseStyle: {
-    backgroundColor: {
-      light: "neutral.300",
-      dark: "neutral.600",
+    view: {
+      backgroundColor: {
+        light: "neutral.300",
+        dark: "neutral.600",
+      },
+      borderWidth: 2,
+      borderColor: "red",
     },
-    borderWidth: 2,
-    borderColor: "red",
+    text: {
+      variant: "p2",
+    },
   },
   variants: {
     redBox: {
-      backgroundColor: "red",
+      view: {
+        backgroundColor: "red",
+      },
+      text: {
+        color: "red",
+      },
     },
     cyanBox: {
-      backgroundColor: "cyan",
-      borderColor: "cyan",
+      view: {
+        backgroundColor: "cyan",
+        borderColor: "cyan",
+      },
+      text: {
+        color: "cyan",
+      },
     },
   },
   defaults: {
@@ -131,14 +147,18 @@ type ViewProps = React.ComponentProps<typeof View> & {
 type ComponentProps = ColorViewProps & Omit<ViewProps, keyof ColorViewProps>;
 
 const ColorView: React.FC<ComponentProps> = (props) => {
-  const componentConfig = useAtomicComponentConfig(
+  const componentConfig = useMolecularComponentConfig(
     "ColorView",
     props,
     { variant: props.variant },
     colorViewStyleFunctions
   );
 
-  return <View {...componentConfig}>{props.children}</View>;
+  return (
+    <View {...componentConfig.view}>
+      <Text {...componentConfig.text}>{props.children}</Text>
+    </View>
+  );
 };
 ```
 
@@ -154,14 +174,18 @@ import { useStyledProps, backgroundColor, border } from "pearl-ui";
 const colorViewStyleFunctions = [border, backgroundColor];
 
 const ColorView = (props) => {
-  const componentConfig = useAtomicComponentConfig(
+  const componentConfig = useMolecularComponentConfig(
     "ColorView",
     props,
     { variant: props.variant },
     colorViewStyleFunctions
   );
 
-  return <View {...componentConfig}>{props.children}</View>;
+  return (
+    <View {...componentConfig.view}>
+      <Text {...componentConfig.text}>{props.children}</Text>
+    </View>
+  );
 };
 ```
 
