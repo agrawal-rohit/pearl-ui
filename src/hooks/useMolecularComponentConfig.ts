@@ -1,7 +1,7 @@
 import {
-  MultiComponentConfig,
+  MolecularComponentConfig,
   StyleFunctionContainer,
-} from "./../theme/src/types";
+} from "../theme/src/types";
 import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
@@ -9,10 +9,10 @@ import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 
-export const useMultiComponentConfig = (
+export const useMolecularComponentConfig = (
   themeComponentKey: string,
   receivedProps: Record<string, any>,
-  sizeAndVariantProps: MultiComponentConfig["defaults"] = {
+  sizeAndVariantProps: MolecularComponentConfig["defaults"] = {
     size: undefined,
     variant: undefined,
   },
@@ -21,20 +21,20 @@ export const useMultiComponentConfig = (
   const { theme } = useTheme();
 
   // User overriden props
-  const overridenStyles = useStyledProps(receivedProps, styleFunctions);
+  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
 
   const componentStyleConfig = theme.components[
     themeComponentKey
-  ] as MultiComponentConfig;
-  const activeSizeAndVariantConfig: MultiComponentConfig["defaults"] = {};
+  ] as MolecularComponentConfig;
+  const activeSizeAndVariantConfig: MolecularComponentConfig["defaults"] = {};
 
   let finalComponentProps: Record<string, any> = {};
   if (componentStyleConfig.hasOwnProperty("defaults")) {
     const defaultComponentConfig = componentStyleConfig[
       "defaults"
-    ] as NonNullable<MultiComponentConfig["defaults"]>;
+    ] as NonNullable<MolecularComponentConfig["defaults"]>;
 
     if (defaultComponentConfig.hasOwnProperty("size")) {
       activeSizeAndVariantConfig.size = sizeAndVariantProps.size
@@ -70,11 +70,19 @@ export const useMultiComponentConfig = (
               );
 
               checkKeyAvailability(
+                activeSizeAndVariantConfig["size"] as string,
+                componentStyleConfig!.sizes!,
+                `theme.components['${String(themeComponentKey)}']['sizes']`
+              );
+
+              checkKeyAvailability(
                 part,
                 componentStyleConfig!.sizes![
                   activeSizeAndVariantConfig[currProp] as string
                 ],
-                `theme.components['${String(themeComponentKey)}']['sizes']`
+                `theme.components['${String(themeComponentKey)}']['sizes'][${
+                  activeSizeAndVariantConfig[currProp]
+                }]`
               );
 
               activeSizeAndVariantStyles =
@@ -89,11 +97,19 @@ export const useMultiComponentConfig = (
               );
 
               checkKeyAvailability(
+                activeSizeAndVariantConfig["variant"] as string,
+                componentStyleConfig!.variants!,
+                `theme.components['${String(themeComponentKey)}']['variants']`
+              );
+
+              checkKeyAvailability(
                 part,
                 componentStyleConfig!.variants![
                   activeSizeAndVariantConfig[currProp] as string
                 ],
-                `theme.components['${String(themeComponentKey)}']['variants']`
+                `theme.components['${String(themeComponentKey)}']['variants'][${
+                  activeSizeAndVariantConfig[currProp]
+                }]`
               );
 
               activeSizeAndVariantStyles =
@@ -125,9 +141,10 @@ export const useMultiComponentConfig = (
         if (!partStyle) {
           finalComponentPartProps = {
             ...currentComponentPartProps,
+            ...overridenProps,
             style: {
               ...currentComponentPartProps.style,
-              ...overridenStyles.style,
+              ...overridenProps.style,
             },
           };
         }

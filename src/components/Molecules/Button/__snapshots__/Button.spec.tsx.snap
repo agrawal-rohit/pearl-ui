@@ -1,0 +1,1537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Button passes the snapshot test for basic setup 1`] = `
+<View
+  accessibilityHint=""
+  accessibilityLabel="Button press"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "busy": false,
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "flex-start",
+      "backgroundColor": "#6A7BFF",
+      "borderRadius": 8,
+      "display": "flex",
+      "justifyContent": "center",
+      "margin": 4,
+      "opacity": 1,
+      "paddingHorizontal": 12,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "display": "flex",
+        "fontFamily": "Poppins-Medium",
+        "fontSize": 17.5,
+        "fontWeight": "500",
+        "lineHeight": 27.5,
+      }
+    }
+  >
+    Button press
+  </Text>
+</View>
+`;
+
+exports[`Atoms/Button passes the snapshot test for different color schemes 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Primary button"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Primary button
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Secondary button"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FF6AC6",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Secondary button
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Atoms/Button passes the snapshot test for different icons 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button with left icon"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text />
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 17.5,
+            "fontWeight": "500",
+            "lineHeight": 27.5,
+          }
+        }
+      >
+        Button with left icon
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button with right icon"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#6A7BFF",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+    variant="outline"
+  >
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        style={
+          Object {
+            "color": "#6A7BFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 17.5,
+            "fontWeight": "500",
+            "lineHeight": 27.5,
+          }
+        }
+      >
+        Button with right icon
+      </Text>
+      <Text />
+    </View>
+  </View>,
+]
+`;
+
+exports[`Atoms/Button passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="xs"
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 4,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 8,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 12.5,
+          "fontWeight": "500",
+          "lineHeight": 22.5,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="s"
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 4,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 8,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 15,
+          "fontWeight": "500",
+          "lineHeight": 25,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="m"
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="l"
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 20,
+          "fontWeight": "500",
+          "lineHeight": 30,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Atoms/Button passes the snapshot test for different variants 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+    variant="filled"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#6A7BFF",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+    variant="outline"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Button press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+    variant="ghost"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Button press
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Atoms/Button passes the snapshot test for loading state 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Loading"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 0.5,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "color": "#FFFFFF",
+            "flex": 0,
+            "position": "absolute",
+          },
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Loading indicator"
+        accessibilityRole="progressbar"
+        accessible={true}
+        animating={true}
+        animationDuration={3600}
+        animationEasing={[Function]}
+        color="#FFFFFF"
+        hideAnimationDuration={200}
+        interaction={true}
+        renderComponent={[Function]}
+        spinnerSize={15}
+        style={
+          Object {
+            "height": 15,
+            "opacity": 1,
+            "width": 15,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 15,
+                "transform": Array [
+                  Object {
+                    "rotate": "82.5deg",
+                  },
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+                "width": 15,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "height": 7.5,
+                  "overflow": "hidden",
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "translateY": 0,
+                      },
+                      Object {
+                        "rotate": "-172.5deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderColor": "#FFFFFF",
+                        "borderRadius": 7.5,
+                        "borderWidth": 1.5,
+                        "height": 15,
+                        "width": 15,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 15,
+                "transform": Array [
+                  Object {
+                    "rotate": "82.5deg",
+                  },
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+                "width": 15,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "height": 7.5,
+                  "overflow": "hidden",
+                  "top": 7.5,
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "translateY": -7.5,
+                      },
+                      Object {
+                        "rotate": "352.5deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderColor": "#FFFFFF",
+                        "borderRadius": 7.5,
+                        "borderWidth": 1.5,
+                        "height": 15,
+                        "width": 15,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      style={
+        Object {
+          "color": "transparent",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 27.5,
+        }
+      }
+    >
+      Basic loading button
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Loading"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 0.5,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+              "flex": 0,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animating={true}
+          animationDuration={3600}
+          animationEasing={[Function]}
+          color="#FFFFFF"
+          hideAnimationDuration={200}
+          interaction={true}
+          renderComponent={[Function]}
+          spinnerSize={15}
+          style={
+            Object {
+              "height": 15,
+              "opacity": 1,
+              "width": 15,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 15,
+                  "transform": Array [
+                    Object {
+                      "rotate": "82.5deg",
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "translateY": 0,
+                        },
+                        Object {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 15,
+                  "transform": Array [
+                    Object {
+                      "rotate": "82.5deg",
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "top": 7.5,
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "translateY": -7.5,
+                        },
+                        Object {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 17.5,
+            "fontWeight": "500",
+            "lineHeight": 27.5,
+            "marginLeft": 12,
+          }
+        }
+      >
+        Loading
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Loading"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 0.5,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 17.5,
+            "fontWeight": "500",
+            "lineHeight": 27.5,
+            "marginRight": 12,
+          }
+        }
+      >
+        Loading
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+              "flex": 0,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animating={true}
+          animationDuration={3600}
+          animationEasing={[Function]}
+          color="#FFFFFF"
+          hideAnimationDuration={200}
+          interaction={true}
+          renderComponent={[Function]}
+          spinnerSize={15}
+          style={
+            Object {
+              "height": 15,
+              "opacity": 1,
+              "width": 15,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 15,
+                  "transform": Array [
+                    Object {
+                      "rotate": "82.5deg",
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "translateY": 0,
+                        },
+                        Object {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "height": 15,
+                  "transform": Array [
+                    Object {
+                      "rotate": "82.5deg",
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Object {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "top": 7.5,
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "translateY": -7.5,
+                        },
+                        Object {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Atoms/Button passes the snapshot test when using style props 1`] = `
+<View
+  accessibilityHint=""
+  accessibilityLabel="Button press"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "busy": false,
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "flex-start",
+      "backgroundColor": "#6A7BFF",
+      "borderColor": "#E4E9F2",
+      "borderRadius": 8,
+      "borderWidth": 2,
+      "display": "flex",
+      "justifyContent": "center",
+      "margin": 4,
+      "opacity": 1,
+      "paddingHorizontal": 12,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "display": "flex",
+        "fontFamily": "Poppins-Medium",
+        "fontSize": 17.5,
+        "fontWeight": "500",
+        "lineHeight": 27.5,
+      }
+    }
+  >
+    Button press
+  </Text>
+</View>
+`;

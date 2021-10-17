@@ -18,7 +18,7 @@ import {
   spacing,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
-import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import SpinnerConfig from "./Spinner.config";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
@@ -32,9 +32,9 @@ const indicatorStyleFunctions = [
 type SpinnerProps = ColorProps &
   SpacingProps &
   LayoutProps & {
-    /** Size to use as defined in the active theme */
+    /** Size of the spinner. */
     size?: keyof typeof SpinnerConfig["sizes"];
-    /** Variant to use as defined in the active theme */
+    /** Type of the spinner. */
     variant?: keyof typeof SpinnerConfig["variants"];
     /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
     isLoading?: boolean;
@@ -73,7 +73,7 @@ const Spinner: React.FC<SpinnerProps> = ({
 }) => {
   if (!isLoading) return null;
 
-  const componentSpecificProps = useComponentConfig(
+  const componentSpecificProps = useAtomicComponentConfig(
     "Spinner",
     props,
     {
@@ -93,8 +93,9 @@ const Spinner: React.FC<SpinnerProps> = ({
         ? componentSpecificProps.style.color
         : componentSpecificProps.style.color,
       size: componentSpecificProps.sizeMultiplier
-        ? componentSpecificProps.sizeMultiplier * componentSpecificProps.size
-        : componentSpecificProps.size,
+        ? componentSpecificProps.sizeMultiplier *
+          componentSpecificProps.spinnerSize
+        : componentSpecificProps.spinnerSize,
       style: { flex: isFullScreen ? 1 : 0, ...componentSpecificProps.style },
       accessible: true,
       accessibilityLabel: accessibilityLabel

@@ -1,13 +1,14 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
-  "version": "1.1.4",
+  "version": "1.2.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",
   "private": false,
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
+    "start:storybook": "concurrently \"yarn run prestorybook\" \"yarn run storybook\"",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -112,7 +113,8 @@
       "!**/babel.config.js",
       "!**/storybook/**",
       "!**/assets/**",
-      "!**/jest.setup.js"
+      "!**/jest.setup.js",
+      "!**/*.css"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/",
