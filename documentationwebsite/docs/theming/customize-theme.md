@@ -59,76 +59,297 @@ function Usage() {
 
 ## Customizing component styles
 
-The approach for styling components in Pearl UI is heavily inspired from [Chakra UI](https://chakra-ui.com/docs/theming/customize-theme#customizing-component-styles). The main idea is most components have default or base styles (`baseStyle`), styles for different sizes (`sizes`), and styles for different visual variants (`variants`), and a `defaults` to denote the default size or variant.
+Creating, managing, and customizing components in a scalable manner as your project evolves can be extremely challenging. It usually requires a lot of developer expertise and constant refactoring, which eventually reduce delivery speed for your application.
 
-Here's what the component style object looks like:
+In order to deal with this, Pearl UI provides a rich styling API that allows you to style your components through the following approaches:
+
+<br />
+
+1. **[Style Props](../getting-started/style-props):** Add styles to a component by passing in style properties as component props.
+
+```jsx
+<Box
+  backgroundColor="neutral.100"
+  width="40%"
+  height={200}
+  borderStyle="solid"
+  borderWidth={2}
+  borderColor="tomato"
+  borderRadius="l"
+/>
+```
+
+<br />
+
+2. **[StyleSheets](https://reactnative.dev/docs/stylesheet):** The _de facto_ approach for styling components in React Native.
+
+```jsx
+import { StyleSheet } from "react-native";
+
+<Box style={styles.box} />;
+
+const styles = StyleSheet.create({
+  box: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: "#eaeaea",
+  },
+});
+```
+
+<br />
+
+3. **[Component Style Config](#component-style-config):** This approach is heavily inspired from the `styleConfig` API implemented in [Chakra UI](https://chakra-ui.com/docs/theming/component-style). It provides a consistent API that allows component styling through a single JSON file, thus making it easy to understand and maintain.
+
+```jsx
+<Button size="s" variant="outline" />
+```
+
+<br />
+
+### Component Style Config
+
+The Component Config API provides a standard format for specifying styles for a component that scales with your project. The main idea is most components have default or base styles, styles for different sizes (e.g. small, medium, large), and styles for different visual variants ((e.g. outline, solid, ghost)), and a `defaults` to denote the default size or variant.
+
+#### Atomic component config
+
+An atomic component is analogous to an **Atom** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Most components available in Pearl UI today are atomic components (e.g. Text, Spinner, Icon, etc.), and use the [useAtomicComponentConfig](../hooks/useAtomicComponentConfig) hook to enable the **component style config**.
+
+The component config format for an atomic component is as follow:
 
 ```js
-const ComponentStyle = {
-  // style object for base or default style
+export default {
+  // Base styles that are common to all sizes/variants
   baseStyle: {},
-  // styles for different sizes ("s", "m", "l")
+  // Styles for the size variations
   sizes: {},
-  // styles for different visual variants ("outline", "solid")
+  // Styles for the visual style variations
   variants: {},
-  // default values for `size` and `variant`
+  // The default `size` or `variant` values
+  defaults: {},
+};
+```
+
+An example of the atomic component config applied to the [Icon](../components/common/Icon) component is given below:
+
+```js
+const newIconConfig = {
+  // The styles all icons have in common
+  baseStyle: {
+    color: {
+      light: "neutral.900", // <-- The color of the icon when the app is in light mode
+      dark: "neutral.100", // <-- The color of the icon when the app is in dark mode
+    },
+  },
+  // Four sizes: s, m, l, and xl
+  sizes: {
+    s: {
+      size: 15, // <-- Not a style prop, so it is passed directly to the ExpoIcons component used in the Pearl UI Icon component
+    },
+    m: {
+      size: 20,
+    },
+    l: {
+      size: 25,
+    },
+    xl: {
+      size: 30,
+    },
+  },
+  // Three variants: neutral, primary, and secondary
+  variants: {
+    neutral: {}, // <-- Since this is empty, it uses the baseStyle configuration
+    primary: {
+      color: "primary.500", // <-- Overwrites the baseStyle configuration to always keep the color as 'primary.500'
+    },
+    secondary: {
+      color: "secondary.500", // <-- Overwrites the baseStyle configuration to always keep the color as 'secondary.500'
+    },
+  },
+  // The default size and variant values
   defaults: {
-    size: "",
-    variant: "",
+    size: "m",
+    variant: "neutral",
   },
 };
 ```
 
-For example, let's override the component styles for Pearl UI's [Screen](../components/common/Screen) component.
+For the final step, update the theme to include this new component configuration as follows:
 
 ```js
-// theme.js
 import { extendTheme } from "pearl-ui";
 
 const theme = extendTheme({
   components: {
-    Screen: {
-      // 1. We can update the base styles
-      baseStyle: {
-        backgroundColor: {
-          light: "neutral.300", // Normally, it is "neutral.100"
-          dark: "neutral.700", // Normally, it is "neutral.800"
-        },
+    Icon: newIconConfig,
+  },
+});
+```
+
+That's all you have to do! Now, when you use the Icon component, these updates will be automatically applied:
+
+```jsx
+<Box flexDirection="row" justifyContent="space-between">
+  <Icon iconFamily="Entypo" iconName="cup" size="s" variant="neutral" />
+  <Icon iconFamily="Entypo" iconName="cup" size="m" variant="primary" />
+  <Icon iconFamily="Entypo" iconName="cup" size="xl" variant="secondary" />
+</Box>
+```
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }}
+>
+  <img src="/img/component_styles_icon_light.png" alt="welcome" width="40%" />
+  <img src="/img/component_styles_icon_dark.png" alt="welcome" width="40%" />
+</div>
+
+<br />
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }}
+>
+  <h6>Light Mode</h6>
+  <h6>Dark Mode</h6>
+</div>
+
+#### Molecular component config
+
+A molecular component is analogous to a **Molecule** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Many components used in an actual app are molecular components (eg. Button, Datepicker, Modal, etc), and use the [useMolecularComponentConfig](../hooks/useMolecularComponentConfig) hook to enable the **component style config**.
+
+The component config format for a molecular component is as follow:
+
+```js
+export default {
+  // The parts of the component
+  parts: [],
+  // Base styles that are common to all sizes/variants
+  baseStyle: {},
+  // Styles for the size variations
+  sizes: {},
+  // Styles for the visual style variations
+  variants: {},
+  // The default `size` or `variant` values
+  defaults: {},
+};
+```
+
+An example of a molecular component config applied to the [Button](../components/common/Button) component is given below:
+
+```js
+const newButtonConfig = {
+  // Define the parts you want to use
+  parts: ["root", "text", "spinner", "icon"],
+  // The baseStyle config for all parts
+  baseStyle: {
+    // The styles all root parts would have in common
+    root: {
+      margin: "xxs",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+  // Two sizes: s and m
+  sizes: {
+    // Styles for all parts when the molecular component has size 's'
+    s: {
+      root: {
+        py: "xs",
+        px: "xs",
+        borderRadius: "s",
       },
-      // 2. We can add a new size or extend existing
-      sizes: {
-        half: {
-          flex: 0.5,
-        },
-        full: {
-          flex: 1,
-        },
+      text: {
+        variant: "btn3",
       },
-      // 3. We can add a new visual variant
-      variants: {
-        normal: {},
-        "with-padding": {
-          padding: "m",
-        },
+      spinner: {
+        size: "m",
       },
-      // 4. We can specify the default size and variant
-      defaults: {
-        size: "full",
-        variant: "normal",
+      icon: {
+        size: "m",
+      },
+    },
+    // Styles for all parts when the molecular component has size 'm'
+    m: {
+      root: {
+        py: "s",
+        px: "s",
+        borderRadius: "m",
+      },
+      text: {
+        variant: "btn2",
+      },
+      spinner: {
+        size: "m",
+      },
+      icon: {
+        size: "m",
       },
     },
   },
-});
-
-export default theme;
+  // Two variants: filled and outline
+  variants: {
+    // Styles for all parts when the molecular component has variant 'filled'
+    opaque: {
+      root: {
+        backgroundColor: "primary.500",
+      },
+      text: { color: "neutral.100" },
+      spinner: {
+        color: "neutral.100",
+      },
+      icon: {
+        color: "neutral.100",
+      },
+    },
+    // Styles for all parts when the molecular component has variant 'outline'
+    hollow: {
+      root: {
+        backgroundColor: {
+          light: "neutral.100",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
+        borderColor: "primary.500",
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+  },
+  // The default size and variant values for the molecular component
+  defaults: {
+    size: "m",
+    variant: "opaque",
+  },
+};
 ```
 
-That's all you have to do! When you use the Screen from Pearl UI, these updates will be automatically applied:
+For the final step, update the theme to include this new component configuration as follows:
+
+```js
+import { extendTheme } from "pearl-ui";
+
+const theme = extendTheme({
+  components: {
+    Button: newButtonConfig,
+  },
+});
+```
+
+That's it! Now, when you use the Button component, these updates will be automatically applied:
 
 ```jsx
-import { Screen } from "pearl-ui";
-
-<Screen size="half" variant="with-padding">
-  This is my custom screen
-</Screen>;
+<Button size="s" variant="opaque">Small Opaque button</Button>
+<Button size="m" variant="hollow">Medium Hollow button</Button>
 ```

@@ -18,7 +18,7 @@ import {
   spacing,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
-import { useComponentConfig } from "../../../hooks/useComponentConfig";
+import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import SpinnerConfig from "./Spinner.config";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
@@ -73,7 +73,7 @@ const Spinner: React.FC<SpinnerProps> = ({
 }) => {
   if (!isLoading) return null;
 
-  const componentSpecificProps = useComponentConfig(
+  const componentSpecificProps = useAtomicComponentConfig(
     "Spinner",
     props,
     {

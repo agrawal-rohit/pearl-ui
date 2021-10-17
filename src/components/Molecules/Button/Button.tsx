@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
-import { useMultiComponentConfig } from "../../../hooks/useMultiComponentConfig";
+import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Icon from "../../Atoms/Icon/Icon";
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable from "../../Atoms/Pressable/Pressable";
@@ -35,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon = null,
   ...props
 }) => {
-  let multiComponentStyles = useMultiComponentConfig("Button", props, {
+  let multiComponentStyles = useMolecularComponentConfig("Button", props, {
     size: props["size"],
     variant: props["variant"],
   });

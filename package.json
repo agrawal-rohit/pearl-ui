@@ -8,6 +8,7 @@
   "scripts": {
     "prestorybook": "rnstl",
     "start": "expo start",
+    "start:storybook": "concurrently \"yarn run prestorybook\" \"yarn run storybook\"",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",

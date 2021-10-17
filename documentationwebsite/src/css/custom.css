@@ -58,10 +58,6 @@ html[data-theme="dark"] {
   --variable-type-color: #a2d608;
 }
 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 code {
   background-color: var(--code-text-bgcolor);
   padding: 2px 5px;
@@ -130,7 +126,7 @@ t {
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);

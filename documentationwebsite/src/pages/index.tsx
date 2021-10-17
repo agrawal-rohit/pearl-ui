@@ -27,7 +27,7 @@ function HomepageHeader() {
             "button button--primary button--lg",
             styles.heroButton
           )}
-          to="/docs/getting-started/installation"
+          to="/docs/getting-started/introduction"
           style={{ marginRight: 10 }}
         >
           Get Started
@@ -70,7 +70,7 @@ function FeaturesSection() {
     {
       title: "Developer Experience",
       description:
-        "Boost your productivity during development with the help of style functions and modular components",
+        "Boost your productivity during development with the help of style props and modular components",
       icon: <HiLightningBolt fontSize={30} />,
     },
     {
@@ -113,7 +113,7 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
       description="Pearl UI is a design-system-driven framework for developers to build
       beautiful, accessible mobile apps straight out of the box. Take your
-      idea from a Figma mockup to a finished product at the speed of light!"
+      idea from a design mockup to a finished product at the speed of light!"
     >
       {/* <Head>
         <script async src="https://snack.expo.dev/embed.js"></script>
