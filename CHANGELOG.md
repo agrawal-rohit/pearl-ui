@@ -1,3 +1,26 @@
+## [1.2.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.1...v1.2.2) (2021-10-05)
+
+
+### Bug Fixes
+
+* fixed componentConfig hooks for non-style props, made minor bug fixes, added docs for Button ([4b3053e](https://github.com/agrawal-rohit/pearl-ui/commit/4b3053ef29aaed277463a872caa3b34adafd510b))
+
+## [1.2.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.0...v1.2.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* fixing icon implementation ([413369b](https://github.com/agrawal-rohit/pearl-ui/commit/413369beb4d5c6246f9b1a63df67fc037237d60b))
+
+# [1.2.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.4...v1.2.0) (2021-10-05)
+
+
+### Features
+
+* added useColorScheme hook, and a custom Pressable component ([8d25ed0](https://github.com/agrawal-rohit/pearl-ui/commit/8d25ed07884ef7d7b5e48e909bf0c97a7f27b70b))
+* **button:** added multiComponentConfig hook, added button component ([aba8b85](https://github.com/agrawal-rohit/pearl-ui/commit/aba8b85fdf2a87a2f3408b84421b2d4addb72f09))
+* **icon:** added Icon component and respective documentation ([6569ddd](https://github.com/agrawal-rohit/pearl-ui/commit/6569ddd84d7dea192a1b05236821fa62f6fe0cd5))
+
 ## [1.1.4](https://github.com/agrawal-rohit/pearl-ui/compare/v1.1.3...v1.1.4) (2021-09-29)
 
 

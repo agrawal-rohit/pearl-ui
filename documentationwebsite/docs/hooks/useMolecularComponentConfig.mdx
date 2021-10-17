@@ -1,0 +1,184 @@
+---
+sidebar_position: 5
+title: useMolecularComponentConfig
+---
+
+`useMolecularComponentConfig` is a custom hook used to convert a [molecular component style config](../theming/customize-theme#component-style-config) to the appropriate React Native styles.
+
+It takes the benefits of the [useAtomicComponentConfig](./useAtomicComponentConfig) hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
+
+## Import
+
+```js
+import { useMolecularComponentConfig } from "pearl-ui";
+```
+
+## Return value
+
+The `useMolecularComponentConfig` returns an object which contains the style props grouped by their respective parts.
+
+As an example, here's what the output value looks like for the [Button](../components/common/Button#default-component-style) component:
+
+```json
+{
+  "icon": {
+    "color": "neutral.100",
+    "size": "l"
+  },
+  "root": {
+    "alignItems": "center",
+    "backgroundColor": "primary.500",
+    "borderRadius": "m",
+    "justifyContent": "center",
+    "margin": "xxs",
+    "px": "m",
+    "py": "m",
+    "style": {
+      "display": "flex"
+    }
+  },
+  "spinner": {
+    "color": "neutral.100",
+    "size": "l"
+  },
+  "text": {
+    "color": "neutral.100",
+    "variant": "btn1"
+  }
+}
+```
+
+As you can see, the hook returns the appropriate props in their respective buckets so that they can be passed on to the underlying atomic components directly.
+
+## Usage
+
+Let's update the `ColorView` example mentioned in the [useAtomicComponentConfig](./useAtomicComponentConfig#usage) section to a molecular component built using 2 atomic components:
+
+1. [Box](../components/common/Box)
+2. [Text](../components/common/Text)
+
+```js
+import { extendTheme } from "pearl-ui";
+
+const colorViewConfig = {
+  baseStyle: {
+    backgroundColor: {
+      light: "neutral.300",
+      dark: "neutral.600",
+    },
+    borderWidth: 2,
+    borderColor: "red",
+  },
+  variants: {
+    redBox: {
+      backgroundColor: "red",
+    },
+    cyanBox: {
+      backgroundColor: "cyan",
+      borderColor: "cyan",
+    },
+  },
+  defaults: {
+    variant: "redBox",
+  },
+};
+
+const theme = extendTheme({
+  components: {
+    ColorView: colorViewConfig,
+  },
+});
+```
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="js"
+  values={[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="ts">
+
+```tsx title="ColorView.tsx"
+import React from "react";
+import { View } from "react-native";
+import {
+  useStyledProps,
+  backgroundColor,
+  BackgroundColorProps,
+  border,
+  BorderProps,
+  StyleFunctionContainer,
+} from "pearl-ui";
+
+type ColorViewProps = BackgroundColorProps &
+  BorderProps & {
+    /** Variant to use as defined in the active theme */
+    variant?: keyof typeof colorViewConfig["variants"];
+  };
+
+const colorViewStyleFunctions = [
+  border,
+  backgroundColor,
+] as StyleFunctionContainer[];
+
+type ViewProps = React.ComponentProps<typeof View> & {
+  children?: React.ReactNode;
+};
+type ComponentProps = ColorViewProps & Omit<ViewProps, keyof ColorViewProps>;
+
+const ColorView: React.FC<ComponentProps> = (props) => {
+  const componentConfig = useAtomicComponentConfig(
+    "ColorView",
+    props,
+    { variant: props.variant },
+    colorViewStyleFunctions
+  );
+
+  return <View {...componentConfig}>{props.children}</View>;
+};
+```
+
+</TabItem>
+
+<TabItem value="js">
+
+```jsx title="ColorViewComponent.jsx"
+import React from "react";
+import { View } from "react-native";
+import { useStyledProps, backgroundColor, border } from "pearl-ui";
+
+const colorViewStyleFunctions = [border, backgroundColor];
+
+const ColorView = (props) => {
+  const componentConfig = useAtomicComponentConfig(
+    "ColorView",
+    props,
+    { variant: props.variant },
+    colorViewStyleFunctions
+  );
+
+  return <View {...componentConfig}>{props.children}</View>;
+};
+```
+
+</TabItem>
+</Tabs>
+
+That's it! Now, you can control the active visual style of the component using the `variant` prop:
+
+```jsx
+<ColorView variant="cyanBox" />
+```
+
+## Parameters
+
+| Name                  | Required | Type                                                             | Default                                 | Description                                                                                        |
+| --------------------- | -------- | ---------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `themeComponentKey`   | true     | <t>PearlTheme.components</t>                                     |                                         | Name of the component in theme.components who's config needs to be used                            |
+| `receivedProps`       | true     | <t>object</t>                                                    |                                         | Raw props passed to the component where the hook is being used                                     |
+| `sizeAndVariantProps` | false    | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined } | Custom size and variant configuration to use                                                       |
+| `styleFunctions`      | false    | <t>StyleFunctionContainer[]</t>                                  | `boxStyleFunctions`                     | List of [style functions](../others/style-functions) to use for computing the received style props |
