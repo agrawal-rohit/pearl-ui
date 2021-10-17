@@ -55,8 +55,12 @@ const TypographyVariant: React.FC<TypographyVariantProps> = ({
                 : metadata[key];
             return (
               <>
-                <p className={styles.metaDataKey}>{key}: </p>
-                <p className={styles.metaData}>{data}</p>
+                <p key={i} className={styles.metaDataKey}>
+                  {key}:{" "}
+                </p>
+                <p key={i} className={styles.metaData}>
+                  {data}
+                </p>
               </>
             );
           })}

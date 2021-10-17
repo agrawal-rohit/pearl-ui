@@ -85,13 +85,13 @@ table thead tr th {
   font-size: smaller;
 }
 
+tr {
+  border-bottom: 1px solid var(--table-row-separator-color) !important;
+}
+
 tbody tr {
   background-color: transparent !important;
   font-size: 14px;
-}
-
-tr {
-  border-bottom: 1px solid var(--table-row-separator-color) !important;
 }
 
 tbody tr td {
@@ -112,7 +112,7 @@ h2 {
 }
 
 h3 {
-  margin-top: 40px !important;
+  margin-top: 60px !important;
   font-size: large;
 }
 

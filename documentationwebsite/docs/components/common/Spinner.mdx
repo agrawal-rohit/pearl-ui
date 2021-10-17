@@ -94,8 +94,8 @@ The `Spinner` component supports the following style props:
 
 | Name               | Required | Type                                                                                                   | Default     | Description                                                                                       |
 | ------------------ | -------- | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------- |
-| size               | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`       | Size to use as defined in the active theme.                                                       |
-| variant            | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"` | Type of spinner to use.                                                                           |
+| size               | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`       | Size of the spinner.                                                                              |
+| variant            | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"` | Type of the spinner.                                                                              |
 | isLoading          | false    | <t>boolean</t>                                                                                         | `true`      | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. |
 | isFullScreen       | false    | <t>boolean</t>                                                                                         | `false`     | Spinner container takes the entire screen size and centers the spinner within.                    |
 | animationDuration  | false    | <t>number</t>                                                                                          | `1200`      | Animation duration in ms.                                                                         |
@@ -113,16 +113,16 @@ export default {
   },
   sizes: {
     s: {
-      size: 10,
+      spinnerSize: 10,
     },
     m: {
-      size: 20,
+      spinnerSize: 15,
     },
     l: {
-      size: 30,
+      spinnerSize: 20,
     },
     xl: {
-      size: 40,
+      spinnerSize: 30,
     },
   },
   variants: {
@@ -132,7 +132,9 @@ export default {
       sizeMultiplier: 0.2,
       count: 4,
     },
-    spinner: {},
+    spinner: {
+      animationDuration: 3600,
+    },
     pacman: {},
     pulse: {},
     skype: { count: 5, minScale: 0.2, maxScale: 1.0 },
