@@ -18,6 +18,7 @@ We recommend adding a palette that ranges from `100` to `900`. Tools like [Theme
 export default {
   palette: {
     primary: {
+      50: "#F0F2FF",
       100: "#E1E6FF",
       200: "#C3CCFF",
       300: "#A5B1FF",
@@ -30,6 +31,7 @@ export default {
     },
 
     secondary: {
+      50: "#FFF1F4",
       100: "#FFE1E7",
       200: "#FFC3D6",
       300: "#FFA5CB",
@@ -52,6 +54,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 ### Primary
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Primary 50" colorValue="#F0F2FF" />
   <PaletteColor colorName="Primary 100" colorValue="#E1E6FF" />
   <PaletteColor colorName="Primary 200" colorValue="#C3CCFF" />
   <PaletteColor colorName="Primary 300" colorValue="#A5B1FF" />
@@ -66,6 +69,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 ### Secondary
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Secondary 50" colorValue="#FFF1F4" />
   <PaletteColor colorName="Secondary 100" colorValue="#FFE1E7" />
   <PaletteColor colorName="Secondary 200" colorValue="#FFC3D6" />
   <PaletteColor colorName="Secondary 300" colorValue="#FFA5CB" />
@@ -81,15 +85,16 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
   <PaletteColor
-    colorName="Neutral 100"
+    colorName="Neutral 50"
     colorValue="#FFFFFF"
     border="1px solid #E4E9F2"
   />
-  <PaletteColor colorName="Neutral 200" colorValue="#F7F9FC" />
-  <PaletteColor colorName="Neutral 300" colorValue="#EDF1F7" />
-  <PaletteColor colorName="Neutral 400" colorValue="#E4E9F2" />
-  <PaletteColor colorName="Neutral 500" colorValue="#C5CEE0" />
-  <PaletteColor colorName="Neutral 600" colorValue="#8F9BB3" />
+  <PaletteColor colorName="Neutral 100" colorValue="#F7F9FC" />
+  <PaletteColor colorName="Neutral 200" colorValue="#EDF1F7" />
+  <PaletteColor colorName="Neutral 300" colorValue="#E4E9F2" />
+  <PaletteColor colorName="Neutral 400" colorValue="#C5CEE0" />
+  <PaletteColor colorName="Neutral 500" colorValue="#8F9BB3" />
+  <PaletteColor colorName="Neutral 600" colorValue="#58617A" />
   <PaletteColor colorName="Neutral 700" colorValue="#2E3A59" />
   <PaletteColor colorName="Neutral 800" colorValue="#222B45" />
   <PaletteColor colorName="Neutral 900" colorValue="#1A2138" />
@@ -100,6 +105,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 #### Success
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Success 50" colorValue="#F6FBE6" />
   <PaletteColor colorName="Success 100" colorValue="#F5FCCC" />
   <PaletteColor colorName="Success 200" colorValue="#EAFA9A" />
   <PaletteColor colorName="Success 300" colorValue="#D6F266" />
@@ -114,6 +120,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 #### Info
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Info 50" colorValue="#ECFBFE" />
   <PaletteColor colorName="Info 100" colorValue="#D8FEFB" />
   <PaletteColor colorName="Info 200" colorValue="#B2FEFC" />
   <PaletteColor colorName="Info 300" colorValue="#8CF6FC" />
@@ -128,6 +135,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 #### Warning
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Warning 50" colorValue="#FFF9EB" />
   <PaletteColor colorName="Warning 100" colorValue="#FFF7D6" />
   <PaletteColor colorName="Warning 200" colorValue="#FFEDAE" />
   <PaletteColor colorName="Warning 300" colorValue="#FFE085" />
@@ -142,6 +150,7 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 #### Danger
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+  <PaletteColor colorName="Danger 50" colorValue="#FFEDEC" />
   <PaletteColor colorName="Danger 100" colorValue="#FFE7D9" />
   <PaletteColor colorName="Danger 200" colorValue="#FFCAB3" />
   <PaletteColor colorName="Danger 300" colorValue="#FFA68D" />

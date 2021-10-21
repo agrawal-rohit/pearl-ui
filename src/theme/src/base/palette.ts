@@ -2,6 +2,7 @@ import namedColors from "../../utils/namedColors.json";
 
 export const palette = {
   primary: {
+    50: "#F0F2FF",
     100: "#E1E6FF",
     200: "#C3CCFF",
     300: "#A5B1FF",
@@ -14,6 +15,7 @@ export const palette = {
   },
 
   secondary: {
+    50: "#FFF1F4",
     100: "#FFE1E7",
     200: "#FFC3D6",
     300: "#FFA5CB",
@@ -26,18 +28,20 @@ export const palette = {
   },
 
   neutral: {
-    100: "#FFFFFF",
-    200: "#F7F9FC",
-    300: "#EDF1F7",
-    400: "#E4E9F2",
-    500: "#C5CEE0",
-    600: "#8F9BB3",
+    50: "#FFFFFF",
+    100: "#F7F9FC",
+    200: "#EDF1F7",
+    300: "#E4E9F2",
+    400: "#C5CEE0",
+    500: "#8F9BB3",
+    600: "#58617A",
     700: "#2E3A59",
     800: "#222B45",
     900: "#1A2138",
   },
 
   success: {
+    50: "#F6FBE6",
     100: "#F5FCCC",
     200: "#EAFA9A",
     300: "#D6F266",
@@ -50,6 +54,7 @@ export const palette = {
   },
 
   info: {
+    50: "#ECFBFE",
     100: "#D8FEFB",
     200: "#B2FEFC",
     300: "#8CF6FC",
@@ -62,6 +67,7 @@ export const palette = {
   },
 
   warning: {
+    50: "#FFF9EB",
     100: "#FFF7D6",
     200: "#FFEDAE",
     300: "#FFE085",
@@ -74,6 +80,7 @@ export const palette = {
   },
 
   danger: {
+    50: "#FFEDEC",
     100: "#FFE7D9",
     200: "#FFCAB3",
     300: "#FFA68D",
