@@ -2,7 +2,7 @@ export default {
   baseStyle: {
     color: {
       light: "neutral.900",
-      dark: "neutral.100",
+      dark: "neutral.50",
     },
   },
   variants: {
@@ -88,29 +88,25 @@ export default {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 16,
-      lineHeight: 24,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn2: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 14,
-      lineHeight: 22,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn3: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 12,
-      lineHeight: 20,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn4: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 10,
-      lineHeight: 18,
-      color: "neutral.100",
+      color: "neutral.50",
     },
   },
   defaults: {

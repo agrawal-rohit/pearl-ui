@@ -25,7 +25,7 @@ import {
 interface CreateStyleFunctionProps {
   property: string;
   transform?: any;
-  styleProperty?: RNStyleProperty | "skip";
+  styleProperty?: RNStyleProperty | "skip" | string;
   themeKey?: keyof BasePearlTheme | undefined;
 }
 
@@ -88,7 +88,7 @@ export const createStyleFunction = ({
   };
 };
 
-const transformColorValue = (value: ColorModeColor | ColorValue) => {
+export const transformColorValue = (value: ColorModeColor | ColorValue) => {
   // Color Mode color provided
   if (typeof value === "object") {
     return useColorModeValue(value.light, value.dark);
