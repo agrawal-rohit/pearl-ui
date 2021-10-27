@@ -111,7 +111,7 @@ const Button: React.FC<ButtonProps> = ({
               iconFamily={leftIcon.props!.iconFamily}
               iconName={leftIcon.props!.iconName}
               alignSelf="center"
-              marginRight="xs"
+              marginRight={multiComponentStyles.root.py}
               {...leftIconProps}
             />
           ) : null}

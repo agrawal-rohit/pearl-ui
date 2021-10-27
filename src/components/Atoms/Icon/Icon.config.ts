@@ -2,7 +2,7 @@ export default {
   baseStyle: {
     color: {
       light: "neutral.900",
-      dark: "neutral.100",
+      dark: "neutral.50",
     },
   },
   sizes: {

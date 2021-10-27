@@ -33,7 +33,7 @@ The Text component also supports a [variety of style props](#supported-style-pro
 
 ```jsx
 // variant="p1" refers to the value of `theme.components.Text["variants"]["p1"]`
-// passing style prop color="primary.300" overrides the default component style value of color="neutral.100"
+// passing style prop color="primary.300" overrides the default component style value of color="neutral.50"
 <Text variant="btn1" color="primary.300">
   This is a large button text
 </Text>
@@ -96,7 +96,7 @@ export default {
   baseStyle: {
     color: {
       light: "neutral.900",
-      dark: "neutral.100",
+      dark: "neutral.50",
     },
   },
   variants: {
@@ -182,29 +182,25 @@ export default {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 16,
-      lineHeight: 24,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn2: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 14,
-      lineHeight: 22,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn3: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 12,
-      lineHeight: 20,
-      color: "neutral.100",
+      color: "neutral.50",
     },
     btn4: {
       fontFamily: "Poppins-Medium",
       fontWeight: "500",
       fontSize: 10,
-      lineHeight: 18,
-      color: "neutral.100",
+      color: "neutral.50",
     },
   },
   defaults: {

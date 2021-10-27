@@ -5,6 +5,7 @@ export default {
       margin: "xxs",
       justifyContent: "center",
       alignItems: "center",
+      activeOpacity: 0.9,
     },
   },
   sizes: {
@@ -77,20 +78,25 @@ export default {
   variants: {
     filled: {
       root: {
+        activeBackgroundColor: "primary.400",
         backgroundColor: "primary.500",
       },
-      text: { color: "neutral.100" },
+      text: { color: "neutral.50" },
       spinner: {
-        color: "neutral.100",
+        color: "neutral.50",
       },
       icon: {
-        color: "neutral.100",
+        color: "neutral.50",
       },
     },
     outline: {
       root: {
+        activeBackgroundColor: {
+          light: "primary.50",
+          dark: "primary.800",
+        },
         backgroundColor: {
-          light: "neutral.100",
+          light: "neutral.50",
           dark: "neutral.800",
         },
         borderWidth: 1,
@@ -106,8 +112,12 @@ export default {
     },
     ghost: {
       root: {
+        activeBackgroundColor: {
+          light: "primary.50",
+          dark: "primary.800",
+        },
         backgroundColor: {
-          light: "neutral.100",
+          light: "neutral.50",
           dark: "neutral.800",
         },
       },

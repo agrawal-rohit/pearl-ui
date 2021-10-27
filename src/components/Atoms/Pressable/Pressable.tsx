@@ -6,7 +6,12 @@ import {
   PressableProps as RNPressableProps,
 } from "react-native";
 import { useStyledProps } from "../../../hooks/useStyledProps";
-import { color } from "../../../theme/src/styleFunctions";
+import {
+  color,
+  createStyleFunction,
+  transformColorValue,
+} from "../../../theme/src/styleFunctions";
+import { BasePearlTheme, ColorModeColor } from "../../../theme/src/types";
 
 export type PressableProps = BoxProps &
   Omit<
@@ -30,6 +35,10 @@ export type PressableProps = BoxProps &
     isDisabledAndroidRipple?: boolean;
     /** A short description of the action that occurs when this element is interacted with (Used for accessibility) */
     actionDescription?: string;
+    /** The opacity of the element when it is pressed */
+    activeOpacity?: number;
+    /** The background color of the element when it is pressed */
+    activeBackgroundColor?: BasePearlTheme["palette"] | ColorModeColor;
   };
 
 const defaultRippleConfig: PressableAndroidRippleConfig = {
@@ -37,11 +46,21 @@ const defaultRippleConfig: PressableAndroidRippleConfig = {
   borderless: false,
 };
 
+const activeBackgroundColorStyleFunction = createStyleFunction({
+  property: "activeBackgroundColor",
+  styleProperty: "activeBackgroundColor",
+  themeKey: "palette",
+  transform: transformColorValue,
+});
+
+boxStyleFunctions.push(activeBackgroundColorStyleFunction);
+
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
 const Pressable: React.FC<PressableProps> = ({
   children,
   androidRippleConfig,
   onPressInDelay = 100,
+  activeOpacity = 1,
   isDisabledAndroidSound = false,
   isDisabled = false,
   isDisabledAndroidRipple = false,
@@ -77,6 +96,17 @@ const Pressable: React.FC<PressableProps> = ({
         accessibilityState ? accessibilityState : { disabled: isDisabled }
       }
       {...pressableStyles}
+      style={({ pressed }) => [
+        pressableStyles.style,
+        {
+          opacity: pressed ? activeOpacity : pressableStyles.style.opacity,
+          backgroundColor: pressed
+            ? pressableStyles.style.activeBackgroundColor
+              ? pressableStyles.style.activeBackgroundColor
+              : pressableStyles.style.backgroundColor
+            : pressableStyles.style.backgroundColor,
+        },
+      ]}
     >
       {children}
     </RNPressable>

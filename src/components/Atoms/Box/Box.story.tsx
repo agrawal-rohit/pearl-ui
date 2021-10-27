@@ -22,7 +22,7 @@ storiesOf("Box", module)
       justifyContent="space-around"
     >
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="xs"
@@ -30,7 +30,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="s"
@@ -38,7 +38,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="m"
@@ -46,7 +46,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="l"
@@ -54,7 +54,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="xl"
@@ -62,7 +62,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="2xl"
@@ -70,7 +70,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="3xl"
@@ -78,7 +78,7 @@ storiesOf("Box", module)
         margin="m"
       />
       <Box
-        backgroundColor="neutral.100"
+        backgroundColor="neutral.50"
         borderRadius="m"
         width="40%"
         boxShadow="4xl"
