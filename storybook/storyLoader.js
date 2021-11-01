@@ -12,7 +12,9 @@ function loadStories() {
   require("../src/components/Atoms/Spinner/Spinner.story");
   require("../src/components/Atoms/Text/Text.story");
   require("../src/components/Molecules/Button/Button.story");
+  require("../src/components/Molecules/Input/Input.story");
   require("../src/components/Molecules/OfflineNotice/OfflineNotice.story");
+  require("../src/components/Molecules/TextLink/TextLink.story");
 }
 
 const stories = [
@@ -24,7 +26,9 @@ const stories = [
   "../src/components/Atoms/Spinner/Spinner.story",
   "../src/components/Atoms/Text/Text.story",
   "../src/components/Molecules/Button/Button.story",
+  "../src/components/Molecules/Input/Input.story",
   "../src/components/Molecules/OfflineNotice/OfflineNotice.story",
+  "../src/components/Molecules/TextLink/TextLink.story",
 ];
 
 module.exports = {

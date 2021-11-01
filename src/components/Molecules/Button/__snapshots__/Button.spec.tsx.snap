@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Button passes the snapshot test for basic setup 1`] = `
+exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
 <View
   accessibilityHint=""
   accessibilityLabel="Button press"
@@ -23,23 +23,31 @@ exports[`Atoms/Button passes the snapshot test for basic setup 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "alignItems": "center",
-      "alignSelf": "flex-start",
-      "backgroundColor": "#6A7BFF",
-      "borderRadius": 8,
-      "display": "flex",
-      "justifyContent": "center",
-      "margin": 4,
-      "opacity": 1,
-      "paddingHorizontal": 12,
-      "paddingVertical": 12,
-    }
+    Array [
+      Object {
+        "activeBackgroundColor": "#8F9DFF",
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 8,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "opacity": 1,
+      },
+    ]
   }
 >
   <Text
     accessibilityRole="text"
     accessible={true}
+    allowFontScaling={true}
     style={
       Object {
         "color": "#FFFFFF",
@@ -47,16 +55,17 @@ exports[`Atoms/Button passes the snapshot test for basic setup 1`] = `
         "fontFamily": "Poppins-Medium",
         "fontSize": 17.5,
         "fontWeight": "500",
-        "lineHeight": 27.5,
+        "lineHeight": 23.75,
       }
     }
+    variant="btn2"
   >
     Button press
   </Text>
 </View>
 `;
 
-exports[`Atoms/Button passes the snapshot test for different color schemes 1`] = `
+exports[`Molecules/Button passes the snapshot test for different color schemes 1`] = `
 Array [
   <View
     accessibilityHint=""
@@ -80,23 +89,31 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -104,9 +121,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Primary button
     </Text>
@@ -133,23 +151,31 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#FF6AC6",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#FF8FC9",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FF6AC6",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#FF6AC6",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -157,9 +183,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Secondary button
     </Text>
@@ -167,7 +194,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Button passes the snapshot test for different icons 1`] = `
+exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
 Array [
   <View
     accessibilityHint=""
@@ -191,18 +218,25 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <View
@@ -217,6 +251,7 @@ Array [
       <Text
         accessibilityRole="text"
         accessible={true}
+        allowFontScaling={true}
         style={
           Object {
             "color": "#FFFFFF",
@@ -224,9 +259,10 @@ Array [
             "fontFamily": "Poppins-Medium",
             "fontSize": 17.5,
             "fontWeight": "500",
-            "lineHeight": 27.5,
+            "lineHeight": 23.75,
           }
         }
+        variant="btn2"
       >
         Button with left icon
       </Text>
@@ -254,20 +290,27 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#FFFFFF",
-        "borderColor": "#6A7BFF",
-        "borderRadius": 8,
-        "borderWidth": 1,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#F0F2FF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "opacity": 1,
+        },
+      ]
     }
     variant="outline"
   >
@@ -282,6 +325,7 @@ Array [
       <Text
         accessibilityRole="text"
         accessible={true}
+        allowFontScaling={true}
         style={
           Object {
             "color": "#6A7BFF",
@@ -289,9 +333,10 @@ Array [
             "fontFamily": "Poppins-Medium",
             "fontSize": 17.5,
             "fontWeight": "500",
-            "lineHeight": 27.5,
+            "lineHeight": 23.75,
           }
         }
+        variant="btn2"
       >
         Button with right icon
       </Text>
@@ -301,7 +346,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Button passes the snapshot test for different sizes 1`] = `
+exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
 Array [
   <View
     accessibilityHint=""
@@ -326,23 +371,31 @@ Array [
     onStartShouldSetResponder={[Function]}
     size="xs"
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 4,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 8,
-        "paddingVertical": 4,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 4,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 8,
+          "paddingVertical": 4,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -350,9 +403,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 12.5,
           "fontWeight": "500",
-          "lineHeight": 22.5,
+          "lineHeight": 17.5,
         }
       }
+      variant="btn4"
     >
       Button press
     </Text>
@@ -380,23 +434,31 @@ Array [
     onStartShouldSetResponder={[Function]}
     size="s"
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 4,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 8,
-        "paddingVertical": 8,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 4,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 8,
+          "paddingVertical": 8,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -404,9 +466,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 15,
           "fontWeight": "500",
-          "lineHeight": 25,
+          "lineHeight": 20,
         }
       }
+      variant="btn3"
     >
       Button press
     </Text>
@@ -434,23 +497,31 @@ Array [
     onStartShouldSetResponder={[Function]}
     size="m"
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -458,9 +529,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Button press
     </Text>
@@ -488,23 +560,31 @@ Array [
     onStartShouldSetResponder={[Function]}
     size="l"
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -512,9 +592,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 20,
           "fontWeight": "500",
-          "lineHeight": 30,
+          "lineHeight": 26.25,
         }
       }
+      variant="btn1"
     >
       Button press
     </Text>
@@ -522,7 +603,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Button passes the snapshot test for different variants 1`] = `
+exports[`Molecules/Button passes the snapshot test for different variants 1`] = `
 Array [
   <View
     accessibilityHint=""
@@ -546,24 +627,32 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 1,
+        },
+      ]
     }
     variant="filled"
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#FFFFFF",
@@ -571,9 +660,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Button press
     </Text>
@@ -600,26 +690,34 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#FFFFFF",
-        "borderColor": "#6A7BFF",
-        "borderRadius": 8,
-        "borderWidth": 1,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#F0F2FF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "opacity": 1,
+        },
+      ]
     }
     variant="outline"
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#6A7BFF",
@@ -627,9 +725,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Button press
     </Text>
@@ -656,24 +755,32 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#FFFFFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 1,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#F0F2FF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 1,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "opacity": 1,
+        },
+      ]
     }
     variant="ghost"
   >
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "#6A7BFF",
@@ -681,9 +788,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Button press
     </Text>
@@ -691,7 +799,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Button passes the snapshot test for loading state 1`] = `
+exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
 Array [
   <View
     accessibilityHint=""
@@ -715,18 +823,25 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 0.5,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 0.5,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 0.5,
+        },
+      ]
     }
   >
     <View
@@ -933,6 +1048,7 @@ Array [
     <Text
       accessibilityRole="text"
       accessible={true}
+      allowFontScaling={true}
       style={
         Object {
           "color": "transparent",
@@ -940,9 +1056,10 @@ Array [
           "fontFamily": "Poppins-Medium",
           "fontSize": 17.5,
           "fontWeight": "500",
-          "lineHeight": 27.5,
+          "lineHeight": 23.75,
         }
       }
+      variant="btn2"
     >
       Basic loading button
     </Text>
@@ -969,18 +1086,25 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 0.5,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 0.5,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 0.5,
+        },
+      ]
     }
   >
     <View
@@ -1195,6 +1319,7 @@ Array [
       <Text
         accessibilityRole="text"
         accessible={true}
+        allowFontScaling={true}
         style={
           Object {
             "color": "#FFFFFF",
@@ -1202,10 +1327,11 @@ Array [
             "fontFamily": "Poppins-Medium",
             "fontSize": 17.5,
             "fontWeight": "500",
-            "lineHeight": 27.5,
+            "lineHeight": 23.75,
             "marginLeft": 12,
           }
         }
+        variant="btn2"
       >
         Loading
       </Text>
@@ -1233,18 +1359,25 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
-        "display": "flex",
-        "justifyContent": "center",
-        "margin": 4,
-        "opacity": 0.5,
-        "paddingHorizontal": 12,
-        "paddingVertical": 12,
-      }
+      Array [
+        Object {
+          "activeBackgroundColor": "#8F9DFF",
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 8,
+          "display": "flex",
+          "justifyContent": "center",
+          "margin": 4,
+          "opacity": 0.5,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        Object {
+          "backgroundColor": "#6A7BFF",
+          "opacity": 0.5,
+        },
+      ]
     }
   >
     <View
@@ -1259,6 +1392,7 @@ Array [
       <Text
         accessibilityRole="text"
         accessible={true}
+        allowFontScaling={true}
         style={
           Object {
             "color": "#FFFFFF",
@@ -1266,10 +1400,11 @@ Array [
             "fontFamily": "Poppins-Medium",
             "fontSize": 17.5,
             "fontWeight": "500",
-            "lineHeight": 27.5,
+            "lineHeight": 23.75,
             "marginRight": 12,
           }
         }
+        variant="btn2"
       >
         Loading
       </Text>
@@ -1478,7 +1613,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Button passes the snapshot test when using style props 1`] = `
+exports[`Molecules/Button passes the snapshot test when using style props 1`] = `
 <View
   accessibilityHint=""
   accessibilityLabel="Button press"
@@ -1501,25 +1636,33 @@ exports[`Atoms/Button passes the snapshot test when using style props 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "alignItems": "center",
-      "alignSelf": "flex-start",
-      "backgroundColor": "#6A7BFF",
-      "borderColor": "#E4E9F2",
-      "borderRadius": 8,
-      "borderWidth": 2,
-      "display": "flex",
-      "justifyContent": "center",
-      "margin": 4,
-      "opacity": 1,
-      "paddingHorizontal": 12,
-      "paddingVertical": 12,
-    }
+    Array [
+      Object {
+        "activeBackgroundColor": "#8F9DFF",
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "display": "flex",
+        "justifyContent": "center",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "opacity": 1,
+      },
+    ]
   }
 >
   <Text
     accessibilityRole="text"
     accessible={true}
+    allowFontScaling={true}
     style={
       Object {
         "color": "#FFFFFF",
@@ -1527,9 +1670,10 @@ exports[`Atoms/Button passes the snapshot test when using style props 1`] = `
         "fontFamily": "Poppins-Medium",
         "fontSize": 17.5,
         "fontWeight": "500",
-        "lineHeight": 27.5,
+        "lineHeight": 23.75,
       }
     }
+    variant="btn2"
   >
     Button press
   </Text>

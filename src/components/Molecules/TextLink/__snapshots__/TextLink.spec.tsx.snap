@@ -1,0 +1,440 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
+<View
+  accessibilityHint=""
+  accessibilityLabel="Text Link press"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "opacity": 1,
+      },
+      Object {
+        "backgroundColor": undefined,
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    allowFontScaling={true}
+    style={
+      Object {
+        "color": "#6A7BFF",
+        "display": "flex",
+        "fontFamily": "Poppins-Medium",
+        "fontSize": 17.5,
+        "fontWeight": "500",
+        "lineHeight": 23.75,
+      }
+    }
+    variant="btn2"
+  >
+    Text Link press
+  </Text>
+</View>
+`;
+
+exports[`Molecules/TextLink passes the snapshot test for different color schemes 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Primary text link"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 23.75,
+        }
+      }
+      variant="btn2"
+    >
+      Primary text link
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Secondary text link"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FF6AC6",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 23.75,
+        }
+      }
+      variant="btn2"
+    >
+      Secondary text link
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Molecules/TextLink passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Text Link press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="xs"
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 12.5,
+          "fontWeight": "500",
+          "lineHeight": 17.5,
+        }
+      }
+      variant="btn4"
+    >
+      Text Link press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Text Link press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="s"
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 15,
+          "fontWeight": "500",
+          "lineHeight": 20,
+        }
+      }
+      variant="btn3"
+    >
+      Text Link press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Text Link press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="m"
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 17.5,
+          "fontWeight": "500",
+          "lineHeight": 23.75,
+        }
+      }
+      variant="btn2"
+    >
+      Text Link press
+    </Text>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Text Link press"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    size="l"
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "opacity": 1,
+        },
+        Object {
+          "backgroundColor": undefined,
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 20,
+          "fontWeight": "500",
+          "lineHeight": 26.25,
+        }
+      }
+      variant="btn1"
+    >
+      Text Link press
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Molecules/TextLink passes the snapshot test when using style props 1`] = `
+<View
+  accessibilityHint=""
+  accessibilityLabel="Text link press"
+  accessibilityRole="button"
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "borderColor": "#C5CEE0",
+        "borderWidth": 2,
+        "display": "flex",
+        "opacity": 1,
+      },
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    allowFontScaling={true}
+    style={
+      Object {
+        "color": "#6A7BFF",
+        "display": "flex",
+        "fontFamily": "Poppins-Medium",
+        "fontSize": 17.5,
+        "fontWeight": "500",
+        "lineHeight": 23.75,
+      }
+    }
+    variant="btn2"
+  >
+    Text link press
+  </Text>
+</View>
+`;

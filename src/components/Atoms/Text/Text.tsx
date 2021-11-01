@@ -18,7 +18,6 @@ import {
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
 import { StyleFunctionContainer } from "../../../theme/src/types";
-import responsiveSize from "./responsiveSize";
 
 export type TextProps = ColorProps &
   BackgroundColorProps &
@@ -63,24 +62,13 @@ const Text = React.forwardRef((props: ComponentProps, ref: any) => {
     textStyleFunctions
   );
 
-  const finalStyle = {
-    ...componentSpecificProps.style,
-    fontSize: responsiveSize(
-      componentSpecificProps.style.fontSize ||
-        componentSpecificProps.style.fontSize
-    ),
-    lineHeight: responsiveSize(
-      componentSpecificProps.style.lineHeight ||
-        componentSpecificProps.style.lineHeight
-    ),
-  };
-
   return (
     <RNText
       ref={ref}
-      style={finalStyle}
       accessible={true}
       accessibilityRole="text"
+      allowFontScaling
+      {...componentSpecificProps}
     >
       {props.children}
     </RNText>

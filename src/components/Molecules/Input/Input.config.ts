@@ -1,13 +1,31 @@
 export default {
-  parts: ["root", "text", "spinner", "icon"],
+  parts: ["root", "input", "text", "icon"],
   baseStyle: {
     root: {
+      flexDirection: "row",
+      alignSelf: "flex-start",
       margin: "xxs",
-      justifyContent: "center",
-      alignItems: "center",
+    },
+    text: {
+      color: {
+        light: "neutral.900",
+        dark: "neutral.50",
+      },
+      fontFamily: "Poppins-Regular",
+      fontWeight: "400",
     },
     icon: {
       alignSelf: "center",
+      color: {
+        light: "neutral.400",
+        dark: "neutral.600",
+      },
+    },
+    input: {
+      placeholderTextColor: {
+        light: "neutral.400",
+        dark: "neutral.600",
+      },
     },
   },
   sizes: {
@@ -20,9 +38,8 @@ export default {
       text: {
         variant: "btn4",
       },
-      spinner: {
-        my: "xxs",
-        size: "s",
+      input: {
+        mx: "xxs",
       },
       icon: {
         size: "s",
@@ -34,11 +51,11 @@ export default {
         px: "xs",
         borderRadius: "s",
       },
+      input: {
+        mx: "xxs",
+      },
       text: {
         variant: "btn3",
-      },
-      spinner: {
-        size: "m",
       },
       icon: {
         size: "s",
@@ -50,11 +67,11 @@ export default {
         px: "s",
         borderRadius: "m",
       },
+      input: {
+        mx: "xs",
+      },
       text: {
         variant: "btn2",
-      },
-      spinner: {
-        size: "m",
       },
       icon: {
         size: "m",
@@ -63,14 +80,14 @@ export default {
     l: {
       root: {
         py: "m",
-        px: "m",
+        px: "s",
         borderRadius: "m",
+      },
+      input: {
+        mx: "xs",
       },
       text: {
         variant: "btn1",
-      },
-      spinner: {
-        size: "l",
       },
       icon: {
         size: "m",
@@ -80,55 +97,40 @@ export default {
   variants: {
     filled: {
       root: {
-        activeBackgroundColor: "primary.400",
-        backgroundColor: "primary.500",
-      },
-      text: { color: "neutral.50" },
-      spinner: {
-        color: "neutral.50",
-      },
-      icon: {
-        color: "neutral.50",
+        backgroundColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        focusBackgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
+        borderColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        focusBorderColor: "primary.500",
       },
     },
     outline: {
       root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
         },
         borderWidth: 1,
-        borderColor: "primary.500",
-      },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
-      },
-      icon: {
-        color: "primary.500",
-      },
-    },
-    ghost: {
-      root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
+        borderColor: {
+          light: "neutral.300",
+          dark: "neutral.600",
         },
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        focusBorderColor: "primary.500",
+      },
+      input: {
+        placeholderTextColor: {
+          light: "neutral.400",
+          dark: "neutral.500",
         },
-      },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
-      },
-      icon: {
-        color: "primary.500",
       },
     },
   },

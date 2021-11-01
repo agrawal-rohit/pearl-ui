@@ -1,0 +1,144 @@
+---
+sidebar_position: 3
+title: Text Link
+---
+
+`TextLink` wraps a Text component with a Pressable component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
+
+## Import
+
+```jsx
+import { TextLink } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<TextLink>I'm a pressable text</TextLink>
+```
+
+### TextLink sizes
+
+Use the `size` prop to change the size of the text link. You can set the value to the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-style).
+
+```jsx
+<TextLink size="xs">Tiny Pressable Text</TextLink>
+
+<TextLink size="s">Small Pressable Text</TextLink>
+
+<TextLink size="m">Regular Pressable Text</TextLink>
+
+<TextLink size="l">Large Pressable Text</TextLink>
+```
+
+### TextLink color scheme
+
+Use the `colorScheme` prop to change the color palette of the text link. This is much more powerful than simply passing a `backgroundColor` style prop as the `colorScheme` prop changes all the use color values in a palette through a single prop.
+
+You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<TextLink colorScheme="primary">Primary Pressable Text</TextLink>
+
+<TextLink colorScheme="secondary">Secondary Pressable Text</TextLink>
+```
+
+### Override Style
+
+The TextLink component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
+// passing style prop m="xl" overrides the default component style value
+<TextLink m="xl" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/textlink-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/textlink-dark" />
+
+</TabItem>
+</Tabs>
+
+## Accessibility
+
+- TextLink has the `role` of `button`.
+- TextLink has the default accessibility label set as text value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+- Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+
+## Props
+
+### Supported style props
+
+Since the TextLink component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `TextLink`, in addition to the following.
+
+### Additional props
+
+| Name        | Required | Type                                              | Default     | Description                            |
+| ----------- | -------- | ------------------------------------------------- | ----------- | -------------------------------------- |
+| size        | false    | <t>PearlTheme.components.TextLink["sizes"]</t>    | `"m"`       | Size of the text link.                 |
+| variant     | false    | <t>PearlTheme.components.TextLink["variants"]</t> |             | Variant of the text link.              |
+| colorScheme | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of the text link. |
+
+## Default component Style
+
+```js
+export default {
+  parts: ["root", "text"],
+  baseStyle: {
+    root: {
+      activeOpacity: 0.9,
+    },
+    text: {
+      color: "primary.500",
+    },
+  },
+  sizes: {
+    xs: {
+      root: {},
+      text: {
+        variant: "btn4",
+      },
+    },
+    s: {
+      root: {},
+      text: {
+        variant: "btn3",
+      },
+    },
+    m: {
+      root: {},
+      text: {
+        variant: "btn2",
+      },
+    },
+    l: {
+      root: {},
+      text: {
+        variant: "btn1",
+      },
+    },
+  },
+  defaults: {
+    size: "m",
+  },
+};
+```

@@ -4,6 +4,7 @@ exports[`Atoms/Text passes the snapshot test 1`] = `
 <Text
   accessibilityRole="text"
   accessible={true}
+  allowFontScaling={true}
   style={
     Object {
       "color": "#1A2138",

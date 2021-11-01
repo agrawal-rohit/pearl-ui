@@ -9,4 +9,5 @@ export { default as Icon } from "./Atoms/Icon/Icon";
 
 // Molecules
 export { default as Button } from "./Molecules/Button/Button";
+export { default as TextLink } from "./Molecules/TextLink/TextLink";
 export { default as OfflineNotice } from "./Molecules/OfflineNotice/OfflineNotice";

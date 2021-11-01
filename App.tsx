@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Storybook from "./storybook";
 import {
   useFonts,
@@ -10,6 +10,10 @@ import {
   Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/themeContext";
+import Screen from "./src/components/Atoms/Screen/Screen";
+import Input from "./src/components/Molecules/Input/Input";
+import Icon from "./src/components/Atoms/Icon/Icon";
+import Button from "./src/components/Molecules/Button/Button";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -23,10 +27,27 @@ const App = () => {
 
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
-      <Storybook />
-      {/* <Screen>
-        <Button onPress={() => console.log(2)}>Test</Button>
-      </Screen> */}
+      {/* <Storybook /> */}
+      <Screen>
+        <Input
+          size="m"
+          isFullWidth
+          placeholder="This is the filled input"
+          leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+        />
+
+        <Input
+          size="m"
+          variant="outline"
+          isFullWidth
+          placeholder="This is the outlines input"
+          leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+        />
+
+        <Button isFullWidth onPress={() => console.log(2)}>
+          Test
+        </Button>
+      </Screen>
     </ThemeProvider>
   );
 };
