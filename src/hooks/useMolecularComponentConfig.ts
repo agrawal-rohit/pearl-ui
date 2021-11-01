@@ -9,6 +9,16 @@ import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 
+/**
+ * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
+ * @param themeComponentKey Name of the component in PearlTheme.components who's config needs to be used
+ * @param receivedProps Raw props passed to the component where the hook is being used
+ * @param sizeAndVariantProps Custom size and variant configuration to use
+ * @param styleFunctions List of style functions to use for computing the received style props
+ * @param targetKeyForAdditionalStyleProps The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config
+ * @param targetKeyForNativeProps The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config
+ * @returns
+ */
 export const useMolecularComponentConfig = (
   themeComponentKey: string,
   receivedProps: Record<string, any>,
@@ -16,7 +26,9 @@ export const useMolecularComponentConfig = (
     size: undefined,
     variant: undefined,
   },
-  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[]
+  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
+  targetKeyForAdditionalStyleProps: string | undefined = undefined,
+  targetKeyForNativeProps: string | undefined = undefined
 ) => {
   const { theme } = useTheme();
 
@@ -75,15 +87,15 @@ export const useMolecularComponentConfig = (
                 `theme.components['${String(themeComponentKey)}']['sizes']`
               );
 
-              checkKeyAvailability(
-                part,
-                componentStyleConfig!.sizes![
-                  activeSizeAndVariantConfig[currProp] as string
-                ],
-                `theme.components['${String(themeComponentKey)}']['sizes'][${
-                  activeSizeAndVariantConfig[currProp]
-                }]`
-              );
+              // checkKeyAvailability(
+              //   part,
+              //   componentStyleConfig!.sizes![
+              //     activeSizeAndVariantConfig[currProp] as string
+              //   ],
+              //   `theme.components['${String(themeComponentKey)}']['sizes'][${
+              //     activeSizeAndVariantConfig[currProp]
+              //   }]`
+              // );
 
               activeSizeAndVariantStyles =
                 componentStyleConfig!.sizes![
@@ -102,15 +114,15 @@ export const useMolecularComponentConfig = (
                 `theme.components['${String(themeComponentKey)}']['variants']`
               );
 
-              checkKeyAvailability(
-                part,
-                componentStyleConfig!.variants![
-                  activeSizeAndVariantConfig[currProp] as string
-                ],
-                `theme.components['${String(themeComponentKey)}']['variants'][${
-                  activeSizeAndVariantConfig[currProp]
-                }]`
-              );
+              // checkKeyAvailability(
+              //   part,
+              //   componentStyleConfig!.variants![
+              //     activeSizeAndVariantConfig[currProp] as string
+              //   ],
+              //   `theme.components['${String(themeComponentKey)}']['variants'][${
+              //     activeSizeAndVariantConfig[currProp]
+              //   }]`
+              // );
 
               activeSizeAndVariantStyles =
                 componentStyleConfig!.variants![
@@ -130,34 +142,65 @@ export const useMolecularComponentConfig = (
           null
         );
 
-        const currentComponentPartProps = {
+        let currentComponentPartProps = {
           ...componentStyleConfig["baseStyle"][part],
           ...componentTypeStyles,
         };
 
-        let finalComponentPartProps = currentComponentPartProps;
+        if (partStyle) {
+          if (
+            targetKeyForAdditionalStyleProps &&
+            part === targetKeyForAdditionalStyleProps
+          ) {
+            currentComponentPartProps = {
+              ...currentComponentPartProps,
+              style: {
+                ...currentComponentPartProps.style,
+                ...overridenProps.style,
+              },
+            };
+          }
+
+          if (targetKeyForNativeProps && part === targetKeyForNativeProps) {
+            currentComponentPartProps = {
+              ...currentComponentPartProps,
+              ...overridenProps,
+              ...currentComponentPartProps.style,
+            };
+          }
+
+          const currentPartStyle = {
+            ...partStyle,
+            [part]: currentComponentPartProps,
+          };
+
+          return currentPartStyle;
+        }
 
         // Adding received props to the root part
         if (!partStyle) {
-          finalComponentPartProps = {
-            ...currentComponentPartProps,
-            ...overridenProps,
-            style: {
-              ...currentComponentPartProps.style,
-              ...overridenProps.style,
-            },
-          };
-        }
-
-        if (partStyle) {
-          return {
-            ...partStyle,
-            [part]: finalComponentPartProps,
-          };
+          if (targetKeyForNativeProps) {
+            if (part === targetKeyForNativeProps) {
+              currentComponentPartProps = {
+                ...currentComponentPartProps,
+                ...overridenProps,
+                ...finalComponentProps.style,
+              };
+            }
+          } else {
+            currentComponentPartProps = {
+              ...currentComponentPartProps,
+              ...overridenProps,
+              style: {
+                ...currentComponentPartProps.style,
+                ...overridenProps.style,
+              },
+            };
+          }
         }
 
         return {
-          [part]: finalComponentPartProps,
+          [part]: currentComponentPartProps,
         };
       },
       null

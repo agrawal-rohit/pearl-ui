@@ -22,9 +22,15 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "display": "flex",
-    }
+    Array [
+      Object {
+        "display": "flex",
+      },
+      Object {
+        "backgroundColor": undefined,
+        "opacity": undefined,
+      },
+    ]
   }
 >
   Button press
@@ -53,12 +59,18 @@ exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "backgroundColor": "#6A7BFF",
-      "borderColor": "#E4E9F2",
-      "borderWidth": 2,
-      "display": "flex",
-    }
+    Array [
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "borderColor": "#C5CEE0",
+        "borderWidth": 2,
+        "display": "flex",
+      },
+      Object {
+        "backgroundColor": "#6A7BFF",
+        "opacity": undefined,
+      },
+    ]
   }
 >
   Button press

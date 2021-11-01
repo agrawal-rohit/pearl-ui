@@ -21,6 +21,7 @@ import {
   StyleFunction,
   StyleFunctionContainer,
 } from "./types";
+import responsiveSize from "../../components/Atoms/Text/responsiveSize";
 
 interface CreateStyleFunctionProps {
   property: string;
@@ -97,6 +98,12 @@ export const transformColorValue = (value: ColorModeColor | ColorValue) => {
   return value;
 };
 
+const makeFontSizeResponsive = (value: number) => {
+  if (value) return responsiveSize(value);
+
+  return value;
+};
+
 export const backgroundColor = [
   createStyleFunction({
     property: "backgroundColor",
@@ -127,11 +134,21 @@ export const visible = createStyleFunction({
   transform: (value: any) => (value === false ? "none" : "flex"),
 });
 
-export const typography = getKeys(typographyProperties).map((property) => {
-  return createStyleFunction({
-    property,
-  });
-});
+export const typography = [
+  ...getKeys(typographyProperties).map((property) => {
+    return createStyleFunction({
+      property,
+    });
+  }),
+  createStyleFunction({
+    property: "fontSize",
+    transform: makeFontSizeResponsive,
+  }),
+  createStyleFunction({
+    property: "lineHeight",
+    transform: makeFontSizeResponsive,
+  }),
+];
 
 export const layout = [
   ...getKeys(layoutProperties).map((property) => {

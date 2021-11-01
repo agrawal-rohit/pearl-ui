@@ -12,6 +12,8 @@ import ScreenConfig from "../../../components/Atoms/Screen/Screen.config";
 import TextConfig from "../../../components/Atoms/Text/Text.config";
 import ButtonConfig from "../../../components/Molecules/Button/Button.config";
 import IconConfig from "../../../components/Atoms/Icon/Icon.config";
+import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.config";
+import InputConfig from "../../../components/Molecules/Input/Input.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -43,5 +45,7 @@ export const baseTheme: BasePearlTheme = {
     Screen: ScreenConfig,
     Spinner: SpinnerConfig,
     Button: ButtonConfig,
+    TextLink: TextLinkConfig,
+    Input: InputConfig,
   },
 };

@@ -49,14 +49,6 @@ const Button: React.FC<ButtonProps> = ({
     multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
   }
 
-  const leftIconProps = leftIcon
-    ? { ...multiComponentStyles.icon, ...leftIcon.props }
-    : {};
-
-  const rightIconProps = rightIcon
-    ? { ...multiComponentStyles.icon, ...rightIcon.props }
-    : {};
-
   const disabled = isDisabled ? true : isLoading;
 
   const renderLoadingStatus = () => {
@@ -106,25 +98,25 @@ const Button: React.FC<ButtonProps> = ({
     if (leftIcon || rightIcon) {
       return (
         <Box flexDirection="row">
-          {leftIcon ? (
-            <Icon
-              iconFamily={leftIcon.props!.iconFamily}
-              iconName={leftIcon.props!.iconName}
-              alignSelf="center"
-              marginRight={multiComponentStyles.root.py}
-              {...leftIconProps}
-            />
-          ) : null}
+          {leftIcon
+            ? React.cloneElement(leftIcon, {
+                ...multiComponentStyles.icon,
+                marginRight:
+                  multiComponentStyles.root.py ||
+                  multiComponentStyles.root.paddingVertical,
+                ...leftIcon.props,
+              })
+            : null}
           <Text {...multiComponentStyles.text}>{children}</Text>
-          {rightIcon ? (
-            <Icon
-              iconFamily={rightIcon.props!.iconFamily}
-              iconName={rightIcon.props!.iconName}
-              alignSelf="center"
-              marginLeft="xs"
-              {...rightIconProps}
-            />
-          ) : null}
+          {rightIcon
+            ? React.cloneElement(rightIcon, {
+                ...multiComponentStyles.icon,
+                marginLeft:
+                  multiComponentStyles.root.py ||
+                  multiComponentStyles.root.paddingVertical,
+                ...rightIcon.props,
+              })
+            : null}
         </Box>
       );
     } else {
@@ -143,7 +135,13 @@ const Button: React.FC<ButtonProps> = ({
           ? props.androidRippleConfig
           : { color: `${colorScheme}.200` }
       }
-      accessibilityLabel={!isLoading ? children : "Loading"}
+      accessibilityLabel={
+        !isLoading
+          ? props.accessibilityLabel
+            ? props.accessibilityLabel
+            : children
+          : "Loading"
+      }
       accessibilityState={{ disabled: isDisabled, busy: isLoading }}
       {...multiComponentStyles.root}
     >

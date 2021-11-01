@@ -21,8 +21,6 @@ export type PressableProps = BoxProps &
     | "unstable_pressDelay"
     | "disabled"
   > & {
-    /** Function to call when the component is pressed. */
-    onPress?: () => void;
     /** Ripple effect configuration for the android_ripple property. */
     androidRippleConfig?: PressableAndroidRippleConfig;
     /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
@@ -38,7 +36,7 @@ export type PressableProps = BoxProps &
     /** The opacity of the element when it is pressed */
     activeOpacity?: number;
     /** The background color of the element when it is pressed */
-    activeBackgroundColor?: BasePearlTheme["palette"] | ColorModeColor;
+    activeBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
   };
 
 const defaultRippleConfig: PressableAndroidRippleConfig = {

@@ -6,7 +6,7 @@ import Icon from "../../Atoms/Icon/Icon";
 
 jest.useFakeTimers();
 
-describe("Atoms/Button", () => {
+describe("Molecules/Button", () => {
   it("passes the snapshot test for basic setup", async () => {
     const onPress = jest.fn();
 
