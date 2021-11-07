@@ -147,56 +147,50 @@ export const useMolecularComponentConfig = (
           ...componentTypeStyles,
         };
 
-        if (partStyle) {
-          if (
-            targetKeyForAdditionalStyleProps &&
-            part === targetKeyForAdditionalStyleProps
-          ) {
-            currentComponentPartProps = {
-              ...currentComponentPartProps,
-              style: {
-                ...currentComponentPartProps.style,
-                ...overridenProps.style,
-              },
-            };
-          }
-
-          if (targetKeyForNativeProps && part === targetKeyForNativeProps) {
-            currentComponentPartProps = {
-              ...currentComponentPartProps,
-              ...overridenProps,
+        if (
+          targetKeyForAdditionalStyleProps &&
+          part === targetKeyForAdditionalStyleProps
+        ) {
+          currentComponentPartProps = {
+            ...currentComponentPartProps,
+            style: {
               ...currentComponentPartProps.style,
-            };
-          }
+              ...overridenProps.style,
+            },
+          };
+        }
 
-          const currentPartStyle = {
+        if (targetKeyForNativeProps && part === targetKeyForNativeProps) {
+          const { style, ...nativeOverridenProps } = overridenProps;
+          currentComponentPartProps = {
+            ...currentComponentPartProps,
+            ...nativeOverridenProps,
+          };
+        }
+
+        if (partStyle) {
+          return {
             ...partStyle,
             [part]: currentComponentPartProps,
           };
-
-          return currentPartStyle;
         }
 
-        // Adding received props to the root part
-        if (!partStyle) {
-          if (targetKeyForNativeProps) {
-            if (part === targetKeyForNativeProps) {
-              currentComponentPartProps = {
-                ...currentComponentPartProps,
-                ...overridenProps,
-                ...finalComponentProps.style,
-              };
-            }
-          } else {
-            currentComponentPartProps = {
-              ...currentComponentPartProps,
-              ...overridenProps,
-              style: {
-                ...currentComponentPartProps.style,
-                ...overridenProps.style,
-              },
-            };
-          }
+        if (!targetKeyForAdditionalStyleProps) {
+          currentComponentPartProps = {
+            ...currentComponentPartProps,
+            style: {
+              ...currentComponentPartProps.style,
+              ...overridenProps.style,
+            },
+          };
+        }
+
+        if (!targetKeyForNativeProps) {
+          const { style, ...nativeOverridenProps } = overridenProps;
+          currentComponentPartProps = {
+            ...currentComponentPartProps,
+            ...nativeOverridenProps,
+          };
         }
 
         return {

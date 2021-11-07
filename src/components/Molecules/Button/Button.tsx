@@ -45,6 +45,7 @@ const Button: React.FC<ButtonProps> = ({
     size: props["size"],
     variant: props["variant"],
   });
+
   if (colorScheme !== "primary") {
     multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
   }
@@ -126,6 +127,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Pressable
+      {...multiComponentStyles.root}
       isDisabled={disabled}
       opacity={disabled ? 0.5 : 1}
       onPress={props.onPress}
@@ -143,7 +145,6 @@ const Button: React.FC<ButtonProps> = ({
           : "Loading"
       }
       accessibilityState={{ disabled: isDisabled, busy: isLoading }}
-      {...multiComponentStyles.root}
     >
       {isLoading ? renderLoadingStatus() : renderMainContent()}
     </Pressable>

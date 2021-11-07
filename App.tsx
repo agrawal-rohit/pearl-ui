@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Storybook from "./storybook";
 import {
   useFonts,
@@ -25,15 +25,22 @@ const App = () => {
     "Poppins-ExtraBold": Poppins_800ExtraBold,
   });
 
+  const [text, settext] = useState("");
+
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       {/* <Storybook /> */}
       <Screen>
+        {/* <Input placeholder="Enter value" value="start value" hasClearButton /> */}
+
         <Input
           size="m"
           isFullWidth
           placeholder="This is the filled input"
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          hasClearButton
+          value={text}
+          onChangeText={(val) => settext(val)}
         />
 
         <Input

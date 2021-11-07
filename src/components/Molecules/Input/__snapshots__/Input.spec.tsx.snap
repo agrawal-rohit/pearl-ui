@@ -1,0 +1,718 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
+<View
+  errorBorderColor="danger.500"
+  errorMessageColor="danger.500"
+  focusBackgroundColor={
+    Object {
+      "dark": "neutral.800",
+      "light": "neutral.50",
+    }
+  }
+  focusBorderColor="primary.500"
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "backgroundColor": "#EDF1F7",
+      "borderColor": "#EDF1F7",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "display": "flex",
+      "flexDirection": "row",
+      "margin": 4,
+      "opacity": 1,
+      "paddingHorizontal": 12,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <TextInput
+    accessibilityLabel="This is a placeholder"
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
+    allowFontScaling={true}
+    editable={true}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    placeholder="This is a placeholder"
+    placeholderTextColor="#8F9BB3"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "marginHorizontal": 8,
+        },
+        Object {
+          "color": "#1A2138",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 17.5,
+          "fontWeight": "400",
+          "lineHeight": 23.75,
+        },
+        Object {
+          "flex": null,
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
+Array [
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <Text />
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 17.5,
+            "fontWeight": "400",
+            "lineHeight": 23.75,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#C5CEE0"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 17.5,
+            "fontWeight": "400",
+            "lineHeight": 23.75,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      variant="outline"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 8,
+        "paddingVertical": 4,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 4,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 12.5,
+            "fontWeight": "400",
+            "lineHeight": 17.5,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 8,
+        "paddingVertical": 8,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 4,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 15,
+            "fontWeight": "400",
+            "lineHeight": 20,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 17.5,
+            "fontWeight": "400",
+            "lineHeight": 23.75,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 20,
+            "fontWeight": "400",
+            "lineHeight": 26.25,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+]
+`;
+
+exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
+Array [
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 17.5,
+            "fontWeight": "400",
+            "lineHeight": 23.75,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      variant="filled"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+  <View
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "margin": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#C5CEE0"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 17.5,
+            "fontWeight": "400",
+            "lineHeight": 23.75,
+          },
+          Object {
+            "flex": null,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      variant="outline"
+    />
+    <View
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    />
+  </View>,
+]
+`;
+
+exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
+<View
+  errorBorderColor="danger.500"
+  errorMessageColor="danger.500"
+  focusBackgroundColor={
+    Object {
+      "dark": "neutral.800",
+      "light": "neutral.50",
+    }
+  }
+  focusBorderColor="primary.500"
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "backgroundColor": "#6A7BFF",
+      "borderColor": "#C5CEE0",
+      "borderRadius": 8,
+      "borderWidth": 2,
+      "display": "flex",
+      "flexDirection": "row",
+      "margin": 4,
+      "opacity": 1,
+      "paddingHorizontal": 12,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <TextInput
+    accessibilityState={
+      Object {
+        "disabled": false,
+        "selected": false,
+      }
+    }
+    allowFontScaling={true}
+    editable={true}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    placeholderTextColor="#8F9BB3"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "marginHorizontal": 8,
+        },
+        Object {
+          "color": "#1A2138",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 17.5,
+          "fontWeight": "400",
+          "lineHeight": 23.75,
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  />
+</View>
+`;
