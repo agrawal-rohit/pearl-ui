@@ -24,12 +24,14 @@ const TextLink: React.FC<TextLinkProps> = ({
     size: props["size"],
     variant: props["variant"],
   });
+
   if (colorScheme !== "primary") {
     multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
   }
 
   return (
     <Pressable
+      {...multiComponentStyles.root}
       isDisabled={isDisabled}
       opacity={isDisabled ? 0.5 : 1}
       onPress={props.onPress}
@@ -38,7 +40,6 @@ const TextLink: React.FC<TextLinkProps> = ({
       }
       accessibilityState={{ disabled: isDisabled }}
       isDisabledAndroidRipple
-      {...multiComponentStyles.root}
     >
       <Text {...multiComponentStyles.text}>{children}</Text>
     </Pressable>

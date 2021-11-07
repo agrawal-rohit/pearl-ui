@@ -1,10 +1,13 @@
 export default {
-  parts: ["root", "input", "text", "icon"],
+  parts: ["root", "input", "text", "icon", "errorText"],
   baseStyle: {
     root: {
       flexDirection: "row",
       alignSelf: "flex-start",
       margin: "xxs",
+      focusBorderColor: "primary.500",
+      errorBorderColor: "danger.500",
+      errorMessageColor: "danger.500",
     },
     text: {
       color: {
@@ -23,9 +26,15 @@ export default {
     },
     input: {
       placeholderTextColor: {
-        light: "neutral.400",
+        light: "neutral.500",
         dark: "neutral.600",
       },
+    },
+    errorText: {
+      variant: "caption",
+      color: "danger.500",
+      marginLeft: "s",
+      marginBottom: "xxs",
     },
   },
   sizes: {
@@ -110,7 +119,6 @@ export default {
           light: "neutral.200",
           dark: "neutral.900",
         },
-        focusBorderColor: "primary.500",
       },
     },
     outline: {
@@ -122,12 +130,17 @@ export default {
         borderWidth: 1,
         borderColor: {
           light: "neutral.300",
-          dark: "neutral.600",
+          dark: "neutral.500",
         },
-        focusBorderColor: "primary.500",
       },
       input: {
         placeholderTextColor: {
+          light: "neutral.400",
+          dark: "neutral.500",
+        },
+      },
+      icon: {
+        color: {
           light: "neutral.400",
           dark: "neutral.500",
         },
