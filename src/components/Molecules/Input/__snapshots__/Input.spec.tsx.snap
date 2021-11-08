@@ -24,6 +24,7 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
       "opacity": 1,
       "paddingHorizontal": 12,
       "paddingVertical": 12,
+      "shadowColor": undefined,
     }
   }
   testID="inputFieldContainer"
@@ -101,6 +102,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 12,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -167,6 +169,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 12,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -246,6 +249,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 8,
         "paddingVertical": 4,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -317,6 +321,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 8,
         "paddingVertical": 8,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -388,6 +393,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 12,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -459,6 +465,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 16,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -535,6 +542,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 12,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -601,6 +609,7 @@ Array [
         "opacity": 1,
         "paddingHorizontal": 12,
         "paddingVertical": 12,
+        "shadowColor": undefined,
       }
     }
     testID="inputFieldContainer"
@@ -677,6 +686,7 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
       "opacity": 1,
       "paddingHorizontal": 12,
       "paddingVertical": 12,
+      "shadowColor": undefined,
     }
   }
   testID="inputFieldContainer"

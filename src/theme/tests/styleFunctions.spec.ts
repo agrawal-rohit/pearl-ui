@@ -126,7 +126,7 @@ describe("createStyleFunctions", () => {
 
     expect(shadowStyle).toBe(baseTheme[shadow[shadow.length - 2].themeKey].s);
 
-    const shadowColor = { shadowColor: shadowStyle.shadowColor };
+    const shadowColor = { shadowColor: "neutral.600" };
     const shadowColorStyle = shadow[shadow.length - 1].func(
       shadowColor,
       baseTheme
@@ -135,8 +135,8 @@ describe("createStyleFunctions", () => {
     expect(shadowColorStyle.shadowColor).toBe(
       getNestedObject(baseTheme, [
         "palette",
-        shadowStyle.shadowColor.split(".")[0],
-        shadowStyle.shadowColor.split(".")[1],
+        shadowColor.shadowColor.split(".")[0],
+        shadowColor.shadowColor.split(".")[1],
       ])
     );
   });
