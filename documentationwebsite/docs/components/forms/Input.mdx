@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Input
 ---
 
-`Input` is used to get user input in a text field.
+The `Input` component is used to get user input in a text field.
 
 ## Import
 
@@ -193,37 +193,56 @@ Input also composes the [TextInput](https://reactnative.dev/docs/textinput) comp
 | focusBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border right color of the input field when it is in focus.                |
 | focusBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border bottom color of the input field when it is in focus.               |
 | focusShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The shadow color of the input field when it is in focus.                      |
-
-/\*\* The background color of the input field when it is in an error state \_/
-errorBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/** The border color of the input field when it is in an error state \*/
-errorBorderColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/** The border start color of the input field when it is in an error state \_/
-errorBorderStartColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The border end color of the input field when it is in an error state \_/
-errorBorderEndColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The border top color of the input field when it is in an error state \*/
-errorBorderTopColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The border left color of the input field when it is in an error state \_/
-errorBorderLeftColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The border right color of the input field when it is in an error state \_/
-errorBorderRightColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The border bottom color of the input field when it is in an error state \*/
-errorBorderBottomColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
-/\*\* The shadow color of the input field when it is in an error state \*/
-errorShadowColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+| errorBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The background color of the input field when it is in an error state.         |
+| errorBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border color of the input field when it is in an error state.             |
+| errorBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border start color of the input field when it is in an error state.       |
+| errorBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border end color of the input field when it is in an error state.         |
+| errorBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border top color of the input field when it is in an error state.         |
+| errorBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border left color of the input field when it is in an error state.        |
+| errorBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border right color of the input field when it is in an error state.       |
+| errorBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border bottom color of the input field when it is in an error state.      |
+| errorShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The shadow color of the input field when it is in an error state.             |
 
 ## Default component Style
 
 ```js
 export default {
-  parts: ["root", "text", "spinner", "icon"],
+  parts: ["root", "input", "text", "icon", "errorText"],
   baseStyle: {
     root: {
+      flexDirection: "row",
+      alignSelf: "flex-start",
       margin: "xxs",
-      justifyContent: "center",
-      alignItems: "center",
-      activeOpacity: 0.9,
+      focusBorderColor: "primary.500",
+      errorBorderColor: "danger.500",
+      errorMessageColor: "danger.500",
+    },
+    text: {
+      color: {
+        light: "neutral.900",
+        dark: "neutral.50",
+      },
+      fontFamily: "Poppins-Regular",
+      fontWeight: "400",
+    },
+    icon: {
+      alignSelf: "center",
+      color: {
+        light: "neutral.400",
+        dark: "neutral.600",
+      },
+    },
+    input: {
+      placeholderTextColor: {
+        light: "neutral.500",
+        dark: "neutral.600",
+      },
+    },
+    errorText: {
+      variant: "caption",
+      color: "danger.500",
+      marginLeft: "s",
+      marginBottom: "xxs",
     },
   },
   sizes: {
@@ -236,9 +255,8 @@ export default {
       text: {
         variant: "btn4",
       },
-      spinner: {
-        my: "xxs",
-        size: "s",
+      input: {
+        mx: "xxs",
       },
       icon: {
         size: "s",
@@ -250,11 +268,11 @@ export default {
         px: "xs",
         borderRadius: "s",
       },
+      input: {
+        mx: "xxs",
+      },
       text: {
         variant: "btn3",
-      },
-      spinner: {
-        size: "m",
       },
       icon: {
         size: "s",
@@ -266,11 +284,11 @@ export default {
         px: "s",
         borderRadius: "m",
       },
+      input: {
+        mx: "xs",
+      },
       text: {
         variant: "btn2",
-      },
-      spinner: {
-        size: "m",
       },
       icon: {
         size: "m",
@@ -279,14 +297,14 @@ export default {
     l: {
       root: {
         py: "m",
-        px: "m",
+        px: "s",
         borderRadius: "m",
+      },
+      input: {
+        mx: "xs",
       },
       text: {
         variant: "btn1",
-      },
-      spinner: {
-        size: "l",
       },
       icon: {
         size: "m",
@@ -296,55 +314,44 @@ export default {
   variants: {
     filled: {
       root: {
-        activeBackgroundColor: "primary.400",
-        backgroundColor: "primary.500",
-      },
-      text: { color: "neutral.50" },
-      spinner: {
-        color: "neutral.50",
-      },
-      icon: {
-        color: "neutral.50",
+        backgroundColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        focusBackgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
+        borderColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
       },
     },
     outline: {
       root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
         },
         borderWidth: 1,
-        borderColor: "primary.500",
-      },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
-      },
-      icon: {
-        color: "primary.500",
-      },
-    },
-    ghost: {
-      root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        borderColor: {
+          light: "neutral.300",
+          dark: "neutral.500",
         },
       },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
+      input: {
+        placeholderTextColor: {
+          light: "neutral.400",
+          dark: "neutral.500",
+        },
       },
       icon: {
-        color: "primary.500",
+        color: {
+          light: "neutral.400",
+          dark: "neutral.500",
+        },
       },
     },
   },

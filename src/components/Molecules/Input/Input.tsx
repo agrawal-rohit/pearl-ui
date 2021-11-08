@@ -93,9 +93,25 @@ const placeholderTextColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
+const focusShadowColorStyleFunction = createStyleFunction({
+  property: "focusShadowColor",
+  styleProperty: "focusShadowColor",
+  themeKey: "palette",
+  transform: transformColorValue,
+});
+
+const errorShadowColorStyleFunction = createStyleFunction({
+  property: "errorShadowColor",
+  styleProperty: "errorShadowColor",
+  themeKey: "palette",
+  transform: transformColorValue,
+});
+
 const inputRootStyleFunctions = [
   ...boxStyleFunctions,
   placeholderTextColorStyleFunction,
+  focusShadowColorStyleFunction,
+  errorShadowColorStyleFunction,
 ];
 
 const inputTextStyleFunctions = [color, typography] as StyleFunctionContainer[];
@@ -138,7 +154,6 @@ const Input = React.forwardRef(
       focusBorderLeftColor,
       focusBorderRightColor,
       focusBorderBottomColor,
-      focusShadowColor,
       errorBackgroundColor,
       errorBorderColor,
       errorBorderStartColor,
@@ -147,7 +162,6 @@ const Input = React.forwardRef(
       errorBorderLeftColor,
       errorBorderRightColor,
       errorBorderBottomColor,
-      errorShadowColor,
       ...filteredReceivedProps
     } = props;
 
@@ -231,7 +245,8 @@ const Input = React.forwardRef(
       customfallbackProp:
         | keyof BasePearlTheme["palette"]
         | ColorModeColor
-        | undefined = undefined
+        | undefined = undefined,
+      targetPropertyParent: object = props
     ) => {
       let fallbackProp;
       if (customfallbackProp) {
@@ -242,7 +257,9 @@ const Input = React.forwardRef(
 
       if (isFocused) {
         const focusProp =
-          (props as any)[`focus${capitalizeFirstLetter(propertyName)}`] ||
+          (targetPropertyParent as any)[
+            `focus${capitalizeFirstLetter(propertyName)}`
+          ] ||
           multiComponentStyles.root[
             `focus${capitalizeFirstLetter(propertyName)}`
           ];
@@ -251,7 +268,9 @@ const Input = React.forwardRef(
 
       if (isErrorVisible) {
         const errorProp =
-          (props as any)[`error${capitalizeFirstLetter(propertyName)}`] ||
+          (targetPropertyParent as any)[
+            `error${capitalizeFirstLetter(propertyName)}`
+          ] ||
           multiComponentStyles.root[
             `error${capitalizeFirstLetter(propertyName)}`
           ];
@@ -322,9 +341,16 @@ const Input = React.forwardRef(
           borderBottomColor={computeFocusOrErrorProps("borderBottomColor")}
           borderLeftColor={computeFocusOrErrorProps("borderLeftColor")}
           borderRightColor={computeFocusOrErrorProps("borderRightColor")}
-          shadowColor={computeFocusOrErrorProps("shadowColor")}
           opacity={isDisabled ? 0.5 : 1}
           testID="inputFieldContainer"
+          style={{
+            ...multiComponentStyles.root.style,
+            shadowColor: computeFocusOrErrorProps(
+              "shadowColor",
+              multiComponentStyles.root.style.shadowColor,
+              multiComponentStyles.root.style
+            ),
+          }}
         >
           {renderLeftIcon()}
           <TextInput

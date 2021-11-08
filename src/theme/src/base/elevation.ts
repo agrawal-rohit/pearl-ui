@@ -1,6 +1,6 @@
 export const elevation = {
   xs: {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -10,7 +10,7 @@ export const elevation = {
     elevation: 2,
   },
   s: {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 4,
@@ -20,7 +20,7 @@ export const elevation = {
     elevation: 4,
   },
   m: {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 8,
@@ -30,7 +30,7 @@ export const elevation = {
     elevation: 8,
   },
   l: {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 12,
@@ -40,7 +40,7 @@ export const elevation = {
     elevation: 12,
   },
   xl: {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 16,
@@ -50,7 +50,7 @@ export const elevation = {
     elevation: 16,
   },
   "2xl": {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 20,
@@ -60,7 +60,7 @@ export const elevation = {
     elevation: 20,
   },
   "3xl": {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 24,
@@ -70,7 +70,7 @@ export const elevation = {
     elevation: 24,
   },
   "4xl": {
-    shadowColor: "neutral.900",
+    shadowColor: "#1A2138",
     shadowOffset: {
       width: 0,
       height: 28,

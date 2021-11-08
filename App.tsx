@@ -32,7 +32,7 @@ const App = () => {
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       {/* <Storybook /> */}
       <Screen>
-        {/* <Input
+        <Input
           size="m"
           isFullWidth
           placeholder="This is the filled input"
@@ -40,22 +40,19 @@ const App = () => {
           hasClearButton
           value={text}
           onChangeText={(val) => settext(val)}
-        /> */}
+        />
 
         <Input
           size="m"
           variant="outline"
-          m="l"
           isFullWidth
           placeholder="This is the outlines input"
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
-          boxShadow="l"
-          focusShadowColor="success.500"
         />
 
-        {/* <Button isFullWidth onPress={() => console.log(2)}>
+        <Button isFullWidth onPress={() => console.log(2)}>
           Test
-        </Button> */}
+        </Button>
       </Screen>
     </ThemeProvider>
   );
