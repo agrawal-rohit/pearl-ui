@@ -39,13 +39,13 @@ type InputProps = TextInputProps &
     hasClearButton?: boolean;
     /** Whether there the input field is in an error state */
     isErrorVisible?: boolean;
-    /** Icon to display on the left side of the main text */
+    /** Icon to display on the left side of the text input */
     leftIcon?: React.ReactElement;
-    /** Icon to display on the right side of the main text */
+    /** Icon to display on the right side of the text input */
     rightIcon?: React.ReactElement;
     /** The error message to be displayed if the input field is in an error state */
     errorMessage?: string;
-    /** The text color of the placeholder string */
+    /** Custom color of the placeholder text string */
     placeholderTextColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
     /** The background color of the input field when it is in focus */
     focusBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
@@ -93,153 +93,9 @@ const placeholderTextColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
-const focusBackgroundColorStyleFunction = createStyleFunction({
-  property: "focusBackgroundColor",
-  styleProperty: "focusBackgroundColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderColorStyleFunction = createStyleFunction({
-  property: "focusBorderColor",
-  styleProperty: "focusBorderColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderStartColorStyleFunction = createStyleFunction({
-  property: "focusBorderStartColor",
-  styleProperty: "focusBorderStartColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderEndColorStyleFunction = createStyleFunction({
-  property: "focusBorderEndColor",
-  styleProperty: "focusBorderEndColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderTopColorStyleFunction = createStyleFunction({
-  property: "focusBorderTopColor",
-  styleProperty: "focusBorderTopColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderLeftColorStyleFunction = createStyleFunction({
-  property: "focusBorderLeftColor",
-  styleProperty: "focusBorderLeftColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderRightColorStyleFunction = createStyleFunction({
-  property: "focusBorderRightColor",
-  styleProperty: "focusBorderRightColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusBorderBottomColorStyleFunction = createStyleFunction({
-  property: "focusBorderBottomColor",
-  styleProperty: "focusBorderBottomColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const focusShadowColorStyleFunction = createStyleFunction({
-  property: "focusShadowColor",
-  styleProperty: "focusShadowColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBackgroundColorStyleFunction = createStyleFunction({
-  property: "errorBackgroundColor",
-  styleProperty: "errorBackgroundColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderColorStyleFunction = createStyleFunction({
-  property: "errorBorderColor",
-  styleProperty: "errorBorderColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderStartColorStyleFunction = createStyleFunction({
-  property: "errorBorderStartColor",
-  styleProperty: "errorBorderStartColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderEndColorStyleFunction = createStyleFunction({
-  property: "errorBorderEndColor",
-  styleProperty: "errorBorderEndColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderTopColorStyleFunction = createStyleFunction({
-  property: "errorBorderTopColor",
-  styleProperty: "errorBorderTopColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderLeftColorStyleFunction = createStyleFunction({
-  property: "errorBorderLeftColor",
-  styleProperty: "errorBorderLeftColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderRightColorStyleFunction = createStyleFunction({
-  property: "errorBorderRightColor",
-  styleProperty: "errorBorderRightColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorBorderBottomColorStyleFunction = createStyleFunction({
-  property: "errorBorderBottomColor",
-  styleProperty: "errorBorderBottomColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorShadowColorStyleFunction = createStyleFunction({
-  property: "errorShadowColor",
-  styleProperty: "errorShadowColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
 const inputRootStyleFunctions = [
   ...boxStyleFunctions,
   placeholderTextColorStyleFunction,
-  focusBackgroundColorStyleFunction,
-  focusBorderColorStyleFunction,
-  focusBorderEndColorStyleFunction,
-  focusBorderStartColorStyleFunction,
-  focusBorderTopColorStyleFunction,
-  focusBorderLeftColorStyleFunction,
-  focusBorderRightColorStyleFunction,
-  focusBorderBottomColorStyleFunction,
-  focusShadowColorStyleFunction,
-  errorBackgroundColorStyleFunction,
-  errorBorderColorStyleFunction,
-  errorBorderStartColorStyleFunction,
-  errorBorderEndColorStyleFunction,
-  errorBorderTopColorStyleFunction,
-  errorBorderLeftColorStyleFunction,
-  errorBorderRightColorStyleFunction,
-  errorBorderBottomColorStyleFunction,
-  errorShadowColorStyleFunction,
 ];
 
 const inputTextStyleFunctions = [color, typography] as StyleFunctionContainer[];
@@ -273,12 +129,34 @@ const Input = React.forwardRef(
       props.value && props.value.length > 0 ? false : true
     );
 
+    const {
+      focusBackgroundColor,
+      focusBorderColor,
+      focusBorderStartColor,
+      focusBorderEndColor,
+      focusBorderTopColor,
+      focusBorderLeftColor,
+      focusBorderRightColor,
+      focusBorderBottomColor,
+      focusShadowColor,
+      errorBackgroundColor,
+      errorBorderColor,
+      errorBorderStartColor,
+      errorBorderEndColor,
+      errorBorderTopColor,
+      errorBorderLeftColor,
+      errorBorderRightColor,
+      errorBorderBottomColor,
+      errorShadowColor,
+      ...filteredReceivedProps
+    } = props;
+
     let multiComponentStyles = useMolecularComponentConfig(
       "Input",
-      props,
+      filteredReceivedProps,
       {
         size: size,
-        variant: props["variant"],
+        variant: filteredReceivedProps["variant"],
       },
       inputRootStyleFunctions,
       "root",
@@ -364,6 +242,7 @@ const Input = React.forwardRef(
 
       if (isFocused) {
         const focusProp =
+          (props as any)[`focus${capitalizeFirstLetter(propertyName)}`] ||
           multiComponentStyles.root[
             `focus${capitalizeFirstLetter(propertyName)}`
           ];
@@ -372,6 +251,7 @@ const Input = React.forwardRef(
 
       if (isErrorVisible) {
         const errorProp =
+          (props as any)[`error${capitalizeFirstLetter(propertyName)}`] ||
           multiComponentStyles.root[
             `error${capitalizeFirstLetter(propertyName)}`
           ];
@@ -444,6 +324,7 @@ const Input = React.forwardRef(
           borderRightColor={computeFocusOrErrorProps("borderRightColor")}
           shadowColor={computeFocusOrErrorProps("shadowColor")}
           opacity={isDisabled ? 0.5 : 1}
+          testID="inputFieldContainer"
         >
           {renderLeftIcon()}
           <TextInput
@@ -456,7 +337,11 @@ const Input = React.forwardRef(
             onChangeText={onChangeTextHandler}
             allowFontScaling={true}
             placeholderTextColor={
-              placeholderTextColor ? placeholderTextColor : "#a7a7a7"
+              multiComponentStyles.root.style.placeholderTextColor ||
+              placeholderTextColor
+                ? multiComponentStyles.root.style.placeholderTextColor ||
+                  placeholderTextColor
+                : "#a7a7a7"
             }
             accessibilityLabel={
               props.accessibilityLabel

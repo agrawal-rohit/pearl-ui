@@ -45,10 +45,10 @@ Use the `variant` prop to change the visual style of the button. You can set the
 
 ### Button with icon
 
-You can add left and right icons to the Button component using the `leftIcon` and `rightIcon` props respectively.
+You can add left and right icons to `Button` using the `leftIcon` and `rightIcon` props respectively.
 
 :::info
-The `leftIcon` and `rightIcon` prop values should be react elements **NOT** strings.
+The `leftIcon` and `rightIcon` prop values should be React elements, **NOT** strings.
 :::
 
 ```jsx
@@ -117,7 +117,7 @@ The Button component also supports a [variety of style props](#supported-style-p
 ## Example
 
 :::info
-Since the [Spinner](../common/Spinner) component doesn't play nicely with Expo web, please run the following example on either an Android or iOS device for better accuracy.
+Since the [Spinner](../feedback/Spinner) component doesn't play nicely with Expo web, please run the following example on either an Android or iOS device for better accuracy.
 :::
 
 import Snack from "../../../src/components/ExpoSnack";
@@ -147,14 +147,14 @@ import TabItem from "@theme/TabItem";
 ## Accessibility
 
 - Button has the `role` of `button`.
-- Button has the default accessibility label set as text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t>. A custom label can be specified using the `accessibilityLabel` prop.
+- Button has the default accessibility label set as the text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t>. A custom label can be specified using the `accessibilityLabel` prop.
 - Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
 ## Props
 
 ### Supported style props
 
-Since the Button component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `Button`, in addition to the following.
+Since the Button component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `Button`, in addition to the props given below.
 
 ### Additional props
 
