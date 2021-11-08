@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",
   "private": false,
