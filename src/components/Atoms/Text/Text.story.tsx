@@ -18,7 +18,6 @@ storiesOf("Typography", module)
       <Text variant="p2">Paragraph 2</Text>
       <Text variant="p3">Paragraph 3</Text>
       <Text variant="p4">Paragraph 4</Text>
-      <Text variant="input">Form input</Text>
       <Text variant="label">Label</Text>
       <Text variant="caption">Caption</Text>
       <Box backgroundColor="primary.500">
