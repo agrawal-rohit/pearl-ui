@@ -1,3 +1,18 @@
+# [1.3.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.3...v1.3.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* added fix for focus/error shadowColor to Input, finished Input docs ([84f2453](https://github.com/agrawal-rohit/pearl-ui/commit/84f2453b3054279bed520395f67778b1db8d2674))
+* **palette:** updated base palette ([35d5253](https://github.com/agrawal-rohit/pearl-ui/commit/35d525343b90bb31d130ce586879d25b8b73eb05))
+
+
+### Features
+
+* added custom background color support for Button ([a1129c2](https://github.com/agrawal-rohit/pearl-ui/commit/a1129c2772f1b27310a67a5fc29e207e36e4c0bb))
+* added focus and error states for Input, added test files for the same, fixed some bugs ([e931c68](https://github.com/agrawal-rohit/pearl-ui/commit/e931c680486c367aab24ad780690df5861be006e))
+* added textlink and input component, updated useMolecularConfig hook, Added docs ([7242573](https://github.com/agrawal-rohit/pearl-ui/commit/7242573f8ac7296520e4a8aeb717238e719acda4))
+
 ## [1.2.3](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.2...v1.2.3) (2021-10-17)
 
 
