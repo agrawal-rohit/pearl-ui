@@ -27,8 +27,8 @@ export const useMolecularComponentConfig = (
     variant: undefined,
   },
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
-  targetKeyForAdditionalStyleProps: string | undefined = undefined,
-  targetKeyForNativeProps: string | undefined = undefined
+  targetKeyForOverridenStyleProps: string | undefined = undefined,
+  targetKeyForOverridenNativeProps: string | undefined = undefined
 ) => {
   const { theme } = useTheme();
 
@@ -87,16 +87,6 @@ export const useMolecularComponentConfig = (
                 `theme.components['${String(themeComponentKey)}']['sizes']`
               );
 
-              // checkKeyAvailability(
-              //   part,
-              //   componentStyleConfig!.sizes![
-              //     activeSizeAndVariantConfig[currProp] as string
-              //   ],
-              //   `theme.components['${String(themeComponentKey)}']['sizes'][${
-              //     activeSizeAndVariantConfig[currProp]
-              //   }]`
-              // );
-
               activeSizeAndVariantStyles =
                 componentStyleConfig!.sizes![
                   activeSizeAndVariantConfig[currProp] as string
@@ -113,16 +103,6 @@ export const useMolecularComponentConfig = (
                 componentStyleConfig!.variants!,
                 `theme.components['${String(themeComponentKey)}']['variants']`
               );
-
-              // checkKeyAvailability(
-              //   part,
-              //   componentStyleConfig!.variants![
-              //     activeSizeAndVariantConfig[currProp] as string
-              //   ],
-              //   `theme.components['${String(themeComponentKey)}']['variants'][${
-              //     activeSizeAndVariantConfig[currProp]
-              //   }]`
-              // );
 
               activeSizeAndVariantStyles =
                 componentStyleConfig!.variants![
@@ -148,8 +128,8 @@ export const useMolecularComponentConfig = (
         };
 
         if (
-          targetKeyForAdditionalStyleProps &&
-          part === targetKeyForAdditionalStyleProps
+          targetKeyForOverridenStyleProps &&
+          part === targetKeyForOverridenStyleProps
         ) {
           currentComponentPartProps = {
             ...currentComponentPartProps,
@@ -160,7 +140,10 @@ export const useMolecularComponentConfig = (
           };
         }
 
-        if (targetKeyForNativeProps && part === targetKeyForNativeProps) {
+        if (
+          targetKeyForOverridenNativeProps &&
+          part === targetKeyForOverridenNativeProps
+        ) {
           const { style, ...nativeOverridenProps } = overridenProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,
@@ -175,7 +158,7 @@ export const useMolecularComponentConfig = (
           };
         }
 
-        if (!targetKeyForAdditionalStyleProps) {
+        if (!targetKeyForOverridenStyleProps) {
           currentComponentPartProps = {
             ...currentComponentPartProps,
             style: {
@@ -185,7 +168,7 @@ export const useMolecularComponentConfig = (
           };
         }
 
-        if (!targetKeyForNativeProps) {
+        if (!targetKeyForOverridenNativeProps) {
           const { style, ...nativeOverridenProps } = overridenProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,

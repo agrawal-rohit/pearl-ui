@@ -1,0 +1,356 @@
+---
+sidebar_position: 4
+title: Input
+---
+
+`Input` is used to get user input in a text field.
+
+## Import
+
+```jsx
+import { Input } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Input
+  placeholder="This is a text input field"
+  onChangeText={(newValue) => console.log(newValue)}
+/>
+```
+
+### Input sizes
+
+Use the `size` prop to change the size of the input field. You can set the value to the keys available in <t>PearlTheme.components.Input["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Input
+  size="xs"
+  placeholder="This is an xs input"
+/>
+
+<Input
+  size="s"
+  placeholder="This is an s input"
+/>
+
+<Input
+  size="m"
+  placeholder="This is an m input"
+/>
+
+<Input
+  size="l"
+  placeholder="This is an l input"
+/>
+```
+
+### Input variants
+
+Use the `variant` prop to change the visual style of the input field. You can set the value to the keys available in <t>PearlTheme.components.Input["variants"]</t>, which are <t>"filled"</t> and <t>"outline"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Input
+  variant="filled"
+  placeholder="This is the filled input"
+/>
+
+<Input
+  variant="outline"
+  placeholder="This is the outlines input"
+/>
+```
+
+### Input with icon
+
+You can add left and right icons to `Input` using the `leftIcon` and `rightIcon` props respectively.
+
+:::info
+The `leftIcon` and `rightIcon` prop values should be React elements, **NOT** strings.
+:::
+
+```jsx
+import { Icon } from "pearl-ui";
+
+<Input
+  placeholder="Enter some value"
+  leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+/>
+
+<Input
+  placeholder="Enter some value"
+  rightIcon={<Icon iconFamily="Ionicons" iconName="ios-eye" />}
+/>
+```
+
+### Input with clear button
+
+For certain use cases, you might want to provide your users with the option to clear the input field by pressing a button. You can easily achieve this with `Input` with the help of the `hasClearButton` prop.
+
+```jsx
+import { Icon } from "pearl-ui";
+
+<Input placeholder="Enter some value" hasClearButton />;
+```
+
+### Input focus state
+
+The input field is said to be in a `focus` state when the text inside the field can be edited. `Input` allows you to update the visual style of the input field when it is focused using some [special props](#supported-style-props) prefixed with the word <t>focus</t>.
+
+```jsx
+<Input
+  focusBackgroundColor="cyan"
+  focusBorderColor="violet"
+  onFocus={() => console.log("Field was focused!")}
+/>
+```
+
+### Input error state
+
+Similar to the focus state, you can add an error state to the input field based on any validation criteria you use. The `isErrorVisible` prop is used to define whether the input field has an error or not.
+
+You can also pass the `errorMessage` prop to add a helper text describing the error below the input field.
+
+```jsx
+<Input
+  isErrorVisible={true}
+  errorMessage="Some weird error occured!"
+  errorBackgroundColor="pink"
+  errorBorderColor="red"
+/>
+```
+
+### Override Style
+
+The Input component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
+// passing style prop marginTop="l" adds a top margin to the input field
+// passing style prop backgroundColor="xl" overrides the default component style value of backgroundColor="neutral.200"
+<Input variant="filled" marginTop="l" backgroundColor="green" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/input-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/input-dark" />
+
+</TabItem>
+</Tabs>
+
+## Accessibility
+
+- Input has the `role` of `text field`.
+- Input has the default accessibility label set as the placeholder value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+
+## Props
+
+### Supported style props
+
+Input composes [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to `Input`.
+
+### Additional props
+
+Input also composes the [TextInput](https://reactnative.dev/docs/textinput) component from React Native, therefore all of it's props are supported in addition to the props given below:
+
+| Name                   | Required | Type                                           | Default    | Description                                                                   |
+| ---------------------- | -------- | ---------------------------------------------- | ---------- | ----------------------------------------------------------------------------- |
+| size                   | false    | <t>PearlTheme.components.Input["sizes"]</t>    | `"m"`      | Size of the input field.                                                      |
+| variant                | false    | <t>PearlTheme.components.Input["variants"]</t> | `"filled"` | Variant of the input field.                                                   |
+| isDisabled             | false    | <t>boolean</t>                                 | `false`    | Whether the input field is disabled.                                          |
+| isFullWidth            | false    | <t>boolean</t>                                 | `false`    | Whether the input field should span the entire width of the parent container. |
+| isErrorVisible         | false    | <t>boolean</t>                                 | `false`    | Whether there the input field is in an error state.                           |
+| errorMessage           | false    | <t>string</t>                                  |            | The error message to be displayed if the input field is in an error state.    |
+| hasClearButton         | false    | <t>boolean</t>                                 | `false`    | Whether the input field should display a clear button.                        |
+| leftIcon               | false    | <t>React.ReactElement</t>                      | `null`     | Icon to display on the left side of the main text.                            |
+| rightIcon              | false    | <t>React.ReactElement</t>                      | `null`     | Icon to display on the right side of the main text.                           |
+| placeholderTextColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | Custom color of the placeholder text string.                                  |
+| focusBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The background color of the input field when it is in focus.                  |
+| focusBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The background color of the input field when it is in focus.                  |
+| focusBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border start color of the input field when it is in focus.                |
+| focusBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border end color of the input field when it is in focus.                  |
+| focusBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border top color of the input field when it is in focus.                  |
+| focusBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border left color of the input field when it is in focus.                 |
+| focusBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border right color of the input field when it is in focus.                |
+| focusBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The border bottom color of the input field when it is in focus.               |
+| focusShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |            | The shadow color of the input field when it is in focus.                      |
+
+/\*\* The background color of the input field when it is in an error state \_/
+errorBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/** The border color of the input field when it is in an error state \*/
+errorBorderColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/** The border start color of the input field when it is in an error state \_/
+errorBorderStartColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The border end color of the input field when it is in an error state \_/
+errorBorderEndColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The border top color of the input field when it is in an error state \*/
+errorBorderTopColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The border left color of the input field when it is in an error state \_/
+errorBorderLeftColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The border right color of the input field when it is in an error state \_/
+errorBorderRightColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The border bottom color of the input field when it is in an error state \*/
+errorBorderBottomColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+/\*\* The shadow color of the input field when it is in an error state \*/
+errorShadowColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+
+## Default component Style
+
+```js
+export default {
+  parts: ["root", "text", "spinner", "icon"],
+  baseStyle: {
+    root: {
+      margin: "xxs",
+      justifyContent: "center",
+      alignItems: "center",
+      activeOpacity: 0.9,
+    },
+  },
+  sizes: {
+    xs: {
+      root: {
+        py: "xxs",
+        px: "xs",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn4",
+      },
+      spinner: {
+        my: "xxs",
+        size: "s",
+      },
+      icon: {
+        size: "s",
+      },
+    },
+    s: {
+      root: {
+        py: "xs",
+        px: "xs",
+        borderRadius: "s",
+      },
+      text: {
+        variant: "btn3",
+      },
+      spinner: {
+        size: "m",
+      },
+      icon: {
+        size: "s",
+      },
+    },
+    m: {
+      root: {
+        py: "s",
+        px: "s",
+        borderRadius: "m",
+      },
+      text: {
+        variant: "btn2",
+      },
+      spinner: {
+        size: "m",
+      },
+      icon: {
+        size: "m",
+      },
+    },
+    l: {
+      root: {
+        py: "m",
+        px: "m",
+        borderRadius: "m",
+      },
+      text: {
+        variant: "btn1",
+      },
+      spinner: {
+        size: "l",
+      },
+      icon: {
+        size: "m",
+      },
+    },
+  },
+  variants: {
+    filled: {
+      root: {
+        activeBackgroundColor: "primary.400",
+        backgroundColor: "primary.500",
+      },
+      text: { color: "neutral.50" },
+      spinner: {
+        color: "neutral.50",
+      },
+      icon: {
+        color: "neutral.50",
+      },
+    },
+    outline: {
+      root: {
+        activeBackgroundColor: {
+          light: "primary.50",
+          dark: "primary.800",
+        },
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        borderWidth: 1,
+        borderColor: "primary.500",
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+    ghost: {
+      root: {
+        activeBackgroundColor: {
+          light: "primary.50",
+          dark: "primary.800",
+        },
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+      },
+      text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+  },
+  defaults: {
+    size: "m",
+    variant: "filled",
+  },
+};
+```

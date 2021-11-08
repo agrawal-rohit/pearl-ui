@@ -14,6 +14,7 @@ import Screen from "./src/components/Atoms/Screen/Screen";
 import Input from "./src/components/Molecules/Input/Input";
 import Icon from "./src/components/Atoms/Icon/Icon";
 import Button from "./src/components/Molecules/Button/Button";
+import Box from "./src/components/Atoms/Box/Box";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -31,9 +32,7 @@ const App = () => {
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       {/* <Storybook /> */}
       <Screen>
-        {/* <Input placeholder="Enter value" value="start value" hasClearButton /> */}
-
-        <Input
+        {/* <Input
           size="m"
           isFullWidth
           placeholder="This is the filled input"
@@ -41,19 +40,22 @@ const App = () => {
           hasClearButton
           value={text}
           onChangeText={(val) => settext(val)}
-        />
+        /> */}
 
         <Input
           size="m"
           variant="outline"
+          m="l"
           isFullWidth
           placeholder="This is the outlines input"
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          boxShadow="l"
+          focusShadowColor="success.500"
         />
 
-        <Button isFullWidth onPress={() => console.log(2)}>
+        {/* <Button isFullWidth onPress={() => console.log(2)}>
           Test
-        </Button>
+        </Button> */}
       </Screen>
     </ThemeProvider>
   );

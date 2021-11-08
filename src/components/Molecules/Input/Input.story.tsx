@@ -47,6 +47,7 @@ storiesOf("Input", module)
       <Input
         size="m"
         isFullWidth
+        variant="filled"
         placeholder="This is the filled input"
         leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
       />

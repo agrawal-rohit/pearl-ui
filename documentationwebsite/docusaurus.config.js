@@ -92,6 +92,7 @@
               to: "/docs/getting-started/introduction", // ./docs/Intro.md
               label: "Docs",
               position: "left",
+              activeBasePath: "docs",
             },
             {
               type: "docsVersionDropdown",

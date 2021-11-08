@@ -26,6 +26,7 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
       "paddingVertical": 12,
     }
   }
+  testID="inputFieldContainer"
 >
   <TextInput
     accessibilityLabel="This is a placeholder"
@@ -102,6 +103,7 @@ Array [
         "paddingVertical": 12,
       }
     }
+    testID="inputFieldContainer"
   >
     <Text />
     <TextInput
@@ -167,6 +169,7 @@ Array [
         "paddingVertical": 12,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -245,6 +248,7 @@ Array [
         "paddingVertical": 4,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -315,6 +319,7 @@ Array [
         "paddingVertical": 8,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -385,6 +390,7 @@ Array [
         "paddingVertical": 12,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -455,6 +461,7 @@ Array [
         "paddingVertical": 16,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -530,6 +537,7 @@ Array [
         "paddingVertical": 12,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -595,6 +603,7 @@ Array [
         "paddingVertical": 12,
       }
     }
+    testID="inputFieldContainer"
   >
     <TextInput
       accessibilityState={
@@ -670,6 +679,7 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
       "paddingVertical": 12,
     }
   }
+  testID="inputFieldContainer"
 >
   <TextInput
     accessibilityState={
