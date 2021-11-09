@@ -39,16 +39,13 @@ const Button: React.FC<ButtonProps> = ({
   isDisabled = false,
   leftIcon = null,
   rightIcon = null,
-  ...props
+  ...rest
 }) => {
-  let multiComponentStyles = useMolecularComponentConfig("Button", props, {
-    size: props["size"],
-    variant: props["variant"],
+  let molecularProps = useMolecularComponentConfig("Button", rest, {
+    size: rest["size"],
+    variant: rest["variant"],
   });
-
-  if (colorScheme !== "primary") {
-    multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
-  }
+  molecularProps = useColorScheme(colorScheme, molecularProps);
 
   const disabled = isDisabled ? true : isLoading;
 
@@ -58,10 +55,10 @@ const Button: React.FC<ButtonProps> = ({
         <Box alignItems="center" flexDirection="row">
           {spinnerPlacement === "start" ? (
             <>
-              <Spinner {...multiComponentStyles.spinner} />
+              <Spinner {...molecularProps.spinner} />
               <Text
-                marginLeft={multiComponentStyles.root.py}
-                {...multiComponentStyles.text}
+                marginLeft={molecularProps.root.py}
+                {...molecularProps.text}
               >
                 {loadingText}
               </Text>
@@ -69,13 +66,13 @@ const Button: React.FC<ButtonProps> = ({
           ) : (
             <>
               <Text
-                marginRight={multiComponentStyles.root.py}
-                {...multiComponentStyles.text}
+                marginRight={molecularProps.root.py}
+                {...molecularProps.text}
               >
                 {loadingText}
               </Text>
 
-              <Spinner {...multiComponentStyles.spinner} />
+              <Spinner {...molecularProps.spinner} />
             </>
           )}
         </Box>
@@ -85,9 +82,9 @@ const Button: React.FC<ButtonProps> = ({
         <>
           <Spinner
             style={{ position: "absolute" }}
-            {...multiComponentStyles.spinner}
+            {...molecularProps.spinner}
           />
-          <Text {...multiComponentStyles.text} color="transparent">
+          <Text {...molecularProps.text} color="transparent">
             {children}
           </Text>
         </>
@@ -101,46 +98,44 @@ const Button: React.FC<ButtonProps> = ({
         <Box flexDirection="row">
           {leftIcon
             ? React.cloneElement(leftIcon, {
-                ...multiComponentStyles.icon,
+                ...molecularProps.icon,
                 marginRight:
-                  multiComponentStyles.root.py ||
-                  multiComponentStyles.root.paddingVertical,
+                  molecularProps.root.py || molecularProps.root.paddingVertical,
                 ...leftIcon.props,
               })
             : null}
-          <Text {...multiComponentStyles.text}>{children}</Text>
+          <Text {...molecularProps.text}>{children}</Text>
           {rightIcon
             ? React.cloneElement(rightIcon, {
-                ...multiComponentStyles.icon,
+                ...molecularProps.icon,
                 marginLeft:
-                  multiComponentStyles.root.py ||
-                  multiComponentStyles.root.paddingVertical,
+                  molecularProps.root.py || molecularProps.root.paddingVertical,
                 ...rightIcon.props,
               })
             : null}
         </Box>
       );
     } else {
-      return <Text {...multiComponentStyles.text}>{children}</Text>;
+      return <Text {...molecularProps.text}>{children}</Text>;
     }
   };
 
   return (
     <Pressable
-      {...multiComponentStyles.root}
+      {...molecularProps.root}
       isDisabled={disabled}
       opacity={disabled ? 0.5 : 1}
-      onPress={props.onPress}
+      onPress={rest.onPress}
       alignSelf={isFullWidth ? "stretch" : "flex-start"}
       androidRippleConfig={
-        props.androidRippleConfig
-          ? props.androidRippleConfig
+        rest.androidRippleConfig
+          ? rest.androidRippleConfig
           : { color: `${colorScheme}.200` }
       }
       accessibilityLabel={
         !isLoading
-          ? props.accessibilityLabel
-            ? props.accessibilityLabel
+          ? rest.accessibilityLabel
+            ? rest.accessibilityLabel
             : children
           : "Loading"
       }

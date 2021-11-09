@@ -133,7 +133,7 @@ const Input = React.forwardRef(
       errorMessage = "",
       onChangeText = () => {},
       onChange = () => {},
-      ...props
+      ...rest
     }: InputProps,
     textInputRef: any
   ) => {
@@ -142,7 +142,7 @@ const Input = React.forwardRef(
     }
     const [isFocused, setIsFocused] = useState(false);
     const [isCleared, setIsCleared] = useState(
-      props.value && props.value.length > 0 ? false : true
+      rest.value && rest.value.length > 0 ? false : true
     );
 
     const {
@@ -163,9 +163,9 @@ const Input = React.forwardRef(
       errorBorderRightColor,
       errorBorderBottomColor,
       ...filteredReceivedProps
-    } = props;
+    } = rest;
 
-    let multiComponentStyles = useMolecularComponentConfig(
+    let molecularProps = useMolecularComponentConfig(
       "Input",
       filteredReceivedProps,
       {
@@ -178,17 +178,17 @@ const Input = React.forwardRef(
     );
 
     const inputProps = useStyledProps(
-      multiComponentStyles.input,
+      molecularProps.input,
       inputRootStyleFunctions
     );
     const { placeholderTextColor, ...finalInputStyle } = inputProps.style;
 
     const textStyles = useAtomicComponentConfig(
       "Text",
-      multiComponentStyles.text,
+      molecularProps.text,
       {
         size: size,
-        variant: multiComponentStyles.text.variant,
+        variant: molecularProps.text.variant,
       },
       inputTextStyleFunctions
     );
@@ -246,13 +246,13 @@ const Input = React.forwardRef(
         | keyof BasePearlTheme["palette"]
         | ColorModeColor
         | undefined = undefined,
-      targetPropertyParent: object = props
+      targetPropertyParent: object = rest
     ) => {
       let fallbackProp;
       if (customfallbackProp) {
         fallbackProp = customfallbackProp;
       } else {
-        fallbackProp = multiComponentStyles.root[propertyName];
+        fallbackProp = molecularProps.root[propertyName];
       }
 
       if (isFocused) {
@@ -260,9 +260,7 @@ const Input = React.forwardRef(
           (targetPropertyParent as any)[
             `focus${capitalizeFirstLetter(propertyName)}`
           ] ||
-          multiComponentStyles.root[
-            `focus${capitalizeFirstLetter(propertyName)}`
-          ];
+          molecularProps.root[`focus${capitalizeFirstLetter(propertyName)}`];
         return focusProp ? focusProp : fallbackProp;
       }
 
@@ -271,9 +269,7 @@ const Input = React.forwardRef(
           (targetPropertyParent as any)[
             `error${capitalizeFirstLetter(propertyName)}`
           ] ||
-          multiComponentStyles.root[
-            `error${capitalizeFirstLetter(propertyName)}`
-          ];
+          molecularProps.root[`error${capitalizeFirstLetter(propertyName)}`];
         return errorProp ? errorProp : fallbackProp;
       }
 
@@ -284,7 +280,7 @@ const Input = React.forwardRef(
     const renderLeftIcon = () => {
       if (leftIcon) {
         return React.cloneElement(leftIcon, {
-          ...multiComponentStyles.icon,
+          ...molecularProps.icon,
           ...leftIcon.props,
         });
       }
@@ -293,7 +289,7 @@ const Input = React.forwardRef(
     const renderRightIcon = () => {
       if (rightIcon) {
         return React.cloneElement(rightIcon, {
-          ...multiComponentStyles.icon,
+          ...molecularProps.icon,
           ...rightIcon.props,
         });
       }
@@ -309,7 +305,7 @@ const Input = React.forwardRef(
             testID="clear-icon"
           >
             <Icon
-              {...multiComponentStyles.icon}
+              {...molecularProps.icon}
               iconFamily="Ionicons"
               iconName="close"
               marginLeft="xs"
@@ -321,18 +317,17 @@ const Input = React.forwardRef(
 
     const renderErrorMessage = () => {
       if (errorMessage && isErrorVisible) {
-        return <Text {...multiComponentStyles.errorText}>{errorMessage}</Text>;
+        return <Text {...molecularProps.errorText}>{errorMessage}</Text>;
       }
     };
 
     return (
       <>
         <Box
-          {...multiComponentStyles.root}
+          {...molecularProps.root}
           backgroundColor={computeFocusOrErrorProps(
             "backgroundColor",
-            multiComponentStyles.root.backgroundColor ||
-              multiComponentStyles.root.bg
+            molecularProps.root.backgroundColor || molecularProps.root.bg
           )}
           borderColor={computeFocusOrErrorProps("borderColor")}
           borderStartColor={computeFocusOrErrorProps("borderStartColor")}
@@ -344,11 +339,11 @@ const Input = React.forwardRef(
           opacity={isDisabled ? 0.5 : 1}
           testID="inputFieldContainer"
           style={{
-            ...multiComponentStyles.root.style,
+            ...molecularProps.root.style,
             shadowColor: computeFocusOrErrorProps(
               "shadowColor",
-              multiComponentStyles.root.style.shadowColor,
-              multiComponentStyles.root.style
+              molecularProps.root.style.shadowColor,
+              molecularProps.root.style
             ),
           }}
         >
@@ -363,16 +358,16 @@ const Input = React.forwardRef(
             onChangeText={onChangeTextHandler}
             allowFontScaling={true}
             placeholderTextColor={
-              multiComponentStyles.root.style.placeholderTextColor ||
+              molecularProps.root.style.placeholderTextColor ||
               placeholderTextColor
-                ? multiComponentStyles.root.style.placeholderTextColor ||
+                ? molecularProps.root.style.placeholderTextColor ||
                   placeholderTextColor
                 : "#a7a7a7"
             }
             accessibilityLabel={
-              props.accessibilityLabel
-                ? props.accessibilityLabel
-                : props.placeholder
+              rest.accessibilityLabel
+                ? rest.accessibilityLabel
+                : rest.placeholder
             }
             accessibilityState={{ disabled: isDisabled, selected: isFocused }}
             style={[

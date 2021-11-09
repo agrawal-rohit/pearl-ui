@@ -18,30 +18,27 @@ const TextLink: React.FC<TextLinkProps> = ({
   children,
   colorScheme = "primary",
   isDisabled = false,
-  ...props
+  ...rest
 }) => {
-  let multiComponentStyles = useMolecularComponentConfig("TextLink", props, {
-    size: props["size"],
-    variant: props["variant"],
+  let molecularProps = useMolecularComponentConfig("TextLink", rest, {
+    size: rest["size"],
+    variant: rest["variant"],
   });
-
-  if (colorScheme !== "primary") {
-    multiComponentStyles = useColorScheme(colorScheme, multiComponentStyles);
-  }
+  molecularProps = useColorScheme(colorScheme, molecularProps);
 
   return (
     <Pressable
-      {...multiComponentStyles.root}
+      {...molecularProps.root}
       isDisabled={isDisabled}
       opacity={isDisabled ? 0.5 : 1}
-      onPress={props.onPress}
+      onPress={rest.onPress}
       accessibilityLabel={
-        props.accessibilityLabel ? props.accessibilityLabel : children
+        rest.accessibilityLabel ? rest.accessibilityLabel : children
       }
       accessibilityState={{ disabled: isDisabled }}
       isDisabledAndroidRipple
     >
-      <Text {...multiComponentStyles.text}>{children}</Text>
+      <Text {...molecularProps.text}>{children}</Text>
     </Pressable>
   );
 };

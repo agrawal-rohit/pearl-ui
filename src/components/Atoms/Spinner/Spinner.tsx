@@ -69,15 +69,15 @@ const Spinner: React.FC<SpinnerProps> = ({
   animating = true,
   variant = "spinner",
   accessibilityLabel = null,
-  ...props
+  ...rest
 }) => {
   if (!isLoading) return null;
 
-  const componentSpecificProps = useAtomicComponentConfig(
+  const props = useAtomicComponentConfig(
     "Spinner",
-    props,
+    rest,
     {
-      size: props["size"],
+      size: rest["size"],
       variant: variant,
     },
     indicatorStyleFunctions
@@ -88,15 +88,12 @@ const Spinner: React.FC<SpinnerProps> = ({
       variant as keyof typeof SpinnerConfig["variants"]
     ],
     {
-      ...componentSpecificProps,
-      color: componentSpecificProps.style.color
-        ? componentSpecificProps.style.color
-        : componentSpecificProps.style.color,
-      size: componentSpecificProps.sizeMultiplier
-        ? componentSpecificProps.sizeMultiplier *
-          componentSpecificProps.spinnerSize
-        : componentSpecificProps.spinnerSize,
-      style: { flex: isFullScreen ? 1 : 0, ...componentSpecificProps.style },
+      ...props,
+      color: props.style.color ? props.style.color : props.style.color,
+      size: props.sizeMultiplier
+        ? props.sizeMultiplier * props.spinnerSize
+        : props.spinnerSize,
+      style: { flex: isFullScreen ? 1 : 0, ...props.style },
       accessible: true,
       accessibilityLabel: accessibilityLabel
         ? accessibilityLabel

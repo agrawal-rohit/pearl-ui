@@ -1,8 +1,41 @@
 import React from "react";
-import Box, { BoxProps } from "../Box/Box";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
+import {
+  backgroundColor,
+  opacity,
+  layout,
+  spacing,
+  position,
+} from "../../../theme/src/styleFunctions";
+import {
+  BackgroundColorProps,
+  OpacityProps,
+  VisibleProps,
+  LayoutProps,
+  SpacingProps,
+  PositionProps,
+  visible,
+} from "../../../theme/src/styleFunctions";
+import { StyleFunctionContainer } from "../../../theme/src/types";
+import { View } from "react-native";
 
-type DividerProps = BoxProps & {
+export type DividerStyleProps = BackgroundColorProps &
+  OpacityProps &
+  VisibleProps &
+  LayoutProps &
+  SpacingProps &
+  PositionProps;
+
+export const boxStyleFunctions = [
+  backgroundColor,
+  opacity,
+  visible,
+  layout,
+  spacing,
+  position,
+] as StyleFunctionContainer[];
+
+type DividerProps = DividerStyleProps & {
   /** The size of the divider */
   size?: string;
   /** The variant of the divider */
@@ -16,35 +49,27 @@ type DividerProps = BoxProps & {
 };
 
 /** Divider is used to visually separate content in a list or group. */
-const Divider: React.FC<DividerProps> = ({
-  children,
-  orientation = "horizontal",
-  ...props
-}) => {
-  const componentSpecificProps = useAtomicComponentConfig("Divider", props, {
-    size: props.size,
-    variant: props.size,
+const Divider: React.FC<DividerProps> = ({ children, ...rest }) => {
+  const props = useAtomicComponentConfig("Divider", rest, {
+    size: rest.size,
+    variant: rest.size,
   });
 
   return (
-    <Box
-      {...componentSpecificProps}
-      h={
-        orientation === "horizontal"
-          ? componentSpecificProps.thickness
-          : componentSpecificProps.length
-      }
-      w={
-        orientation === "vertical"
-          ? componentSpecificProps.thickness
-          : componentSpecificProps.length
-      }
-      flex={
-        orientation === "vertical" ? componentSpecificProps.thickness : null
-      }
+    <View
+      style={[
+        props.style,
+        {
+          flex: props.orientation === "vertical" ? 1 : null,
+          height:
+            props.orientation === "horizontal" ? props.thickness : props.length,
+          width:
+            props.orientation === "vertical" ? props.thickness : props.length,
+        },
+      ]}
     >
       {children}
-    </Box>
+    </View>
   );
 };
 

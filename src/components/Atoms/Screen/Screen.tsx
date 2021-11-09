@@ -15,9 +15,9 @@ const Screen: React.FC<ScreenProps> = ({
   children,
   size,
   variant,
-  ...props
+  ...rest
 }) => {
-  const componentStyles = useAtomicComponentConfig("Screen", props, {
+  const props = useAtomicComponentConfig("Screen", rest, {
     size: size,
     variant: variant,
   });
@@ -27,10 +27,10 @@ const Screen: React.FC<ScreenProps> = ({
       style={{
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        backgroundColor: componentStyles.style.backgroundColor,
+        backgroundColor: props.style.backgroundColor,
       }}
     >
-      <Box flex={1} flexDirection="column" {...componentStyles}>
+      <Box flex={1} flexDirection="column" {...props}>
         {children}
       </Box>
     </SafeAreaView>
