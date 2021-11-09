@@ -5,5 +5,11 @@ import Divider from "./Divider";
 
 storiesOf("Divider", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
-  .add("horizontal", () => <Divider />)
-  .add("vertical", () => <Divider orientation="vertical" />);
+  .add("Main", () => (
+    <>
+      <Divider />
+      <Divider mt="l" length="50%" />
+
+      <Divider mt="l" orientation="vertical" length={20} bg="violet" />
+    </>
+  ));

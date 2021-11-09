@@ -60,7 +60,6 @@ const Divider: React.FC<DividerProps> = ({ children, ...rest }) => {
       style={[
         props.style,
         {
-          flex: props.orientation === "vertical" ? 1 : null,
           height:
             props.orientation === "horizontal" ? props.thickness : props.length,
           width:
