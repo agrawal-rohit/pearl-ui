@@ -6,6 +6,7 @@ export { default as Screen } from "./Atoms/Screen/Screen";
 export { default as Pressable } from "./Atoms/Pressable/Pressable";
 export { default as Spinner } from "./Atoms/Spinner/Spinner";
 export { default as Icon } from "./Atoms/Icon/Icon";
+export { default as Divider } from "./Atoms/Divider/Divider";
 
 // Molecules
 export { default as Button } from "./Molecules/Button/Button";
