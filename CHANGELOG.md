@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.4.0...v1.4.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* **divider:** fixed issue related to divider length not changing in vertical orientation ([1f9a587](https://github.com/agrawal-rohit/pearl-ui/commit/1f9a5873394fc1d69e77aa34d58389704b23c7b6))
+
 # [1.4.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.3.1...v1.4.0) (2021-11-09)
 
 
