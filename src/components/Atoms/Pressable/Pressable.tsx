@@ -69,9 +69,9 @@ const Pressable: React.FC<PressableProps> = ({
   onPressIn = null,
   onPressOut = null,
   onLongPress = null,
-  ...props
+  ...rest
 }) => {
-  const pressableStyles = useStyledProps(props, boxStyleFunctions);
+  const props = useStyledProps(rest, boxStyleFunctions);
 
   const androidRippleProps = androidRippleConfig
     ? useStyledProps({ color: androidRippleConfig?.color }, [color]).style
@@ -93,16 +93,16 @@ const Pressable: React.FC<PressableProps> = ({
       accessibilityState={
         accessibilityState ? accessibilityState : { disabled: isDisabled }
       }
-      {...pressableStyles}
+      {...props}
       style={({ pressed }) => [
-        pressableStyles.style,
+        props.style,
         {
-          opacity: pressed ? activeOpacity : pressableStyles.style.opacity,
+          opacity: pressed ? activeOpacity : props.style.opacity,
           backgroundColor: pressed
-            ? pressableStyles.style.activeBackgroundColor
-              ? pressableStyles.style.activeBackgroundColor
-              : pressableStyles.style.backgroundColor
-            : pressableStyles.style.backgroundColor,
+            ? props.style.activeBackgroundColor
+              ? props.style.activeBackgroundColor
+              : props.style.backgroundColor
+            : props.style.backgroundColor,
         },
       ]}
     >

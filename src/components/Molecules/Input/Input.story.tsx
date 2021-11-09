@@ -68,6 +68,13 @@ storiesOf("Input", module)
   ))
   .add("Disabled", () => (
     <>
-      <Input isDisabled>Button text</Input>
+      <Input
+        size="m"
+        isFullWidth
+        isDisabled
+        variant="filled"
+        placeholder="This is the filled input"
+        leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+      />
     </>
   ));

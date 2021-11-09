@@ -3,30 +3,34 @@
 exports[`Atoms/Divider passes the snapshot test in dark mode 1`] = `
 Array [
   <View
-    length="100%"
     style={
-      Object {
-        "backgroundColor": "#1A2138",
-        "display": "flex",
-        "flex": null,
-        "height": 1,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "#1A2138",
+          "display": "flex",
+        },
+        Object {
+          "flex": null,
+          "height": 1,
+          "width": "100%",
+        },
+      ]
     }
-    thickness={1}
   />,
   <View
-    length="100%"
     style={
-      Object {
-        "backgroundColor": "#1A2138",
-        "display": "flex",
-        "flex": 1,
-        "height": "100%",
-        "width": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#1A2138",
+          "display": "flex",
+        },
+        Object {
+          "flex": 1,
+          "height": "100%",
+          "width": 1,
+        },
+      ]
     }
-    thickness={1}
   />,
 ]
 `;
@@ -34,30 +38,34 @@ Array [
 exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
 Array [
   <View
-    length="100%"
     style={
-      Object {
-        "backgroundColor": "#E4E9F2",
-        "display": "flex",
-        "flex": null,
-        "height": 1,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "#E4E9F2",
+          "display": "flex",
+        },
+        Object {
+          "flex": null,
+          "height": 1,
+          "width": "100%",
+        },
+      ]
     }
-    thickness={1}
   />,
   <View
-    length="100%"
     style={
-      Object {
-        "backgroundColor": "#E4E9F2",
-        "display": "flex",
-        "flex": 1,
-        "height": "100%",
-        "width": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#E4E9F2",
+          "display": "flex",
+        },
+        Object {
+          "flex": 1,
+          "height": "100%",
+          "width": 1,
+        },
+      ]
     }
-    thickness={1}
   />,
 ]
 `;

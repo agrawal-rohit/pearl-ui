@@ -89,16 +89,15 @@ const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
   size = "m",
-  variant = undefined,
   accessibilityLabel = null,
-  ...props
+  ...rest
 }) => {
-  const componentSpecificProps = useAtomicComponentConfig(
+  const props = useAtomicComponentConfig(
     "Icon",
-    props,
+    rest,
     {
       size: size,
-      variant: variant,
+      variant: rest.variant,
     },
     iconStyleFunctions
   );
@@ -112,8 +111,8 @@ const Icon: React.FC<IconProps> = ({
         accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
       }
       name={iconName}
-      {...componentSpecificProps}
-      size={responsiveSize(componentSpecificProps.size)}
+      {...props}
+      size={responsiveSize(props.size)}
     ></IconToUse>
   );
 };
