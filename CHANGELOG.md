@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.3.1...v1.4.0) (2021-11-09)
+
+
+### Features
+
+* **divider:** added Divider component with corresponding docs ([2cf151f](https://github.com/agrawal-rohit/pearl-ui/commit/2cf151f4dbcae587b634c914b1462f178fbfcaef))
+
 ## [1.3.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.3.0...v1.3.1) (2021-11-09)
 
 
