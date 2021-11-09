@@ -4,12 +4,15 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
+import useThemeContext from "@theme/hooks/useThemeContext"; //docs: https://v2.docusaurus.io/docs/2.0.0-alpha.69/theme-classic#usethemecontext
 
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
 
 function HomepageHeader() {
+  const { isDarkTheme } = useThemeContext();
+
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className="container">
@@ -52,7 +55,9 @@ function HomepageHeader() {
           target="_blank"
         >
           <img
-            src="https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=light"
+            src={`https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=${
+              isDarkTheme ? "dark" : "light"
+            }`}
             alt="Pearl UI - Design system driven UI framework for React Native | Product Hunt"
             style={{ width: 250, height: 54 }}
             width="250"
