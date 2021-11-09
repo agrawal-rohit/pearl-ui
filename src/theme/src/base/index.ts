@@ -14,6 +14,7 @@ import ButtonConfig from "../../../components/Molecules/Button/Button.config";
 import IconConfig from "../../../components/Atoms/Icon/Icon.config";
 import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.config";
 import InputConfig from "../../../components/Molecules/Input/Input.config";
+import DividerConfig from "../../../components/Atoms/Divider/Divider.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -47,5 +48,6 @@ export const baseTheme: BasePearlTheme = {
     Button: ButtonConfig,
     TextLink: TextLinkConfig,
     Input: InputConfig,
+    Divider: DividerConfig,
   },
 };

@@ -61,6 +61,11 @@ storiesOf("Input", module)
       />
     </>
   ))
+  .add("TextArea", () => (
+    <>
+      <Input multiline isFullWidth placeholder="asdlaknsdlakn" />
+    </>
+  ))
   .add("Disabled", () => (
     <>
       <Input isDisabled>Button text</Input>

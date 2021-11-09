@@ -1,0 +1,70 @@
+---
+sidebar_position: 5
+title: Divider
+---
+
+`Divider` is used to visually separate content in a list or group. By default, it renders a [Box](./box) element.
+
+## Import
+
+```jsx
+import { Divider } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Divider />
+```
+
+### Divider orientation
+
+Use the `orientation` prop to change the direction of the divider.
+
+```jsx
+<Divider orientation="horizontal" />
+
+<Divider orientation="vertical" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/divider-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/divider-dark" />
+
+</TabItem>
+</Tabs>
+
+## Props
+
+### Supported style props
+
+`Divider` composes [Box](./Box) so you can pass all [Box](./Box) related props.
+
+### Additional props
+
+| Name        | Required | Type                                             | Default        | Description                  |
+| ----------- | -------- | ------------------------------------------------ | -------------- | ---------------------------- |
+| size        | false    | <t>PearlTheme.components.Divider["sizes"]</t>    |                | The size of the divider      |
+| variant     | false    | <t>PearlTheme.components.Divider["variants"]</t> |                | The variant of the divider   |
+| thickness   | false    | <t>number</t>                                    | `1`            | The thickness of the divider |
+| length      | false    | <t>number \| string</t>                          | `"100%"`       | The length of the divider    |
+| orientation | false    | <t>"horizontal" \| "vertical"</t>                | `"horizontal"` | The direction of the divider |

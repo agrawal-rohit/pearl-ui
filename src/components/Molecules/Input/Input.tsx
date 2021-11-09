@@ -25,7 +25,7 @@ import {
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
 
-type InputProps = TextInputProps &
+export type InputProps = TextInputProps &
   BoxProps & {
     /** Size of the input field. */
     size?: string;
