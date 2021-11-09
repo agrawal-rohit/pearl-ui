@@ -30,30 +30,28 @@ const App = () => {
 
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
-      {/* <Storybook /> */}
-      <Screen>
+      <Storybook />
+      {/* <Screen>
         <Input
-          size="m"
           isFullWidth
-          placeholder="This is the filled input"
-          leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
-          hasClearButton
+          placeholder="Enter Email"
+          leftIcon={<Icon iconFamily="Ionicons" iconName="mail" />}
           value={text}
           onChangeText={(val) => settext(val)}
         />
 
         <Input
-          size="m"
-          variant="outline"
           isFullWidth
-          placeholder="This is the outlines input"
+          placeholder="Enter Password"
+          secureTextEntry
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
 
-        <Button isFullWidth onPress={() => console.log(2)}>
-          Test
+        <Button mt="m" isFullWidth onPress={() => console.log(2)}>
+          Login
         </Button>
-      </Screen>
+      </Screen> */}
     </ThemeProvider>
   );
 };

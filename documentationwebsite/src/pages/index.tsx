@@ -18,9 +18,10 @@ function HomepageHeader() {
           <span style={{ color: "var(--ifm-color-primary)" }}>a designer</span>
         </h1>
         <p className={styles.heroDescription}>
-          Pearl UI is a design-system-driven framework for developers to build
-          beautiful, accessible mobile apps right out of the box. Take your idea
-          from a Figma mockup to a finished product at the speed of light!
+          Pearl UI is a design-system-driven UI framework that helps developers
+          build beautiful and accessible mobile apps right out of the box. Take
+          your idea from a Figma mockup to a finished product at the speed of
+          light!
         </p>
         <Link
           className={clsx(
@@ -32,6 +33,7 @@ function HomepageHeader() {
         >
           Get Started
         </Link>
+
         <a
           className={clsx(
             "button button--secondary button--lg",
@@ -41,6 +43,21 @@ function HomepageHeader() {
           target="_blank"
         >
           Github
+        </a>
+
+        <br />
+        <br />
+        <a
+          href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-review&utm_medium=badge&utm_souce=badge-pearl-ui#discussion-body"
+          target="_blank"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=light"
+            alt="Pearl UI - Design system driven UI framework for React Native | Product Hunt"
+            style={{ width: 250, height: 54 }}
+            width="250"
+            height="54"
+          />
         </a>
       </div>
     </header>
@@ -119,7 +136,6 @@ export default function Home(): JSX.Element {
         <script async src="https://snack.expo.dev/embed.js"></script>
       </Head> */}
       <HomepageHeader />
-      <br />
       <br />
       <FeaturesSection />
       <br />
