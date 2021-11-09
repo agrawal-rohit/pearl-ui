@@ -25,4 +25,14 @@ describe("Atoms/Divider", () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("passes the snapshot test for different length modes", () => {
+    const tree = render(
+      <ThemeProvider defaultColorMode="dark">
+        <Divider length="50%" />
+        <Divider orientation="vertical" length={20} bg="violet" />
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
