@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.3.0...v1.3.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* **screen:** fixed SafeAreaView and Box heirarchy, updated copy on website, Added Product Hunt badge ([50c457c](https://github.com/agrawal-rohit/pearl-ui/commit/50c457c7dc38155265d75ed802f2ef93a19abadb))
+
 # [1.3.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.2.3...v1.3.0) (2021-11-08)
 
 
