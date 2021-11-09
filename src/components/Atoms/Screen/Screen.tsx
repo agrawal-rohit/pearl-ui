@@ -23,16 +23,17 @@ const Screen: React.FC<ScreenProps> = ({
   });
 
   return (
-    <Box flex={1} flexDirection="column" {...componentStyles}>
-      <SafeAreaView
-        style={{
-          flex: 1,
-          paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        }}
-      >
+    <SafeAreaView
+      style={{
+        flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        backgroundColor: componentStyles.style.backgroundColor,
+      }}
+    >
+      <Box flex={1} flexDirection="column" {...componentStyles}>
         {children}
-      </SafeAreaView>
-    </Box>
+      </Box>
+    </SafeAreaView>
   );
 };
 
