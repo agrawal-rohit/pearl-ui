@@ -51,64 +51,73 @@ const activeBackgroundColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
-boxStyleFunctions.push(activeBackgroundColorStyleFunction);
+const pressableStyleFunctions = [
+  ...boxStyleFunctions,
+  activeBackgroundColorStyleFunction,
+];
 
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
-const Pressable: React.FC<PressableProps> = ({
-  children,
-  androidRippleConfig,
-  onPressInDelay = 100,
-  activeOpacity = 1,
-  isDisabledAndroidSound = false,
-  isDisabled = false,
-  isDisabledAndroidRipple = false,
-  accessibilityLabel = "Press me!",
-  actionDescription = "",
-  accessibilityState = null,
-  onPress = null,
-  onPressIn = null,
-  onPressOut = null,
-  onLongPress = null,
-  ...rest
-}) => {
-  const props = useStyledProps(rest, boxStyleFunctions);
+const Pressable = React.forwardRef(
+  (
+    {
+      children,
+      androidRippleConfig,
+      onPressInDelay = 100,
+      activeOpacity = 1,
+      isDisabledAndroidSound = false,
+      isDisabled = false,
+      isDisabledAndroidRipple = false,
+      accessibilityLabel = "Press me!",
+      actionDescription = "",
+      accessibilityState = undefined,
+      onPress = null,
+      onPressIn = null,
+      onPressOut = null,
+      onLongPress = null,
+      ...rest
+    }: PressableProps,
+    ref: any
+  ) => {
+    const props = useStyledProps(rest, pressableStyleFunctions);
 
-  const androidRippleProps = androidRippleConfig
-    ? useStyledProps({ color: androidRippleConfig?.color }, [color]).style
-    : defaultRippleConfig;
+    const androidRippleProps = androidRippleConfig
+      ? useStyledProps({ color: androidRippleConfig?.color }, [color]).style
+      : defaultRippleConfig;
 
-  return (
-    <RNPressable
-      android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
-      onPress={onPress}
-      onPressIn={onPressIn}
-      onPressOut={onPressOut}
-      onLongPress={onLongPress}
-      disabled={isDisabled}
-      android_disableSound={isDisabledAndroidSound}
-      accessible={true}
-      accessibilityLabel={accessibilityLabel}
-      accessibilityHint={actionDescription}
-      accessibilityRole="button"
-      accessibilityState={
-        accessibilityState ? accessibilityState : { disabled: isDisabled }
-      }
-      {...props}
-      style={({ pressed }) => [
-        props.style,
-        {
-          opacity: pressed ? activeOpacity : props.style.opacity,
-          backgroundColor: pressed
-            ? props.style.activeBackgroundColor
+    return (
+      <RNPressable
+        ref={ref}
+        android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
+        onPress={onPress}
+        onPressIn={onPressIn}
+        onPressOut={onPressOut}
+        onLongPress={onLongPress}
+        disabled={isDisabled}
+        android_disableSound={isDisabledAndroidSound}
+        accessible={true}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityHint={actionDescription}
+        accessibilityRole="button"
+        accessibilityState={
+          accessibilityState ? accessibilityState : { disabled: isDisabled }
+        }
+        {...props}
+        style={({ pressed }) => [
+          props.style,
+          {
+            opacity: pressed ? activeOpacity : props.style.opacity,
+            backgroundColor: pressed
               ? props.style.activeBackgroundColor
-              : props.style.backgroundColor
-            : props.style.backgroundColor,
-        },
-      ]}
-    >
-      {children}
-    </RNPressable>
-  );
-};
+                ? props.style.activeBackgroundColor
+                : props.style.backgroundColor
+              : props.style.backgroundColor,
+          },
+        ]}
+      >
+        {children}
+      </RNPressable>
+    );
+  }
+);
 
 export default Pressable;

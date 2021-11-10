@@ -86,7 +86,7 @@ export interface BasePearlTheme {
     [key: string]: string | ColorPalette;
   };
   spacing: {
-    [key: string]: number;
+    [key: string]: number | string;
   };
   components: {
     [key: string]: AtomicComponentConfig | MolecularComponentConfig;
@@ -98,7 +98,7 @@ export interface BasePearlTheme {
     [key: string]: number;
   };
   borderRadii: {
-    [key: string]: number;
+    [key: string]: number | string;
   };
 }
 

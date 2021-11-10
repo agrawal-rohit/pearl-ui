@@ -7,60 +7,48 @@ export default {
   },
   variants: {
     h1: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
+      fontFamily: "Poppins-Bold",
+      fontWeight: "700",
       fontSize: 34,
       lineHeight: 42,
     },
     h2: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
+      fontFamily: "Poppins-Bold",
+      fontWeight: "700",
       fontSize: 28,
       lineHeight: 36,
     },
-    h3: {
+    t1: {
       fontFamily: "Poppins-SemiBold",
       fontWeight: "600",
       fontSize: 22,
       lineHeight: 30,
     },
-    h4: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
-      fontSize: 20,
-      lineHeight: 28,
-    },
-    h5: {
+    t2: {
       fontFamily: "Poppins-SemiBold",
       fontWeight: "600",
       fontSize: 18,
       lineHeight: 26,
     },
-    h6: {
+    st1: {
       fontFamily: "Poppins-SemiBold",
       fontWeight: "600",
       fontSize: 16,
       lineHeight: 24,
+    },
+    st2: {
+      fontFamily: "Poppins-SemiBold",
+      fontWeight: "600",
+      fontSize: 14,
+      lineHeight: 22,
     },
     p1: {
       fontFamily: "Poppins-Regular",
       fontWeight: "400",
-      fontSize: 20,
-      lineHeight: 28,
-    },
-    p2: {
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
-      fontSize: 18,
-      lineHeight: 26,
-    },
-    p3: {
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
       fontSize: 16,
       lineHeight: 24,
     },
-    p4: {
+    p2: {
       fontFamily: "Poppins-Regular",
       fontWeight: "400",
       fontSize: 14,
@@ -71,12 +59,6 @@ export default {
       fontWeight: "400",
       fontSize: 12,
       lineHeight: 20,
-    },
-    label: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
-      fontSize: 16,
-      lineHeight: 24,
     },
     btn1: {
       fontFamily: "Poppins-Medium",
@@ -108,6 +90,6 @@ export default {
     },
   },
   defaults: {
-    variant: "p3",
+    variant: "p1",
   },
 };

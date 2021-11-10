@@ -61,6 +61,20 @@ storiesOf("Input", module)
       />
     </>
   ))
+  .add("States", () => (
+    <>
+      <Input isFullWidth placeholder="Focused Input" autoFocus />
+
+      <Input isFullWidth placeholder="Error Input" isErrorVisible />
+
+      <Input
+        isFullWidth
+        placeholder="Error Input with message"
+        isErrorVisible
+        errorMessage="This is an error message!"
+      />
+    </>
+  ))
   .add("TextArea", () => (
     <>
       <Input multiline isFullWidth placeholder="asdlaknsdlakn" />

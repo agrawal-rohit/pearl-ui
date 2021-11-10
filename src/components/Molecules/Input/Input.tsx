@@ -24,6 +24,7 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
+import { useColorScheme } from "../../../hooks/useColorScheme";
 
 export type InputProps = TextInputProps &
   BoxProps & {
@@ -45,6 +46,8 @@ export type InputProps = TextInputProps &
     rightIcon?: React.ReactElement;
     /** The error message to be displayed if the input field is in an error state */
     errorMessage?: string;
+    /** Active color palette of the input field */
+    colorScheme?: string;
     /** Custom color of the placeholder text string */
     placeholderTextColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
     /** The background color of the input field when it is in focus */
@@ -131,6 +134,7 @@ const Input = React.forwardRef(
       leftIcon = undefined,
       rightIcon = undefined,
       errorMessage = "",
+      colorScheme = "primary",
       onChangeText = () => {},
       onChange = () => {},
       ...rest
@@ -176,6 +180,7 @@ const Input = React.forwardRef(
       "root",
       "input"
     );
+    molecularProps = useColorScheme(colorScheme, molecularProps);
 
     const inputProps = useStyledProps(
       molecularProps.input,

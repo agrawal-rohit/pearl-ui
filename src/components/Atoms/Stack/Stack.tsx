@@ -56,6 +56,7 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
   return (
     <Box
       {...rest}
+      alignSelf="flex-start"
       flexDirection={rest.direction === "horizontal" ? "row" : "column"}
     >
       {renderChildren()}

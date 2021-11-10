@@ -4,7 +4,7 @@ export default {
     root: {
       flexDirection: "row",
       alignSelf: "flex-start",
-      margin: "xxs",
+      my: "xxs",
       focusBorderColor: "primary.500",
       errorBorderColor: "danger.500",
       errorMessageColor: "danger.500",
@@ -33,7 +33,6 @@ export default {
     errorText: {
       variant: "caption",
       color: "danger.500",
-      marginLeft: "s",
       marginBottom: "xxs",
     },
   },
@@ -130,7 +129,7 @@ export default {
         borderWidth: 1,
         borderColor: {
           light: "neutral.300",
-          dark: "neutral.500",
+          dark: "neutral.600",
         },
       },
       input: {

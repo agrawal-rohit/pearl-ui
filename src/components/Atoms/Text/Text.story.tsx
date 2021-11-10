@@ -10,16 +10,12 @@ storiesOf("Typography", module)
     <Box flex={1}>
       <Text variant="h1">Heading 1</Text>
       <Text variant="h2">Heading 2</Text>
-      <Text variant="h3">Heading 3</Text>
-      <Text variant="h4">Heading 4</Text>
-      <Text variant="h5">Heading 5</Text>
-      <Text variant="h6">Heading 6</Text>
+      <Text variant="t1">Title 1</Text>
+      <Text variant="t2">Title 2</Text>
+      <Text variant="st1">Subtitle 1</Text>
+      <Text variant="st2">Subtitle 2</Text>
       <Text variant="p1">Paragraph 1</Text>
       <Text variant="p2">Paragraph 2</Text>
-      <Text variant="p3">Paragraph 3</Text>
-      <Text variant="p4">Paragraph 4</Text>
-      <Text variant="label">Label</Text>
-      <Text variant="caption">Caption</Text>
       <Box backgroundColor="primary.500">
         <Text variant="btn1">Button 1</Text>
       </Box>
@@ -32,5 +28,6 @@ storiesOf("Typography", module)
       <Box backgroundColor="primary.500">
         <Text variant="btn4">Button 4</Text>
       </Box>
+      <Text variant="caption">Caption</Text>
     </Box>
   ));

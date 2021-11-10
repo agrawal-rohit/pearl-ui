@@ -1,4 +1,3 @@
-export { useColorModeValue } from "./useColorModeValue";
 export { useAtomicComponentConfig } from "./useAtomicComponentConfig";
 export { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 export { useStyledProps } from "./useStyledProps";

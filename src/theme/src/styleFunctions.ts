@@ -1,4 +1,3 @@
-import { useColorModeValue } from "./../../hooks/useColorModeValue";
 import { ColorValue, FlexStyle, TextStyle, ViewStyle } from "react-native";
 import { getKeys, getNestedObject, isThemeKey } from "../utils/typeHelpers";
 import {
@@ -22,6 +21,7 @@ import {
   StyleFunctionContainer,
 } from "./types";
 import responsiveSize from "../../components/Atoms/Text/responsiveSize";
+import { useTheme } from "../../hooks/useTheme";
 
 interface CreateStyleFunctionProps {
   property: string;
@@ -90,9 +90,13 @@ export const createStyleFunction = ({
 };
 
 export const transformColorValue = (value: ColorModeColor | ColorValue) => {
+  const { colorMode } = useTheme();
+
   // Color Mode color provided
   if (typeof value === "object") {
-    return useColorModeValue(value.light, value.dark);
+    if (colorMode === "light") return value.light;
+
+    return value.dark;
   }
 
   return value;
