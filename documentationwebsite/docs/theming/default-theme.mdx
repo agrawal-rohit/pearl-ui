@@ -318,13 +318,13 @@ The typography system for the theme is created by setting the [Component Style C
 
 import TypographyVariant from "../../src/components/TypographyVariant/TypographyVariant";
 
-### Heading
+### Headers and Titles
 
 <TypographyVariant
   variantName="h1"
   variantStyle={{
     fontFamily: "Poppins",
-    fontWeight: "600",
+    fontWeight: "700",
     fontSize: 34,
     lineHeight: 42,
   }}
@@ -332,10 +332,10 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
 />
 
 <TypographyVariant
-  variantName="h2"
+  variantName="h1"
   variantStyle={{
     fontFamily: "Poppins",
-    fontWeight: "600",
+    fontWeight: "700",
     fontSize: 28,
     lineHeight: 36,
   }}
@@ -343,47 +343,47 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
 />
 
 <TypographyVariant
-  variantName="h3"
+  variantName="t1"
   variantStyle={{
     fontFamily: "Poppins",
     fontWeight: "600",
     fontSize: 22,
     lineHeight: 30,
   }}
-  exampleText="Heading 3"
+  exampleText="Title 1"
 />
 
 <TypographyVariant
-  variantName="h4"
-  variantStyle={{
-    fontFamily: "Poppins",
-    fontWeight: "600",
-    fontSize: 20,
-    lineHeight: 28,
-  }}
-  exampleText="Heading 4"
-/>
-
-<TypographyVariant
-  variantName="h5"
+  variantName="t2"
   variantStyle={{
     fontFamily: "Poppins",
     fontWeight: "600",
     fontSize: 18,
     lineHeight: 26,
   }}
-  exampleText="Heading 5"
+  exampleText="Title 2"
 />
 
 <TypographyVariant
-  variantName="h6"
+  variantName="st1"
   variantStyle={{
     fontFamily: "Poppins",
     fontWeight: "600",
     fontSize: 16,
     lineHeight: 24,
   }}
-  exampleText="Heading 6"
+  exampleText="Subtitle 1"
+/>
+
+<TypographyVariant
+  variantName="st2"
+  variantStyle={{
+    fontFamily: "Poppins",
+    fontWeight: "600",
+    fontSize: 14,
+    lineHeight: 22,
+  }}
+  exampleText="Subtitle 2"
 />
 
 ### Paragraph
@@ -393,10 +393,10 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
   variantStyle={{
     fontFamily: "Poppins",
     fontWeight: "400",
-    fontSize: 20,
-    lineHeight: 28,
+    fontSize: 16,
+    lineHeight: 24,
   }}
-  exampleText="Paragraph - Large"
+  exampleText="Paragraph - Regular"
 />
 
 <TypographyVariant
@@ -404,32 +404,10 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
   variantStyle={{
     fontFamily: "Poppins",
     fontWeight: "400",
-    fontSize: 18,
-    lineHeight: 26,
-  }}
-  exampleText="Paragraph - Regular"
-/>
-
-<TypographyVariant
-  variantName="p3"
-  variantStyle={{
-    fontFamily: "Poppins",
-    fontWeight: "400",
-    fontSize: 16,
-    lineHeight: 24,
-  }}
-  exampleText="Paragraph - Small"
-/>
-
-<TypographyVariant
-  variantName="p4"
-  variantStyle={{
-    fontFamily: "Poppins",
-    fontWeight: "400",
     fontSize: 14,
     lineHeight: 22,
   }}
-  exampleText="Paragraph - Tiny"
+  exampleText="Paragraph - Small"
 />
 
 ### Button
@@ -481,17 +459,6 @@ import TypographyVariant from "../../src/components/TypographyVariant/Typography
 ### Others
 
 <TypographyVariant
-  variantName="label"
-  variantStyle={{
-    fontFamily: "Poppins",
-    fontWeight: "500",
-    fontSize: 16,
-    lineHeight: 24,
-  }}
-  exampleText="Form label"
-/>
-
-<TypographyVariant
   variantName="caption"
   variantStyle={{
     fontFamily: "Poppins",
@@ -511,6 +478,7 @@ We adopt a t-shirt size naming convention for our sizing system, but you can cus
 // theme.js
 export default {
   spacing: {
+    hairline: 2,
     xs: 4,
     s: 8,
     m: 16,
@@ -530,22 +498,23 @@ export default {
 
 import SpacingBox from "../../src/components/SpacingBox/SpacingBox";
 
-| Name  | Space |                           |
-| ----- | ----- | ------------------------- |
-| `xxs` | 4     | <SpacingBox width={4} />  |
-| `xs`  | 8     | <SpacingBox width={8} />  |
-| `s`   | 12    | <SpacingBox width={12} /> |
-| `m`   | 16    | <SpacingBox width={16} /> |
-| `l`   | 24    | <SpacingBox width={24} /> |
-| `xl`  | 32    | <SpacingBox width={32} /> |
-| `2xl` | 40    | <SpacingBox width={40} /> |
-| `3xl` | 48    | <SpacingBox width={48} /> |
-| `4xl` | 56    | <SpacingBox width={56} /> |
-| `5xl` | 64    | <SpacingBox width={64} /> |
-| `6xl` | 72    | <SpacingBox width={72} /> |
-| `7xl` | 80    | <SpacingBox width={80} /> |
-| `8xl` | 88    | <SpacingBox width={88} /> |
-| `9xl` | 96    | <SpacingBox width={96} /> |
+| Name       | Space |                           |
+| ---------- | ----- | ------------------------- |
+| `hairline` | 2     | <SpacingBox width={2} />  |
+| `xxs`      | 4     | <SpacingBox width={4} />  |
+| `xs`       | 8     | <SpacingBox width={8} />  |
+| `s`        | 12    | <SpacingBox width={12} /> |
+| `m`        | 16    | <SpacingBox width={16} /> |
+| `l`        | 24    | <SpacingBox width={24} /> |
+| `xl`       | 32    | <SpacingBox width={32} /> |
+| `2xl`      | 40    | <SpacingBox width={40} /> |
+| `3xl`      | 48    | <SpacingBox width={48} /> |
+| `4xl`      | 56    | <SpacingBox width={56} /> |
+| `5xl`      | 64    | <SpacingBox width={64} /> |
+| `6xl`      | 72    | <SpacingBox width={72} /> |
+| `7xl`      | 80    | <SpacingBox width={80} /> |
+| `8xl`      | 88    | <SpacingBox width={88} /> |
+| `9xl`      | 96    | <SpacingBox width={96} /> |
 
 ## Border Radius
 
@@ -562,6 +531,7 @@ export default {
     l: 16,
     xl: 24,
     "2xl": 32,
+    circle: "50%",
   },
 };
 ```
@@ -575,6 +545,7 @@ import BorderRadiiBox from "../../src/components/BorderRadiiBox/BorderRadiiBox";
   <BorderRadiiBox keyName="l" radius={16} />
   <BorderRadiiBox keyName="xl" radius={24} />
   <BorderRadiiBox keyName="2xl" radius={32} />
+  <BorderRadiiBox keyName="circle" radius="50%" />
 </div>
 
 ## Shadow/Elevation

@@ -7,6 +7,7 @@ exports[`Atoms/Stack passes the snapshot test for horizontal direction 1`] = `
   spacing="l"
   style={
     Object {
+      "alignSelf": "flex-start",
       "display": "flex",
       "flexDirection": "row",
     }
@@ -150,6 +151,7 @@ exports[`Atoms/Stack passes the snapshot test for vertical direction 1`] = `
   spacing="l"
   style={
     Object {
+      "alignSelf": "flex-start",
       "display": "flex",
       "flexDirection": "column",
       "marginTop": 24,

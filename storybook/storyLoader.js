@@ -14,6 +14,7 @@ function loadStories() {
   require("../src/components/Atoms/Stack/Stack.story");
   require("../src/components/Atoms/Text/Text.story");
   require("../src/components/Molecules/Button/Button.story");
+  require("../src/components/Molecules/CheckBox/CheckBox.story");
   require("../src/components/Molecules/Input/Input.story");
   require("../src/components/Molecules/OfflineNotice/OfflineNotice.story");
   require("../src/components/Molecules/TextLink/TextLink.story");
@@ -30,6 +31,7 @@ const stories = [
   "../src/components/Atoms/Stack/Stack.story",
   "../src/components/Atoms/Text/Text.story",
   "../src/components/Molecules/Button/Button.story",
+  "../src/components/Molecules/CheckBox/CheckBox.story",
   "../src/components/Molecules/Input/Input.story",
   "../src/components/Molecules/OfflineNotice/OfflineNotice.story",
   "../src/components/Molecules/TextLink/TextLink.story",

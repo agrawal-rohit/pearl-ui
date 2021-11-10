@@ -13,4 +13,5 @@ export { default as Divider } from "./Atoms/Divider/Divider";
 export { default as Button } from "./Molecules/Button/Button";
 export { default as TextLink } from "./Molecules/TextLink/TextLink";
 export { default as Input } from "./Molecules/Input/Input";
+export { default as CheckBox } from "./Molecules/CheckBox/CheckBox";
 // export { default as OfflineNotice } from "./Molecules/OfflineNotice/OfflineNotice";

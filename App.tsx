@@ -13,8 +13,10 @@ import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
 import Input from "./src/components/Molecules/Input/Input";
 import Icon from "./src/components/Atoms/Icon/Icon";
+import Text from "./src/components/Atoms/Text/Text";
 import Button from "./src/components/Molecules/Button/Button";
-import Box from "./src/components/Atoms/Box/Box";
+import Stack from "./src/components/Atoms/Stack/Stack";
+import CheckBox from "./src/components/Molecules/CheckBox/CheckBox";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -27,9 +29,10 @@ const App = () => {
   });
 
   const [text, settext] = useState("");
+  const [checked, setchecked] = useState(false);
 
   return (
-    <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
+    <ThemeProvider defaultColorMode="dark" haveFontsLoaded={haveFontsLoaded}>
       <Storybook />
       {/* <Screen>
         <Input
@@ -47,6 +50,19 @@ const App = () => {
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
+
+        <Stack
+          alignItems="center"
+          direction="horizontal"
+          spacing="xs"
+          mt="m"
+          mb="s"
+        >
+          <CheckBox isChecked={checked} onPress={() => setchecked(!checked)} />
+          <Text alignSelf="center" variant="p2">
+            Remember me
+          </Text>
+        </Stack>
 
         <Button mt="m" isFullWidth onPress={() => console.log(2)}>
           Login

@@ -53,9 +53,9 @@ exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
         "color": "#FFFFFF",
         "display": "flex",
         "fontFamily": "Poppins-Medium",
-        "fontSize": 17.5,
+        "fontSize": 16.099999999999998,
         "fontWeight": "500",
-        "lineHeight": 23.75,
+        "lineHeight": 21.849999999999998,
       }
     }
     variant="btn2"
@@ -119,9 +119,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -181,9 +181,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -257,9 +257,9 @@ Array [
             "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "500",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           }
         }
         variant="btn2"
@@ -331,9 +331,9 @@ Array [
             "color": "#6A7BFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "500",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           }
         }
         variant="btn2"
@@ -401,9 +401,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 12.5,
+          "fontSize": 11.5,
           "fontWeight": "500",
-          "lineHeight": 17.5,
+          "lineHeight": 16.099999999999998,
         }
       }
       variant="btn4"
@@ -464,9 +464,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 15,
+          "fontSize": 13.799999999999999,
           "fontWeight": "500",
-          "lineHeight": 20,
+          "lineHeight": 18.4,
         }
       }
       variant="btn3"
@@ -527,9 +527,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -590,9 +590,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 20,
+          "fontSize": 18.4,
           "fontWeight": "500",
-          "lineHeight": 26.25,
+          "lineHeight": 24.15,
         }
       }
       variant="btn1"
@@ -658,9 +658,9 @@ Array [
           "color": "#FFFFFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -723,9 +723,9 @@ Array [
           "color": "#6A7BFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -786,9 +786,9 @@ Array [
           "color": "#6A7BFF",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -1054,9 +1054,9 @@ Array [
           "color": "transparent",
           "display": "flex",
           "fontFamily": "Poppins-Medium",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "500",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         }
       }
       variant="btn2"
@@ -1325,9 +1325,9 @@ Array [
             "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "500",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
             "marginLeft": 12,
           }
         }
@@ -1398,9 +1398,9 @@ Array [
             "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "500",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
             "marginRight": 12,
           }
         }
@@ -1668,9 +1668,9 @@ exports[`Molecules/Button passes the snapshot test when using style props 1`] = 
         "color": "#FFFFFF",
         "display": "flex",
         "fontFamily": "Poppins-Medium",
-        "fontSize": 17.5,
+        "fontSize": 16.099999999999998,
         "fontWeight": "500",
-        "lineHeight": 23.75,
+        "lineHeight": 21.849999999999998,
       }
     }
     variant="btn2"

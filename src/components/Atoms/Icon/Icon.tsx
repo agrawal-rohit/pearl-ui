@@ -8,6 +8,10 @@ import {
   LayoutProps,
   spacing,
   SpacingProps,
+  opacity,
+  OpacityProps,
+  visible,
+  VisibleProps,
 } from "../../../theme/src/styleFunctions";
 import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
 import {
@@ -34,12 +38,16 @@ const iconStyleFunctions = [
   backgroundColor,
   spacing,
   layout,
+  opacity,
+  visible,
 ] as StyleFunctionContainer[];
 
 type IconProps = ColorProps &
   BackgroundColorProps &
   SpacingProps &
-  LayoutProps & {
+  LayoutProps &
+  OpacityProps &
+  VisibleProps & {
     /** Icon family that contains the icon you want to use  */
     iconFamily:
       | "AntDesign"

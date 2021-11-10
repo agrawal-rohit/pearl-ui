@@ -55,9 +55,9 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
         Object {
           "color": "#1A2138",
           "fontFamily": "Poppins-Regular",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "400",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         },
         Object {
           "flex": null,
@@ -132,9 +132,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "400",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           },
           Object {
             "flex": null,
@@ -198,9 +198,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "400",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           },
           Object {
             "flex": null,
@@ -278,9 +278,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 12.5,
+            "fontSize": 11.5,
             "fontWeight": "400",
-            "lineHeight": 17.5,
+            "lineHeight": 16.099999999999998,
           },
           Object {
             "flex": null,
@@ -350,9 +350,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 15,
+            "fontSize": 13.799999999999999,
             "fontWeight": "400",
-            "lineHeight": 20,
+            "lineHeight": 18.4,
           },
           Object {
             "flex": null,
@@ -422,9 +422,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "400",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           },
           Object {
             "flex": null,
@@ -494,9 +494,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 20,
+            "fontSize": 18.4,
             "fontWeight": "400",
-            "lineHeight": 26.25,
+            "lineHeight": 24.15,
           },
           Object {
             "flex": null,
@@ -571,9 +571,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "400",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           },
           Object {
             "flex": null,
@@ -638,9 +638,9 @@ Array [
           Object {
             "color": "#1A2138",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 17.5,
+            "fontSize": 16.099999999999998,
             "fontWeight": "400",
-            "lineHeight": 23.75,
+            "lineHeight": 21.849999999999998,
           },
           Object {
             "flex": null,
@@ -715,9 +715,9 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
         Object {
           "color": "#1A2138",
           "fontFamily": "Poppins-Regular",
-          "fontSize": 17.5,
+          "fontSize": 16.099999999999998,
           "fontWeight": "400",
-          "lineHeight": 23.75,
+          "lineHeight": 21.849999999999998,
         },
         Object {
           "flex": 1,

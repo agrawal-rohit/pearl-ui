@@ -6,6 +6,8 @@ import {
   BackgroundColorProps,
   color,
   ColorProps,
+  layout,
+  LayoutProps,
   opacity,
   OpacityProps,
   spacing,
@@ -23,6 +25,7 @@ export type TextProps = ColorProps &
   BackgroundColorProps &
   OpacityProps &
   VisibleProps &
+  LayoutProps &
   TypographyProps &
   SpacingProps &
   TextShadowProps & {
@@ -37,6 +40,7 @@ export const textStyleFunctions = [
   backgroundColor,
   opacity,
   visible,
+  layout,
   typography,
   spacing,
   textShadow,

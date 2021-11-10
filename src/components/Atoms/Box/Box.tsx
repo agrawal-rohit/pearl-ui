@@ -21,7 +21,7 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { StyleFunctionContainer } from "../../../theme/src/types";
 
-export type BoxProps = BackgroundColorProps &
+type BoxStyleProps = BackgroundColorProps &
   OpacityProps &
   VisibleProps &
   LayoutProps &
@@ -47,9 +47,9 @@ export const boxStyleFunctions = [
 type ViewProps = React.ComponentProps<typeof View> & {
   children?: React.ReactNode;
 };
-type ComponentProps = BoxProps & Omit<ViewProps, keyof BoxProps>;
+export type BoxProps = BoxStyleProps & Omit<ViewProps, keyof BoxStyleProps>;
 
-const Box = React.forwardRef((props: ComponentProps, ref: any) => {
+const Box = React.forwardRef((props: BoxProps, ref: any) => {
   const passedProps = useStyledProps(props, boxStyleFunctions);
 
   return (
