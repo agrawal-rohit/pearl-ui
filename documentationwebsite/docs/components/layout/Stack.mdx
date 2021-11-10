@@ -1,0 +1,97 @@
+---
+sidebar_position: 4
+title: Stack
+---
+
+`Stack` is a layout component that makes it easy to stack elements together and apply a space between them. By default, it renders a [Box](./box) element.
+
+## Import
+
+```jsx
+import { Stack } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Stack direction="horizontal" spacing="m">
+  <Box w={20} h={20} backgroundColor="primary.500" />
+  <Box w={20} h={20} backgroundColor="primary.500" />
+  <Box w={20} h={20} backgroundColor="primary.500" />
+  <Box w={20} h={20} backgroundColor="primary.500" />
+</Stack>
+```
+
+### Stack direction
+
+Use the `direction` prop to change the direction of the stacking.
+
+```jsx
+<Stack direction="horizontal" spacing="m">
+  <Box w={20} h={20} backgroundColor="primary.500" />
+  <Box w={20} h={20} backgroundColor="primary.500" />
+</Stack>
+
+<Stack direction="vertical" spacing="s">
+  <Box w={20} h={20} backgroundColor="secondary.500" />
+  <Box w={20} h={20} backgroundColor="secondary.500" />
+</Stack>
+```
+
+### Adding dividers
+
+In some scenarios, you may want to add dividers between the stacked elements. This can be done by passing the [Divider](../common/Divider)(or any custom React element) to the `divider` prop.
+
+```jsx
+import { Divider } from 'pearl-ui'
+
+<Stack direction="horizontal" spacing="s" divider={<Divider />}>
+  <Box w={20} h={20} backgroundColor="primary.500" />
+  <Box w={20} h={20} backgroundColor="primary.500" />
+</Stack>
+
+<Stack direction="vertical" spacing="s" divider={<Divider bg="cyan" />}>
+  <Box w={20} h={20} backgroundColor="secondary.500" />
+  <Box w={20} h={20} backgroundColor="secondary.500" />
+</Stack>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/stack-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/stack-dark" />
+
+</TabItem>
+</Tabs>
+
+## Props
+
+### Supported style props
+
+`Stack` composes [Box](./Box) so you can pass all [Box](./Box) related props.
+
+### Additional props
+
+| Name      | Required | Type                              | Default | Description                                                   |
+| --------- | -------- | --------------------------------- | ------- | ------------------------------------------------------------- |
+| direction | true     | <t>"horizontal" \| "vertical"</t> |         | The direction to stack the items.                             |
+| spacing   | false    | <t>PearlTheme["spacing"]</t>      |         | The spacing between the elements.                             |
+| divider   | false    | <t>React.ReactElement</t>         |         | If specified, each stack item will show the provided divider. |
