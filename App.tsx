@@ -32,9 +32,9 @@ const App = () => {
   const [checked, setchecked] = useState(false);
 
   return (
-    <ThemeProvider defaultColorMode="dark" haveFontsLoaded={haveFontsLoaded}>
-      <Storybook />
-      {/* <Screen>
+    <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
+      {/* <Storybook /> */}
+      <Screen>
         <Input
           isFullWidth
           placeholder="Enter Email"
@@ -51,23 +51,18 @@ const App = () => {
           rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
 
-        <Stack
-          alignItems="center"
-          direction="horizontal"
-          spacing="xs"
-          mt="m"
-          mb="s"
+        <CheckBox
+          mt="s"
+          isChecked={checked}
+          onPress={() => setchecked(!checked)}
         >
-          <CheckBox isChecked={checked} onPress={() => setchecked(!checked)} />
-          <Text alignSelf="center" variant="p2">
-            Remember me
-          </Text>
-        </Stack>
+          Remember me
+        </CheckBox>
 
-        <Button mt="m" isFullWidth onPress={() => console.log(2)}>
+        <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
           Login
         </Button>
-      </Screen> */}
+      </Screen>
     </ThemeProvider>
   );
 };

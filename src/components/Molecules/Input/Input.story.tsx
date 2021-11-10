@@ -63,10 +63,15 @@ storiesOf("Input", module)
   ))
   .add("States", () => (
     <>
+      <Input isFullWidth variant="filled" placeholder="Default Filled Input" />
+      <Input
+        isFullWidth
+        variant="outline"
+        placeholder="Default Outline Input"
+      />
       <Input isFullWidth placeholder="Focused Input" autoFocus />
-
+      <Input isFullWidth isDisabled placeholder="Disabled Input" />
       <Input isFullWidth placeholder="Error Input" isErrorVisible />
-
       <Input
         isFullWidth
         placeholder="Error Input with message"

@@ -27,6 +27,7 @@ storiesOf("CheckBox", module)
     return (
       <>
         <CheckBox>Default Checkbox</CheckBox>
+        <CheckBox isDisabled>Disabled Checkbox</CheckBox>
         <CheckBox isChecked isIndeterminate>
           Indeterminate Checkbox
         </CheckBox>
