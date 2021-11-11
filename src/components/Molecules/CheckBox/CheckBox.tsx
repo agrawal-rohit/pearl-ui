@@ -25,6 +25,8 @@ export type CheckBoxProps = PressableProps & {
   errorMessage?: string;
   /** Active color palette of the checkbox */
   colorScheme?: string;
+  /** The spacing between the checkbox and the label text */
+  spacing?: keyof BasePearlTheme["spacing"];
   /** Shape of the checkbox */
   shape?: "square" | "circle";
   /** Family of the icon when the checkbox is in checked state */
@@ -178,8 +180,10 @@ const CheckBox = React.forwardRef(
               : (children as string)
           }
           accessibilityState={{ disabled: isDisabled, checked: rest.isChecked }}
+          accessibilityHint={rest.accessibilityHint}
           opacity={isDisabled ? 0.5 : 1}
           direction="horizontal"
+          spacing={rest.spacing || molecularProps.root.spacing}
         >
           <Pressable
             {...molecularProps.box}
