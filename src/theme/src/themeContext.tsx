@@ -59,13 +59,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   };
 
   useEffect(() => {
-    // Set initial Theme
-    if (colorMode === "light") {
-      changeThemeTo("light");
-    } else {
-      changeThemeTo("dark");
-    }
-  }, [colorMode, theme]);
+    let activeTheme =
+      defaultColorMode === "system" ? systemThemeStyle : defaultColorMode;
+    changeThemeTo(activeTheme);
+    // // Set initial Theme
+    // if (colorMode === "light") {
+    //   changeThemeTo("light");
+    // } else {
+    //   changeThemeTo("dark");
+    // }
+  }, [theme, defaultColorMode, systemThemeStyle]);
 
   if (haveFontsLoaded) {
     return (

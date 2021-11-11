@@ -88,10 +88,10 @@ const Pressable = React.forwardRef(
       <RNPressable
         ref={ref}
         android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
-        onPress={onPress}
-        onPressIn={onPressIn}
-        onPressOut={onPressOut}
-        onLongPress={onLongPress}
+        onPress={!isDisabled ? onPress : null}
+        onPressIn={!isDisabled ? onPressIn : null}
+        onPressOut={!isDisabled ? onPressOut : null}
+        onLongPress={!isDisabled ? onLongPress : null}
         disabled={isDisabled}
         android_disableSound={isDisabledAndroidSound}
         accessible={true}

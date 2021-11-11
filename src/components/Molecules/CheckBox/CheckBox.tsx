@@ -6,6 +6,7 @@ import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Stack from "../../Atoms/Stack/Stack";
+import { boxStyleFunctions } from "../../Atoms/Box/Box";
 
 export type CheckBoxProps = PressableProps & {
   /** Size of the checkbox. */
@@ -24,6 +25,8 @@ export type CheckBoxProps = PressableProps & {
   errorMessage?: string;
   /** Active color palette of the checkbox */
   colorScheme?: string;
+  /** The spacing between the checkbox and the label text */
+  spacing?: keyof BasePearlTheme["spacing"];
   /** Shape of the checkbox */
   shape?: "square" | "circle";
   /** Family of the icon when the checkbox is in checked state */
@@ -109,10 +112,17 @@ const CheckBox = React.forwardRef(
     }: CheckBoxProps,
     checkboxRef: any
   ) => {
-    let molecularProps = useMolecularComponentConfig("CheckBox", rest, {
-      size: size,
-      variant: rest["variant"],
-    });
+    let molecularProps = useMolecularComponentConfig(
+      "CheckBox",
+      rest,
+      {
+        size: size,
+        variant: rest["variant"],
+      },
+      boxStyleFunctions,
+      "root",
+      "box"
+    );
     molecularProps = useColorScheme(colorScheme, molecularProps);
 
     // OTHER METHODS
@@ -120,7 +130,7 @@ const CheckBox = React.forwardRef(
       return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
-    const computeCheckedProps = (
+    const computeCheckedorErrorProps = (
       propertyName: string,
       customfallbackProp:
         | keyof BasePearlTheme["palette"]
@@ -170,29 +180,30 @@ const CheckBox = React.forwardRef(
               : (children as string)
           }
           accessibilityState={{ disabled: isDisabled, checked: rest.isChecked }}
+          accessibilityHint={rest.accessibilityHint}
+          opacity={isDisabled ? 0.5 : 1}
           direction="horizontal"
+          spacing={rest.spacing || molecularProps.root.spacing}
         >
           <Pressable
             {...molecularProps.box}
             ref={checkboxRef}
             alignSelf="flex-start"
             isDisabled={isDisabled}
-            opacity={isDisabled ? 0.5 : 1}
-            onPress={rest.onPress}
-            backgroundColor={computeCheckedProps(
+            backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               molecularProps.box.backgroundColor || molecularProps.box.bg
             )}
             borderRadius={
               shape === "square" ? molecularProps.box.borderRadius : "circle"
             }
-            borderColor={computeCheckedProps("borderColor")}
-            borderStartColor={computeCheckedProps("borderStartColor")}
-            borderEndColor={computeCheckedProps("borderEndColor")}
-            borderTopColor={computeCheckedProps("borderTopColor")}
-            borderLeftColor={computeCheckedProps("borderLeftColor")}
-            borderRightColor={computeCheckedProps("borderRightColor")}
-            borderBottomColor={computeCheckedProps("borderBottomColor")}
+            borderColor={computeCheckedorErrorProps("borderColor")}
+            borderStartColor={computeCheckedorErrorProps("borderStartColor")}
+            borderEndColor={computeCheckedorErrorProps("borderEndColor")}
+            borderTopColor={computeCheckedorErrorProps("borderTopColor")}
+            borderLeftColor={computeCheckedorErrorProps("borderLeftColor")}
+            borderRightColor={computeCheckedorErrorProps("borderRightColor")}
+            borderBottomColor={computeCheckedorErrorProps("borderBottomColor")}
             androidRippleConfig={
               rest.androidRippleConfig
                 ? rest.androidRippleConfig

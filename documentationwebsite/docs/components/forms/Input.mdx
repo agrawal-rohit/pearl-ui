@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 title: Input
 ---
 
@@ -62,6 +62,24 @@ Use the `variant` prop to change the visual style of the input field. You can se
 />
 ```
 
+### Input color scheme
+
+Use the `colorScheme` prop to change the color palette of the input field. This is much more powerful than simply passing a `backgroundColor` style prop as the `colorScheme` prop changes all the use color values in a palette through a single prop.
+
+You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Input
+  colorScheme="primary"
+  placeholder="This is the primary input"
+/>
+
+<Input
+  colorScheme="secondary"
+  placeholder="This is the secondary input"
+/>
+```
+
 ### Input with icon
 
 You can add left and right icons to `Input` using the `leftIcon` and `rightIcon` props respectively.
@@ -96,7 +114,7 @@ import { Icon } from "pearl-ui";
 
 ### Input focus state
 
-The input field is said to be in a `focus` state when the text inside the field can be edited. `Input` allows you to update the visual style of the input field when it is focused using some [special props](#supported-style-props) prefixed with the word <t>focus</t>.
+The input field is in a `focus` state when the text inside the field can be edited. `Input` allows you to update the visual style of the input field when it is focused using some [special props](#supported-style-props) prefixed with the word <t>focus</t>.
 
 ```jsx
 <Input
@@ -108,7 +126,7 @@ The input field is said to be in a `focus` state when the text inside the field 
 
 ### Input error state
 
-Similar to the focus state, you can add an error state to the input field based on any validation criteria you use. The `isErrorVisible` prop is used to define whether the input field has an error or not.
+Similar to the focus state, you can add an error state to the input field based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isErrorVisible` prop is used to define whether the input field has an error or not.
 
 You can also pass the `errorMessage` prop to add a helper text describing the error below the input field.
 
@@ -160,49 +178,50 @@ import TabItem from "@theme/TabItem";
 ## Accessibility
 
 - Input has the `role` of `text field`.
+- When the Input is disabled, it is reflected as `disabled` in screen readers.
 - Input has the default accessibility label set as the placeholder value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
 
 ## Props
 
 ### Supported style props
 
-Input composes [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to `Input`.
+Input composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to `Input`.
 
 ### Additional props
 
 Input also composes the [TextInput](https://reactnative.dev/docs/textinput) component from React Native, therefore all of it's props are supported in addition to the props given below:
 
-| Name                   | Required | Type                                           | Default     | Description                                                                   |
-| ---------------------- | -------- | ---------------------------------------------- | ----------- | ----------------------------------------------------------------------------- |
-| size                   | false    | <t>PearlTheme.components.Input["sizes"]</t>    | `"m"`       | Size of the input field.                                                      |
-| variant                | false    | <t>PearlTheme.components.Input["variants"]</t> | `"filled"`  | Variant of the input field.                                                   |
-| isDisabled             | false    | <t>boolean</t>                                 | `false`     | Whether the input field is disabled.                                          |
-| isFullWidth            | false    | <t>boolean</t>                                 | `false`     | Whether the input field should span the entire width of the parent container. |
-| isErrorVisible         | false    | <t>boolean</t>                                 | `false`     | Whether there the input field is in an error state.                           |
-| errorMessage           | false    | <t>string</t>                                  |             | The error message to be displayed if the input field is in an error state.    |
-| colorScheme            | false    | <t>PearlTheme.palette</t>                      | `"primary"` | Active color palette of the input field.                                      |
-| hasClearButton         | false    | <t>boolean</t>                                 | `false`     | Whether the input field should display a clear button.                        |
-| leftIcon               | false    | <t>React.ReactElement</t>                      | `null`      | Icon to display on the left side of the main text.                            |
-| rightIcon              | false    | <t>React.ReactElement</t>                      | `null`      | Icon to display on the right side of the main text.                           |
-| placeholderTextColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | Custom color of the placeholder text string.                                  |
-| focusBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The background color of the input field when it is in focus.                  |
-| focusBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The background color of the input field when it is in focus.                  |
-| focusBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border start color of the input field when it is in focus.                |
-| focusBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border end color of the input field when it is in focus.                  |
-| focusBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border top color of the input field when it is in focus.                  |
-| focusBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border left color of the input field when it is in focus.                 |
-| focusBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border right color of the input field when it is in focus.                |
-| focusBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border bottom color of the input field when it is in focus.               |
-| focusShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The shadow color of the input field when it is in focus.                      |
-| errorBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The background color of the input field when it is in an error state.         |
-| errorBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border color of the input field when it is in an error state.             |
-| errorBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border start color of the input field when it is in an error state.       |
-| errorBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border end color of the input field when it is in an error state.         |
-| errorBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border top color of the input field when it is in an error state.         |
-| errorBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border left color of the input field when it is in an error state.        |
-| errorBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border right color of the input field when it is in an error state.       |
-| errorBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The border bottom color of the input field when it is in an error state.      |
-| errorShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |             | The shadow color of the input field when it is in an error state.             |
+| Name                   | Required | Type                                           | Default         | Description                                                                   |
+| ---------------------- | -------- | ---------------------------------------------- | --------------- | ----------------------------------------------------------------------------- |
+| size                   | false    | <t>PearlTheme.components.Input["sizes"]</t>    | `"m"`           | Size of the input field.                                                      |
+| variant                | false    | <t>PearlTheme.components.Input["variants"]</t> | `"filled"`      | Variant of the input field.                                                   |
+| isDisabled             | false    | <t>boolean</t>                                 | `false`         | Whether the input field is disabled.                                          |
+| isFullWidth            | false    | <t>boolean</t>                                 | `false`         | Whether the input field should span the entire width of the parent container. |
+| isErrorVisible         | false    | <t>boolean</t>                                 | `false`         | Whether there the input field is in an error state.                           |
+| errorMessage           | false    | <t>string</t>                                  |                 | The error message to be displayed if the input field is in an error state.    |
+| colorScheme            | false    | <t>PearlTheme.palette</t>                      | `"primary"`     | Active color palette of the input field.                                      |
+| hasClearButton         | false    | <t>boolean</t>                                 | `false`         | Whether the input field should display a clear button.                        |
+| leftIcon               | false    | <t>React.ReactElement</t>                      | `null`          | Icon to display on the left side of the main text.                            |
+| rightIcon              | false    | <t>React.ReactElement</t>                      | `null`          | Icon to display on the right side of the main text.                           |
+| placeholderTextColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | Custom color of the placeholder text string.                                  |
+| focusBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"neutral.50"`  | The background color of the input field when it is in focus.                  |
+| focusBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"primary.500"` | The border color of the input field when it is in focus.                      |
+| focusBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border start color of the input field when it is in focus.                |
+| focusBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border end color of the input field when it is in focus.                  |
+| focusBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border top color of the input field when it is in focus.                  |
+| focusBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border left color of the input field when it is in focus.                 |
+| focusBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border right color of the input field when it is in focus.                |
+| focusBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border bottom color of the input field when it is in focus.               |
+| focusShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The shadow color of the input field when it is in focus.                      |
+| errorBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The background color of the input field when it is in an error state.         |
+| errorBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"danger.500"`  | The border color of the input field when it is in an error state.             |
+| errorBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border start color of the input field when it is in an error state.       |
+| errorBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border end color of the input field when it is in an error state.         |
+| errorBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border top color of the input field when it is in an error state.         |
+| errorBorderLeftColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border left color of the input field when it is in an error state.        |
+| errorBorderRightColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border right color of the input field when it is in an error state.       |
+| errorBorderBottomColor | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border bottom color of the input field when it is in an error state.      |
+| errorShadowColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The shadow color of the input field when it is in an error state.             |
 
 ## Default component Style
 
