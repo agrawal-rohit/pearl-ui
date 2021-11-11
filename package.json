@@ -39,7 +39,7 @@
     "expo": "~42.0.4",
     "expo-app-loading": "^1.1.2",
     "expo-font": "~9.2.1",
-    "expo-status-bar": "~1.0.4",
+    "expo-status-bar": "~1.1.0",
     "prettier": "^2.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
