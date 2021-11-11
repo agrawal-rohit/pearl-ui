@@ -49,7 +49,7 @@
     "storybook": "^6.3.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.16.0",
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@semantic-release/changelog": "^5.0.1",
