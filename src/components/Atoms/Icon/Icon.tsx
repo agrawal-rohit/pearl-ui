@@ -31,7 +31,7 @@ import {
   Zocial,
 } from "@expo/vector-icons";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
-import responsiveSize from "../Text/responsiveSize";
+import responsiveSize from "../../../utils/responsiveSize";
 
 const iconStyleFunctions = [
   color,

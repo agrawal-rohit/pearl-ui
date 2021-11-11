@@ -39,7 +39,7 @@
     "expo": "~42.0.4",
     "expo-app-loading": "^1.1.2",
     "expo-font": "~9.2.1",
-    "expo-status-bar": "~1.0.4",
+    "expo-status-bar": "~1.1.0",
     "prettier": "^2.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -49,9 +49,9 @@
     "storybook": "^6.3.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
     "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^13.2.0",
+    "@babel/core": "^7.16.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@storybook/addon-actions": "^6.3",
