@@ -33,8 +33,8 @@ const App = () => {
 
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
-      {/* <Storybook /> */}
-      <Screen>
+      <Storybook />
+      {/* <Screen>
         <Input
           isFullWidth
           placeholder="Enter Email"
@@ -65,7 +65,7 @@ const App = () => {
         <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
           Login
         </Button>
-      </Screen>
+      </Screen> */}
     </ThemeProvider>
   );
 };
