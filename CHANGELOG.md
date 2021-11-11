@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.4.1...v1.5.0) (2021-11-11)
+
+
+### Bug Fixes
+
+* fixed hot reloading of color modes in the theme provider ([56efdb7](https://github.com/agrawal-rohit/pearl-ui/commit/56efdb74270bf4facb2ac8bb32dc689629a458bc))
+
+
+### Features
+
+* **checkbox:** added new CheckBox component, fixed the inconsistent Hook call error + bug fixes ([21a3e4b](https://github.com/agrawal-rohit/pearl-ui/commit/21a3e4b9750b8daf5a3024010596de776294578e))
+* **stack:** added Stack layout component and corresponding docs ([28c0265](https://github.com/agrawal-rohit/pearl-ui/commit/28c0265a6b6e684d454c3efd250effa0796851ea))
+
 ## [1.4.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.4.0...v1.4.1) (2021-11-09)
 
 
