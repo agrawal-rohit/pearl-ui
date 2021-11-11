@@ -15,8 +15,9 @@ const responsiveSize = (size: number) => {
     // iphone 5
     if (deviceHeight < 667) {
       return size;
-      // iphone 6-6s
     }
+
+    // iphone 6-6s
     if (deviceHeight >= 667 && deviceHeight <= 735) {
       return size * 1.15;
     }
@@ -32,9 +33,9 @@ const responsiveSize = (size: number) => {
     // Catch other weird android width sizings
     if (deviceHeight < 667) {
       return size * 1.15;
-      // catch in-between size Androids and scale font up
-      // a tad but not too much
     }
+    // catch in-between size Androids and scale font up
+    // a tad but not too much
     if (deviceHeight >= 667 && deviceHeight <= 735) {
       return size * 1.2;
     }
@@ -47,13 +48,15 @@ const responsiveSize = (size: number) => {
     // where pixel ratio / font scale ratio => 3:3
     if (deviceWidth <= 360) {
       return size;
-      // Catch other smaller android height sizings
     }
+
+    // Catch other smaller android height sizings
     if (deviceHeight < 667) {
       return size * 1.2;
-      // catch in-between size Androids and scale font up
-      // a tad but not too much
     }
+
+    // catch in-between size Androids and scale font up
+    // a tad but not too much
     if (deviceHeight >= 667 && deviceHeight <= 735) {
       return size * 1.25;
     }

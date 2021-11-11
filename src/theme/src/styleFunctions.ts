@@ -20,7 +20,7 @@ import {
   StyleFunction,
   StyleFunctionContainer,
 } from "./types";
-import responsiveSize from "../../components/Atoms/Text/responsiveSize";
+import responsiveSize from "../../utils/responsiveSize";
 import { useTheme } from "../../hooks/useTheme";
 
 interface CreateStyleFunctionProps {
