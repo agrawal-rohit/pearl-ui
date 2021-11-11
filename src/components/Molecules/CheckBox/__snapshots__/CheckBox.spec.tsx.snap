@@ -1,0 +1,1896 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
+<View
+  accessibilityLabel="Check me!"
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": undefined,
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  direction="horizontal"
+  spacing="xs"
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "display": "flex",
+      "flexDirection": "row",
+      "marginVertical": 4,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginRight": 8,
+      }
+    }
+  >
+    <View
+      accessibilityHint=""
+      accessibilityLabel="Press me!"
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      checkedBackgroundColor="primary.500"
+      errorBorderColor="danger.500"
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-start",
+            "backgroundColor": "#EDF1F7",
+            "borderColor": "#EDF1F7",
+            "borderRadius": 4,
+            "borderWidth": 1,
+            "display": "flex",
+            "padding": 2,
+          },
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "opacity": undefined,
+          },
+        ]
+      }
+    >
+      <Text />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#1A2138",
+          "display": "flex",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 16.099999999999998,
+          "fontWeight": "400",
+          "lineHeight": 25.299999999999997,
+        }
+      }
+      variant="p2"
+    >
+      Check me!
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test for different color schemes 1`] = `
+Array [
+  <View
+    accessibilityLabel="Primary CheckBox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Primary CheckBox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Secondary CheckBox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="secondary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Secondary CheckBox
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    accessibilityLabel="Small Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 11.5,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Small Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Regular Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Regular Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Large Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 23,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontWeight": "400",
+            "lineHeight": 27.599999999999998,
+          }
+        }
+        variant="p1"
+      >
+        Large Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Extra Large Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 34.5,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontWeight": "400",
+            "lineHeight": 27.599999999999998,
+          }
+        }
+        variant="p1"
+      >
+        Extra Large Checkbox
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] = `
+Array [
+  <View
+    accessibilityLabel="Filled Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+        variant="filled"
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Filled Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Outline Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "opacity": undefined,
+            },
+          ]
+        }
+        variant="outline"
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Outline Checkbox
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test when in a checked/indeterminate state 1`] = `
+Array [
+  <View
+    accessibilityLabel="Indeterminate Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        isChecked={true}
+        isIndeterminate={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="remove-outline Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "#FFFFFF",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Indeterminate Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Checked Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        isChecked={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#EDF1F7",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "#FFFFFF",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Checked Checkbox
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] = `
+Array [
+  <View
+    accessibilityLabel="Error Checkbox"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        focusable={true}
+        isErrorVisible={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#FF4B42",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Error Checkbox
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityLabel="Error Checkbox with message"
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+        }
+      }
+    >
+      <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        checkedBackgroundColor="primary.500"
+        errorBorderColor="danger.500"
+        errorMessage="This is an error message!"
+        focusable={true}
+        isErrorVisible={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#FF4B42",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "display": "flex",
+              "padding": 2,
+            },
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityLabel="checkmark Icon"
+          accessible={true}
+          allowFontScaling={false}
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 17.25,
+              },
+              Object {
+                "color": "transparent",
+                "display": "flex",
+              },
+              Object {
+                "fontFamily": "ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "400",
+            "lineHeight": 25.299999999999997,
+          }
+        }
+        variant="p2"
+      >
+        Error Checkbox with message
+      </Text>
+    </View>
+  </View>,
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    allowFontScaling={true}
+    style={
+      Object {
+        "color": "#FF4B42",
+        "display": "flex",
+        "fontFamily": "Poppins-Regular",
+        "fontSize": 13.799999999999999,
+        "fontWeight": "400",
+        "lineHeight": 23,
+        "marginBottom": 4,
+      }
+    }
+    variant="caption"
+  >
+    This is an error message!
+  </Text>,
+]
+`;
+
+exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] = `
+<View
+  accessibilityLabel="Button press"
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": undefined,
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  direction="horizontal"
+  spacing="xs"
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "backgroundColor": "#6A7BFF",
+      "borderColor": "#C5CEE0",
+      "borderWidth": 2,
+      "display": "flex",
+      "flexDirection": "row",
+      "marginVertical": 4,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginRight": 8,
+      }
+    }
+  >
+    <View
+      accessibilityHint=""
+      accessibilityLabel="Press me!"
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      checkedBackgroundColor="primary.500"
+      errorBorderColor="danger.500"
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-start",
+            "backgroundColor": "#EDF1F7",
+            "borderColor": "#EDF1F7",
+            "borderRadius": 4,
+            "borderWidth": 1,
+            "display": "flex",
+            "padding": 2,
+          },
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "opacity": undefined,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="checkmark Icon"
+        accessible={true}
+        allowFontScaling={false}
+        checkedIconFamily="Ionicons"
+        checkedIconName="checkmark"
+        indeterminateIconFamily="Ionicons"
+        indeterminateIconName="remove-outline"
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 17.25,
+            },
+            Object {
+              "color": "transparent",
+              "display": "flex",
+            },
+            Object {
+              "fontFamily": "ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#1A2138",
+          "display": "flex",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 16.099999999999998,
+          "fontWeight": "400",
+          "lineHeight": 25.299999999999997,
+        }
+      }
+      variant="p2"
+    >
+      Button press
+    </Text>
+  </View>
+</View>
+`;

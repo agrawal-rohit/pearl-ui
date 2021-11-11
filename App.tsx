@@ -51,12 +51,26 @@ const App = () => {
           rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
 
-        <CheckBox
+        {/* <CheckBox
           mt="s"
-          isChecked={checked}
-          onPress={() => setchecked(!checked)}
+          isDisabled
+          onPress={() => {
+            setchecked(!checked);
+            console.log("Checked!");
+          }}
         >
           Remember me
+        </CheckBox> */}
+
+        <CheckBox
+          onPress={() => {
+            setchecked(!checked);
+            console.log("Checked!");
+          }}
+          isDisabled
+          testID="checkBox"
+        >
+          Check me
         </CheckBox>
 
         <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
