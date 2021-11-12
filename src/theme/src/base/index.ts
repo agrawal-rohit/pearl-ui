@@ -16,7 +16,7 @@ import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.conf
 import InputConfig from "../../../components/Molecules/Input/Input.config";
 import DividerConfig from "../../../components/Atoms/Divider/Divider.config";
 import CheckBoxConfig from "../../../components/Molecules/CheckBox/CheckBox.config";
-import ImageConfig from "../../../components/Atoms/Image/Image.config";
+import ImageConfig from "../../../components/Molecules/Image/Image.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs

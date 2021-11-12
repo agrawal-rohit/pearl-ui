@@ -1,22 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  backgroundColor,
-  opacity,
-  layout,
-  spacing,
-  position,
-  border,
-} from "../../../theme/src/styleFunctions";
-import {
-  BackgroundColorProps,
-  OpacityProps,
-  VisibleProps,
-  LayoutProps,
-  SpacingProps,
-  PositionProps,
-  visible,
-} from "../../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../../theme/src/types";
+import { border } from "../../../theme/src/styleFunctions";
 import {
   Animated,
   ImageErrorEventData,
@@ -30,27 +13,11 @@ import {
 } from "react-native";
 import { DownloadOptions } from "expo-file-system";
 import CacheManager from "./CacheManager";
-import Box from "../Box/Box";
+import Box, { BoxProps } from "../../Atoms/Box/Box";
 import { BlurView } from "expo-blur";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import { useStyledProps } from "../../../hooks/useStyledProps";
-
-export type ImageStyleProps = BackgroundColorProps &
-  OpacityProps &
-  VisibleProps &
-  LayoutProps &
-  SpacingProps &
-  PositionProps;
-
-export const boxStyleFunctions = [
-  backgroundColor,
-  opacity,
-  visible,
-  layout,
-  spacing,
-  position,
-] as StyleFunctionContainer[];
 
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
@@ -63,14 +30,27 @@ function usePrevious(value: any) {
   return ref.current;
 }
 
-type PearlImageProps = ImageStyleProps &
-  Omit<ImageProps, "width" | "height" | "loadingIndicatorSource"> & {
+type PearlImageProps = BoxProps &
+  Omit<
+    ImageProps,
+    | "width"
+    | "height"
+    | "loadingIndicatorSource"
+    | "defaultSource"
+    | "borderRadius"
+    | "borderBottomLeftRadius"
+    | "borderBottomRightRadius"
+    | "borderTopLeftRadius"
+    | "borderTopRightRadius"
+  > & {
     /** The size of the image */
     size?: string;
     /** The variant of the image */
     variant?: string;
+    /** Whether a remote image should be cached */
+    cache?: boolean;
     /** Source of the image to show while the remote image is being fetched */
-    loadingIndicatorSource?: ImageSourcePropType;
+    previewSource?: ImageSourcePropType;
     /** Download configuration when fetching the remote image */
     imageDownloadOptions?: DownloadOptions;
     /** Duration (in ms) it takes for the blurred to become clear */
@@ -79,47 +59,50 @@ type PearlImageProps = ImageStyleProps &
     tint?: "dark" | "light" | "default";
     /** The type of loading to use until the image has loaded */
     loaderType?: "progressive" | "spinner";
+    /** A component to show if an error occurs while loading the image */
+    errorComponent?: React.ReactElement;
   };
 
-// TODO Pass native image props to the underlying image
-//
-
-/** Divider is used to visually separate content in a list or group. */
+/** The Image component is used to display images. */
 const Image: React.FC<PearlImageProps> = ({
   children,
-  source = undefined,
-  loadingIndicatorSource = undefined,
-  transitionDuration = 300,
-  tint = "dark",
-  imageDownloadOptions = {},
+  source,
   onError = () => {},
   ...rest
 }) => {
   const molecularProps = useMolecularComponentConfig("Image", rest, {
     size: rest.size,
-    variant: rest.size,
+    variant: rest.variant,
   });
 
   const isMounted = useRef(true);
+  const isRemoteImage = typeof source === "object";
+  const shouldCache = isRemoteImage && molecularProps.root.cache;
   const [uri, setUri] = useState<string | undefined>(undefined);
+  const [error, setError] = useState(false);
   const previousUri = usePrevious(uri);
+
+  // The image should be ready by default if it's a local image
+  const isImageReady = isRemoteImage ? !!uri : true;
+
   const [intensity, setIntensity] = useState<Animated.Value>(
     new Animated.Value(100)
   );
-
-  const isRemoteImage = typeof source === "object";
-
-  // The image should be ready if it's a local image
-  const isImageReady = isRemoteImage ? !!uri : true;
   const opacity = intensity.interpolate({
     inputRange: [0, 100],
     outputRange: [0, 0.5],
   });
 
-  const errorHandler = (error: NativeSyntheticEvent<ImageErrorEventData>) => {};
+  // A handler function for catching errors while loading the image
+  const errorHandler = (error: NativeSyntheticEvent<ImageErrorEventData>) => {
+    setError(true);
+    onError(error);
+  };
 
-  const load = async (uri: string, options = {}): Promise<void> => {
-    if (uri) {
+  // Fetches and caches the remote image
+  const loadRemoteImage = async (uri: string, options = {}): Promise<void> => {
+    // Use CacheManager if the image is supposed to be cached
+    if (shouldCache) {
       try {
         const path = await CacheManager.get(uri, options).getPath();
         if (isMounted.current) {
@@ -137,6 +120,10 @@ const Image: React.FC<PearlImageProps> = ({
         } as NativeSyntheticEvent<ImageErrorEventData>);
       }
     }
+    // Else load the remote image directly
+    else {
+      setUri(uri);
+    }
   };
 
   // Separate out border radius properties
@@ -150,7 +137,7 @@ const Image: React.FC<PearlImageProps> = ({
   } = molecularProps.root;
 
   // Compute border props so that they can be used by the native Image element
-  const borderRadiiStyles = useStyledProps(
+  let borderRadiiStyles = useStyledProps(
     {
       borderRadius,
       borderBottomLeftRadius,
@@ -161,26 +148,33 @@ const Image: React.FC<PearlImageProps> = ({
     border
   );
 
-  const renderDefaultImage = () => {
-    if (!!rest.defaultSource && !isImageReady) {
-      return (
-        <RNImage
-          {...molecularProps.root}
-          source={rest.defaultSource}
-          style={{
-            width: "100%",
-            height: "100%",
-            ...borderRadiiStyles.style,
-          }}
-        />
-      );
-    }
+  console.log(borderRadiiStyles);
+
+  borderRadiiStyles = {
+    style: {
+      borderRadius:
+        molecularProps.root.style.borderRadius ||
+        borderRadiiStyles.style.borderRadius,
+      borderBottomLeftRadius:
+        molecularProps.root.style.borderBottomLeftRadius ||
+        borderRadiiStyles.style.borderBottomLeftRadius,
+      borderBottomRightRadius:
+        molecularProps.root.style.borderBottomRightRadius ||
+        borderRadiiStyles.style.borderBottomRightRadius,
+      borderTopLeftRadius:
+        molecularProps.root.style.borderTopLeftRadius ||
+        borderRadiiStyles.style.borderTopLeftRadius,
+      borderTopRightRadius:
+        molecularProps.root.style.borderTopRightRadius ||
+        borderRadiiStyles.style.borderTopRightRadius,
+    },
   };
 
   const renderFinalImage = () => {
-    if (isImageReady) {
+    if (isImageReady && !error) {
       return (
         <RNImage
+          {...molecularProps.root}
           source={finalSource as ImageSourcePropType}
           style={{
             width: "100%",
@@ -190,13 +184,15 @@ const Image: React.FC<PearlImageProps> = ({
         />
       );
     }
+
+    return null;
   };
 
   const renderImageLoader = () => {
     if (!isImageReady) {
       if (
         molecularProps.root.loaderType === "progressive" &&
-        !!loadingIndicatorSource
+        !!molecularProps.root.previewSource
       ) {
         return (
           <Box
@@ -206,36 +202,65 @@ const Image: React.FC<PearlImageProps> = ({
             style={borderRadiiStyles.style}
           >
             <RNImage
-              source={loadingIndicatorSource}
+              source={molecularProps.root.previewSource}
               blurRadius={Platform.OS === "android" ? 0.5 : 0}
               style={{
                 width: "100%",
                 height: "100%",
+                ...borderRadiiStyles.style,
               }}
             />
 
+            {/* Render a blur overlay over the preview image */}
             {Platform.OS === "ios" && (
               <AnimatedBlurView
                 intensity={intensity}
-                tint={tint}
-                style={StyleSheet.absoluteFill}
-              />
+                tint={molecularProps.root.tint}
+                style={[
+                  StyleSheet.absoluteFill,
+                  {
+                    alignItems: "center",
+                    justifyContent: "center",
+                  },
+                ]}
+              >
+                {/* Render the errorComponent inside the overlay if an error is encountered */}
+                {error &&
+                  !!molecularProps.root.errorComponent &&
+                  React.cloneElement(molecularProps.root.errorComponent)}
+              </AnimatedBlurView>
             )}
 
+            {/* Render a static overlay over the preview image */}
             {Platform.OS === "android" && (
               <Animated.View
                 style={[
                   StyleSheet.absoluteFill,
                   {
-                    backgroundColor: tint === "dark" ? "black" : "white",
+                    backgroundColor:
+                      molecularProps.root.tint === "dark" ? "black" : "white",
+                    alignItems: "center",
+                    justifyContent: "center",
+
                     opacity,
                   },
                 ]}
-              />
+              >
+                {/* Render the errorComponent inside the overlay if an error is encountered */}
+                {error &&
+                  !!molecularProps.root.errorComponent &&
+                  React.cloneElement(molecularProps.root.errorComponent)}
+              </Animated.View>
             )}
           </Box>
         );
       }
+
+      //   Render the errorComponent as it is for "spinner" loaderType
+      if (error && molecularProps.root.errorComponent)
+        return React.cloneElement(molecularProps.root.errorComponent);
+
+      // Load the spinner component
       return <Spinner {...molecularProps.spinner} />;
     }
 
@@ -243,12 +268,17 @@ const Image: React.FC<PearlImageProps> = ({
   };
 
   useEffect(() => {
+    // Reload the network image when the URI updates
     if (isRemoteImage)
-      load((source as ImageURISource).uri as string, imageDownloadOptions);
+      loadRemoteImage(
+        (source as ImageURISource).uri as string,
+        molecularProps.root.imageDownloadOptions
+      );
 
-    if (uri && loadingIndicatorSource && previousUri === undefined) {
+    // Start animating the overlay opacity as soon as the URI becomes available
+    if (uri && molecularProps.root.previewSource && previousUri === undefined) {
       Animated.timing(intensity, {
-        duration: transitionDuration,
+        duration: molecularProps.root.transitionDuration,
         toValue: 0,
         useNativeDriver: Platform.OS === "android",
       }).start();
@@ -265,14 +295,14 @@ const Image: React.FC<PearlImageProps> = ({
 
   return (
     <Box
+      {...finalRootProps}
       style={{
         alignItems: "center",
         justifyContent: "center",
-        ...borderRadiiStyles,
+        ...borderRadiiStyles.style,
         ...finalRootProps.style,
       }}
     >
-      {renderDefaultImage()}
       {renderFinalImage()}
       {renderImageLoader()}
     </Box>
