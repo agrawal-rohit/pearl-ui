@@ -39,7 +39,7 @@
     "crypto-js": "^4.1.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "expo": "~42.0.4",
+    "expo": "~43.0.3",
     "expo-app-loading": "^1.1.2",
     "expo-file-system": "~13.0.3",
     "expo-blur": "~10.0.3",
