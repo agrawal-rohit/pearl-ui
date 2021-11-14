@@ -123,6 +123,7 @@ const CheckBox = React.forwardRef(
       "root",
       "box"
     );
+
     molecularProps = useColorScheme(colorScheme, molecularProps);
 
     // OTHER METHODS
@@ -195,7 +196,7 @@ const CheckBox = React.forwardRef(
               molecularProps.box.backgroundColor || molecularProps.box.bg
             )}
             borderRadius={
-              shape === "square" ? molecularProps.box.borderRadius : "circle"
+              shape === "square" ? molecularProps.box.borderRadius : "full"
             }
             borderColor={computeCheckedorErrorProps("borderColor")}
             borderStartColor={computeCheckedorErrorProps("borderStartColor")}

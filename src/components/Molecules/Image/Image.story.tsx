@@ -12,8 +12,8 @@ storiesOf("Image", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("Local Image", () => (
     <Image
-      width={200}
-      height={200}
+      width="100%"
+      aspectRatio={16 / 9}
       boxShadow="4xl"
       source={require("./testLocalImage.jpeg")}
       previewSource={{
@@ -34,7 +34,7 @@ storiesOf("Image", module)
             width={100}
             height={100}
             loaderType="progressive"
-            cache={true}
+            isCached={true}
             source={{
               uri: "https://wallpaperaccess.com/full/1713248.jpg",
             }}
@@ -51,7 +51,7 @@ storiesOf("Image", module)
             width={100}
             height={100}
             loaderType="progressive"
-            cache={false}
+            isCached={false}
             source={{
               uri: "https://wallpaperaccess.com/full/1713248.jpg",
             }}
@@ -73,7 +73,7 @@ storiesOf("Image", module)
             width={100}
             height={100}
             loaderType="spinner"
-            cache={true}
+            isCached={true}
             source={{
               uri: "https://wallpaperaccess.com/full/1713248.jpg",
             }}
@@ -87,7 +87,7 @@ storiesOf("Image", module)
             width={100}
             height={100}
             loaderType="spinner"
-            cache={false}
+            isCached={false}
             source={{
               uri: "https://wallpaperaccess.com/full/1713248.jpg",
             }}
@@ -96,10 +96,59 @@ storiesOf("Image", module)
       </Stack>
     </>
   ))
-  .add("Error Image", () => (
+  .add("Loading indicators", () => (
+    <>
+      <Stack direction="vertical" spacing="m">
+        <Box>
+          <Text variant="st2">Progressive Loading + Preview Color</Text>
+          <Image
+            mt="m"
+            width={100}
+            height={100}
+            isCached={false}
+            loaderType="progressive"
+            previewColor="#934a9a"
+            source={{
+              uri: "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="st2">Progressive Loading + Preview Image</Text>
+          <Image
+            mt="m"
+            width={100}
+            height={100}
+            isCached={false}
+            loaderType="progressive"
+            source={{
+              uri: "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
+            }}
+            previewSource={require("./testPreviewImage.jpeg")}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="st2">Spinner Loading</Text>
+          <Image
+            mt="m"
+            width={100}
+            height={100}
+            isCached={false}
+            loaderType="spinner"
+            source={{
+              uri: "https://wallpaperaccess.com/full/1713248.jpg",
+            }}
+          />
+        </Box>
+      </Stack>
+    </>
+  ))
+  .add("Image Fallback", () => (
     <>
       <Text variant="t2" mb="xs">
-        Remote Image
+        Image Fallback
       </Text>
       <Stack direction="vertical" spacing="m">
         <Box>
@@ -109,7 +158,46 @@ storiesOf("Image", module)
             width={100}
             height={100}
             loaderType="progressive"
-            errorComponent={
+            fallbackSource={{
+              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+            }}
+            source={{
+              uri: "https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg",
+            }}
+            previewSource={{
+              uri: "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="st2">Spinner Loader + Error</Text>
+          <Image
+            mt="m"
+            width={100}
+            height={100}
+            fallbackSource={{
+              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+            }}
+            source={{
+              uri: "https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg",
+            }}
+          />
+        </Box>
+      </Stack>
+
+      <Text variant="t2" mb="xs" mt="m">
+        Custom fallback component
+      </Text>
+      <Stack direction="vertical" spacing="m">
+        <Box>
+          <Text variant="st2">Progressive Loader + Error</Text>
+          <Image
+            mt="m"
+            width={100}
+            height={100}
+            loaderType="progressive"
+            fallbackComponent={
               <Icon
                 iconFamily="MaterialIcons"
                 iconName="error-outline"
@@ -121,7 +209,7 @@ storiesOf("Image", module)
               uri: "https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg",
             }}
             previewSource={{
-              uri: "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+              uri: "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
             }}
           />
         </Box>
@@ -132,7 +220,7 @@ storiesOf("Image", module)
             mt="m"
             width={100}
             height={100}
-            errorComponent={
+            fallbackComponent={
               <Icon
                 iconFamily="MaterialIcons"
                 iconName="error-outline"
