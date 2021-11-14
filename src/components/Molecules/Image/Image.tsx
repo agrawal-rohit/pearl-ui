@@ -10,6 +10,7 @@ import {
   Platform,
   StyleSheet,
   ImageURISource,
+  ColorValue,
 } from "react-native";
 import { DownloadOptions } from "expo-file-system";
 import CacheManager from "./CacheManager";
@@ -18,8 +19,6 @@ import { BlurView } from "expo-blur";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import { useStyledProps } from "../../../hooks/useStyledProps";
-
-const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -48,20 +47,26 @@ type PearlImageProps = BoxProps &
     /** The variant of the image */
     variant?: string;
     /** Whether a remote image should be cached */
-    cache?: boolean;
+    isCached?: boolean;
     /** Source of the image to show while the remote image is being fetched */
     previewSource?: ImageSourcePropType;
+    /** Color of the image container while the remote image is being fetched */
+    previewColor?: ColorValue;
     /** Download configuration when fetching the remote image */
     imageDownloadOptions?: DownloadOptions;
-    /** Duration (in ms) it takes for the blurred to become clear */
+    /** Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded */
     transitionDuration?: number;
-    /** Tint of the image while it is being loaded */
+    /** Tint of the progressive loading overlay */
     tint?: "dark" | "light" | "default";
     /** The type of loading to use until the image has loaded */
     loaderType?: "progressive" | "spinner";
-    /** A component to show if an error occurs while loading the image */
-    errorComponent?: React.ReactElement;
+    /** A custom component to show if an error occurs while loading the image */
+    fallbackComponent?: React.ReactElement;
+    /** Source of the image to show if an error occurs while loading the image */
+    fallbackSource?: ImageSourcePropType;
   };
+
+const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
 /** The Image component is used to display images. */
 const Image: React.FC<PearlImageProps> = ({
@@ -77,7 +82,7 @@ const Image: React.FC<PearlImageProps> = ({
 
   const isMounted = useRef(true);
   const isRemoteImage = typeof source === "object";
-  const shouldCache = isRemoteImage && molecularProps.root.cache;
+  const shouldCache = isRemoteImage && molecularProps.root.isCached;
   const [uri, setUri] = useState<string | undefined>(undefined);
   const [error, setError] = useState(false);
   const previousUri = usePrevious(uri);
@@ -85,12 +90,14 @@ const Image: React.FC<PearlImageProps> = ({
   // The image should be ready by default if it's a local image
   const isImageReady = isRemoteImage ? !!uri : true;
 
-  const [intensity, setIntensity] = useState<Animated.Value>(
-    new Animated.Value(100)
-  );
-  const opacity = intensity.interpolate({
+  const intensity = useRef(new Animated.Value(100)).current;
+  const previewSourceOverlayOpacity = intensity.interpolate({
     inputRange: [0, 100],
     outputRange: [0, 0.5],
+  });
+  const previewColorOverlayOpacity = intensity.interpolate({
+    inputRange: [0, 100],
+    outputRange: [0, 1],
   });
 
   // A handler function for catching errors while loading the image
@@ -133,6 +140,7 @@ const Image: React.FC<PearlImageProps> = ({
     borderBottomRightRadius,
     borderTopLeftRadius,
     borderTopRightRadius,
+    testID,
     ...finalRootProps
   } = molecularProps.root;
 
@@ -147,8 +155,6 @@ const Image: React.FC<PearlImageProps> = ({
     },
     border
   );
-
-  console.log(borderRadiiStyles);
 
   borderRadiiStyles = {
     style: {
@@ -170,118 +176,193 @@ const Image: React.FC<PearlImageProps> = ({
     },
   };
 
+  const renderFallback = () => {
+    if (error) {
+      if (!!molecularProps.root.fallbackComponent) {
+        return (
+          <Box
+            overflow="hidden"
+            style={{ ...borderRadiiStyles.style, zIndex: 4 }}
+          >
+            {React.cloneElement(molecularProps.root.fallbackComponent)}
+          </Box>
+        );
+      }
+
+      if (!!molecularProps.root.fallbackSource) {
+        return (
+          <RNImage
+            source={molecularProps.root.fallbackSource}
+            style={[
+              StyleSheet.absoluteFill,
+              {
+                width: "100%",
+                height: "100%",
+                ...borderRadiiStyles.style,
+                zIndex: 3,
+              },
+            ]}
+          />
+        );
+      }
+
+      return null;
+    }
+
+    return null;
+  };
+
   const renderFinalImage = () => {
     if (isImageReady && !error) {
       return (
         <RNImage
           {...molecularProps.root}
+          testID={testID}
           source={finalSource as ImageSourcePropType}
-          style={{
-            width: "100%",
-            height: "100%",
-            ...borderRadiiStyles.style,
-          }}
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              width: "100%",
+              height: "100%",
+              ...borderRadiiStyles.style,
+              zIndex: 2,
+            },
+          ]}
         />
       );
     }
 
+    if (error) return renderFallback();
+
     return null;
   };
 
+  const renderPreview = () => {
+    if (!!molecularProps.root.previewSource) {
+      return (
+        <RNImage
+          source={molecularProps.root.previewSource}
+          blurRadius={Platform.OS === "android" ? 0.5 : 0}
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              width: "100%",
+              height: "100%",
+              ...borderRadiiStyles.style,
+              zIndex: 1,
+            },
+          ]}
+        />
+      );
+    }
+  };
+
   const renderImageLoader = () => {
-    if (!isImageReady) {
-      if (
-        molecularProps.root.loaderType === "progressive" &&
-        !!molecularProps.root.previewSource
-      ) {
-        return (
-          <Box
-            width="100%"
-            height="100%"
-            overflow="hidden"
-            style={borderRadiiStyles.style}
-          >
-            <RNImage
-              source={molecularProps.root.previewSource}
-              blurRadius={Platform.OS === "android" ? 0.5 : 0}
-              style={{
-                width: "100%",
-                height: "100%",
-                ...borderRadiiStyles.style,
-              }}
-            />
+    if (molecularProps.root.loaderType === "progressive") {
+      if (!!molecularProps.root.previewSource) {
+        // Render a blur overlay over the preview image
+        if (Platform.OS === "ios") {
+          return (
+            <AnimatedBlurView
+              tint={molecularProps.root.tint}
+              style={[
+                StyleSheet.absoluteFill,
+                {
+                  alignItems: "center",
+                  justifyContent: "center",
+                  ...borderRadiiStyles.style,
+                  zIndex: 3,
+                  overflow: "hidden",
+                },
+              ]}
+              intensity={intensity}
+            >
+              {/* Render the fallbackComponent inside the overlay if an error is encountered */}
+              {renderFallback()}
+            </AnimatedBlurView>
+          );
+        }
 
-            {/* Render a blur overlay over the preview image */}
-            {Platform.OS === "ios" && (
-              <AnimatedBlurView
-                intensity={intensity}
-                tint={molecularProps.root.tint}
-                style={[
-                  StyleSheet.absoluteFill,
-                  {
-                    alignItems: "center",
-                    justifyContent: "center",
-                  },
-                ]}
-              >
-                {/* Render the errorComponent inside the overlay if an error is encountered */}
-                {error &&
-                  !!molecularProps.root.errorComponent &&
-                  React.cloneElement(molecularProps.root.errorComponent)}
-              </AnimatedBlurView>
-            )}
-
-            {/* Render a static overlay over the preview image */}
-            {Platform.OS === "android" && (
-              <Animated.View
-                style={[
-                  StyleSheet.absoluteFill,
-                  {
-                    backgroundColor:
-                      molecularProps.root.tint === "dark" ? "black" : "white",
-                    alignItems: "center",
-                    justifyContent: "center",
-
-                    opacity,
-                  },
-                ]}
-              >
-                {/* Render the errorComponent inside the overlay if an error is encountered */}
-                {error &&
-                  !!molecularProps.root.errorComponent &&
-                  React.cloneElement(molecularProps.root.errorComponent)}
-              </Animated.View>
-            )}
-          </Box>
-        );
+        // Render a static overlay over the preview image
+        if (Platform.OS === "android") {
+          return (
+            <Animated.View
+              style={[
+                StyleSheet.absoluteFill,
+                {
+                  backgroundColor:
+                    molecularProps.root.tint === "dark" ? "black" : "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  opacity: previewSourceOverlayOpacity,
+                  ...borderRadiiStyles.style,
+                  zIndex: 3,
+                  overflow: "hidden",
+                },
+              ]}
+            >
+              {/* Render the fallbackComponent inside the overlay if an error is encountered */}
+              {renderFallback()}
+            </Animated.View>
+          );
+        }
       }
 
-      //   Render the errorComponent as it is for "spinner" loaderType
-      if (error && molecularProps.root.errorComponent)
-        return React.cloneElement(molecularProps.root.errorComponent);
-
-      // Load the spinner component
-      return <Spinner {...molecularProps.spinner} />;
+      if (!!molecularProps.root.previewColor) {
+        return (
+          <Animated.View
+            style={[
+              StyleSheet.absoluteFill,
+              {
+                backgroundColor: molecularProps.root.previewColor,
+                alignItems: "center",
+                justifyContent: "center",
+                opacity: previewColorOverlayOpacity,
+                ...borderRadiiStyles.style,
+                zIndex: 3,
+                overflow: "hidden",
+              },
+            ]}
+          >
+            {/* Render the fallbackComponent inside the overlay if an error is encountered */}
+            {renderFallback()}
+          </Animated.View>
+        );
+      }
     }
 
-    return null;
+    if (molecularProps.root.loaderType === "spinner" && !error) {
+      // Load the spinner component
+      return (
+        <Box
+          style={StyleSheet.absoluteFill}
+          width="100%"
+          height="100%"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Spinner {...molecularProps.spinner} />
+        </Box>
+      );
+    }
   };
 
   useEffect(() => {
     // Reload the network image when the URI updates
-    if (isRemoteImage)
+    if (isRemoteImage) {
       loadRemoteImage(
         (source as ImageURISource).uri as string,
         molecularProps.root.imageDownloadOptions
       );
 
-    // Start animating the overlay opacity as soon as the URI becomes available
-    if (uri && molecularProps.root.previewSource && previousUri === undefined) {
-      Animated.timing(intensity, {
-        duration: molecularProps.root.transitionDuration,
-        toValue: 0,
-        useNativeDriver: Platform.OS === "android",
-      }).start();
+      // Start animating the overlay opacity as soon as the URI becomes available
+      if (uri && !previousUri) {
+        Animated.timing(intensity, {
+          duration: molecularProps.root.transitionDuration,
+          toValue: 0,
+          useNativeDriver: Platform.OS === "android",
+        }).start();
+      }
     }
 
     return () => {
@@ -302,8 +383,11 @@ const Image: React.FC<PearlImageProps> = ({
         ...borderRadiiStyles.style,
         ...finalRootProps.style,
       }}
+      accessible={true}
+      accessibilityRole="image"
     >
       {renderFinalImage()}
+      {renderPreview()}
       {renderImageLoader()}
     </Box>
   );

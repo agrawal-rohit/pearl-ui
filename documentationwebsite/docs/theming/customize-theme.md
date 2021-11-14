@@ -130,7 +130,7 @@ export default {
 };
 ```
 
-An example of the atomic component config applied to the [Icon](../components/common/Icon) component is given below:
+An example of the atomic component config applied to the [Icon](../components/media/Icon) component is given below:
 
 ```js
 const newIconConfig = {
@@ -241,7 +241,7 @@ export default {
 };
 ```
 
-An example of a molecular component config applied to the [Button](../components/common/Button) component is given below:
+An example of a molecular component config applied to the [Button](../components/forms/Button) component is given below:
 
 ```js
 const newButtonConfig = {

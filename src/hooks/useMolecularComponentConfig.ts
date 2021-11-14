@@ -184,6 +184,20 @@ export const useMolecularComponentConfig = (
     );
   } else {
     finalComponentProps = componentStyleConfig["baseStyle"];
+    const firstPart = componentStyleConfig.parts[0];
+
+    // Pass the overriden props to the first part
+    finalComponentProps = {
+      ...finalComponentProps,
+      [firstPart]: {
+        ...finalComponentProps[firstPart],
+        ...overridenProps,
+        style: {
+          ...finalComponentProps[firstPart].style,
+          ...overridenProps.style,
+        },
+      },
+    };
   }
 
   return finalComponentProps;

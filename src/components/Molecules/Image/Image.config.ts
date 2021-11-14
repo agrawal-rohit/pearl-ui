@@ -4,9 +4,8 @@ export default {
     root: {
       loaderType: "spinner",
       backgroundColor: "neutral.100",
-      borderRadius: "m",
-      boxShadow: "2xl",
-      cache: true,
+      isCached: true,
+      borderRadius: "l",
       transitionDuration: 300,
       tint: "dark",
     },
@@ -14,5 +13,4 @@ export default {
       color: "neutral.400",
     },
   },
-  defaults: {},
 };
