@@ -106,21 +106,27 @@ export type CheckBoxProps = PressableProps & {
 /** The Checkbox component is used in forms when a user needs to select multiple values from several options. **/
 const CheckBox = React.forwardRef(
   (
-    {
-      children,
-      size = "m",
-      isDisabled = false,
-      onPress = () => {},
-      colorScheme = "primary",
-      ...rest
-    }: CheckBoxProps,
+    { children, onPress = () => {}, ...rest }: CheckBoxProps,
     checkboxRef: any
   ) => {
     let {
+      size,
+      variant,
+      isDisabled,
+      colorScheme,
+      shape,
       checkboxGroupValue,
       addCheckBoxGroupValue,
       deleteCheckBoxGroupValue,
     } = useCheckBoxGroup();
+
+    // Overwrite props from checkbox group
+    rest.size = size || rest.size;
+    rest.variant = variant || rest.variant;
+    rest.isDisabled = isDisabled || rest.isDisabled || false;
+    rest.colorScheme = colorScheme || rest.colorScheme || "primary";
+    rest.shape = shape || rest.shape || "square";
+
     const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
     const isCheckBoxChecked = isCheckBoxInGroup
       ? checkboxGroupValue?.includes(rest.value as string | number) &&
@@ -131,15 +137,15 @@ const CheckBox = React.forwardRef(
       "CheckBox",
       rest,
       {
-        size: size,
-        variant: rest["variant"],
+        size: rest.size,
+        variant: rest.variant,
       },
       boxStyleFunctions,
       "root",
       "box"
     );
 
-    molecularProps = useColorScheme(colorScheme, molecularProps);
+    molecularProps = useColorScheme(rest.colorScheme, molecularProps);
 
     // OTHER METHODS
     const checkboxPressHandler = (event: GestureResponderEvent) => {
@@ -207,11 +213,11 @@ const CheckBox = React.forwardRef(
               : (children as string)
           }
           accessibilityState={{
-            disabled: isDisabled,
+            disabled: rest.isDisabled,
             checked: isCheckBoxChecked,
           }}
           accessibilityHint={rest.accessibilityHint}
-          opacity={isDisabled ? 0.5 : 1}
+          opacity={rest.isDisabled ? 0.5 : 1}
           direction="horizontal"
           alignSelf="flex-start"
           spacing={rest.spacing || molecularProps.root.spacing}
@@ -223,7 +229,7 @@ const CheckBox = React.forwardRef(
             alignSelf="center"
             alignItems="center"
             justifyContent="center"
-            isDisabled={isDisabled}
+            isDisabled={rest.isDisabled}
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               molecularProps.box.backgroundColor || molecularProps.box.bg
@@ -243,7 +249,7 @@ const CheckBox = React.forwardRef(
             androidRippleConfig={
               rest.androidRippleConfig
                 ? rest.androidRippleConfig
-                : { color: `${colorScheme}.200` }
+                : { color: `${rest.colorScheme}.200` }
             }
           >
             <Icon

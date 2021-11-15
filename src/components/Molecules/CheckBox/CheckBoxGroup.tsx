@@ -1,7 +1,17 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
 export interface ICheckBoxGroupContext {
+  /** Size of all the checkbox children in the group. */
+  size?: string;
+  /** Variant of all the checkbox children in the group. */
+  variant?: string;
+  /** Whether the checkbox group is disabled.  */
+  isDisabled?: boolean;
+  /** Active color palette of all the checkbox children in the group. */
+  colorScheme?: string;
+  /** Shape of all the checkbox children in the group. */
+  shape?: "square" | "circle";
   /** Active values of the checkbox options in the group */
   checkboxGroupValue: Array<string | number> | undefined;
   /** Function to add a value to the active values of the group */
@@ -19,6 +29,16 @@ export const useCheckBoxGroup = () =>
   useContext(checkboxGroupContext) as ICheckBoxGroupContext;
 
 type CheckBoxGroupProps = BoxProps & {
+  /** Size of all the children checkbox in the group. */
+  size?: string;
+  /** Variant of all the children checkbox in the group. */
+  variant?: string;
+  /** Whether the checkbox group is disabled.  */
+  isDisabled?: boolean;
+  /** Active color palette of all the children checkbox in the group. */
+  colorScheme?: string;
+  /** Shape of all the children checkbox in the group. */
+  shape?: "square" | "circle";
   /** Default active value of the checkbox group */
   defaultValue?: Array<string | number>;
   /** Active value of the checkbox group */
@@ -29,6 +49,11 @@ type CheckBoxGroupProps = BoxProps & {
 
 const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   children,
+  size = "m",
+  variant = "filled",
+  isDisabled = false,
+  colorScheme = "primary",
+  shape = "square",
   value = undefined,
   defaultValue = [],
   onChange = () => {},
@@ -48,6 +73,11 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
     <Box {...rest}>
       <checkboxGroupContext.Provider
         value={{
+          size,
+          variant,
+          isDisabled,
+          colorScheme,
+          shape,
           checkboxGroupValue: currentValue,
           addCheckBoxGroupValue,
           deleteCheckBoxGroupValue,

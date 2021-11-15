@@ -10,6 +10,9 @@ type ScreenProps = BoxProps & {
   variant?: string;
 };
 
+// TODO: Add Scrollable functionality and props (https://reactnative.dev/docs/scrollview) or (https://github.com/APSL/react-native-keyboard-aware-scroll-view)
+// TODO: Add Pull-to-refresh functionality and props (https://reactnative.dev/docs/refreshcontrol)
+
 /** A layout component that you can use to wrap all the views in your app. */
 const Screen: React.FC<ScreenProps> = ({
   children,

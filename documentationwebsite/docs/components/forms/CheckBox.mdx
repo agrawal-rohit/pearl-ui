@@ -3,12 +3,12 @@ sidebar_position: 5
 title: CheckBox
 ---
 
-The `Checkbox` component is used in forms when a user needs to select multiple values from several options.
+The `CheckBox` component is used in forms when a user needs to select multiple values from several options.
 
 ## Import
 
 ```jsx
-import { Checkbox } from "pearl-ui";
+import { CheckBox, CheckBoxGroup } from "pearl-ui";
 ```
 
 ## Usage
@@ -16,7 +16,33 @@ import { Checkbox } from "pearl-ui";
 ```jsx
 const [checked, setIsChecked] = React.useState(false)
 
-<Checkbox isChecked={checked} onPress={() => setIsChecked(!checked)}>Check Me!</CheckBox>
+<CheckBox isChecked={checked} onPress={() => setIsChecked(!checked)}>Check Me!</CheckBox>
+```
+
+### Checkbox group
+
+A `CheckboxGroup` component exists to help manage the checked state of its children `CheckBox` components and conveniently pass a few shared style props to each as follows:
+
+```jsx
+const [checkedGroupValue, setCheckedGroupValue] = React.useState([])
+
+<CheckBoxGroup
+  size="s"
+  colorScheme="secondary"
+  shape="circle"
+  defaultValue={["1", "2"]}
+  value={checkedGroupValue}
+  onChange={(value) => {
+    setCheckedGroupValue(value);
+  }}
+>
+  <Stack direction="vertical" spacing="xs">
+    <CheckBox value="1">Value 1</CheckBox>
+    <CheckBox value="2">Value 2</CheckBox>
+    <CheckBox value="3">Value 3</CheckBox>
+    <CheckBox value="4">Value 4</CheckBox>
+  </Stack>
+</CheckBoxGroup>
 ```
 
 ### Checkbox sizes
@@ -67,7 +93,7 @@ You can use the `shape` prop to change the shape of the checkbox to <t>"square"<
 
 ### Checkbox checked state
 
-The checkbox is in a `checked` state when it is pressed once and the checkmark icon becomes visible. The `isChecked` prop is used to define whether the checkbox is in an indeterminate state.
+The checkbox is in a `checked` state when it is pressed once and the checkmark icon becomes visible. The `isChecked` prop is used to define whether the checkbox is in a checked state.
 
 `Checkbox` also allows you to update the visual style of the checkbox when it is checked using some [special props](#supported-style-props) prefixed with the word <t>checked</t>.
 
@@ -153,7 +179,7 @@ You can also customize the icons to be used in the checkbox using the following 
 The CheckBox component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
 
 ```jsx
-// passing style prop marginTop="l" adds a top margin to the input field
+// passing style prop marginTop="l" adds a top margin to the checkbox
 <CheckBox variant="filled" marginTop="l" borderWidth={2} borderColor="green">
   Check Me!
 </CheckBox>
@@ -191,7 +217,7 @@ import TabItem from "@theme/TabItem";
 - When the CheckBox is disabled or checked, it is reflected as `disabled` and `checked` respectively in screen readers.
 - CheckBox has the default accessibility label set as the label text passed into it. A custom label can be specified using the `accessibilityLabel` prop.
 
-## Props
+## CheckBox Props
 
 ### Supported style props
 
@@ -203,12 +229,13 @@ CheckBox composes the [Stack](../layout/Stack) component, you can pass all [Stac
 | ------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------- |
 | size                     | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>                                                                                                                                                                                           | `"m"`              | Size of the checkbox.                                                   |
 | variant                  | false    | <t>PearlTheme.components.CheckBox["variants"]</t>                                                                                                                                                                                        | `"filled"`         | Variant of the checkbox.                                                |
+| value                    | false    | <t>string \| number \| undefined</t>                                                                                                                                                                                                     |                    | Value of the checkbox if it is part of a group.                         |
 | isDisabled               | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is disabled.                                       |
 | isChecked                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in a checked state.                             |
 | isIndeterminate          | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an indeterminate state.                      |
 | isInvalid                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an error state.                              |
 | errorMessage             | false    | <t>string</t>                                                                                                                                                                                                                            |                    | The error message to be displayed if the checkbox is in an error state. |
-| colorScheme              | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary"`        | Active color palette of the input field.                                |
+| colorScheme              | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary"`        | Active color palette of the checkbox.                                   |
 | spacing                  | false    | <t>PearlTheme.spacing</t>                                                                                                                                                                                                                | `"xs"`             | The spacing between the checkbox and the label text.                    |
 | shape                    | false    | <t>"square" \| "circle"</t>                                                                                                                                                                                                              | `"square"`         | Shape of the checkbox.                                                  |
 | checkedIconFamily        | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in checked state.               |
@@ -216,7 +243,7 @@ CheckBox composes the [Stack](../layout/Stack) component, you can pass all [Stac
 | indeterminateIconFamily  | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in indeterminate state.         |
 | indeterminateIconName    | false    | <t>string</t>                                                                                                                                                                                                                            | `"remove-outline"` | Name of the icon when the checkbox is in indeterminate state.           |
 | checkedBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              | `"primary.500"`    | The background color of the checkbox when it is in checked state.       |
-| checkedBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border color of the checkbox when it is in checked state            |
+| checkedBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              | `"primary.500"`    | The border color of the checkbox when it is in checked state            |
 | checkedBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border start color of the checkbox when it is in checked state.     |
 | checkedBorderEndColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border end color of the checkbox when it is in checked state.       |
 | checkedBorderTopColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border top color of the checkbox when it is in checked state.       |
@@ -232,6 +259,25 @@ CheckBox composes the [Stack](../layout/Stack) component, you can pass all [Stac
 | errorBorderRightColor    | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border right color of the checkbox when it is in an error state.    |
 | errorBorderBottomColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>                                                                                                                                                                                              |                    | The border bottom color of the checkbox when it is in an error state.   |
 
+## CheckBoxGroup Props
+
+### Supported style props
+
+CheckBoxGroup composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to `CheckBoxGroup`.
+
+### Additional props
+
+| Name         | Required | Type                                              | Default     | Description                                                                |
+| ------------ | -------- | ------------------------------------------------- | ----------- | -------------------------------------------------------------------------- |
+| size         | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>    | `"m"`       | Size of all the children checkbox in the group.                            |
+| variant      | false    | <t>PearlTheme.components.CheckBox["variants"]</t> | `"filled"`  | Variant of all the children checkbox in the group.                         |
+| value        | false    | <t>Array<string \| number></t>                    |             | Active value of the checkbox group.                                        |
+| defaultValue | false    | <t>Array<string \| number></t>                    | `[]`        | Default active value of the checkbox group.                                |
+| onChange     | false    | <t>(value: Array<string \| number>) => void</t>   |             | Method that gets invoked when the the value of the checkbox group changes. |
+| isDisabled   | false    | <t>boolean</t>                                    | `false`     | Whether the checkbox group is disabled.                                    |
+| colorScheme  | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of all the children checkbox in the group.            |
+| shape        | false    | <t>"square" \| "circle"</t>                       | `"square"`  | Shape of all the children checkbox in the group.                           |
+
 ## Default component Style
 
 ```js
@@ -244,6 +290,7 @@ export default {
     },
     box: {
       p: "hairline",
+      shape: "square",
       borderWidth: 1,
       borderColor: "neutral.300",
       checkedBackgroundColor: "primary.500",
