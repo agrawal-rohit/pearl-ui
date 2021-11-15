@@ -55,6 +55,7 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
 
   return (
     <Box
+      flexWrap="wrap"
       {...rest}
       alignSelf="flex-start"
       flexDirection={rest.direction === "horizontal" ? "row" : "column"}

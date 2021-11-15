@@ -126,13 +126,13 @@ The input field is in a `focus` state when the text inside the field can be edit
 
 ### Input error state
 
-Similar to the focus state, you can add an error state to the input field based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isErrorVisible` prop is used to define whether the input field has an error or not.
+Similar to the focus state, you can add an error state to the input field based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isInvalid` prop is used to define whether the input field has an error or not.
 
 You can also pass the `errorMessage` prop to add a helper text describing the error below the input field.
 
 ```jsx
 <Input
-  isErrorVisible={true}
+  isInvalid={true}
   errorMessage="Some weird error occured!"
   errorBackgroundColor="pink"
   errorBorderColor="red"
@@ -197,7 +197,7 @@ Input also composes the [TextInput](https://reactnative.dev/docs/textinput) comp
 | variant                | false    | <t>PearlTheme.components.Input["variants"]</t> | `"filled"`      | Variant of the input field.                                                   |
 | isDisabled             | false    | <t>boolean</t>                                 | `false`         | Whether the input field is disabled.                                          |
 | isFullWidth            | false    | <t>boolean</t>                                 | `false`         | Whether the input field should span the entire width of the parent container. |
-| isErrorVisible         | false    | <t>boolean</t>                                 | `false`         | Whether there the input field is in an error state.                           |
+| isInvalid              | false    | <t>boolean</t>                                 | `false`         | Whether there the input field is in an error state.                           |
 | errorMessage           | false    | <t>string</t>                                  |                 | The error message to be displayed if the input field is in an error state.    |
 | colorScheme            | false    | <t>PearlTheme.palette</t>                      | `"primary"`     | Active color palette of the input field.                                      |
 | hasClearButton         | false    | <t>boolean</t>                                 | `false`         | Whether the input field should display a clear button.                        |

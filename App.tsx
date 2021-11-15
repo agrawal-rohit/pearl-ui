@@ -13,10 +13,12 @@ import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
 import Input from "./src/components/Molecules/Input/Input";
 import Icon from "./src/components/Atoms/Icon/Icon";
-import Text from "./src/components/Atoms/Text/Text";
 import Button from "./src/components/Molecules/Button/Button";
 import Stack from "./src/components/Atoms/Stack/Stack";
 import CheckBox from "./src/components/Molecules/CheckBox/CheckBox";
+import Radio from "./src/components/Molecules/Radio/Radio";
+import RadioGroup from "./src/components/Molecules/Radio/RadioGroup";
+import CheckBoxGroup from "./src/components/Molecules/CheckBox/CheckBoxGroup";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -30,11 +32,12 @@ const App = () => {
 
   const [text, settext] = useState("");
   const [checked, setchecked] = useState(false);
+  const [checkedGroup, setCheckedGroup] = useState([]);
 
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
-      <Storybook />
-      {/* <Screen>
+      {/* <Storybook /> */}
+      <Screen>
         <Input
           isFullWidth
           placeholder="Enter Email"
@@ -51,21 +54,38 @@ const App = () => {
           rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
 
-        <CheckBox
-          mt="s"
-          isChecked={checked}
-          onPress={() => {
-            setchecked(!checked);
-            console.log("Checked!");
+        <CheckBoxGroup
+          value={checkedGroup}
+          onChange={(value) => {
+            console.log(value);
+            setCheckedGroup(value);
           }}
         >
-          Remember me
-        </CheckBox>
+          <Stack direction="horizontal" spacing="s">
+            <CheckBox value="1">Value 1</CheckBox>
+            <CheckBox value="2">Value 2</CheckBox>
+            <CheckBox value="3">Value 3</CheckBox>
+            <CheckBox value="4">Value 4</CheckBox>
+          </Stack>
+        </CheckBoxGroup>
+
+        {/* <RadioGroup
+          defaultValue="1"
+          value="2"
+          onChange={(value) => console.log(value)}
+        >
+          <Stack direction="horizontal" spacing="s">
+            <Radio value="1">Value 1</Radio>
+            <Radio value="2">Value 2</Radio>
+            <Radio value="3">Value 3</Radio>
+            <Radio value="4">Value 4</Radio>
+          </Stack>
+        </RadioGroup> */}
 
         <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
           Login
         </Button>
-      </Screen> */}
+      </Screen>
     </ThemeProvider>
   );
 };

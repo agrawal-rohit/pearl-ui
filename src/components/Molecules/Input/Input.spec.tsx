@@ -73,7 +73,7 @@ describe("Molecules/Input", () => {
       <ThemeProvider>
         <Input
           testID="inputField"
-          isErrorVisible
+          isInvalid
           errorBackgroundColor={errorBackgroundColor}
           errorBorderColor={errorBorderColor}
         />
@@ -162,7 +162,7 @@ describe("Molecules/Input", () => {
         <Input
           placeholder="Enter value"
           value={value}
-          isErrorVisible
+          isInvalid
           errorMessage="Test error message"
         />
       </ThemeProvider>

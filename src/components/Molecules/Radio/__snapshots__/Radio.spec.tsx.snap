@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
+exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
 <View
   accessibilityLabel="Check me!"
-  accessibilityRole="checkbox"
+  accessibilityRole="radio"
   accessibilityState={
     Object {
       "checked": undefined,
@@ -57,7 +57,6 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      shape="square"
       style={
         Array [
           Object {
@@ -65,11 +64,13 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
             "alignSelf": "center",
             "backgroundColor": "#EDF1F7",
             "borderColor": "#EDF1F7",
-            "borderRadius": 4,
+            "borderRadius": "50%",
             "borderWidth": 2,
             "display": "flex",
+            "height": 24,
             "justifyContent": "center",
-            "padding": 2,
+            "padding": 5,
+            "width": 24,
           },
           Object {
             "backgroundColor": "#EDF1F7",
@@ -78,7 +79,18 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
         ]
       }
     >
-      <Text />
+      <View
+        checkedBackgroundColor="neutral.50"
+        style={
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "borderRadius": "50%",
+            "display": "flex",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
     </View>
   </View>
   <View
@@ -113,11 +125,11 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
 </View>
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test for different color schemes 1`] = `
+exports[`Molecules/Radio passes the snapshot test for different color schemes 1`] = `
 Array [
   <View
-    accessibilityLabel="Primary CheckBox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Primary Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -171,7 +183,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -179,11 +190,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -192,35 +205,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -249,13 +245,13 @@ Array [
         }
         variant="p2"
       >
-        Primary CheckBox
+        Primary Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Secondary CheckBox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Secondary Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -309,7 +305,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -317,11 +312,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -330,35 +327,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -387,18 +367,18 @@ Array [
         }
         variant="p2"
       >
-        Secondary CheckBox
+        Secondary Radio
       </Text>
     </View>
   </View>,
 ]
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
+exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
 Array [
   <View
-    accessibilityLabel="Small Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Small Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -452,7 +432,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -460,11 +439,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 18,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 3,
+              "width": 18,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -473,35 +454,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 11.5,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -530,13 +494,13 @@ Array [
         }
         variant="p2"
       >
-        Small Checkbox
+        Small Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Regular Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Regular Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -590,7 +554,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -598,11 +561,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -611,35 +576,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -668,13 +616,13 @@ Array [
         }
         variant="p2"
       >
-        Regular Checkbox
+        Regular Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Large Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Large Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -728,7 +676,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -736,11 +683,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 8,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 30,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 7,
+              "width": 30,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -749,35 +698,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 23,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -806,13 +738,13 @@ Array [
         }
         variant="p1"
       >
-        Large Checkbox
+        Large Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Extra Large Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Extra Large Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -866,7 +798,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -874,11 +805,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 8,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 36,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 9,
+              "width": 36,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -887,35 +820,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 34.5,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -944,18 +860,18 @@ Array [
         }
         variant="p1"
       >
-        Extra Large Checkbox
+        Extra Large Radio
       </Text>
     </View>
   </View>,
 ]
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] = `
+exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
 Array [
   <View
-    accessibilityLabel="Filled Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Filled Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -1009,7 +925,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -1017,11 +932,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#EDF1F7",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -1031,35 +948,18 @@ Array [
         }
         variant="filled"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -1088,13 +988,13 @@ Array [
         }
         variant="p2"
       >
-        Filled Checkbox
+        Filled Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Outline Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Outline Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -1135,7 +1035,12 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
+        checkedBackgroundColor={
+          Object {
+            "dark": "neutral.800",
+            "light": "neutral.50",
+          }
+        }
         checkedBorderColor="primary.500"
         errorBorderColor="danger.500"
         focusable={true}
@@ -1148,7 +1053,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -1156,11 +1060,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#FFFFFF",
               "borderColor": "#C5CEE0",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1170,35 +1076,18 @@ Array [
         }
         variant="outline"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="primary.500"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -1227,18 +1116,18 @@ Array [
         }
         variant="p2"
       >
-        Outline Checkbox
+        Outline Radio
       </Text>
     </View>
   </View>,
 ]
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test when in a checked/indeterminate state 1`] = `
+exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = `
 Array [
   <View
-    accessibilityLabel="Indeterminate Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Checked Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": true,
@@ -1284,7 +1173,6 @@ Array [
         errorBorderColor="danger.500"
         focusable={true}
         isChecked={true}
-        isIndeterminate={true}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1294,7 +1182,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -1302,11 +1189,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#6A7BFF",
               "borderColor": "#6A7BFF",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#6A7BFF",
@@ -1316,35 +1205,18 @@ Array [
         }
         variant="filled"
       >
-        <Text
-          accessibilityLabel="remove-outline Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -1373,13 +1245,13 @@ Array [
         }
         variant="p2"
       >
-        Indeterminate Checkbox
+        Checked Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Checked Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Checked Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": true,
@@ -1420,7 +1292,12 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
+        checkedBackgroundColor={
+          Object {
+            "dark": "neutral.800",
+            "light": "neutral.50",
+          }
+        }
         checkedBorderColor="primary.500"
         errorBorderColor="danger.500"
         focusable={true}
@@ -1434,338 +1311,41 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
               "alignItems": "center",
               "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
+              "backgroundColor": "#FFFFFF",
               "borderColor": "#6A7BFF",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
-        }
-        variant="filled"
-      >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
-          style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
-          }
-        }
-        variant="p2"
-      >
-        Checked Checkbox
-      </Text>
-    </View>
-  </View>,
-  <View
-    accessibilityLabel="Indeterminate Checkbox"
-    accessibilityRole="checkbox"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-        }
-      }
-    >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        isIndeterminate={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
+              "backgroundColor": "#FFFFFF",
               "opacity": undefined,
             },
           ]
         }
         variant="outline"
       >
-        <Text
-          accessibilityLabel="remove-outline Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="primary.500"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
-          }
-        >
-          
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
-          }
-        }
-        variant="p2"
-      >
-        Indeterminate Checkbox
-      </Text>
-    </View>
-  </View>,
-  <View
-    accessibilityLabel="Checked Checkbox"
-    accessibilityRole="checkbox"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-        }
-      }
-    >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        style={
-          Array [
             Object {
-              "alignItems": "center",
-              "alignSelf": "center",
               "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
+              "borderRadius": "50%",
               "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
-        }
-        variant="outline"
-      >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
-          style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -1794,18 +1374,18 @@ Array [
         }
         variant="p2"
       >
-        Checked Checkbox
+        Checked Radio
       </Text>
     </View>
   </View>,
 ]
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] = `
+exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
 Array [
   <View
-    accessibilityLabel="Error Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Error Radio"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -1860,7 +1440,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -1868,11 +1447,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#FF4B42",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -1881,35 +1462,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -1938,13 +1502,13 @@ Array [
         }
         variant="p2"
       >
-        Error Checkbox
+        Error Radio
       </Text>
     </View>
   </View>,
   <View
-    accessibilityLabel="Error Checkbox with message"
-    accessibilityRole="checkbox"
+    accessibilityLabel="Error Radio with message"
+    accessibilityRole="radio"
     accessibilityState={
       Object {
         "checked": undefined,
@@ -2000,7 +1564,6 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        shape="square"
         style={
           Array [
             Object {
@@ -2008,11 +1571,13 @@ Array [
               "alignSelf": "center",
               "backgroundColor": "#EDF1F7",
               "borderColor": "#FF4B42",
-              "borderRadius": 4,
+              "borderRadius": "50%",
               "borderWidth": 2,
               "display": "flex",
+              "height": 24,
               "justifyContent": "center",
-              "padding": 2,
+              "padding": 5,
+              "width": 24,
             },
             Object {
               "backgroundColor": "#EDF1F7",
@@ -2021,35 +1586,18 @@ Array [
           ]
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          checkedBackgroundColor="neutral.50"
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "backgroundColor": "#EDF1F7",
+              "borderRadius": "50%",
+              "display": "flex",
+              "height": "100%",
+              "width": "100%",
+            }
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
     <View
@@ -2078,7 +1626,7 @@ Array [
         }
         variant="p2"
       >
-        Error Checkbox with message
+        Error Radio with message
       </Text>
     </View>
   </View>,
@@ -2104,10 +1652,10 @@ Array [
 ]
 `;
 
-exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] = `
+exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
 <View
   accessibilityLabel="Button press"
-  accessibilityRole="checkbox"
+  accessibilityRole="radio"
   accessibilityState={
     Object {
       "checked": undefined,
@@ -2164,7 +1712,6 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      shape="square"
       style={
         Array [
           Object {
@@ -2172,11 +1719,13 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
             "alignSelf": "center",
             "backgroundColor": "#EDF1F7",
             "borderColor": "#EDF1F7",
-            "borderRadius": 4,
+            "borderRadius": "50%",
             "borderWidth": 2,
             "display": "flex",
+            "height": 24,
             "justifyContent": "center",
-            "padding": 2,
+            "padding": 5,
+            "width": 24,
           },
           Object {
             "backgroundColor": "#EDF1F7",
@@ -2185,35 +1734,18 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
         ]
       }
     >
-      <Text
-        accessibilityLabel="checkmark Icon"
-        accessible={true}
-        allowFontScaling={false}
-        checkedIconFamily="Ionicons"
-        checkedIconName="checkmark"
-        indeterminateIconFamily="Ionicons"
-        indeterminateIconName="remove-outline"
+      <View
+        checkedBackgroundColor="neutral.50"
         style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 17.25,
-            },
-            Object {
-              "color": "transparent",
-              "display": "flex",
-            },
-            Object {
-              "fontFamily": "ionicons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "borderRadius": "50%",
+            "display": "flex",
+            "height": "100%",
+            "width": "100%",
+          }
         }
-      >
-        
-      </Text>
+      />
     </View>
   </View>
   <View

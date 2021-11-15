@@ -17,6 +17,7 @@ import InputConfig from "../../../components/Molecules/Input/Input.config";
 import DividerConfig from "../../../components/Atoms/Divider/Divider.config";
 import CheckBoxConfig from "../../../components/Molecules/CheckBox/CheckBox.config";
 import ImageConfig from "../../../components/Molecules/Image/Image.config";
+import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -51,6 +52,7 @@ export const baseTheme: BasePearlTheme = {
     TextLink: TextLinkConfig,
     Input: InputConfig,
     CheckBox: CheckBoxConfig,
+    Radio: RadioConfig,
     Divider: DividerConfig,
     Image: ImageConfig,
   },

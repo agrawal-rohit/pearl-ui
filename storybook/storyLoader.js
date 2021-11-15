@@ -18,6 +18,7 @@ function loadStories() {
   require("../src/components/Molecules/Image/Image.story");
   require("../src/components/Molecules/Input/Input.story");
   require("../src/components/Molecules/OfflineNotice/OfflineNotice.story");
+  require("../src/components/Molecules/Radio/Radio.story");
   require("../src/components/Molecules/TextLink/TextLink.story");
 }
 
@@ -36,6 +37,7 @@ const stories = [
   "../src/components/Molecules/Image/Image.story",
   "../src/components/Molecules/Input/Input.story",
   "../src/components/Molecules/OfflineNotice/OfflineNotice.story",
+  "../src/components/Molecules/Radio/Radio.story",
   "../src/components/Molecules/TextLink/TextLink.story",
 ];
 

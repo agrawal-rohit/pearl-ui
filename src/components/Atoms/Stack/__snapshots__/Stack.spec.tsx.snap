@@ -10,6 +10,7 @@ exports[`Atoms/Stack passes the snapshot test for horizontal direction 1`] = `
       "alignSelf": "flex-start",
       "display": "flex",
       "flexDirection": "row",
+      "flexWrap": "wrap",
     }
   }
 >
@@ -154,6 +155,7 @@ exports[`Atoms/Stack passes the snapshot test for vertical direction 1`] = `
       "alignSelf": "flex-start",
       "display": "flex",
       "flexDirection": "column",
+      "flexWrap": "wrap",
       "marginTop": 24,
     }
   }

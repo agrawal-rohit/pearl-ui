@@ -32,8 +32,8 @@ storiesOf("CheckBox", module)
           Indeterminate Checkbox
         </CheckBox>
         <CheckBox isChecked>Checked Checkbox</CheckBox>
-        <CheckBox isErrorVisible>Error Checkbox</CheckBox>
-        <CheckBox isErrorVisible errorMessage="This is an error message!">
+        <CheckBox isInvalid>Error Checkbox</CheckBox>
+        <CheckBox isInvalid errorMessage="This is an error message!">
           Error Checkbox with message
         </CheckBox>
       </>
