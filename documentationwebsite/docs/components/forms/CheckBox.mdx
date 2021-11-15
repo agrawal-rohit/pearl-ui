@@ -94,13 +94,13 @@ In some special scenarios, you might need to display a partial checked state(als
 
 ### Checkbox error state
 
-Similar to the checked state, you can add an error state to the checkbox based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isErrorVisible` prop is used to define whether the checkbox has an error.
+Similar to the checked state, you can add an error state to the checkbox based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isInvalid` prop is used to define whether the checkbox has an error.
 
 You can also pass the `errorMessage` prop to add a helper text describing the error below the checkbox.
 
 ```jsx
 <CheckBox
-  isErrorVisible
+  isInvalid
   errorBackgroundColor="pink"
   errorBorderColor="red"
 >
@@ -108,7 +108,7 @@ You can also pass the `errorMessage` prop to add a helper text describing the er
 </CheckBox>
 
 <CheckBox
-  isErrorVisible
+  isInvalid
   errorBackgroundColor="cyan"
   errorBorderColor="violet"
   errorMessage="This is an error message!"
@@ -206,7 +206,7 @@ CheckBox composes the [Stack](../layout/Stack) component, you can pass all [Stac
 | isDisabled               | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is disabled.                                       |
 | isChecked                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in a checked state.                             |
 | isIndeterminate          | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an indeterminate state.                      |
-| isErrorVisible           | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an error state.                              |
+| isInvalid                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an error state.                              |
 | errorMessage             | false    | <t>string</t>                                                                                                                                                                                                                            |                    | The error message to be displayed if the checkbox is in an error state. |
 | colorScheme              | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary"`        | Active color palette of the input field.                                |
 | spacing                  | false    | <t>PearlTheme.spacing</t>                                                                                                                                                                                                                | `"xs"`             | The spacing between the checkbox and the label text.                    |
@@ -311,26 +311,30 @@ export default {
   variants: {
     filled: {
       box: {
+        borderWidth: 2,
         backgroundColor: {
           light: "neutral.200",
           dark: "neutral.900",
         },
         borderColor: {
           light: "neutral.200",
-          dark: "neutral.900",
+          dark: "neutral.600",
         },
+        checkedBorderColor: "primary.500",
       },
     },
     outline: {
       box: {
+        borderWidth: 2,
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
         },
         borderColor: {
-          light: "neutral.300",
-          dark: "neutral.600",
+          light: "neutral.400",
+          dark: "neutral.500",
         },
+        checkedBorderColor: "primary.500",
       },
     },
   },

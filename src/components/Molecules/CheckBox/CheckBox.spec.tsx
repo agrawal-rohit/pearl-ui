@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckBox from "./CheckBox";
 import { fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../theme/src/themeContext";
+import CheckBoxGroup from "./CheckBoxGroup";
+import Stack from "../../Atoms/Stack/Stack";
 
 jest.useFakeTimers();
 
@@ -40,10 +42,19 @@ describe("Molecules/CheckBox", () => {
   it("passes the snapshot test when in a checked/indeterminate state", async () => {
     const tree = await render(
       <ThemeProvider>
-        <CheckBox isChecked isIndeterminate>
+        <CheckBox variant="filled" isChecked isIndeterminate>
           Indeterminate Checkbox
         </CheckBox>
-        <CheckBox isChecked>Checked Checkbox</CheckBox>
+        <CheckBox variant="filled" isChecked>
+          Checked Checkbox
+        </CheckBox>
+
+        <CheckBox variant="outline" isChecked isIndeterminate>
+          Indeterminate Checkbox
+        </CheckBox>
+        <CheckBox variant="outline" isChecked>
+          Checked Checkbox
+        </CheckBox>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -52,8 +63,8 @@ describe("Molecules/CheckBox", () => {
   it("passes the snapshot test when in an error state", async () => {
     const tree = await render(
       <ThemeProvider>
-        <CheckBox isErrorVisible>Error Checkbox</CheckBox>
-        <CheckBox isErrorVisible errorMessage="This is an error message!">
+        <CheckBox isInvalid>Error Checkbox</CheckBox>
+        <CheckBox isInvalid errorMessage="This is an error message!">
           Error Checkbox with message
         </CheckBox>
       </ThemeProvider>
@@ -105,6 +116,73 @@ describe("Molecules/CheckBox", () => {
     expect(onPress).toHaveBeenCalledTimes(1);
   });
 
+  it("changes the active value successfully when used in a group", async () => {
+    const onChange = jest.fn();
+
+    const Wrapper: React.FC = () => {
+      const [checkedGroup, setCheckedGroup] = useState([]);
+
+      const checkedHandler = (value: any) => {
+        setCheckedGroup(value);
+        onChange(value);
+      };
+
+      return (
+        <CheckBoxGroup
+          defaultValue={[]}
+          value={checkedGroup}
+          onChange={checkedHandler}
+        >
+          <Stack direction="horizontal" spacing="s">
+            <CheckBox value="1" testID="checkbox1">
+              Value 1
+            </CheckBox>
+            <CheckBox value="2" testID="checkbox2">
+              Value 2
+            </CheckBox>
+            <CheckBox value={3} testID="checkbox3">
+              Value 3
+            </CheckBox>
+            <CheckBox value={4} testID="checkbox4">
+              Value 4
+            </CheckBox>
+          </Stack>
+        </CheckBoxGroup>
+      );
+    };
+
+    const { getByTestId } = await render(
+      <ThemeProvider>
+        <Wrapper />
+      </ThemeProvider>
+    );
+
+    const checkbox1 = getByTestId("checkbox1");
+    fireEvent.press(checkbox1);
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toBeCalledWith(["1"]);
+
+    const checkbox2 = getByTestId("checkbox2");
+    fireEvent.press(checkbox2);
+    expect(onChange).toHaveBeenCalledTimes(2);
+    expect(onChange).toBeCalledWith(["1", "2"]);
+
+    // Remove the value
+    fireEvent.press(checkbox2);
+    expect(onChange).toHaveBeenCalledTimes(3);
+    expect(onChange).toBeCalledWith(["1"]);
+
+    const checkbox3 = getByTestId("checkbox3");
+    fireEvent.press(checkbox3);
+    expect(onChange).toHaveBeenCalledTimes(4);
+    expect(onChange).toBeCalledWith(["1", 3]);
+
+    const checkbox4 = getByTestId("checkbox4");
+    fireEvent.press(checkbox4);
+    expect(onChange).toHaveBeenCalledTimes(5);
+    expect(onChange).toBeCalledWith(["1", 3, 4]);
+  });
+
   it("doesn't capture the onPress event when the checkbox is disabled ", async () => {
     const onPress = jest.fn();
 
@@ -124,7 +202,7 @@ describe("Molecules/CheckBox", () => {
   it("shows error message correctly", () => {
     const { getByText } = render(
       <ThemeProvider>
-        <CheckBox isErrorVisible errorMessage="Test error message" />
+        <CheckBox isInvalid errorMessage="Test error message" />
       </ThemeProvider>
     );
 

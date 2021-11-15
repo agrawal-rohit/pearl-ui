@@ -7,12 +7,16 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Stack from "../../Atoms/Stack/Stack";
 import { boxStyleFunctions } from "../../Atoms/Box/Box";
+import { useCheckBoxGroup } from "./CheckBoxGroup";
+import { GestureResponderEvent } from "react-native";
 
 export type CheckBoxProps = PressableProps & {
   /** Size of the checkbox. */
   size?: string;
   /** Variant of the checkbox. */
   variant?: string;
+  /** Value of the checkbox if it is part of a group. */
+  value?: string | number | undefined;
   /** Whether the checkbox is disabled.  */
   isDisabled?: boolean;
   /** Whether the checkbox is in a checked state.  */
@@ -20,7 +24,7 @@ export type CheckBoxProps = PressableProps & {
   /** Whether the checkbox is in an indeterminate state.  */
   isIndeterminate?: boolean;
   /** Whether the checkbox is in an error state.  */
-  isErrorVisible?: boolean;
+  isInvalid?: boolean;
   /** The error message to be displayed if the checkbox is in an error state */
   errorMessage?: string;
   /** Active color palette of the checkbox */
@@ -106,12 +110,23 @@ const CheckBox = React.forwardRef(
       children,
       size = "m",
       isDisabled = false,
+      onPress = () => {},
       colorScheme = "primary",
-      shape = "square",
       ...rest
     }: CheckBoxProps,
     checkboxRef: any
   ) => {
+    let {
+      checkboxGroupValue,
+      addCheckBoxGroupValue,
+      deleteCheckBoxGroupValue,
+    } = useCheckBoxGroup();
+    const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
+    const isCheckBoxChecked = isCheckBoxInGroup
+      ? checkboxGroupValue?.includes(rest.value as string | number) &&
+        rest.value !== undefined
+      : rest.isChecked;
+
     let molecularProps = useMolecularComponentConfig(
       "CheckBox",
       rest,
@@ -127,6 +142,17 @@ const CheckBox = React.forwardRef(
     molecularProps = useColorScheme(colorScheme, molecularProps);
 
     // OTHER METHODS
+    const checkboxPressHandler = (event: GestureResponderEvent) => {
+      if (isCheckBoxInGroup) {
+        // Add the value to the group if the checkbox is currently unchecked
+        if (!isCheckBoxChecked) addCheckBoxGroupValue(rest.value);
+        else deleteCheckBoxGroupValue(rest.value);
+
+        if (onPress) onPress(event);
+      }
+      if (onPress) onPress(event);
+    };
+
     const capitalizeFirstLetter = (string: string) => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     };
@@ -145,14 +171,14 @@ const CheckBox = React.forwardRef(
         fallbackProp = molecularProps.box[propertyName];
       }
 
-      if (rest.isErrorVisible) {
+      if (rest.isInvalid) {
         const checkedProp =
           (rest as any)[`error${capitalizeFirstLetter(propertyName)}`] ||
           molecularProps.box[`error${capitalizeFirstLetter(propertyName)}`];
         return checkedProp ? checkedProp : fallbackProp;
       }
 
-      if (rest.isChecked) {
+      if (isCheckBoxChecked) {
         const checkedProp =
           (rest as any)[`checked${capitalizeFirstLetter(propertyName)}`] ||
           molecularProps.box[`checked${capitalizeFirstLetter(propertyName)}`];
@@ -164,7 +190,7 @@ const CheckBox = React.forwardRef(
 
     // RENDER METHODS
     const renderErrorMessage = () => {
-      if (rest.errorMessage && rest.isErrorVisible) {
+      if (rest.errorMessage && rest.isInvalid) {
         return <Text {...molecularProps.errorText}>{rest.errorMessage}</Text>;
       }
     };
@@ -180,23 +206,32 @@ const CheckBox = React.forwardRef(
               ? rest.accessibilityLabel
               : (children as string)
           }
-          accessibilityState={{ disabled: isDisabled, checked: rest.isChecked }}
+          accessibilityState={{
+            disabled: isDisabled,
+            checked: isCheckBoxChecked,
+          }}
           accessibilityHint={rest.accessibilityHint}
           opacity={isDisabled ? 0.5 : 1}
           direction="horizontal"
+          alignSelf="flex-start"
           spacing={rest.spacing || molecularProps.root.spacing}
         >
           <Pressable
             {...molecularProps.box}
             ref={checkboxRef}
-            alignSelf="flex-start"
+            onPress={checkboxPressHandler}
+            alignSelf="center"
+            alignItems="center"
+            justifyContent="center"
             isDisabled={isDisabled}
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               molecularProps.box.backgroundColor || molecularProps.box.bg
             )}
             borderRadius={
-              shape === "square" ? molecularProps.box.borderRadius : "full"
+              molecularProps.box.shape === "square"
+                ? molecularProps.box.borderRadius
+                : "full"
             }
             borderColor={computeCheckedorErrorProps("borderColor")}
             borderStartColor={computeCheckedorErrorProps("borderStartColor")}
@@ -226,7 +261,9 @@ const CheckBox = React.forwardRef(
                     molecularProps.icon.indeterminateIconName
                   : rest.checkedIconName || molecularProps.icon.checkedIconName
               }
-              color={rest.isChecked ? molecularProps.icon.color : "transparent"}
+              color={
+                isCheckBoxChecked ? molecularProps.icon.color : "transparent"
+              }
             />
           </Pressable>
 

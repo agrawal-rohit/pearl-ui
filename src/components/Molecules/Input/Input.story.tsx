@@ -71,11 +71,11 @@ storiesOf("Input", module)
       />
       <Input isFullWidth placeholder="Focused Input" autoFocus />
       <Input isFullWidth isDisabled placeholder="Disabled Input" />
-      <Input isFullWidth placeholder="Error Input" isErrorVisible />
+      <Input isFullWidth placeholder="Error Input" isInvalid />
       <Input
         isFullWidth
         placeholder="Error Input with message"
-        isErrorVisible
+        isInvalid
         errorMessage="This is an error message!"
       />
     </>

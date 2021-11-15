@@ -14,5 +14,8 @@ export { default as Button } from "./Molecules/Button/Button";
 export { default as TextLink } from "./Molecules/TextLink/TextLink";
 export { default as Input } from "./Molecules/Input/Input";
 export { default as CheckBox } from "./Molecules/CheckBox/CheckBox";
+export { default as CheckBoxGroup } from "./Molecules/CheckBox/CheckBoxGroup";
+export { default as Radio } from "./Molecules/Radio/Radio";
+export { default as RadioGroup } from "./Molecules/Radio/RadioGroup";
 export { default as Image } from "./Molecules/Image/Image";
 // export { default as OfflineNotice } from "./Molecules/OfflineNotice/OfflineNotice";

@@ -1,24 +1,16 @@
 export default {
-  parts: ["root", "box", "icon", "text", "errorText"],
+  parts: ["root", "outerBox", "innerBox", "text", "errorText"],
   baseStyle: {
     root: {
       my: "xxs",
       spacing: "xs",
     },
-    box: {
-      p: "hairline",
-      shape: "square",
-      borderWidth: 1,
-      borderColor: "neutral.300",
-      checkedBackgroundColor: "primary.500",
+    outerBox: {
       errorBorderColor: "danger.500",
+      borderRadius: "full",
     },
-    icon: {
-      checkedIconFamily: "Ionicons",
-      checkedIconName: "checkmark",
-      indeterminateIconFamily: "Ionicons",
-      indeterminateIconName: "remove-outline",
-      color: "neutral.50",
+    innerBox: {
+      borderRadius: "full",
     },
     errorText: {
       variant: "caption",
@@ -28,44 +20,40 @@ export default {
   },
   sizes: {
     s: {
-      box: {
-        borderRadius: "s",
-      },
-      icon: {
-        size: "s",
+      outerBox: {
+        width: 18,
+        height: 18,
+        style: { padding: 3 },
       },
       text: {
         variant: "p2",
       },
     },
     m: {
-      box: {
-        borderRadius: "s",
-      },
-      icon: {
-        size: "m",
+      outerBox: {
+        width: 24,
+        height: 24,
+        style: { padding: 5 },
       },
       text: {
         variant: "p2",
       },
     },
     l: {
-      box: {
-        borderRadius: "m",
-      },
-      icon: {
-        size: "l",
+      outerBox: {
+        width: 30,
+        height: 30,
+        style: { padding: 7 },
       },
       text: {
         variant: "p1",
       },
     },
     xl: {
-      box: {
-        borderRadius: "m",
-      },
-      icon: {
-        size: "xl",
+      outerBox: {
+        width: 36,
+        height: 36,
+        style: { padding: 9 },
       },
       text: {
         variant: "p1",
@@ -74,8 +62,9 @@ export default {
   },
   variants: {
     filled: {
-      box: {
+      outerBox: {
         borderWidth: 2,
+        checkedBackgroundColor: "primary.500",
         backgroundColor: {
           light: "neutral.200",
           dark: "neutral.900",
@@ -86,19 +75,37 @@ export default {
         },
         checkedBorderColor: "primary.500",
       },
+      innerBox: {
+        backgroundColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        checkedBackgroundColor: "neutral.50",
+      },
     },
     outline: {
-      box: {
+      outerBox: {
         borderWidth: 2,
+        checkedBackgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
         },
+        checkedBorderColor: "primary.500",
         borderColor: {
           light: "neutral.400",
           dark: "neutral.500",
         },
-        checkedBorderColor: "primary.500",
+      },
+      innerBox: {
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        checkedBackgroundColor: "primary.500",
       },
     },
   },

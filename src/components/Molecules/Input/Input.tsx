@@ -39,7 +39,7 @@ export type InputProps = TextInputProps &
     /** Whether the input field should display a clear button */
     hasClearButton?: boolean;
     /** Whether there the input field is in an error state */
-    isErrorVisible?: boolean;
+    isInvalid?: boolean;
     /** Icon to display on the left side of the text input */
     leftIcon?: React.ReactElement;
     /** Icon to display on the right side of the text input */
@@ -130,7 +130,7 @@ const Input = React.forwardRef(
       isDisabled = false,
       isFullWidth = false,
       hasClearButton = false,
-      isErrorVisible = false,
+      isInvalid = false,
       leftIcon = undefined,
       rightIcon = undefined,
       errorMessage = "",
@@ -269,7 +269,7 @@ const Input = React.forwardRef(
         return focusProp ? focusProp : fallbackProp;
       }
 
-      if (isErrorVisible) {
+      if (isInvalid) {
         const errorProp =
           (targetPropertyParent as any)[
             `error${capitalizeFirstLetter(propertyName)}`
@@ -321,7 +321,7 @@ const Input = React.forwardRef(
     };
 
     const renderErrorMessage = () => {
-      if (errorMessage && isErrorVisible) {
+      if (errorMessage && isInvalid) {
         return <Text {...molecularProps.errorText}>{errorMessage}</Text>;
       }
     };

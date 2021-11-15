@@ -1,41 +1,9 @@
 import React from "react";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
-import {
-  backgroundColor,
-  opacity,
-  layout,
-  spacing,
-  position,
-} from "../../../theme/src/styleFunctions";
-import {
-  BackgroundColorProps,
-  OpacityProps,
-  VisibleProps,
-  LayoutProps,
-  SpacingProps,
-  PositionProps,
-  visible,
-} from "../../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../../theme/src/types";
 import { View } from "react-native";
+import { BoxProps } from "../../Atoms/Box/Box";
 
-export type DividerStyleProps = BackgroundColorProps &
-  OpacityProps &
-  VisibleProps &
-  LayoutProps &
-  SpacingProps &
-  PositionProps;
-
-export const boxStyleFunctions = [
-  backgroundColor,
-  opacity,
-  visible,
-  layout,
-  spacing,
-  position,
-] as StyleFunctionContainer[];
-
-type DividerProps = DividerStyleProps & {
+type DividerProps = BoxProps & {
   /** The size of the divider */
   size?: string;
   /** The variant of the divider */
