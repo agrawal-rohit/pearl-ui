@@ -2805,10 +2805,10 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
-"@react-native-community/netinfo@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-6.1.0.tgz#a7dd574bc5b20ecad1e6ae6494abffa2e0a4949e"
-  integrity sha512-SrO+EJYR1FhGqCoKSkvddIKB0waySXapW4inW2IQgpjBYCdCTJyKFLlvZHTVg/3N0vodR4WBGdKraECl9aVS5Q==
+"@react-native-community/netinfo@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-6.2.0.tgz#8c9079cde509e2482c9953ebd1da24693ef039f3"
+  integrity sha512-oEGwqYlDN2Ofbhf7W6NncKijEiPjp+1PzguqTmECncsB3IIVt0mLAqZDyT2Bw3Njxeeh4MhGsKqB5kzaXpqcxw==
 
 "@react-native/normalize-color@^2.0.0":
   version "2.0.0"
