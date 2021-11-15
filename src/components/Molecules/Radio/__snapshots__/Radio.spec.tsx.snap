@@ -46,6 +46,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
       accessible={true}
       checkedBackgroundColor="primary.500"
       checkedBorderColor="primary.500"
+      colorScheme="primary"
       errorBorderColor="danger.500"
       focusable={true}
       onBlur={[Function]}
@@ -172,6 +173,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -294,6 +296,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="secondary.500"
         checkedBorderColor="secondary.500"
+        colorScheme="secondary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -421,6 +424,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -432,6 +436,7 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
+        size="s"
         style={
           Array [
             Object {
@@ -543,6 +548,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -554,6 +560,7 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
+        size="m"
         style={
           Array [
             Object {
@@ -665,6 +672,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -676,6 +684,7 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
+        size="l"
         style={
           Array [
             Object {
@@ -787,6 +796,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -798,6 +808,7 @@ Array [
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
+        size="xl"
         style={
           Array [
             Object {
@@ -914,6 +925,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -1042,6 +1054,7 @@ Array [
           }
         }
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         onBlur={[Function]}
@@ -1170,6 +1183,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         isChecked={true}
@@ -1299,6 +1313,7 @@ Array [
           }
         }
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         isChecked={true}
@@ -1428,6 +1443,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         focusable={true}
         isInvalid={true}
@@ -1551,6 +1567,7 @@ Array [
         accessible={true}
         checkedBackgroundColor="primary.500"
         checkedBorderColor="primary.500"
+        colorScheme="primary"
         errorBorderColor="danger.500"
         errorMessage="This is an error message!"
         focusable={true}
@@ -1701,6 +1718,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
       accessible={true}
       checkedBackgroundColor="primary.500"
       checkedBorderColor="primary.500"
+      colorScheme="primary"
       errorBorderColor="danger.500"
       focusable={true}
       onBlur={[Function]}

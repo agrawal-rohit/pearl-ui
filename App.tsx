@@ -61,7 +61,7 @@ const App = () => {
             setCheckedGroup(value);
           }}
         >
-          <Stack direction="horizontal" spacing="s">
+          <Stack direction="vertical">
             <CheckBox value="1">Value 1</CheckBox>
             <CheckBox value="2">Value 2</CheckBox>
             <CheckBox value="3">Value 3</CheckBox>
@@ -69,7 +69,7 @@ const App = () => {
           </Stack>
         </CheckBoxGroup>
 
-        {/* <RadioGroup
+        <RadioGroup
           defaultValue="1"
           value="2"
           onChange={(value) => console.log(value)}
@@ -80,7 +80,7 @@ const App = () => {
             <Radio value="3">Value 3</Radio>
             <Radio value="4">Value 4</Radio>
           </Stack>
-        </RadioGroup> */}
+        </RadioGroup>
 
         <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
           Login

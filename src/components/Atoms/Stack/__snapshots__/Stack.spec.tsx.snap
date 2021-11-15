@@ -155,7 +155,7 @@ exports[`Atoms/Stack passes the snapshot test for vertical direction 1`] = `
       "alignSelf": "flex-start",
       "display": "flex",
       "flexDirection": "column",
-      "flexWrap": "wrap",
+      "flexWrap": "nowrap",
       "marginTop": 24,
     }
   }

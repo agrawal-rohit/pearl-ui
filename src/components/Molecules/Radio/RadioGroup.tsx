@@ -2,6 +2,14 @@ import React, { createContext, useContext, useState } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
 export interface IRadioGroupContext {
+  /** Size of all the children radio in the group. */
+  size?: string;
+  /** Variant of all the children radio in the group. */
+  variant?: string;
+  /** Whether the radio group is disabled.  */
+  isDisabled?: boolean;
+  /** Active color palette of all the children radio in the group. */
+  colorScheme?: string;
   /** Active value of the radio options in the group */
   radioGroupValue: string | number | undefined;
   /** Function to update the active value of the group */
@@ -17,6 +25,14 @@ export const useRadioGroup = () =>
   useContext(radioGroupContext) as IRadioGroupContext;
 
 type RadioGroupProps = BoxProps & {
+  /** Size of all the children radio in the group. */
+  size?: string;
+  /** Variant of all the children radio in the group. */
+  variant?: string;
+  /** Whether the radio group is disabled.  */
+  isDisabled?: boolean;
+  /** Active color palette of all the children radio in the group. */
+  colorScheme?: string;
   /** Default active value of the radio group */
   defaultValue?: string | number | undefined;
   /** Active value of the radio group */
@@ -27,6 +43,10 @@ type RadioGroupProps = BoxProps & {
 
 const RadioGroup: React.FC<RadioGroupProps> = ({
   children,
+  size = "m",
+  variant = "filled",
+  isDisabled = false,
+  colorScheme = "primary",
   value = undefined,
   defaultValue = undefined,
   onChange = () => {},
@@ -38,9 +58,13 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   };
 
   return (
-    <Box {...rest}>
+    <Box {...rest} accessibilityRole="radiogroup">
       <radioGroupContext.Provider
         value={{
+          size,
+          variant,
+          isDisabled,
+          colorScheme,
           radioGroupValue: currentValue,
           setRadioGroupValue,
         }}

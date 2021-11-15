@@ -64,18 +64,22 @@ export type RadioProps = PressableProps & {
 
 /** The Radio component is used when only one choice may be selected in a series of options. **/
 const Radio = React.forwardRef(
-  (
-    {
-      children,
-      size = "m",
-      isDisabled = false,
-      onPress = () => {},
-      colorScheme = "primary",
-      ...rest
-    }: RadioProps,
-    radioRef: any
-  ) => {
-    let { radioGroupValue, setRadioGroupValue } = useRadioGroup();
+  ({ children, onPress = () => {}, ...rest }: RadioProps, radioRef: any) => {
+    let {
+      size,
+      variant,
+      isDisabled,
+      colorScheme,
+      radioGroupValue,
+      setRadioGroupValue,
+    } = useRadioGroup();
+
+    // Overwrite props from checkbox group
+    rest.size = size || rest.size;
+    rest.variant = variant || rest.variant;
+    rest.isDisabled = isDisabled || rest.isDisabled || false;
+    rest.colorScheme = colorScheme || rest.colorScheme || "primary";
+
     const isRadioInGroup = setRadioGroupValue !== undefined;
     const isRadioChecked = isRadioInGroup
       ? rest.value === radioGroupValue && rest.value !== undefined
@@ -84,14 +88,14 @@ const Radio = React.forwardRef(
       "Radio",
       rest,
       {
-        size: size,
-        variant: rest["variant"],
+        size: rest.size,
+        variant: rest.variant,
       },
       boxStyleFunctions,
       "root",
       "outerBox"
     );
-    molecularProps = useColorScheme(colorScheme, molecularProps);
+    molecularProps = useColorScheme(rest.colorScheme, molecularProps);
 
     // OTHER METHODS
     const radioPressHandler = (event: GestureResponderEvent) => {
@@ -162,11 +166,11 @@ const Radio = React.forwardRef(
               : (children as string)
           }
           accessibilityState={{
-            disabled: isDisabled,
+            disabled: rest.isDisabled,
             checked: isRadioChecked,
           }}
           accessibilityHint={rest.accessibilityHint}
-          opacity={isDisabled ? 0.5 : 1}
+          opacity={rest.isDisabled ? 0.5 : 1}
           alignSelf="flex-start"
           direction="horizontal"
           spacing={rest.spacing || molecularProps.root.spacing}
@@ -178,7 +182,7 @@ const Radio = React.forwardRef(
             alignSelf="center"
             alignItems="center"
             justifyContent="center"
-            isDisabled={isDisabled}
+            isDisabled={rest.isDisabled}
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               "outer",
@@ -213,7 +217,7 @@ const Radio = React.forwardRef(
             androidRippleConfig={
               rest.androidRippleConfig
                 ? rest.androidRippleConfig
-                : { color: `${colorScheme}.200` }
+                : { color: `${rest.colorScheme}.200` }
             }
           >
             <Box
