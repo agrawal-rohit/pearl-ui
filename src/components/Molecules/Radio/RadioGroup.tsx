@@ -37,7 +37,7 @@ type RadioGroupProps = BoxProps & {
   defaultValue?: string | number | undefined;
   /** Active value of the radio group */
   value?: string | number | undefined;
-  /** Method that gets invoked when the the value of the radio group changes */
+  /** Method that gets invoked when the value of the radio group changes */
   onChange?(value: any): void;
 };
 
