@@ -43,7 +43,7 @@ type CheckBoxGroupProps = BoxProps & {
   defaultValue?: Array<string | number>;
   /** Active value of the checkbox group */
   value?: Array<string | number>;
-  /** Method that gets invoked when the the value of the checkbox group changes */
+  /** Method that gets invoked when the value of the checkbox group changes */
   onChange?(value: any): void;
 };
 
