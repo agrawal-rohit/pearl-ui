@@ -84,16 +84,50 @@ const Pressable = React.forwardRef(
       ? useStyledProps({ color: androidRippleConfig?.color }, [color]).style
       : defaultRippleConfig;
 
+    const { style, ...nativeProps } = props;
+    const {
+      margin,
+      marginTop,
+      marginRight,
+      marginBottom,
+      marginLeft,
+      marginHorizontal,
+      marginVertical,
+      marginStart,
+      marginEnd,
+      position,
+      top,
+      right,
+      bottom,
+      left,
+      start,
+      end,
+      borderBottomWidth,
+      borderLeftWidth,
+      borderRightWidth,
+      borderStyle,
+      borderTopWidth,
+      borderStartWidth,
+      borderEndWidth,
+      borderWidth,
+      borderColor,
+      borderTopColor,
+      borderRightColor,
+      borderLeftColor,
+      borderBottomColor,
+      borderStartColor,
+      borderEndColor,
+      shadowOpacity,
+      shadowOffset,
+      shadowRadius,
+      shadowColor,
+      elevation,
+      alignSelf,
+      ...otherPropStyles
+    } = style;
+
     return (
-      <RNPressable
-        ref={ref}
-        android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
-        onPress={!isDisabled ? onPress : null}
-        onPressIn={!isDisabled ? onPressIn : null}
-        onPressOut={!isDisabled ? onPressOut : null}
-        onLongPress={!isDisabled ? onLongPress : null}
-        disabled={isDisabled}
-        android_disableSound={isDisabledAndroidSound}
+      <Box
         accessible={true}
         accessibilityLabel={accessibilityLabel}
         accessibilityHint={actionDescription}
@@ -101,21 +135,86 @@ const Pressable = React.forwardRef(
         accessibilityState={
           accessibilityState ? accessibilityState : { disabled: isDisabled }
         }
-        {...props}
-        style={({ pressed }) => [
-          props.style,
-          {
-            opacity: pressed ? activeOpacity : props.style.opacity,
-            backgroundColor: pressed
-              ? props.style.activeBackgroundColor
-                ? props.style.activeBackgroundColor
-                : props.style.backgroundColor
-              : props.style.backgroundColor,
-          },
-        ]}
+        style={{
+          margin,
+          marginTop,
+          marginRight,
+          marginBottom,
+          marginLeft,
+          marginHorizontal,
+          marginVertical,
+          marginStart,
+          marginEnd,
+          position,
+          top,
+          right,
+          bottom,
+          left,
+          start,
+          end,
+          shadowOpacity,
+          shadowOffset,
+          shadowRadius,
+          shadowColor,
+          elevation,
+          alignSelf,
+        }}
       >
-        {children}
-      </RNPressable>
+        <Box
+          borderRadius={rest.borderRadius}
+          borderTopEndRadius={rest.borderTopEndRadius}
+          borderTopLeftRadius={rest.borderTopLeftRadius}
+          borderTopRightRadius={rest.borderTopRightRadius}
+          borderTopStartRadius={rest.borderTopStartRadius}
+          borderBottomEndRadius={rest.borderBottomEndRadius}
+          borderBottomLeftRadius={rest.borderBottomLeftRadius}
+          borderBottomRightRadius={rest.borderBottomRightRadius}
+          borderBottomStartRadius={rest.borderBottomStartRadius}
+          style={{
+            overflow: "hidden",
+          }}
+        >
+          <RNPressable
+            ref={ref}
+            android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
+            onPress={!isDisabled ? onPress : null}
+            onPressIn={!isDisabled ? onPressIn : null}
+            onPressOut={!isDisabled ? onPressOut : null}
+            onLongPress={!isDisabled ? onLongPress : null}
+            disabled={isDisabled}
+            android_disableSound={isDisabledAndroidSound}
+            {...nativeProps}
+            style={({ pressed }) => [
+              otherPropStyles,
+              {
+                opacity: pressed ? activeOpacity : otherPropStyles.opacity,
+                backgroundColor: pressed
+                  ? otherPropStyles.activeBackgroundColor
+                    ? otherPropStyles.activeBackgroundColor
+                    : otherPropStyles.backgroundColor
+                  : otherPropStyles.backgroundColor,
+                borderBottomWidth,
+                borderLeftWidth,
+                borderRightWidth,
+                borderStyle,
+                borderTopWidth,
+                borderStartWidth,
+                borderEndWidth,
+                borderWidth,
+                borderColor,
+                borderTopColor,
+                borderRightColor,
+                borderLeftColor,
+                borderBottomColor,
+                borderStartColor,
+                borderEndColor,
+              },
+            ]}
+          >
+            {children}
+          </RNPressable>
+        </Box>
+      </Box>
     );
   }
 );
