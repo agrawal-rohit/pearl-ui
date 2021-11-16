@@ -36,8 +36,8 @@ const App = () => {
 
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
-      {/* <Storybook /> */}
-      <Screen>
+      <Storybook />
+      {/* <Screen>
         <Input
           isFullWidth
           placeholder="Enter Email"
@@ -53,11 +53,12 @@ const App = () => {
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           rightIcon={<Icon iconFamily="Ionicons" iconName="eye-off" />}
         />
-
+        
         <CheckBoxGroup
           value={checkedGroup}
+          size="xl"
           onChange={(value) => {
-            console.log(value);
+            // console.log(value);
             setCheckedGroup(value);
           }}
         >
@@ -68,6 +69,16 @@ const App = () => {
             <CheckBox value="4">Value 4</CheckBox>
           </Stack>
         </CheckBoxGroup>
+
+        <CheckBox
+          size="xl"
+          borderRadius="xl"
+          isChecked={checked}
+          onPress={() => setchecked(!checked)}
+          value="1"
+        >
+          Value 1
+        </CheckBox>
 
         <RadioGroup
           defaultValue="1"
@@ -82,10 +93,10 @@ const App = () => {
           </Stack>
         </RadioGroup>
 
-        <Button mt="xl" isFullWidth onPress={() => console.log(2)}>
+        <Button isFullWidth onPress={() => console.log(2)}>
           Login
         </Button>
-      </Screen>
+      </Screen> */}
     </ThemeProvider>
   );
 };

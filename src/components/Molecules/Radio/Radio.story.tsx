@@ -8,18 +8,30 @@ storiesOf("Radio", module)
   .add("Sizes", () => {
     return (
       <>
-        <Radio size="s">Small Radio</Radio>
-        <Radio size="m">Regular Radio</Radio>
-        <Radio size="l">Large Radio</Radio>
-        <Radio size="xl">Extra Large Radio</Radio>
+        <Radio isChecked size="s">
+          Small Radio
+        </Radio>
+        <Radio isChecked size="m">
+          Regular Radio
+        </Radio>
+        <Radio isChecked size="l">
+          Large Radio
+        </Radio>
+        <Radio isChecked size="xl">
+          Extra Large Radio
+        </Radio>
       </>
     );
   })
   .add("Variants", () => {
     return (
       <>
-        <Radio variant="filled">Filled Radio</Radio>
-        <Radio variant="outline">Outline Radio</Radio>
+        <Radio isChecked variant="filled">
+          Filled Radio
+        </Radio>
+        <Radio isChecked variant="outline">
+          Outline Radio
+        </Radio>
       </>
     );
   })

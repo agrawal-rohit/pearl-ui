@@ -1,5 +1,6 @@
-import React from "react";
-import { View } from "react-native";
+import React, { useState } from "react";
+import { LayoutChangeEvent, View } from "react-native";
+import { usePercentageBorderRadius } from "../../../hooks/usePercentageBorderRadius";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import {
   backgroundColor,
@@ -52,8 +53,21 @@ export type BoxProps = BoxStyleProps & Omit<ViewProps, keyof BoxStyleProps>;
 const Box = React.forwardRef((props: BoxProps, ref: any) => {
   const passedProps = useStyledProps(props, boxStyleFunctions);
 
+  // Filter out the borderRadius property to set dynamically
+  const { borderRadius, ...otherPropStyles } = passedProps.style;
+  const { computedBorderRadius, onLayoutChange } =
+    usePercentageBorderRadius(borderRadius);
+
   return (
-    <View ref={ref} {...passedProps}>
+    <View
+      ref={ref}
+      onLayout={onLayoutChange}
+      {...passedProps}
+      style={{
+        ...otherPropStyles,
+        borderRadius: computedBorderRadius,
+      }}
+    >
       {props.children}
     </View>
   );
