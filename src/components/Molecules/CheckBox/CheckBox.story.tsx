@@ -11,7 +11,9 @@ storiesOf("CheckBox", module)
         <CheckBox size="s">Small Checkbox</CheckBox>
         <CheckBox size="m">Regular Checkbox</CheckBox>
         <CheckBox size="l">Large Checkbox</CheckBox>
-        <CheckBox size="xl">Extra Large Checkbox</CheckBox>
+        <CheckBox isChecked size="xl">
+          Extra Large Checkbox
+        </CheckBox>
       </>
     );
   })

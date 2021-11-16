@@ -41,8 +41,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "expo": "~42.0.4",
     "expo-app-loading": "^1.1.2",
-    "expo-file-system": "~13.0.3",
     "expo-blur": "~10.0.3",
+    "expo-file-system": "~13.0.3",
     "expo-font": "~9.2.1",
     "expo-status-bar": "~1.1.0",
     "lodash": "^4.17.21",
@@ -51,6 +51,7 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-indicators": "^0.17.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-web": "~0.14.13",
     "storybook": "^6.3.12"
   },

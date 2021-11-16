@@ -8,7 +8,6 @@ export default {
     box: {
       p: "hairline",
       shape: "square",
-      borderWidth: 1,
       borderColor: "neutral.300",
       checkedBackgroundColor: "primary.500",
       errorBorderColor: "danger.500",
