@@ -12,10 +12,12 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
   }
   accessible={true}
   direction="horizontal"
+  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
+      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -25,9 +27,11 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -44,60 +48,119 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
         }
       }
       accessible={true}
-      checkedBackgroundColor="primary.500"
-      checkedBorderColor="primary.500"
-      colorScheme="primary"
-      errorBorderColor="danger.500"
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      onLayout={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#EDF1F7",
-            "borderRadius": "50%",
-            "borderWidth": 2,
-            "display": "flex",
-            "height": 24,
-            "justifyContent": "center",
-            "padding": 5,
-            "width": 24,
-          },
-          Object {
-            "backgroundColor": "#EDF1F7",
-            "opacity": undefined,
-          },
-        ]
+        Object {
+          "alignSelf": "center",
+          "borderRadius": undefined,
+          "bottom": undefined,
+          "display": "flex",
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
+          "top": undefined,
+        }
       }
     >
       <View
-        checkedBackgroundColor="neutral.50"
+        onLayout={[Function]}
         style={
           Object {
-            "backgroundColor": "#EDF1F7",
-            "borderRadius": "50%",
+            "borderRadius": 1000,
             "display": "flex",
-            "height": "100%",
-            "width": "100%",
+            "overflow": "hidden",
           }
         }
-      />
+      >
+        <View
+          accessible={true}
+          checkedBackgroundColor="primary.500"
+          checkedBorderColor="primary.500"
+          colorScheme="primary"
+          errorBorderColor="danger.500"
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "padding": 5,
+                "width": 24,
+              },
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": "#EDF1F7",
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": 2,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <View
+            checkedBackgroundColor="neutral.50"
+            onLayout={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          />
+        </View>
+      </View>
     </View>
   </View>
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
@@ -139,10 +202,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -152,9 +217,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -171,60 +238,119 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -262,10 +388,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -275,9 +403,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -294,60 +424,119 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="secondary.500"
-        checkedBorderColor="secondary.500"
-        colorScheme="secondary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="secondary.500"
+            checkedBorderColor="secondary.500"
+            colorScheme="secondary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -390,10 +579,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -403,9 +594,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -422,61 +615,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="s"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 18,
-              "justifyContent": "center",
-              "padding": 3,
-              "width": 18,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="s"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 18,
+                  "justifyContent": "center",
+                  "padding": 3,
+                  "width": 18,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -514,10 +766,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -527,9 +781,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -546,61 +802,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="m"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="m"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -638,10 +953,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -651,9 +968,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -670,61 +989,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="l"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 30,
-              "justifyContent": "center",
-              "padding": 7,
-              "width": 30,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="l"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "padding": 7,
+                  "width": 30,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -762,10 +1140,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -775,9 +1155,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -794,61 +1176,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="xl"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 36,
-              "justifyContent": "center",
-              "padding": 9,
-              "width": 36,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="xl"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 36,
+                  "justifyContent": "center",
+                  "padding": 9,
+                  "width": 36,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -891,10 +1332,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -904,9 +1347,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -923,61 +1368,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="filled"
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="filled"
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1015,10 +1519,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1028,9 +1534,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1047,66 +1555,125 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor={
+        onLayout={[Function]}
+        style={
           Object {
-            "dark": "neutral.800",
-            "light": "neutral.50",
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
           }
         }
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderColor": "#C5CEE0",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "opacity": undefined,
-            },
-          ]
-        }
-        variant="outline"
       >
         <View
-          checkedBackgroundColor="primary.500"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor={
+              Object {
+                "dark": "neutral.800",
+                "light": "neutral.50",
+              }
+            }
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#C5CEE0",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="outline"
+          >
+            <View
+              checkedBackgroundColor="primary.500"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1149,10 +1716,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1162,9 +1731,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1181,62 +1752,121 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="filled"
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="filled"
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1274,10 +1904,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1287,9 +1919,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1306,67 +1940,126 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor={
+        onLayout={[Function]}
+        style={
           Object {
-            "dark": "neutral.800",
-            "light": "neutral.50",
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
           }
         }
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "opacity": undefined,
-            },
-          ]
-        }
-        variant="outline"
       >
         <View
-          checkedBackgroundColor="primary.500"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor={
+              Object {
+                "dark": "neutral.800",
+                "light": "neutral.50",
+              }
+            }
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="outline"
+          >
+            <View
+              checkedBackgroundColor="primary.500"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1409,10 +2102,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1422,9 +2117,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1441,61 +2138,120 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isInvalid={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#FF4B42",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isInvalid={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#FF4B42",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1533,10 +2289,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1546,9 +2304,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1565,62 +2325,121 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        errorMessage="This is an error message!"
-        focusable={true}
-        isInvalid={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#FF4B42",
-              "borderRadius": "50%",
-              "borderWidth": 2,
-              "display": "flex",
-              "height": 24,
-              "justifyContent": "center",
-              "padding": 5,
-              "width": 24,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
         <View
-          checkedBackgroundColor="neutral.50"
+          onLayout={[Function]}
           style={
             Object {
-              "backgroundColor": "#EDF1F7",
-              "borderRadius": "50%",
+              "borderRadius": 1000,
               "display": "flex",
-              "height": "100%",
-              "width": "100%",
+              "overflow": "hidden",
             }
           }
-        />
+        >
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            errorMessage="This is an error message!"
+            focusable={true}
+            isInvalid={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "padding": 5,
+                  "width": 24,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#FF4B42",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              checkedBackgroundColor="neutral.50"
+              onLayout={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1681,12 +2500,14 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
   }
   accessible={true}
   direction="horizontal"
+  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
       "backgroundColor": "#6A7BFF",
       "borderColor": "#C5CEE0",
+      "borderRadius": undefined,
       "borderWidth": 2,
       "display": "flex",
       "flexDirection": "row",
@@ -1697,9 +2518,11 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -1716,60 +2539,119 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
         }
       }
       accessible={true}
-      checkedBackgroundColor="primary.500"
-      checkedBorderColor="primary.500"
-      colorScheme="primary"
-      errorBorderColor="danger.500"
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      onLayout={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#EDF1F7",
-            "borderRadius": "50%",
-            "borderWidth": 2,
-            "display": "flex",
-            "height": 24,
-            "justifyContent": "center",
-            "padding": 5,
-            "width": 24,
-          },
-          Object {
-            "backgroundColor": "#EDF1F7",
-            "opacity": undefined,
-          },
-        ]
+        Object {
+          "alignSelf": "center",
+          "borderRadius": undefined,
+          "bottom": undefined,
+          "display": "flex",
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
+          "top": undefined,
+        }
       }
     >
       <View
-        checkedBackgroundColor="neutral.50"
+        onLayout={[Function]}
         style={
           Object {
-            "backgroundColor": "#EDF1F7",
-            "borderRadius": "50%",
+            "borderRadius": 1000,
             "display": "flex",
-            "height": "100%",
-            "width": "100%",
+            "overflow": "hidden",
           }
         }
-      />
+      >
+        <View
+          accessible={true}
+          checkedBackgroundColor="primary.500"
+          checkedBorderColor="primary.500"
+          colorScheme="primary"
+          errorBorderColor="danger.500"
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "padding": 5,
+                "width": 24,
+              },
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": "#EDF1F7",
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": 2,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <View
+            checkedBackgroundColor="neutral.50"
+            onLayout={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          />
+        </View>
+      </View>
     </View>
   </View>
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }

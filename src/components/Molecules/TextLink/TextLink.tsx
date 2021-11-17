@@ -4,7 +4,7 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
-type TextLinkProps = PressableProps & {
+export type TextLinkProps = PressableProps & {
   /** Size of the text link. */
   size?: string;
   /** Variant of the text link. */

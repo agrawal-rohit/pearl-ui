@@ -3,7 +3,7 @@ import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfi
 import { View } from "react-native";
 import { BoxProps } from "../../Atoms/Box/Box";
 
-type DividerProps = BoxProps & {
+export type DividerProps = BoxProps & {
   /** The size of the divider */
   size?: string;
   /** The variant of the divider */

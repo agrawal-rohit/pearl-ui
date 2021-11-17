@@ -15,9 +15,10 @@ import {
 } from "react-native-keyboard-aware-scroll-view";
 import { useTheme } from "../../../hooks/useTheme";
 
-type ScreenProps = BoxProps &
+export type ScreenProps = BoxProps &
   Omit<
     KeyboardAwareScrollViewProps,
+    | "refresh"
     | "scrollEnabled"
     | "showsHorizontalScrollIndicator"
     | "showsVerticalScrollIndicator"
@@ -47,6 +48,8 @@ type ScreenProps = BoxProps &
     /** The color of the refresh indicator title (iOS only) */
     refreshTitleColor?: string;
   };
+
+// TODO: Add Custom Pull-to-Refresh components and animations
 
 /** A layout component that you can use to wrap all the views in your app. */
 const Screen: React.FC<ScreenProps> = ({
@@ -94,8 +97,10 @@ const Screen: React.FC<ScreenProps> = ({
       >
         <KeyboardAwareScrollView
           {...nativeProps}
-          scrollEnabled={nativeProps.scrollable}
+          enableOnAndroid
           bounces={true}
+          extraHeight={100}
+          scrollEnabled={nativeProps.scrollable}
           showsVerticalScrollIndicator={nativeProps.showScrollBar}
           contentContainerStyle={{ flexGrow: 1 }}
           refreshControl={

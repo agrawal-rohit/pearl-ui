@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
-export interface IRadioGroupContext {
+interface IRadioGroupContext {
   /** Size of all the children radio in the group. */
   size?: string;
   /** Variant of all the children radio in the group. */
@@ -24,7 +24,7 @@ const radioGroupContext = createContext({} as IRadioGroupContext);
 export const useRadioGroup = () =>
   useContext(radioGroupContext) as IRadioGroupContext;
 
-type RadioGroupProps = BoxProps & {
+export type RadioGroupProps = BoxProps & {
   /** Size of all the children radio in the group. */
   size?: string;
   /** Variant of all the children radio in the group. */

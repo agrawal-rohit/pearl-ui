@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
-export interface ICheckBoxGroupContext {
+interface ICheckBoxGroupContext {
   /** Size of all the checkbox children in the group. */
   size?: string;
   /** Variant of all the checkbox children in the group. */
@@ -28,7 +28,7 @@ const checkboxGroupContext = createContext({} as ICheckBoxGroupContext);
 export const useCheckBoxGroup = () =>
   useContext(checkboxGroupContext) as ICheckBoxGroupContext;
 
-type CheckBoxGroupProps = BoxProps & {
+export type CheckBoxGroupProps = BoxProps & {
   /** Size of all the children checkbox in the group. */
   size?: string;
   /** Variant of all the children checkbox in the group. */
