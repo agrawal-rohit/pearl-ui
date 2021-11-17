@@ -2,9 +2,8 @@ import { useState } from "react";
 import { LayoutChangeEvent } from "react-native";
 
 /**
- * Hook to covert an existing style props object to a different color scheme from the active theme palette.
- * @param targetColorScheme  Name of the target color scheme
- * @param props Style props object
+ * Hook to covert a percentage based border radius value to an absolute numerical value.
+ * @param rawBorderRadius The raw value of border radius that
  * @returns
  */
 export const usePercentageBorderRadius = (

@@ -45,9 +45,8 @@ export const boxStyleFunctions = [
 /**
  * Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a <View> element.
  */
-type ViewProps = React.ComponentProps<typeof View> & {
-  children?: React.ReactNode;
-};
+type ViewProps = React.ComponentProps<typeof View>;
+
 export type BoxProps = BoxStyleProps & Omit<ViewProps, keyof BoxStyleProps>;
 
 const Box = React.forwardRef((props: BoxProps, ref: any) => {

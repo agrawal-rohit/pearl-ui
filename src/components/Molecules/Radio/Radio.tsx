@@ -171,7 +171,6 @@ const Radio = React.forwardRef(
           }}
           accessibilityHint={rest.accessibilityHint}
           opacity={rest.isDisabled ? 0.5 : 1}
-          alignSelf="flex-start"
           direction="horizontal"
           spacing={rest.spacing || molecularProps.root.spacing}
         >

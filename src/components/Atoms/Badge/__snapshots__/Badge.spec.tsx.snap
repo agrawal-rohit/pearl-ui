@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Badge passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    size="s"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 20,
+        "justifyContent": "center",
+        "width": 20,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    size="m"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    size="l"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 30,
+        "justifyContent": "center",
+        "width": 30,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 13.799999999999999,
+          "fontWeight": "500",
+          "lineHeight": 18.4,
+        }
+      }
+      variant="btn3"
+    >
+      2
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    size="xl"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 35,
+        "justifyContent": "center",
+        "width": 35,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 13.799999999999999,
+          "fontWeight": "500",
+          "lineHeight": 18.4,
+        }
+      }
+      variant="btn3"
+    >
+      2
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Atoms/Badge passes the snapshot test for different values types 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      23
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2+
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+  >
+    <Text />
+  </View>,
+]
+`;
+
+exports[`Atoms/Badge passes the snapshot test for different variants 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#6A7BFF",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+    variant="primary"
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#A2D608",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+    variant="success"
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFBF35",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+    variant="warning"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#40D2F7",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+    variant="info"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FF4B42",
+        "borderRadius": 1000,
+        "display": "flex",
+        "height": 25,
+        "justifyContent": "center",
+        "width": 25,
+      }
+    }
+    variant="error"
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "display": "flex",
+          "fontFamily": "Poppins-Medium",
+          "fontSize": 11.5,
+          "fontWeight": "500",
+          "lineHeight": 16.099999999999998,
+        }
+      }
+      variant="btn4"
+    >
+      2
+    </Text>
+  </View>,
+]
+`;
+
+exports[`Atoms/Badge withBadge HOC works as expected 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "display": "flex",
+      }
+    }
+  >
+    <Text />
+    <View
+      onLayout={[Function]}
+      size="s"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 1000,
+          "display": "flex",
+          "height": 20,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": -5,
+          "top": -5,
+          "width": 20,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 11.5,
+            "fontWeight": "500",
+            "lineHeight": 16.099999999999998,
+          }
+        }
+        variant="btn4"
+      >
+        28
+      </Text>
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "display": "flex",
+      }
+    }
+  >
+    <Text />
+    <View
+      onLayout={[Function]}
+      size="m"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#6A7BFF",
+          "borderRadius": 1000,
+          "bottom": -5,
+          "display": "flex",
+          "height": 25,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": -5,
+          "width": 25,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>,
+]
+`;
