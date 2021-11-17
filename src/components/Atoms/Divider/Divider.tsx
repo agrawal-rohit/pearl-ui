@@ -20,7 +20,7 @@ export type DividerProps = BoxProps & {
 const Divider: React.FC<DividerProps> = ({ children, ...rest }) => {
   const props = useAtomicComponentConfig("Divider", rest, {
     size: rest.size,
-    variant: rest.size,
+    variant: rest.variant,
   });
 
   return (

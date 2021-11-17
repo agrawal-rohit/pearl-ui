@@ -19,7 +19,7 @@ type AvatarProps = ImageProps & {
 const Avatar: React.FC<AvatarProps> = ({ children, ...rest }) => {
   const props = useMolecularComponentConfig("Avatar", rest, {
     size: rest.size,
-    variant: rest.size,
+    variant: rest.variant,
   });
 
   return <Box></Box>;

@@ -219,7 +219,6 @@ const CheckBox = React.forwardRef(
           accessibilityHint={rest.accessibilityHint}
           opacity={rest.isDisabled ? 0.5 : 1}
           direction="horizontal"
-          alignSelf="flex-start"
           spacing={rest.spacing || molecularProps.root.spacing}
         >
           <Pressable

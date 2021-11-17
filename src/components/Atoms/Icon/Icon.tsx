@@ -32,6 +32,7 @@ import {
 } from "@expo/vector-icons";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import responsiveSize from "../../../utils/responsiveSize";
+import { View } from "react-native";
 
 const iconStyleFunctions = [
   color,
@@ -42,12 +43,17 @@ const iconStyleFunctions = [
   visible,
 ] as StyleFunctionContainer[];
 
-export type IconProps = ColorProps &
+type IconStyleProps = ColorProps &
   BackgroundColorProps &
   SpacingProps &
   LayoutProps &
   OpacityProps &
-  VisibleProps & {
+  VisibleProps;
+
+type ViewProps = React.ComponentProps<typeof View>;
+
+export type IconProps = IconStyleProps &
+  Omit<ViewProps, keyof IconStyleProps> & {
     /** Icon family that contains the icon you want to use  */
     iconFamily:
       | "AntDesign"
@@ -72,7 +78,6 @@ export type IconProps = ColorProps &
     variant?: string;
     /** The accessibility label of the icon */
     accessibilityLabel?: string;
-    style?: RNStyle;
   };
 
 const iconFamilyMapping = {
@@ -92,9 +97,7 @@ const iconFamilyMapping = {
   Zocial,
 };
 
-// TODO: Add icon badge with color and content props
-
-/** he `Icon` component can used to add Expo Icons to your app and customize them using style props. */
+/** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
 const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
