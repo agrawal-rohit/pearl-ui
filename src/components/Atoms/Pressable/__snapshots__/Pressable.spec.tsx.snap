@@ -11,29 +11,88 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
     }
   }
   accessible={true}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  onLayout={[Function]}
   style={
-    Array [
-      Object {
-        "display": "flex",
-      },
-      Object {
-        "backgroundColor": undefined,
-        "opacity": undefined,
-      },
-    ]
+    Object {
+      "alignSelf": undefined,
+      "borderRadius": undefined,
+      "bottom": undefined,
+      "display": "flex",
+      "elevation": undefined,
+      "end": undefined,
+      "left": undefined,
+      "margin": undefined,
+      "marginBottom": undefined,
+      "marginEnd": undefined,
+      "marginHorizontal": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginStart": undefined,
+      "marginTop": undefined,
+      "marginVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "shadowColor": undefined,
+      "shadowOffset": undefined,
+      "shadowOpacity": undefined,
+      "shadowRadius": undefined,
+      "start": undefined,
+      "top": undefined,
+    }
   }
 >
-  Button press
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "borderRadius": undefined,
+        "display": "flex",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+          },
+          Object {
+            "backgroundColor": undefined,
+            "borderBottomColor": undefined,
+            "borderBottomWidth": undefined,
+            "borderColor": undefined,
+            "borderEndColor": undefined,
+            "borderEndWidth": undefined,
+            "borderLeftColor": undefined,
+            "borderLeftWidth": undefined,
+            "borderRightColor": undefined,
+            "borderRightWidth": undefined,
+            "borderStartColor": undefined,
+            "borderStartWidth": undefined,
+            "borderStyle": undefined,
+            "borderTopColor": undefined,
+            "borderTopWidth": undefined,
+            "borderWidth": undefined,
+            "opacity": undefined,
+          },
+        ]
+      }
+    >
+      Button press
+    </View>
+  </View>
 </View>
 `;
 
@@ -48,31 +107,88 @@ exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
     }
   }
   accessible={true}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  onLayout={[Function]}
   style={
-    Array [
-      Object {
-        "backgroundColor": "#6A7BFF",
-        "borderColor": "#C5CEE0",
-        "borderWidth": 2,
-        "display": "flex",
-      },
-      Object {
-        "backgroundColor": "#6A7BFF",
-        "opacity": undefined,
-      },
-    ]
+    Object {
+      "alignSelf": undefined,
+      "borderRadius": undefined,
+      "bottom": undefined,
+      "display": "flex",
+      "elevation": undefined,
+      "end": undefined,
+      "left": undefined,
+      "margin": undefined,
+      "marginBottom": undefined,
+      "marginEnd": undefined,
+      "marginHorizontal": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginStart": undefined,
+      "marginTop": undefined,
+      "marginVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "shadowColor": undefined,
+      "shadowOffset": undefined,
+      "shadowOpacity": undefined,
+      "shadowRadius": undefined,
+      "start": undefined,
+      "top": undefined,
+    }
   }
 >
-  Button press
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "borderRadius": undefined,
+        "display": "flex",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#6A7BFF",
+            "display": "flex",
+          },
+          Object {
+            "backgroundColor": "#6A7BFF",
+            "borderBottomColor": undefined,
+            "borderBottomWidth": undefined,
+            "borderColor": "#C5CEE0",
+            "borderEndColor": undefined,
+            "borderEndWidth": undefined,
+            "borderLeftColor": undefined,
+            "borderLeftWidth": undefined,
+            "borderRightColor": undefined,
+            "borderRightWidth": undefined,
+            "borderStartColor": undefined,
+            "borderStartWidth": undefined,
+            "borderStyle": undefined,
+            "borderTopColor": undefined,
+            "borderTopWidth": undefined,
+            "borderWidth": 2,
+            "opacity": undefined,
+          },
+        ]
+      }
+    >
+      Button press
+    </View>
+  </View>
 </View>
 `;

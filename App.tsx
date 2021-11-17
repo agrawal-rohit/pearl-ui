@@ -37,7 +37,11 @@ const App = () => {
   return (
     <ThemeProvider defaultColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       {/* <Storybook /> */}
-      <Screen>
+      <Screen
+        onPullToRefresh={() => {
+          console.log("Hello");
+        }}
+      >
         <Input
           isFullWidth
           placeholder="Enter Email"

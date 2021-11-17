@@ -29,7 +29,7 @@ const indicatorStyleFunctions = [
   layout,
 ] as StyleFunctionContainer[];
 
-type SpinnerProps = ColorProps &
+export type SpinnerProps = ColorProps &
   SpacingProps &
   LayoutProps & {
     /** Size of the spinner. */

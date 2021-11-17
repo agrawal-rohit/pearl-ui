@@ -12,10 +12,12 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
   }
   accessible={true}
   direction="horizontal"
+  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
+      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -25,9 +27,11 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -44,48 +48,106 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
         }
       }
       accessible={true}
-      checkedBackgroundColor="primary.500"
-      checkedBorderColor="primary.500"
-      colorScheme="primary"
-      errorBorderColor="danger.500"
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      shape="square"
+      onLayout={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#EDF1F7",
-            "borderRadius": 4,
-            "borderWidth": 2,
-            "display": "flex",
-            "justifyContent": "center",
-            "padding": 2,
-          },
-          Object {
-            "backgroundColor": "#EDF1F7",
-            "opacity": undefined,
-          },
-        ]
+        Object {
+          "alignSelf": "center",
+          "borderRadius": undefined,
+          "bottom": undefined,
+          "display": "flex",
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
+          "top": undefined,
+        }
       }
     >
-      <Text />
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "borderRadius": 4,
+            "display": "flex",
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          checkedBackgroundColor="primary.500"
+          checkedBorderColor="primary.500"
+          colorScheme="primary"
+          errorBorderColor="danger.500"
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          shape="square"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 4,
+                "display": "flex",
+                "justifyContent": "center",
+                "padding": 2,
+              },
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": "#EDF1F7",
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": 2,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <Text />
+        </View>
+      </View>
     </View>
   </View>
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
@@ -127,10 +189,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -140,9 +204,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -159,76 +225,134 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -266,10 +390,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -279,9 +405,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -298,76 +426,134 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="secondary.500"
-        checkedBorderColor="secondary.500"
-        colorScheme="secondary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="secondary.500"
+            checkedBorderColor="secondary.500"
+            colorScheme="secondary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -410,10 +596,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -423,9 +611,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -442,77 +632,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        size="s"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 11.5,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            size="s"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 11.5,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -550,10 +798,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -563,9 +813,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -582,77 +834,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        size="m"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            size="m"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -690,10 +1000,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -703,9 +1015,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -722,77 +1036,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        size="l"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 8,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 23,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 8,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            size="l"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 8,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 23,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -830,10 +1202,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -843,9 +1217,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -862,77 +1238,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
-        size="xl"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 8,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 34.5,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 8,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            size="xl"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 8,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 34.5,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -975,10 +1409,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -988,9 +1424,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1007,77 +1445,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#EDF1F7",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="filled"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#EDF1F7",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="filled"
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1115,10 +1611,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1128,9 +1626,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1147,77 +1647,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderColor": "#C5CEE0",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="outline"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#C5CEE0",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="outline"
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1260,10 +1818,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1273,9 +1833,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1292,79 +1854,137 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        isIndeterminate={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="filled"
       >
-        <Text
-          accessibilityLabel="remove-outline Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            isIndeterminate={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="filled"
+          >
+            <Text
+              accessibilityLabel="remove-outline Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "#FFFFFF",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1402,10 +2022,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1415,9 +2037,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1434,78 +2058,136 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="filled"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="filled"
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "#FFFFFF",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1543,10 +2225,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1556,9 +2240,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1575,79 +2261,137 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        isIndeterminate={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="outline"
       >
-        <Text
-          accessibilityLabel="remove-outline Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            isIndeterminate={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="outline"
+          >
+            <Text
+              accessibilityLabel="remove-outline Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "#FFFFFF",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1685,10 +2429,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1698,9 +2444,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1717,78 +2465,136 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isChecked={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderColor": "#6A7BFF",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
-        variant="outline"
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "#FFFFFF",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isChecked={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#6A7BFF",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+            variant="outline"
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "#FFFFFF",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1831,10 +2637,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1844,9 +2652,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1863,77 +2673,135 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        focusable={true}
-        isInvalid={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#FF4B42",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            focusable={true}
+            isInvalid={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#FF4B42",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1971,10 +2839,12 @@ Array [
     }
     accessible={true}
     direction="horizontal"
+    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1984,9 +2854,11 @@ Array [
     }
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -2003,78 +2875,136 @@ Array [
           }
         }
         accessible={true}
-        checkedBackgroundColor="primary.500"
-        checkedBorderColor="primary.500"
-        colorScheme="primary"
-        errorBorderColor="danger.500"
-        errorMessage="This is an error message!"
-        focusable={true}
-        isInvalid={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        shape="square"
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#FF4B42",
-              "borderRadius": 4,
-              "borderWidth": 2,
-              "display": "flex",
-              "justifyContent": "center",
-              "padding": 2,
-            },
-            Object {
-              "backgroundColor": "#EDF1F7",
-              "opacity": undefined,
-            },
-          ]
+          Object {
+            "alignSelf": "center",
+            "borderRadius": undefined,
+            "bottom": undefined,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
         }
       >
-        <Text
-          accessibilityLabel="checkmark Icon"
-          accessible={true}
-          allowFontScaling={false}
-          checkedIconFamily="Ionicons"
-          checkedIconName="checkmark"
-          indeterminateIconFamily="Ionicons"
-          indeterminateIconName="remove-outline"
+        <View
+          onLayout={[Function]}
           style={
-            Array [
-              Object {
-                "color": undefined,
-                "fontSize": 17.25,
-              },
-              Object {
-                "color": "transparent",
-                "display": "flex",
-              },
-              Object {
-                "fontFamily": "ionicons",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "borderRadius": 4,
+              "display": "flex",
+              "overflow": "hidden",
+            }
           }
         >
-          
-        </Text>
+          <View
+            accessible={true}
+            checkedBackgroundColor="primary.500"
+            checkedBorderColor="primary.500"
+            colorScheme="primary"
+            errorBorderColor="danger.500"
+            errorMessage="This is an error message!"
+            focusable={true}
+            isInvalid={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            shape="square"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 4,
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": "#FF4B42",
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": 2,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark Icon"
+              accessible={true}
+              allowFontScaling={false}
+              checkedIconFamily="Ionicons"
+              checkedIconName="checkmark"
+              indeterminateIconFamily="Ionicons"
+              indeterminateIconName="remove-outline"
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  Object {
+                    "color": "transparent",
+                    "display": "flex",
+                  },
+                  Object {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
+          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -2135,12 +3065,14 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
   }
   accessible={true}
   direction="horizontal"
+  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
       "backgroundColor": "#6A7BFF",
       "borderColor": "#C5CEE0",
+      "borderRadius": undefined,
       "borderWidth": 2,
       "display": "flex",
       "flexDirection": "row",
@@ -2151,9 +3083,11 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
   }
 >
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -2170,76 +3104,134 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
         }
       }
       accessible={true}
-      checkedBackgroundColor="primary.500"
-      checkedBorderColor="primary.500"
-      colorScheme="primary"
-      errorBorderColor="danger.500"
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      shape="square"
+      onLayout={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#EDF1F7",
-            "borderRadius": 4,
-            "borderWidth": 2,
-            "display": "flex",
-            "justifyContent": "center",
-            "padding": 2,
-          },
-          Object {
-            "backgroundColor": "#EDF1F7",
-            "opacity": undefined,
-          },
-        ]
+        Object {
+          "alignSelf": "center",
+          "borderRadius": undefined,
+          "bottom": undefined,
+          "display": "flex",
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
+          "top": undefined,
+        }
       }
     >
-      <Text
-        accessibilityLabel="checkmark Icon"
-        accessible={true}
-        allowFontScaling={false}
-        checkedIconFamily="Ionicons"
-        checkedIconName="checkmark"
-        indeterminateIconFamily="Ionicons"
-        indeterminateIconName="remove-outline"
+      <View
+        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "color": undefined,
-              "fontSize": 17.25,
-            },
-            Object {
-              "color": "transparent",
-              "display": "flex",
-            },
-            Object {
-              "fontFamily": "ionicons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
+          Object {
+            "borderRadius": 4,
+            "display": "flex",
+            "overflow": "hidden",
+          }
         }
       >
-        
-      </Text>
+        <View
+          accessible={true}
+          checkedBackgroundColor="primary.500"
+          checkedBorderColor="primary.500"
+          colorScheme="primary"
+          errorBorderColor="danger.500"
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          shape="square"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderRadius": 4,
+                "display": "flex",
+                "justifyContent": "center",
+                "padding": 2,
+              },
+              Object {
+                "backgroundColor": "#EDF1F7",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": "#EDF1F7",
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": 2,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark Icon"
+            accessible={true}
+            allowFontScaling={false}
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark"
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            style={
+              Array [
+                Object {
+                  "color": undefined,
+                  "fontSize": 17.25,
+                },
+                Object {
+                  "color": "transparent",
+                  "display": "flex",
+                },
+                Object {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
+        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }

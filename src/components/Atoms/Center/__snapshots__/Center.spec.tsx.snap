@@ -2,9 +2,11 @@
 
 exports[`Atoms/Center passes the snapshot test 1`] = `
 <View
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
+      "borderRadius": undefined,
       "display": "flex",
       "justifyContent": "center",
     }

@@ -3,7 +3,7 @@ import { border } from "../../../theme/src/styleFunctions";
 import {
   Animated,
   ImageErrorEventData,
-  ImageProps,
+  ImageProps as RNImageProps,
   ImageSourcePropType,
   NativeSyntheticEvent,
   Image as RNImage,
@@ -29,9 +29,9 @@ function usePrevious(value: any) {
   return ref.current;
 }
 
-type PearlImageProps = BoxProps &
+export type ImageProps = BoxProps &
   Omit<
-    ImageProps,
+    RNImageProps,
     | "width"
     | "height"
     | "loadingIndicatorSource"
@@ -69,7 +69,7 @@ type PearlImageProps = BoxProps &
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
 /** The Image component is used to display images. */
-const Image: React.FC<PearlImageProps> = ({
+const Image: React.FC<ImageProps> = ({
   children,
   source,
   onError = () => {},

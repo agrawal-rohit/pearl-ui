@@ -42,7 +42,7 @@ const iconStyleFunctions = [
   visible,
 ] as StyleFunctionContainer[];
 
-type IconProps = ColorProps &
+export type IconProps = ColorProps &
   BackgroundColorProps &
   SpacingProps &
   LayoutProps &
@@ -91,6 +91,8 @@ const iconFamilyMapping = {
   SimpleLineIcons,
   Zocial,
 };
+
+// TODO: Add icon badge with color and content props
 
 /** he `Icon` component can used to add Expo Icons to your app and customize them using style props. */
 const Icon: React.FC<IconProps> = ({

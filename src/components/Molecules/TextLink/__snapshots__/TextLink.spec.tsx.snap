@@ -11,47 +11,106 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
     }
   }
   accessible={true}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  onLayout={[Function]}
   style={
-    Array [
-      Object {
-        "display": "flex",
-        "opacity": 1,
-      },
-      Object {
-        "backgroundColor": undefined,
-        "opacity": 1,
-      },
-    ]
+    Object {
+      "alignSelf": undefined,
+      "borderRadius": undefined,
+      "bottom": undefined,
+      "display": "flex",
+      "elevation": undefined,
+      "end": undefined,
+      "left": undefined,
+      "margin": undefined,
+      "marginBottom": undefined,
+      "marginEnd": undefined,
+      "marginHorizontal": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginStart": undefined,
+      "marginTop": undefined,
+      "marginVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "shadowColor": undefined,
+      "shadowOffset": undefined,
+      "shadowOpacity": undefined,
+      "shadowRadius": undefined,
+      "start": undefined,
+      "top": undefined,
+    }
   }
 >
-  <Text
-    accessibilityRole="text"
-    accessible={true}
-    allowFontScaling={true}
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "color": "#6A7BFF",
+        "borderRadius": undefined,
         "display": "flex",
-        "fontFamily": "Poppins-Medium",
-        "fontSize": 16.099999999999998,
-        "fontWeight": "500",
-        "lineHeight": 21.849999999999998,
+        "overflow": "hidden",
       }
     }
-    variant="btn2"
   >
-    Text Link press
-  </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "opacity": 1,
+          },
+          Object {
+            "backgroundColor": undefined,
+            "borderBottomColor": undefined,
+            "borderBottomWidth": undefined,
+            "borderColor": undefined,
+            "borderEndColor": undefined,
+            "borderEndWidth": undefined,
+            "borderLeftColor": undefined,
+            "borderLeftWidth": undefined,
+            "borderRightColor": undefined,
+            "borderRightWidth": undefined,
+            "borderStartColor": undefined,
+            "borderStartWidth": undefined,
+            "borderStyle": undefined,
+            "borderTopColor": undefined,
+            "borderTopWidth": undefined,
+            "borderWidth": undefined,
+            "opacity": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "color": "#6A7BFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "500",
+            "lineHeight": 21.849999999999998,
+          }
+        }
+        variant="btn2"
+      >
+        Text Link press
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -67,47 +126,106 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#6A7BFF",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 16.099999999999998,
-          "fontWeight": "500",
-          "lineHeight": 21.849999999999998,
+          "overflow": "hidden",
         }
       }
-      variant="btn2"
     >
-      Primary text link
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#6A7BFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 16.099999999999998,
+              "fontWeight": "500",
+              "lineHeight": 21.849999999999998,
+            }
+          }
+          variant="btn2"
+        >
+          Primary text link
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityHint=""
@@ -119,47 +237,106 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FF6AC6",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 16.099999999999998,
-          "fontWeight": "500",
-          "lineHeight": 21.849999999999998,
+          "overflow": "hidden",
         }
       }
-      variant="btn2"
     >
-      Secondary text link
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FF6AC6",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 16.099999999999998,
+              "fontWeight": "500",
+              "lineHeight": 21.849999999999998,
+            }
+          }
+          variant="btn2"
+        >
+          Secondary text link
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -176,48 +353,107 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    size="xs"
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#6A7BFF",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontWeight": "500",
-          "lineHeight": 16.099999999999998,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      Text Link press
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="xs"
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#6A7BFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontWeight": "500",
+              "lineHeight": 16.099999999999998,
+            }
+          }
+          variant="btn4"
+        >
+          Text Link press
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityHint=""
@@ -229,48 +465,107 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    size="s"
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#6A7BFF",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 13.799999999999999,
-          "fontWeight": "500",
-          "lineHeight": 18.4,
+          "overflow": "hidden",
         }
       }
-      variant="btn3"
     >
-      Text Link press
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="s"
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#6A7BFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 13.799999999999999,
+              "fontWeight": "500",
+              "lineHeight": 18.4,
+            }
+          }
+          variant="btn3"
+        >
+          Text Link press
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityHint=""
@@ -282,48 +577,107 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    size="m"
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#6A7BFF",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 16.099999999999998,
-          "fontWeight": "500",
-          "lineHeight": 21.849999999999998,
+          "overflow": "hidden",
         }
       }
-      variant="btn2"
     >
-      Text Link press
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="m"
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#6A7BFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 16.099999999999998,
+              "fontWeight": "500",
+              "lineHeight": 21.849999999999998,
+            }
+          }
+          variant="btn2"
+        >
+          Text Link press
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityHint=""
@@ -335,48 +689,107 @@ Array [
       }
     }
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    size="l"
+    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "display": "flex",
-          "opacity": 1,
-        },
-        Object {
-          "backgroundColor": undefined,
-          "opacity": 1,
-        },
-      ]
+      Object {
+        "alignSelf": undefined,
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#6A7BFF",
+          "borderRadius": undefined,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 18.4,
-          "fontWeight": "500",
-          "lineHeight": 24.15,
+          "overflow": "hidden",
         }
       }
-      variant="btn1"
     >
-      Text Link press
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="l"
+        style={
+          Array [
+            Object {
+              "display": "flex",
+              "opacity": 1,
+            },
+            Object {
+              "backgroundColor": undefined,
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#6A7BFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 18.4,
+              "fontWeight": "500",
+              "lineHeight": 24.15,
+            }
+          }
+          variant="btn1"
+        >
+          Text Link press
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -392,49 +805,106 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
     }
   }
   accessible={true}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  onLayout={[Function]}
   style={
-    Array [
-      Object {
-        "backgroundColor": "#6A7BFF",
-        "borderColor": "#C5CEE0",
-        "borderWidth": 2,
-        "display": "flex",
-        "opacity": 1,
-      },
-      Object {
-        "backgroundColor": "#6A7BFF",
-        "opacity": 1,
-      },
-    ]
+    Object {
+      "alignSelf": undefined,
+      "borderRadius": undefined,
+      "bottom": undefined,
+      "display": "flex",
+      "elevation": undefined,
+      "end": undefined,
+      "left": undefined,
+      "margin": undefined,
+      "marginBottom": undefined,
+      "marginEnd": undefined,
+      "marginHorizontal": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginStart": undefined,
+      "marginTop": undefined,
+      "marginVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "shadowColor": undefined,
+      "shadowOffset": undefined,
+      "shadowOpacity": undefined,
+      "shadowRadius": undefined,
+      "start": undefined,
+      "top": undefined,
+    }
   }
 >
-  <Text
-    accessibilityRole="text"
-    accessible={true}
-    allowFontScaling={true}
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "color": "#6A7BFF",
+        "borderRadius": undefined,
         "display": "flex",
-        "fontFamily": "Poppins-Medium",
-        "fontSize": 16.099999999999998,
-        "fontWeight": "500",
-        "lineHeight": 21.849999999999998,
+        "overflow": "hidden",
       }
     }
-    variant="btn2"
   >
-    Text link press
-  </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#6A7BFF",
+            "display": "flex",
+            "opacity": 1,
+          },
+          Object {
+            "backgroundColor": "#6A7BFF",
+            "borderBottomColor": undefined,
+            "borderBottomWidth": undefined,
+            "borderColor": "#C5CEE0",
+            "borderEndColor": undefined,
+            "borderEndWidth": undefined,
+            "borderLeftColor": undefined,
+            "borderLeftWidth": undefined,
+            "borderRightColor": undefined,
+            "borderRightWidth": undefined,
+            "borderStartColor": undefined,
+            "borderStartWidth": undefined,
+            "borderStyle": undefined,
+            "borderTopColor": undefined,
+            "borderTopWidth": undefined,
+            "borderWidth": 2,
+            "opacity": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        style={
+          Object {
+            "color": "#6A7BFF",
+            "display": "flex",
+            "fontFamily": "Poppins-Medium",
+            "fontSize": 16.099999999999998,
+            "fontWeight": "500",
+            "lineHeight": 21.849999999999998,
+          }
+        }
+        variant="btn2"
+      >
+        Text link press
+      </Text>
+    </View>
+  </View>
 </View>
 `;

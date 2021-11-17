@@ -7,7 +7,7 @@ import Icon from "../../Atoms/Icon/Icon";
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
-type ButtonProps = PressableProps & {
+export type ButtonProps = PressableProps & {
   /** Size of the button. */
   size?: string;
   /** Variant of the button. */

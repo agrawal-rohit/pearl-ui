@@ -6,6 +6,7 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
   accessible={true}
   isCached={true}
   loaderType="spinner"
+  onLayout={[Function]}
   previewSource={
     Object {
       "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
@@ -59,9 +60,11 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
     }
   />
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
+        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
@@ -284,6 +287,7 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
   accessible={true}
   isCached={true}
   loaderType="spinner"
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -333,9 +337,11 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
     transitionDuration={300}
   />
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
+        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
@@ -558,6 +564,7 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
   accessible={true}
   isCached={false}
   loaderType="spinner"
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -611,9 +618,11 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
     transitionDuration={300}
   />
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
+        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
@@ -837,6 +846,7 @@ Array [
     accessible={true}
     isCached={true}
     loaderType="spinner"
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -886,9 +896,11 @@ Array [
       transitionDuration={300}
     />
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
+          "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
@@ -1108,6 +1120,7 @@ Array [
     accessible={true}
     isCached={true}
     loaderType="spinner"
+    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
@@ -1161,9 +1174,11 @@ Array [
       }
     />
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
+          "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
@@ -1393,6 +1408,7 @@ Array [
     }
     isCached={true}
     loaderType="progressive"
+    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
@@ -1502,6 +1518,7 @@ Array [
     }
     isCached={true}
     loaderType="progressive"
+    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
@@ -1608,6 +1625,7 @@ Array [
     accessible={true}
     isCached={false}
     loaderType="progressive"
+    onLayout={[Function]}
     previewColor="#934a9a"
     style={
       Object {
@@ -1690,6 +1708,7 @@ Array [
     accessible={true}
     isCached={false}
     loaderType="progressive"
+    onLayout={[Function]}
     previewSource={1}
     style={
       Object {
@@ -1818,6 +1837,7 @@ Array [
     accessible={true}
     isCached={false}
     loaderType="spinner"
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -1871,9 +1891,11 @@ Array [
       transitionDuration={300}
     />
     <View
+      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
+          "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
@@ -2097,6 +2119,7 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
   accessible={true}
   isCached={true}
   loaderType="spinner"
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -2116,9 +2139,11 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
   transitionDuration={300}
 >
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
+        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",

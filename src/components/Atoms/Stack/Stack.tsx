@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { BasePearlTheme } from "../../../theme/src/types";
 import Box, { BoxProps } from "../Box/Box";
 
-type StackProps = BoxProps & {
+export type StackProps = BoxProps & {
   /** The direction to stack the items */
   direction: "horizontal" | "vertical";
   /** The spacing between the elements */

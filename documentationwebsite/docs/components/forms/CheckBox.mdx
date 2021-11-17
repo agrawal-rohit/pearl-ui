@@ -7,6 +7,11 @@ The `CheckBox` component is used in forms when a user needs to select multiple v
 
 ## Import
 
+Pearl UI exports 2 checkbox-related components:
+
+1. `CheckBox`: A single checkbox which can be checked and unchecked.
+2. `CheckBoxGroup`: A wrapper which stacks multiple CheckBox components together and provides a central place to control their state.
+
 ```jsx
 import { CheckBox, CheckBoxGroup } from "pearl-ui";
 ```
@@ -291,7 +296,6 @@ export default {
     box: {
       p: "hairline",
       shape: "square",
-      borderWidth: 1,
       borderColor: "neutral.300",
       checkedBackgroundColor: "primary.500",
       errorBorderColor: "danger.500",
