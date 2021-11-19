@@ -63,10 +63,12 @@ const Screen: React.FC<ScreenProps> = ({
     variant: variant,
   });
 
+  const { style, ...nativeProps } = props;
+
   const onRefresh = React.useCallback(async () => {
     if (nativeProps.onPullToRefresh) {
       setRefreshing(true);
-      const functionValue = nativeProps.onPullToRefresh();
+      const functionValue = await nativeProps.onPullToRefresh();
       let isPromise = functionValue instanceof Promise;
       if (isPromise)
         Promise.resolve(functionValue).then(() => {
@@ -76,9 +78,7 @@ const Screen: React.FC<ScreenProps> = ({
         setRefreshing(false);
       }
     }
-  }, []);
-
-  const { style, ...nativeProps } = props;
+  }, [nativeProps.onPullToRefresh]);
 
   return (
     <>
