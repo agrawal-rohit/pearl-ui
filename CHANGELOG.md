@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.1...v1.6.2) (2021-11-19)
+
+
+### Bug Fixes
+
+* **screen:** fixed screen onPullToRefresh promise execution bug ([c5d366e](https://github.com/agrawal-rohit/pearl-ui/commit/c5d366e39f301f2c917b911db062da164060b775))
+
 ## [1.6.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.0...v1.6.1) (2021-11-19)
 
 
