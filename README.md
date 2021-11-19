@@ -39,14 +39,14 @@ write cleaner code, and get your product to market faster!
 
 ## Key Features
 
-👐 Completely Open Source and Free
-💎 15+ modular UI components (with new ones added weekly...)
-🌓 Effortlessly themeable with an in-built dark mode
-⚡️ Blazing fast development speed
-♿️ Accessible by default, abiding by the official Android and Apple guidelines.
-📜 Extensive documentation
-🎨 Extremely customizable to fit your design needs
-⚙️ Powerful API for creating custom components
+- 👐 Completely Open Source and Free
+- 💎 15+ modular UI components (with new ones added weekly...)
+- 🌓 Effortlessly themeable with an in-built dark mode
+- ⚡️ Blazing fast development speed
+- ♿️ Accessible by default, abiding by the official Android and Apple guidelines.
+- 📜 Extensive documentation
+- 🎨 Extremely customizable to fit your design needs
+- ⚙️ Powerful API for creating custom components
 
 ## Installation
 
