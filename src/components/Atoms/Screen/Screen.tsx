@@ -4,8 +4,6 @@ import {
   SafeAreaView,
   StatusBar,
   Platform,
-  ScrollView,
-  Dimensions,
   RefreshControl,
 } from "react-native";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
