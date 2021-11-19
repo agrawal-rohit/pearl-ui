@@ -2,9 +2,10 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (
   module.exports = {
-    title: "Pearl UI",
+    title:
+      "Pearl UI - Build accessible mobile apps with a design-first approach",
     tagline:
-      "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
+      "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
     url: "https://www.pearl-ui.dev/",
     baseUrl: "/",
     onBrokenLinks: "throw",
@@ -65,7 +66,7 @@
           {
             name: "og:description",
             content:
-              "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
+              "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
           },
           { name: "og:image", content: "img/logo.png" },
           { name: "og:url", content: "https://pearl-ui.vercel.app" },
@@ -75,7 +76,7 @@
           {
             name: "twitter:description",
             content:
-              "Pearl UI is a design-system-driven framework for developers to build beautiful, accessible mobile apps straight out of the box. Take your idea from a design mockup to a finished product at the speed of light!",
+              "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
           },
           { name: "twitter:image", content: "img/logo.png" },
           { name: "twitter:site", content: "https://pearl-ui.vercel.app" },
