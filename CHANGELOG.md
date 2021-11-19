@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.0...v1.6.1) (2021-11-19)
+
+
+### Bug Fixes
+
+* fixing missing exports, removed the temporary offline noticebar ([556647b](https://github.com/agrawal-rohit/pearl-ui/commit/556647bd376aa58a71de116c3f47861f5d0a81a7))
+
 # [1.6.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.5.0...v1.6.0) (2021-11-19)
 
 
