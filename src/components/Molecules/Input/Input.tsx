@@ -176,11 +176,11 @@ const Input = React.forwardRef(
         size: size,
         variant: filteredReceivedProps["variant"],
       },
+      colorScheme,
       inputRootStyleFunctions,
       "root",
       "input"
     );
-    molecularProps = useColorScheme(colorScheme, molecularProps);
 
     const inputProps = useStyledProps(
       molecularProps.input,
@@ -195,6 +195,7 @@ const Input = React.forwardRef(
         size: size,
         variant: molecularProps.text.variant,
       },
+      "primary",
       inputTextStyleFunctions
     );
 

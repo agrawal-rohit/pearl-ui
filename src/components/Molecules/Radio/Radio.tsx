@@ -91,11 +91,11 @@ const Radio = React.forwardRef(
         size: rest.size,
         variant: rest.variant,
       },
+      rest.colorScheme,
       boxStyleFunctions,
       "root",
       "outerBox"
     );
-    molecularProps = useColorScheme(rest.colorScheme, molecularProps);
 
     // OTHER METHODS
     const radioPressHandler = (event: GestureResponderEvent) => {

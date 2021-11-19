@@ -1,0 +1,223 @@
+---
+sidebar_position: 2
+title: Badge
+---
+
+A `Badge` is a small component typically used to communicate a numerical value or indicate the status of an item to the user.
+
+## Import
+
+Pearl UI exports 2 badge-related components:
+
+1. `Badge`: A single badge which displays a numerical value or an icon.
+2. `withBadge`: A higher-order component which can be used to add a badge to any target component.
+
+```jsx
+import { withBadge, Badge } from "pearl-ui";
+```
+
+## Usage
+
+```tsx
+// Adds a numerical value to the badge
+<Badge>23</Badge>;
+
+// Adds an icon to the badge
+import { Icon } from "pearl-ui";
+
+<Badge>
+  <Icon iconFamily="Entypo" iconName="edit" color="neutral.50" size="s"></Icon>
+</Badge>;
+```
+
+### Badge sizes
+
+Use the `size` prop to change the size of the badge. You can set the value to the keys available in <t>PearlTheme.components.Badge["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Badge size="s">234+</Badge>
+
+<Badge size="m">234+</Badge>
+
+<Badge size="l">234+</Badge>
+
+<Badge size="xl">234+</Badge>
+```
+
+### Badge variants
+
+Use the `variant` prop to change the type of badge used. You can set the value to the keys available in <t>PearlTheme.components.Badge["variants"]</t>, which are <t>"rounded"</t> and <t>"square"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Badge variant="rounded">2</Badge>
+
+<Badge variant="square">NEW</Badge>
+```
+
+### Badge color scheme
+
+Use the `colorScheme` prop to change the color palette of the badge.
+
+You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Badge colorScheme="primary" />
+
+<Badge colorScheme="success" />
+
+<Badge colorScheme="warning" />
+
+<Badge colorScheme="info" />
+
+<Badge colorScheme="danger" />
+```
+
+### Attaching badges to other components
+
+The true power of `Badge` is revealed when it is coupled with other components. The `withBadge` function allows you to add a badge to any React component is an extremely simple manner, while provoding you the freedom to customize at will. The list of props expected by `withBadge` can be found [here](#withbadge-props).
+
+This can prove helpful when dealing with common use-cases of badges such as adding a notification badge as follows:
+
+```tsx
+// Attaches the badge to an Icon component
+import { Icon, IconProps } from "pearl-ui";
+
+const numberOfNotifications = 5;
+
+const BadgedIcon = withBadge<IconProps>(numberOfNotifications, {
+  placement: "topRight",
+  size: "s",
+  colorScheme: "danger",
+})(Icon);
+
+return <BadgedIcon iconFamily="FontAwesome" iconName="inbox" />;
+```
+
+### Override Style
+
+The Badge component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
+<Badge backgroundColor="blue" variant="square" mt="l" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/badge-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/badge-dark" />
+
+</TabItem>
+</Tabs>
+
+## Badge Props
+
+### Supported style props
+
+`Badge` composes [Box](../layout/Box) so you can pass all [Box](../layout/Box) related props.
+
+### Additional props
+
+| Name        | Required | Type                                           | Default     | Description                        |
+| ----------- | -------- | ---------------------------------------------- | ----------- | ---------------------------------- |
+| size        | false    | <t>PearlTheme.components.Badge["sizes"]</t>    | `"m"`       | Size of the badge.                 |
+| variant     | false    | <t>PearlTheme.components.Badge["variants"]</t> | `"rounded"` | Variant of the badge.              |
+| colorScheme | string   | <t>PearlTheme.palette</t>                      | `"primary"` | Active color palette of the badge. |
+
+## withBadge Props
+
+| Name       | Required | Type                                                                                                                       | Default | Description                                             |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------- |
+| badgeValue | true     | <t>string \| number \| React.ReactElement</t>                                                                              |         | The value to be displayed inside the badge.             |
+| options    | false    | <t>BadgeProps</t> \| { placement: <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t>, offset: <t>number</t> } |         | A set of options for customizing the look of the badge. |
+
+## Default Component Style
+
+```js
+export default {
+  parts: ["root", "text"],
+  baseStyle: {
+    root: {
+      backgroundColor: "primary.500",
+    },
+    text: {
+      color: "neutral.50",
+    },
+  },
+  sizes: {
+    s: {
+      root: {
+        minW: 20,
+        h: 20,
+      },
+      text: {
+        px: "xxs",
+        variant: "btn4",
+      },
+    },
+    m: {
+      root: {
+        minW: 25,
+        h: 25,
+      },
+      text: {
+        px: "xs",
+        variant: "btn4",
+      },
+    },
+    l: {
+      root: {
+        minW: 30,
+        h: 30,
+      },
+      text: {
+        px: "xs",
+        variant: "btn3",
+      },
+    },
+    xl: {
+      root: {
+        minW: 35,
+        h: 35,
+      },
+      text: {
+        px: "s",
+        variant: "btn3",
+      },
+    },
+  },
+  variants: {
+    rounded: {
+      root: {
+        borderRadius: "full",
+      },
+    },
+    square: {
+      root: {
+        borderRadius: "m",
+      },
+    },
+  },
+  defaults: {
+    size: "m",
+    variant: "rounded",
+  },
+};
+```

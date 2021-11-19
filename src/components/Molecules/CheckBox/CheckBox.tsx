@@ -140,12 +140,11 @@ const CheckBox = React.forwardRef(
         size: rest.size,
         variant: rest.variant,
       },
+      rest.colorScheme,
       boxStyleFunctions,
       "root",
       "box"
     );
-
-    molecularProps = useColorScheme(rest.colorScheme, molecularProps);
 
     // OTHER METHODS
     const checkboxPressHandler = (event: GestureResponderEvent) => {

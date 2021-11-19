@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Usage
+title: Getting Started
 ---
 
 ## Setting up the theme provider
@@ -43,7 +43,7 @@ To include the font family into the app, we use the [@expo/google-fonts](https:/
 expo install @expo-google-fonts/poppins expo-font
 ```
 
-Loading the font family into the theme can then be done as follows:
+The font family can then be loaded in the following manner:
 
 ```jsx title="App.tsx"
 // Import the useFonts hook and the default fonts used
@@ -78,5 +78,7 @@ const App = () => {
 ```
 
 <br />
+
+The `ThemeProvider` optionally expects a `haveFontsLoaded` prop which ensures that your app loads only after all the underlying fonts have loaded.
 
 That's it, You're good to go!

@@ -2,7 +2,7 @@ export default {
   parts: ["root", "text"],
   baseStyle: {
     root: {
-      borderRadius: "full",
+      backgroundColor: "primary.500",
     },
     text: {
       color: "neutral.50",
@@ -11,70 +11,59 @@ export default {
   sizes: {
     s: {
       root: {
-        w: 20,
+        minW: 20,
         h: 20,
       },
       text: {
+        px: "xxs",
         variant: "btn4",
       },
     },
     m: {
       root: {
-        w: 25,
+        minW: 25,
         h: 25,
       },
       text: {
+        px: "xs",
         variant: "btn4",
       },
     },
     l: {
       root: {
-        w: 30,
+        minW: 30,
         h: 30,
       },
       text: {
+        px: "xs",
         variant: "btn3",
       },
     },
     xl: {
       root: {
-        w: 35,
+        minW: 35,
         h: 35,
       },
       text: {
+        px: "s",
         variant: "btn3",
       },
     },
   },
   variants: {
-    primary: {
+    rounded: {
       root: {
-        backgroundColor: "primary.500",
+        borderRadius: "full",
       },
     },
-    success: {
+    square: {
       root: {
-        backgroundColor: "success.500",
-      },
-    },
-    warning: {
-      root: {
-        backgroundColor: "warning.500",
-      },
-    },
-    info: {
-      root: {
-        backgroundColor: "info.500",
-      },
-    },
-    error: {
-      root: {
-        backgroundColor: "danger.500",
+        borderRadius: "m",
       },
     },
   },
   defaults: {
     size: "m",
-    variant: "primary",
+    variant: "rounded",
   },
 };

@@ -144,13 +144,17 @@ const colorViewStyleFunctions = [
 type ViewProps = React.ComponentProps<typeof View> & {
   children?: React.ReactNode;
 };
-type ComponentProps = ColorViewProps & Omit<ViewProps, keyof ColorViewProps>;
+type ComponentProps = ColorViewProps &
+  Omit<ViewProps, keyof ColorViewProps> & {
+    colorScheme?: string;
+  };
 
 const ColorView: React.FC<ComponentProps> = (props) => {
   const componentConfig = useMolecularComponentConfig(
     "ColorView",
     props,
     { variant: props.variant },
+    props.colorScheme,
     colorViewStyleFunctions
   );
 
@@ -178,6 +182,7 @@ const ColorView = (props) => {
     "ColorView",
     props,
     { variant: props.variant },
+    props.colorScheme,
     colorViewStyleFunctions,
     "view",
     "text"
@@ -207,6 +212,7 @@ That's it! Now, you can control the active visual style of the component using t
 | `themeComponentKey`                | true     | <t>PearlTheme.components</t>                                     |                                         | Name of the component in <t>PearlTheme.components</t> who's config needs to be used                                                                                                              |
 | `receivedProps`                    | true     | <t>object</t>                                                    |                                         | Raw props passed to the component where the hook is being used                                                                                                                                   |
 | `sizeAndVariantProps`              | false    | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined } | Custom size and variant configuration to use                                                                                                                                                     |
+| `colorScheme`                      | false    | <t>string</t>                                                    | `"primary"`                             | Active color scheme of the component.                                                                                                                                                            |
 | `styleFunctions`                   | false    | <t>StyleFunctionContainer[]</t>                                  | `boxStyleFunctions`                     | List of [style functions](../others/style-functions) to use for computing the received style props                                                                                               |
 | `targetKeyForOverridenStyleProps`  | false    | <t>string \| undefined</t>                                       |                                         | The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config                       |
 | `targetKeyForOverridenNativeProps` | false    | <t>string \| undefined</t>                                       |                                         | The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config |

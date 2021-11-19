@@ -17,14 +17,16 @@ function HomepageHeader() {
     <header className={clsx("hero", styles.heroBanner)}>
       <div className="container">
         <h1 className={styles.heroTitle}>
-          Build elegant React Native apps without{" "}
-          <span style={{ color: "var(--ifm-color-primary)" }}>a designer</span>
+          Build accessible mobile apps with a{" "}
+          <span style={{ color: "var(--ifm-color-primary)" }}>
+            design-first
+          </span>{" "}
+          approach
         </h1>
         <p className={styles.heroDescription}>
-          Pearl UI is a design-system-driven UI framework that helps developers
-          build beautiful and accessible mobile apps right out of the box. Take
-          your idea from a Figma mockup to a finished product at the speed of
-          light!
+          Pearl UI is a powerful UI toolkit that helps you build beautiful
+          production-ready mobile apps right out of the box. Skip the designer,
+          write cleaner code, and get your product to market faster!
         </p>
         <Link
           className={clsx(

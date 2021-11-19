@@ -8,12 +8,14 @@ import { useTheme } from "./useTheme";
 import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
+import { useColorScheme } from "./useColorScheme";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
  * @param themeComponentKey Name of the component in PearlTheme.components who's config needs to be used
  * @param receivedProps Raw props passed to the component where the hook is being used
  * @param sizeAndVariantProps Custom size and variant configuration to use
+ * @param colorScheme Active color scheme of the component
  * @param styleFunctions List of style functions to use for computing the received style props
  * @param targetKeyForAdditionalStyleProps The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config
  * @param targetKeyForNativeProps The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config
@@ -26,6 +28,7 @@ export const useMolecularComponentConfig = (
     size: undefined,
     variant: undefined,
   },
+  colorScheme: string = "primary",
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
   targetKeyForOverridenStyleProps: string | undefined = undefined,
   targetKeyForOverridenNativeProps: string | undefined = undefined
@@ -199,6 +202,8 @@ export const useMolecularComponentConfig = (
       },
     };
   }
+
+  finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
 
   return finalComponentProps;
 };

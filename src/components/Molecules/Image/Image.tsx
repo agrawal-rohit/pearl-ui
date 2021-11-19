@@ -72,6 +72,7 @@ const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 const Image: React.FC<ImageProps> = ({
   children,
   source,
+  fallbackComponent = undefined,
   onError = () => {},
   ...rest
 }) => {
@@ -178,13 +179,13 @@ const Image: React.FC<ImageProps> = ({
 
   const renderFallback = () => {
     if (error) {
-      if (!!molecularProps.root.fallbackComponent) {
+      if (!!fallbackComponent) {
         return (
           <Box
             overflow="hidden"
             style={{ ...borderRadiiStyles.style, zIndex: 4 }}
           >
-            {React.cloneElement(molecularProps.root.fallbackComponent)}
+            {React.cloneElement(fallbackComponent)}
           </Box>
         );
       }
@@ -334,14 +335,8 @@ const Image: React.FC<ImageProps> = ({
     if (molecularProps.root.loaderType === "spinner" && !error) {
       // Load the spinner component
       return (
-        <Box
-          style={StyleSheet.absoluteFill}
-          width="100%"
-          height="100%"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Spinner {...molecularProps.spinner} />
+        <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
+          <Spinner {...molecularProps.spinner} isExpanded />
         </Box>
       );
     }

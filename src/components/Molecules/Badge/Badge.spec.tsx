@@ -2,8 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 import Badge from "./Badge";
 import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon, { IconProps } from "../Icon/Icon";
-import { withBadge } from "./withBadge";
+import Icon, { IconProps } from "../../Atoms/Icon/Icon";
+import withBadge from "./withBadge";
 
 jest.useFakeTimers();
 
@@ -23,11 +23,38 @@ describe("Atoms/Badge", () => {
   it("passes the snapshot test for different variants", () => {
     const tree = render(
       <ThemeProvider>
-        <Badge variant="primary"></Badge>
-        <Badge variant="success"></Badge>
-        <Badge variant="warning">2</Badge>
-        <Badge variant="info">2</Badge>
-        <Badge variant="error">2</Badge>
+        <Badge variant="rounded" mb="s">
+          2
+        </Badge>
+        <Badge variant="square" mb="s">
+          NEW
+        </Badge>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("passes the snapshot test for different color schemes", () => {
+    const tree = render(
+      <ThemeProvider>
+        <Badge colorScheme="primary" mb="s">
+          2
+        </Badge>
+        <Badge colorScheme="success" mb="s">
+          2
+        </Badge>
+
+        <Badge colorScheme="warning" mb="s">
+          2
+        </Badge>
+
+        <Badge colorScheme="info" mb="s">
+          2
+        </Badge>
+
+        <Badge colorScheme="danger" mb="s">
+          2
+        </Badge>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -36,6 +63,8 @@ describe("Atoms/Badge", () => {
   it("passes the snapshot test for different values types", () => {
     const tree = render(
       <ThemeProvider>
+        <Badge></Badge>
+
         <Badge>23</Badge>
 
         <Badge>{2}+</Badge>

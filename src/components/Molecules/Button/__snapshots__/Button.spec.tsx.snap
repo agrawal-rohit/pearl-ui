@@ -1591,11 +1591,19 @@ Array [
                 "flex": 1,
                 "justifyContent": "center",
               },
-              Object {
-                "color": "#FFFFFF",
-                "flex": 0,
-                "position": "absolute",
-              },
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                  "flex": 0,
+                },
+              ],
             ]
           }
         >
@@ -1618,6 +1626,7 @@ Array [
                 "width": 15,
               }
             }
+            variant="spinner"
           >
             <View
               style={
@@ -1922,10 +1931,13 @@ Array [
                   "flex": 1,
                   "justifyContent": "center",
                 },
-                Object {
-                  "color": "#FFFFFF",
-                  "flex": 0,
-                },
+                Array [
+                  false,
+                  Object {
+                    "color": "#FFFFFF",
+                    "flex": 0,
+                  },
+                ],
               ]
             }
           >
@@ -1948,6 +1960,7 @@ Array [
                   "width": 15,
                 }
               }
+              variant="spinner"
             >
               <View
                 style={
@@ -2273,10 +2286,13 @@ Array [
                   "flex": 1,
                   "justifyContent": "center",
                 },
-                Object {
-                  "color": "#FFFFFF",
-                  "flex": 0,
-                },
+                Array [
+                  false,
+                  Object {
+                    "color": "#FFFFFF",
+                    "flex": 0,
+                  },
+                ],
               ]
             }
           >
@@ -2299,6 +2315,7 @@ Array [
                   "width": 15,
                 }
               }
+              variant="spinner"
             >
               <View
                 style={
