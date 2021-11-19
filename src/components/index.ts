@@ -18,4 +18,6 @@ export { default as CheckBoxGroup } from "./Molecules/CheckBox/CheckBoxGroup";
 export { default as Radio } from "./Molecules/Radio/Radio";
 export { default as RadioGroup } from "./Molecules/Radio/RadioGroup";
 export { default as Image } from "./Molecules/Image/Image";
+// export { default as Badge } from "./Molecules/Badge/Badge";
+// export { default as withBadge } from "./Molecules/Badge/withBadge";
 // export { default as OfflineNotice } from "./Molecules/OfflineNotice/OfflineNotice";

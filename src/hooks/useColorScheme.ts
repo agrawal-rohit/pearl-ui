@@ -7,6 +7,7 @@ const replaceColorValuesInObject = (
   obj: Record<string, any>
 ) => {
   const updatedObj: Record<string, any> = {};
+
   for (const [key, value] of Object.entries(obj)) {
     if (typeof value === "object") {
       updatedObj[key] = replaceColorValuesInObject(newValue, value);
@@ -29,6 +30,8 @@ export const useColorScheme = (
   targetColorScheme: string,
   props: Record<string, any>
 ): Record<string, any> => {
+  if (!targetColorScheme) return props;
+
   const { theme } = useTheme();
 
   checkKeyAvailability(targetColorScheme, theme.palette, "theme.palette");

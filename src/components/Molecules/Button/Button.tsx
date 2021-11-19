@@ -41,11 +41,15 @@ const Button: React.FC<ButtonProps> = ({
   rightIcon = null,
   ...rest
 }) => {
-  let molecularProps = useMolecularComponentConfig("Button", rest, {
-    size: rest["size"],
-    variant: rest["variant"],
-  });
-  molecularProps = useColorScheme(colorScheme, molecularProps);
+  let molecularProps = useMolecularComponentConfig(
+    "Button",
+    rest,
+    {
+      size: rest["size"],
+      variant: rest["variant"],
+    },
+    colorScheme
+  );
 
   const disabled = isDisabled ? true : isLoading;
 
@@ -80,10 +84,7 @@ const Button: React.FC<ButtonProps> = ({
     } else {
       return (
         <>
-          <Spinner
-            style={{ position: "absolute" }}
-            {...molecularProps.spinner}
-          />
+          <Spinner isExpanded {...molecularProps.spinner} />
           <Text {...molecularProps.text} color="transparent">
             {children}
           </Text>

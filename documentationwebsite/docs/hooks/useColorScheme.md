@@ -3,7 +3,7 @@ sidebar_position: 6
 title: useColorScheme
 ---
 
-`useColorScheme` is a custom hook to covert an existing props object to a different color scheme from the active theme palette.
+`useColorScheme` is a custom hook to covert an existing props object to a different color scheme from the active theme palette. By default, it is included inside the [useAtomicComponentConfig](./useAtomicComponentConfig) and [useMolecularComponentConfig](./useMolecularComponentConfig) hooks.
 
 ## Import
 

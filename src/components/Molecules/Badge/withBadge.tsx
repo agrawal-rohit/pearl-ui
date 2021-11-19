@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "../Box/Box";
+import Box from "../../Atoms/Box/Box";
 import Badge, { BadgeProps } from "./Badge";
 
 interface BadgeOptions {
@@ -10,12 +10,12 @@ interface BadgeOptions {
 }
 
 /**
- * A higher-order component which can be used to add a badge to a component
+ * A higher-order component which can be used to add a badge to any target component.
  * @param badgeValue The value to be displayed inside the badge
  * @param options A set of options for customizing the look of the badge
  * @returns
  */
-export const withBadge =
+const withBadge =
   <P extends {}>(
     badgeValue: string | number | React.ReactElement | undefined,
     options: BadgeOptions & BadgeProps = {}
@@ -56,3 +56,5 @@ export const withBadge =
       </Box>
     ) as React.ReactElement<P>;
   };
+
+export default withBadge;

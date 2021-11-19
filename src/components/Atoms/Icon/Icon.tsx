@@ -112,6 +112,7 @@ const Icon: React.FC<IconProps> = ({
       size: size,
       variant: rest.variant,
     },
+    "primary",
     iconStyleFunctions
   );
 

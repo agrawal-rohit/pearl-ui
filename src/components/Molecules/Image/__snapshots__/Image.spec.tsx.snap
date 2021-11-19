@@ -63,12 +63,10 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
-        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "right": 0,
@@ -85,10 +83,19 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
             "flex": 1,
             "justifyContent": "center",
           },
-          Object {
-            "color": "#C5CEE0",
-            "flex": 0,
-          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "color": "#C5CEE0",
+              "flex": 0,
+            },
+          ],
         ]
       }
     >
@@ -111,6 +118,7 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
             "width": 15,
           }
         }
+        variant="spinner"
       >
         <View
           style={
@@ -340,12 +348,10 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
-        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "right": 0,
@@ -362,10 +368,19 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
             "flex": 1,
             "justifyContent": "center",
           },
-          Object {
-            "color": "#C5CEE0",
-            "flex": 0,
-          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "color": "#C5CEE0",
+              "flex": 0,
+            },
+          ],
         ]
       }
     >
@@ -388,6 +403,7 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
             "width": 15,
           }
         }
+        variant="spinner"
       >
         <View
           style={
@@ -621,12 +637,10 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
-        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "right": 0,
@@ -643,10 +657,19 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
             "flex": 1,
             "justifyContent": "center",
           },
-          Object {
-            "color": "#C5CEE0",
-            "flex": 0,
-          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "color": "#C5CEE0",
+              "flex": 0,
+            },
+          ],
         ]
       }
     >
@@ -669,6 +692,7 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
             "width": 15,
           }
         }
+        variant="spinner"
       >
         <View
           style={
@@ -899,12 +923,10 @@ Array [
       onLayout={[Function]}
       style={
         Object {
-          "alignItems": "center",
           "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
@@ -921,10 +943,19 @@ Array [
               "flex": 1,
               "justifyContent": "center",
             },
-            Object {
-              "color": "#C5CEE0",
-              "flex": 0,
-            },
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
           ]
         }
       >
@@ -947,6 +978,7 @@ Array [
               "width": 15,
             }
           }
+          variant="spinner"
         >
           <View
             style={
@@ -1177,12 +1209,10 @@ Array [
       onLayout={[Function]}
       style={
         Object {
-          "alignItems": "center",
           "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
@@ -1199,10 +1229,19 @@ Array [
               "flex": 1,
               "justifyContent": "center",
             },
-            Object {
-              "color": "#C5CEE0",
-              "flex": 0,
-            },
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
           ]
         }
       >
@@ -1225,6 +1264,7 @@ Array [
               "width": 15,
             }
           }
+          variant="spinner"
         >
           <View
             style={
@@ -1508,14 +1548,6 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    fallbackComponent={
-      <Icon
-        color="neutral.50"
-        iconFamily="MaterialIcons"
-        iconName="error-outline"
-        size="l"
-      />
-    }
     isCached={true}
     loaderType="progressive"
     onLayout={[Function]}
@@ -1894,12 +1926,10 @@ Array [
       onLayout={[Function]}
       style={
         Object {
-          "alignItems": "center",
           "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
-          "justifyContent": "center",
           "left": 0,
           "position": "absolute",
           "right": 0,
@@ -1916,10 +1946,19 @@ Array [
               "flex": 1,
               "justifyContent": "center",
             },
-            Object {
-              "color": "#C5CEE0",
-              "flex": 0,
-            },
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
           ]
         }
       >
@@ -1942,6 +1981,7 @@ Array [
               "width": 15,
             }
           }
+          variant="spinner"
         >
           <View
             style={
@@ -2142,12 +2182,10 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
-        "justifyContent": "center",
         "left": 0,
         "position": "absolute",
         "right": 0,
@@ -2164,10 +2202,19 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
             "flex": 1,
             "justifyContent": "center",
           },
-          Object {
-            "color": "#C5CEE0",
-            "flex": 0,
-          },
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "color": "#C5CEE0",
+              "flex": 0,
+            },
+          ],
         ]
       }
     >
@@ -2190,6 +2237,7 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
             "width": 15,
           }
         }
+        variant="spinner"
       >
         <View
           style={

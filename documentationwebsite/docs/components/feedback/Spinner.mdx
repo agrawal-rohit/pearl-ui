@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 title: Spinner
 ---
 
@@ -20,11 +20,16 @@ import { Spinner } from "pearl-ui";
 
 ### Spinner sizes
 
-Use the `size` prop to change the size of spinner used. You can set the value to the keys available in <t>PearlTheme.components.Spinner["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of spinner. You can set the value to the keys available in <t>PearlTheme.components.Spinner["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
 
 ```jsx
-//  size="l" refers to the value of `theme.components.Spinner["sizes"]["l"]`
+<Spinner size="s" />
+
+<Spinner size="m" />
+
 <Spinner size="l" />
+
+<Spinner size="xl" />
 ```
 
 ### Spinner variants
@@ -32,9 +37,65 @@ Use the `size` prop to change the size of spinner used. You can set the value to
 Use the `variant` prop to change the type of spinner used. You can set the value to <t>"ball"</t>, <t>"bar"</t>, <t>"dot"</t>, <t>"spinner"</t>, <t>"pacman"</t>, <t>"pulse"</t>, <t>"skype"</t>, <t>"activity"</t>, and <t>"wave"</t>.
 
 ```jsx
-// variant="ball" refers to the value of `theme.components.Spinner["variants"]["ball"]`
+<Spinner variant="activity" />
+
 <Spinner variant="ball" />
+
+<Spinner variant="bar" />
+
+<Spinner variant="dot" />
+
+<Spinner variant="pacman" />
+
+<Spinner variant="pulse" />
+
+<Spinner variant="skype" />
+
+<Spinner variant="spinner" />
+
+<Spinner variant="wave" />
 ```
+
+### Spinner color scheme
+
+Use the `colorScheme` prop to change the color palette of the spinner.
+
+You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Spinner colorScheme="primary" />
+
+<Spinner colorScheme="success" />
+
+<Spinner colorScheme="warning" />
+
+<Spinner colorScheme="info" />
+
+<Spinner colorScheme="danger" />
+```
+
+### Representing loading state for components
+
+Use the `isLoading` prop to decide when to show the loading spinner. This is helpful when you want to show a loading state on any component based on some dynamic value.
+
+The `isExpanded` prop can also be used to span the spinner across the parent container while the content is not visible.
+
+```jsx
+const [loading, setLoading] = useState(true)
+
+useEffect(() => {
+  setTimeout(() => {
+    setLoading(false)
+  }, 2000)
+}, [])
+
+<Box w={200} h={200} backgroundColor="neutral.100">
+  <Spinner isExpanded isLoading={loading} />
+  {!loading && <Text>I am visible!</Text>}
+</Box>
+```
+
+Here, as soon as the screen loads, the Text would be invisible for 2 seconds while the Spinner is animating. After 2 seconds, the Spinner gets removed from the DOM and the Text component is rendered.
 
 ### Override Style
 
@@ -89,18 +150,19 @@ The `Spinner` component supports the following style props:
 - [color](../../getting-started/style-props#color-and-background-color) (Only the `color` prop is supported, not the `backgroundColor` props)
 - [margin and padding](../../getting-started/style-props#margin-and-padding)
 - [layout](../../getting-started/style-props#layout)
+- [position](../../getting-started/style-props#position)
 
 ### Additional props
 
-| Name               | Required | Type                                                                                                   | Default     | Description                                                                                       |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------- |
-| size               | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`       | Size of the spinner.                                                                              |
-| variant            | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"` | Type of the spinner.                                                                              |
-| isLoading          | false    | <t>boolean</t>                                                                                         | `true`      | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. |
-| isFullScreen       | false    | <t>boolean</t>                                                                                         | `false`     | Spinner container takes the entire screen size and centers the spinner within.                    |
-| animationDuration  | false    | <t>number</t>                                                                                          | `1200`      | Animation duration in ms.                                                                         |
-| animating          | false    | <t>boolean</t>                                                                                         | `true`      | Toggles the animation status.                                                                     |
-| accessibilityLabel | false    | <t>string</t>                                                                                          |             | The accessibility label of the spinner                                                            |
+| Name              | Required | Type                                                                                                   | Default      | Description                                                                                       |
+| ----------------- | -------- | ------------------------------------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- |
+| size              | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`        | Size of the spinner.                                                                              |
+| variant           | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"`  | Type of the spinner.                                                                              |
+| isLoading         | false    | <t>boolean</t>                                                                                         | `true`       | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. |
+| isExpanded        | false    | <t>boolean</t>                                                                                         | `false`      | Whether the Spinner spans the parent container and centers the spinner within.                    |
+| colorScheme       | false    | <t>PearlTheme.palette</t>                                                                              | `"primary""` | Active color palette of the spinner.                                                              |
+| animationDuration | false    | <t>number</t>                                                                                          | `1200`       | Animation duration in ms.                                                                         |
+| animating         | false    | <t>boolean</t>                                                                                         | `true`       | Toggles the animation status.                                                                     |
 
 ## Default Component Style
 

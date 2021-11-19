@@ -1,7 +1,6 @@
 import React from "react";
 import Text from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
 export type TextLinkProps = PressableProps & {
@@ -20,11 +19,15 @@ const TextLink: React.FC<TextLinkProps> = ({
   isDisabled = false,
   ...rest
 }) => {
-  let molecularProps = useMolecularComponentConfig("TextLink", rest, {
-    size: rest["size"],
-    variant: rest["variant"],
-  });
-  molecularProps = useColorScheme(colorScheme, molecularProps);
+  let molecularProps = useMolecularComponentConfig(
+    "TextLink",
+    rest,
+    {
+      size: rest["size"],
+      variant: rest["variant"],
+    },
+    colorScheme
+  );
 
   return (
     <Pressable

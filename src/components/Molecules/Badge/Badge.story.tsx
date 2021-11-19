@@ -1,56 +1,70 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
-import Screen from "../Screen/Screen";
+import Screen from "../../Atoms/Screen/Screen";
 import Badge from "./Badge";
-import Text from "../Text/Text";
-import Icon, { IconProps } from "../Icon/Icon";
-import { withBadge } from "./withBadge";
+import Text from "../../Atoms/Text/Text";
+import Icon, { IconProps } from "../../Atoms/Icon/Icon";
+import withBadge from "./withBadge";
 
 storiesOf("Badge", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
   .add("Sizes", () => (
     <>
       <Badge size="s" mb="s">
-        2
+        234+
       </Badge>
       <Badge size="m" mb="s">
-        2
+        234+
       </Badge>
 
       <Badge size="l" mb="s">
-        2
+        234+
       </Badge>
 
       <Badge size="xl" mb="s">
-        2
+        234+
       </Badge>
     </>
   ))
   .add("Variants", () => (
     <>
-      <Badge variant="primary" mb="s">
+      <Badge variant="rounded" mb="s">
         2
       </Badge>
-      <Badge variant="success" mb="s">
+      <Badge variant="square" mb="s">
+        NEW
+      </Badge>
+    </>
+  ))
+  .add("Color Schemes", () => (
+    <>
+      <Badge colorScheme="primary" mb="s">
+        2
+      </Badge>
+      <Badge colorScheme="success" mb="s">
         2
       </Badge>
 
-      <Badge variant="warning" mb="s">
+      <Badge colorScheme="warning" mb="s">
         2
       </Badge>
 
-      <Badge variant="info" mb="s">
+      <Badge colorScheme="info" mb="s">
         2
       </Badge>
 
-      <Badge variant="error" mb="s">
+      <Badge colorScheme="danger" mb="s">
         2
       </Badge>
     </>
   ))
   .add("Content type", () => (
     <>
+      <Badge mb="s"></Badge>
+
       <Badge mb="s">23</Badge>
+
+      <Badge mb="s">233+</Badge>
 
       <Badge>
         <Icon

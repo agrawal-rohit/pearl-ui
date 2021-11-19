@@ -63,6 +63,7 @@ const Text = React.forwardRef((props: ComponentProps, ref: any) => {
       size: props.size,
       variant: props.variant,
     },
+    "primary",
     textStyleFunctions
   );
 

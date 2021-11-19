@@ -8,12 +8,14 @@ import { useTheme } from "./useTheme";
 import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
+import { useColorScheme } from "./useColorScheme";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles
  * @param themeComponentKey Name of the component in theme.components who's config needs to be used
  * @param receivedProps Raw props passed to the component where the hook is being used
  * @param sizeAndVariantProps Custom size and variant configuration to use
+ * @param colorScheme Active color scheme of the component
  * @param styleFunctions List of style functions to use for computing the received style props
  * @returns
  */
@@ -24,6 +26,7 @@ export const useAtomicComponentConfig = (
     size: undefined,
     variant: undefined,
   },
+  colorScheme: string = "primary",
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[]
 ) => {
   const { theme } = useTheme();
@@ -115,6 +118,7 @@ export const useAtomicComponentConfig = (
     finalComponentProps = componentStyleConfig["baseStyle"];
   }
 
+  finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
   const componentStyles = useStyledProps(finalComponentProps, styleFunctions);
 
   return {

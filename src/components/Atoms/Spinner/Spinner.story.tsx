@@ -3,78 +3,48 @@ import { storiesOf } from "@storybook/react-native";
 import Screen from "../Screen/Screen";
 import Spinner from "./Spinner";
 import Box from "../Box/Box";
+import Stack from "../../Atoms/Stack/Stack";
 
 storiesOf("Spinner", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)
-  .add("ball", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="ball" isFullScreen />
-      <Spinner size="m" variant="ball" isFullScreen />
-      <Spinner size="l" variant="ball" isFullScreen />
-      <Spinner size="xl" variant="ball" isFullScreen />
-    </Box>
+  .add("Sizes", () => (
+    <Stack direction="horizontal" spacing="s">
+      <Spinner size="s" />
+      <Spinner size="m" />
+      <Spinner size="l" />
+      <Spinner size="xl" />
+    </Stack>
   ))
-  .add("bar", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="bar" isFullScreen />
-      <Spinner size="m" variant="bar" isFullScreen />
-      <Spinner size="l" variant="bar" isFullScreen />
-      <Spinner size="xl" variant="bar" isFullScreen />
-    </Box>
+  .add("Variants", () => (
+    <Stack direction="vertical" spacing="s">
+      <Spinner variant="activity" />
+      <Spinner variant="ball" />
+      <Spinner variant="bar" />
+      <Spinner variant="dot" />
+      <Spinner variant="pacman" />
+      <Spinner variant="pulse" />
+      <Spinner variant="skype" />
+      <Spinner variant="spinner" />
+      <Spinner variant="wave" />
+    </Stack>
   ))
-  .add("dot", () => (
+  .add("Color Schemes", () => (
     <Box flex={1}>
-      <Spinner size="s" variant="dot" isFullScreen />
-      <Spinner size="m" variant="dot" isFullScreen />
-      <Spinner size="l" variant="dot" isFullScreen />
-      <Spinner size="xl" variant="dot" isFullScreen />
+      <Spinner colorScheme="primary" />
+      <Spinner colorScheme="success" />
+      <Spinner colorScheme="warning" />
+      <Spinner colorScheme="info" />
+      <Spinner colorScheme="danger" />
     </Box>
   ))
-  .add("spinner", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="spinner" isFullScreen />
-      <Spinner size="m" variant="spinner" isFullScreen />
-      <Spinner size="l" variant="spinner" isFullScreen />
-      <Spinner size="xl" variant="spinner" isFullScreen />
-    </Box>
-  ))
-  .add("pacman", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="pacman" isFullScreen />
-      <Spinner size="m" variant="pacman" isFullScreen />
-      <Spinner size="l" variant="pacman" isFullScreen />
-      <Spinner size="xl" variant="pacman" isFullScreen />
-    </Box>
-  ))
-  .add("pulse", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="pulse" isFullScreen />
-      <Spinner size="m" variant="pulse" isFullScreen />
-      <Spinner size="l" variant="pulse" isFullScreen />
-      <Spinner size="xl" variant="pulse" isFullScreen />
-    </Box>
-  ))
-  .add("skype", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="skype" isFullScreen />
-      <Spinner size="m" variant="skype" isFullScreen />
-      <Spinner size="l" variant="skype" isFullScreen />
-      <Spinner size="xl" variant="skype" isFullScreen />
-    </Box>
-  ))
-  .add("activity", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="activity" isFullScreen />
-      <Spinner size="m" variant="activity" isFullScreen />
-      <Spinner size="l" variant="activity" isFullScreen />
-      <Spinner size="xl" variant="activity" isFullScreen />
-    </Box>
-  ))
-  .add("wave", () => (
-    <Box flexDirection="row">
-      <Spinner size="s" variant="wave" isFullScreen />
-      <Spinner size="m" variant="wave" isFullScreen />
-      <Spinner size="l" variant="wave" isFullScreen />
-      <Spinner size="xl" variant="wave" isFullScreen />
-    </Box>
+  .add("Expanded", () => (
+    <Stack direction="vertical" spacing="l">
+      <Box w={200} h={100} backgroundColor="neutral.200">
+        <Spinner />
+      </Box>
+
+      <Box w={200} h={100} backgroundColor="neutral.200">
+        <Spinner isExpanded />
+      </Box>
+    </Stack>
   ));
