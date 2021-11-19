@@ -21,7 +21,7 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { StyleFunctionContainer } from "../../../theme/src/types";
 
-export type TextProps = ColorProps &
+type TextStyleProps = ColorProps &
   BackgroundColorProps &
   OpacityProps &
   VisibleProps &
@@ -46,16 +46,15 @@ export const textStyleFunctions = [
   textShadow,
 ] as StyleFunctionContainer[];
 
-type RNTextProps = React.ComponentProps<typeof RNText> & {
-  children?: React.ReactNode;
-};
+type RNTextProps = React.ComponentProps<typeof RNText>;
 
-type ComponentProps = TextProps & Omit<RNTextProps, keyof TextProps>;
+export type TextProps = TextStyleProps &
+  Omit<RNTextProps, keyof TextStyleProps>;
 
 /**
  * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
  */
-const Text = React.forwardRef((props: ComponentProps, ref: any) => {
+const Text = React.forwardRef((props: TextProps, ref: any) => {
   const componentSpecificProps = useAtomicComponentConfig(
     "Text",
     props,

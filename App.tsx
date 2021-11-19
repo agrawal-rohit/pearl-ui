@@ -14,6 +14,8 @@ import Screen from "./src/components/Atoms/Screen/Screen";
 import Box from "./src/components/Atoms/Box/Box";
 import Text from "./src/components/Atoms/Text/Text";
 import Spinner from "./src/components/Atoms/Spinner/Spinner";
+import Center from "./src/components/Atoms/Center/Center";
+import Button from "./src/components/Molecules/Button/Button";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -25,23 +27,9 @@ const App = () => {
     "Poppins-ExtraBold": Poppins_800ExtraBold,
   });
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
   return (
-    <ThemeProvider>
+    <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Storybook />
-      {/* <Screen>
-        <Box w={200} h={200} backgroundColor="neutral.100">
-          <Spinner isExpanded isLoading={loading} />
-          {!loading && <Text>I am visible!</Text>}
-        </Box>
-      </Screen> */}
     </ThemeProvider>
   );
 };
