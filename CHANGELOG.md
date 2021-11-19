@@ -1,3 +1,23 @@
+# [1.6.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.5.0...v1.6.0) (2021-11-19)
+
+
+### Bug Fixes
+
+* **pressable:** fixed the bleeding android ripple effect with border radius applied to pressable ([db0d366](https://github.com/agrawal-rohit/pearl-ui/commit/db0d3662fff1896ac7a02d0b98fe5617280facc9))
+
+
+### Features
+
+* **badge:** added a Badge component and an HOC component to add badges to other components ([ec5adc1](https://github.com/agrawal-rohit/pearl-ui/commit/ec5adc1d61f00370df6d017513caa2c4fa34d5cb))
+* **image:** adding new Image component with caching and progressive loading ([5fa62ed](https://github.com/agrawal-rohit/pearl-ui/commit/5fa62ed3305324f0d780d7ed5f0ab07555d0bfa2))
+* **radio, radiogroup, checkboxgroup:** added new Radio, RadioGroup, and CheckBoxGroup components ([0836d4c](https://github.com/agrawal-rohit/pearl-ui/commit/0836d4cf27dd4dc286e806cacb741a9a8bbe455a))
+* **screen:** added scrollable, pull-to-refresh, and keyboard aware functionality to screen ([6bd2555](https://github.com/agrawal-rohit/pearl-ui/commit/6bd255548b3dcfc2193f6f1f8e8c8e2cbc03a87d))
+
+
+### Performance Improvements
+
+* added CheckBox, Badge, Radio, Image, and Screen components. Updates styles, core API, and docs ([d09e849](https://github.com/agrawal-rohit/pearl-ui/commit/d09e849c49b1976944deaae1ab06f52f5b369e9a))
+
 # [1.5.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.4.1...v1.5.0) (2021-11-11)
 
 
