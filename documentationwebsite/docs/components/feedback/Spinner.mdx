@@ -108,10 +108,6 @@ The Spinner component also supports a [variety of style props](#supported-style-
 
 ## Example
 
-:::info
-The `Spinner` component doesn't work on Expo web as the animation gets cut off after a few seconds. Please run the following example on either an Android or iOS device.
-:::
-
 import Snack from "../../../src/components/ExpoSnack";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -162,7 +158,6 @@ The `Spinner` component supports the following style props:
 | isExpanded        | false    | <t>boolean</t>                                                                                         | `false`      | Whether the Spinner spans the parent container and centers the spinner within.                    |
 | colorScheme       | false    | <t>PearlTheme.palette</t>                                                                              | `"primary""` | Active color palette of the spinner.                                                              |
 | animationDuration | false    | <t>number</t>                                                                                          | `1200`       | Animation duration in ms.                                                                         |
-| animating         | false    | <t>boolean</t>                                                                                         | `true`       | Toggles the animation status.                                                                     |
 
 ## Default Component Style
 
@@ -199,9 +194,19 @@ export default {
     },
     pacman: {},
     pulse: {},
-    skype: { count: 5, minScale: 0.2, maxScale: 1.0 },
+    skype: {
+      animationDuration: 1600,
+      count: 5,
+      minScale: 0.2,
+      maxScale: 1.0,
+    },
     activity: { count: 12 },
-    wave: { count: 4, waveFactor: 0.54, waveMode: "fill" },
+    wave: {
+      animationDuration: 1600,
+      count: 4,
+      waveFactor: 0.54,
+      waveMode: "fill",
+    },
   },
   defaults: {
     size: "m",
