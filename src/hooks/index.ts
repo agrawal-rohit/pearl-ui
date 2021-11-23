@@ -3,3 +3,5 @@ export { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 export { useStyledProps } from "./useStyledProps";
 export { useColorScheme } from "./useColorScheme";
 export { useTheme } from "./useTheme";
+export { useColorModeValue } from "./useColorModeValue";
+export { useAccessibleColor } from "./useAccessibleColor";
