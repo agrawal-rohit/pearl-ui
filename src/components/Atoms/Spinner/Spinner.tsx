@@ -1,16 +1,5 @@
 import React from "react";
 import {
-  BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
-} from "react-native-indicators";
-import {
   color,
   ColorProps,
   layout,
@@ -24,8 +13,16 @@ import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfi
 import SpinnerConfig from "./Spinner.config";
 import { StyleFunctionContainer } from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
-import { useColorScheme } from "../../../hooks/useColorScheme";
 import { StyleSheet, View } from "react-native";
+import BallIndicator from "./indicators/ball";
+import BarIndicator from "./indicators/bar";
+import DotIndicator from "./indicators/dot";
+import MaterialIndicator from "./indicators/material";
+import PacmanIndicator from "./indicators/pacman";
+import PulseIndicator from "./indicators/pulse";
+import SkypeIndicator from "./indicators/skype";
+import ActivityIndicator from "./indicators/activity";
+import WaveIndicator from "./indicators/wave";
 
 const indicatorStyleFunctions = [
   color,
@@ -53,8 +50,6 @@ export type SpinnerProps = SpinnerStyleProps &
     isExpanded?: boolean;
     /** Animation duration in ms.  */
     animationDuration?: number;
-    /** Toggles the animation status. */
-    animating?: boolean;
     /** Active color palette of the spinner */
     colorScheme?: string;
   };
@@ -67,7 +62,7 @@ const IndicatorTypeToComponentMap = {
   pacman: PacmanIndicator,
   pulse: PulseIndicator,
   skype: SkypeIndicator,
-  activity: UIActivityIndicator,
+  activity: ActivityIndicator,
   wave: WaveIndicator,
 };
 
@@ -76,9 +71,7 @@ const Spinner: React.FC<SpinnerProps> = ({
   isLoading = true,
   isExpanded = false,
   animationDuration = 1200,
-  animating = true,
   colorScheme = "primary",
-  accessibilityLabel = null,
   ...rest
 }) => {
   if (!isLoading) return null;
@@ -106,8 +99,8 @@ const Spinner: React.FC<SpinnerProps> = ({
         ? props.sizeMultiplier * props.spinnerSize
         : props.spinnerSize,
       accessible: true,
-      accessibilityLabel: accessibilityLabel
-        ? accessibilityLabel
+      accessibilityLabel: rest.accessibilityLabel
+        ? rest.accessibilityLabel
         : "Loading indicator",
       accessibilityRole: "progressbar" as AccessibilityRoles,
       style: [
