@@ -7,6 +7,8 @@ interface BadgeOptions {
   placement?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
   /** Amount of extra spacing to add between the badge and the base component */
   offset?: number;
+  /** Whether the badge is visible or not */
+  hidden?: boolean;
 }
 
 /**
@@ -22,8 +24,12 @@ const withBadge =
   ) =>
   (WrappedComponent: React.FC<P>) =>
   (props: P) => {
-    const shouldBeHidden = !badgeValue;
-    const { placement = "topRight", offset = 5, ...badgeProps } = options;
+    const {
+      placement = "topRight",
+      offset = 5,
+      hidden = false,
+      ...badgeProps
+    } = options;
 
     const computePositionForBadge = () => {
       const positionValue = -1 * offset;
@@ -44,7 +50,7 @@ const withBadge =
     return (
       <Box alignSelf="flex-start">
         <WrappedComponent {...(props as P)} />
-        {!shouldBeHidden && (
+        {!hidden && (
           <Badge
             {...badgeProps}
             position="absolute"
