@@ -30,9 +30,19 @@ export default {
     },
     pacman: {},
     pulse: {},
-    skype: { count: 5, minScale: 0.2, maxScale: 1.0 },
+    skype: {
+      animationDuration: 1600,
+      count: 5,
+      minScale: 0.2,
+      maxScale: 1.0,
+    },
     activity: { count: 12 },
-    wave: { count: 4, waveFactor: 0.54, waveMode: "fill" },
+    wave: {
+      animationDuration: 1600,
+      count: 4,
+      waveFactor: 0.54,
+      waveMode: "fill",
+    },
   },
   defaults: {
     size: "m",

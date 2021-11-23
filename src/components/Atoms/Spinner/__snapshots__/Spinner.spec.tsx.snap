@@ -25,17 +25,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -229,17 +222,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#A2D608"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -433,17 +419,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#FFBF35"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -637,17 +616,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#40D2F7"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -841,17 +813,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#FF4B42"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -1050,17 +1015,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={10}
       style={
         Object {
           "height": 10,
-          "opacity": 1,
           "width": 10,
         }
       }
@@ -1254,17 +1212,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -1458,17 +1409,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={20}
       style={
         Object {
           "height": 20,
-          "opacity": 1,
           "width": 20,
         }
       }
@@ -1662,17 +1606,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={30}
       style={
         Object {
           "height": 30,
-          "opacity": 1,
           "width": 30,
         }
       }
@@ -1871,17 +1808,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -2273,17 +2203,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -2576,13 +2499,6 @@ Array [
     accessibilityRole="progressbar"
     accessible={true}
     animating={true}
-    animationDuration={1200}
-    animationEasing={[Function]}
-    color="#6A7BFF"
-    hideAnimationDuration={200}
-    interaction={true}
-    renderComponent={[Function]}
-    size={15}
     spinnerSize={15}
     style={
       Object {
@@ -2591,14 +2507,16 @@ Array [
         "flex": 0,
         "flexDirection": "row",
         "justifyContent": "center",
-        "opacity": 1,
       }
     }
     variant="bar"
   >
     <View
+      onLayout={[Function]}
       style={
         Object {
+          "borderRadius": undefined,
+          "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
           "width": 3,
@@ -2639,8 +2557,11 @@ Array [
       />
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
+          "borderRadius": undefined,
+          "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
           "width": 3,
@@ -2681,8 +2602,11 @@ Array [
       />
     </View>
     <View
+      onLayout={[Function]}
       style={
         Object {
+          "borderRadius": undefined,
+          "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
           "width": 3,
@@ -2728,13 +2652,6 @@ Array [
     accessibilityRole="progressbar"
     accessible={true}
     animating={true}
-    animationDuration={1200}
-    animationEasing={[Function]}
-    color="#6A7BFF"
-    hideAnimationDuration={200}
-    interaction={true}
-    renderComponent={[Function]}
-    size={3}
     sizeMultiplier={0.2}
     spinnerSize={15}
     style={
@@ -2744,7 +2661,6 @@ Array [
         "flex": 0,
         "flexDirection": "row",
         "justifyContent": "center",
-        "opacity": 1,
       }
     }
     variant="dot"
@@ -2837,17 +2753,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 18.75,
         }
       }
@@ -2995,17 +2904,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -3096,19 +2998,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      maxScale={1}
-      minScale={0.2}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -3309,17 +3202,10 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={3600}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
@@ -3513,23 +3399,14 @@ Array [
       accessibilityRole="progressbar"
       accessible={true}
       animating={true}
-      animationDuration={1200}
-      animationEasing={[Function]}
-      color="#6A7BFF"
-      hideAnimationDuration={200}
-      interaction={true}
-      renderComponent={[Function]}
       spinnerSize={15}
       style={
         Object {
           "height": 15,
-          "opacity": 1,
           "width": 15,
         }
       }
       variant="wave"
-      waveFactor={0.54}
-      waveMode="fill"
     >
       <View
         style={
@@ -3722,17 +3599,10 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
           accessibilityRole="progressbar"
           accessible={true}
           animating={true}
-          animationDuration={3600}
-          animationEasing={[Function]}
-          color="#6A7BFF"
-          hideAnimationDuration={200}
-          interaction={true}
-          renderComponent={[Function]}
           spinnerSize={15}
           style={
             Object {
               "height": 15,
-              "opacity": 1,
               "width": 15,
             }
           }
@@ -3957,17 +3827,10 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
           accessibilityRole="progressbar"
           accessible={true}
           animating={true}
-          animationDuration={3600}
-          animationEasing={[Function]}
-          color="#6A7BFF"
-          hideAnimationDuration={200}
-          interaction={true}
-          renderComponent={[Function]}
           spinnerSize={15}
           style={
             Object {
               "height": 15,
-              "opacity": 1,
               "width": 15,
             }
           }
