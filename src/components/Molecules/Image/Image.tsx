@@ -243,7 +243,9 @@ const Image: React.FC<ImageProps> = ({
       return (
         <RNImage
           source={molecularProps.root.previewSource}
-          blurRadius={Platform.OS === "android" ? 0.5 : 0}
+          blurRadius={
+            Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
+          }
           style={[
             StyleSheet.absoluteFill,
             {
@@ -285,7 +287,7 @@ const Image: React.FC<ImageProps> = ({
         }
 
         // Render a static overlay over the preview image
-        if (Platform.OS === "android") {
+        if (Platform.OS === "android" || Platform.OS === "web") {
           return (
             <Animated.View
               style={[
@@ -332,7 +334,7 @@ const Image: React.FC<ImageProps> = ({
       }
     }
 
-    if (molecularProps.root.loaderType === "spinner" && !error) {
+    if (molecularProps.root.loaderType === "spinner" && !error && !uri) {
       // Load the spinner component
       return (
         <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
@@ -355,7 +357,7 @@ const Image: React.FC<ImageProps> = ({
         Animated.timing(intensity, {
           duration: molecularProps.root.transitionDuration,
           toValue: 0,
-          useNativeDriver: Platform.OS === "android",
+          useNativeDriver: Platform.OS === "android" || Platform.OS !== "web",
         }).start();
       }
     }
