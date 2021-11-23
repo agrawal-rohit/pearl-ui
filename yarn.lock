@@ -4295,18 +4295,10 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
-"@types/react-native-indicators@^0.16.1":
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/@types/react-native-indicators/-/react-native-indicators-0.16.1.tgz#9bf7d6d044509f7a4179987a19ceb1603108cd04"
-  integrity sha512-L7SCFjTdDzwNciAYflAdWuSwgj6qP2Zd+uKFcFBkovG/O5qX7P9aKkmzYQz/lXIJtiPWgNEG1xIeJoHLed31Ew==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
-
-"@types/react-native@*", "@types/react-native@~0.66.4":
-  version "0.66.4"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.66.4.tgz#075d9521de1ee53a4f3eff729133d897039c0d7f"
-  integrity sha512-Aby37oZ0S8LS4abOVWbBgChfHLZsx3skcj2QJU9ZHPhA1h6+yBbdBH2wJLxIUXfYT1Ejkwuv8n5u+/VxLzzcmA==
+"@types/react-native@~0.66.5":
+  version "0.66.5"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.66.5.tgz#a9bb2fdf6355c4a4426904eae95077d1a462f5c6"
+  integrity sha512-hTLfKfepd+A+jUpgj+OhHtW7UlIvhyHyQ4mOCnRfEjhxq4PGvspETIHIcTV2DEfnWNX3Gi9Q0gGINrU8AG7YeA==
   dependencies:
     "@types/react" "*"
 
@@ -15275,13 +15267,6 @@ react-native-builder-bob@^0.18.2:
     yargs "^16.2.0"
   optionalDependencies:
     jetifier "^1.6.6"
-
-react-native-indicators@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/react-native-indicators/-/react-native-indicators-0.17.0.tgz#92f95efaf5fb53be576dfe4e1980a25655a93f55"
-  integrity sha512-s23em477GHGxWeGczWrixScAZD6tQU4mx1fttlrwhEGKOxhBgp55Kh3RoD9Wj4yna4e5W35xQNoPqoJAT6QW5A==
-  dependencies:
-    prop-types "^15.5.10"
 
 react-native-iphone-x-helper@^1.0.3:
   version "1.3.1"
