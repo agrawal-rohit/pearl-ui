@@ -1,0 +1,793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
+Array [
+  <View
+    direction="horizontal"
+    onLayout={[Function]}
+    spacing="s"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        isCached={false}
+        loaderType="spinner"
+        onLayout={[Function]}
+        size="s"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "display": "flex",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          }
+        }
+        tint="dark"
+        transitionDuration={300}
+      >
+        <Image
+          backgroundColor="neutral.100"
+          borderRadius="l"
+          isCached={false}
+          loaderType="spinner"
+          size="s"
+          source={
+            Object {
+              "uri": "https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderBottomLeftRadius": undefined,
+                "borderBottomRightRadius": undefined,
+                "borderRadius": 1000,
+                "borderTopLeftRadius": undefined,
+                "borderTopRightRadius": undefined,
+                "height": "100%",
+                "width": "100%",
+                "zIndex": 2,
+              },
+            ]
+          }
+          tint="dark"
+          transitionDuration={300}
+        />
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        isCached={false}
+        loaderType="spinner"
+        onLayout={[Function]}
+        size="m"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "width": 55,
+          }
+        }
+        tint="dark"
+        transitionDuration={300}
+      >
+        <Image
+          backgroundColor="neutral.100"
+          borderRadius="l"
+          isCached={false}
+          loaderType="spinner"
+          size="m"
+          source={
+            Object {
+              "uri": "https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderBottomLeftRadius": undefined,
+                "borderBottomRightRadius": undefined,
+                "borderRadius": 1000,
+                "borderTopLeftRadius": undefined,
+                "borderTopRightRadius": undefined,
+                "height": "100%",
+                "width": "100%",
+                "zIndex": 2,
+              },
+            ]
+          }
+          tint="dark"
+          transitionDuration={300}
+        />
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        isCached={false}
+        loaderType="spinner"
+        onLayout={[Function]}
+        size="l"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "display": "flex",
+            "height": 70,
+            "justifyContent": "center",
+            "width": 70,
+          }
+        }
+        tint="dark"
+        transitionDuration={300}
+      >
+        <Image
+          backgroundColor="neutral.100"
+          borderRadius="l"
+          isCached={false}
+          loaderType="spinner"
+          size="l"
+          source={
+            Object {
+              "uri": "https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderBottomLeftRadius": undefined,
+                "borderBottomRightRadius": undefined,
+                "borderRadius": 1000,
+                "borderTopLeftRadius": undefined,
+                "borderTopRightRadius": undefined,
+                "height": "100%",
+                "width": "100%",
+                "zIndex": 2,
+              },
+            ]
+          }
+          tint="dark"
+          transitionDuration={300}
+        />
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        isCached={false}
+        loaderType="spinner"
+        onLayout={[Function]}
+        size="xl"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "display": "flex",
+            "height": 85,
+            "justifyContent": "center",
+            "width": 85,
+          }
+        }
+        tint="dark"
+        transitionDuration={300}
+      >
+        <Image
+          backgroundColor="neutral.100"
+          borderRadius="l"
+          isCached={false}
+          loaderType="spinner"
+          size="xl"
+          source={
+            Object {
+              "uri": "https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderBottomLeftRadius": undefined,
+                "borderBottomRightRadius": undefined,
+                "borderRadius": 1000,
+                "borderTopLeftRadius": undefined,
+                "borderTopRightRadius": undefined,
+                "height": "100%",
+                "width": "100%",
+                "zIndex": 2,
+              },
+            ]
+          }
+          tint="dark"
+          transitionDuration={300}
+        />
+      </View>
+    </View>
+  </View>,
+  <View
+    direction="horizontal"
+    onLayout={[Function]}
+    spacing="s"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginTop": 12,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        size="s"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 13.799999999999999,
+              "fontWeight": "400",
+              "lineHeight": 23,
+            }
+          }
+          variant="caption"
+        >
+          RA
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        size="m"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "width": 55,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 20.7,
+              "fontWeight": "400",
+              "lineHeight": 29.9,
+            }
+          }
+          variant="p1"
+        >
+          J
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        size="l"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 70,
+            "justifyContent": "center",
+            "width": 70,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 20.7,
+              "fontWeight": "400",
+              "lineHeight": 29.9,
+            }
+          }
+          variant="p1"
+        >
+          SG
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderRadius": undefined,
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        size="xl"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 85,
+            "justifyContent": "center",
+            "width": 85,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 32.199999999999996,
+              "fontWeight": "400",
+              "lineHeight": 41.4,
+            }
+          }
+          variant="p1"
+        >
+          Y
+        </Text>
+      </View>
+    </View>
+  </View>,
+]
+`;
+
+exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
+<View
+  direction="horizontal"
+  onLayout={[Function]}
+  spacing="s"
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "borderRadius": undefined,
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderRadius": undefined,
+        "display": "flex",
+        "flexDirection": "row",
+        "marginRight": 12,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "borderRadius": undefined,
+          "display": "flex",
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        isCached={false}
+        loaderType="spinner"
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "width": 55,
+          }
+        }
+        tint="dark"
+        transitionDuration={300}
+      >
+        <Image
+          backgroundColor="neutral.100"
+          borderRadius="l"
+          isCached={false}
+          loaderType="spinner"
+          source={
+            Object {
+              "uri": "https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderBottomLeftRadius": undefined,
+                "borderBottomRightRadius": undefined,
+                "borderRadius": 1000,
+                "borderTopLeftRadius": undefined,
+                "borderTopRightRadius": undefined,
+                "height": "100%",
+                "width": "100%",
+                "zIndex": 2,
+              },
+            ]
+          }
+          tint="dark"
+          transitionDuration={300}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        size="s"
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#A2D608",
+            "borderRadius": 1000,
+            "bottom": -0,
+            "display": "flex",
+            "height": 15,
+            "justifyContent": "center",
+            "minWidth": 15,
+            "position": "absolute",
+            "right": -0,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderRadius": undefined,
+        "display": "flex",
+        "flexDirection": "row",
+        "marginRight": 12,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "borderRadius": undefined,
+          "display": "flex",
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#00ffff",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "width": 55,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#1A2138",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 20.7,
+              "fontWeight": "400",
+              "lineHeight": 29.9,
+            }
+          }
+          variant="p1"
+        >
+          RA
+        </Text>
+      </View>
+      <View
+        onLayout={[Function]}
+        size="s"
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FF4B42",
+            "borderRadius": 1000,
+            "bottom": -0,
+            "display": "flex",
+            "height": 15,
+            "justifyContent": "center",
+            "minWidth": 15,
+            "position": "absolute",
+            "right": -0,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontWeight": "500",
+              "lineHeight": 16.099999999999998,
+              "paddingHorizontal": 4,
+            }
+          }
+          variant="btn4"
+        >
+          0
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderRadius": undefined,
+        "display": "flex",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "borderRadius": undefined,
+          "display": "flex",
+        }
+      }
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderRadius": 1000,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "width": 55,
+          }
+        }
+      />
+      <View
+        onLayout={[Function]}
+        size="m"
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 1000,
+            "bottom": -5,
+            "display": "flex",
+            "height": 25,
+            "justifyContent": "center",
+            "minWidth": 25,
+            "position": "absolute",
+            "right": -5,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+</View>
+`;

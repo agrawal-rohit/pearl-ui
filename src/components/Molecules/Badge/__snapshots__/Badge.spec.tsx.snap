@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Badge passes the snapshot test for different color schemes 1`] = `
+exports[`Molecules/Badge passes the snapshot test for different color schemes 1`] = `
 Array [
   <View
     colorScheme="primary"
@@ -190,7 +190,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Badge passes the snapshot test for different sizes 1`] = `
+exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
 Array [
   <View
     onLayout={[Function]}
@@ -339,7 +339,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Badge passes the snapshot test for different values types 1`] = `
+exports[`Molecules/Badge passes the snapshot test for different values types 1`] = `
 Array [
   <View
     onLayout={[Function]}
@@ -446,7 +446,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Badge passes the snapshot test for different variants 1`] = `
+exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
 Array [
   <View
     onLayout={[Function]}
@@ -525,7 +525,7 @@ Array [
 ]
 `;
 
-exports[`Atoms/Badge withBadge HOC works as expected 1`] = `
+exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
 Array [
   <View
     onLayout={[Function]}
