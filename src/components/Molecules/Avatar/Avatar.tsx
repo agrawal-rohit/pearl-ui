@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import { ImageProps } from "../../Molecules/Image/Image";
-import Image from "../../Molecules/Image/Image";
+import { ImageProps } from "../Image/Image";
+import Image from "../Image/Image";
 import { ImageSourcePropType } from "react-native";
-import Box from "../Box/Box";
-import Text from "../Text/Text";
+import Box from "../../Atoms/Box/Box";
+import Text from "../../Atoms/Text/Text";
 import namedColors from "../../../theme/utils/namedColors.json";
 import { getKeys } from "../../../theme/utils/typeHelpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
@@ -94,8 +94,12 @@ const Avatar: React.FC<AvatarProps> = ({
   // Render a fallback
   return (
     <Box
-      backgroundColor={randomColor}
       {...molecularProps.root}
+      backgroundColor={
+        molecularProps.root.backgroundColor ||
+        molecularProps.root.bg ||
+        randomColor
+      }
       justifyContent="center"
       alignItems="center"
     >

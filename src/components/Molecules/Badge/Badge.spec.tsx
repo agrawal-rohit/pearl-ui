@@ -7,7 +7,7 @@ import withBadge from "./withBadge";
 
 jest.useFakeTimers();
 
-describe("Atoms/Badge", () => {
+describe("Molecules/Badge", () => {
   it("passes the snapshot test for different sizes", () => {
     const tree = render(
       <ThemeProvider>
