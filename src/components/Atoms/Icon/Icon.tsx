@@ -78,6 +78,8 @@ export type IconProps = IconStyleProps &
     variant?: string;
     /** The accessibility label of the icon */
     accessibilityLabel?: string;
+    /** Size of the icon in pixels to override the component style size */
+    rawSize?: number;
   };
 
 const iconFamilyMapping = {
@@ -102,7 +104,8 @@ const Icon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
   size = "m",
-  accessibilityLabel = null,
+  accessibilityLabel = undefined,
+  rawSize = undefined,
   ...rest
 }) => {
   const props = useAtomicComponentConfig(
@@ -126,7 +129,7 @@ const Icon: React.FC<IconProps> = ({
       }
       name={iconName}
       {...props}
-      size={responsiveSize(props.size)}
+      size={rawSize || responsiveSize(props.size)}
     ></IconToUse>
   );
 };

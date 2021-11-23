@@ -19,6 +19,7 @@ import CheckBoxConfig from "../../../components/Molecules/CheckBox/CheckBox.conf
 import ImageConfig from "../../../components/Molecules/Image/Image.config";
 import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 import BadgeConfig from "../../../components/Molecules/Badge/Badge.config";
+import AvatarConfig from "../../../components/Atoms/Avatar/Avatar.config";
 
 /**
  * Override particular parts of the baseTheme to create a custom theme as per you app's needs
@@ -57,5 +58,6 @@ export const baseTheme: BasePearlTheme = {
     Badge: BadgeConfig,
     Divider: DividerConfig,
     Image: ImageConfig,
+    Avatar: AvatarConfig,
   },
 };
