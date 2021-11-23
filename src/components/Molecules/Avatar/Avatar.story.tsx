@@ -1,10 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react-native";
-import Screen from "../Screen/Screen";
+import Screen from "../../Atoms/Screen/Screen";
 import Avatar, { AvatarProps } from "./Avatar";
-import Stack from "../Stack/Stack";
-import Icon from "../Icon/Icon";
-import withBadge from "../../Molecules/Badge/withBadge";
+import Stack from "../../Atoms/Stack/Stack";
+import Icon from "../../Atoms/Icon/Icon";
+import withBadge from "../Badge/withBadge";
 
 storiesOf("Avatar", module)
   .addDecorator((getStory) => <Screen>{getStory()}</Screen>)

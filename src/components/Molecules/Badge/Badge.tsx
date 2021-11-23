@@ -27,7 +27,7 @@ const Badge: React.FC<BadgeProps> = ({ children, ...rest }) => {
   );
 
   const renderValue = () => {
-    if (!children) return null;
+    if (children === undefined) return null;
 
     if (Array.isArray(children))
       children = (children as Array<string | number>).join("");
