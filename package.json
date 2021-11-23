@@ -34,7 +34,6 @@
     "@storybook/addon-toolbars": "^6.3.10",
     "@types/crypto-js": "^4.0.2",
     "@types/lodash": "^4.14.177",
-    "@types/react-native-indicators": "^0.16.1",
     "@types/react-test-renderer": "^17.0.1",
     "crypto-js": "^4.1.1",
     "eslint-config-prettier": "^8.3.0",

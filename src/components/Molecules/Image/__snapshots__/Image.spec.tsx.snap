@@ -104,17 +104,10 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
         accessibilityRole="progressbar"
         accessible={true}
         animating={true}
-        animationDuration={3600}
-        animationEasing={[Function]}
-        color="#C5CEE0"
-        hideAnimationDuration={200}
-        interaction={true}
-        renderComponent={[Function]}
         spinnerSize={15}
         style={
           Object {
             "height": 15,
-            "opacity": 1,
             "width": 15,
           }
         }
@@ -389,17 +382,10 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
         accessibilityRole="progressbar"
         accessible={true}
         animating={true}
-        animationDuration={3600}
-        animationEasing={[Function]}
-        color="#C5CEE0"
-        hideAnimationDuration={200}
-        interaction={true}
-        renderComponent={[Function]}
         spinnerSize={15}
         style={
           Object {
             "height": 15,
-            "opacity": 1,
             "width": 15,
           }
         }
@@ -678,17 +664,10 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
         accessibilityRole="progressbar"
         accessible={true}
         animating={true}
-        animationDuration={3600}
-        animationEasing={[Function]}
-        color="#C5CEE0"
-        hideAnimationDuration={200}
-        interaction={true}
-        renderComponent={[Function]}
         spinnerSize={15}
         style={
           Object {
             "height": 15,
-            "opacity": 1,
             "width": 15,
           }
         }
@@ -964,17 +943,10 @@ Array [
           accessibilityRole="progressbar"
           accessible={true}
           animating={true}
-          animationDuration={3600}
-          animationEasing={[Function]}
-          color="#C5CEE0"
-          hideAnimationDuration={200}
-          interaction={true}
-          renderComponent={[Function]}
           spinnerSize={15}
           style={
             Object {
               "height": 15,
-              "opacity": 1,
               "width": 15,
             }
           }
@@ -1250,17 +1222,10 @@ Array [
           accessibilityRole="progressbar"
           accessible={true}
           animating={true}
-          animationDuration={3600}
-          animationEasing={[Function]}
-          color="#C5CEE0"
-          hideAnimationDuration={200}
-          interaction={true}
-          renderComponent={[Function]}
           spinnerSize={15}
           style={
             Object {
               "height": 15,
-              "opacity": 1,
               "width": 15,
             }
           }
@@ -1967,17 +1932,10 @@ Array [
           accessibilityRole="progressbar"
           accessible={true}
           animating={true}
-          animationDuration={3600}
-          animationEasing={[Function]}
-          color="#C5CEE0"
-          hideAnimationDuration={200}
-          interaction={true}
-          renderComponent={[Function]}
           spinnerSize={15}
           style={
             Object {
               "height": 15,
-              "opacity": 1,
               "width": 15,
             }
           }
@@ -2223,17 +2181,10 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
         accessibilityRole="progressbar"
         accessible={true}
         animating={true}
-        animationDuration={3600}
-        animationEasing={[Function]}
-        color="#C5CEE0"
-        hideAnimationDuration={200}
-        interaction={true}
-        renderComponent={[Function]}
         spinnerSize={15}
         style={
           Object {
             "height": 15,
-            "opacity": 1,
             "width": 15,
           }
         }
