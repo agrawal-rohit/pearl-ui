@@ -4,7 +4,6 @@
 // https://github.com/elderfo/react-native-storybook-loader.git
 
 function loadStories() {
-  require("../src/components/Molecules/Avatar/Avatar.story");
   require("../src/components/Atoms/Box/Box.story");
   require("../src/components/Atoms/Center/Center.story");
   require("../src/components/Atoms/Divider/Divider.story");
@@ -14,6 +13,7 @@ function loadStories() {
   require("../src/components/Atoms/Spinner/Spinner.story");
   require("../src/components/Atoms/Stack/Stack.story");
   require("../src/components/Atoms/Text/Text.story");
+  require("../src/components/Molecules/Avatar/Avatar.story");
   require("../src/components/Molecules/Badge/Badge.story");
   require("../src/components/Molecules/Button/Button.story");
   require("../src/components/Molecules/CheckBox/CheckBox.story");
@@ -24,7 +24,6 @@ function loadStories() {
 }
 
 const stories = [
-  "../src/components/Atoms/Avatar/Avatar.story",
   "../src/components/Atoms/Box/Box.story",
   "../src/components/Atoms/Center/Center.story",
   "../src/components/Atoms/Divider/Divider.story",
@@ -34,6 +33,7 @@ const stories = [
   "../src/components/Atoms/Spinner/Spinner.story",
   "../src/components/Atoms/Stack/Stack.story",
   "../src/components/Atoms/Text/Text.story",
+  "../src/components/Molecules/Avatar/Avatar.story",
   "../src/components/Molecules/Badge/Badge.story",
   "../src/components/Molecules/Button/Button.story",
   "../src/components/Molecules/CheckBox/CheckBox.story",

@@ -108,6 +108,29 @@ html[data-theme="dark"] .header-twitter-link:before {
 
 /* Navbar Icons END */
 
+/*
+  Mark pages as "new" using href attribute:
+*/
+.menu__link[href*="Image"]:after,
+.menu__link[href*="CheckBox"]:after,
+.menu__link[href*="Radio"]:after,
+.menu__link[href*="Badge"]:after {
+  content: "new";
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-right: -6px;
+  padding: 3px 6px;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 3px;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  height: 10px;
+  font-weight: 600;
+}
+
 code {
   background-color: var(--code-text-bgcolor);
   padding: 2px 5px;
