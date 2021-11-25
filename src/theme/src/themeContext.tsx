@@ -23,7 +23,7 @@ interface ThemeProviderProps {
   /** A flag that describes the loading status of the custom fonts */
   haveFontsLoaded?: boolean;
   /**React children */
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const themeContext = createContext({} as IThemeContext);
