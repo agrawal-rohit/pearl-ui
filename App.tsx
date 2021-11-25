@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Storybook from "./storybook";
 import {
   useFonts,
   Poppins_300Light,
@@ -27,11 +26,7 @@ const App = () => {
     "Poppins-ExtraBold": Poppins_800ExtraBold,
   });
 
-  return (
-    <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
-      <Storybook />
-    </ThemeProvider>
-  );
+  return <ThemeProvider haveFontsLoaded={haveFontsLoaded}></ThemeProvider>;
 };
 
 export default App;

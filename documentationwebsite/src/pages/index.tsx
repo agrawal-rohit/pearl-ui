@@ -1,75 +1,135 @@
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import useThemeContext from "@theme/hooks/useThemeContext"; //docs: https://v2.docusaurus.io/docs/2.0.0-alpha.69/theme-classic#usethemecontext
+
+// 1. import `ChakraProvider` component
+import {
+  VStack,
+  ChakraProvider,
+  Container,
+  Text,
+  ColorModeScript,
+  useColorModeValue,
+  Stack,
+  Heading,
+  Box,
+  LightMode,
+  Button,
+} from "@chakra-ui/react";
 
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
+import { theme } from "../theme/chakraTheme";
+import { useCustomThemeContext } from "../hooks/useCustomThemeContext";
+import Link from "@docusaurus/Link";
+import FeatureSection from "../components/FeatureSection";
 
 function HomepageHeader() {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useCustomThemeContext();
 
   return (
-    <header className={clsx("hero", styles.heroBanner)}>
-      <div className="container">
-        <h1 className={styles.heroTitle}>
-          Build accessible mobile apps with a{" "}
-          <span style={{ color: "var(--ifm-color-primary)" }}>
-            design-first
-          </span>{" "}
-          approach
-        </h1>
-        <p className={styles.heroDescription}>
+    <VStack spacing={2}>
+      <Box>
+        <Heading
+          as="h1"
+          fontSize={{ base: 32, sm: "4xl", md: "4xl", lg: "6xl" }}
+          fontWeight="extrabold"
+          marginTop={{ base: 6, md: 14 }}
+          maxW="60rem"
+          mx="auto"
+          lineHeight="1.2"
+          textAlign="center"
+          letterSpacing="tight"
+          color={useColorModeValue("gray.700", "white")}
+        >
+          Build consistent cross-platform mobile apps with{" "}
+          <span style={{ color: "var(--ifm-color-primary)" }}>speed</span>
+        </Heading>
+
+        <Text
+          fontSize={{ base: 17, md: "lg" }}
+          mt="6"
+          maxW="3xl"
+          mx="auto"
+          fontWeight="500"
+          lineHeight="7"
+          textAlign="center"
+          color={useColorModeValue("gray.600", "gray.400")}
+        >
           Pearl UI is a powerful UI toolkit that helps you build beautiful
           production-ready mobile apps right out of the box. Skip the designer,
           write cleaner code, and get your product to market faster!
-        </p>
-        <Link
-          className={clsx(
-            "button button--primary button--lg",
-            styles.heroButton
-          )}
-          to="/docs/getting-started/introduction"
-          style={{ marginRight: 10 }}
-        >
-          Get Started
-        </Link>
+        </Text>
 
-        <a
-          className={clsx(
-            "button button--secondary button--lg",
-            styles.heroButton
-          )}
-          href="https://github.com/agrawal-rohit/pearl-ui"
-          target="_blank"
+        <Stack
+          justify="center"
+          direction={{ base: "column", md: "row" }}
+          mt="7"
+          mb="4"
+          spacing="2"
         >
-          Github
-        </a>
+          <LightMode>
+            <Button
+              as={Link}
+              to="/docs/getting-started/introduction"
+              size="lg"
+              colorScheme="brand"
+              sx={{
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              Read the Docs
+            </Button>
+            <Button
+              as="a"
+              target="_blank"
+              href="https://github.com/agrawal-rohit/pearl-ui"
+              size="lg"
+              color="#1a202c"
+              sx={{
+                "&:hover": {
+                  color: "#1a202c",
+                  backgroundColor: "gray.300",
+                },
+              }}
+            >
+              Github
+            </Button>
+          </LightMode>
+        </Stack>
+      </Box>
 
-        <br />
-        <br />
-        <a
-          href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-review&utm_medium=badge&utm_souce=badge-pearl-ui#discussion-body"
-          target="_blank"
-        >
-          <img
-            src={`https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=${
-              isDarkTheme ? "dark" : "light"
-            }`}
-            alt="Pearl UI - Design system driven UI framework for React Native | Product Hunt"
-            style={{ width: 250, height: 54 }}
-            width="250"
-            height="54"
-          />
-        </a>
-      </div>
-    </header>
+      <a
+        href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-review&utm_medium=badge&utm_souce=badge-pearl-ui#discussion-body"
+        target="_blank"
+        rel="noreferrer"
+        style={{ marginBottom: 50 }}
+      >
+        <img
+          src={`https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=${
+            isDarkTheme ? "dark" : "light"
+          }`}
+          alt="Pearl UI - Design system driven UI framework for React Native | Product Hunt"
+          style={{ width: 250, height: 54 }}
+          width="250"
+          height="54"
+        />
+      </a>
+    </VStack>
   );
 }
+
+// TODO: Add themeability/design system approach feature section
+// TODO: Add dark mode compatibility feature section
+// TODO: Add accessiblity feature section
+// TODO: Add style props feature section
+// TODO: Add atomic design feature section
+// TODO: Add consistency feature section
 
 function FeaturesSection() {
   const features = [
@@ -105,48 +165,32 @@ function FeaturesSection() {
     },
   ];
 
-  const renderFeatureCards = (features) => {
-    return features.map((feature, key) => (
-      <div key={key} className="col col--4">
-        <div className={clsx("card", styles.featureCard)}>
-          <div className={clsx("card__header", styles.featureCardTitle)}>
-            <div className={styles.featureCardIcon}>{feature.icon}</div>
-            <h3>{feature.title}</h3>
-          </div>
-          <div className={clsx("card__body", styles.featureCardBody)}>
-            <p dangerouslySetInnerHTML={{ __html: feature.description }}></p>
-          </div>
-        </div>
-      </div>
-    ));
-  };
-
-  return (
-    <section>
-      <div className="container">
-        <div className="row">{renderFeatureCards(features)}</div>
-      </div>
-    </section>
-  );
+  return null;
 }
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title} - ${siteConfig.tagline}`}
-      description="Pearl UI is a design-system-driven framework for developers to build
+    <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>
+        <Layout
+          title={`${siteConfig.title} - ${siteConfig.tagline}`}
+          description="Pearl UI is a design-system-driven framework for developers to build
       beautiful, accessible mobile apps straight out of the box. Take your
       idea from a design mockup to a finished product at the speed of light!"
-    >
-      {/* <Head>
-        <script async src="https://snack.expo.dev/embed.js"></script>
-      </Head> */}
-      <HomepageHeader />
-      <br />
-      <FeaturesSection />
-      <br />
-      <br />
-    </Layout>
+        >
+          <Container maxW="container.xl" px={{ base: "7", md: "" }}>
+            <HomepageHeader />
+            <br />
+            <br />
+            <FeaturesSection />
+            <br />
+            <br />
+            <FeatureSection />
+          </Container>
+        </Layout>
+      </ChakraProvider>
+    </>
   );
 }
