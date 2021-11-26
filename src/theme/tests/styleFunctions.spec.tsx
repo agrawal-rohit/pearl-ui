@@ -20,6 +20,7 @@ import {
   typography,
 } from "../src/styleFunctions";
 import { render } from "@testing-library/react-native";
+import { responsiveSize } from "../..";
 
 jest.useFakeTimers();
 
@@ -105,10 +106,13 @@ describe("createStyleFunctions", () => {
   });
 
   it("maps typography props correctly", () => {
-    const props = { fontSize: 2 };
-    const fontSizeStyle = typography[1].func(props, baseTheme);
+    const props = { fontSize: "s" };
+    const fontSizeStyle = typography[typography.length - 2].func(
+      props,
+      baseTheme
+    );
 
-    expect(fontSizeStyle.fontSize).toBe(2);
+    expect(fontSizeStyle.fontSize).toBe(14);
   });
 
   it("maps layout props correctly", () => {

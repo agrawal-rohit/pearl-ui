@@ -6,10 +6,23 @@ import {
   Box,
   BoxProps,
   Img,
+  Icon,
   useColorModeValue,
+  HStack,
+  VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { mode } from "@chakra-ui/theme-tools";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import palenight from "prism-react-renderer/themes/palenight";
+
+const exampleCode = `
+(function someDemo() {
+  var test = "Hello World!";
+  console.log(test);
+})();
+
+return () => <App />;
+`;
 
 const FeatureImage = (props: BoxProps) => (
   <Box flex="1" {...props}>
@@ -23,45 +36,81 @@ const FeatureImage = (props: BoxProps) => (
   </Box>
 );
 
-const FeatureSection: React.FC = () => {
+interface FeatureSectionProps {
+  icon: React.FunctionComponent;
+  overline: string;
+  heading: string;
+  gradientColors: string[];
+  description: string;
+  ctaLink?: string;
+}
+
+const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
   return (
     <Box as="section">
       <Flex justify="space-between" direction={{ base: "column", lg: "row" }}>
-        <Box mb={{ lg: "8rem" }}>
+        <Box maxW={{ base: "100%", lg: "45%" }} mb={{ lg: "8rem" }}>
+          <HStack mb={-6}>
+            <Icon
+              as={props.icon}
+              boxSize={30}
+              marginBottom={-10}
+              color={props.gradientColors[0]}
+            />
+            <Heading
+              fontSize={{ base: 20, md: "xl" }}
+              bgGradient={`linear(to-r, ${props.gradientColors[0]}, ${props.gradientColors[1]})`}
+              bgClip="text"
+              fontWeight="bold"
+              textTransform="uppercase"
+            >
+              {props.overline}
+            </Heading>
+          </HStack>
+
           <Heading
-            lineHeight="shorter"
-            size="2xl"
-            letterSpacing="tight"
-            color={useColorModeValue("gray.900", "white")}
-            fontWeight="extrabold"
+            as="h2"
+            fontSize={{ base: 32, sm: "4xl", md: "4xl", lg: "4xl" }}
+            fontWeight="bold"
+            lineHeight="1.2"
+            color={useColorModeValue("gray.700", "white")}
           >
-            Manage <br />
-            <Box as="span" color={useColorModeValue("blue.600", "blue.400")}>
-              everything
-            </Box>
+            {props.heading}
           </Heading>
+
           <Text
+            fontSize={{ base: 17, md: "lg" }}
             mt="4"
-            fontSize="lg"
+            fontWeight="400"
+            lineHeight="7"
             color={useColorModeValue("gray.600", "gray.400")}
-            maxW={{ lg: "md" }}
           >
-            One mission control for your business, wherever you go.
+            {props.description}
           </Text>
+
+          <Highlight
+            {...defaultProps}
+            code={exampleCode}
+            language="jsx"
+            theme={palenight}
+          >
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre className={className} style={style}>
+                {tokens.map((line, i) => (
+                  <div {...getLineProps({ line, key: i })}>
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </Box>
 
         <FeatureImage
+          maxW={{ base: "100%", lg: "40%" }}
           my={{ base: "14", lg: "0" }}
-          display={{ base: "block", lg: "none" }}
-        />
-        <SimpleGrid
-          flex="1"
-          columns={{ base: 1, md: 2 }}
-          spacing={{ base: "3rem", md: "2rem" }}
-        ></SimpleGrid>
-        <FeatureImage
-          maxW={{ lg: "560px" }}
-          display={{ base: "none", lg: "block" }}
         />
       </Flex>
     </Box>
