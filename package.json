@@ -37,7 +37,7 @@
     "expo-font": "~9.2.1",
     "expo-status-bar": "~1.1.0",
     "lodash": "^4.17.21",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
