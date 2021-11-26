@@ -15,7 +15,7 @@ export default {
         h: 20,
       },
       text: {
-        px: "xxs",
+        px: "2xs",
         variant: "btn4",
       },
     },

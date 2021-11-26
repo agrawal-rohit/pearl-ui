@@ -2,7 +2,7 @@ export default {
   parts: ["root", "outerBox", "innerBox", "text", "errorText"],
   baseStyle: {
     root: {
-      my: "xxs",
+      my: "2xs",
       spacing: "xs",
     },
     outerBox: {
@@ -15,7 +15,7 @@ export default {
     errorText: {
       variant: "caption",
       color: "danger.500",
-      marginBottom: "xxs",
+      marginBottom: "2xs",
     },
   },
   sizes: {

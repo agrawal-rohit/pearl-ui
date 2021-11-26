@@ -81,6 +81,14 @@ export type ColorModeColor = {
   dark: ColorValue;
 };
 
+export type FontConfig = {
+  [key: string]: {
+    [key: string]: {
+      [key: string]: string;
+    };
+  };
+};
+
 export interface BasePearlTheme {
   palette: {
     [key: string]: string | ColorPalette;
@@ -90,6 +98,19 @@ export interface BasePearlTheme {
   };
   components: {
     [key: string]: AtomicComponentConfig | MolecularComponentConfig;
+  };
+  fonts: {
+    [key: string]: string;
+  };
+  fontConfig: FontConfig;
+  fontSizes: {
+    [key: string]: number;
+  };
+  lineHeights: {
+    [key: string]: number;
+  };
+  fontWeights: {
+    [key: string]: string;
   };
   elevation: {
     [key: string]: ElevationConfig;

@@ -2,7 +2,7 @@ export default {
   parts: ["root", "text", "spinner", "icon"],
   baseStyle: {
     root: {
-      my: "xxs",
+      my: "2xs",
       justifyContent: "center",
       alignItems: "center",
     },
@@ -13,7 +13,7 @@ export default {
   sizes: {
     xs: {
       root: {
-        py: "xxs",
+        py: "2xs",
         px: "xs",
         borderRadius: "s",
       },
@@ -21,7 +21,7 @@ export default {
         variant: "btn4",
       },
       spinner: {
-        my: "xxs",
+        my: "2xs",
         size: "s",
       },
       icon: {

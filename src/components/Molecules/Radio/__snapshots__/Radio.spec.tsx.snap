@@ -170,6 +170,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
+      scaleFontSize={true}
       style={
         Object {
           "alignSelf": "center",
@@ -177,8 +178,9 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
           "display": "flex",
           "fontFamily": "Poppins-Regular",
           "fontSize": 16.099999999999998,
+          "fontStyle": "normal",
           "fontWeight": "400",
-          "lineHeight": 25.299999999999997,
+          "lineHeight": 22,
         }
       }
       variant="p2"
@@ -360,6 +362,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -367,8 +370,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -546,6 +550,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -553,8 +558,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -738,6 +744,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -745,8 +752,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -925,6 +933,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -932,8 +941,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -1112,6 +1122,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1119,8 +1130,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 18.4,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 27.599999999999998,
+            "lineHeight": 24,
           }
         }
         variant="p1"
@@ -1299,6 +1311,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1306,8 +1319,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 18.4,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 27.599999999999998,
+            "lineHeight": 24,
           }
         }
         variant="p1"
@@ -1491,6 +1505,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1498,8 +1513,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -1683,6 +1699,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1690,8 +1707,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -1876,6 +1894,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1883,8 +1902,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -2069,6 +2089,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2076,8 +2097,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -2261,6 +2283,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2268,8 +2291,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -2449,6 +2473,7 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2456,8 +2481,9 @@ Array [
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 25.299999999999997,
+            "lineHeight": 22,
           }
         }
         variant="p2"
@@ -2470,14 +2496,16 @@ Array [
     accessibilityRole="text"
     accessible={true}
     allowFontScaling={true}
+    scaleFontSize={true}
     style={
       Object {
         "color": "#FF4B42",
         "display": "flex",
         "fontFamily": "Poppins-Regular",
         "fontSize": 13.799999999999999,
+        "fontStyle": "normal",
         "fontWeight": "400",
-        "lineHeight": 23,
+        "lineHeight": 20,
         "marginBottom": 4,
       }
     }
@@ -2661,6 +2689,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
+      scaleFontSize={true}
       style={
         Object {
           "alignSelf": "center",
@@ -2668,8 +2697,9 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
           "display": "flex",
           "fontFamily": "Poppins-Regular",
           "fontSize": 16.099999999999998,
+          "fontStyle": "normal",
           "fontWeight": "400",
-          "lineHeight": 25.299999999999997,
+          "lineHeight": 22,
         }
       }
       variant="p2"
