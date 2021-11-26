@@ -42,11 +42,9 @@ export const spacingPropertiesShorthand = {
 
 export const typographyProperties = {
   fontFamily: true,
-  fontSize: true,
   fontStyle: true,
   fontWeight: true,
   letterSpacing: true,
-  lineHeight: true,
   textAlign: true,
   textDecorationLine: true,
   textDecorationStyle: true,

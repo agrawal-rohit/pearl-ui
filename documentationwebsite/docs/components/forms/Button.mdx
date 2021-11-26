@@ -109,7 +109,7 @@ In order to preserve the native ripple effect on Android devices, Button provide
 The Button component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
 
 ```jsx
-// passing style prop m="xl" overrides the default component style value of m="xxs"
+// passing style prop m="xl" overrides the default component style value of m="2xs"
 // passing style prop boxShadow="xl" adds a box shadow to the button
 <Button m="xl" boxShadow="3xl" variant="outline" />
 ```
@@ -174,7 +174,7 @@ export default {
   parts: ["root", "text", "spinner", "icon"],
   baseStyle: {
     root: {
-      my: "xxs",
+      my: "2xs",
       justifyContent: "center",
       alignItems: "center",
     },
@@ -185,7 +185,7 @@ export default {
   sizes: {
     xs: {
       root: {
-        py: "xxs",
+        py: "2xs",
         px: "xs",
         borderRadius: "s",
       },
@@ -193,7 +193,7 @@ export default {
         variant: "btn4",
       },
       spinner: {
-        my: "xxs",
+        my: "2xs",
         size: "s",
       },
       icon: {

@@ -5,6 +5,13 @@ import { elevation } from "./elevation";
 import { palette } from "./palette";
 import { spacing } from "./spacing";
 import { zIndices } from "./zIndices";
+import {
+  fontConfig,
+  fonts,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+} from "./typography";
 
 // Component configs
 import SpinnerConfig from "../../../components/Atoms/Spinner/Spinner.config";
@@ -33,6 +40,11 @@ export const extendTheme = (
     palette: { ...baseTheme.palette, ...customTheme.palette },
     spacing: { ...baseTheme.spacing, ...customTheme.spacing },
     components: { ...baseTheme.components, ...customTheme.components },
+    fonts: { ...baseTheme.fonts, ...customTheme.fonts },
+    fontConfig: { ...baseTheme.fontConfig, ...customTheme.fontConfig },
+    fontSizes: { ...baseTheme.fontSizes, ...customTheme.fontSizes },
+    lineHeights: { ...baseTheme.lineHeights, ...customTheme.lineHeights },
+    fontWeights: { ...baseTheme.fontWeights, ...customTheme.fontWeights },
     elevation: { ...baseTheme.elevation, ...customTheme.elevation },
     zIndices: { ...baseTheme.zIndices, ...customTheme.zIndices },
     borderRadii: { ...baseTheme.borderRadii, ...customTheme.borderRadii },
@@ -45,6 +57,11 @@ export const baseTheme: BasePearlTheme = {
   borderRadii,
   elevation,
   zIndices,
+  fonts,
+  fontConfig,
+  fontSizes,
+  fontWeights,
+  lineHeights,
   components: {
     Icon: IconConfig,
     Text: TextConfig,

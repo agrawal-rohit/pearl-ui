@@ -4,7 +4,7 @@ export default {
     root: {
       flexDirection: "row",
       alignSelf: "flex-start",
-      my: "xxs",
+      my: "2xs",
       focusBorderColor: "primary.500",
       errorBorderColor: "danger.500",
       errorMessageColor: "danger.500",
@@ -14,8 +14,8 @@ export default {
         light: "neutral.900",
         dark: "neutral.50",
       },
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
+      fontFamily: "body",
+      fontWeight: "normal",
     },
     icon: {
       alignSelf: "center",
@@ -29,17 +29,18 @@ export default {
         light: "neutral.500",
         dark: "neutral.600",
       },
+      allowFontScaling: true,
     },
     errorText: {
       variant: "caption",
       color: "danger.500",
-      marginBottom: "xxs",
+      marginBottom: "2xs",
     },
   },
   sizes: {
     xs: {
       root: {
-        py: "xxs",
+        py: "2xs",
         px: "xs",
         borderRadius: "s",
       },
@@ -47,7 +48,7 @@ export default {
         variant: "btn4",
       },
       input: {
-        mx: "xxs",
+        mx: "2xs",
       },
       icon: {
         size: "s",
@@ -60,7 +61,7 @@ export default {
         borderRadius: "s",
       },
       input: {
-        mx: "xxs",
+        mx: "2xs",
       },
       text: {
         variant: "btn3",
