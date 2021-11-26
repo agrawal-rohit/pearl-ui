@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
-import Text from "../../Atoms/Text/Text";
+import Text, { buildFontConfig } from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import Icon from "../../Atoms/Icon/Icon";
@@ -188,7 +188,7 @@ const Input = React.forwardRef(
     );
     const { placeholderTextColor, ...finalInputStyle } = inputProps.style;
 
-    const textStyles = useAtomicComponentConfig(
+    const textProps = useAtomicComponentConfig(
       "Text",
       molecularProps.text,
       {
@@ -198,6 +198,17 @@ const Input = React.forwardRef(
       "primary",
       inputTextStyleFunctions
     );
+
+    const memoizedBuildFontConfig = React.useCallback(
+      () =>
+        buildFontConfig(textProps.style, molecularProps.input.allowFontScaling),
+      [textProps.style, molecularProps.input.allowFontScaling]
+    );
+
+    const finalTextStyles = {
+      ...textProps.style,
+      ...memoizedBuildFontConfig(),
+    };
 
     // METHODS
     const clearInputHandler = () => {
@@ -378,7 +389,7 @@ const Input = React.forwardRef(
             accessibilityState={{ disabled: isDisabled, selected: isFocused }}
             style={[
               finalInputStyle,
-              textStyles.style,
+              finalTextStyles,
               { flex: isFullWidth ? 1 : null },
             ]}
           />

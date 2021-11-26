@@ -103,14 +103,16 @@ exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "500",
-            "lineHeight": 21.849999999999998,
+            "lineHeight": 20,
           }
         }
         variant="btn2"
@@ -226,14 +228,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -345,14 +349,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -480,14 +486,16 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            scaleFontSize={true}
             style={
               Object {
                 "color": "#FFFFFF",
                 "display": "flex",
                 "fontFamily": "Poppins-Medium",
                 "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
                 "fontWeight": "500",
-                "lineHeight": 21.849999999999998,
+                "lineHeight": 20,
               }
             }
             variant="btn2"
@@ -611,14 +619,16 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            scaleFontSize={true}
             style={
               Object {
                 "color": "#6A7BFF",
                 "display": "flex",
                 "fontFamily": "Poppins-Medium",
                 "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
                 "fontWeight": "500",
-                "lineHeight": 21.849999999999998,
+                "lineHeight": 20,
               }
             }
             variant="btn2"
@@ -738,14 +748,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 11.5,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 16.099999999999998,
+              "lineHeight": 14,
             }
           }
           variant="btn4"
@@ -858,14 +870,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 13.799999999999999,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 18.4,
+              "lineHeight": 18,
             }
           }
           variant="btn3"
@@ -978,14 +992,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -1098,14 +1114,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 18.4,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 24.15,
+              "lineHeight": 24,
             }
           }
           variant="btn1"
@@ -1223,14 +1241,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -1343,14 +1363,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -1463,14 +1485,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -1790,14 +1814,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "transparent",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 21.849999999999998,
+              "lineHeight": 20,
             }
           }
           variant="btn2"
@@ -2117,14 +2143,16 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            scaleFontSize={true}
             style={
               Object {
                 "color": "#FFFFFF",
                 "display": "flex",
                 "fontFamily": "Poppins-Medium",
                 "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
                 "fontWeight": "500",
-                "lineHeight": 21.849999999999998,
+                "lineHeight": 20,
                 "marginLeft": 12,
               }
             }
@@ -2249,14 +2277,16 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            scaleFontSize={true}
             style={
               Object {
                 "color": "#FFFFFF",
                 "display": "flex",
                 "fontFamily": "Poppins-Medium",
                 "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
                 "fontWeight": "500",
-                "lineHeight": 21.849999999999998,
+                "lineHeight": 20,
                 "marginRight": 12,
               }
             }
@@ -2571,14 +2601,16 @@ exports[`Molecules/Button passes the snapshot test when using style props 1`] = 
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        scaleFontSize={true}
         style={
           Object {
             "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Medium",
             "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
             "fontWeight": "500",
-            "lineHeight": 21.849999999999998,
+            "lineHeight": 20,
           }
         }
         variant="btn2"

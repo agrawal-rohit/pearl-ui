@@ -1,6 +1,6 @@
 export const spacing = {
   hairline: 2,
-  xxs: 4,
+  "2xs": 4,
   xs: 8,
   s: 12,
   m: 16,
