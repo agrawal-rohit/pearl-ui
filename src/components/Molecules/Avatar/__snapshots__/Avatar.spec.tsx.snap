@@ -358,14 +358,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 13.799999999999999,
+              "fontStyle": "normal",
               "fontWeight": "400",
-              "lineHeight": 23,
+              "lineHeight": 20,
             }
           }
           variant="caption"
@@ -405,14 +407,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
-              "fontSize": 20.7,
+              "fontSize": 18.4,
+              "fontStyle": "normal",
               "fontWeight": "400",
-              "lineHeight": 29.9,
+              "lineHeight": 28,
             }
           }
           variant="p1"
@@ -452,14 +456,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
-              "fontSize": 20.7,
+              "fontSize": 18.4,
+              "fontStyle": "normal",
               "fontWeight": "400",
-              "lineHeight": 29.9,
+              "lineHeight": 28,
             }
           }
           variant="p1"
@@ -498,14 +504,16 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
-              "fontSize": 32.199999999999996,
+              "fontSize": 29.9,
+              "fontStyle": "normal",
               "fontWeight": "400",
-              "lineHeight": 41.4,
+              "lineHeight": 38,
             }
           }
           variant="p1"
@@ -675,14 +683,16 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#1A2138",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
-              "fontSize": 20.7,
+              "fontSize": 18.4,
+              "fontStyle": "normal",
               "fontWeight": "400",
-              "lineHeight": 29.9,
+              "lineHeight": 28,
             }
           }
           variant="p1"
@@ -713,14 +723,16 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Medium",
               "fontSize": 11.5,
+              "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 16.099999999999998,
+              "lineHeight": 14,
               "paddingHorizontal": 4,
             }
           }

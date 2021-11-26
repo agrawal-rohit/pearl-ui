@@ -36,7 +36,7 @@ const componentConfig = {
     borderRadius: "m",
     borderWidth: 2,
     justifyContent: "center",
-    margin: "xxs",
+    margin: "2xs",
     px: "s",
     py: "s",
     style: {
@@ -75,7 +75,7 @@ const secondaryComponentConfig = useColorScheme("secondary", componentConfig);
     borderRadius: "m",
     borderWidth: 2,
     justifyContent: "center",
-    margin: "xxs",
+    margin: "2xs",
     px: "s",
     py: "s",
     style: {
