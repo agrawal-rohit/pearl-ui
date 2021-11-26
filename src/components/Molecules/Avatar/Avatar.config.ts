@@ -22,8 +22,8 @@ export default {
       },
       text: {
         variant: "p1",
-        fontSize: 18,
-        lineHeight: 26,
+        fontSize: "m",
+        lineHeight: "3xl",
       },
     },
     l: {
@@ -33,8 +33,8 @@ export default {
       },
       text: {
         variant: "p1",
-        fontSize: 18,
-        lineHeight: 26,
+        fontSize: "m",
+        lineHeight: "3xl",
       },
     },
     xl: {
@@ -44,8 +44,8 @@ export default {
       },
       text: {
         variant: "p1",
-        fontSize: 28,
-        lineHeight: 36,
+        fontSize: "4xl",
+        lineHeight: "8xl",
       },
     },
   },

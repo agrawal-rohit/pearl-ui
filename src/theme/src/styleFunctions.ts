@@ -102,12 +102,6 @@ export const transformColorValue = (value: ColorModeColor | ColorValue) => {
   return value;
 };
 
-const makeFontSizeResponsive = (value: number) => {
-  if (value) return responsiveSize(value);
-
-  return value;
-};
-
 export const backgroundColor = [
   createStyleFunction({
     property: "backgroundColor",
@@ -145,12 +139,20 @@ export const typography = [
     });
   }),
   createStyleFunction({
+    property: "fontFamily",
+    themeKey: "fonts",
+  }),
+  createStyleFunction({
+    property: "fontWeight",
+    themeKey: "fontWeights",
+  }),
+  createStyleFunction({
     property: "fontSize",
-    transform: makeFontSizeResponsive,
+    themeKey: "fontSizes",
   }),
   createStyleFunction({
     property: "lineHeight",
-    transform: makeFontSizeResponsive,
+    themeKey: "lineHeights",
   }),
 ];
 
@@ -295,6 +297,13 @@ export type SpacingProps = SpacingPropsBase & SpacingShorthandProps;
 
 export type TypographyProps = {
   [Key in keyof typeof typographyProperties]?: TextStyle[Key];
+} & {
+  fontSize?: BasePearlTheme["fontSizes"] extends {}
+    ? keyof BasePearlTheme["fontSizes"]
+    : string;
+  lineHeight?: BasePearlTheme["fontSizes"] extends {}
+    ? keyof BasePearlTheme["fontSizes"]
+    : string;
 };
 
 type LayoutPropsBase = {

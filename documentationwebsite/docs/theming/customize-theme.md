@@ -37,11 +37,11 @@ const theme = extendTheme({
   },
 
   spacing: {
-    xxxs: 1,
-    xxs: 2,
+    '3xs': 1,
+    '2xs': 2,
     xs:3,
     // ...
-    xxxl: 98
+    '3xl': 98
   }
 })
 
@@ -52,7 +52,7 @@ const theme = extendTheme({
 
 // 4. Now you can use these colors in your components
 function Usage() {
-  return <Box bg="tertiary.100" p="xxxs">I'm a tertiary box!</Box>
+  return <Box bg="tertiary.100" p="3xs">I'm a tertiary box!</Box>
 }
 
 ```
@@ -251,7 +251,7 @@ const newButtonConfig = {
   baseStyle: {
     // The styles all root parts would have in common
     root: {
-      margin: "xxs",
+      margin: "2xs",
       justifyContent: "center",
       alignItems: "center",
     },

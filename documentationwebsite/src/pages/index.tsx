@@ -184,10 +184,13 @@ export default function Home(): JSX.Element {
             <HomepageHeader />
             <br />
             <br />
-            <FeaturesSection />
-            <br />
-            <br />
-            <FeatureSection />
+            <FeatureSection
+              icon={IoColorPaletteSharp}
+              overline="Fully Themeable"
+              heading="Define every aspect of your design system"
+              description="Hell ya bitchess"
+              gradientColors={["#bc4e9c", "#f80759"]}
+            />
           </Container>
         </Layout>
       </ChakraProvider>
