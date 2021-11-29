@@ -1,5 +1,5 @@
 import { AllProps } from "./styleFunctions";
-import { BasePearlTheme, StyleFunctionContainer } from "./types";
+import { BasePearlTheme, Dimensions, StyleFunctionContainer } from "./types";
 
 const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
   // Create a single array of all property objects
@@ -20,9 +20,12 @@ const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
   });
 
   // Convert the component props to the equivalent style properties
-  const buildStyle = (props: AllProps, theme: BasePearlTheme) => {
+  const buildStyle = (
+    props: AllProps,
+    { theme, dimensions }: { theme: BasePearlTheme; dimensions: Dimensions }
+  ) => {
     return funcs.reduce((acc: any, func: any) => {
-      return Object.assign(acc, func(props, theme));
+      return Object.assign(acc, func(props, { theme, dimensions }));
     }, {});
   };
 
