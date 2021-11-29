@@ -4,6 +4,7 @@ import { getKeys } from "../theme/utils/typeHelpers";
 import { useTheme } from "./useTheme";
 import composeStyleProps from "../theme/src/composeStyleProps";
 import { StyleFunctionContainer } from "../theme/src/types";
+import { useDimensions } from "./useDimensions";
 
 const filterStyledProps = (props: any, omitList: any) => {
   const omittedProp = omitList.reduce((acc: any, prop: any) => {
@@ -30,13 +31,14 @@ export const useStyledProps = (
   styleFunctions: StyleFunctionContainer[]
 ) => {
   const { theme } = useTheme();
+  const dimensions = useDimensions();
 
   const buildStyleProperties = useMemo(
     () => composeStyleProps(styleFunctions),
     [styleFunctions]
   );
 
-  const style = buildStyleProperties.buildStyle(props, theme);
+  const style = buildStyleProperties.buildStyle(props, { theme, dimensions });
   const cleanStyleProps = filterStyledProps(
     props,
     buildStyleProperties.properties
