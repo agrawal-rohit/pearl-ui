@@ -55,7 +55,9 @@ const App = () => {
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Text variant="h1">Heading 1</Text>
+        <Text variant="h1" backgroundColor="neutral.300">
+          Heading 1
+        </Text>
         <Text variant="h2">Heading 2</Text>
         <Text variant="t1">Title 1</Text>
         <Text variant="t2">Title 2</Text>

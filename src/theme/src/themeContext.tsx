@@ -3,6 +3,7 @@ import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
 import { BasePearlTheme } from "./types";
+import { DimensionsProvider } from "./dimensionsContext";
 
 type ThemeType = "light" | "dark";
 
@@ -75,7 +76,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       <themeContext.Provider
         value={{ theme, colorMode, toggleColorMode } as IThemeContext}
       >
-        {children}
+        <DimensionsProvider>{children}</DimensionsProvider>
       </themeContext.Provider>
     );
   }
