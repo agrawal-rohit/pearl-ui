@@ -1,3 +1,4 @@
+import { breakpoints } from "./breakpoints";
 import { BasePearlTheme } from "../types";
 
 import { borderRadii } from "./borderRadii";
@@ -39,6 +40,7 @@ export const extendTheme = (
   return {
     palette: { ...baseTheme.palette, ...customTheme.palette },
     spacing: { ...baseTheme.spacing, ...customTheme.spacing },
+    breakpoints: { ...baseTheme.breakpoints, ...customTheme.breakpoints },
     components: { ...baseTheme.components, ...customTheme.components },
     fonts: { ...baseTheme.fonts, ...customTheme.fonts },
     fontConfig: { ...baseTheme.fontConfig, ...customTheme.fontConfig },
@@ -55,6 +57,7 @@ export const baseTheme: BasePearlTheme = {
   palette,
   spacing,
   borderRadii,
+  breakpoints,
   elevation,
   zIndices,
   fonts,
