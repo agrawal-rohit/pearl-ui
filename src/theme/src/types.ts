@@ -1,6 +1,15 @@
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
 
-export type SafeVariants<T> = Omit<T, keyof BasePearlTheme>;
+export type AtLeastOneResponsiveValue<
+  R = { [Key in keyof BasePearlTheme["breakpoints"]]: Record<Key, PropValue> }
+> = Partial<{
+  [K in keyof BasePearlTheme["breakpoints"]]: PropValue;
+}> &
+  R[keyof R];
+
+export type ResponsiveValue<TVal extends PropValue> =
+  | TVal
+  | AtLeastOneResponsiveValue;
 
 export interface TypographyConfig {
   baseStyle:
@@ -89,6 +98,13 @@ export type FontConfig = {
   };
 };
 
+export type Breakpoint = number | Dimensions;
+
+export interface Dimensions {
+  width: number;
+  height: number;
+}
+
 export interface BasePearlTheme {
   palette: {
     [key: string]: string | ColorPalette;
@@ -121,6 +137,9 @@ export interface BasePearlTheme {
   borderRadii: {
     [key: string]: number | string;
   };
+  breakpoints: {
+    [key: string]: Breakpoint;
+  };
 }
 
 // Style Functions
@@ -132,10 +151,22 @@ export interface StyleFunctionContainer {
 
 export type StyleFunction = (
   props: Record<string, any>,
-  theme: BasePearlTheme
+  {
+    theme,
+    dimensions,
+  }: {
+    theme: BasePearlTheme;
+    dimensions: Dimensions;
+  }
 ) => {
   [key: string]: any;
 };
+
+export type StyleTransformFunction = (params: {
+  value: PropValue | undefined | null;
+  theme: BasePearlTheme;
+  themeKey?: keyof BasePearlTheme | undefined;
+}) => PropValue | undefined | null;
 
 // Styles
 export type RNStyle = ViewStyle | TextStyle | ImageStyle;
@@ -145,4 +176,4 @@ export type RNStyleProperty =
   | keyof TextStyle
   | keyof ImageStyle;
 
-export type PropValue = string | number | undefined | null;
+export type PropValue = string | number | undefined | boolean | null | object;
