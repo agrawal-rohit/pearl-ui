@@ -6,7 +6,7 @@ import {
 } from "../src/styleProperties";
 import { getKeys, getNestedObject } from "../utils/typeHelpers";
 import { baseTheme } from "../src/base/index";
-import { Text } from "react-native";
+import { Dimensions, Text } from "react-native";
 import {
   backgroundColor,
   border,
@@ -21,6 +21,7 @@ import {
 } from "../src/styleFunctions";
 import { render } from "@testing-library/react-native";
 import { responsiveSize } from "../..";
+import { useDimensions } from "../../hooks/useDimensions";
 
 jest.useFakeTimers();
 
@@ -34,7 +35,10 @@ const ColorTransformTestComponent: React.FC<ColorTransformTestComponentProps> =
   ({ children, props, stylePropertyName, styleFunction }) => {
     let value;
     try {
-      value = styleFunction.func(props, baseTheme);
+      value = styleFunction.func(props, {
+        theme: baseTheme,
+        dimensions: Dimensions.get("window"),
+      });
     } catch (e) {
       value = (e as any).message;
     }
@@ -100,34 +104,46 @@ describe("createStyleFunctions", () => {
 
   it("maps oapcity prop correctly", () => {
     const props = { opacity: 0 };
-    const opacityStyle = opacity.func(props, baseTheme);
+    const opacityStyle = opacity.func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(opacityStyle.opacity).toBe(0);
   });
 
   it("maps typography props correctly", () => {
     const props = { fontSize: "s" };
-    const fontSizeStyle = typography[typography.length - 2].func(
-      props,
-      baseTheme
-    );
+    const fontSizeStyle = typography[typography.length - 2].func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(fontSizeStyle.fontSize).toBe(14);
   });
 
   it("maps layout props correctly", () => {
     const props = { width: 2 };
-    const widthStyle = layout[0].func(props, baseTheme);
+    const widthStyle = layout[0].func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(widthStyle.width).toBe(2);
   });
 
   it("maps spacing props correctly", () => {
     const props1 = { margin: "s" };
-    const spacingStyle1 = spacing[0].func(props1, baseTheme);
+    const spacingStyle1 = spacing[0].func(props1, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     const props2 = { m: "s" };
-    const spacingStyle2 = spacing[spacing.length - 18].func(props2, baseTheme);
+    const spacingStyle2 = spacing[spacing.length - 18].func(props2, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(spacingStyle1.margin).toBe(
       baseTheme[spacing[0].themeKey as keyof BasePearlTheme].s
@@ -139,7 +155,10 @@ describe("createStyleFunctions", () => {
 
   it("maps position props correctly", () => {
     const props = { zIndex: "docked" };
-    const zIndexStyle = position[position.length - 1].func(props, baseTheme);
+    const zIndexStyle = position[position.length - 1].func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(zIndexStyle.zIndex).toBe(
       baseTheme[position[position.length - 1].themeKey as keyof BasePearlTheme]
@@ -162,7 +181,10 @@ describe("createStyleFunctions", () => {
     const borderRadiusProps = { borderRadius: "s" };
     const borderRadiusStyle = border[
       getKeys(borderProperties).length + getKeys(borderColorProperties).length
-    ].func(borderRadiusProps, baseTheme);
+    ].func(borderRadiusProps, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(borderRadiusStyle.borderRadius).toBe(
       baseTheme[
@@ -176,7 +198,10 @@ describe("createStyleFunctions", () => {
 
   it("maps shadow props correctly", () => {
     const props = { boxShadow: "s" };
-    const shadowStyle = shadow[shadow.length - 2].func(props, baseTheme);
+    const shadowStyle = shadow[shadow.length - 2].func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
 
     expect(shadowStyle).toBe(
       baseTheme[shadow[shadow.length - 2].themeKey as keyof BasePearlTheme].s
