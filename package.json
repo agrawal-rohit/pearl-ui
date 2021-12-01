@@ -22,7 +22,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
     "@expo-google-fonts/poppins": "^0.2.0",
-    "@react-native-async-storage/async-storage": "~1.15.9",
+    "@react-native-async-storage/async-storage": "~1.15.14",
     "@react-native-community/netinfo": "^7.1.2",
     "@types/crypto-js": "^4.0.2",
     "@types/lodash": "^4.14.177",
