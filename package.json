@@ -58,7 +58,7 @@
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.4",
-    "jest": "^27.3.1",
+    "jest": "^27.4.3",
     "jest-expo": "^42.1.0",
     "react-native-builder-bob": "^0.18.2",
     "react-test-renderer": "^17.0.2",
