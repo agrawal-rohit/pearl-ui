@@ -1,15 +1,16 @@
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
 
 export type AtLeastOneResponsiveValue<
-  R = { [Key in keyof BasePearlTheme["breakpoints"]]: Record<Key, PropValue> }
+  TVal extends PropValue = PropValue,
+  R = { [Key in keyof FinalPearlTheme["breakpoints"]]: Record<Key, TVal> }
 > = Partial<{
-  [K in keyof BasePearlTheme["breakpoints"]]: PropValue;
+  [K in keyof FinalPearlTheme["breakpoints"]]: TVal;
 }> &
   R[keyof R];
 
 export type ResponsiveValue<TVal extends PropValue> =
   | TVal
-  | AtLeastOneResponsiveValue;
+  | AtLeastOneResponsiveValue<TVal>;
 
 export interface TypographyConfig {
   baseStyle:
@@ -142,10 +143,17 @@ export interface BasePearlTheme {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface CustomPearlTheme {}
+
+export interface FinalPearlTheme
+  extends Omit<BasePearlTheme, keyof CustomPearlTheme>,
+    CustomPearlTheme {}
+
 // Style Functions
 export interface StyleFunctionContainer {
   property: string;
-  themeKey?: keyof BasePearlTheme | undefined | undefined;
+  themeKey?: keyof FinalPearlTheme | undefined | undefined;
   func: StyleFunction;
 }
 
@@ -155,7 +163,7 @@ export type StyleFunction = (
     theme,
     dimensions,
   }: {
-    theme: BasePearlTheme;
+    theme: FinalPearlTheme;
     dimensions: Dimensions;
   }
 ) => {
@@ -164,8 +172,8 @@ export type StyleFunction = (
 
 export type StyleTransformFunction = (params: {
   value: PropValue | undefined | null;
-  theme: BasePearlTheme;
-  themeKey?: keyof BasePearlTheme | undefined;
+  theme: FinalPearlTheme;
+  themeKey?: keyof FinalPearlTheme | undefined;
 }) => PropValue | undefined | null;
 
 // Styles

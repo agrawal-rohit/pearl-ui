@@ -12,29 +12,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import palenight from "prism-react-renderer/themes/palenight";
-
-const exampleCode = `
-(function someDemo() {
-  var test = "Hello World!";
-  console.log(test);
-})();
-
-return () => <App />;
-`;
-
-const FeatureImage = (props: BoxProps) => (
-  <Box flex="1" {...props}>
-    <Img
-      objectFit="cover"
-      h="100%"
-      w="100%"
-      src="https://images.unsplash.com/photo-1573878737226-4f9572c22b69?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
-      alt=""
-    />
-  </Box>
-);
 
 interface FeatureSectionProps {
   icon: React.FunctionComponent;
@@ -43,14 +20,15 @@ interface FeatureSectionProps {
   gradientColors: string[];
   description: string;
   ctaLink?: string;
+  visualElement?: React.ReactElement;
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
   return (
     <Box as="section">
-      <Flex justify="space-between" direction={{ base: "column", lg: "row" }}>
-        <Box maxW={{ base: "100%", lg: "45%" }} mb={{ lg: "8rem" }}>
-          <HStack mb={-6}>
+      <Flex justify="space-between" direction="column">
+        <Box maxW={{ base: "100%", lg: "75%" }} mb={{ base: "3rem" }}>
+          <HStack mb={-6} justifyContent={{ base: "center", lg: "flex-start" }}>
             <Icon
               as={props.icon}
               boxSize={30}
@@ -58,7 +36,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
               color={props.gradientColors[0]}
             />
             <Heading
-              fontSize={{ base: 20, md: "xl" }}
+              fontSize={{ base: 18, md: "xl" }}
               bgGradient={`linear(to-r, ${props.gradientColors[0]}, ${props.gradientColors[1]})`}
               bgClip="text"
               fontWeight="bold"
@@ -70,8 +48,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
 
           <Heading
             as="h2"
-            fontSize={{ base: 32, sm: "4xl", md: "4xl", lg: "4xl" }}
-            fontWeight="bold"
+            fontSize={{ base: 28, sm: "2xl", md: "3xl", lg: "5xl" }}
+            textAlign={{ base: "center", lg: "left" }}
+            fontWeight="extrabold"
             lineHeight="1.2"
             color={useColorModeValue("gray.700", "white")}
           >
@@ -80,38 +59,19 @@ const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
 
           <Text
             fontSize={{ base: 17, md: "lg" }}
-            mt="4"
+            textAlign={{ base: "center", lg: "left" }}
+            mt="8"
             fontWeight="400"
             lineHeight="7"
             color={useColorModeValue("gray.600", "gray.400")}
           >
             {props.description}
           </Text>
-
-          <Highlight
-            {...defaultProps}
-            code={exampleCode}
-            language="jsx"
-            theme={palenight}
-          >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre className={className} style={style}>
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
         </Box>
 
-        <FeatureImage
-          maxW={{ base: "100%", lg: "40%" }}
-          my={{ base: "14", lg: "0" }}
-        />
+        <Box width="100%">
+          {props.visualElement && React.cloneElement(props.visualElement)}
+        </Box>
       </Flex>
     </Box>
   );
