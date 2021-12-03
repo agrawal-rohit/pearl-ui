@@ -1,4 +1,4 @@
-import { BasePearlTheme } from "../src/types";
+import { FinalPearlTheme } from "../src/types";
 
 export const getKeys = <T>(object: T) => Object.keys(object) as (keyof T)[];
 
@@ -10,8 +10,8 @@ export const getNestedObject = (nestedObj: object, pathArr: string[]) => {
 };
 
 export function isThemeKey(
-  theme: BasePearlTheme,
-  K: keyof BasePearlTheme | undefined
-): K is keyof BasePearlTheme {
-  return getKeys(theme).includes(K as keyof BasePearlTheme);
+  theme: FinalPearlTheme,
+  K: keyof FinalPearlTheme | undefined
+): K is keyof FinalPearlTheme {
+  return getKeys(theme).includes(K as keyof FinalPearlTheme);
 }
