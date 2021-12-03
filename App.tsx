@@ -28,7 +28,7 @@ import Spinner from "./src/components/Atoms/Spinner/Spinner";
 import Center from "./src/components/Atoms/Center/Center";
 import Button from "./src/components/Molecules/Button/Button";
 import { useStyledProps } from "./src/hooks/useStyledProps";
-import { StyleFunctionContainer } from "./src/theme/src/types";
+import { FinalPearlTheme, StyleFunctionContainer } from "./src/theme/src/types";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -55,9 +55,7 @@ const App = () => {
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Text variant="h1" backgroundColor="neutral.300">
-          Heading 1
-        </Text>
+        <Text variant="h1">Heading 1</Text>
         <Text variant="h2">Heading 2</Text>
         <Text variant="t1">Title 1</Text>
         <Text variant="t2">Title 2</Text>

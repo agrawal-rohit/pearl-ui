@@ -14,7 +14,7 @@ import {
   typographyProperties,
 } from "./styleProperties";
 import {
-  BasePearlTheme,
+  FinalPearlTheme,
   ColorModeColor,
   ResponsiveValue,
   RNStyleProperty,
@@ -32,7 +32,7 @@ interface CreateStyleFunctionProps {
   property: string;
   transform?: any;
   styleProperty?: RNStyleProperty | "skip" | string;
-  themeKey?: keyof BasePearlTheme | undefined;
+  themeKey?: keyof FinalPearlTheme | undefined;
 }
 
 export const createStyleFunction = ({
@@ -281,7 +281,7 @@ export const all = [
 
 // PropTypes
 export interface ColorProps {
-  color?: ResponsiveValue<keyof BasePearlTheme["palette"] | ColorModeColor>;
+  color?: ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>;
 }
 export interface OpacityProps {
   opacity?: ResponsiveValue<number>;
@@ -293,20 +293,20 @@ export interface VisibleProps {
 
 export interface BackgroundColorProps {
   backgroundColor?: ResponsiveValue<
-    keyof BasePearlTheme["palette"] | ColorModeColor
+    keyof FinalPearlTheme["palette"] | ColorModeColor
   >;
-  bg?: ResponsiveValue<keyof BasePearlTheme["palette"] | ColorModeColor>;
+  bg?: ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>;
 }
 
 type SpacingPropsBase = {
   [Key in keyof typeof spacingProperties]?: ResponsiveValue<
-    keyof BasePearlTheme["spacing"]
+    keyof FinalPearlTheme["spacing"]
   >;
 };
 
 type SpacingShorthandProps = {
   [Key in keyof typeof spacingPropertiesShorthand]?: ResponsiveValue<
-    keyof BasePearlTheme["spacing"]
+    keyof FinalPearlTheme["spacing"]
   >;
 };
 
@@ -315,10 +315,10 @@ export type SpacingProps = SpacingPropsBase & SpacingShorthandProps;
 export type TypographyProps = {
   [Key in keyof typeof typographyProperties]?: TextStyle[Key];
 } & {
-  fontSize?: ResponsiveValue<keyof BasePearlTheme["fontSizes"]>;
-  lineHeight?: ResponsiveValue<keyof BasePearlTheme["lineHeights"]>;
-  fontWeight?: ResponsiveValue<keyof BasePearlTheme["fontWeights"]>;
-  fontFamily?: ResponsiveValue<keyof BasePearlTheme["fonts"]>;
+  fontSize?: ResponsiveValue<keyof FinalPearlTheme["fontSizes"]>;
+  lineHeight?: ResponsiveValue<keyof FinalPearlTheme["lineHeights"]>;
+  fontWeight?: ResponsiveValue<keyof FinalPearlTheme["fontWeights"]>;
+  fontFamily?: ResponsiveValue<keyof FinalPearlTheme["fonts"]>;
 };
 
 type LayoutPropsBase = {
@@ -336,32 +336,34 @@ export type LayoutProps = LayoutPropsBase & LayoutShorthandProps;
 export type PositionProps = {
   [Key in keyof typeof positionProperties]?: ResponsiveValue<FlexStyle[Key]>;
 } & {
-  zIndex?: ResponsiveValue<keyof BasePearlTheme["zIndices"]>;
+  zIndex?: ResponsiveValue<keyof FinalPearlTheme["zIndices"]>;
 };
 
 export type BorderProps = {
   [Key in keyof typeof borderProperties]?: ResponsiveValue<ViewStyle[Key]>;
 } & {
   [Key in keyof typeof borderColorProperties]?: ResponsiveValue<
-    keyof BasePearlTheme["palette"]
+    keyof FinalPearlTheme["palette"] | ColorModeColor
   >;
 } & {
   [Key in keyof typeof borderRadiusProperties]?: ResponsiveValue<
-    keyof BasePearlTheme["borderRadii"]
+    keyof FinalPearlTheme["borderRadii"]
   >;
 };
 
 export type ShadowProps = {
   [Key in keyof typeof shadowProperties]?: ResponsiveValue<ViewStyle[Key]>;
 } & {
-  boxShadow?: ResponsiveValue<keyof BasePearlTheme["elevation"]>;
-  shadowColor?: ResponsiveValue<keyof BasePearlTheme["palette"]>;
+  boxShadow?: ResponsiveValue<keyof FinalPearlTheme["elevation"]>;
+  shadowColor?: ResponsiveValue<keyof FinalPearlTheme["palette"]>;
 };
 
 export type TextShadowProps = {
   [Key in keyof typeof textShadowProperties]?: ResponsiveValue<TextStyle[Key]>;
 } & {
-  textShadowColor?: ResponsiveValue<keyof BasePearlTheme["palette"]>;
+  textShadowColor?: ResponsiveValue<
+    keyof FinalPearlTheme["palette"] | ColorModeColor
+  >;
 };
 
 export type AllProps = BackgroundColorProps &

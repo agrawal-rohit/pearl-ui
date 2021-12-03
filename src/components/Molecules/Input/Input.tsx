@@ -12,9 +12,10 @@ import {
   TextInputProps,
 } from "react-native";
 import {
-  BasePearlTheme,
+  FinalPearlTheme,
   ColorModeColor,
   StyleFunctionContainer,
+  ResponsiveValue,
 } from "../../../theme/src/types";
 import {
   color,
@@ -49,43 +50,81 @@ export type InputProps = TextInputProps &
     /** Active color palette of the input field */
     colorScheme?: string;
     /** Custom color of the placeholder text string */
-    placeholderTextColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    placeholderTextColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The background color of the input field when it is in focus */
-    focusBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBackgroundColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border color of the input field when it is in focus */
-    focusBorderColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border start color of the input field when it is in focus */
-    focusBorderStartColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderStartColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border end color of the input field when it is in focus */
-    focusBorderEndColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderEndColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border top color of the input field when it is in focus */
-    focusBorderTopColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderTopColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border left color of the input field when it is in focus */
-    focusBorderLeftColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderLeftColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border right color of the input field when it is in focus */
-    focusBorderRightColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderRightColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border bottom color of the input field when it is in focus */
-    focusBorderBottomColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusBorderBottomColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The shadow color of the input field when it is in focus */
-    focusShadowColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    focusShadowColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The background color of the input field when it is in an error state */
-    errorBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBackgroundColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border color of the input field when it is in an error state */
-    errorBorderColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border start color of the input field when it is in an error state */
-    errorBorderStartColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderStartColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border end color of the input field when it is in an error state */
-    errorBorderEndColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderEndColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border top color of the input field when it is in an error state */
-    errorBorderTopColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderTopColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border left color of the input field when it is in an error state */
-    errorBorderLeftColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderLeftColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border right color of the input field when it is in an error state */
-    errorBorderRightColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderRightColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The border bottom color of the input field when it is in an error state */
-    errorBorderBottomColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorBorderBottomColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
     /** The shadow color of the input field when it is in an error state */
-    errorShadowColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    errorShadowColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
   };
 
 // Additional style Functions used for this component
@@ -260,7 +299,7 @@ const Input = React.forwardRef(
     const computeFocusOrErrorProps = (
       propertyName: string,
       customfallbackProp:
-        | keyof BasePearlTheme["palette"]
+        | ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>
         | ColorModeColor
         | undefined = undefined,
       targetPropertyParent: object = rest
