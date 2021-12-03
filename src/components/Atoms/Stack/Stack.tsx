@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
-import { BasePearlTheme } from "../../../theme/src/types";
+import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import Box, { BoxProps } from "../Box/Box";
 
 export type StackProps = BoxProps & {
   /** The direction to stack the items */
   direction: "horizontal" | "vertical";
   /** The spacing between the elements */
-  spacing?: keyof BasePearlTheme["spacing"];
+  spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** If specified, each stack item will show the provided divider */
   divider?: React.ReactElement;
 };

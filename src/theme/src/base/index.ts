@@ -1,5 +1,5 @@
 import { breakpoints } from "./breakpoints";
-import { BasePearlTheme } from "../types";
+import { BasePearlTheme, FinalPearlTheme } from "../types";
 
 import { borderRadii } from "./borderRadii";
 import { elevation } from "./elevation";
@@ -34,9 +34,7 @@ import AvatarConfig from "../../../components/Molecules/Avatar/Avatar.config";
  * @param customTheme custom theme object to be combined with the baseTheme
  * @returns
  */
-export const extendTheme = (
-  customTheme: Partial<BasePearlTheme>
-): BasePearlTheme => {
+export const extendTheme = (customTheme: Partial<BasePearlTheme>) => {
   return {
     palette: { ...baseTheme.palette, ...customTheme.palette },
     spacing: { ...baseTheme.spacing, ...customTheme.spacing },
@@ -53,7 +51,7 @@ export const extendTheme = (
   };
 };
 
-export const baseTheme: BasePearlTheme = {
+export const baseTheme = {
   palette,
   spacing,
   borderRadii,
@@ -81,3 +79,9 @@ export const baseTheme: BasePearlTheme = {
     Avatar: AvatarConfig,
   },
 };
+
+type Custom = typeof baseTheme;
+
+declare module "../../.." {
+  interface CustomPearlTheme extends Custom {}
+}

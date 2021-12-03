@@ -1,7 +1,7 @@
 import { getKeys, isThemeKey } from "../utils/typeHelpers";
 import {
   AtLeastOneResponsiveValue,
-  BasePearlTheme,
+  FinalPearlTheme,
   Breakpoint,
   Dimensions,
   PropValue,
@@ -15,7 +15,7 @@ export const getValueForScreenSize = ({
   dimensions,
 }: {
   responsiveValue: AtLeastOneResponsiveValue;
-  breakpoints: BasePearlTheme["breakpoints"];
+  breakpoints: FinalPearlTheme["breakpoints"];
   dimensions: Dimensions;
 }) => {
   const sortedBreakpoints = Object.entries(breakpoints).sort((valA, valB) => {
@@ -44,8 +44,8 @@ export const getValueForScreenSize = ({
 };
 
 export const isResponsiveObjectValue = (
-  val: ResponsiveValue,
-  theme: BasePearlTheme
+  val: ResponsiveValue<PropValue>,
+  theme: FinalPearlTheme
 ): val is AtLeastOneResponsiveValue => {
   if (!val) return false;
   if (typeof val !== "object") return false;

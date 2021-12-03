@@ -6,7 +6,7 @@ import {
   isResponsiveObjectValue,
 } from "../theme/src/responsiveHelpers";
 
-export const useResponsiveProp = (propValue: ResponsiveValue) => {
+export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
   const { theme } = useTheme();
   const dimensions = useDimensions();
 

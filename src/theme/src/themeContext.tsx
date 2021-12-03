@@ -2,14 +2,14 @@ import AppLoading from "expo-app-loading";
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
-import { BasePearlTheme } from "./types";
+import { FinalPearlTheme } from "./types";
 import { DimensionsProvider } from "./dimensionsContext";
 
 type ThemeType = "light" | "dark";
 
 export interface IThemeContext {
   /** Theme configuration object for the active color mode */
-  theme: BasePearlTheme;
+  theme: FinalPearlTheme;
   /** Active color mode */
   colorMode: ThemeType;
   /** Function to toggle the active color mode */
@@ -20,7 +20,7 @@ interface ThemeProviderProps {
   /** Default color mode for the theme (light, dark, system) */
   defaultColorMode?: ThemeType | "system";
   /** The theme configuration object */
-  theme?: BasePearlTheme;
+  theme?: FinalPearlTheme;
   /** A flag that describes the loading status of the custom fonts */
   haveFontsLoaded?: boolean;
   /**React children */
