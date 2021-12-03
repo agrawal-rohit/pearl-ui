@@ -1,8 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
 
 // 1. import `ChakraProvider` component
 import {
@@ -26,6 +24,8 @@ import { theme } from "../theme/chakraTheme";
 import { useCustomThemeContext } from "../hooks/useCustomThemeContext";
 import Link from "@docusaurus/Link";
 import FeatureSection from "../components/FeatureSection";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import ThemeFeature from "../components/LandingPage/ThemeFeature";
 
 function HomepageHeader() {
   const { isDarkTheme } = useCustomThemeContext();
@@ -37,7 +37,7 @@ function HomepageHeader() {
           as="h1"
           fontSize={{ base: 32, sm: "4xl", md: "4xl", lg: "6xl" }}
           fontWeight="extrabold"
-          marginTop={{ base: 6, md: 14 }}
+          marginTop={{ base: 10, md: 14 }}
           maxW="60rem"
           mx="auto"
           lineHeight="1.2"
@@ -108,7 +108,7 @@ function HomepageHeader() {
         href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-review&utm_medium=badge&utm_souce=badge-pearl-ui#discussion-body"
         target="_blank"
         rel="noreferrer"
-        style={{ marginBottom: 50 }}
+        style={{ marginBottom: 50, marginTop: 20 }}
       >
         <img
           src={`https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=${
@@ -182,14 +182,14 @@ export default function Home(): JSX.Element {
         >
           <Container maxW="container.xl" px={{ base: "7", md: "" }}>
             <HomepageHeader />
-            <br />
-            <br />
+            <Box mb={{ base: 0, lg: "8rem" }} />
             <FeatureSection
               icon={IoColorPaletteSharp}
               overline="Fully Themeable"
               heading="Define every aspect of your design system"
-              description="Hell ya bitchess"
-              gradientColors={["#bc4e9c", "#f80759"]}
+              description="Harness the power of your design system. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut, laudantium similique distinctio, minima accusantium natus id hic praesentium enim dicta fugiat accusamus quisquam a."
+              gradientColors={["#B24592", "#F15F79"]}
+              visualElement={<ThemeFeature />}
             />
           </Container>
         </Layout>
