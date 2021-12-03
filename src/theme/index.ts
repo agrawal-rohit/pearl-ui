@@ -23,4 +23,4 @@ export { baseTheme } from "./src/base/index";
 export { generatePalette } from "./utils/utils";
 
 // Types
-export { BasePearlTheme as PearlTheme } from "./src/types";
+export { FinalPearlTheme as PearlTheme } from "./src/types";

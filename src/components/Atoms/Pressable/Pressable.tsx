@@ -11,7 +11,11 @@ import {
   createStyleFunction,
   transformColorValue,
 } from "../../../theme/src/styleFunctions";
-import { BasePearlTheme, ColorModeColor } from "../../../theme/src/types";
+import {
+  ColorModeColor,
+  FinalPearlTheme,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 export type PressableProps = BoxProps &
   Omit<
@@ -36,7 +40,9 @@ export type PressableProps = BoxProps &
     /** The opacity of the element when it is pressed */
     activeOpacity?: number;
     /** The background color of the element when it is pressed */
-    activeBackgroundColor?: keyof BasePearlTheme["palette"] | ColorModeColor;
+    activeBackgroundColor?: ResponsiveValue<
+      keyof FinalPearlTheme["palette"] | ColorModeColor
+    >;
   };
 
 const defaultRippleConfig: PressableAndroidRippleConfig = {
