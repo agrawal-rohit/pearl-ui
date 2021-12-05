@@ -19,12 +19,12 @@ import {
 
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
+import { CgDarkMode } from "react-icons/cg";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
 import { theme } from "../theme/chakraTheme";
 import { useCustomThemeContext } from "../hooks/useCustomThemeContext";
 import Link from "@docusaurus/Link";
 import FeatureSection from "../components/FeatureSection";
-import Highlight, { defaultProps } from "prism-react-renderer";
 import ThemeFeature from "../components/LandingPage/ThemeFeature";
 
 function HomepageHeader() {
@@ -124,7 +124,6 @@ function HomepageHeader() {
   );
 }
 
-// TODO: Add themeability/design system approach feature section
 // TODO: Add dark mode compatibility feature section
 // TODO: Add accessiblity feature section
 // TODO: Add style props feature section
@@ -186,10 +185,19 @@ export default function Home(): JSX.Element {
             <FeatureSection
               icon={IoColorPaletteSharp}
               overline="Fully Themeable"
-              heading="Define every aspect of your design system"
-              description="Harness the power of your design system. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut, laudantium similique distinctio, minima accusantium natus id hic praesentium enim dicta fugiat accusamus quisquam a."
+              heading="Harness the power of design systems"
+              description="Design systems make it easy to scale your user interface and increase visual consistency. Pearl UI allows you define all aspects of a typical design system during development, giving you the power to update the entire look and feel of your app in minutes!"
               gradientColors={["#B24592", "#F15F79"]}
               visualElement={<ThemeFeature />}
+              ctaLink="/docs/theming/default-theme"
+            />
+
+            <FeatureSection
+              icon={CgDarkMode}
+              overline="Dark Mode"
+              heading="Dark mode made easy"
+              description="Design systems make it easy to scale your user interface and increase visual consistency. Pearl UI allows you define all aspects of a typical design system during development, giving you the power to update the entire look and feel of your app in minutes!"
+              gradientColors={["#5C258D", "#4389A2"]}
             />
           </Container>
         </Layout>
