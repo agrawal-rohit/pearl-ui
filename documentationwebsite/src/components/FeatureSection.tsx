@@ -10,7 +10,9 @@ import {
   useColorModeValue,
   HStack,
   VStack,
+  Button,
 } from "@chakra-ui/react";
+import Link from "@docusaurus/Link";
 import React from "react";
 
 interface FeatureSectionProps {
@@ -25,7 +27,7 @@ interface FeatureSectionProps {
 
 const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
   return (
-    <Box as="section">
+    <Box as="section" mb={{ base: "0", md: "10rem" }}>
       <Flex justify="space-between" direction="column">
         <Box maxW={{ base: "100%", lg: "75%" }} mb={{ base: "3rem" }}>
           <HStack mb={-6} justifyContent={{ base: "center", lg: "flex-start" }}>
@@ -67,6 +69,30 @@ const FeatureSection: React.FC<FeatureSectionProps> = (props) => {
           >
             {props.description}
           </Text>
+
+          {props.ctaLink && (
+            <Flex justifyContent={{ base: "center", md: "flex-start" }}>
+              <Button
+                size="md"
+                mt="7"
+                as={Link}
+                to={props.ctaLink}
+                fontWeight="medium"
+                variant="outline"
+                borderColor={props.gradientColors[0]}
+                color={props.gradientColors[0]}
+                sx={{
+                  "&:hover": {
+                    borderColor: props.gradientColors[1],
+                    backgroundColor: "inherit",
+                    color: props.gradientColors[1],
+                  },
+                }}
+              >
+                Know More
+              </Button>
+            </Flex>
+          )}
         </Box>
 
         <Box width="100%">
