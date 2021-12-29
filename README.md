@@ -23,8 +23,8 @@ write cleaner code, and get your product to market faster!
 <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/d0c9aeda98434aa4adfa8446823aead4">
 <img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui">
 <!-- <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/w/agrawal-rohit/pearl-ui/next"> -->
-<a href="https://discord.gg/wxJsmG5k">
-<img alt="Discord" src="https://img.shields.io/discord/909030414285414430?color=%235865F2">
+<a href="https://github.com/agrawal-rohit/pearl-ui/discussions">
+<img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/agrawal-rohit/pearl-ui">
 </a>
 <a href="https://twitter.com/pearl_ui">
 <img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fpearl_ui">
