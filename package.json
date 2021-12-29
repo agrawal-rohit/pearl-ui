@@ -1,9 +1,9 @@
 {
   "name": "pearl-ui",
   "main": "node_modules/expo/AppEntry.js",
-  "module": "lib/module/index",
+  "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index",
+  "react-native": "src/index.ts",
   "source": "src/index",
   "version": "1.6.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
@@ -27,7 +27,6 @@
     "@ctrl/tinycolor": "^3.4.0",
     "@expo-google-fonts/poppins": "^0.2.0",
     "@react-native-async-storage/async-storage": "~1.15.9",
-    "@react-native-community/netinfo": "^7.1.2",
     "@types/crypto-js": "^4.0.2",
     "@types/lodash": "^4.14.177",
     "@types/react-test-renderer": "^17.0.1",
@@ -35,7 +34,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "expo": "~42.0.4",
-    "expo-app-loading": "1.1.2",
+    "expo-app-loading": "1.3.0",
     "expo-blur": "~11.0.0",
     "expo-file-system": "~13.0.3",
     "expo-font": "~9.2.1",
@@ -55,9 +54,9 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@testing-library/react-native": "^8.0.0",
-    "@types/jest": "^27.0.3",
-    "@types/react": "~17.0.36",
-    "@types/react-native": "~0.66.5",
+    "@types/jest": "^27.0.2",
+    "@types/react": "~17.0.35",
+    "@types/react-native": "~0.66.4",
     "babel-loader": "^8.2.3",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
@@ -77,9 +76,6 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": [
-      "<rootDir>/jest.setup.js"
-    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
     ],
@@ -103,9 +99,6 @@
       "<rootDir>/documentationwebsite/"
     ]
   },
-  "react-native": "src/index.ts",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
   "files": [
     "src",
     "lib",
