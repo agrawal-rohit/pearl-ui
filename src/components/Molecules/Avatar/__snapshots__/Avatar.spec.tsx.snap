@@ -1298,7 +1298,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#00ffff",
+          "backgroundColor": "#ff0000",
           "borderRadius": 1000,
           "display": "flex",
           "height": 55,
@@ -1314,7 +1314,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         scaleFontSize={true}
         style={
           Object {
-            "color": "#1A2138",
+            "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 18.4,
@@ -1355,7 +1355,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ff0000",
+          "backgroundColor": "#F7F9FC",
           "borderBottomLeftRadius": undefined,
           "borderBottomRightRadius": undefined,
           "borderRadius": 1000,
