@@ -48,9 +48,8 @@ describe("Molecules/Avatar", () => {
     const tree = render(
       <ThemeProvider>
         <Stack direction="horizontal" spacing="s">
-          <Avatar name="Rohit Agrawal" />
+          <Avatar backgroundColor="red" name="Rohit Agrawal" />
           <Avatar
-            backgroundColor="red"
             src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
             fallbackSource={{
               uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
