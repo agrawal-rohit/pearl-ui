@@ -4,8 +4,16 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import Text from "../../Atoms/Text/Text";
 import { BoxProps } from "../../Atoms/Box/Box";
 import { useColorScheme } from "../../../hooks/useColorScheme";
+import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
+import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
-export type BadgeProps = BoxProps & {
+export type BadgeProps = PressableProps & {
+  // /** The size of the badge */
+  // size?: ResponsiveValue<keyof FinalPearlTheme["components"]["Badge"]["sizes"]>;
+  // /** The variant of the badge */
+  // variant?: ResponsiveValue<
+  //   keyof FinalPearlTheme["components"]["Badge"]["variants"]
+  // >;
   /** The size of the badge */
   size?: string;
   /** The variant of the badge */
@@ -38,9 +46,14 @@ const Badge: React.FC<BadgeProps> = ({ children, ...rest }) => {
   };
 
   return (
-    <Center {...molecularProps.root} alignSelf="flex-start">
+    <Pressable
+      {...molecularProps.root}
+      alignItems="center"
+      justifyContent="center"
+      alignSelf="flex-start"
+    >
       {renderValue()}
-    </Center>
+    </Pressable>
   );
 };
 

@@ -114,6 +114,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Image"]:after,
 .menu__link[href*="CheckBox"]:after,
 .menu__link[href*="Radio"]:after,
+.menu__link[href*="Avatar"]:after,
 .menu__link[href*="Badge"]:after {
   content: "new";
   display: inline-block;

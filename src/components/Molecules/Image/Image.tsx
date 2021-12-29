@@ -218,6 +218,7 @@ const Image: React.FC<ImageProps> = ({
       return (
         <RNImage
           {...molecularProps.root}
+          onError={errorHandler}
           testID={testID}
           source={finalSource as ImageSourcePropType}
           style={[

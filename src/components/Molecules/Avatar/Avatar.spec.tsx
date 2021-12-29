@@ -44,6 +44,34 @@ describe("Molecules/Avatar", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  it("passes the snapshot test for fallback support", () => {
+    const tree = render(
+      <ThemeProvider>
+        <Stack direction="horizontal" spacing="s">
+          <Avatar name="Rohit Agrawal" />
+          <Avatar
+            src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
+            fallbackSource={{
+              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+            }}
+          />
+          <Avatar
+            backgroundColor="neutral.200"
+            fallbackComponent={
+              <Icon
+                iconFamily="FontAwesome"
+                iconName="user-circle"
+                color="neutral.600"
+                rawSize={55}
+              />
+            }
+          />
+        </Stack>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   it("withBadge HOC works as expected", () => {
     const Wrapper = () => {
       const OnlineAvatar = withBadge<AvatarProps>(undefined, {
@@ -59,8 +87,6 @@ describe("Molecules/Avatar", () => {
         placement: "bottomRight",
         backgroundColor: "danger.500",
         size: "s",
-        minW: 15,
-        h: 15,
         offset: 0,
       })(Avatar);
 
@@ -69,6 +95,9 @@ describe("Molecules/Avatar", () => {
         {
           placement: "bottomRight",
           size: "m",
+          onPress: () => {
+            console.log("PRESSED!");
+          },
         }
       )(Avatar);
 

@@ -10,6 +10,8 @@ import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 
+// TODO: Add responsive size and variant functionality
+
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
  * @param themeComponentKey Name of the component in PearlTheme.components who's config needs to be used

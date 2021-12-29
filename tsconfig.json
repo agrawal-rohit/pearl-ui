@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "declaration": true,
     "strict": true,
     "noEmit": false,
     "esModuleInterop": true
