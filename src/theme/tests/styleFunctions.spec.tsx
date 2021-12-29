@@ -1,5 +1,5 @@
 import React from "react";
-import { BasePearlTheme, StyleFunctionContainer } from "../src/types";
+import { StyleFunctionContainer } from "../src/types";
 import {
   borderColorProperties,
   borderProperties,
@@ -20,8 +20,6 @@ import {
   typography,
 } from "../src/styleFunctions";
 import { render } from "@testing-library/react-native";
-import { responsiveSize } from "../..";
-import { useDimensions } from "../../hooks/useDimensions";
 
 jest.useFakeTimers();
 
@@ -145,12 +143,8 @@ describe("createStyleFunctions", () => {
       dimensions: Dimensions.get("window"),
     });
 
-    expect(spacingStyle1.margin).toBe(
-      baseTheme[spacing[0].themeKey as keyof BasePearlTheme].s
-    );
-    expect(spacingStyle2.margin).toBe(
-      baseTheme[spacing[spacing.length - 18].themeKey as keyof BasePearlTheme].s
-    );
+    expect(spacingStyle1.margin).toBe(baseTheme.spacing.s);
+    expect(spacingStyle2.margin).toBe(baseTheme.spacing.s);
   });
 
   it("maps position props correctly", () => {
@@ -160,10 +154,7 @@ describe("createStyleFunctions", () => {
       dimensions: Dimensions.get("window"),
     });
 
-    expect(zIndexStyle.zIndex).toBe(
-      baseTheme[position[position.length - 1].themeKey as keyof BasePearlTheme]
-        .docked
-    );
+    expect(zIndexStyle.zIndex).toBe(baseTheme.zIndices.docked);
   });
 
   it("maps border props correctly", () => {
@@ -186,14 +177,7 @@ describe("createStyleFunctions", () => {
       dimensions: Dimensions.get("window"),
     });
 
-    expect(borderRadiusStyle.borderRadius).toBe(
-      baseTheme[
-        border[
-          getKeys(borderProperties).length +
-            getKeys(borderColorProperties).length
-        ].themeKey as keyof BasePearlTheme
-      ].s
-    );
+    expect(borderRadiusStyle.borderRadius).toBe(baseTheme.borderRadii.s);
   });
 
   it("maps shadow props correctly", () => {
@@ -203,9 +187,7 @@ describe("createStyleFunctions", () => {
       dimensions: Dimensions.get("window"),
     });
 
-    expect(shadowStyle).toBe(
-      baseTheme[shadow[shadow.length - 2].themeKey as keyof BasePearlTheme].s
-    );
+    expect(shadowStyle).toBe(baseTheme.elevation.s);
 
     const { getByText } = render(
       <ColorTransformTestComponent

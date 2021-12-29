@@ -21,6 +21,3 @@ export { baseTheme } from "./src/base/index";
 
 // Utils
 export { generatePalette } from "./utils/utils";
-
-// Types
-export { FinalPearlTheme as PearlTheme } from "./src/types";
