@@ -20,8 +20,6 @@ import {
   typography,
 } from "../src/styleFunctions";
 import { render } from "@testing-library/react-native";
-import { responsiveSize } from "../..";
-import { useDimensions } from "../../hooks/useDimensions";
 
 jest.useFakeTimers();
 
