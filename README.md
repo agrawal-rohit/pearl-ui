@@ -1,4 +1,7 @@
 <h1 align="center">
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://www.pearl-ui.dev/">
     <img width="346" alt="logo" src="https://user-images.githubusercontent.com/29514438/133960518-569428c5-fe04-4631-b20e-5935a4c93914.png">
   </a>
@@ -79,3 +82,23 @@ We're using the github [releases](https://github.com/agrawal-rohit/pearl-ui/rele
 ## License
 
 [MIT](https://github.com/agrawal-rohit/pearl-ui/blob/main/LICENSE)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://nayanpatel.net"><img src="https://avatars.githubusercontent.com/u/79650289?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nayan Patel</b></sub></a><br /><a href="https://github.com/agrawal-rohit/pearl-ui/commits?author=PatelN123" title="Documentation">📖</a> <a href="https://github.com/agrawal-rohit/pearl-ui/issues?q=author%3APatelN123" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
