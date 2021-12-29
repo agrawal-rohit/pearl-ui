@@ -1,9 +1,9 @@
 {
   "name": "pearl-ui",
   "main": "node_modules/expo/AppEntry.js",
-  "module": "lib/module/index",
+  "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index",
+  "react-native": "src/index.ts",
   "source": "src/index",
   "version": "1.6.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
@@ -27,25 +27,22 @@
     "@ctrl/tinycolor": "^3.4.0",
     "@expo-google-fonts/poppins": "^0.2.0",
     "@react-native-async-storage/async-storage": "~1.15.9",
-    "@react-native-community/netinfo": "^7.1.2",
     "@types/crypto-js": "^4.0.2",
     "@types/lodash": "^4.14.177",
     "@types/react-test-renderer": "^17.0.1",
     "crypto-js": "^4.1.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "expo": "*",
-    "expo-app-loading": "*",
-    "expo-blur": "*",
-    "expo-file-system": "*",
-    "expo-font": "*",
-    "expo-status-bar": "*",
+    "expo": "~42.0.4",
+    "expo-blur": "~10.0.3",
+    "expo-file-system": "~13.0.3",
+    "expo-font": "~9.2.1",
+    "expo-status-bar": "~1.1.0",
     "lodash": "^4.17.21",
-    "prettier": "^2.4.1",
-    "react": "*",
-    "react-dom": "*",
-    "react-native": "*",
-    "react-native-indicators": "^0.17.0",
+    "prettier": "^2.5.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-web": "~0.14.13"
   },
@@ -57,6 +54,7 @@
     "@semantic-release/git": "^10.0.1",
     "@testing-library/react-native": "^8.0.0",
     "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.5",
     "@types/react": "~17.0.36",
     "@types/react-native": "~0.66.5",
     "babel-loader": "^8.2.3",
@@ -71,17 +69,6 @@
     "ts-jest": "^27.0.5",
     "typescript": "^4.5.2"
   },
-  "resolutions": {
-    "expo": "~42.0.4",
-    "expo-app-loading": "^1.1.2",
-    "expo-blur": "~10.0.3",
-    "expo-file-system": "~13.0.3",
-    "expo-font": "~9.2.1",
-    "expo-status-bar": "~1.1.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -89,9 +76,6 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": [
-      "<rootDir>/jest.setup.js"
-    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
     ],
@@ -115,9 +99,6 @@
       "<rootDir>/documentationwebsite/"
     ]
   },
-  "react-native": "src/index.ts",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
   "files": [
     "src",
     "lib",
