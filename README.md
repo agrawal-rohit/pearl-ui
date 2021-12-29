@@ -92,6 +92,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://nayanpatel.net"><img src="https://avatars.githubusercontent.com/u/79650289?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nayan Patel</b></sub></a><br /><a href="https://github.com/agrawal-rohit/pearl-ui/commits?author=PatelN123" title="Documentation">📖</a> <a href="https://github.com/agrawal-rohit/pearl-ui/issues?q=author%3APatelN123" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://yalla.ma"><img src="https://avatars.githubusercontent.com/u/198514?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Younes</b></sub></a><br /><a href="#security-younes200" title="Security">🛡️</a></td>
   </tr>
 </table>
 
