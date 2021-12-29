@@ -83,7 +83,7 @@ export default {
       fontFamily: "body",
       fontWeight: "medium",
       fontSize: "2xs",
-      lineHeight: "2xs",
+      lineHeight: "xs",
     },
   },
   defaults: {
