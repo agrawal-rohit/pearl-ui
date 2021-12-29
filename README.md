@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://www.pearl-ui.dev/">
+  <a href="https://docs.pearl-ui.dev/">
     <img width="346" alt="logo" src="https://user-images.githubusercontent.com/29514438/133960518-569428c5-fe04-4631-b20e-5935a4c93914.png">
   </a>
 </h1>
@@ -23,9 +23,12 @@ write cleaner code, and get your product to market faster!
 <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/d0c9aeda98434aa4adfa8446823aead4">
 <img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui">
 <!-- <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/w/agrawal-rohit/pearl-ui/next"> -->
+<a href="https://discord.gg/wxJsmG5k">
 <img alt="Discord" src="https://img.shields.io/discord/909030414285414430?color=%235865F2">
+</a>
+<a href="https://twitter.com/pearl_ui">
 <img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fpearl_ui">
-
+</a>
 </p>
 
 <br />
