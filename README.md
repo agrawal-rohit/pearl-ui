@@ -1,7 +1,4 @@
 <h1 align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <a href="https://www.pearl-ui.dev/">
     <img width="346" alt="logo" src="https://user-images.githubusercontent.com/29514438/133960518-569428c5-fe04-4631-b20e-5935a4c93914.png">
   </a>
@@ -18,6 +15,7 @@ write cleaner code, and get your product to market faster!
 <br />
 
 <p align="center" style="width: 70%; margin: auto">
+
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/agrawal-rohit/pearl-ui/Publish">
 <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/d0c9aeda98434aa4adfa8446823aead4">
 <img alt="npm" src="https://img.shields.io/npm/v/pearl-ui">
@@ -27,6 +25,7 @@ write cleaner code, and get your product to market faster!
 <!-- <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/w/agrawal-rohit/pearl-ui/next"> -->
 <img alt="Discord" src="https://img.shields.io/discord/909030414285414430?color=%235865F2">
 <img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fpearl_ui">
+
 </p>
 
 <br />
