@@ -1298,7 +1298,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#87ceeb",
+          "backgroundColor": "#e9967a",
           "borderRadius": 1000,
           "display": "flex",
           "height": 55,
@@ -1906,24 +1906,103 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         </View>
       </View>
       <View
-        onLayout={[Function]}
-        size="s"
-        style={
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
           Object {
-            "alignItems": "center",
-            "alignSelf": "flex-start",
-            "backgroundColor": "#A2D608",
-            "borderRadius": 1000,
-            "bottom": -0,
-            "display": "flex",
-            "height": 15,
-            "justifyContent": "center",
-            "minWidth": 15,
-            "position": "absolute",
-            "right": -0,
+            "disabled": false,
           }
         }
-      />
+        accessible={true}
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "borderRadius": undefined,
+            "bottom": -0,
+            "display": "flex",
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
+            "position": "absolute",
+            "right": -0,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+          style={
+            Object {
+              "borderRadius": 1000,
+              "display": "flex",
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="s"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#A2D608",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 15,
+                  "justifyContent": "center",
+                  "minWidth": 15,
+                },
+                Object {
+                  "backgroundColor": "#A2D608",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": undefined,
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": undefined,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
     </View>
   </View>
   <View
@@ -1984,45 +2063,124 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         </Text>
       </View>
       <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
         onLayout={[Function]}
-        size="s"
         style={
           Object {
-            "alignItems": "center",
             "alignSelf": "flex-start",
-            "backgroundColor": "#FF4B42",
-            "borderRadius": 1000,
+            "borderRadius": undefined,
             "bottom": -0,
             "display": "flex",
-            "height": 20,
-            "justifyContent": "center",
-            "minWidth": 20,
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
             "position": "absolute",
             "right": -0,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
           }
         }
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          scaleFontSize={true}
+        <View
+          onLayout={[Function]}
           style={
             Object {
-              "color": "#FFFFFF",
+              "borderRadius": 1000,
               "display": "flex",
-              "fontFamily": "Poppins-Medium",
-              "fontSize": 11.5,
-              "fontStyle": "normal",
-              "fontWeight": "500",
-              "lineHeight": 16,
-              "paddingHorizontal": 4,
+              "overflow": "hidden",
             }
           }
-          variant="btn4"
         >
-          0
-        </Text>
+          <View
+            accessible={true}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="s"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FF4B42",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 20,
+                  "justifyContent": "center",
+                  "minWidth": 20,
+                },
+                Object {
+                  "backgroundColor": "#FF4B42",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": undefined,
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": undefined,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text
+              accessibilityRole="text"
+              accessible={true}
+              allowFontScaling={true}
+              scaleFontSize={true}
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "display": "flex",
+                  "fontFamily": "Poppins-Medium",
+                  "fontSize": 11.5,
+                  "fontStyle": "normal",
+                  "fontWeight": "500",
+                  "lineHeight": 16,
+                  "paddingHorizontal": 4,
+                }
+              }
+              variant="btn4"
+            >
+              0
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
   </View>
@@ -2062,25 +2220,104 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       />
       <View
+        accessibilityHint=""
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
         onLayout={[Function]}
-        size="m"
         style={
           Object {
-            "alignItems": "center",
             "alignSelf": "flex-start",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
+            "borderRadius": undefined,
             "bottom": -5,
             "display": "flex",
-            "height": 25,
-            "justifyContent": "center",
-            "minWidth": 25,
+            "elevation": undefined,
+            "end": undefined,
+            "left": undefined,
+            "margin": undefined,
+            "marginBottom": undefined,
+            "marginEnd": undefined,
+            "marginHorizontal": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginStart": undefined,
+            "marginTop": undefined,
+            "marginVertical": undefined,
             "position": "absolute",
             "right": -5,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+            "start": undefined,
+            "top": undefined,
           }
         }
       >
-        <Text />
+        <View
+          onLayout={[Function]}
+          style={
+            Object {
+              "borderRadius": 1000,
+              "display": "flex",
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            size="m"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": 25,
+                  "justifyContent": "center",
+                  "minWidth": 25,
+                },
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderBottomColor": undefined,
+                  "borderBottomWidth": undefined,
+                  "borderColor": undefined,
+                  "borderEndColor": undefined,
+                  "borderEndWidth": undefined,
+                  "borderLeftColor": undefined,
+                  "borderLeftWidth": undefined,
+                  "borderRightColor": undefined,
+                  "borderRightWidth": undefined,
+                  "borderStartColor": undefined,
+                  "borderStartWidth": undefined,
+                  "borderStyle": undefined,
+                  "borderTopColor": undefined,
+                  "borderTopWidth": undefined,
+                  "borderWidth": undefined,
+                  "opacity": undefined,
+                },
+              ]
+            }
+          >
+            <Text />
+          </View>
+        </View>
       </View>
     </View>
   </View>
