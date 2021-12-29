@@ -3,199 +3,604 @@
 exports[`Molecules/Badge passes the snapshot test for different color schemes 1`] = `
 Array [
   <View
-    colorScheme="primary"
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        colorScheme="primary"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
-    colorScheme="success"
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#A2D608",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        colorScheme="success"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#A2D608",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#A2D608",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
-    colorScheme="warning"
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#FFBF35",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        colorScheme="warning"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFBF35",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#FFBF35",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
-    colorScheme="info"
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#40D2F7",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        colorScheme="info"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#40D2F7",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#40D2F7",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
-    colorScheme="danger"
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#FF4B42",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        colorScheme="danger"
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FF4B42",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#FF4B42",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -203,156 +608,484 @@ Array [
 exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
 Array [
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
-    size="s"
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 20,
-        "justifyContent": "center",
-        "minWidth": 20,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 4,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="s"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 20,
+              "justifyContent": "center",
+              "minWidth": 20,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 4,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
-    size="m"
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
-        "minWidth": 25,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="m"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
-    size="l"
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 30,
-        "justifyContent": "center",
-        "minWidth": 30,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 13.799999999999999,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 18,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn3"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="l"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 30,
+              "justifyContent": "center",
+              "minWidth": 30,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 13.799999999999999,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 18,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn3"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
-    size="xl"
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 35,
-        "justifyContent": "center",
-        "minWidth": 35,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 13.799999999999999,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 18,
-          "paddingHorizontal": 12,
+          "overflow": "hidden",
         }
       }
-      variant="btn3"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        size="xl"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 35,
+              "justifyContent": "center",
+              "minWidth": 35,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 13.799999999999999,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 18,
+              "paddingHorizontal": 12,
+            }
+          }
+          variant="btn3"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -360,110 +1093,438 @@ Array [
 exports[`Molecules/Badge passes the snapshot test for different values types 1`] = `
 Array [
   <View
-    onLayout={[Function]}
-    style={
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
       Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
-        "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
-        "minWidth": 25,
+        "disabled": false,
       }
     }
-  />,
-  <View
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
-        "minWidth": 25,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      23
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      />
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
-        "minWidth": 25,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2+
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          23
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
-        "minWidth": 25,
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
   >
-    <Text />
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "borderRadius": 1000,
+          "display": "flex",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2+
+        </Text>
+      </View>
+    </View>
+  </View>,
+  <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "bottom": undefined,
+        "display": "flex",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
+        "marginBottom": undefined,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "borderRadius": 1000,
+          "display": "flex",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+      >
+        <Text />
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -471,82 +1532,244 @@ Array [
 exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
 Array [
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 1000,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
-    variant="rounded"
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 1000,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      2
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+        variant="rounded"
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          2
+        </Text>
+      </View>
+    </View>
   </View>,
   <View
+    accessibilityHint=""
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
     onLayout={[Function]}
     style={
       Object {
-        "alignItems": "center",
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderRadius": 8,
+        "borderRadius": undefined,
+        "bottom": undefined,
         "display": "flex",
-        "height": 25,
-        "justifyContent": "center",
+        "elevation": undefined,
+        "end": undefined,
+        "left": undefined,
+        "margin": undefined,
         "marginBottom": 12,
-        "minWidth": 25,
+        "marginEnd": undefined,
+        "marginHorizontal": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginStart": undefined,
+        "marginTop": undefined,
+        "marginVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "shadowColor": undefined,
+        "shadowOffset": undefined,
+        "shadowOpacity": undefined,
+        "shadowRadius": undefined,
+        "start": undefined,
+        "top": undefined,
       }
     }
-    variant="square"
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      scaleFontSize={true}
+    <View
+      onLayout={[Function]}
       style={
         Object {
-          "color": "#FFFFFF",
+          "borderRadius": 8,
           "display": "flex",
-          "fontFamily": "Poppins-Medium",
-          "fontSize": 11.5,
-          "fontStyle": "normal",
-          "fontWeight": "500",
-          "lineHeight": 14,
-          "paddingHorizontal": 8,
+          "overflow": "hidden",
         }
       }
-      variant="btn4"
     >
-      NEW
-    </Text>
+      <View
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 8,
+              "display": "flex",
+              "height": 25,
+              "justifyContent": "center",
+              "minWidth": 25,
+            },
+            Object {
+              "backgroundColor": "#6A7BFF",
+              "borderBottomColor": undefined,
+              "borderBottomWidth": undefined,
+              "borderColor": undefined,
+              "borderEndColor": undefined,
+              "borderEndWidth": undefined,
+              "borderLeftColor": undefined,
+              "borderLeftWidth": undefined,
+              "borderRightColor": undefined,
+              "borderRightWidth": undefined,
+              "borderStartColor": undefined,
+              "borderStartWidth": undefined,
+              "borderStyle": undefined,
+              "borderTopColor": undefined,
+              "borderTopWidth": undefined,
+              "borderWidth": undefined,
+              "opacity": undefined,
+            },
+          ]
+        }
+        variant="square"
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          scaleFontSize={true}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 11.5,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "paddingHorizontal": 8,
+            }
+          }
+          variant="btn4"
+        >
+          NEW
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
@@ -565,45 +1788,124 @@ Array [
   >
     <Text />
     <View
+      accessibilityHint=""
+      accessibilityLabel="Press me!"
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
       onLayout={[Function]}
-      size="s"
       style={
         Object {
-          "alignItems": "center",
           "alignSelf": "flex-start",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
+          "borderRadius": undefined,
+          "bottom": undefined,
           "display": "flex",
-          "height": 20,
-          "justifyContent": "center",
-          "minWidth": 20,
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
           "position": "absolute",
           "right": -5,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
           "top": -5,
         }
       }
     >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        scaleFontSize={true}
+      <View
+        onLayout={[Function]}
         style={
           Object {
-            "color": "#FFFFFF",
+            "borderRadius": 1000,
             "display": "flex",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 11.5,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "lineHeight": 14,
-            "paddingHorizontal": 4,
+            "overflow": "hidden",
           }
         }
-        variant="btn4"
       >
-        28
-      </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          size="s"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": 20,
+                "justifyContent": "center",
+                "minWidth": 20,
+              },
+              Object {
+                "backgroundColor": "#6A7BFF",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": undefined,
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": undefined,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            scaleFontSize={true}
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "display": "flex",
+                "fontFamily": "Poppins-Medium",
+                "fontSize": 11.5,
+                "fontStyle": "normal",
+                "fontWeight": "500",
+                "lineHeight": 16,
+                "paddingHorizontal": 4,
+              }
+            }
+            variant="btn4"
+          >
+            28
+          </Text>
+        </View>
+      </View>
     </View>
   </View>,
   <View
@@ -618,25 +1920,104 @@ Array [
   >
     <Text />
     <View
+      accessibilityHint=""
+      accessibilityLabel="Press me!"
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
       onLayout={[Function]}
-      size="m"
       style={
         Object {
-          "alignItems": "center",
           "alignSelf": "flex-start",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
+          "borderRadius": undefined,
           "bottom": -5,
           "display": "flex",
-          "height": 25,
-          "justifyContent": "center",
-          "minWidth": 25,
+          "elevation": undefined,
+          "end": undefined,
+          "left": undefined,
+          "margin": undefined,
+          "marginBottom": undefined,
+          "marginEnd": undefined,
+          "marginHorizontal": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginStart": undefined,
+          "marginTop": undefined,
+          "marginVertical": undefined,
           "position": "absolute",
           "right": -5,
+          "shadowColor": undefined,
+          "shadowOffset": undefined,
+          "shadowOpacity": undefined,
+          "shadowRadius": undefined,
+          "start": undefined,
+          "top": undefined,
         }
       }
     >
-      <Text />
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "borderRadius": 1000,
+            "display": "flex",
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          size="m"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "display": "flex",
+                "height": 25,
+                "justifyContent": "center",
+                "minWidth": 25,
+              },
+              Object {
+                "backgroundColor": "#6A7BFF",
+                "borderBottomColor": undefined,
+                "borderBottomWidth": undefined,
+                "borderColor": undefined,
+                "borderEndColor": undefined,
+                "borderEndWidth": undefined,
+                "borderLeftColor": undefined,
+                "borderLeftWidth": undefined,
+                "borderRightColor": undefined,
+                "borderRightWidth": undefined,
+                "borderStartColor": undefined,
+                "borderStartWidth": undefined,
+                "borderStyle": undefined,
+                "borderTopColor": undefined,
+                "borderTopWidth": undefined,
+                "borderWidth": undefined,
+                "opacity": undefined,
+              },
+            ]
+          }
+        >
+          <Text />
+        </View>
+      </View>
     </View>
   </View>,
 ]

@@ -13,7 +13,7 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { RNStyle, StyleFunctionContainer } from "../../../theme/src/types";
+import { StyleFunctionContainer } from "../../../theme/src/types";
 import {
   AntDesign,
   Entypo,

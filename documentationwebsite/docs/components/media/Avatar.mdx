@@ -1,0 +1,230 @@
+---
+sidebar_position: 3
+title: Avatar
+---
+
+The `Avatar` component is used to represent a user, and displays the profile picture, initials or fallback icon.
+
+## Import
+
+```jsx
+import { Avatar } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+// Displaying a local user image
+<Avatar src={require("<path-to-local-user-image>.jpeg")} />
+
+// Displaying a user image from a remote source
+<Avatar src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg" />
+```
+
+### Avatar sizes
+
+Use the `size` prop to change the size of the avatar. You can set the value to the keys available in <t>theme.components.Avatar["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+
+```jsx
+<Avatar
+  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  size="s"
+/>
+
+<Avatar
+  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  size="m"
+/>
+
+<Avatar
+  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  size="l"
+/>
+
+<Avatar
+  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  size="xl"
+/>
+```
+
+### Avatar Fallback
+
+Sometimes, the image you want to display doesn't exist or cannot be accessed due to network issues. In these cases, it is a good practice to show a replacement to the user as a fallback.
+
+```jsx
+// Displays an fallback avatar with the initials of the user
+<Avatar name="Rohit Agrawal" />;
+
+// Displays an image saying 'No Image Available' in case the source image doesn't exist
+<Avatar
+  src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
+  fallbackSource={{
+    uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+  }}
+/>;
+
+// Displays a custom component with an error icon in case the source image doesn't exist
+import { Icon } from "pearl-ui";
+
+<Avatar
+  backgroundColor="neutral.200"
+  fallbackComponent={
+    <Icon
+      iconFamily="FontAwesome"
+      iconName="user-circle"
+      color="neutral.600"
+      rawSize={55}
+    />
+  }
+/>;
+```
+
+If both the props are specified, the `fallbackComponent` prop takes higher precedence over `fallbackSource`.
+
+### Avatar Badges
+
+You can use [Badge](../feedback/Badge) to add status badges or pressable badges to the avatar to show online/offline status, add action buttons, etc.
+
+```jsx
+const OnlineAvatar = withBadge(undefined, {
+  placement: "bottomRight",
+  backgroundColor: "success.500",
+  size: "s",
+  minW: 15,
+  h: 15,
+  offset: 0,
+})(Avatar);
+
+const OfflineAvatar = withBadge(undefined, {
+  placement: "bottomRight",
+  backgroundColor: "danger.500",
+  size: "s",
+  minW: 15,
+  h: 15,
+  offset: 0,
+})(Avatar);
+
+const AvatarWithEditButton = withBadge(
+  <Icon iconFamily="Ionicons" iconName="pencil" size="s" color="white" />,
+  {
+    placement: "bottomRight",
+    size: "m",
+    onPress: () => {
+      console.log("PRESSED!");
+    },
+  }
+)(Avatar);
+```
+
+### Override Style
+
+The Avatar component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+
+```jsx
+<Avatar mt="xl" borderRadius="m" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="light"
+  values={[
+    { label: 'Light', value: 'light', },
+    { label: 'Dark', value: 'dark', },
+  ]
+}>
+<TabItem value="light">
+
+<Snack snackId="@agrawal-rohit/avatar-light" />
+
+</TabItem>
+
+<TabItem value="dark">
+
+<Snack snackId="@agrawal-rohit/avatar-dark" />
+
+</TabItem>
+</Tabs>
+
+## Accessibility
+
+- Avatar has the `role` of `image`.
+
+## Props
+
+### Supported style props
+
+Avatar composes the [Image](./Image) component, you can pass all [Image](./Image) props to `Avatar`.
+
+### Additional props
+
+| Name    | Required | Type                                            | Default | Description                                                                                                                 |
+| ------- | -------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| size    | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`   | The size of the avatar.                                                                                                     |
+| variant | false    | <t>PearlTheme.components.Avatar["variants"]</t> |         | The variant of the avatar.                                                                                                  |
+| src     | false    | <t>string \| number</t>                         |         | The source of the Avatar image. This can be a url, or a local image.                                                        |
+| name    | false    | <t>string</t>                                   |         | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
+
+## Default component Style
+
+```js
+export default {
+  parts: ["root", "text"],
+  baseStyle: {
+    root: {
+      borderRadius: "full",
+    },
+  },
+  sizes: {
+    s: {
+      root: {
+        width: 40,
+        height: 40,
+      },
+      text: {
+        variant: "caption",
+      },
+    },
+    m: {
+      root: {
+        width: 55,
+        height: 55,
+      },
+      text: {
+        variant: "p1",
+        fontSize: "m",
+        lineHeight: "3xl",
+      },
+    },
+    l: {
+      root: {
+        width: 70,
+        height: 70,
+      },
+      text: {
+        variant: "p1",
+        fontSize: "m",
+        lineHeight: "3xl",
+      },
+    },
+    xl: {
+      root: {
+        width: 85,
+        height: 85,
+      },
+      text: {
+        variant: "p1",
+        fontSize: "4xl",
+        lineHeight: "8xl",
+      },
+    },
+  },
+  defaults: {
+    size: "m",
+  },
+};
+```

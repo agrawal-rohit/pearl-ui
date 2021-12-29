@@ -22,13 +22,11 @@ import {
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
-import Box, { boxStyleFunctions } from "./src/components/Atoms/Box/Box";
-import Text, { textStyleFunctions } from "./src/components/Atoms/Text/Text";
-import Spinner from "./src/components/Atoms/Spinner/Spinner";
-import Center from "./src/components/Atoms/Center/Center";
-import Button from "./src/components/Molecules/Button/Button";
-import { useStyledProps } from "./src/hooks/useStyledProps";
-import { FinalPearlTheme, StyleFunctionContainer } from "./src/theme/src/types";
+import Stack from "./src/components/Atoms/Stack/Stack";
+import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
+import Icon from "./src/components/Atoms/Icon/Icon";
+import Image from "./src/components/Molecules/Image/Image";
+import withBadge from "./src/components/Molecules/Badge/withBadge";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -52,38 +50,90 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
+  const OnlineAvatar = withBadge<AvatarProps>(undefined, {
+    placement: "bottomRight",
+    backgroundColor: "success.500",
+    size: "s",
+    minW: 15,
+    h: 15,
+    offset: 0,
+  })(Avatar);
+
+  const OfflineAvatar = withBadge<AvatarProps>(0, {
+    placement: "bottomRight",
+    backgroundColor: "danger.500",
+    size: "s",
+    offset: 0,
+  })(Avatar);
+
+  const AvatarWithEdit = withBadge<AvatarProps>(
+    <Icon iconFamily="Ionicons" iconName="pencil" size="s" color="white" />,
+    {
+      placement: "bottomRight",
+      size: "m",
+      onPress: () => {
+        console.log("PRESSED!");
+      },
+    }
+  )(Avatar);
+
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Text variant="h1">Heading 1</Text>
-        <Text variant="h2">Heading 2</Text>
-        <Text variant="t1">Title 1</Text>
-        <Text variant="t2">Title 2</Text>
-        <Text variant="st1">Subtitle 1</Text>
-        <Text variant="st2">Subtitle 2</Text>
-        <Text variant="p1">Paragraph 1</Text>
-        <Text variant="p2">Paragraph 2</Text>
-        <Box backgroundColor="primary.500">
-          <Text variant="btn1" color="neutral.50">
-            Button 1
-          </Text>
-        </Box>
-        <Box backgroundColor="primary.500">
-          <Text variant="btn2" color="neutral.50">
-            Button 2
-          </Text>
-        </Box>
-        <Box backgroundColor="primary.500">
-          <Text variant="btn3" color="neutral.50">
-            Button 3
-          </Text>
-        </Box>
-        <Box backgroundColor="primary.500">
-          <Text variant="btn4" color="neutral.50">
-            Button 4
-          </Text>
-        </Box>
-        <Text variant="caption">Caption</Text>
+        <Stack direction="horizontal" spacing="s">
+          <Avatar
+            src={require("./src/components/Molecules/Image/testLocalImage.jpeg")}
+            size="s"
+          />
+          <Avatar
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+            size="m"
+          />
+          <Avatar
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+            size="l"
+          />
+          <Avatar
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+            size="xl"
+          />
+        </Stack>
+
+        <Stack direction="horizontal" spacing="s" mt="s">
+          <Avatar name="Rohit Agrawal" size="s" />
+          <Avatar name="John" size="m" />
+          <Avatar name="Some guy" size="l" />
+          <Avatar name="YOYO" size="xl" />
+        </Stack>
+
+        <Stack direction="horizontal" spacing="s" mt="s">
+          <Avatar name="Rohit Agrawal" />
+          <Avatar
+            src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
+            fallbackSource={{
+              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+            }}
+          />
+          <Avatar
+            backgroundColor="neutral.200"
+            fallbackComponent={
+              <Icon
+                iconFamily="FontAwesome"
+                iconName="user-circle"
+                color="neutral.600"
+                rawSize={55}
+              />
+            }
+          />
+        </Stack>
+
+        <Stack direction="horizontal" spacing="s" mt="l">
+          <OnlineAvatar src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg" />
+
+          <OfflineAvatar backgroundColor="cyan" name="Rohit Agrawal" />
+
+          <AvatarWithEdit backgroundColor="red" />
+        </Stack>
       </Screen>
     </ThemeProvider>
   );
