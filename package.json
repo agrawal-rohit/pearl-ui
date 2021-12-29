@@ -1,6 +1,10 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "name": "pearl-ui",
+  "main": "node_modules/expo/AppEntry.js",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "version": "1.6.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",

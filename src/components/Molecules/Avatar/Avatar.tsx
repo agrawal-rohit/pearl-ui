@@ -18,7 +18,7 @@ export type AvatarProps = Omit<ImageProps, "source"> & {
   variant?: string;
   /** The name of the person in the avatar.  If 'src' is not loaded or is missing, the 'name' will be used to create the initials */
   name?: string;
-  /** The source of the Avatar image. This is can a url, or a local image */
+  /** The source of the Avatar image. This can be a url, or a local image */
   src?: string | number;
 };
 
@@ -81,14 +81,7 @@ const Avatar: React.FC<AvatarProps> = ({
       : (src as ImageSourcePropType);
 
   if (finalSource) {
-    return (
-      <Image
-        source={finalSource}
-        {...molecularProps.root}
-        isCached={false}
-        loaderType="spinner"
-      />
-    );
+    return <Image source={finalSource} {...molecularProps.root} />;
   }
 
   // Render a fallback

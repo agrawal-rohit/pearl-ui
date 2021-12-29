@@ -69,7 +69,7 @@
               "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
           },
           { name: "og:image", content: "img/logo.png" },
-          { name: "og:url", content: "https://pearl-ui.vercel.app" },
+          { name: "og:url", content: "https://www.pearl-ui.dev" },
           { name: "og:site_name", content: "Pearl UI" },
 
           { name: "twitter:title", content: "Pearl UI" },
