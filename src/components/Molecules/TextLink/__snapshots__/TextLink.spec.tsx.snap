@@ -453,7 +453,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 14,
+              "lineHeight": 16,
             }
           }
           variant="btn4"

@@ -1,4 +1,3 @@
-import AppLoading from "expo-app-loading";
 import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
@@ -63,12 +62,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     let activeTheme =
       defaultColorMode === "system" ? systemThemeStyle : defaultColorMode;
     changeThemeTo(activeTheme);
-    // // Set initial Theme
-    // if (colorMode === "light") {
-    //   changeThemeTo("light");
-    // } else {
-    //   changeThemeTo("dark");
-    // }
   }, [theme, defaultColorMode, systemThemeStyle]);
 
   if (haveFontsLoaded) {
@@ -81,5 +74,5 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     );
   }
 
-  return <AppLoading />;
+  return null;
 };
