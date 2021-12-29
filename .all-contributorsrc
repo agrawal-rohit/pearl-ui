@@ -1,0 +1,34 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "PatelN123",
+      "name": "Nayan Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79650289?v=4",
+      "profile": "http://nayanpatel.net",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "younes200",
+      "name": "Younes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/198514?v=4",
+      "profile": "http://yalla.ma",
+      "contributions": [
+        "security"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "pearl-ui",
+  "projectOwner": "agrawal-rohit",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
