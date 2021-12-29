@@ -26,7 +26,8 @@
             sidebarPath: require.resolve("./sidebars.js"),
             sidebarCollapsible: false,
             // Please change this to your repo.
-            editUrl: "https://github.com/agrawal-rohit/pearl-ui/tree/main/documentationwebsite/",
+            editUrl:
+              "https://github.com/agrawal-rohit/pearl-ui/tree/main/documentationwebsite/",
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
@@ -102,10 +103,10 @@
               "aria-label": "GitHub repository",
             },
             {
-              href: "https://discord.gg/wxJsmG5k",
+              href: "https://github.com/agrawal-rohit/pearl-ui/discussions",
               position: "right",
               className: "header-discord-link",
-              "aria-label": "Discord channel",
+              "aria-label": "Discussions",
             },
             {
               href: "https://twitter.com/pearl_ui",
