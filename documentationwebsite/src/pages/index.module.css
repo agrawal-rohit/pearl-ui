@@ -1,0 +1,71 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+.heroBanner {
+  padding: 4rem 0;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.heroDescription {
+  font-family: "Poppins";
+  font-weight: 500;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: var(--hero-description-text-color);
+  font-size: clamp(17px, 3vw, 1rem);
+}
+
+.heroButton {
+  font-weight: 500;
+  padding: 12px 25px;
+  font-size: 18px;
+}
+
+.featureCard {
+  background-color: var(--feature-card-background);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.featureCardIcon {
+  margin-bottom: 20px;
+}
+
+.featureCardTitle,
+.featureCardBody {
+  font-family: "Poppins";
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .heroDescription {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .heroButton {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
