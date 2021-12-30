@@ -1,3 +1,10 @@
+# [2.0.0-beta.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2021-12-30)
+
+
+### Features
+
+* **types:** exporting types from the module ([0372e7e](https://github.com/agrawal-rohit/pearl-ui/commit/0372e7ebc34d0c67b5928175181a683de360e835))
+
 # [2.0.0-beta.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.2...v2.0.0-beta.1) (2021-12-30)
 
 
