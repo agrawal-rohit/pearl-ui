@@ -1,3 +1,10 @@
+# [2.0.0-beta.6](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.5...v2.0.0-beta.6) (2021-12-30)
+
+
+### Bug Fixes
+
+* fake fix commit to trigger test release to npm ([ffd571a](https://github.com/agrawal-rohit/pearl-ui/commit/ffd571aa6bf54c9f77185ec2bdb88d2a8371a7a1))
+
 # [2.0.0-beta.5](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2021-12-30)
 
 
