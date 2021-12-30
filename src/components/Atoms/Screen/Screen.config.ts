@@ -11,4 +11,4 @@ export default {
     },
     padding: "m",
   },
-} as AtomicComponentConfig<ScreenProps>;
+} as AtomicComponentConfig;
