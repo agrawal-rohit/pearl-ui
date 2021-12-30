@@ -1,3 +1,4 @@
+import { ColorScheme } from "../theme/src/types";
 import { getKeys } from "../theme/utils/typeHelpers";
 import { useTheme } from "./useTheme";
 import { checkKeyAvailability } from "./utils/utils";
@@ -27,7 +28,7 @@ const replaceColorValuesInObject = (
  * @returns
  */
 export const useColorScheme = (
-  targetColorScheme: string,
+  targetColorScheme: ColorScheme,
   props: Record<string, any>
 ): Record<string, any> => {
   if (!targetColorScheme) return props;

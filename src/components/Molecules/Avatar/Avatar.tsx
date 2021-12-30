@@ -10,12 +10,18 @@ import { getKeys } from "../../../theme/utils/typeHelpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
 import { useTheme } from "../../../hooks/useTheme";
 import { ColorInput } from "@ctrl/tinycolor";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  FinalPearlTheme,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
-export type AvatarProps = Omit<ImageProps, "source"> & {
+export type AvatarProps = Omit<ImageProps, "source" | "size" | "variant"> & {
   /** The size of the avatar */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Avatar">>;
   /** The variant of the avatar */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Avatar">>;
   /** The name of the person in the avatar.  If 'src' is not loaded or is missing, the 'name' will be used to create the initials */
   name?: string;
   /** The source of the Avatar image. This can be a url, or a local image */
@@ -46,8 +52,12 @@ const Avatar: React.FC<AvatarProps> = ({
   const { theme } = useTheme();
   const randomColor = useRef(pickRandomColor()).current;
   const accessibleTextColor = useAccessibleColor(
-    (theme.palette[molecularProps.root.backgroundColor] as ColorInput) ||
-      (theme.palette[molecularProps.root.bg] as ColorInput) ||
+    (theme.palette[
+      molecularProps.root.backgroundColor as keyof FinalPearlTheme["palette"]
+    ] as ColorInput) ||
+      (theme.palette[
+        molecularProps.root.bg as keyof FinalPearlTheme["palette"]
+      ] as ColorInput) ||
       molecularProps.root.style.backgroundColor ||
       namedColors[randomColor],
     {

@@ -1,3 +1,4 @@
+import { breakpoints } from "./base/breakpoints";
 import { getKeys, isThemeKey } from "../utils/typeHelpers";
 import {
   AtLeastOneResponsiveValue,
@@ -31,12 +32,16 @@ export const getValueForScreenSize = ({
       if (
         width >= value.width &&
         height >= value.height &&
-        responsiveValue[key] !== undefined
+        responsiveValue[key as keyof FinalPearlTheme["breakpoints"]] !==
+          undefined
       ) {
-        return responsiveValue[key];
+        return responsiveValue[key as keyof FinalPearlTheme["breakpoints"]];
       }
-    } else if (width >= value && responsiveValue[key] !== undefined) {
-      return responsiveValue[key];
+    } else if (
+      width >= value &&
+      responsiveValue[key as keyof FinalPearlTheme["breakpoints"]] !== undefined
+    ) {
+      return responsiveValue[key as keyof FinalPearlTheme["breakpoints"]];
     }
 
     return acc;
@@ -49,9 +54,12 @@ export const isResponsiveObjectValue = (
 ): val is AtLeastOneResponsiveValue => {
   if (!val) return false;
   if (typeof val !== "object") return false;
-  return getKeys(val).reduce((acc: boolean, key) => {
-    return acc && theme.breakpoints[key as string] !== undefined;
-  }, true);
+  return getKeys(val).reduce(
+    (acc: boolean, key: keyof FinalPearlTheme["breakpoints"]) => {
+      return acc && theme.breakpoints[key] !== undefined;
+    },
+    true
+  );
 };
 
 function getWidth(value: Breakpoint) {

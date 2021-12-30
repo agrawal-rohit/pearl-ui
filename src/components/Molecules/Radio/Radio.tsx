@@ -4,6 +4,10 @@ import {
   FinalPearlTheme,
   ColorModeColor,
   ResponsiveValue,
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  PaletteColors,
 } from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
@@ -15,9 +19,9 @@ import { GestureResponderEvent } from "react-native";
 
 export type RadioProps = PressableProps & {
   /** Size of the radio. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Radio">>;
   /** Variant of the radio. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Radio">>;
   /** Value of the radio if it is part of a group. */
   value?: string | number | undefined;
   /** Whether the radio is disabled.  */
@@ -29,73 +33,41 @@ export type RadioProps = PressableProps & {
   /** The error message to be displayed if the radio is in an error state */
   errorMessage?: string;
   /** Active color palette of the radio */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** The spacing between the radio and the label text */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** The background color of the radio's outer box when it is in checked state */
-  checkedBackgroundColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBackgroundColor?: ResponsiveValue<PaletteColors>;
   /** The border color of the radio's outer box when it is in checked state */
-  checkedBorderColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderColor?: ResponsiveValue<PaletteColors>;
   /** The border start color of the radio's outer box when it is in checked state */
-  checkedBorderStartColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderStartColor?: ResponsiveValue<PaletteColors>;
   /** The border end color of the radio's outer box when it is in checked state */
-  checkedBorderEndColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderEndColor?: ResponsiveValue<PaletteColors>;
   /** The border top color of the radio's outer box when it is in checked state */
-  checkedBorderTopColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderTopColor?: ResponsiveValue<PaletteColors>;
   /** The border left color of the radio's outer box when it is in checked state */
-  checkedBorderLeftColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderLeftColor?: ResponsiveValue<PaletteColors>;
   /** The border right color of the radio's outer box when it is in checked state */
-  checkedBorderRightColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderRightColor?: ResponsiveValue<PaletteColors>;
   /** The border bottom color of the radio's outer box when it is in checked state */
-  checkedBorderBottomColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderBottomColor?: ResponsiveValue<PaletteColors>;
   /** The background color of the radio's outer box when it is in an error state */
-  errorBackgroundColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBackgroundColor?: ResponsiveValue<PaletteColors>;
   /** The border color of the radio's outer box when it is in an error state */
-  errorBorderColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderColor?: ResponsiveValue<PaletteColors>;
   /** The border start color of the radio's outer box when it is in an error state */
-  errorBorderStartColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderStartColor?: ResponsiveValue<PaletteColors>;
   /** The border end color of the radio's outer box when it is in an error state */
-  errorBorderEndColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderEndColor?: ResponsiveValue<PaletteColors>;
   /** The border top color of the radio's outer box when it is in an error state */
-  errorBorderTopColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderTopColor?: ResponsiveValue<PaletteColors>;
   /** The border left color of the radio's outer box when it is in an error state */
-  errorBorderLeftColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderLeftColor?: ResponsiveValue<PaletteColors>;
   /** The border right color of the radio's outer box when it is in an error state */
-  errorBorderRightColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderRightColor?: ResponsiveValue<PaletteColors>;
   /** The border bottom color of the radio's outer box when it is in an error state */
-  errorBorderBottomColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderBottomColor?: ResponsiveValue<PaletteColors>;
 };
 
 /** The Radio component is used when only one choice may be selected in a series of options. **/

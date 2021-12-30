@@ -19,6 +19,11 @@ import { BlurView } from "expo-blur";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import { useStyledProps } from "../../../hooks/useStyledProps";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -43,9 +48,9 @@ export type ImageProps = BoxProps &
     | "borderTopRightRadius"
   > & {
     /** The size of the image */
-    size?: string;
+    size?: ResponsiveValue<ComponentSizes<"Image">>;
     /** The variant of the image */
-    variant?: string;
+    variant?: ResponsiveValue<ComponentVariants<"Image">>;
     /** Whether a remote image should be cached */
     isCached?: boolean;
     /** Source of the image to show while the remote image is being fetched */

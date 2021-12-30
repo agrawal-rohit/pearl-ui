@@ -13,7 +13,12 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../../theme/src/types";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+  StyleFunctionContainer,
+} from "../../../theme/src/types";
 import {
   AntDesign,
   Entypo,
@@ -73,9 +78,9 @@ export type IconProps = IconStyleProps &
     /** Name of the icon as given in it's respective icon family */
     iconName: string;
     /** The size of the icon */
-    size?: string;
+    size?: ResponsiveValue<ComponentSizes<"Icon">>;
     /** The variant of the icon */
-    variant?: string;
+    variant?: ResponsiveValue<ComponentVariants<"Icon">>;
     /** The accessibility label of the icon */
     accessibilityLabel?: string;
     /** Size of the icon in pixels to override the component style size */

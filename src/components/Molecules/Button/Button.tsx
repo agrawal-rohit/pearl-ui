@@ -6,12 +6,18 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import Icon from "../../Atoms/Icon/Icon";
 import { useColorScheme } from "../../../hooks/useColorScheme";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 export type ButtonProps = PressableProps & {
   /** Size of the button. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Button">>;
   /** Variant of the button. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Button">>;
   /** Whether the button is in a loading state.  */
   isLoading?: boolean;
   /** Whether the button should span the entire width of the parent container */
@@ -19,7 +25,7 @@ export type ButtonProps = PressableProps & {
   /** The text value to display when the button is in a loading state */
   loadingText?: string;
   /** Active color palette of the button */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** The position of the loading spinner with respect to the loadingText */
   spinnerPlacement?: "start" | "end";
   /** Icon to display on the left side of the main text */

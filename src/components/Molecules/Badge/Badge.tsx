@@ -4,22 +4,22 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import Text from "../../Atoms/Text/Text";
 import { BoxProps } from "../../Atoms/Box/Box";
 import { useColorScheme } from "../../../hooks/useColorScheme";
-import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  FinalPearlTheme,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 
 export type BadgeProps = PressableProps & {
-  // /** The size of the badge */
-  // size?: ResponsiveValue<keyof FinalPearlTheme["components"]["Badge"]["sizes"]>;
-  // /** The variant of the badge */
-  // variant?: ResponsiveValue<
-  //   keyof FinalPearlTheme["components"]["Badge"]["variants"]
-  // >;
   /** The size of the badge */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Badge">>;
   /** The variant of the badge */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Badge">>;
   /** Active color palette of the badge */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
 };
 
 /** A Badge is a small component typically used to communicate a numerical value or indicate the status of an item to the user. */

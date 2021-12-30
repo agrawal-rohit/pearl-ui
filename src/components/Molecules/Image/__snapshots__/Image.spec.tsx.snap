@@ -1253,6 +1253,9 @@ Array [
       style={
         Array [
           Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
             "alignItems": "center",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
@@ -1267,9 +1270,6 @@ Array [
             "right": 0,
             "top": 0,
             "zIndex": 3,
-          },
-          Object {
-            "backgroundColor": "transparent",
           },
         ]
       }
@@ -1355,6 +1355,9 @@ Array [
       style={
         Array [
           Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
             "alignItems": "center",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
@@ -1369,9 +1372,6 @@ Array [
             "right": 0,
             "top": 0,
             "zIndex": 3,
-          },
-          Object {
-            "backgroundColor": "transparent",
           },
         ]
       }
@@ -1574,6 +1574,9 @@ Array [
       style={
         Array [
           Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
             "alignItems": "center",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
@@ -1588,9 +1591,6 @@ Array [
             "right": 0,
             "top": 0,
             "zIndex": 3,
-          },
-          Object {
-            "backgroundColor": "transparent",
           },
         ]
       }

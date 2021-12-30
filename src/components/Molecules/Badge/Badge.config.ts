@@ -1,3 +1,6 @@
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { BadgeProps } from "./Badge";
+
 export default {
   parts: ["root", "text"],
   baseStyle: {
@@ -66,4 +69,4 @@ export default {
     size: "m",
     variant: "rounded",
   },
-};
+} as MolecularComponentConfig<BadgeProps>;

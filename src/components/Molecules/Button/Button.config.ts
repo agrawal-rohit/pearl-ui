@@ -1,3 +1,6 @@
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { ButtonProps } from "./Button";
+
 export default {
   parts: ["root", "text", "spinner", "icon"],
   baseStyle: {
@@ -136,4 +139,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-};
+} as MolecularComponentConfig<ButtonProps>;

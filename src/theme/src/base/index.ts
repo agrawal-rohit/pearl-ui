@@ -79,9 +79,3 @@ export const baseTheme = {
     Avatar: AvatarConfig,
   },
 };
-
-type Custom = typeof baseTheme;
-
-declare module "../../.." {
-  interface CustomPearlTheme extends Custom {}
-}

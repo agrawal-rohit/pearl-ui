@@ -1,3 +1,6 @@
+import { AtomicComponentConfig } from "../../../theme/src/types";
+import { IconProps } from "./Icon";
+
 export default {
   baseStyle: {
     color: {
@@ -22,4 +25,4 @@ export default {
   defaults: {
     size: "m",
   },
-};
+} as AtomicComponentConfig<IconProps>;

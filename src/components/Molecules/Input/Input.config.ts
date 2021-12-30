@@ -1,3 +1,6 @@
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { InputProps } from "./Input";
+
 export default {
   parts: ["root", "input", "text", "icon", "errorText"],
   baseStyle: {
@@ -29,6 +32,7 @@ export default {
         light: "neutral.500",
         dark: "neutral.600",
       },
+      selectionColor: "primary.500",
       allowFontScaling: true,
     },
     errorText: {
@@ -151,4 +155,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-};
+} as MolecularComponentConfig<InputProps>;

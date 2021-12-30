@@ -1,3 +1,6 @@
+import { AtomicComponentConfig } from "../../../theme/src/types";
+import { TextProps } from "./Text";
+
 export default {
   baseStyle: {
     color: {
@@ -11,31 +14,31 @@ export default {
       fontFamily: "heading",
       fontWeight: "bold",
       fontSize: "8xl",
-      lineHeight: "10xl",
+      lineHeight: "12xl",
     },
     h2: {
       fontFamily: "heading",
       fontWeight: "bold",
       fontSize: "5xl",
-      lineHeight: "7xl",
+      lineHeight: "8xl",
     },
     t1: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "2xl",
-      lineHeight: "4xl",
+      lineHeight: "6xl",
     },
     t2: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "l",
-      lineHeight: "2xl",
+      lineHeight: "3xl",
     },
     st1: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "m",
-      lineHeight: "xl",
+      lineHeight: "2xl",
     },
     st2: {
       fontFamily: "heading",
@@ -47,7 +50,7 @@ export default {
       fontFamily: "body",
       fontWeight: "normal",
       fontSize: "m",
-      lineHeight: "xl",
+      lineHeight: "2xl",
     },
     p2: {
       fontFamily: "body",
@@ -65,19 +68,19 @@ export default {
       fontFamily: "body",
       fontWeight: "medium",
       fontSize: "m",
-      lineHeight: "xl",
+      lineHeight: "2xl",
     },
     btn2: {
       fontFamily: "body",
       fontWeight: "medium",
       fontSize: "s",
-      lineHeight: "m",
+      lineHeight: "l",
     },
     btn3: {
       fontFamily: "body",
       fontWeight: "medium",
       fontSize: "xs",
-      lineHeight: "s",
+      lineHeight: "m",
     },
     btn4: {
       fontFamily: "body",
@@ -89,4 +92,4 @@ export default {
   defaults: {
     variant: "p1",
   },
-};
+} as AtomicComponentConfig<TextProps>;

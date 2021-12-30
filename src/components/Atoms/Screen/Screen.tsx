@@ -12,6 +12,11 @@ import {
   KeyboardAwareScrollViewProps,
 } from "react-native-keyboard-aware-scroll-view";
 import { useTheme } from "../../../hooks/useTheme";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 export type ScreenProps = BoxProps &
   Omit<
@@ -22,9 +27,9 @@ export type ScreenProps = BoxProps &
     | "showsVerticalScrollIndicator"
   > & {
     /** The size of the screen */
-    size?: string;
+    size?: ResponsiveValue<ComponentSizes<"Screen">>;
     /** The variant of the screen */
-    variant?: string;
+    variant?: ResponsiveValue<ComponentVariants<"Screen">>;
     /** Whether the screen is scrollable */
     scrollable?: boolean;
     /** Whether to show the vertical scrollbar if the Screen is scrollable */

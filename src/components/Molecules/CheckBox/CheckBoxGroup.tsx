@@ -1,15 +1,21 @@
 import React, { createContext, useContext } from "react";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
 interface ICheckBoxGroupContext {
   /** Size of all the checkbox children in the group. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
   /** Variant of all the checkbox children in the group. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
   /** Whether the checkbox group is disabled.  */
   isDisabled?: boolean;
   /** Active color palette of all the checkbox children in the group. */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** Shape of all the checkbox children in the group. */
   shape?: "square" | "circle";
   /** Active values of the checkbox options in the group */
@@ -30,13 +36,13 @@ export const useCheckBoxGroup = () =>
 
 export type CheckBoxGroupProps = BoxProps & {
   /** Size of all the children checkbox in the group. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
   /** Variant of all the children checkbox in the group. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
   /** Whether the checkbox group is disabled.  */
   isDisabled?: boolean;
   /** Active color palette of all the children checkbox in the group. */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** Shape of all the children checkbox in the group. */
   shape?: "square" | "circle";
   /** Default active value of the checkbox group */

@@ -1,5 +1,8 @@
 import {
   AtomicComponentConfig,
+  ColorScheme,
+  FinalPearlTheme,
+  ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/typeHelpers";
@@ -9,6 +12,12 @@ import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
+import {
+  getValueForScreenSize,
+  isResponsiveObjectValue,
+} from "../theme/src/responsiveHelpers";
+import { useDimensions } from "./useDimensions";
+import { useResponsiveProp } from "./useResponsiveProps";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles
@@ -20,13 +29,16 @@ import { useColorScheme } from "./useColorScheme";
  * @returns
  */
 export const useAtomicComponentConfig = (
-  themeComponentKey: string,
+  themeComponentKey: keyof FinalPearlTheme["components"],
   receivedProps: Record<string, any>,
-  sizeAndVariantProps: AtomicComponentConfig["defaults"] = {
+  sizeAndVariantProps: {
+    size?: ResponsiveValue<string | undefined>;
+    variant?: ResponsiveValue<string | undefined>;
+  } = {
     size: undefined,
     variant: undefined,
   },
-  colorScheme: string = "primary",
+  colorScheme: ColorScheme = "primary",
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[]
 ) => {
   const { theme } = useTheme();
@@ -34,26 +46,38 @@ export const useAtomicComponentConfig = (
   // User overriden props
   const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
-  checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
+  checkKeyAvailability(
+    themeComponentKey as string,
+    theme.components,
+    "theme.components"
+  );
+
+  // Responsive Size and Variant
+  const sizeForCurrentScreenSize = useResponsiveProp(
+    sizeAndVariantProps.size
+  ) as string;
+  const variantForCurrentScreenSize = useResponsiveProp(
+    sizeAndVariantProps.variant
+  ) as string;
 
   const componentStyleConfig = theme.components[themeComponentKey];
   const activeSizeAndVariantConfig: AtomicComponentConfig["defaults"] = {};
 
   let finalComponentProps: Record<string, any> = {};
   if (componentStyleConfig.hasOwnProperty("defaults")) {
-    const defaultComponentConfig = componentStyleConfig[
+    const defaultComponentConfig = (componentStyleConfig as any)[
       "defaults"
     ] as NonNullable<AtomicComponentConfig["defaults"]>;
 
     if (defaultComponentConfig.hasOwnProperty("size")) {
-      activeSizeAndVariantConfig.size = sizeAndVariantProps.size
-        ? sizeAndVariantProps.size
+      activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
+        ? sizeForCurrentScreenSize
         : defaultComponentConfig.size;
     }
 
     if (defaultComponentConfig.hasOwnProperty("variant")) {
-      activeSizeAndVariantConfig.variant = sizeAndVariantProps.variant
-        ? sizeAndVariantProps.variant
+      activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
+        ? variantForCurrentScreenSize
         : defaultComponentConfig.variant;
     }
 
@@ -71,14 +95,13 @@ export const useAtomicComponentConfig = (
 
           checkKeyAvailability(
             activeSizeAndVariantConfig["size"] as string,
-            componentStyleConfig!.sizes!,
+            (componentStyleConfig as any)!.sizes!,
             `theme.components['${String(themeComponentKey)}']['sizes']`
           );
 
-          activeSizeAndVariantStyles =
-            componentStyleConfig!.sizes![
-              activeSizeAndVariantConfig[currProp] as string
-            ];
+          activeSizeAndVariantStyles = (componentStyleConfig as any)!.sizes![
+            activeSizeAndVariantConfig[currProp] as string
+          ];
         } else {
           checkKeyAvailability(
             "variants",
@@ -88,14 +111,13 @@ export const useAtomicComponentConfig = (
 
           checkKeyAvailability(
             activeSizeAndVariantConfig["variant"] as string,
-            componentStyleConfig!.variants!,
+            (componentStyleConfig as any)!.variants!,
             `theme.components['${String(themeComponentKey)}']['variants']`
           );
 
-          activeSizeAndVariantStyles =
-            componentStyleConfig!.variants![
-              activeSizeAndVariantConfig[currProp] as string
-            ];
+          activeSizeAndVariantStyles = (componentStyleConfig as any)!.variants![
+            activeSizeAndVariantConfig[currProp] as string
+          ];
         }
 
         if (style) {

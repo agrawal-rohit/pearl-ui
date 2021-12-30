@@ -1,3 +1,6 @@
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { TextLinkProps } from "./TextLink";
+
 export default {
   parts: ["root", "text"],
   baseStyle: {
@@ -33,4 +36,4 @@ export default {
   defaults: {
     size: "m",
   },
-};
+} as MolecularComponentConfig<TextLinkProps>;
