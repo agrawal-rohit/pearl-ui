@@ -51,4 +51,4 @@ export default {
     size: "m",
     variant: "spinner",
   },
-} as AtomicComponentConfig<SpinnerProps>;
+} as AtomicComponentConfig;

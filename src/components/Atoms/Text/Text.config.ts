@@ -92,4 +92,4 @@ export default {
   defaults: {
     variant: "p1",
   },
-} as AtomicComponentConfig<TextProps>;
+} as AtomicComponentConfig;

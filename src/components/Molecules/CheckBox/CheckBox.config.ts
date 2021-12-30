@@ -108,4 +108,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig<CheckBoxProps>;
+} as MolecularComponentConfig;

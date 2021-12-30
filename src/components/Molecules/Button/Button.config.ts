@@ -139,4 +139,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig<ButtonProps>;
+} as MolecularComponentConfig;

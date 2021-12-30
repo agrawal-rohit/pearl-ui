@@ -36,4 +36,4 @@ export default {
   defaults: {
     size: "m",
   },
-} as MolecularComponentConfig<TextLinkProps>;
+} as MolecularComponentConfig;

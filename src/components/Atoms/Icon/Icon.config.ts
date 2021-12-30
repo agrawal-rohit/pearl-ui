@@ -25,4 +25,4 @@ export default {
   defaults: {
     size: "m",
   },
-} as AtomicComponentConfig<IconProps>;
+} as AtomicComponentConfig;
