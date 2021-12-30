@@ -3,6 +3,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
+  "typings": "lib/typescript/src/index.d.ts",
   "react-native": "src/index.ts",
   "source": "src/index",
   "version": "2.0.0-beta.1",
