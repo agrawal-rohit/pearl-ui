@@ -155,4 +155,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig<InputProps>;
+} as MolecularComponentConfig;

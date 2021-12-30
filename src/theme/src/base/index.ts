@@ -1,6 +1,4 @@
 import { breakpoints } from "./breakpoints";
-import { BasePearlTheme, FinalPearlTheme } from "../types";
-
 import { borderRadii } from "./borderRadii";
 import { elevation } from "./elevation";
 import { palette } from "./palette";

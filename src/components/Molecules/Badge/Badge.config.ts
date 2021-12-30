@@ -69,4 +69,4 @@ export default {
     size: "m",
     variant: "rounded",
   },
-} as MolecularComponentConfig<BadgeProps>;
+} as MolecularComponentConfig;

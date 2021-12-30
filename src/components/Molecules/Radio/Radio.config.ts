@@ -116,4 +116,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig<RadioProps>;
+} as MolecularComponentConfig;

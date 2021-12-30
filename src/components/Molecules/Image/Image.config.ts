@@ -16,4 +16,4 @@ export default {
       color: "neutral.400",
     },
   },
-} as MolecularComponentConfig<ImageProps>;
+} as MolecularComponentConfig;
