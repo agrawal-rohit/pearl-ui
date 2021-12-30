@@ -1,3 +1,10 @@
+# [2.0.0-beta.5](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2021-12-30)
+
+
+### Bug Fixes
+
+* **extendtheme:** updated to a leaner and more readable implementation of extendTheme ([d6e8c55](https://github.com/agrawal-rohit/pearl-ui/commit/d6e8c5586f4c38d335ee67620b90504620e0908f))
+
 # [2.0.0-beta.4](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2021-12-30)
 
 
