@@ -1,3 +1,5 @@
+import { ElevationConfig } from "../types";
+
 export const elevation = {
   xs: {
     shadowColor: "#1A2138",
@@ -79,4 +81,4 @@ export const elevation = {
     shadowRadius: 28,
     elevation: 28,
   },
-};
+} as Record<string, ElevationConfig>;

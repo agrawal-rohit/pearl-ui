@@ -92,47 +92,13 @@ export interface Dimensions {
   height: number;
 }
 
-export interface BasePearlTheme {
-  palette: {
-    [key: string]: string | ColorPalette;
-  };
-  spacing: {
-    [key: string]: number | string;
-  };
-  components: {
-    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
-  };
-  fonts: {
-    [key: string]: string;
-  };
-  fontConfig: FontConfig;
-  fontSizes: {
-    [key: string]: number;
-  };
-  lineHeights: {
-    [key: string]: number;
-  };
-  fontWeights: {
-    [key: string]: string;
-  };
-  elevation: {
-    [key: string]: ElevationConfig;
-  };
-  zIndices: {
-    [key: string]: number;
-  };
-  borderRadii: {
-    [key: string]: number | string;
-  };
-  breakpoints: {
-    [key: string]: Breakpoint;
-  };
-}
-
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CustomPearlTheme {}
+
+type DefaultTheme = typeof baseTheme;
+
 export interface FinalPearlTheme
-  extends Omit<BasePearlTheme, keyof CustomPearlTheme>,
+  extends Omit<DefaultTheme, keyof CustomPearlTheme>,
     CustomPearlTheme {}
 
 // Palette

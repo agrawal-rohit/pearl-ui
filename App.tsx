@@ -29,6 +29,7 @@ import Image from "./src/components/Molecules/Image/Image";
 import withBadge from "./src/components/Molecules/Badge/withBadge";
 import Spinner from "./src/components/Atoms/Spinner/Spinner";
 import Input from "./src/components/Molecules/Input/Input";
+import Text from "./src/components/Atoms/Text/Text";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -143,6 +144,8 @@ const App = () => {
           isFullWidth
           mt="l"
         />
+
+        <Text fontFamily="heading" />
       </Screen>
     </ThemeProvider>
   );
