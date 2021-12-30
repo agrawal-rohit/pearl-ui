@@ -26,7 +26,7 @@ import ImageConfig from "../../../components/Molecules/Image/Image.config";
 import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 import BadgeConfig from "../../../components/Molecules/Badge/Badge.config";
 import AvatarConfig from "../../../components/Molecules/Avatar/Avatar.config";
-import { isFunction, mergeWith } from "lodash";
+import { merge } from "lodash";
 
 export const baseTheme = {
   palette,
@@ -67,22 +67,5 @@ export const extendTheme = <
 >(
   overrideConfig: T
 ) => {
-  function customizer(source: any, override: any) {
-    if (isFunction(source)) {
-      return (...args: any[]) => {
-        const sourceValue = source(...args);
-        const overrideValue = isFunction(override)
-          ? override(...args)
-          : override;
-        return mergeWith({}, sourceValue, overrideValue, customizer);
-      };
-    }
-    return undefined;
-  }
-
-  const finalTheme = [overrideConfig].reduce((prevValue, currentValue) => {
-    return mergeWith({}, prevValue, currentValue, customizer);
-  }, baseTheme);
-
-  return finalTheme as T & typeof baseTheme;
+  return merge(baseTheme, overrideConfig) as T & typeof baseTheme;
 };
