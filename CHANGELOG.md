@@ -1,3 +1,10 @@
+# [2.0.0-beta.3](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2021-12-30)
+
+
+### Features
+
+* **extendtheme:** updated the extendTheme function to return a type-enforced theme object ([ad1deb1](https://github.com/agrawal-rohit/pearl-ui/commit/ad1deb1b2e266fd4543d9258df869b502bb29d00))
+
 # [2.0.0-beta.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2021-12-30)
 
 
