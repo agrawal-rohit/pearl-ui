@@ -6,4 +6,4 @@ export const borderRadii = {
   xl: 24,
   "2xl": 32,
   full: 1000,
-};
+} as Record<string, number | string>;

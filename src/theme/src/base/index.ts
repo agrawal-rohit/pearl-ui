@@ -28,7 +28,54 @@ import BadgeConfig from "../../../components/Molecules/Badge/Badge.config";
 import AvatarConfig from "../../../components/Molecules/Avatar/Avatar.config";
 import { merge } from "lodash";
 
-export const baseTheme = {
+import {
+  ColorPalette,
+  AtomicComponentConfig,
+  MolecularComponentConfig,
+  FontConfig,
+  ElevationConfig,
+  Breakpoint,
+} from "../types";
+import components from "./components";
+
+interface ThemeSkeleton {
+  palette: {
+    [key: string]: string | ColorPalette;
+  };
+  spacing: {
+    [key: string]: number | string;
+  };
+  components: {
+    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
+  };
+  fonts: {
+    [key: string]: string;
+  };
+  fontConfig: FontConfig;
+  fontSizes: {
+    [key: string]: number;
+  };
+  lineHeights: {
+    [key: string]: number;
+  };
+  fontWeights: {
+    [key: string]: string;
+  };
+  elevation: {
+    [key: string]: ElevationConfig;
+  };
+  zIndices: {
+    [key: string]: number;
+  };
+  borderRadii: {
+    [key: string]: number | string;
+  };
+  breakpoints: {
+    [key: string]: Breakpoint;
+  };
+}
+
+export const baseTheme: ThemeSkeleton = {
   palette,
   spacing,
   borderRadii,
@@ -40,21 +87,7 @@ export const baseTheme = {
   fontSizes,
   fontWeights,
   lineHeights,
-  components: {
-    Icon: IconConfig,
-    Text: TextConfig,
-    Screen: ScreenConfig,
-    Spinner: SpinnerConfig,
-    Button: ButtonConfig,
-    TextLink: TextLinkConfig,
-    Input: InputConfig,
-    CheckBox: CheckBoxConfig,
-    Radio: RadioConfig,
-    Badge: BadgeConfig,
-    Divider: DividerConfig,
-    Image: ImageConfig,
-    Avatar: AvatarConfig,
-  },
+  components,
 };
 
 /**

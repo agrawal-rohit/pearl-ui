@@ -1,4 +1,5 @@
 import namedColors from "../../utils/namedColors.json";
+import { ColorPalette } from "../types";
 
 export const palette = {
   primary: {
@@ -93,4 +94,4 @@ export const palette = {
   },
 
   ...namedColors,
-};
+} as Record<string, string | ColorPalette>;
