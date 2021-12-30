@@ -1,3 +1,10 @@
+# [2.0.0-beta.4](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2021-12-30)
+
+
+### Bug Fixes
+
+* **extendtheme:** removing type-enforcing for config files to fix circular dependency in extendTheme ([781c260](https://github.com/agrawal-rohit/pearl-ui/commit/781c2603eed4fcfefc87150e85f54ca5c0396ffb))
+
 # [2.0.0-beta.3](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2021-12-30)
 
 
