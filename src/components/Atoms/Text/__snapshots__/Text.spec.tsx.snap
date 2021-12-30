@@ -14,7 +14,7 @@ exports[`Atoms/Text passes the snapshot test 1`] = `
       "fontSize": 18.4,
       "fontStyle": "normal",
       "fontWeight": "400",
-      "lineHeight": 24,
+      "lineHeight": 26,
     }
   }
 >

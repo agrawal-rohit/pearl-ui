@@ -1,15 +1,21 @@
 import React, { createContext, useContext, useState } from "react";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 
 interface IRadioGroupContext {
   /** Size of all the children radio in the group. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Radio">>;
   /** Variant of all the children radio in the group. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Radio">>;
   /** Whether the radio group is disabled.  */
   isDisabled?: boolean;
   /** Active color palette of all the children radio in the group. */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** Active value of the radio options in the group */
   radioGroupValue: string | number | undefined;
   /** Function to update the active value of the group */
@@ -26,13 +32,13 @@ export const useRadioGroup = () =>
 
 export type RadioGroupProps = BoxProps & {
   /** Size of all the children radio in the group. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Radio">>;
   /** Variant of all the children radio in the group. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Radio">>;
   /** Whether the radio group is disabled.  */
   isDisabled?: boolean;
   /** Active color palette of all the children radio in the group. */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** Default active value of the radio group */
   defaultValue?: string | number | undefined;
   /** Active value of the radio group */

@@ -1,3 +1,6 @@
+import { AtomicComponentConfig } from "../../../theme/src/types";
+import { DividerProps } from "./Divider";
+
 export default {
   baseStyle: {
     orientation: "horizontal",
@@ -8,4 +11,4 @@ export default {
     thickness: 1,
     length: "100%",
   },
-};
+} as AtomicComponentConfig<DividerProps>;

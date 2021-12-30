@@ -53,6 +53,7 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -104,7 +105,7 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "500",
-            "lineHeight": 20,
+            "lineHeight": 22,
           }
         }
         variant="btn2"
@@ -170,6 +171,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -221,7 +223,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 20,
+              "lineHeight": 22,
             }
           }
           variant="btn2"
@@ -283,6 +285,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -334,7 +337,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 20,
+              "lineHeight": 22,
             }
           }
           variant="btn2"
@@ -401,6 +404,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -515,6 +519,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -567,7 +572,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 18,
+              "lineHeight": 20,
             }
           }
           variant="btn3"
@@ -629,6 +634,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -681,7 +687,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 20,
+              "lineHeight": 22,
             }
           }
           variant="btn2"
@@ -743,6 +749,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -795,7 +802,7 @@ Array [
               "fontSize": 18.4,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 24,
+              "lineHeight": 26,
             }
           }
           variant="btn1"
@@ -861,6 +868,7 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -913,7 +921,7 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "500",
-            "lineHeight": 20,
+            "lineHeight": 22,
           }
         }
         variant="btn2"

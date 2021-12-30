@@ -92,6 +92,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
           accessible={true}
           checkedBackgroundColor="primary.500"
           checkedBorderColor="primary.500"
+          collapsable={false}
           colorScheme="primary"
           errorBorderColor="danger.500"
           focusable={true}
@@ -284,6 +285,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -472,6 +474,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="secondary.500"
             checkedBorderColor="secondary.500"
+            collapsable={false}
             colorScheme="secondary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -665,6 +668,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -854,6 +858,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -1043,6 +1048,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -1132,7 +1138,7 @@ Array [
             "fontSize": 18.4,
             "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 24,
+            "lineHeight": 26,
           }
         }
         variant="p1"
@@ -1232,6 +1238,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -1321,7 +1328,7 @@ Array [
             "fontSize": 18.4,
             "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 24,
+            "lineHeight": 26,
           }
         }
         variant="p1"
@@ -1426,6 +1433,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -1620,6 +1628,7 @@ Array [
               }
             }
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -1814,6 +1823,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -2009,6 +2019,7 @@ Array [
               }
             }
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -2204,6 +2215,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             focusable={true}
@@ -2393,6 +2405,7 @@ Array [
             accessible={true}
             checkedBackgroundColor="primary.500"
             checkedBorderColor="primary.500"
+            collapsable={false}
             colorScheme="primary"
             errorBorderColor="danger.500"
             errorMessage="This is an error message!"
@@ -2611,6 +2624,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
           accessible={true}
           checkedBackgroundColor="primary.500"
           checkedBorderColor="primary.500"
+          collapsable={false}
           colorScheme="primary"
           errorBorderColor="danger.500"
           focusable={true}

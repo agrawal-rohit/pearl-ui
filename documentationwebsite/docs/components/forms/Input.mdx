@@ -203,7 +203,8 @@ Input also composes the [TextInput](https://reactnative.dev/docs/textinput) comp
 | hasClearButton         | false    | <t>boolean</t>                                 | `false`         | Whether the input field should display a clear button.                        |
 | leftIcon               | false    | <t>React.ReactElement</t>                      | `null`          | Icon to display on the left side of the main text.                            |
 | rightIcon              | false    | <t>React.ReactElement</t>                      | `null`          | Icon to display on the right side of the main text.                           |
-| placeholderTextColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | Custom color of the placeholder text string.                                  |
+| placeholderTextColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"neutral.500"` | Custom color of the placeholder text string.                                  |
+| selectionColor         | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"primary.500"` | Custom color of the highlight and cursor color.                               |
 | focusBackgroundColor   | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"neutral.50"`  | The background color of the input field when it is in focus.                  |
 | focusBorderColor       | false    | <t>PearlTheme.palette \| ColorModeColor</t>    | `"primary.500"` | The border color of the input field when it is in focus.                      |
 | focusBorderStartColor  | false    | <t>PearlTheme.palette \| ColorModeColor</t>    |                 | The border start color of the input field when it is in focus.                |
@@ -365,6 +366,8 @@ export default {
           light: "neutral.400",
           dark: "neutral.500",
         },
+        selectionColor: "primary.500",
+        allowFontScaling: true,
       },
       icon: {
         color: {

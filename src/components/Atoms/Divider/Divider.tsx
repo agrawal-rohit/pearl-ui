@@ -2,12 +2,17 @@ import React from "react";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import { View } from "react-native";
 import { BoxProps } from "../../Atoms/Box/Box";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 export type DividerProps = BoxProps & {
   /** The size of the divider */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"Divider">>;
   /** The variant of the divider */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"Divider">>;
   /** The length of the divider */
   length?: number | string;
   /** The thickness of the divider */

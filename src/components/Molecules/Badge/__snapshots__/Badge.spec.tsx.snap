@@ -54,6 +54,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         colorScheme="primary"
         focusable={true}
         onBlur={[Function]}
@@ -174,6 +175,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         colorScheme="success"
         focusable={true}
         onBlur={[Function]}
@@ -294,6 +296,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         colorScheme="warning"
         focusable={true}
         onBlur={[Function]}
@@ -414,6 +417,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         colorScheme="info"
         focusable={true}
         onBlur={[Function]}
@@ -534,6 +538,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         colorScheme="danger"
         focusable={true}
         onBlur={[Function]}
@@ -659,6 +664,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -779,6 +785,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -899,6 +906,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -956,7 +964,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 18,
+              "lineHeight": 20,
               "paddingHorizontal": 8,
             }
           }
@@ -1019,6 +1027,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1076,7 +1085,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
-              "lineHeight": 18,
+              "lineHeight": 20,
               "paddingHorizontal": 12,
             }
           }
@@ -1144,6 +1153,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1241,6 +1251,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1360,6 +1371,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1479,6 +1491,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1583,6 +1596,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1703,6 +1717,7 @@ Array [
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1839,6 +1854,7 @@ Array [
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -1971,6 +1987,7 @@ Array [
       >
         <View
           accessible={true}
+          collapsable={false}
           focusable={true}
           onBlur={[Function]}
           onClick={[Function]}

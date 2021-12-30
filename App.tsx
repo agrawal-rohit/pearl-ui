@@ -27,6 +27,8 @@ import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
 import Icon from "./src/components/Atoms/Icon/Icon";
 import Image from "./src/components/Molecules/Image/Image";
 import withBadge from "./src/components/Molecules/Badge/withBadge";
+import Spinner from "./src/components/Atoms/Spinner/Spinner";
+import Input from "./src/components/Molecules/Input/Input";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -103,7 +105,7 @@ const App = () => {
           <Avatar name="Rohit Agrawal" size="s" />
           <Avatar name="John" size="m" />
           <Avatar name="Some guy" size="l" />
-          <Avatar name="YOYO" size="xl" />
+          <Avatar name="YOYO" size="xl" backgroundColor="neutral.800" />
         </Stack>
 
         <Stack direction="horizontal" spacing="s" mt="s">
@@ -134,6 +136,13 @@ const App = () => {
 
           <AvatarWithEdit backgroundColor="red" />
         </Stack>
+
+        <Input
+          placeholder="Enter something"
+          hasClearButton
+          isFullWidth
+          mt="l"
+        />
       </Screen>
     </ThemeProvider>
   );

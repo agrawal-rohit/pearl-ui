@@ -1,5 +1,8 @@
 import {
+  ColorScheme,
+  FinalPearlTheme,
   MolecularComponentConfig,
+  ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/typeHelpers";
@@ -9,8 +12,12 @@ import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
-
-// TODO: Add responsive size and variant functionality
+import {
+  getValueForScreenSize,
+  isResponsiveObjectValue,
+} from "../theme/src/responsiveHelpers";
+import { useDimensions } from "./useDimensions";
+import { useResponsiveProp } from "./useResponsiveProps";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
@@ -24,13 +31,16 @@ import { useColorScheme } from "./useColorScheme";
  * @returns
  */
 export const useMolecularComponentConfig = (
-  themeComponentKey: string,
+  themeComponentKey: keyof FinalPearlTheme["components"],
   receivedProps: Record<string, any>,
-  sizeAndVariantProps: MolecularComponentConfig["defaults"] = {
+  sizeAndVariantProps: {
+    size?: ResponsiveValue<string | undefined>;
+    variant?: ResponsiveValue<string | undefined>;
+  } = {
     size: undefined,
     variant: undefined,
   },
-  colorScheme: string = "primary",
+  colorScheme: ColorScheme = "primary",
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
   targetKeyForOverridenStyleProps: string | undefined = undefined,
   targetKeyForOverridenNativeProps: string | undefined = undefined
@@ -40,7 +50,19 @@ export const useMolecularComponentConfig = (
   // User overriden props
   const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
-  checkKeyAvailability(themeComponentKey, theme.components, "theme.components");
+  checkKeyAvailability(
+    themeComponentKey as string,
+    theme.components,
+    "theme.components"
+  );
+
+  // Responsive Size and Variant
+  const sizeForCurrentScreenSize = useResponsiveProp(
+    sizeAndVariantProps.size
+  ) as string;
+  const variantForCurrentScreenSize = useResponsiveProp(
+    sizeAndVariantProps.variant
+  ) as string;
 
   const componentStyleConfig = theme.components[
     themeComponentKey
@@ -54,14 +76,14 @@ export const useMolecularComponentConfig = (
     ] as NonNullable<MolecularComponentConfig["defaults"]>;
 
     if (defaultComponentConfig.hasOwnProperty("size")) {
-      activeSizeAndVariantConfig.size = sizeAndVariantProps.size
-        ? sizeAndVariantProps.size
+      activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
+        ? sizeForCurrentScreenSize
         : defaultComponentConfig.size;
     }
 
     if (defaultComponentConfig.hasOwnProperty("variant")) {
-      activeSizeAndVariantConfig.variant = sizeAndVariantProps.variant
-        ? sizeAndVariantProps.variant
+      activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
+        ? variantForCurrentScreenSize
         : defaultComponentConfig.variant;
     }
 

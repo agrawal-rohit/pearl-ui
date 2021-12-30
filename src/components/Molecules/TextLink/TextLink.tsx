@@ -2,14 +2,20 @@ import React from "react";
 import Text from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+} from "../../../theme/src/types";
 
 export type TextLinkProps = PressableProps & {
   /** Size of the text link. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"TextLink">>;
   /** Variant of the text link. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"TextLink">>;
   /** Active color palette of the text link */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
 };
 
 /** TextLink wraps a Text component with a Pressable component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */

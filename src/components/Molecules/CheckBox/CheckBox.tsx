@@ -4,6 +4,10 @@ import {
   FinalPearlTheme,
   ColorModeColor,
   ResponsiveValue,
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  PaletteColors,
 } from "../../../theme/src/types";
 import Icon from "../../Atoms/Icon/Icon";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
@@ -16,9 +20,9 @@ import { GestureResponderEvent } from "react-native";
 
 export type CheckBoxProps = PressableProps & {
   /** Size of the checkbox. */
-  size?: string;
+  size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
   /** Variant of the checkbox. */
-  variant?: string;
+  variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
   /** Value of the checkbox if it is part of a group. */
   value?: string | number | undefined;
   /** Whether the checkbox is disabled.  */
@@ -32,7 +36,7 @@ export type CheckBoxProps = PressableProps & {
   /** The error message to be displayed if the checkbox is in an error state */
   errorMessage?: string;
   /** Active color palette of the checkbox */
-  colorScheme?: string;
+  colorScheme?: ColorScheme;
   /** The spacing between the checkbox and the label text */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** Shape of the checkbox */
@@ -74,69 +78,37 @@ export type CheckBoxProps = PressableProps & {
   /** Name of the icon when the checkbox is in indeterminate state */
   indeterminateIconName?: string;
   /** The background color of the checkbox when it is in checked state */
-  checkedBackgroundColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBackgroundColor?: ResponsiveValue<PaletteColors>;
   /** The border color of the checkbox when it is in checked state */
-  checkedBorderColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderColor?: ResponsiveValue<PaletteColors>;
   /** The border start color of the checkbox when it is in checked state */
-  checkedBorderStartColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderStartColor?: ResponsiveValue<PaletteColors>;
   /** The border end color of the checkbox when it is in checked state */
-  checkedBorderEndColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderEndColor?: ResponsiveValue<PaletteColors>;
   /** The border top color of the checkbox when it is in checked state */
-  checkedBorderTopColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderTopColor?: ResponsiveValue<PaletteColors>;
   /** The border left color of the checkbox when it is in checked state */
-  checkedBorderLeftColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderLeftColor?: ResponsiveValue<PaletteColors>;
   /** The border right color of the checkbox when it is in checked state */
-  checkedBorderRightColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderRightColor?: ResponsiveValue<PaletteColors>;
   /** The border bottom color of the checkbox when it is in checked state */
-  checkedBorderBottomColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  checkedBorderBottomColor?: ResponsiveValue<PaletteColors>;
   /** The background color of the checkbox when it is in an error state */
-  errorBackgroundColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBackgroundColor?: ResponsiveValue<PaletteColors>;
   /** The border color of the checkbox when it is in an error state */
-  errorBorderColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderColor?: ResponsiveValue<PaletteColors>;
   /** The border start color of the checkbox when it is in an error state */
-  errorBorderStartColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderStartColor?: ResponsiveValue<PaletteColors>;
   /** The border end color of the checkbox when it is in an error state */
-  errorBorderEndColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderEndColor?: ResponsiveValue<PaletteColors>;
   /** The border top color of the checkbox when it is in an error state */
-  errorBorderTopColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderTopColor?: ResponsiveValue<PaletteColors>;
   /** The border left color of the checkbox when it is in an error state */
-  errorBorderLeftColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderLeftColor?: ResponsiveValue<PaletteColors>;
   /** The border right color of the checkbox when it is in an error state */
-  errorBorderRightColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderRightColor?: ResponsiveValue<PaletteColors>;
   /** The border bottom color of the checkbox when it is in an error state */
-  errorBorderBottomColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  errorBorderBottomColor?: ResponsiveValue<PaletteColors>;
 };
 
 /** The Checkbox component is used in forms when a user needs to select multiple values from several options. **/

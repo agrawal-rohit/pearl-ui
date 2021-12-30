@@ -20,7 +20,12 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../../theme/src/types";
+import {
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+  StyleFunctionContainer,
+} from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
 
 type TextStyleProps = ColorProps &
@@ -32,9 +37,9 @@ type TextStyleProps = ColorProps &
   SpacingProps &
   TextShadowProps & {
     /** The size of the text */
-    size?: string;
+    size?: ResponsiveValue<ComponentSizes<"Text">>;
     /** The variant of the text */
-    variant?: string;
+    variant?: ResponsiveValue<ComponentVariants<"Text">>;
     /** Whether to scale the font size based on the screen dimensions */
     scaleFontSize?: boolean;
   };

@@ -1,3 +1,4 @@
+import { baseTheme, extendTheme } from "./base/index";
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
 
 export type AtLeastOneResponsiveValue<
@@ -42,54 +43,39 @@ export interface ElevationConfig {
 }
 
 export interface ColorPalette {
-  [key: string]: {
-    [key: number]: string;
-  };
+  [key: number]: string;
 }
 
-export interface AtomicComponentConfig {
-  baseStyle: {
-    [key: string]: any;
-  };
-  sizes?: {
-    [key: string]: any;
-  };
-  variants?: {
-    [key: string]: any;
-  };
+export interface AtomicComponentConfig<
+  PropTypes extends Record<string, any> = Record<string, any>
+> {
+  baseStyle: Partial<Omit<PropTypes, "size" | "variant">>;
+  sizes?: Partial<Omit<PropTypes, "size" | "variant">>;
+  variants?: Partial<Omit<PropTypes, "size" | "variant">>;
   defaults?: {
     size?: string;
     variant?: string;
   };
 }
 
-export interface MolecularComponentConfig {
+export interface MolecularComponentConfig<
+  PropTypes extends Record<string, any> = Record<string, any>
+> {
   parts: string[];
   baseStyle: {
-    [key: string]: {
-      [key: string]: any;
-    };
+    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
   };
   sizes?: {
-    [key: string]: {
-      [key: string]: any;
-    };
+    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
   };
   variants?: {
-    [key: string]: {
-      [key: string]: any;
-    };
+    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
   };
   defaults?: {
     size?: string;
     variant?: string;
   };
 }
-
-export type ColorModeColor = {
-  light: ColorValue;
-  dark: ColorValue;
-};
 
 export type FontConfig = {
   [key: string]: {
@@ -145,10 +131,52 @@ export interface BasePearlTheme {
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CustomPearlTheme {}
-
 export interface FinalPearlTheme
   extends Omit<BasePearlTheme, keyof CustomPearlTheme>,
     CustomPearlTheme {}
+
+// Palette
+type KeysWithValsOfType<T, V> = keyof {
+  [P in keyof T as T[P] extends V ? P : never]: P;
+};
+
+export type ColorScheme = FinalPearlTheme["components"] extends { Spinner: any }
+  ? KeysWithValsOfType<FinalPearlTheme["palette"], object>
+  : string;
+
+type ExpandedColors = FinalPearlTheme["components"] extends { Spinner: any }
+  ?
+      | KeysWithValsOfType<FinalPearlTheme["palette"], string>
+      | `${ColorScheme}.${keyof FinalPearlTheme["palette"][ColorScheme]}`
+  : keyof FinalPearlTheme["palette"];
+
+export type ColorModeColor = {
+  light: ExpandedColors;
+  dark: ExpandedColors;
+};
+
+export type PaletteColors = ExpandedColors | ColorModeColor;
+
+// Sizes and Variants
+export type ComponentSizes<
+  ComponentName extends keyof FinalPearlTheme["components"]
+> = FinalPearlTheme["components"][ComponentName] extends
+  | MolecularComponentConfig
+  | AtomicComponentConfig
+  ? FinalPearlTheme["components"][ComponentName]["sizes"] extends object
+    ? keyof FinalPearlTheme["components"][ComponentName]["sizes"]
+    : string
+  : string;
+
+export type ComponentVariants<
+  ComponentName extends keyof FinalPearlTheme["components"]
+> = FinalPearlTheme["components"][ComponentName] extends
+  | MolecularComponentConfig
+  | AtomicComponentConfig
+  ? FinalPearlTheme["components"][ComponentName]["variants"] extends object
+    ? keyof FinalPearlTheme["components"][ComponentName]["variants"]
+    : string
+  : string;
 
 // Style Functions
 export interface StyleFunctionContainer {

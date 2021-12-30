@@ -1,3 +1,6 @@
+import { AtomicComponentConfig } from "../../../theme/src/types";
+import { SpinnerProps } from "./Spinner";
+
 export default {
   baseStyle: {
     color: "primary.500",
@@ -48,4 +51,4 @@ export default {
     size: "m",
     variant: "spinner",
   },
-};
+} as AtomicComponentConfig<SpinnerProps>;

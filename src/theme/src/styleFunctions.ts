@@ -20,6 +20,7 @@ import {
   RNStyleProperty,
   StyleFunction,
   StyleFunctionContainer,
+  PaletteColors,
 } from "./types";
 import responsiveSize from "../../utils/responsiveSize";
 import { useTheme } from "../../hooks/useTheme";
@@ -281,7 +282,7 @@ export const all = [
 
 // PropTypes
 export interface ColorProps {
-  color?: ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>;
+  color?: ResponsiveValue<PaletteColors>;
 }
 export interface OpacityProps {
   opacity?: ResponsiveValue<number>;
@@ -292,10 +293,8 @@ export interface VisibleProps {
 }
 
 export interface BackgroundColorProps {
-  backgroundColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
-  bg?: ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>;
+  backgroundColor?: ResponsiveValue<PaletteColors>;
+  bg?: ResponsiveValue<PaletteColors>;
 }
 
 type SpacingPropsBase = {
@@ -342,9 +341,7 @@ export type PositionProps = {
 export type BorderProps = {
   [Key in keyof typeof borderProperties]?: ResponsiveValue<ViewStyle[Key]>;
 } & {
-  [Key in keyof typeof borderColorProperties]?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  [Key in keyof typeof borderColorProperties]?: ResponsiveValue<PaletteColors>;
 } & {
   [Key in keyof typeof borderRadiusProperties]?: ResponsiveValue<
     keyof FinalPearlTheme["borderRadii"]
@@ -355,15 +352,13 @@ export type ShadowProps = {
   [Key in keyof typeof shadowProperties]?: ResponsiveValue<ViewStyle[Key]>;
 } & {
   boxShadow?: ResponsiveValue<keyof FinalPearlTheme["elevation"]>;
-  shadowColor?: ResponsiveValue<keyof FinalPearlTheme["palette"]>;
+  shadowColor?: ResponsiveValue<PaletteColors>;
 };
 
 export type TextShadowProps = {
   [Key in keyof typeof textShadowProperties]?: ResponsiveValue<TextStyle[Key]>;
 } & {
-  textShadowColor?: ResponsiveValue<
-    keyof FinalPearlTheme["palette"] | ColorModeColor
-  >;
+  textShadowColor?: ResponsiveValue<PaletteColors>;
 };
 
 export type AllProps = BackgroundColorProps &

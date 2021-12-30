@@ -11,7 +11,13 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import SpinnerConfig from "./Spinner.config";
-import { StyleFunctionContainer } from "../../../theme/src/types";
+import {
+  ColorScheme,
+  ComponentSizes,
+  ComponentVariants,
+  ResponsiveValue,
+  StyleFunctionContainer,
+} from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
 import { StyleSheet, View } from "react-native";
 import BallIndicator from "./indicators/ball";
@@ -23,6 +29,7 @@ import PulseIndicator from "./indicators/pulse";
 import SkypeIndicator from "./indicators/skype";
 import ActivityIndicator from "./indicators/activity";
 import WaveIndicator from "./indicators/wave";
+import { useResponsiveProp } from "../../../hooks/useResponsiveProps";
 
 const indicatorStyleFunctions = [
   color,
@@ -41,9 +48,9 @@ type SpinnerStyleProps = ColorProps &
 export type SpinnerProps = SpinnerStyleProps &
   Omit<ViewProps, keyof SpinnerStyleProps> & {
     /** Size of the spinner. */
-    size?: keyof typeof SpinnerConfig["sizes"];
+    size?: ResponsiveValue<ComponentSizes<"Spinner">>;
     /** Type of the spinner. */
-    variant?: keyof typeof SpinnerConfig["variants"];
+    variant?: ResponsiveValue<ComponentVariants<"Spinner">>;
     /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
     isLoading?: boolean;
     /** Whether the Spinner spans the parent container and centers the spinner within. */
@@ -51,7 +58,7 @@ export type SpinnerProps = SpinnerStyleProps &
     /** Animation duration in ms.  */
     animationDuration?: number;
     /** Active color palette of the spinner */
-    colorScheme?: string;
+    colorScheme?: ColorScheme;
   };
 
 const IndicatorTypeToComponentMap = {
@@ -88,9 +95,11 @@ const Spinner: React.FC<SpinnerProps> = ({
     indicatorStyleFunctions
   );
 
+  const variantForCurrentScreenSize = useResponsiveProp(rest.variant);
+
   return React.createElement(
     IndicatorTypeToComponentMap[
-      rest.variant as keyof typeof SpinnerConfig["variants"]
+      variantForCurrentScreenSize as keyof typeof IndicatorTypeToComponentMap
     ],
     {
       ...props,
