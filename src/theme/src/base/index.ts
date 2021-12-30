@@ -28,28 +28,7 @@ import ImageConfig from "../../../components/Molecules/Image/Image.config";
 import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 import BadgeConfig from "../../../components/Molecules/Badge/Badge.config";
 import AvatarConfig from "../../../components/Molecules/Avatar/Avatar.config";
-
-/**
- * Override particular parts of the baseTheme to create a custom theme as per you app's needs
- * @param customTheme custom theme object to be combined with the baseTheme
- * @returns
- */
-export const extendTheme = (customTheme: Partial<BasePearlTheme>) => {
-  return {
-    palette: { ...baseTheme.palette, ...customTheme.palette },
-    spacing: { ...baseTheme.spacing, ...customTheme.spacing },
-    breakpoints: { ...baseTheme.breakpoints, ...customTheme.breakpoints },
-    components: { ...baseTheme.components, ...customTheme.components },
-    fonts: { ...baseTheme.fonts, ...customTheme.fonts },
-    fontConfig: { ...baseTheme.fontConfig, ...customTheme.fontConfig },
-    fontSizes: { ...baseTheme.fontSizes, ...customTheme.fontSizes },
-    lineHeights: { ...baseTheme.lineHeights, ...customTheme.lineHeights },
-    fontWeights: { ...baseTheme.fontWeights, ...customTheme.fontWeights },
-    elevation: { ...baseTheme.elevation, ...customTheme.elevation },
-    zIndices: { ...baseTheme.zIndices, ...customTheme.zIndices },
-    borderRadii: { ...baseTheme.borderRadii, ...customTheme.borderRadii },
-  };
-};
+import { isFunction, mergeWith } from "lodash";
 
 export const baseTheme = {
   palette,
@@ -78,4 +57,34 @@ export const baseTheme = {
     Image: ImageConfig,
     Avatar: AvatarConfig,
   },
+};
+
+/**
+ * Override particular parts of the default theme to create a custom theme as per you app's needs
+ * @param overrideConfig Configuration overrides to be combined with the default theme
+ * @returns
+ */
+export const extendTheme = <
+  T extends typeof baseTheme | (Record<string, any> & {})
+>(
+  overrideConfig: T
+) => {
+  function customizer(source: any, override: any) {
+    if (isFunction(source)) {
+      return (...args: any[]) => {
+        const sourceValue = source(...args);
+        const overrideValue = isFunction(override)
+          ? override(...args)
+          : override;
+        return mergeWith({}, sourceValue, overrideValue, customizer);
+      };
+    }
+    return undefined;
+  }
+
+  const finalTheme = [overrideConfig].reduce((prevValue, currentValue) => {
+    return mergeWith({}, prevValue, currentValue, customizer);
+  }, baseTheme);
+
+  return finalTheme as T & typeof baseTheme;
 };
