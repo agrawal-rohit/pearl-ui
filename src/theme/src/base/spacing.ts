@@ -14,4 +14,4 @@ export const spacing = {
   "7xl": 80,
   "8xl": 88,
   "9xl": 96,
-};
+} as Record<string, number | string>;
