@@ -12,55 +12,9 @@ import {
   lineHeights,
 } from "./typography";
 import { merge } from "lodash";
-
-import {
-  ColorPalette,
-  AtomicComponentConfig,
-  MolecularComponentConfig,
-  FontConfig,
-  ElevationConfig,
-  Breakpoint,
-} from "../types";
 import components from "./components";
 
-interface ThemeSkeleton {
-  palette: {
-    [key: string]: string | ColorPalette;
-  };
-  spacing: {
-    [key: string]: number | string;
-  };
-  components: {
-    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
-  };
-  fonts: {
-    [key: string]: string;
-  };
-  fontConfig: FontConfig;
-  fontSizes: {
-    [key: string]: number;
-  };
-  lineHeights: {
-    [key: string]: number;
-  };
-  fontWeights: {
-    [key: string]: string;
-  };
-  elevation: {
-    [key: string]: ElevationConfig;
-  };
-  zIndices: {
-    [key: string]: number;
-  };
-  borderRadii: {
-    [key: string]: number | string;
-  };
-  breakpoints: {
-    [key: string]: Breakpoint;
-  };
-}
-
-export const baseTheme: ThemeSkeleton = {
+export const baseTheme = {
   palette,
   spacing,
   borderRadii,
@@ -85,5 +39,14 @@ export const extendTheme = <
 >(
   overrideConfig: T
 ) => {
-  return merge(baseTheme, overrideConfig) as T & typeof baseTheme;
+  const finalTheme = {
+    palette: { ...baseTheme.palette, ...overrideConfig.palette },
+    spacing: { ...baseTheme.spacing, ...overrideConfig.spacing },
+    components: { ...baseTheme.components, ...overrideConfig.components },
+    elevation: { ...baseTheme.elevation, ...overrideConfig.elevation },
+    zIndices: { ...baseTheme.zIndices, ...overrideConfig.zIndices },
+    borderRadii: { ...baseTheme.borderRadii, ...overrideConfig.borderRadii },
+  };
+
+  return finalTheme as T & typeof baseTheme;
 };
