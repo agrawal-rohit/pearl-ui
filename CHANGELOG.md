@@ -1,3 +1,10 @@
+# [2.0.0-beta.7](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2021-12-31)
+
+
+### Bug Fixes
+
+* reverted back the OG extendTheme implementation and removed type safety from default theme ([e3eb55e](https://github.com/agrawal-rohit/pearl-ui/commit/e3eb55ef206d460602fc96e382ef3419b19787c3))
+
 # [2.0.0-beta.6](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.5...v2.0.0-beta.6) (2021-12-30)
 
 
