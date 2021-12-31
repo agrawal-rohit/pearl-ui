@@ -25,9 +25,7 @@ import Screen from "./src/components/Atoms/Screen/Screen";
 import Stack from "./src/components/Atoms/Stack/Stack";
 import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
 import Icon from "./src/components/Atoms/Icon/Icon";
-import Image from "./src/components/Molecules/Image/Image";
 import withBadge from "./src/components/Molecules/Badge/withBadge";
-import Spinner from "./src/components/Atoms/Spinner/Spinner";
 import Input from "./src/components/Molecules/Input/Input";
 import Text from "./src/components/Atoms/Text/Text";
 

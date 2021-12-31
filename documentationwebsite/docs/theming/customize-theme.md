@@ -18,7 +18,7 @@ For example, if you'd like to update the colors in the theme to include your bra
 
 ```jsx
 // 1. Import `extendTheme`
-import { extendTheme, ThemeProvider, Box } from "pearl-ui"
+import { extendTheme, ThemeProvider, Box } from "pearl-ui";
 
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({
@@ -37,24 +37,25 @@ const theme = extendTheme({
   },
 
   spacing: {
-    '3xs': 1,
-    '2xs': 2,
-    xs:3,
+    "3xs": 1,
+    "2xs": 2,
+    xs: 3,
     // ...
-    '3xl': 98
-  }
-})
+    "3xl": 98,
+  },
+});
 
-// 3. Pass the new theme to `ChakraProvider`
-<ThemeProvider theme={theme}>
-  <App />
-</ThemeProvider>
-
-// 4. Now you can use these colors in your components
-function Usage() {
-  return <Box bg="tertiary.100" p="3xs">I'm a tertiary box!</Box>
+function App() {
+  return (
+    // 3. Pass the new theme to `ThemeProvider`
+    <ThemeProvider theme={theme}>
+      {/* 4. Now you can use these colors in your components */}
+      <Box bg="tertiary.100" p="3xs">
+        I'm a tertiary box!
+      </Box>
+    </ThemeProvider>
+  );
 }
-
 ```
 
 ## Customizing component styles
@@ -113,7 +114,7 @@ The Component Config API provides a standard format for specifying styles for a 
 
 #### Atomic component config
 
-An atomic component is analogous to an **Atom** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Most components available in Pearl UI today are atomic components (e.g. Text, Spinner, Icon, etc.), and use the [useAtomicComponentConfig](../hooks/useAtomicComponentConfig) hook to enable the **component style config**.
+An atomic component is analogous to an **Atom** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Most components available in Pearl UI today are atomic components (e.g. Text, Spinner, Icon, etc.), and use the [useAtomicComponentConfig](../hooks/useAtomicComponentConfig) hook to enable their respective **component style configuration**.
 
 The component config format for an atomic component is as follow:
 
@@ -222,7 +223,7 @@ That's all you have to do! Now, when you use the Icon component, these updates w
 
 #### Molecular component config
 
-A molecular component is analogous to a **Molecule** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Many components used in an actual app are molecular components (eg. Button, Datepicker, Modal, etc), and use the [useMolecularComponentConfig](../hooks/useMolecularComponentConfig) hook to enable the **component style config**.
+A molecular component is analogous to a **Molecule** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Many components used in an actual app are molecular components (eg. Button, Datepicker, Modal, etc), and use the [useMolecularComponentConfig](../hooks/useMolecularComponentConfig) hook to enable their respective **component style configuration**.
 
 The component config format for a molecular component is as follow:
 
