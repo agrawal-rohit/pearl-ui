@@ -1,6 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-import { ImageProps } from "./Image";
-
 export default {
   parts: ["root", "spinner"],
   baseStyle: {
@@ -16,4 +13,4 @@ export default {
       color: "neutral.400",
     },
   },
-} as MolecularComponentConfig;
+};

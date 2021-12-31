@@ -1,6 +1,3 @@
-import { AtomicComponentConfig } from "../../../theme/src/types";
-import { ScreenProps } from "./Screen";
-
 export default {
   baseStyle: {
     scrollable: true,
@@ -11,4 +8,4 @@ export default {
     },
     padding: "m",
   },
-} as AtomicComponentConfig;
+};
