@@ -105,6 +105,7 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "500",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -223,6 +224,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 22,
             }
           }
@@ -337,6 +339,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 22,
             }
           }
@@ -457,6 +460,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
             }
           }
@@ -572,6 +576,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 20,
             }
           }
@@ -687,6 +692,7 @@ Array [
               "fontSize": 16.099999999999998,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 22,
             }
           }
@@ -802,6 +808,7 @@ Array [
               "fontSize": 18.4,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 26,
             }
           }
@@ -921,6 +928,7 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "500",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }

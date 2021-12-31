@@ -181,6 +181,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
           "fontSize": 16.099999999999998,
           "fontStyle": "normal",
           "fontWeight": "400",
+          "includeFontPadding": false,
           "lineHeight": 22,
         }
       }
@@ -374,6 +375,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -563,6 +565,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -758,6 +761,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -948,6 +952,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -1138,7 +1143,8 @@ Array [
             "fontSize": 18.4,
             "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 26,
+            "includeFontPadding": false,
+            "lineHeight": 24,
           }
         }
         variant="p1"
@@ -1328,7 +1334,8 @@ Array [
             "fontSize": 18.4,
             "fontStyle": "normal",
             "fontWeight": "400",
-            "lineHeight": 26,
+            "includeFontPadding": false,
+            "lineHeight": 24,
           }
         }
         variant="p1"
@@ -1523,6 +1530,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -1718,6 +1726,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -1914,6 +1923,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -2110,6 +2120,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -2305,6 +2316,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -2496,6 +2508,7 @@ Array [
             "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 22,
           }
         }
@@ -2518,6 +2531,7 @@ Array [
         "fontSize": 13.799999999999999,
         "fontStyle": "normal",
         "fontWeight": "400",
+        "includeFontPadding": false,
         "lineHeight": 20,
         "marginBottom": 4,
       }
@@ -2713,6 +2727,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
           "fontSize": 16.099999999999998,
           "fontStyle": "normal",
           "fontWeight": "400",
+          "includeFontPadding": false,
           "lineHeight": 22,
         }
       }

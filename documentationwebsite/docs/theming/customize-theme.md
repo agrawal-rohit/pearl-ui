@@ -66,7 +66,7 @@ In order to deal with this, Pearl UI provides a rich styling API that allows you
 
 <br />
 
-1. **[Style Props](../getting-started/style-props):** Add styles to a component by passing in style properties as component props.
+1. **[Style Props](../core-features/style-props):** Add styles to a component by passing in style properties as component props.
 
 ```jsx
 <Box

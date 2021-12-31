@@ -112,6 +112,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -233,6 +234,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -354,6 +356,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -475,6 +478,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -596,6 +600,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -722,6 +727,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 4,
             }
@@ -843,6 +849,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -964,6 +971,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 20,
               "paddingHorizontal": 8,
             }
@@ -1085,6 +1093,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 20,
               "paddingHorizontal": 12,
             }
@@ -1308,6 +1317,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -1428,6 +1438,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -1654,6 +1665,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -1775,6 +1787,7 @@ Array [
               "fontSize": 11.5,
               "fontStyle": "normal",
               "fontWeight": "500",
+              "includeFontPadding": false,
               "lineHeight": 16,
               "paddingHorizontal": 8,
             }
@@ -1912,6 +1925,7 @@ Array [
                 "fontSize": 11.5,
                 "fontStyle": "normal",
                 "fontWeight": "500",
+                "includeFontPadding": false,
                 "lineHeight": 16,
                 "paddingHorizontal": 4,
               }
