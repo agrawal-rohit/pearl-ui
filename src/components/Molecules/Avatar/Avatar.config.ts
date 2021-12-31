@@ -1,6 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-import { AvatarProps } from "./Avatar";
-
 export default {
   parts: ["root", "text"],
   baseStyle: {
@@ -55,4 +52,4 @@ export default {
   defaults: {
     size: "m",
   },
-} as MolecularComponentConfig;
+};

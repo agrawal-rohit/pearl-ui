@@ -1,6 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-import { RadioProps } from "./Radio";
-
 export default {
   parts: ["root", "outerBox", "innerBox", "text", "errorText"],
   baseStyle: {
@@ -116,4 +113,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig;
+};

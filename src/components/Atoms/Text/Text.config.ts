@@ -1,6 +1,3 @@
-import { AtomicComponentConfig } from "../../../theme/src/types";
-import { TextProps } from "./Text";
-
 export default {
   baseStyle: {
     color: {
@@ -92,4 +89,4 @@ export default {
   defaults: {
     variant: "p1",
   },
-} as AtomicComponentConfig;
+};
