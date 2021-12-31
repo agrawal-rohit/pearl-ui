@@ -145,10 +145,15 @@ export type ColorScheme = FinalPearlTheme["components"] extends { Spinner: any }
   ? KeysWithValsOfType<FinalPearlTheme["palette"], object>
   : string;
 
+type a = {
+  [C in ColorScheme]: `${C}.${Extract<
+    keyof FinalPearlTheme["palette"][C],
+    string | number
+  >}`;
+};
+
 type ExpandedColors = FinalPearlTheme["components"] extends { Spinner: any }
-  ?
-      | KeysWithValsOfType<FinalPearlTheme["palette"], string>
-      | `${ColorScheme}.${keyof FinalPearlTheme["palette"][ColorScheme]}`
+  ? KeysWithValsOfType<FinalPearlTheme["palette"], string> | a[keyof a]
   : keyof FinalPearlTheme["palette"];
 
 export type ColorModeColor = {

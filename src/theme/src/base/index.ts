@@ -39,14 +39,6 @@ export const extendTheme = <
 >(
   overrideConfig: T
 ) => {
-  const finalTheme = {
-    palette: { ...baseTheme.palette, ...overrideConfig.palette },
-    spacing: { ...baseTheme.spacing, ...overrideConfig.spacing },
-    components: { ...baseTheme.components, ...overrideConfig.components },
-    elevation: { ...baseTheme.elevation, ...overrideConfig.elevation },
-    zIndices: { ...baseTheme.zIndices, ...overrideConfig.zIndices },
-    borderRadii: { ...baseTheme.borderRadii, ...overrideConfig.borderRadii },
-  };
-
-  return finalTheme as T & typeof baseTheme;
+  const finalTheme = merge(baseTheme, overrideConfig);
+  return finalTheme as typeof baseTheme & T;
 };
