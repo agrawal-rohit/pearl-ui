@@ -1,6 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-import { InputProps } from "./Input";
-
 export default {
   parts: ["root", "input", "text", "icon", "errorText"],
   baseStyle: {
@@ -155,4 +152,4 @@ export default {
     size: "m",
     variant: "filled",
   },
-} as MolecularComponentConfig;
+};
