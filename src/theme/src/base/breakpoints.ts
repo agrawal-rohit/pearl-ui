@@ -1,5 +1,3 @@
-import { Breakpoint } from "../types";
-
 export const breakpoints = {
   phone: 0,
   longPhone: {
@@ -8,4 +6,4 @@ export const breakpoints = {
   },
   tablet: 768,
   largeTablet: 1024,
-} as Record<string, Breakpoint>;
+};

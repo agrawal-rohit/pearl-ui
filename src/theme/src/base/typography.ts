@@ -4,7 +4,7 @@ export const fonts = {
   body: "Poppins",
   heading: "Poppins",
   mono: "Poppins",
-} as Record<string, string>;
+};
 
 export const fontConfig: FontConfig = {
   Poppins: {
@@ -45,7 +45,7 @@ export const fontConfig: FontConfig = {
       italic: "Poppins-BlackItalic",
     },
   },
-} as FontConfig;
+};
 
 export const fontSizes = {
   "2xs": 10,
@@ -65,7 +65,7 @@ export const fontSizes = {
   "10xl": 38,
   "11xl": 40,
   "12xl": 42,
-} as Record<string, number>;
+};
 
 export const lineHeights = {
   "2xs": 14,
@@ -85,7 +85,7 @@ export const lineHeights = {
   "10xl": 42,
   "11xl": 44,
   "12xl": 46,
-} as Record<string, number>;
+};
 
 export const fontWeights = {
   hairline: "100",
@@ -97,4 +97,4 @@ export const fontWeights = {
   bold: "700",
   extrabold: "800",
   black: "900",
-} as Record<string, string>;
+};

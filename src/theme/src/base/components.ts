@@ -11,7 +11,6 @@ import ImageConfig from "../../../components/Molecules/Image/Image.config";
 import InputConfig from "../../../components/Molecules/Input/Input.config";
 import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.config";
-import { AtomicComponentConfig, MolecularComponentConfig } from "../types";
 
 export default {
   Icon: IconConfig,
@@ -27,4 +26,4 @@ export default {
   Divider: DividerConfig,
   Image: ImageConfig,
   Avatar: AvatarConfig,
-} as Record<string, AtomicComponentConfig | MolecularComponentConfig>;
+};
