@@ -110,6 +110,7 @@ const Text = React.forwardRef((rest: TextProps, ref: any) => {
   );
 
   props.style = {
+    includeFontPadding: false,
     ...props.style,
     ...memoizedBuildFontConfig(),
   };

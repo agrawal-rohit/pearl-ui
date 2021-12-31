@@ -117,6 +117,10 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Avatar"]:after,
 .menu__link[href*="useAccessibleColor"]:after,
 .menu__link[href*="typescript-support"]:after,
+.menu__link[href*="typography"]:after,
+.menu__link[href*="dark-mode"]:after,
+.menu__link[href*="responsive"]:after,
+.menu__link[href*="accessibility"]:after,
 .menu__link[href*="Badge"]:after {
   content: "new";
   display: inline-block;

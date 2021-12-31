@@ -1107,6 +1107,7 @@ Array [
               "fontSize": 13.799999999999999,
               "fontStyle": "normal",
               "fontWeight": "400",
+              "includeFontPadding": false,
               "lineHeight": 20,
             }
           }
@@ -1156,6 +1157,7 @@ Array [
               "fontSize": 18.4,
               "fontStyle": "normal",
               "fontWeight": "400",
+              "includeFontPadding": false,
               "lineHeight": 28,
             }
           }
@@ -1205,6 +1207,7 @@ Array [
               "fontSize": 18.4,
               "fontStyle": "normal",
               "fontWeight": "400",
+              "includeFontPadding": false,
               "lineHeight": 28,
             }
           }
@@ -1253,6 +1256,7 @@ Array [
               "fontSize": 29.9,
               "fontStyle": "normal",
               "fontWeight": "400",
+              "includeFontPadding": false,
               "lineHeight": 38,
             }
           }
@@ -1320,6 +1324,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
             "fontSize": 18.4,
             "fontStyle": "normal",
             "fontWeight": "400",
+            "includeFontPadding": false,
             "lineHeight": 28,
           }
         }
@@ -2055,6 +2060,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               "fontSize": 18.4,
               "fontStyle": "normal",
               "fontWeight": "400",
+              "includeFontPadding": false,
               "lineHeight": 28,
             }
           }
@@ -2173,6 +2179,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "fontSize": 11.5,
                   "fontStyle": "normal",
                   "fontWeight": "500",
+                  "includeFontPadding": false,
                   "lineHeight": 16,
                   "paddingHorizontal": 4,
                 }

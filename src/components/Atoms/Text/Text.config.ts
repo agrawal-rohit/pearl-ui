@@ -25,7 +25,7 @@ export default {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "2xl",
-      lineHeight: "6xl",
+      lineHeight: "7xl",
     },
     t2: {
       fontFamily: "heading",
@@ -49,19 +49,13 @@ export default {
       fontFamily: "body",
       fontWeight: "normal",
       fontSize: "m",
-      lineHeight: "2xl",
+      lineHeight: "xl",
     },
     p2: {
       fontFamily: "body",
       fontWeight: "normal",
       fontSize: "s",
       lineHeight: "l",
-    },
-    caption: {
-      fontFamily: "body",
-      fontWeight: "normal",
-      fontSize: "xs",
-      lineHeight: "m",
     },
     btn1: {
       fontFamily: "body",
@@ -86,6 +80,12 @@ export default {
       fontWeight: "medium",
       fontSize: "2xs",
       lineHeight: "xs",
+    },
+    caption: {
+      fontFamily: "body",
+      fontWeight: "normal",
+      fontSize: "xs",
+      lineHeight: "m",
     },
   },
   defaults: {

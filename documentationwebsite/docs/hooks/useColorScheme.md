@@ -19,7 +19,7 @@ The `useColorScheme` returns the same style props object passed into it, but wit
 
 All components use the `primary` color scheme in their components by default. However, in some special cases, you might need to use a different set of colors in the component (eg. secondary/accent color buttons)
 
-For simple atomic components, changing the color scheme is as easy overriding the desired properties of the component using [style props](../getting-started/style-props). However, things get complicated when you want to do the same with complex molecular components. That's where the `useColorScheme` hook comes in.
+For simple atomic components, changing the color scheme is as easy overriding the desired properties of the component using [style props](../core-features/style-props). However, things get complicated when you want to do the same with complex molecular components. That's where the `useColorScheme` hook comes in.
 
 As an example, let's take the following style props object returned by a [useMolecularComponentConfig](./useMolecularComponentConfig) hook:
 

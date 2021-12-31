@@ -27,6 +27,7 @@ import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
 import Icon from "./src/components/Atoms/Icon/Icon";
 import withBadge from "./src/components/Molecules/Badge/withBadge";
 import Input from "./src/components/Molecules/Input/Input";
+import Button from "./src/components/Molecules/Button/Button";
 import Text from "./src/components/Atoms/Text/Text";
 
 const App = () => {
@@ -83,7 +84,7 @@ const App = () => {
       <Screen>
         <Stack direction="horizontal" spacing="s">
           <Avatar
-            src={require("./src/components/Molecules/Image/testLocalImage.jpeg")}
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
             size="s"
           />
           <Avatar
@@ -142,8 +143,6 @@ const App = () => {
           isFullWidth
           mt="l"
         />
-
-        <Text fontFamily="heading" />
       </Screen>
     </ThemeProvider>
   );

@@ -29,24 +29,25 @@ type ColorTransformTestComponentProps = {
   styleFunction: StyleFunctionContainer;
 };
 
-const ColorTransformTestComponent: React.FC<ColorTransformTestComponentProps> =
-  ({ children, props, stylePropertyName, styleFunction }) => {
-    let value;
-    try {
-      value = styleFunction.func(props, {
-        theme: baseTheme,
-        dimensions: Dimensions.get("window"),
-      });
-    } catch (e) {
-      value = (e as any).message;
-    }
+const ColorTransformTestComponent: React.FC<
+  ColorTransformTestComponentProps
+> = ({ children, props, stylePropertyName, styleFunction }) => {
+  let value;
+  try {
+    value = styleFunction.func(props, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
+  } catch (e) {
+    value = (e as any).message;
+  }
 
-    if (typeof value === "object") {
-      return <Text testID={stylePropertyName}>{value[stylePropertyName]}</Text>;
-    }
+  if (typeof value === "object") {
+    return <Text testID={stylePropertyName}>{value[stylePropertyName]}</Text>;
+  }
 
-    return <Text testID="Error">{value}</Text>;
-  };
+  return <Text testID="Error">{value}</Text>;
+};
 
 describe("createStyleFunctions", () => {
   it("maps backgroundColor prop correctly", () => {
@@ -118,6 +119,30 @@ describe("createStyleFunctions", () => {
     });
 
     expect(fontSizeStyle.fontSize).toBe(14);
+
+    const props2 = { lineHeight: "s" };
+    const lineHeightStyle = typography[typography.length - 1].func(props2, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
+
+    expect(lineHeightStyle.lineHeight).toBe(18);
+
+    const props3 = { fontFamily: "body" };
+    const fontFamilyStyle = typography[typography.length - 4].func(props3, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
+
+    expect(fontFamilyStyle.fontFamily).toBe("Poppins");
+
+    const props4 = { fontWeight: "hairline" };
+    const fontWeightStyle = typography[typography.length - 3].func(props4, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
+
+    expect(fontWeightStyle.fontWeight).toBe("100");
   });
 
   it("maps layout props correctly", () => {
