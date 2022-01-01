@@ -1,0 +1,32 @@
+---
+sidebar_position: 9
+title: useResponsiveProp
+---
+
+`useResponsiveProp` is a custom hook to get the appropriate value from a [responsive style object](../core-features/responsivity) based on the current screen size.
+
+## Import
+
+```js
+import { useResponsiveProp } from "pearl-ui";
+```
+
+## Return value
+
+The `useResponsiveProp` returns the value that corresponds to the [breakpoint](../theming/default-theme#breakpoints) of the active device.
+
+## Usage
+
+```js
+const responsiveWidth = useResponsiveProp({
+  phone: "100%",
+  tablet: "50%",
+  largeTablet: 300,
+});
+```
+
+## Parameters
+
+| Name        | Type                                                                      | Description                                                             |
+| ----------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `propValue` | <t>{[breakpoint](../theming/default-theme#breakpoints): <t>value</t>}</t> | An object that specifies the values based on the different breakpoints. |

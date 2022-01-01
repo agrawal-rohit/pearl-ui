@@ -1,5 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-
 export default {
   parts: ["root", "spinner"],
   baseStyle: {
@@ -15,4 +13,4 @@ export default {
       color: "neutral.400",
     },
   },
-} as MolecularComponentConfig;
+};

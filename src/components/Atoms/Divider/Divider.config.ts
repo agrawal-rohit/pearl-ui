@@ -1,5 +1,3 @@
-import { AtomicComponentConfig } from "../../../theme/src/types";
-
 export default {
   baseStyle: {
     orientation: "horizontal",
@@ -10,4 +8,4 @@ export default {
     thickness: 1,
     length: "100%",
   },
-} as AtomicComponentConfig;
+};

@@ -1,4 +1,3 @@
-import { AtomicComponentConfig } from "./../../../theme/src/types";
 export default {
   baseStyle: {
     color: {
@@ -23,4 +22,4 @@ export default {
   defaults: {
     size: "m",
   },
-} as AtomicComponentConfig;
+};

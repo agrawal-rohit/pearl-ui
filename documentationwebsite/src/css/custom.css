@@ -109,23 +109,81 @@ html[data-theme="dark"] .header-twitter-link:before {
 /* Navbar Icons END */
 
 /*
-  Mark pages as "new" using href attribute:
+  Mark components as "atom" or "molecules" using href attribute:
 */
-.menu__link[href*="Image"]:after,
-.menu__link[href*="CheckBox"]:after,
-.menu__link[href*="Radio"]:after,
-.menu__link[href*="Avatar"]:after,
-.menu__link[href*="useAccessibleColor"]:after,
-.menu__link[href*="typescript-support"]:after,
-.menu__link[href*="typography"]:after,
-.menu__link[href*="dark-mode"]:after,
-.menu__link[href*="responsive"]:after,
-.menu__link[href*="accessibility"]:after,
-.menu__link[href*="Badge"]:after {
-  content: "new";
+.menu__link[href*="/Box"]:after,
+.menu__link[href*="Center"]:after,
+.menu__link[href*="Screen"]:after,
+.menu__link[href*="Stack"]:after,
+.menu__link[href*="Divider"]:after,
+.menu__link[href*="Text"]:after,
+.menu__link[href*="Screen"]:after,
+.menu__link[href*="Icon"]:after,
+.menu__link[href*="Pressable"]:after,
+.menu__link[href*="Spinner"]:after {
+  content: "Atom";
   display: inline-block;
   position: relative;
   top: 1px;
+  margin-right: auto;
+  margin-left: 10px;
+  padding: 3px 6px;
+  border: 1px solid #ff6ac6;
+  border-radius: 10px;
+  color: white;
+  background-color: #ff6ac6;
+  text-transform: uppercase;
+  font-size: 8px;
+  line-height: 10px;
+  height: 10px;
+  font-weight: 700;
+}
+
+.menu__link[href*="Image"]:after,
+.menu__link[href*="Avatar"]:after,
+.menu__link[href*="Button"]:after,
+.menu__link[href*="Input"]:after,
+.menu__link[href*="CheckBox"]:after,
+.menu__link[href*="Radio"]:after,
+.menu__link[href*="Badge"]:after {
+  content: "Molecule";
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  margin-right: auto;
+  margin-left: 10px;
+  padding: 3px 6px;
+  border: 1px solid #2ea6d4;
+  border-radius: 10px;
+  color: white;
+  background-color: #2ea6d4;
+  text-transform: uppercase;
+  font-size: 8px;
+  line-height: 10px;
+  height: 10px;
+  font-weight: 700;
+}
+
+/*
+  Mark pages as "new" using href attribute:
+*/
+.menu__link[href*="Image"]:before,
+.menu__link[href*="CheckBox"]:before,
+.menu__link[href*="Radio"]:before,
+.menu__link[href*="Avatar"]:before,
+.menu__link[href*="useAccessibleColor"]:before,
+.menu__link[href*="useResponsiveProp"]:before,
+.menu__link[href*="typescript-support"]:before,
+.menu__link[href*="typography"]:before,
+.menu__link[href*="dark-mode"]:before,
+.menu__link[href*="responsivity"]:before,
+.menu__link[href*="accessibility"]:before,
+.menu__link[href*="Badge"]:before {
+  content: "New";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 15px;
   margin-right: -6px;
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-primary);

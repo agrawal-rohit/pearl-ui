@@ -17,7 +17,7 @@ import {
   isResponsiveObjectValue,
 } from "../theme/src/responsiveHelpers";
 import { useDimensions } from "./useDimensions";
-import { useResponsiveProp } from "./useResponsiveProps";
+import { useResponsiveProp } from "./useResponsiveProp";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.

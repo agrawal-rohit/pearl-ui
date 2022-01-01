@@ -1,5 +1,3 @@
-import { AtomicComponentConfig } from "../../../theme/src/types";
-
 export default {
   baseStyle: {
     scrollable: true,
@@ -10,4 +8,4 @@ export default {
     },
     padding: "m",
   },
-} as AtomicComponentConfig;
+};
