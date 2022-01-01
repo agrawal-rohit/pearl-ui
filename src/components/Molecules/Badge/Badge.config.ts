@@ -1,5 +1,3 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
-
 export default {
   parts: ["root", "text"],
   baseStyle: {
@@ -68,4 +66,4 @@ export default {
     size: "m",
     variant: "rounded",
   },
-} as MolecularComponentConfig;
+};

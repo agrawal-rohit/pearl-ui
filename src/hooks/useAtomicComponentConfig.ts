@@ -17,7 +17,7 @@ import {
   isResponsiveObjectValue,
 } from "../theme/src/responsiveHelpers";
 import { useDimensions } from "./useDimensions";
-import { useResponsiveProp } from "./useResponsiveProps";
+import { useResponsiveProp } from "./useResponsiveProp";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles

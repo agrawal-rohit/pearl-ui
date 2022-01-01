@@ -29,7 +29,7 @@ import PulseIndicator from "./indicators/pulse";
 import SkypeIndicator from "./indicators/skype";
 import ActivityIndicator from "./indicators/activity";
 import WaveIndicator from "./indicators/wave";
-import { useResponsiveProp } from "../../../hooks/useResponsiveProps";
+import { useResponsiveProp } from "../../../hooks/useResponsiveProp";
 
 const indicatorStyleFunctions = [
   color,

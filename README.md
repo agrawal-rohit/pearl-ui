@@ -81,6 +81,14 @@ We're using the github [releases](https://github.com/agrawal-rohit/pearl-ui/rele
 
 <a href="https://www.buymeacoffee.com/rohitagrawal" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
+## Contributing
+
+For help on setting up the repo locally, building, testing, and contributing please see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## Code of Conduct
+
+All developers who wish to contribute through code or issues, take a look at the [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+
 ## License
 
 [MIT](https://github.com/agrawal-rohit/pearl-ui/blob/main/LICENSE)

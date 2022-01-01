@@ -6,6 +6,11 @@ import {
   isResponsiveObjectValue,
 } from "../theme/src/responsiveHelpers";
 
+/**
+ * Hook to get the appropriate value from a responsive style object based on the current screen size.
+ * @param propValue An object that specifies the values based on the different breakpoints
+ * @returns
+ */
 export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
   const { theme } = useTheme();
   const dimensions = useDimensions();

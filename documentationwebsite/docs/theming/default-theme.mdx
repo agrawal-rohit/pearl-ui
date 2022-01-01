@@ -551,7 +551,7 @@ import BorderRadiiBox from "../../src/components/BorderRadiiBox/BorderRadiiBox";
 
 ## Shadow/Elevation
 
-The theme contains a `theme.elevation` object which controls the shadow/elevation system. By default, these colors can be referenced by the `boxShadow` style properties.
+The theme contains a `theme.elevation` object which controls the shadow/elevation configuration. By default, this configuration can be referenced by the `boxShadow` style prop.
 We adopt a t-shirt size naming convention here as well.
 
 ```js
@@ -691,6 +691,23 @@ The box shadows look slightly different between Android and iOS (They look more 
   <img src="/img/android_elevation.png" alt="welcome" width="40%" />
   <img src="/img/ios_elevation.png" alt="welcome" width="40%" />
 </div>
+
+## Breakpoints
+
+The theme contains a `theme.breakpoints` object that provides pre-defined breakpoints for a few mobile devices. Breakpoints are defined as minimum widths (inclusive) for different target screen sizes, and can be defined by either a single value (width) or an object containing both width and height.
+
+```js
+// theme.js
+export default {
+  phone: 0,
+  longPhone: {
+    width: 0,
+    height: 812,
+  },
+  tablet: 768,
+  largeTablet: 1024,
+};
+```
 
 ## z-index values
 
