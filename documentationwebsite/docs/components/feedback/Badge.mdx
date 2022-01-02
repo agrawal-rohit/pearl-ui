@@ -32,7 +32,7 @@ import { Icon } from "pearl-ui";
 
 ### Badge sizes
 
-Use the `size` prop to change the size of the badge. You can set the value to the keys available in <t>PearlTheme.components.Badge["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of the badge. You can set the value to the keys available in <t>PearlTheme.components.Badge["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Badge size="s">234+</Badge>
@@ -46,7 +46,7 @@ Use the `size` prop to change the size of the badge. You can set the value to th
 
 ### Badge variants
 
-Use the `variant` prop to change the type of badge used. You can set the value to the keys available in <t>PearlTheme.components.Badge["variants"]</t>, which are <t>"rounded"</t> and <t>"square"</t> in the [default theme](#default-component-style).
+Use the `variant` prop to change the type of badge used. You can set the value to the keys available in <t>PearlTheme.components.Badge["variants"]</t>, which are <t>"rounded"</t> and <t>"square"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Badge variant="rounded">2</Badge>
@@ -95,7 +95,7 @@ return <BadgedIcon iconFamily="FontAwesome" iconName="inbox" />;
 
 ### Override Style
 
-The Badge component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Badge component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 <Badge backgroundColor="blue" variant="square" mt="l" />
@@ -149,7 +149,7 @@ import TabItem from "@theme/TabItem";
 | hidden     | false    | <t>boolean</t>                                                                                                             |         | A set of options for customizing the look of the badge. |
 | options    | false    | <t>BadgeProps</t> \| { placement: <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t>, offset: <t>number</t> } |         | Whether the badge is visible or not.                    |
 
-## Default Component Style
+## Default Component Config
 
 ```js
 export default {

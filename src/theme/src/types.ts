@@ -112,6 +112,9 @@ interface ThemeSkeleton {
   lineHeights: {
     [key: string]: number;
   };
+  letterSpacings: {
+    [key: string]: number;
+  };
   fontWeights: {
     [key: string]: string;
   };

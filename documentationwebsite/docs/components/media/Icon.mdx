@@ -19,7 +19,7 @@ import { Icon } from "pearl-ui";
 
 ### Icon sizes
 
-Use the `size` prop to change the size of icon. You can set the value to the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of icon. You can set the value to the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Icon iconFamily="AntDesign" iconName="stepforward" size="s" />
@@ -39,10 +39,10 @@ If you want more fine-tuned controlled over a single `Icon` instance, then you c
 
 ### Override Style
 
-The Icon component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Icon component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
-// passing style prop color="primary.500" overrides the default component style value of color="neutral.900"
+// passing style prop color="primary.500" overrides the default component config value of color="neutral.900"
 <Icon
   iconFamily="AntDesign"
   iconName="stepforward"
@@ -105,7 +105,7 @@ The `Icon` component supports the following style props:
 | accessibilityLabel | false    | <t>string</t>                                                                                                                                                                                                                            |         | The accessibility label of the icon                        |
 | rawSize            | false    | <t>number</t>                                                                                                                                                                                                                            |         | The size of the icon to override the component style size. |
 
-## Default Component Style
+## Default Component Config
 
 ```js
 export default {

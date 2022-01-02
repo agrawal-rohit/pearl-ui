@@ -143,6 +143,14 @@ describe("createStyleFunctions", () => {
     });
 
     expect(fontWeightStyle.fontWeight).toBe("100");
+
+    const props5 = { letterSpacing: "xs" };
+    const letterSpacingStyle = typography[typography.length - 5].func(props5, {
+      theme: baseTheme,
+      dimensions: Dimensions.get("window"),
+    });
+
+    expect(letterSpacingStyle.letterSpacing).toBe(-2);
   });
 
   it("maps layout props correctly", () => {

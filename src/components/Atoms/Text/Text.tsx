@@ -40,7 +40,7 @@ type TextStyleProps = ColorProps &
     size?: ResponsiveValue<ComponentSizes<"Text">>;
     /** The variant of the text */
     variant?: ResponsiveValue<ComponentVariants<"Text">>;
-    /** Whether to scale the font size based on the screen dimensions */
+    /** Whether to slightly scale the font size based on the screen dimensions */
     scaleFontSize?: boolean;
   };
 

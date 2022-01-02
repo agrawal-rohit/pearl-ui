@@ -45,12 +45,15 @@ write cleaner code, and get your product to market faster!
 ## Key Features
 
 - 👐 Completely Open Source and Free
-- 💎 15+ modular UI components (with new ones added weekly...)
-- 🌓 Effortlessly themeable with an in-built dark mode
-- ⚡️ Blazing fast development speed
+- 🪐 Universal: Works on iOS, Android, and Web (powered by [Expo](https://docs.expo.dev/) and [React Native](https://reactnative.dev/))
+- 💎 15+ modular UI components _(with new ones added monthly...)_
+- 🎨 Effortlessly themeable
+- 🌓 Dark mode support out-of-the-box
+- 📱 Support for responsive design using breakpoints
+- ⚡️ Blazing fast development speed using [style props](https://docs.pearl-ui.dev/docs/core-features/style-props)
 - ♿️ Accessible by default, abiding by the official Android and Apple guidelines.
 - 📜 Extensive documentation
-- 🎨 Extremely customizable to fit your design needs
+- 💪🏻 Strong Typescript support
 - ⚙️ Powerful API for creating custom components
 
 ## Installation

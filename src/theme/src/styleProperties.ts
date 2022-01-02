@@ -44,7 +44,6 @@ export const typographyProperties = {
   fontFamily: true,
   fontStyle: true,
   fontWeight: true,
-  letterSpacing: true,
   textAlign: true,
   textDecorationLine: true,
   textDecorationStyle: true,
