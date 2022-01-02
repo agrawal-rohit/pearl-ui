@@ -19,7 +19,7 @@ import { TextLink } from "pearl-ui";
 
 ### TextLink sizes
 
-Use the `size` prop to change the size of the text link. You can set the value to the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of the text link. You can set the value to the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <TextLink size="xs">Tiny Pressable Text</TextLink>
@@ -45,10 +45,10 @@ You can set the value only to the keys available in <t>PearlTheme.palette</t> th
 
 ### Override Style
 
-The TextLink component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The TextLink component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
-// passing style prop m="xl" overrides the default component style value
+// passing style prop m="xl" overrides the default component config value
 <TextLink m="xl" />
 ```
 
@@ -99,7 +99,7 @@ Since the TextLink component composes the [Pressable](./Pressable) component, yo
 | variant     | false    | <t>PearlTheme.components.TextLink["variants"]</t> |             | Variant of the text link.              |
 | colorScheme | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of the text link. |
 
-## Default component Style
+## Default component Config
 
 ```js
 export default {

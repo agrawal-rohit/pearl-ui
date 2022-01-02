@@ -20,7 +20,7 @@ import { Spinner } from "pearl-ui";
 
 ### Spinner sizes
 
-Use the `size` prop to change the size of spinner. You can set the value to the keys available in <t>PearlTheme.components.Spinner["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of spinner. You can set the value to the keys available in <t>PearlTheme.components.Spinner["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Spinner size="s" />
@@ -99,10 +99,10 @@ Here, as soon as the screen loads, the Text would be invisible for 2 seconds whi
 
 ### Override Style
 
-The Spinner component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Spinner component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
-// passing style prop color="danger.500" overrides the default component style value of color="primary.500"
+// passing style prop color="danger.500" overrides the default component config value of color="primary.500"
 <Spinner color="danger.500" variant="dot" />
 ```
 
@@ -159,7 +159,7 @@ The `Spinner` component supports the following style props:
 | colorScheme       | false    | <t>PearlTheme.palette</t>                                                                              | `"primary""` | Active color palette of the spinner.                                                              |
 | animationDuration | false    | <t>number</t>                                                                                          | `1200`       | Animation duration in ms.                                                                         |
 
-## Default Component Style
+## Default Component Config
 
 ```js
 export default {

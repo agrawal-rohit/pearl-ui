@@ -26,9 +26,11 @@ import Stack from "./src/components/Atoms/Stack/Stack";
 import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
 import Icon from "./src/components/Atoms/Icon/Icon";
 import withBadge from "./src/components/Molecules/Badge/withBadge";
+import Image from "./src/components/Molecules/Image/Image";
 import Input from "./src/components/Molecules/Input/Input";
 import Button from "./src/components/Molecules/Button/Button";
 import Text from "./src/components/Atoms/Text/Text";
+import Spinner from "./src/components/Atoms/Spinner/Spinner";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({

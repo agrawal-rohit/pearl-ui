@@ -23,7 +23,7 @@ import { Avatar } from "pearl-ui";
 
 ### Avatar sizes
 
-Use the `size` prop to change the size of the avatar. You can set the value to the keys available in <t>theme.components.Avatar["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of the avatar. You can set the value to the keys available in <t>theme.components.Avatar["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Avatar
@@ -118,7 +118,7 @@ const AvatarWithEditButton = withBadge(
 
 ### Override Style
 
-The Avatar component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Avatar component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 <Avatar mt="xl" borderRadius="m" />
@@ -169,7 +169,7 @@ Avatar composes the [Image](./Image) component, you can pass all [Image](./Image
 | src     | false    | <t>string \| number</t>                         |         | The source of the Avatar image. This can be a url, or a local image.                                                        |
 | name    | false    | <t>string</t>                                   |         | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
 
-## Default component Style
+## Default component Config
 
 ```js
 export default {

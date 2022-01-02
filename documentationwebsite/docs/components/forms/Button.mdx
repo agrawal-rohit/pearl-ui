@@ -19,7 +19,7 @@ import { Button } from "pearl-ui";
 
 ### Button sizes
 
-Use the `size` prop to change the size of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-style).
+Use the `size` prop to change the size of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Button size="xs">Tiny Button</Button>
@@ -33,7 +33,7 @@ Use the `size` prop to change the size of the button. You can set the value to t
 
 ### Button variants
 
-Use the `variant` prop to change the visual style of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-style).
+Use the `variant` prop to change the visual style of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Button variant="solid">Solid Button</Button>
@@ -106,10 +106,10 @@ In order to preserve the native ripple effect on Android devices, Button provide
 
 ### Override Style
 
-The Button component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Button component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
-// passing style prop m="xl" overrides the default component style value of m="2xs"
+// passing style prop m="xl" overrides the default component config value of m="2xs"
 // passing style prop boxShadow="xl" adds a box shadow to the button
 <Button m="xl" boxShadow="3xl" variant="outline" />
 ```
@@ -167,7 +167,7 @@ Since the Button component composes the [Pressable](./Pressable) component, you 
 | leftIcon         | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the left side of the main text.                                                                                                              |
 | rightIcon        | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the right side of the main text.                                                                                                             |
 
-## Default component Style
+## Default component Config
 
 ```js
 export default {

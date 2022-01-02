@@ -114,6 +114,7 @@ exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
             "fontStyle": "normal",
             "fontWeight": "500",
             "includeFontPadding": false,
+            "letterSpacing": 0,
             "lineHeight": 22,
           }
         }
@@ -241,6 +242,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -364,6 +366,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -503,6 +506,7 @@ Array [
                 "fontStyle": "normal",
                 "fontWeight": "500",
                 "includeFontPadding": false,
+                "letterSpacing": 0,
                 "lineHeight": 22,
               }
             }
@@ -638,6 +642,7 @@ Array [
                 "fontStyle": "normal",
                 "fontWeight": "500",
                 "includeFontPadding": false,
+                "letterSpacing": 0,
                 "lineHeight": 22,
               }
             }
@@ -769,6 +774,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 16,
             }
           }
@@ -893,6 +899,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 20,
             }
           }
@@ -1017,6 +1024,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -1141,6 +1149,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 26,
             }
           }
@@ -1270,6 +1279,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -1394,6 +1404,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -1518,6 +1529,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -1849,6 +1861,7 @@ Array [
               "fontStyle": "normal",
               "fontWeight": "500",
               "includeFontPadding": false,
+              "letterSpacing": 0,
               "lineHeight": 22,
             }
           }
@@ -2180,6 +2193,7 @@ Array [
                 "fontStyle": "normal",
                 "fontWeight": "500",
                 "includeFontPadding": false,
+                "letterSpacing": 0,
                 "lineHeight": 22,
                 "marginLeft": 12,
               }
@@ -2316,6 +2330,7 @@ Array [
                 "fontStyle": "normal",
                 "fontWeight": "500",
                 "includeFontPadding": false,
+                "letterSpacing": 0,
                 "lineHeight": 22,
                 "marginRight": 12,
               }
@@ -2642,6 +2657,7 @@ exports[`Molecules/Button passes the snapshot test when using style props 1`] = 
             "fontStyle": "normal",
             "fontWeight": "500",
             "includeFontPadding": false,
+            "letterSpacing": 0,
             "lineHeight": 22,
           }
         }

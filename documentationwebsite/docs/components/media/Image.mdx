@@ -126,7 +126,7 @@ When both `previewSource` and `previewColor` props are specified, `previewSource
 
 #### Spinner loading
 
-You could also add a good ol' [Spinner](../feedback/Spinner) while the image is loading by setting the value of the `loaderType` props to <t>"spinner"</t>. The visual styling of the spinner can be updated using the [default component style](#default-component-style).
+You could also add a good ol' [Spinner](../feedback/Spinner) while the image is loading by setting the value of the `loaderType` props to <t>"spinner"</t>. The visual styling of the spinner can be updated using the [default component config](#default-component-config).
 
 ```jsx
 // The loaderType prop specifies that a spinner should be added while this image is being loaded
@@ -183,7 +183,7 @@ If both the props are specified, the `fallbackComponent` prop takes higher prece
 
 ### Override Style
 
-The Image component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Image component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 <Image
@@ -252,7 +252,7 @@ Image also composes the [Image](https://reactnative.dev/docs/image) component fr
 | fallbackComponent    | false    | <t>React.ReactElement</t>                                                                   |             | A custom component to show if an error occurs while loading the image.                             |
 | fallbackSource       | false    | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Source of the image to show if an error occurs while loading the image.                            |
 
-## Default component Style
+## Default component Config
 
 ```js
 export default {

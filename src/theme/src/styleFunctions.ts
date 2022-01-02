@@ -151,6 +151,10 @@ export const typography = [
     });
   }),
   createStyleFunction({
+    property: "letterSpacing",
+    themeKey: "letterSpacings",
+  }),
+  createStyleFunction({
     property: "fontFamily",
     themeKey: "fonts",
   }),
@@ -314,6 +318,7 @@ export type SpacingProps = SpacingPropsBase & SpacingShorthandProps;
 export type TypographyProps = {
   [Key in keyof typeof typographyProperties]?: TextStyle[Key];
 } & {
+  letterSpacing?: ResponsiveValue<keyof FinalPearlTheme["letterSpacings"]>;
   fontSize?: ResponsiveValue<keyof FinalPearlTheme["fontSizes"]>;
   lineHeight?: ResponsiveValue<keyof FinalPearlTheme["lineHeights"]>;
   fontWeight?: ResponsiveValue<keyof FinalPearlTheme["fontWeights"]>;

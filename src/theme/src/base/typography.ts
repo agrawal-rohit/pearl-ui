@@ -87,6 +87,16 @@ export const lineHeights = {
   "12xl": 46,
 };
 
+export const letterSpacings = {
+  xs: -2,
+  s: -1,
+  m: 0,
+  l: 2,
+  xl: 4,
+  "2xl": 6,
+  "3xl": 8,
+};
+
 export const fontWeights = {
   hairline: "100",
   thin: "200",

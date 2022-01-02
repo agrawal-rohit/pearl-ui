@@ -1,15 +1,32 @@
 import React from "react";
 import Screen from "./Screen";
-import { fireEvent, render } from "@testing-library/react-native";
+import { act, fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../theme/src/themeContext";
 import Box from "../Box/Box";
 import Text from "../Text/Text";
 
 jest.useFakeTimers();
 
-jest.mock("react-native-keyboard-aware-scroll-view", () => {
-  const KeyboardAwareScrollView = ({ children }: { children: any }) => children;
-  return { KeyboardAwareScrollView };
+// jest.mock("react-native-keyboard-aware-scroll-view", () => {
+//   const KeyboardAwareScrollView = ({ children }: { children: any }) => children;
+//   return { KeyboardAwareScrollView };
+// });
+
+jest.mock("react-native/Libraries/Utilities/Platform", () => {
+  const platform = jest.requireActual(
+    "react-native/Libraries/Utilities/Platform"
+  );
+  return {
+    ...platform,
+    constants: {
+      ...platform.constants,
+      reactNativeVersion: {
+        major: 0,
+        minor: 65,
+        patch: 1,
+      },
+    },
+  };
 });
 
 describe("Atoms/Screen", () => {
@@ -22,20 +39,12 @@ describe("Atoms/Screen", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it.skip("executes the function when pull-to-refresh is performed", () => {
+  it("executes the function when pull-to-refresh is performed", async () => {
     const mockFn = jest.fn();
 
-    const eventData = {
-      nativeEvent: {
-        contentOffset: {
-          y: -600,
-        },
-      },
-    };
-
-    const main = render(
+    const main = await render(
       <ThemeProvider>
-        <Screen onPullToRefresh={mockFn}>
+        <Screen onPullToRefresh={mockFn} testID="scrollView">
           <Box w={100} h={200}>
             <Text>Test</Text>
           </Box>
@@ -43,7 +52,13 @@ describe("Atoms/Screen", () => {
       </ThemeProvider>
     );
 
-    fireEvent.scroll(main.getByText("Test"), eventData);
+    const scrollView = await main.getByTestId("scrollView");
+    expect(scrollView).toBeDefined();
+
+    const { refreshControl } = scrollView.props;
+    await act(async () => {
+      refreshControl.props.onRefresh();
+    });
     expect(mockFn).toHaveBeenCalled();
   });
 });

@@ -29,11 +29,11 @@ Use the `variant` prop to change the typography style of the Text component. You
 
 ### Override Style
 
-The Text component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component style](#default-component-style).
+The Text component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 // variant="p1" refers to the value of `theme.components.Text["variants"]["p1"]`
-// passing style prop color="primary.300" overrides the default component style value of color="neutral.50"
+// passing style prop color="primary.300" overrides the default component config value of color="neutral.50"
 <Text variant="btn1" color="primary.300">
   This is a large button text
 </Text>
@@ -85,12 +85,13 @@ The `Text` component supports the following style props:
 
 ### Additional props
 
-| Name    | Required | Type                                          | Default | Description                                              |
-| ------- | -------- | --------------------------------------------- | ------- | -------------------------------------------------------- |
-| size    | false    | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme       |
-| variant | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme |
+| Name          | Required | Type                                          | Default | Description                                                             |
+| ------------- | -------- | --------------------------------------------- | ------- | ----------------------------------------------------------------------- |
+| size          | false    | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme.                     |
+| variant       | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme.               |
+| scaleFontSize | false    | <t>boolean</t>                                | `true`  | Whether to slightly scale the font size based on the screen dimensions. |
 
-## Default Component Style
+## Default Component Config
 
 ```js
 export default {
@@ -99,85 +100,87 @@ export default {
       light: "neutral.900",
       dark: "neutral.50",
     },
+    scaleFontSize: true,
+    letterSpacing: "m",
   },
   variants: {
     h1: {
-      fontFamily: "Poppins-Bold",
-      fontWeight: "700",
-      fontSize: 34,
-      lineHeight: 42,
+      fontFamily: "heading",
+      fontWeight: "bold",
+      fontSize: "8xl",
+      lineHeight: "12xl",
     },
     h2: {
-      fontFamily: "Poppins-Bold",
-      fontWeight: "700",
-      fontSize: 28,
-      lineHeight: 36,
+      fontFamily: "heading",
+      fontWeight: "bold",
+      fontSize: "5xl",
+      lineHeight: "8xl",
     },
     t1: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
-      fontSize: 22,
-      lineHeight: 30,
+      fontFamily: "heading",
+      fontWeight: "semibold",
+      fontSize: "2xl",
+      lineHeight: "7xl",
     },
     t2: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
-      fontSize: 18,
-      lineHeight: 26,
+      fontFamily: "heading",
+      fontWeight: "semibold",
+      fontSize: "l",
+      lineHeight: "3xl",
     },
     st1: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
-      fontSize: 16,
-      lineHeight: 24,
+      fontFamily: "heading",
+      fontWeight: "semibold",
+      fontSize: "m",
+      lineHeight: "2xl",
     },
     st2: {
-      fontFamily: "Poppins-SemiBold",
-      fontWeight: "600",
-      fontSize: 14,
-      lineHeight: 22,
+      fontFamily: "heading",
+      fontWeight: "semibold",
+      fontSize: "s",
+      lineHeight: "l",
     },
     p1: {
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
-      fontSize: 16,
-      lineHeight: 24,
+      fontFamily: "body",
+      fontWeight: "normal",
+      fontSize: "m",
+      lineHeight: "xl",
     },
     p2: {
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
-      fontSize: 14,
-      lineHeight: 22,
-    },
-    caption: {
-      fontFamily: "Poppins-Regular",
-      fontWeight: "400",
-      fontSize: 12,
-      lineHeight: 20,
+      fontFamily: "body",
+      fontWeight: "normal",
+      fontSize: "s",
+      lineHeight: "l",
     },
     btn1: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
-      fontSize: 16,
-      lineHeight: 21,
+      fontFamily: "body",
+      fontWeight: "medium",
+      fontSize: "m",
+      lineHeight: "2xl",
     },
     btn2: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
-      fontSize: 14,
-      lineHeight: 19,
+      fontFamily: "body",
+      fontWeight: "medium",
+      fontSize: "s",
+      lineHeight: "l",
     },
     btn3: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
-      fontSize: 12,
-      lineHeight: 16,
+      fontFamily: "body",
+      fontWeight: "medium",
+      fontSize: "xs",
+      lineHeight: "m",
     },
     btn4: {
-      fontFamily: "Poppins-Medium",
-      fontWeight: "500",
-      fontSize: 10,
-      lineHeight: 14,
+      fontFamily: "body",
+      fontWeight: "medium",
+      fontSize: "2xs",
+      lineHeight: "xs",
+    },
+    caption: {
+      fontFamily: "body",
+      fontWeight: "normal",
+      fontSize: "xs",
+      lineHeight: "m",
     },
   },
   defaults: {

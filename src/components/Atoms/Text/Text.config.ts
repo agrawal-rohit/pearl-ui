@@ -5,6 +5,7 @@ export default {
       dark: "neutral.50",
     },
     scaleFontSize: true,
+    letterSpacing: "m",
   },
   variants: {
     h1: {

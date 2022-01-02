@@ -9,6 +9,7 @@ import {
   fonts,
   fontSizes,
   fontWeights,
+  letterSpacings,
   lineHeights,
 } from "./typography";
 import { merge } from "lodash";
@@ -25,6 +26,7 @@ export const baseTheme = {
   fontConfig,
   fontSizes,
   fontWeights,
+  letterSpacings,
   lineHeights,
   components,
 };
