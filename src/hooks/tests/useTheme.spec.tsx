@@ -24,7 +24,7 @@ describe("useTheme", () => {
 
   it("loads the dark theme when overriden", () => {
     const { getByText } = render(
-      <ThemeProvider defaultColorMode="dark">
+      <ThemeProvider initialColorMode="dark">
         <ThemeTestComponent />
       </ThemeProvider>
     );

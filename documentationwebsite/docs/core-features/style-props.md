@@ -46,12 +46,7 @@ The sections below list the supported style props and their expected values.
 // bg="primary.500" refers to the value of `theme.palette["primary"]["500"]`
 <Box bg="primary.500">Primary Box</Box>
 
-// You can pass values based on the desired color modes using the following structure
-// type ColorModeColor = {
-//      light: string,
-//      dark: string
-// }
-// The specified 'light' and 'dark' values get activated based on the current color of the theme
+// The specified 'light' and 'dark' values get activated based on the current color mode of the theme
 <Box color={{ light: "neutral.200", dark: "primary.100" }}>Red</Box>
 ```
 
