@@ -1,4 +1,4 @@
-import { ColorValue } from "react-native";
+import { PaletteColors } from "../theme/src/types";
 import { useTheme } from "./useTheme";
 
 /**
@@ -8,8 +8,8 @@ import { useTheme } from "./useTheme";
  * @returns
  */
 export const useColorModeValue = (
-  lightColor: ColorValue,
-  darkColor: ColorValue
+  lightColor: PaletteColors,
+  darkColor: PaletteColors
 ) => {
   const { colorMode } = useTheme();
 

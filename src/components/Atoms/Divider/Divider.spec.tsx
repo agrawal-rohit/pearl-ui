@@ -18,7 +18,7 @@ describe("Atoms/Divider", () => {
 
   it("passes the snapshot test in dark mode", () => {
     const tree = render(
-      <ThemeProvider defaultColorMode="dark">
+      <ThemeProvider initialColorMode="dark">
         <Divider orientation="horizontal" />
         <Divider orientation="vertical" />
       </ThemeProvider>
@@ -28,7 +28,7 @@ describe("Atoms/Divider", () => {
 
   it("passes the snapshot test for different length modes", () => {
     const tree = render(
-      <ThemeProvider defaultColorMode="dark">
+      <ThemeProvider initialColorMode="dark">
         <Divider length="50%" />
         <Divider orientation="vertical" length={20} bg="violet" />
       </ThemeProvider>

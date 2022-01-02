@@ -1,4 +1,154 @@
 ---
 sidebar_position: 2
-title: Dark Mode
+title: Color Mode (Dark Mode)
 ---
+
+Pearl UI comes with built-in support for managing the active color mode in your apps. By default, most of the included components are dark mode compatible.
+
+## Specifying the initial color mode
+
+The color mode of your app on it's first load can be specified using the [ThemeProvider](../getting-started/setup#setting-up-the-theme-provider). It expects an `initialColorMode` prop which can take the following values:
+
+1. **light**: The app would always start in _light_ mode
+2. **dark**: The app would always start in _dark_ mode
+3. **system**: The app would start with the mode corresponding to the color mode of the underlying device.
+
+<br />
+
+```jsx title="App.tsx"
+import * as React from "react";
+
+// Import the ThemeProvider component
+import { ThemeProvider } from "pearl-ui";
+
+const App = () => {
+  return (
+    // Wrap your app components with the ThemeProvider
+    <ThemeProvider initialColorMode="system">
+        // {... other components go here}
+    </ThemeProvider>
+  );
+};
+```
+
+## Accessing the active color mode
+
+The active color mode can be accessed using the [useTheme](../hooks/useTheme) hook.
+
+```jsx
+const SomeComponent = () => {
+  const { colorMode } = useTheme();
+
+  return <Text>I am {colorMode}</Text>;
+};
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <SomeComponent />
+    </ThemeProvider>
+  );
+};
+```
+
+## Changing the color mode
+
+The [useTheme](../hooks/useTheme) hook comes back to the rescue! It exposes the following functions to change the active color mode.
+
+### Toggling the active mode
+
+```jsx
+const SomeComponent = () => {
+  const { colorMode, toggleColorMode } = useTheme();
+
+  return (
+    <Box>
+      <Text>I am {colorMode}</Text>
+      <Button onPress={toggleColorMode}>Toggle Color Mode</Button>
+    </Box>
+  );
+};
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <SomeComponent />
+    </ThemeProvider>
+  );
+};
+```
+
+### Switching to a specific mode
+
+```jsx
+const SomeComponent = () => {
+  const { colorMode, switchColorMode } = useTheme();
+
+  return (
+    <Box>
+      <Text>I am {colorMode}</Text>
+      <Button onPress={() => switchColorMode("system")}>
+        Toggle Color Mode
+      </Button>
+    </Box>
+  );
+};
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <SomeComponent />
+    </ThemeProvider>
+  );
+};
+```
+
+## Color mode specific colors
+
+To enable dark-mode compatibility for any component, you need to specify how the colors in the component change based on the active color mode. You can achieve this easily using the following 2 methods:
+
+### Object syntax
+
+The [color and background color](./style-props#color-and-background-color) style props optionally expect color mode specific values that get activated based on the active mode.
+
+The following structure is expected when specifying color mode values:
+
+```tsx
+type ColorModeColor = {
+  light: PearlTheme["palette"];
+  dark: PearlTheme["palette"];
+};
+```
+
+#### Example
+
+```jsx
+const SomeComponent = () => {
+  return (
+    <Box backgroundColor={{ light: "neutral.400", dark: "pink" }}>
+      <Text color={{ light: "aqua", dark: "neutral.900" }}>Hello!</Text>
+    </Box>
+  );
+};
+```
+
+### useColorModeValue
+
+Pearl UI also provides the [useColorModeValue](../hooks/useColorModeValue) hook that achieves the same result as [the object syntax](#object-syntax).
+
+Here's how you would re-write the example above using the [useColorModeValue](../hooks/useColorModeValue) hook:
+
+#### Example
+
+```jsx
+const SomeComponent = () => {
+  const boxBg = useColorModeValue("neutral.400", "pink");
+  const textColor = useColorModeValue("aqua", "neutral.900");
+
+  return (
+    <Box backgroundColor={boxBg}>
+      <Text color={textColor}>Hello!</Text>
+    </Box>
+  );
+};
+```

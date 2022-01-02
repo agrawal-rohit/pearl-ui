@@ -13,14 +13,15 @@ import { useTheme } from "pearl-ui";
 
 ## Return value
 
-| Name              | Type                    | Description                                          |
-| ----------------- | ----------------------- | ---------------------------------------------------- |
-| `theme`           | <t>PearlTheme</t>       | Theme configuration object for the active color mode |
-| `colorMode`       | <t>"light" \|"dark"</t> | Active color mode                                    |
-| `toggleColorMode` | <t>() => void</t>       | Function to toggle the active color mode             |
+| Name              | Type                                 | Description                                                  |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------ |
+| `theme`           | <t>PearlTheme</t>                    | Theme configuration object for the active color mode.        |
+| `colorMode`       | <t>"light" \|"dark"</t>              | Active color mode.                                           |
+| `toggleColorMode` | <t>() => void</t>                    | Function to toggle the active color mode.                    |
+| `switchColorMode` | <t>"light" \| "dark" \| "system"</t> | Function to switch the active color mode to a specific mode. |
 
 ## Usage
 
 ```js
-const { theme, colorMode, toggleColorMode } = useTheme();
+const { theme, colorMode, toggleColorMode, switchColorMode } = useTheme();
 ```
