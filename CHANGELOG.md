@@ -1,3 +1,11 @@
+## [2.0.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.1...v2.0.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* **useaccessiblecolors:** fixed random input issue with useAccessibleColors ([5e8eadd](https://github.com/agrawal-rohit/pearl-ui/commit/5e8eadd7d641ca76f77255bfbdc77fbb3f1ab55b))
+* **useaccessiblecolor:** updated the input types for useAccessibleColorand updated its docs ([1b49a43](https://github.com/agrawal-rohit/pearl-ui/commit/1b49a4393b4696be9dd2c7c399adab3b1da5ccba))
+
 ## [2.0.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0...v2.0.1) (2022-01-03)
 
 
