@@ -1101,7 +1101,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#1A2138",
+              "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 13.799999999999999,
@@ -1152,7 +1152,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#1A2138",
+              "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 18.4,
@@ -1203,7 +1203,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#1A2138",
+              "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 18.4,
@@ -1253,7 +1253,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#1A2138",
+              "color": "#FFFFFF",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 29.9,
@@ -1322,7 +1322,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         scaleFontSize={true}
         style={
           Object {
-            "color": "#1A2138",
+            "color": "#FFFFFF",
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 18.4,
@@ -1365,7 +1365,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#F7F9FC",
+          "backgroundColor": "#ff0000",
           "borderBottomLeftRadius": undefined,
           "borderBottomRightRadius": undefined,
           "borderRadius": 1000,
@@ -1679,7 +1679,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
+            "backgroundColor": "#00ffff",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
             "borderRadius": 1000,

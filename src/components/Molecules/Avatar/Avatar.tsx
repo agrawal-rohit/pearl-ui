@@ -52,11 +52,12 @@ const Avatar: React.FC<AvatarProps> = ({
     return randomColorKey;
   };
 
-  const { theme } = useTheme();
   const randomColor = useRef(pickRandomColor()).current;
   const accessibleTextColor = useAccessibleColor(
     molecularProps.root.backgroundColor ||
       molecularProps.root.bg ||
+      rest.backgroundColor ||
+      rest.bg ||
       randomColor,
     {
       light: "neutral.50",
