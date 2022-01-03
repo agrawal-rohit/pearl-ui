@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0...v2.0.1) (2022-01-03)
+
+
+### Bug Fixes
+
+* **image, badge, input:** adding web support for Image, Badge, and Input ([9870047](https://github.com/agrawal-rohit/pearl-ui/commit/9870047beacdd5e8f37d31b6f65418c00fb53206))
+
 # [2.0.0](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.2...v2.0.0) (2022-01-03)
 
 
