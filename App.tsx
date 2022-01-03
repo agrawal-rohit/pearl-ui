@@ -58,7 +58,24 @@ const App = () => {
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
         <Stack direction="horizontal" spacing="s" mt="s">
-          <Avatar name="Rohit Agrawal" />
+          <Avatar backgroundColor="cyan" name="Rohit Agrawal" />
+          {/* <Avatar
+            src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
+            fallbackSource={{
+              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+            }}
+          />
+          <Avatar
+            backgroundColor="neutral.200"
+            fallbackComponent={
+              <Icon
+                iconFamily="FontAwesome"
+                iconName="user-circle"
+                color="neutral.600"
+                rawSize={55}
+              />
+            }
+          /> */}
         </Stack>
       </Screen>
     </ThemeProvider>

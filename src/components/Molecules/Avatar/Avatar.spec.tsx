@@ -51,6 +51,7 @@ describe("Molecules/Avatar", () => {
           <Avatar backgroundColor="red" name="Rohit Agrawal" />
           <Avatar
             src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
+            backgroundColor="red"
             fallbackSource={{
               uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
             }}
@@ -100,10 +101,12 @@ describe("Molecules/Avatar", () => {
           },
         }
       )(Avatar);
-
       return (
         <Stack direction="horizontal" spacing="s">
-          <OnlineAvatar src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg" />
+          <OnlineAvatar
+            backgroundColor="cyan"
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+          />
 
           <OfflineAvatar backgroundColor="cyan" name="Rohit Agrawal" />
 
