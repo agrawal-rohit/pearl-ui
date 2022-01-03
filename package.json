@@ -57,7 +57,7 @@
     "@testing-library/react-native": "^8.0.0",
     "@types/jest": "^27.4.0",
     "@types/react": "~17.0.21",
-    "@types/react-native": "~0.64.12",
+    "@types/react-native": "~0.66.11",
     "babel-loader": "^8.2.3",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
