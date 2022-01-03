@@ -1,3 +1,45 @@
+# [2.0.0-beta.1](https://github.com/agrawal-rohit/pearl-ui/compare/v1.6.2...v2.0.0-beta.1) (2022-01-03)
+
+
+### Bug Fixes
+
+* **extendtheme:** removing type-enforcing for config files to fix circular dependency in extendTheme ([6934bf8](https://github.com/agrawal-rohit/pearl-ui/commit/6934bf86812f64d89554d0fe797ae225a0096162))
+* **extendtheme:** updated to a leaner and more readable implementation of extendTheme ([b552189](https://github.com/agrawal-rohit/pearl-ui/commit/b552189b565cf29ec76ec82b234d5630ea8c9c80))
+* fake fix commit to trigger test release to npm ([9958c8d](https://github.com/agrawal-rohit/pearl-ui/commit/9958c8d85bd8bf17c72d2527a0bd2a091d76fab9))
+* **palette types:** fixed the expanded color types for the theme palette ([a6edaff](https://github.com/agrawal-rohit/pearl-ui/commit/a6edafffa4cf2daacffd9684f31c7f7fe1445067))
+* reverted back the OG extendTheme implementation and removed type safety from default theme ([70cf86a](https://github.com/agrawal-rohit/pearl-ui/commit/70cf86a6d2bc91c4f0db33a5cb4c885edabb46d3))
+
+
+### Features
+
+* added web support for the Spinner component ([efd5420](https://github.com/agrawal-rohit/pearl-ui/commit/efd5420012088db9824da695690989b4c173fc5b))
+* added web support for the Spinner component ([9983319](https://github.com/agrawal-rohit/pearl-ui/commit/9983319e44318a410133e378ce7aa58081ce361d))
+* **avatar:** added functionality for the new Avatar component ([d9eae07](https://github.com/agrawal-rohit/pearl-ui/commit/d9eae074bba7a34b0c2701432e85350a5ad13807))
+* **avatar:** added functionality for the new Avatar component ([5753fa3](https://github.com/agrawal-rohit/pearl-ui/commit/5753fa3c7c0d61b9bc399d8e3d6431d64c4b5679))
+* **extendtheme:** updated the extendTheme function to return a type-enforced theme object ([a29e879](https://github.com/agrawal-rohit/pearl-ui/commit/a29e879c25faa20cf535d7f7af251f2cef47c5f5))
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([72cdfe7](https://github.com/agrawal-rohit/pearl-ui/commit/72cdfe7f2b7cdeabb55a66072180deb2aed382fd))
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([a82953e](https://github.com/agrawal-rohit/pearl-ui/commit/a82953ea54dd9a758d3f820854eabf6287789ee9)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([011ceb3](https://github.com/agrawal-rohit/pearl-ui/commit/011ceb3ff1f8830d1689055ef182bfba888f3496)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([621fa3a](https://github.com/agrawal-rohit/pearl-ui/commit/621fa3a89ab75807bda149cb71f4422762351a5a)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **type enforcing:** added type-enforcing for all props and config files ([d7e29a0](https://github.com/agrawal-rohit/pearl-ui/commit/d7e29a0e27041e0b6e7f3a8c6a45291624a91e19))
+* **types:** exporting types from the module ([2a477e0](https://github.com/agrawal-rohit/pearl-ui/commit/2a477e0a1c304b09002d05b269a827f0eb5588bd))
+
+
+### Performance Improvements
+
+* **typography:** adopted a Chakra UI inspired typography specification system ([b559bc1](https://github.com/agrawal-rohit/pearl-ui/commit/b559bc146f3d1866cf63a36f53d5478c408fa880)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([4213138](https://github.com/agrawal-rohit/pearl-ui/commit/4213138267782360ca9354f8a17e75364c7739db)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([eb71c96](https://github.com/agrawal-rohit/pearl-ui/commit/eb71c9629815e68b9a3c6f1db8744b0c4df7447d)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([d50f07a](https://github.com/agrawal-rohit/pearl-ui/commit/d50f07ae825942d4c31dd56a83e528b386a21852)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+
+
+### BREAKING CHANGES
+
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+
 # [2.0.0-beta.7](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2021-12-31)
 
 
