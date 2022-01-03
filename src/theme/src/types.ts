@@ -155,7 +155,9 @@ type a = {
   >}`;
 };
 
-type ExpandedColors = FinalPearlTheme["components"] extends { Spinner: any }
+export type ExpandedColors = FinalPearlTheme["components"] extends {
+  Spinner: any;
+}
   ? KeysWithValsOfType<FinalPearlTheme["palette"], string> | a[keyof a]
   : keyof FinalPearlTheme["palette"];
 
