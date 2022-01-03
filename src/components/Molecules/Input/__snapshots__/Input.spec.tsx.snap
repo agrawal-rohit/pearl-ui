@@ -66,6 +66,7 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
         Object {
           "flex": null,
         },
+        false,
       ]
     }
     underlineColorAndroid="transparent"
@@ -149,6 +150,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -221,6 +223,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -307,6 +310,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -385,6 +389,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -463,6 +468,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -541,6 +547,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -624,6 +631,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -697,6 +705,7 @@ Array [
           Object {
             "flex": null,
           },
+          false,
         ]
       }
       underlineColorAndroid="transparent"
@@ -780,6 +789,7 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
         Object {
           "flex": 1,
         },
+        false,
       ]
     }
     underlineColorAndroid="transparent"

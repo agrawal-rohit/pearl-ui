@@ -1885,6 +1885,7 @@ Array [
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
+          onLayout={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1902,6 +1903,7 @@ Array [
                 "height": 20,
                 "justifyContent": "center",
                 "minWidth": 20,
+                "zIndex": 1300,
               },
               Object {
                 "backgroundColor": "#6A7BFF",
@@ -2020,6 +2022,7 @@ Array [
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
+          onLayout={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2037,6 +2040,7 @@ Array [
                 "height": 25,
                 "justifyContent": "center",
                 "minWidth": 25,
+                "zIndex": 1300,
               },
               Object {
                 "backgroundColor": "#6A7BFF",

@@ -1972,6 +1972,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1989,6 +1990,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 15,
                   "justifyContent": "center",
                   "minWidth": 15,
+                  "zIndex": 1300,
                 },
                 Object {
                   "backgroundColor": "#A2D608",
@@ -2132,6 +2134,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2149,6 +2152,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 20,
                   "justifyContent": "center",
                   "minWidth": 20,
+                  "zIndex": 1300,
                 },
                 Object {
                   "backgroundColor": "#FF4B42",
@@ -2292,6 +2296,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2309,6 +2314,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 25,
                   "justifyContent": "center",
                   "minWidth": 25,
+                  "zIndex": 1300,
                 },
                 Object {
                   "backgroundColor": "#6A7BFF",

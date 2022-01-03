@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { LayoutChangeEvent, Platform } from "react-native";
 import Box from "../../Atoms/Box/Box";
 import Badge, { BadgeProps } from "./Badge";
 
@@ -31,6 +32,9 @@ const withBadge =
       ...badgeProps
     } = options;
 
+    const [baseComponentWidth, setBaseComponentWidth] = useState(0);
+    const [badgeWidth, setBadgeWidth] = useState(0);
+
     const computePositionForBadge = () => {
       const positionValue = -1 * offset;
 
@@ -43,18 +47,51 @@ const withBadge =
       if (placement === "bottomLeft")
         return { bottom: positionValue, left: positionValue };
 
-      if (placement === "bottomRight")
-        return { bottom: positionValue, right: positionValue };
+      // Return bottom right position by default
+      return { bottom: positionValue, right: positionValue };
+    };
+
+    const onBadgeLayoutChange = (event: LayoutChangeEvent) => {
+      const { x, y, width, height } = event.nativeEvent.layout;
+      setBadgeWidth(width);
+    };
+
+    const onBaseComponentLayoutChange = (event: LayoutChangeEvent) => {
+      const { x, y, width, height } = event.nativeEvent.layout;
+      setBaseComponentWidth(width);
+    };
+
+    const computePositionWithWebMarginsForBadge = () => {
+      const position = computePositionForBadge();
+
+      if (Platform.OS === "web") {
+        return {
+          ...position,
+          margin:
+            position.right !== undefined
+              ? baseComponentWidth - badgeWidth - position.right
+              : position.left,
+          marginVertical: 0,
+          marginRight: 0,
+        };
+      }
+
+      return position;
     };
 
     return (
       <Box alignSelf="flex-start">
-        <WrappedComponent {...(props as P)} />
+        <WrappedComponent
+          {...(props as P)}
+          onLayout={onBaseComponentLayoutChange}
+        />
         {!hidden && (
           <Badge
             {...badgeProps}
+            onLayout={onBadgeLayoutChange}
             position="absolute"
-            style={computePositionForBadge()}
+            zIndex="overlay"
+            style={computePositionWithWebMarginsForBadge()}
           >
             {badgeValue}
           </Badge>
