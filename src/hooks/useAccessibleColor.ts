@@ -1,4 +1,7 @@
-import { ColorInput, TinyColor } from "@ctrl/tinycolor";
+import { ExpandedColors } from "./../theme/src/types";
+import { color } from "./../theme/src/styleFunctions";
+import { useStyledProps } from "./useStyledProps";
+import { TinyColor } from "@ctrl/tinycolor";
 
 /**
  * Hook to get the most accessible foreground color value based on a provided background color
@@ -7,13 +10,19 @@ import { ColorInput, TinyColor } from "@ctrl/tinycolor";
  * @returns
  */
 export const useAccessibleColor = (
-  backgroundColor: ColorInput,
-  foregroundChoices: { light: ColorInput; dark: ColorInput } = {
+  backgroundColor: ExpandedColors,
+  foregroundChoices: { light: ExpandedColors; dark: ExpandedColors } = {
     light: "white",
     dark: "black",
   }
 ) => {
-  const isColorLight = new TinyColor(backgroundColor).isLight();
+  const backgroundColorConverted = useStyledProps({ color: backgroundColor }, [
+    color,
+  ]);
+
+  const isColorLight = new TinyColor(
+    backgroundColorConverted.style.color
+  ).isLight();
   if (isColorLight) {
     return foregroundChoices.dark;
   }

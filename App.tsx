@@ -54,97 +54,12 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
-  const OnlineAvatar = withBadge<AvatarProps>(undefined, {
-    placement: "bottomLeft",
-    backgroundColor: "success.500",
-    size: "s",
-    minW: 15,
-    h: 15,
-    offset: 0,
-  })(Avatar);
-
-  const OfflineAvatar = withBadge<AvatarProps>(0, {
-    placement: "bottomRight",
-    backgroundColor: "danger.500",
-    size: "s",
-    offset: 0,
-  })(Avatar);
-
-  const AvatarWithEdit = withBadge<AvatarProps>(
-    <Icon iconFamily="Ionicons" iconName="pencil" size="s" color="white" />,
-    {
-      placement: "bottomRight",
-      size: "m",
-      onPress: () => {
-        console.log("PRESSED!");
-      },
-    }
-  )(Avatar);
-
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Stack direction="horizontal" spacing="s">
-          <Avatar
-            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-            size="s"
-          />
-          <Avatar
-            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-            size="m"
-          />
-          <Avatar
-            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-            size="l"
-          />
-          <Avatar
-            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-            size="xl"
-          />
-        </Stack>
-
-        <Stack direction="horizontal" spacing="s" mt="s">
-          <Avatar name="Rohit Agrawal" size="s" />
-          <Avatar name="John" size="m" />
-          <Avatar name="Some guy" size="l" />
-          <Avatar name="YOYO" size="xl" backgroundColor="neutral.800" />
-        </Stack>
-
         <Stack direction="horizontal" spacing="s" mt="s">
           <Avatar name="Rohit Agrawal" />
-          <Avatar
-            src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
-            fallbackSource={{
-              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
-            }}
-          />
-          <Avatar
-            backgroundColor="neutral.200"
-            fallbackComponent={
-              <Icon
-                iconFamily="FontAwesome"
-                iconName="user-circle"
-                color="neutral.600"
-                rawSize={55}
-              />
-            }
-          />
         </Stack>
-
-        <Stack direction="horizontal" spacing="s" mt="l">
-          <OnlineAvatar src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg" />
-
-          <OfflineAvatar backgroundColor="cyan" name="Rohit Agrawal" />
-
-          <AvatarWithEdit backgroundColor="red" />
-        </Stack>
-
-        <Input
-          placeholder="Enter something"
-          hasClearButton
-          isFullWidth
-          mt="l"
-        />
       </Screen>
     </ThemeProvider>
   );

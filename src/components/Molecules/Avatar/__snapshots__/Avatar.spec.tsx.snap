@@ -1101,7 +1101,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#1A2138",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 13.799999999999999,
@@ -1152,7 +1152,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#1A2138",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 18.4,
@@ -1203,7 +1203,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#1A2138",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 18.4,
@@ -1253,7 +1253,7 @@ Array [
           scaleFontSize={true}
           style={
             Object {
-              "color": "#FFFFFF",
+              "color": "#1A2138",
               "display": "flex",
               "fontFamily": "Poppins-Regular",
               "fontSize": 29.9,
@@ -1322,7 +1322,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         scaleFontSize={true}
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "#1A2138",
             "display": "flex",
             "fontFamily": "Poppins-Regular",
             "fontSize": 18.4,

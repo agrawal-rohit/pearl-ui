@@ -26,7 +26,7 @@ const accessibleTextColor = useAccessibleColor("red", {
 
 ## Parameters
 
-| Name                | Type                                          | Description                                                                                                                                          |
-| ------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `backgroundColor`   | <t>string</t>                                 | The color value of the background color.                                                                                                             |
-| `foregroundChoices` | { light: <t>string</t>, dark: <t>string</t> } | The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color) |
+| Name                | Type                                                                        | Description                                                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `backgroundColor`   | <t>PearlTheme['palette']</t>                                                | The color value of the background color.                                                                                                             |
+| `foregroundChoices` | { light: <t>PearlTheme['palette']</t>, dark: <t>PearlTheme['palette']</t> } | The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color) |

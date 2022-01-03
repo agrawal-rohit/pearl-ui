@@ -13,6 +13,7 @@ import { ColorInput } from "@ctrl/tinycolor";
 import {
   ComponentSizes,
   ComponentVariants,
+  ExpandedColors,
   FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
@@ -42,7 +43,9 @@ const Avatar: React.FC<AvatarProps> = ({
   });
 
   const pickRandomColor = () => {
-    const namedColorKeys = getKeys(namedColors);
+    const namedColorKeys = getKeys(namedColors).filter(
+      (color) => color !== "transparent"
+    );
     const randomColorKey =
       namedColorKeys[Math.floor(Math.random() * namedColorKeys.length)];
 
@@ -52,14 +55,9 @@ const Avatar: React.FC<AvatarProps> = ({
   const { theme } = useTheme();
   const randomColor = useRef(pickRandomColor()).current;
   const accessibleTextColor = useAccessibleColor(
-    (theme.palette[
-      molecularProps.root.backgroundColor as keyof FinalPearlTheme["palette"]
-    ] as ColorInput) ||
-      (theme.palette[
-        molecularProps.root.bg as keyof FinalPearlTheme["palette"]
-      ] as ColorInput) ||
-      molecularProps.root.style.backgroundColor ||
-      namedColors[randomColor],
+    molecularProps.root.backgroundColor ||
+      molecularProps.root.bg ||
+      randomColor,
     {
       light: "neutral.50",
       dark: "neutral.900",
