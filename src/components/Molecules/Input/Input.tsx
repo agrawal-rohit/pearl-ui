@@ -6,6 +6,7 @@ import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfi
 import Icon from "../../Atoms/Icon/Icon";
 import {
   NativeSyntheticEvent,
+  Platform,
   TextInput,
   TextInputChangeEventData,
   TextInputFocusEventData,
@@ -414,6 +415,7 @@ const Input = React.forwardRef(
               finalInputStyle,
               finalTextStyles,
               { flex: isFullWidth ? 1 : null },
+              Platform.OS === "web" && { outlineStyle: "none" },
             ]}
           />
 

@@ -115,7 +115,7 @@ const Image: React.FC<ImageProps> = ({
   // Fetches and caches the remote image
   const loadRemoteImage = async (uri: string, options = {}): Promise<void> => {
     // Use CacheManager if the image is supposed to be cached
-    if (shouldCache) {
+    if (shouldCache && Platform.OS !== "web") {
       try {
         const path = await CacheManager.get(uri, options).getPath();
         if (isMounted.current) {

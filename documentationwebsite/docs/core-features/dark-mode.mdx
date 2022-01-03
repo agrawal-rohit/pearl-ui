@@ -35,21 +35,9 @@ const App = () => {
 
 The active color mode can be accessed using the [useTheme](../hooks/useTheme) hook.
 
-```jsx
-const SomeComponent = () => {
-  const { colorMode } = useTheme();
+import Snack from "../../src/components/ExpoSnack";
 
-  return <Text>I am {colorMode}</Text>;
-};
-
-const App = () => {
-  return (
-    <ThemeProvider initialColorMode="light">
-      <SomeComponent />
-    </ThemeProvider>
-  );
-};
-```
+<Snack snackId="@agrawal-rohit/color-mode-access" />
 
 ## Changing the color mode
 
@@ -57,51 +45,11 @@ The [useTheme](../hooks/useTheme) hook comes back to the rescue! It exposes the 
 
 ### Toggling the active mode
 
-```jsx
-const SomeComponent = () => {
-  const { colorMode, toggleColorMode } = useTheme();
-
-  return (
-    <Box>
-      <Text>I am {colorMode}</Text>
-      <Button onPress={toggleColorMode}>Toggle Color Mode</Button>
-    </Box>
-  );
-};
-
-const App = () => {
-  return (
-    <ThemeProvider initialColorMode="light">
-      <SomeComponent />
-    </ThemeProvider>
-  );
-};
-```
+<Snack snackId="@agrawal-rohit/color-mode-toggle" />
 
 ### Switching to a specific mode
 
-```jsx
-const SomeComponent = () => {
-  const { colorMode, switchColorMode } = useTheme();
-
-  return (
-    <Box>
-      <Text>I am {colorMode}</Text>
-      <Button onPress={() => switchColorMode("system")}>
-        Toggle Color Mode
-      </Button>
-    </Box>
-  );
-};
-
-const App = () => {
-  return (
-    <ThemeProvider initialColorMode="light">
-      <SomeComponent />
-    </ThemeProvider>
-  );
-};
-```
+<Snack snackId="@agrawal-rohit/color-mode-switch" />
 
 ## Color mode specific colors
 
@@ -122,15 +70,7 @@ type ColorModeColor = {
 
 #### Example
 
-```jsx
-const SomeComponent = () => {
-  return (
-    <Box backgroundColor={{ light: "neutral.400", dark: "pink" }}>
-      <Text color={{ light: "aqua", dark: "neutral.900" }}>Hello!</Text>
-    </Box>
-  );
-};
-```
+<Snack snackId="@agrawal-rohit/color-mode-object-syntax" />
 
 ### useColorModeValue
 
@@ -140,15 +80,4 @@ Here's how you would re-write the example above using the [useColorModeValue](..
 
 #### Example
 
-```jsx
-const SomeComponent = () => {
-  const boxBg = useColorModeValue("neutral.400", "pink");
-  const textColor = useColorModeValue("aqua", "neutral.900");
-
-  return (
-    <Box backgroundColor={boxBg}>
-      <Text color={textColor}>Hello!</Text>
-    </Box>
-  );
-};
-```
+<Snack snackId="@agrawal-rohit/color-mode-hook-syntax" />

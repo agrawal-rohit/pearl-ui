@@ -55,7 +55,7 @@ const App = () => {
   });
 
   const OnlineAvatar = withBadge<AvatarProps>(undefined, {
-    placement: "bottomRight",
+    placement: "bottomLeft",
     backgroundColor: "success.500",
     size: "s",
     minW: 15,
