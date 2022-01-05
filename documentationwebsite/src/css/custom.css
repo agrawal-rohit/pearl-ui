@@ -177,7 +177,9 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="typography"]:before,
 .menu__link[href*="dark-mode"]:before,
 .menu__link[href*="responsivity"]:before,
+.menu__link[href*="cohesivity"]:before,
 .menu__link[href*="accessibility"]:before,
+.menu__link[href*="pearlify"]:before,
 .menu__link[href*="Badge"]:before {
   content: "New";
   display: inline-block;
