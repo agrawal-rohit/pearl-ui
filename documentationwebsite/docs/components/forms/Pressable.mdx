@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Pressable
 ---
 
-`Pressable` is a wrapper around the [React Native Pressable](https://reactnative.dev/docs/pressable) component which allows you use Pearl style props.
+**Pressable** is a wrapper around the [React Native Pressable](https://reactnative.dev/docs/pressable) component which allows you use Pearl style props.
 It can be used to easily create components which require user interactions, eg. Buttons, Links, etc.
 
 ## Import
@@ -28,7 +28,7 @@ import { Pressable } from "pearl-ui";
 
 ### Android Ripple effect
 
-In order to preserve the native ripple effect on Android devices, `Pressable` provides a default ripple effect that should work for most scenarios. However:
+In order to preserve the native ripple effect on Android devices, **Pressable** provides a default ripple effect that should work for most scenarios. However:
 
 - this effect can be further customized using the `androidRippleConfig` prop,
 - or disabled altogether using `isDisabledAndroidRipple`, as per your design requirements (Refer to the [props section](#props) for more).
@@ -87,32 +87,32 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- Pressable has the `role` of `button`.
-- Pressable has the default label set as 'Press me!'. A custom label can be specified using the `accessibilityLabel` prop.
-- Pressable expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+- **Pressable** has the `role` of `button`.
+- **Pressable** has the default label set as 'Press me!'. A custom label can be specified using the `accessibilityLabel` prop.
+- **Pressable** expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
 ## Props
 
 ### Supported style props
 
-You can pass all [Box](../layout/Box) related props to `Pressable`, in addition to the following.
+You can pass all [Box](../layout/Box) related props to **Pressable**, in addition to the following.
 
 ### Additional props
 
-| Name                    | Required | Type                                                                                              | Default                                      | Description                                                                                                                     |
-| ----------------------- | -------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| onPress                 | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Function to call when the component is pressed.                                                                                 |
-| onPressIn               | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called immediately when a touch is engaged, before `onPressOut` and `onPress`.                                                  |
-| onPressInDelay          | false    | <t>number</t>                                                                                     | `null`                                       | Duration (in milliseconds) to wait after press down before calling onPressIn.                                                   |
-| onPressOut              | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called when a touch is released.                                                                                                |
-| onLongPress             | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called if the time after onPressIn lasts longer than 500 milliseconds. This time period can be customized with `delayLongPress` |
-| delayLongPress          | false    | <t>number</t>                                                                                     | `500`                                        | Duration (in milliseconds) from onPressIn before onLongPress is called                                                          |
-| hitSlop                 | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                        |                                              | Sets additional distance outside of element in which a press can be detected.                                                   |
-| pressRetentionOffset    | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                        | { bottom: 30, left: 20, right: 20, top: 20 } | Additional distance outside of this view in which a touch is considered a press before onPressOut is triggered.                 |
-| isDisabled              | false    | <t>boolean</t>                                                                                    | `false`                                      | Whether the press behavior is disabled.                                                                                         |
-| isDisabledAndroidSound  | false    | <t>boolean</t>                                                                                    | `false`                                      | If true, doesn't play Android system sound on press.                                                                            |
-| androidRippleConfig     | false    | <t>{ color: PearlTheme['palette'], borderless: boolean, radius: number, foreground: boolean }</t> | { color: "#E4E9F2", borderless: false }      | Ripple effect configuration for the android_ripple property.                                                                    |
-| isDisabledAndroidRipple | false    | <t>boolean</t>                                                                                    | `false`                                      | Enables the Android ripple effect and configures its properties.                                                                |
-| actionDescription       | false    | <t>string</t>                                                                                     |                                              | A short description of the action that occurs when this element is interacted with (Used for accessibility).                    |
-| activeOpacity           | false    | <t>number</t>                                                                                     | `1`                                          | The opacity of the element when it is pressed.                                                                                  |
-| activeBackgroundColor   | false    | <t>PearlTheme["palette"]</t>                                                                      |                                              | The background color of the element when it is pressed.                                                                         |
+| Name                      | Required | Type                                                                                              | Default                                      | Description                                                                                                                     |
+| ------------------------- | -------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `onPress`                 | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Function to call when the component is pressed.                                                                                 |
+| `onPressIn`               | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called immediately when a touch is engaged, before `onPressOut` and `onPress`.                                                  |
+| `onPressInDelay`          | false    | <t>number</t>                                                                                     | `null`                                       | Duration (in milliseconds) to wait after press down before calling onPressIn.                                                   |
+| `onPressOut`              | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called when a touch is released.                                                                                                |
+| `onLongPress`             | false    | <t>({ nativeEvent: [PressEvent](https://reactnative.dev/docs/pressevent) }) => void</t>           |                                              | Called if the time after onPressIn lasts longer than 500 milliseconds. This time period can be customized with `delayLongPress` |
+| `delayLongPress`          | false    | <t>number</t>                                                                                     | `500`                                        | Duration (in milliseconds) from onPressIn before onLongPress is called                                                          |
+| `hitSlop`                 | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                        |                                              | Sets additional distance outside of element in which a press can be detected.                                                   |
+| `pressRetentionOffset`    | false    | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                                        | { bottom: 30, left: 20, right: 20, top: 20 } | Additional distance outside of this view in which a touch is considered a press before onPressOut is triggered.                 |
+| `isDisabled`              | false    | <t>boolean</t>                                                                                    | `false`                                      | Whether the press behavior is disabled.                                                                                         |
+| `isDisabledAndroidSound`  | false    | <t>boolean</t>                                                                                    | `false`                                      | If true, doesn't play Android system sound on press.                                                                            |
+| `androidRippleConfig`     | false    | <t>{ color: PearlTheme['palette'], borderless: boolean, radius: number, foreground: boolean }</t> | { color: "#E4E9F2", borderless: false }      | Ripple effect configuration for the android_ripple property.                                                                    |
+| `isDisabledAndroidRipple` | false    | <t>boolean</t>                                                                                    | `false`                                      | Enables the Android ripple effect and configures its properties.                                                                |
+| `actionDescription`       | false    | <t>string</t>                                                                                     |                                              | A short description of the action that occurs when this element is interacted with (Used for accessibility).                    |
+| `activeOpacity`           | false    | <t>number</t>                                                                                     | `1`                                          | The opacity of the element when it is pressed.                                                                                  |
+| `activeBackgroundColor`   | false    | <t>PearlTheme["palette"]</t>                                                                      |                                              | The background color of the element when it is pressed.                                                                         |

@@ -3,14 +3,14 @@ sidebar_position: 5
 title: CheckBox
 ---
 
-The `CheckBox` component is used in forms when a user needs to select multiple values from several options.
+The **CheckBox** component is used in forms when a user needs to select multiple values from several options.
 
 ## Import
 
 Pearl UI exports 2 checkbox-related components:
 
-1. `CheckBox`: A single checkbox which can be checked and unchecked.
-2. `CheckBoxGroup`: A wrapper which stacks multiple CheckBox components together and provides a central place to control their state.
+1. **CheckBox:** A single checkbox which can be checked and unchecked.
+2. **CheckBoxGroup:** A wrapper which stacks multiple **CheckBox** components together and provides a central place to control their state.
 
 ```jsx
 import { CheckBox, CheckBoxGroup } from "pearl-ui";
@@ -26,7 +26,7 @@ const [checked, setIsChecked] = React.useState(false)
 
 ### Checkbox group
 
-A `CheckboxGroup` component exists to help manage the checked state of its children `CheckBox` components and conveniently pass a few shared style props to each as follows:
+A **CheckboxGroup** component exists to help manage the checked state of its children **CheckBox** components and conveniently pass a few shared style props to each as follows:
 
 ```jsx
 const [checkedGroupValue, setCheckedGroupValue] = React.useState([])
@@ -100,7 +100,7 @@ You can use the `shape` prop to change the shape of the checkbox to <t>"square"<
 
 The checkbox is in a `checked` state when it is pressed once and the checkmark icon becomes visible. The `isChecked` prop is used to define whether the checkbox is in a checked state.
 
-`Checkbox` also allows you to update the visual style of the checkbox when it is checked using some [special props](#supported-style-props) prefixed with the word <t>checked</t>.
+**Checkbox** also allows you to update the visual style of the checkbox when it is checked using some [special props](#supported-style-props) prefixed with the word <t>checked</t>.
 
 ```jsx
 <CheckBox isChecked checkedBackgroundColor="cyan" checkedBorderColor="violet">
@@ -181,7 +181,7 @@ You can also customize the icons to be used in the checkbox using the following 
 
 ### Override Style
 
-The CheckBox component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **CheckBox** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 // passing style prop marginTop="l" adds a top margin to the checkbox
@@ -218,70 +218,70 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- CheckBox has the `role` of `checkbox`.
-- When the CheckBox is disabled or checked, it is reflected as `disabled` and `checked` respectively in screen readers.
-- CheckBox has the default accessibility label set as the label text passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+- **CheckBox** has the `role` of `checkbox`.
+- When **CheckBox** is disabled or checked, it is reflected as `disabled` and `checked` respectively in screen readers.
+- **CheckBox** has the default accessibility label set as the label text passed into it. A custom label can be specified using the `accessibilityLabel` prop.
 
 ## CheckBox Props
 
 ### Supported style props
 
-CheckBox composes the [Stack](../layout/Stack) component, you can pass all [Stack](../layout/Stack) props to `CheckBox`.
+**CheckBox** composes the [Stack](../layout/Stack) component, you can pass all [Stack](../layout/Stack) props to it.
 
 ### Additional props
 
-| Name                     | Required | Type                                                                                                                                                                                                                                     | Default            | Description                                                             |
-| ------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------- |
-| size                     | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>                                                                                                                                                                                           | `"m"`              | Size of the checkbox.                                                   |
-| variant                  | false    | <t>PearlTheme.components.CheckBox["variants"]</t>                                                                                                                                                                                        | `"filled"`         | Variant of the checkbox.                                                |
-| value                    | false    | <t>string \| number \| undefined</t>                                                                                                                                                                                                     |                    | Value of the checkbox if it is part of a group.                         |
-| isDisabled               | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is disabled.                                       |
-| isChecked                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in a checked state.                             |
-| isIndeterminate          | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an indeterminate state.                      |
-| isInvalid                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an error state.                              |
-| errorMessage             | false    | <t>string</t>                                                                                                                                                                                                                            |                    | The error message to be displayed if the checkbox is in an error state. |
-| colorScheme              | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary"`        | Active color palette of the checkbox.                                   |
-| spacing                  | false    | <t>PearlTheme.spacing</t>                                                                                                                                                                                                                | `"xs"`             | The spacing between the checkbox and the label text.                    |
-| shape                    | false    | <t>"square" \| "circle"</t>                                                                                                                                                                                                              | `"square"`         | Shape of the checkbox.                                                  |
-| checkedIconFamily        | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in checked state.               |
-| checkedIconName          | false    | <t>string</t>                                                                                                                                                                                                                            | `"checkmark"`      | Name of the icon when the checkbox is in checked state.                 |
-| indeterminateIconFamily  | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in indeterminate state.         |
-| indeterminateIconName    | false    | <t>string</t>                                                                                                                                                                                                                            | `"remove-outline"` | Name of the icon when the checkbox is in indeterminate state.           |
-| checkedBackgroundColor   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary.500"`    | The background color of the checkbox when it is in checked state.       |
-| checkedBorderColor       | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary.500"`    | The border color of the checkbox when it is in checked state            |
-| checkedBorderStartColor  | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border start color of the checkbox when it is in checked state.     |
-| checkedBorderEndColor    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border end color of the checkbox when it is in checked state.       |
-| checkedBorderTopColor    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border top color of the checkbox when it is in checked state.       |
-| checkedBorderLeftColor   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border left color of the checkbox when it is in checked state.      |
-| checkedBorderRightColor  | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border right color of the checkbox when it is in checked state.     |
-| checkedBorderBottomColor | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border bottom color of the checkbox when it is in checked state.    |
-| errorBackgroundColor     | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The background color of the checkbox when it is in an error state.      |
-| errorBorderColor         | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"danger.500"`     | The border color of the checkbox when it is in an error state           |
-| errorBorderStartColor    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border start color of the checkbox when it is in an error state.    |
-| errorBorderEndColor      | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border end color of the checkbox when it is in an error state.      |
-| errorBorderTopColor      | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border top color of the checkbox when it is in an error state.      |
-| errorBorderLeftColor     | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border left color of the checkbox when it is in an error state.     |
-| errorBorderRightColor    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border right color of the checkbox when it is in an error state.    |
-| errorBorderBottomColor   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border bottom color of the checkbox when it is in an error state.   |
+| Name                       | Required | Type                                                                                                                                                                                                                                     | Default            | Description                                                             |
+| -------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------- |
+| `size`                     | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>                                                                                                                                                                                           | `"m"`              | Size of the checkbox.                                                   |
+| `variant`                  | false    | <t>PearlTheme.components.CheckBox["variants"]</t>                                                                                                                                                                                        | `"filled"`         | Variant of the checkbox.                                                |
+| `value`                    | false    | <t>string \| number \| undefined</t>                                                                                                                                                                                                     |                    | Value of the checkbox if it is part of a group.                         |
+| `isDisabled`               | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is disabled.                                       |
+| `isChecked`                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in a checked state.                             |
+| `isIndeterminate`          | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an indeterminate state.                      |
+| `isInvalid`                | false    | <t>boolean</t>                                                                                                                                                                                                                           | `false`            | Whether the checkbox is in an error state.                              |
+| `errorMessage`             | false    | <t>string</t>                                                                                                                                                                                                                            |                    | The error message to be displayed if the checkbox is in an error state. |
+| `colorScheme`              | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary"`        | Active color palette of the checkbox.                                   |
+| `spacing`                  | false    | <t>PearlTheme.spacing</t>                                                                                                                                                                                                                | `"xs"`             | The spacing between the checkbox and the label text.                    |
+| `shape`                    | false    | <t>"square" \| "circle"</t>                                                                                                                                                                                                              | `"square"`         | Shape of the checkbox.                                                  |
+| `checkedIconFamily`        | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in checked state.               |
+| `checkedIconName`          | false    | <t>string</t>                                                                                                                                                                                                                            | `"checkmark"`      | Name of the icon when the checkbox is in checked state.                 |
+| `indeterminateIconFamily`  | false    | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | `"Ionicons"`       | Family of the icon when the checkbox is in indeterminate state.         |
+| `indeterminateIconName`    | false    | <t>string</t>                                                                                                                                                                                                                            | `"remove-outline"` | Name of the icon when the checkbox is in indeterminate state.           |
+| `checkedBackgroundColor`   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary.500"`    | The background color of the checkbox when it is in checked state.       |
+| `checkedBorderColor`       | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"primary.500"`    | The border color of the checkbox when it is in checked state            |
+| `checkedBorderStartColor`  | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border start color of the checkbox when it is in checked state.     |
+| `checkedBorderEndColor`    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border end color of the checkbox when it is in checked state.       |
+| `checkedBorderTopColor`    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border top color of the checkbox when it is in checked state.       |
+| `checkedBorderLeftColor`   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border left color of the checkbox when it is in checked state.      |
+| `checkedBorderRightColor`  | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border right color of the checkbox when it is in checked state.     |
+| `checkedBorderBottomColor` | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border bottom color of the checkbox when it is in checked state.    |
+| `errorBackgroundColor`     | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The background color of the checkbox when it is in an error state.      |
+| `errorBorderColor`         | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                | `"danger.500"`     | The border color of the checkbox when it is in an error state           |
+| `errorBorderStartColor`    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border start color of the checkbox when it is in an error state.    |
+| `errorBorderEndColor`      | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border end color of the checkbox when it is in an error state.      |
+| `errorBorderTopColor`      | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border top color of the checkbox when it is in an error state.      |
+| `errorBorderLeftColor`     | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border left color of the checkbox when it is in an error state.     |
+| `errorBorderRightColor`    | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border right color of the checkbox when it is in an error state.    |
+| `errorBorderBottomColor`   | false    | <t>PearlTheme.palette</t>                                                                                                                                                                                                                |                    | The border bottom color of the checkbox when it is in an error state.   |
 
 ## CheckBoxGroup Props
 
 ### Supported style props
 
-CheckBoxGroup composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to `CheckBoxGroup`.
+**CheckBoxGroup** composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to it.
 
 ### Additional props
 
-| Name         | Required | Type                                              | Default     | Description                                                            |
-| ------------ | -------- | ------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
-| size         | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>    | `"m"`       | Size of all the children checkbox in the group.                        |
-| variant      | false    | <t>PearlTheme.components.CheckBox["variants"]</t> | `"filled"`  | Variant of all the children checkbox in the group.                     |
-| value        | false    | <t>Array<string \| number></t>                    |             | Active value of the checkbox group.                                    |
-| defaultValue | false    | <t>Array<string \| number></t>                    | `[]`        | Default active value of the checkbox group.                            |
-| onChange     | false    | <t>(value: Array<string \| number>) => void</t>   |             | Method that gets invoked when the value of the checkbox group changes. |
-| isDisabled   | false    | <t>boolean</t>                                    | `false`     | Whether the checkbox group is disabled.                                |
-| colorScheme  | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of all the children checkbox in the group.        |
-| shape        | false    | <t>"square" \| "circle"</t>                       | `"square"`  | Shape of all the children checkbox in the group.                       |
+| Name           | Required | Type                                              | Default     | Description                                                            |
+| -------------- | -------- | ------------------------------------------------- | ----------- | ---------------------------------------------------------------------- |
+| `size`         | false    | <t>PearlTheme.components.CheckBox["sizes"]</t>    | `"m"`       | Size of all the children checkbox in the group.                        |
+| `variant`      | false    | <t>PearlTheme.components.CheckBox["variants"]</t> | `"filled"`  | Variant of all the children checkbox in the group.                     |
+| `value`        | false    | <t>Array<string \| number></t>                    |             | Active value of the checkbox group.                                    |
+| `defaultValue` | false    | <t>Array<string \| number></t>                    | `[]`        | Default active value of the checkbox group.                            |
+| `onChange`     | false    | <t>(value: Array<string \| number>) => void</t>   |             | Method that gets invoked when the value of the checkbox group changes. |
+| `isDisabled`   | false    | <t>boolean</t>                                    | `false`     | Whether the checkbox group is disabled.                                |
+| `colorScheme`  | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of all the children checkbox in the group.        |
+| `shape`        | false    | <t>"square" \| "circle"</t>                       | `"square"`  | Shape of all the children checkbox in the group.                       |
 
 ## Default component Config
 

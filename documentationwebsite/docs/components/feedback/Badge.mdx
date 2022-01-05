@@ -3,14 +3,14 @@ sidebar_position: 2
 title: Badge
 ---
 
-A `Badge` is a small component typically used to communicate a numerical value or indicate the status of an item to the user.
+A **Badge** is a small component typically used to communicate a numerical value or indicate the status of an item to the user.
 
 ## Import
 
 Pearl UI exports 2 badge-related components:
 
-1. `Badge`: A single badge which displays a numerical value or an icon.
-2. `withBadge`: A higher-order component which can be used to add a badge to any target component.
+1. **Badge:** A single badge which displays a numerical value or an icon.
+2. **withBadge:** A higher-order component which can be used to add a badge to any target component.
 
 ```jsx
 import { withBadge, Badge } from "pearl-ui";
@@ -74,7 +74,7 @@ You can set the value only to the keys available in <t>PearlTheme.palette</t> th
 
 ### Attaching badges to other components
 
-The true power of `Badge` is revealed when it is coupled with other components. The `withBadge` function allows you to add a badge to any React component is an extremely simple manner, while provoding you the freedom to customize at will. The list of props expected by `withBadge` can be found [here](#withbadge-props).
+The true power of **Badge** is revealed when it is coupled with other components. The **withBadge** function allows you to add a badge to any React component is an extremely simple manner, while provoding you the freedom to customize at will. The list of props expected by **withBadge** can be found [here](#withbadge-props).
 
 This can prove helpful when dealing with common use-cases of badges such as adding a notification badge as follows:
 
@@ -95,7 +95,7 @@ return <BadgedIcon iconFamily="FontAwesome" iconName="inbox" />;
 
 ### Override Style
 
-The Badge component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **Badge** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 <Badge backgroundColor="blue" variant="square" mt="l" />
@@ -131,23 +131,23 @@ import TabItem from "@theme/TabItem";
 
 ### Supported style props
 
-`Badge` composes [Pressable](../forms/Pressable) so you can pass all [Pressable](../forms/Pressable) related props.
+**Badge** composes [Pressable](../forms/Pressable) so you can pass all [Pressable](../forms/Pressable) related props to it.
 
 ### Additional props
 
-| Name        | Required | Type                                           | Default     | Description                        |
-| ----------- | -------- | ---------------------------------------------- | ----------- | ---------------------------------- |
-| size        | false    | <t>PearlTheme.components.Badge["sizes"]</t>    | `"m"`       | Size of the badge.                 |
-| variant     | false    | <t>PearlTheme.components.Badge["variants"]</t> | `"rounded"` | Variant of the badge.              |
-| colorScheme | string   | <t>PearlTheme.palette</t>                      | `"primary"` | Active color palette of the badge. |
+| Name          | Required | Type                                           | Default     | Description                        |
+| ------------- | -------- | ---------------------------------------------- | ----------- | ---------------------------------- |
+| `size`        | false    | <t>PearlTheme.components.Badge["sizes"]</t>    | `"m"`       | Size of the badge.                 |
+| `variant`     | false    | <t>PearlTheme.components.Badge["variants"]</t> | `"rounded"` | Variant of the badge.              |
+| `colorScheme` | string   | <t>PearlTheme.palette</t>                      | `"primary"` | Active color palette of the badge. |
 
 ## withBadge Props
 
-| Name       | Required | Type                                                                                                                       | Default | Description                                             |
-| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------- |
-| badgeValue | true     | <t>string \| number \| React.ReactElement</t>                                                                              |         | The value to be displayed inside the badge.             |
-| hidden     | false    | <t>boolean</t>                                                                                                             |         | A set of options for customizing the look of the badge. |
-| options    | false    | <t>BadgeProps</t> \| { placement: <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t>, offset: <t>number</t> } |         | Whether the badge is visible or not.                    |
+| Name         | Required | Type                                                                                                                       | Default | Description                                             |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------- |
+| `badgeValue` | true     | <t>string \| number \| React.ReactElement</t>                                                                              |         | The value to be displayed inside the badge.             |
+| `hidden`     | false    | <t>boolean</t>                                                                                                             |         | A set of options for customizing the look of the badge. |
+| `options`    | false    | <t>BadgeProps</t> \| { placement: <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t>, offset: <t>number</t> } |         | Whether the badge is visible or not.                    |
 
 ## Default Component Config
 

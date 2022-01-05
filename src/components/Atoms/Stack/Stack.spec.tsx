@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Stack from "./Stack";
+import Stack, { HStack, VStack, ZStack } from "./Stack";
 import { ThemeProvider } from "../../../theme/src/themeContext";
 import Divider from "../Divider/Divider";
 import Box from "../Box/Box";
@@ -31,6 +31,65 @@ describe("Atoms/Stack", () => {
           <Box w={20} h={20} backgroundColor="primary.500" />
           <Box w={20} h={20} backgroundColor="primary.500" />
         </Stack>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe("Atoms/HStack", () => {
+  it("passes the snapshot test", () => {
+    const tree = render(
+      <ThemeProvider>
+        <HStack spacing="l" divider={<Divider />}>
+          <Box w={20} h={100} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+        </HStack>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe("Atoms/VStack", () => {
+  it("passes the snapshot test", () => {
+    const tree = render(
+      <ThemeProvider>
+        <VStack spacing="l" divider={<Divider />}>
+          <Box w={20} h={100} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+          <Box w={20} h={20} backgroundColor="primary.500" />
+        </VStack>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe("Atoms/ZStack", () => {
+  it("passes the snapshot test", () => {
+    const tree = render(
+      <ThemeProvider>
+        <ZStack>
+          <Box w={100} h={100} backgroundColor="primary.500" />
+          <Box w={50} h={50} backgroundColor="neutral.500" />
+          <Box w={20} h={20} backgroundColor="danger.500" />
+        </ZStack>
+
+        <ZStack mt="xl" reversed>
+          <Box w={100} h={100} backgroundColor="primary.500" />
+          <Box w={50} h={50} backgroundColor="neutral.500" />
+          <Box w={20} h={20} backgroundColor="danger.500" />
+        </ZStack>
+
+        <ZStack mt="xl">
+          <Box w={100} h={100} backgroundColor="primary.500" />
+          <Box w={50} h={50} zIndex="docked" backgroundColor="neutral.500" />
+          <Box w={20} h={20} backgroundColor="danger.500" />
+        </ZStack>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
