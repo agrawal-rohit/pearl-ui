@@ -15,7 +15,7 @@ import { useStyledProps } from "pearl-ui";
 
 ## Return value
 
-The `useStyledProps` returns the built React native styles as an object.
+The `useStyledProps` hook returns the built React native styles as an object.
 
 ```json
 {
@@ -109,7 +109,7 @@ That's it! Now, any props passed into this component would automatically be conv
 
 ## Parameters
 
-| Name             | Type                            | Description                                                                                        |
-| ---------------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `props`          | <t>object</t>                   | Raw props passed to the component where the hook is being used                                     |
-| `styleFunctions` | <t>StyleFunctionContainer[]</t> | List of [style functions](../others/style-functions) to use for computing the received style props |
+| Name             | Required | Type                            | Description                                                                                        |
+| ---------------- | -------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `props`          | true     | <t>object</t>                   | Raw props passed to the component where the hook is being used                                     |
+| `styleFunctions` | true     | <t>StyleFunctionContainer[]</t> | List of [style functions](../others/style-functions) to use for computing the received style props |

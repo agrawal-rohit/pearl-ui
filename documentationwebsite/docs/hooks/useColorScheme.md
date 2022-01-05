@@ -13,7 +13,7 @@ import { useColorScheme } from "pearl-ui";
 
 ## Return value
 
-The `useColorScheme` returns the same style props object passed into it, but with the `primary` color palette switched out for the desired color scheme (eg secondary, accent, etc)
+The `useColorScheme` hook returns the same style props object passed into it, but with the `primary` color palette switched out for the desired color scheme (eg secondary, accent, etc)
 
 ## Usage
 
@@ -95,7 +95,7 @@ const secondaryComponentConfig = useColorScheme("secondary", componentConfig);
 
 ## Parameters
 
-| Name                | Type                          | Description                     |
-| ------------------- | ----------------------------- | ------------------------------- |
-| `targetColorScheme` | <t>PearlTheme['palette'] </t> | Name of the target color scheme |
-| `props`             | <t>object</t>                 | Style props object              |
+| Name                | Required | Type                          | Description                     |
+| ------------------- | -------- | ----------------------------- | ------------------------------- |
+| `targetColorScheme` | true     | <t>PearlTheme['palette'] </t> | Name of the target color scheme |
+| `props`             | true     | <t>object</t>                 | Style props object              |

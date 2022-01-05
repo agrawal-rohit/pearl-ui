@@ -1,0 +1,17 @@
+---
+sidebar_position: 4
+title: Cohesivity
+---
+
+One of the reasons for creating Pearl UI was to bring order to the chaotic world of UI components. It is a very common practice to use multiple third-party components in a single app in order to speed up development time and reduce redundant work.
+However, making sure that all such components are styled in a cohesive manner is a lot more annoying than one might anticipate.
+
+## Extending with the Pearl magic ✨
+
+This is where Pearl UI comes in to save the day! It exposes a [pearlify](../hooks/pearlify) factory function that can convert any third-party component into a Pearl UI supported components with all it's bells and whistles ([style props](./style-props), [theming](../theming/default-theme), [responsivity](./responsivity), [dark mode](./dark-mode), and [component styling](../theming/customize-theme#atomic-component-config)).
+
+## Example
+
+import Snack from "../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/cohesivity" />

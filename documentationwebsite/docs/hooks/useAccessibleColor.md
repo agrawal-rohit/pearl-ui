@@ -13,7 +13,7 @@ import { useAccessibleColor } from "pearl-ui";
 
 ## Return value
 
-The `useAccessibleColor` returns the most accessible color as a <t>string</t>
+The `useAccessibleColor` hook returns the most accessible color as a <t>string</t>
 
 ## Usage
 
@@ -26,7 +26,7 @@ const accessibleTextColor = useAccessibleColor("red", {
 
 ## Parameters
 
-| Name                | Type                                                                        | Description                                                                                                                                          |
-| ------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `backgroundColor`   | <t>PearlTheme['palette']</t>                                                | The color value of the background color.                                                                                                             |
-| `foregroundChoices` | { light: <t>PearlTheme['palette']</t>, dark: <t>PearlTheme['palette']</t> } | The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color) |
+| Name                | Required | Type                                                                        | Default                             | Description                                                                                                                                          |
+| ------------------- | -------- | --------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `backgroundColor`   | true     | <t>PearlTheme['palette']</t>                                                |                                     | The color value of the background color.                                                                                                             |
+| `foregroundChoices` | false    | { light: <t>PearlTheme['palette']</t>, dark: <t>PearlTheme['palette']</t> } | `{ light: "white", dark: "black" }` | The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color) |

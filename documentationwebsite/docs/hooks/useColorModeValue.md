@@ -13,7 +13,7 @@ import { useColorModeValue } from "pearl-ui";
 
 ## Return value
 
-The `useColorModeValue` returns the appropriate color as a <t>string</t>
+The `useColorModeValue` hook returns the appropriate color as a <t>string</t>
 
 ## Usage
 
@@ -23,7 +23,7 @@ const appropriateColor = useColorModeValue("red", "blue");
 
 ## Parameters
 
-| Name         | Type                         | Description                                             |
-| ------------ | ---------------------------- | ------------------------------------------------------- |
-| `lightColor` | <t>PearlTheme['palette']</t> | The color value to return when the app is in light mode |
-| `darkColor`  | <t>PearlTheme['palette']</t> | The color value to return when the app is in dark mode  |
+| Name         | Required | Type                         | Description                                             |
+| ------------ | -------- | ---------------------------- | ------------------------------------------------------- |
+| `lightColor` | true     | <t>PearlTheme['palette']</t> | The color value to return when the app is in light mode |
+| `darkColor`  | true     | <t>PearlTheme['palette']</t> | The color value to return when the app is in dark mode  |

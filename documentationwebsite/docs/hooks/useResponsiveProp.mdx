@@ -13,7 +13,7 @@ import { useResponsiveProp } from "pearl-ui";
 
 ## Return value
 
-The `useResponsiveProp` returns the value that corresponds to the [breakpoint](../theming/default-theme#breakpoints) of the active device.
+The `useResponsiveProp` hook returns the value that corresponds to the [breakpoint](../theming/default-theme#breakpoints) of the active device.
 
 ## Usage
 
@@ -27,6 +27,6 @@ const responsiveWidth = useResponsiveProp({
 
 ## Parameters
 
-| Name        | Type                                                                      | Description                                                             |
-| ----------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `propValue` | <t>{[breakpoint](../theming/default-theme#breakpoints): <t>value</t>}</t> | An object that specifies the values based on the different breakpoints. |
+| Name        | Required | Type                                                                      | Description                                                             |
+| ----------- | -------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `propValue` | true     | <t>{[breakpoint](../theming/default-theme#breakpoints): <t>value</t>}</t> | An object that specifies the values based on the different breakpoints. |
