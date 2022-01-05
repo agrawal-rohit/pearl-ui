@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Avatar
 ---
 
-The `Avatar` component is used to represent a user, and displays the profile picture, initials or fallback icon.
+The **Avatar** component is used to represent a user, and displays the profile picture, initials or fallback icon.
 
 ## Import
 
@@ -118,7 +118,7 @@ const AvatarWithEditButton = withBadge(
 
 ### Override Style
 
-The Avatar component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **Avatar** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 <Avatar mt="xl" borderRadius="m" />
@@ -152,22 +152,22 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- Avatar has the `role` of `image`.
+- **Avatar** has the `role` of `image`.
 
 ## Props
 
 ### Supported style props
 
-Avatar composes the [Image](./Image) component, you can pass all [Image](./Image) props to `Avatar`.
+**Avatar** composes the [Image](./Image) component, you can pass all [Image](./Image) props to it.
 
 ### Additional props
 
-| Name    | Required | Type                                            | Default | Description                                                                                                                 |
-| ------- | -------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| size    | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`   | The size of the avatar.                                                                                                     |
-| variant | false    | <t>PearlTheme.components.Avatar["variants"]</t> |         | The variant of the avatar.                                                                                                  |
-| src     | false    | <t>string \| number</t>                         |         | The source of the Avatar image. This can be a url, or a local image.                                                        |
-| name    | false    | <t>string</t>                                   |         | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
+| Name      | Required | Type                                            | Default | Description                                                                                                                 |
+| --------- | -------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `size`    | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`   | The size of the avatar.                                                                                                     |
+| `variant` | false    | <t>PearlTheme.components.Avatar["variants"]</t> |         | The variant of the avatar.                                                                                                  |
+| `src`     | false    | <t>string \| number</t>                         |         | The source of the Avatar image. This can be a url, or a local image.                                                        |
+| `name`    | false    | <t>string</t>                                   |         | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
 
 ## Default component Config
 

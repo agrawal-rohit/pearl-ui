@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Spinner
 ---
 
-The `Spinner` component is the used to provide a visual cue that an action is either processing, awaiting a course of change or a result.
+The **Spinner** component is the used to provide a visual cue that an action is either processing, awaiting a course of change or a result.
 
 ## Import
 
@@ -95,11 +95,11 @@ useEffect(() => {
 </Box>
 ```
 
-Here, as soon as the screen loads, the Text would be invisible for 2 seconds while the Spinner is animating. After 2 seconds, the Spinner gets removed from the DOM and the Text component is rendered.
+Here, as soon as the screen loads, the [Text](../typography/Text) component would be invisible for 2 seconds while the **Spinner** is animating. After 2 seconds, the **Spinner** gets removed from the DOM and the [Text](../typography/Text) component is rendered.
 
 ### Override Style
 
-The Spinner component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **Spinner** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 // passing style prop color="danger.500" overrides the default component config value of color="primary.500"
@@ -134,14 +134,14 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- Spinner has the `role` of `progressbar`.
-- Spinner has the default label set as `"Loading indicator"`. A custom label can be specified using the `accessibilityLabel` prop.
+- **Spinner** has the `role` of `progressbar`.
+- **Spinner** has the default label set as `"Loading indicator"`. A custom label can be specified using the `accessibilityLabel` prop.
 
 ## Props
 
 ### Supported style props
 
-The `Spinner` component supports the following style props:
+The **Spinner** component supports the following style props:
 
 - [color](../../core-features/style-props#color-and-background-color) (Only the `color` prop is supported, not the `backgroundColor` props)
 - [margin and padding](../../core-features/style-props#margin-and-padding)
@@ -150,14 +150,14 @@ The `Spinner` component supports the following style props:
 
 ### Additional props
 
-| Name              | Required | Type                                                                                                   | Default      | Description                                                                                       |
-| ----------------- | -------- | ------------------------------------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- |
-| size              | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`        | Size of the spinner.                                                                              |
-| variant           | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"`  | Type of the spinner.                                                                              |
-| isLoading         | false    | <t>boolean</t>                                                                                         | `true`       | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. |
-| isExpanded        | false    | <t>boolean</t>                                                                                         | `false`      | Whether the Spinner spans the parent container and centers the spinner within.                    |
-| colorScheme       | false    | <t>PearlTheme.palette</t>                                                                              | `"primary""` | Active color palette of the spinner.                                                              |
-| animationDuration | false    | <t>number</t>                                                                                          | `1200`       | Animation duration in ms.                                                                         |
+| Name                | Required | Type                                                                                                   | Default      | Description                                                                                       |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- |
+| `size`              | false    | <t>PearlTheme.components.Spinner["sizes"]</t>                                                          | `"m"`        | Size of the spinner.                                                                              |
+| `variant`           | false    | <t>"ball" \| "bar" \| "dot" \| "spinner" \| "pacman" \| "pulse" \| "skype" \| "activity" \| "wave"</t> | `"spinner"`  | Type of the spinner.                                                                              |
+| `isLoading`         | false    | <t>boolean</t>                                                                                         | `true`       | The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. |
+| `isExpanded`        | false    | <t>boolean</t>                                                                                         | `false`      | Whether the Spinner spans the parent container and centers the spinner within.                    |
+| `colorScheme`       | false    | <t>PearlTheme.palette</t>                                                                              | `"primary""` | Active color palette of the spinner.                                                              |
+| `animationDuration` | false    | <t>number</t>                                                                                          | `1200`       | Animation duration in ms.                                                                         |
 
 ## Default Component Config
 

@@ -22,15 +22,13 @@ import {
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
-import Stack from "./src/components/Atoms/Stack/Stack";
-import Avatar, { AvatarProps } from "./src/components/Molecules/Avatar/Avatar";
-import Icon from "./src/components/Atoms/Icon/Icon";
-import withBadge from "./src/components/Molecules/Badge/withBadge";
-import Image from "./src/components/Molecules/Image/Image";
-import Input from "./src/components/Molecules/Input/Input";
-import Button from "./src/components/Molecules/Button/Button";
-import Text from "./src/components/Atoms/Text/Text";
-import Spinner from "./src/components/Atoms/Spinner/Spinner";
+import Stack, {
+  HStack,
+  VStack,
+  ZStack,
+} from "./src/components/Atoms/Stack/Stack";
+import Avatar from "./src/components/Molecules/Avatar/Avatar";
+import Box from "./src/components/Atoms/Box/Box";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -57,38 +55,26 @@ const App = () => {
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Stack direction="horizontal" spacing="s" mt="s">
-          <Avatar size="xl" name="Rohit Agrawal" />
+        <HStack spacing="s" mt="s">
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+        </HStack>
 
-          {/* <Image
-            width={200}
-            height={200}
-            source={{
-              uri: "https://wallpaperaccess.com/full/113248.jpg",
-            }}
-            previewSource={{
-              uri: "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
-            }}
-            boxShadow="4xl"
-          /> */}
-          {/* <Avatar
-            src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
-            fallbackSource={{
-              uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
-            }}
-          />
-          <Avatar
-            backgroundColor="neutral.200"
-            fallbackComponent={
-              <Icon
-                iconFamily="FontAwesome"
-                iconName="user-circle"
-                color="neutral.600"
-                rawSize={55}
-              />
-            }
-          /> */}
-        </Stack>
+        <VStack spacing="s" mt="xl">
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" />
+        </VStack>
+
+        <ZStack mt="xl">
+          <Avatar name="Rohit Agrawal" />
+          <Avatar name="Rohit Agrawal" ml="xl" />
+          <Avatar name="Rohit Agrawal" ml="5xl" />
+          <Avatar name="Rohit Agrawal" ml="8xl" />
+        </ZStack>
       </Screen>
     </ThemeProvider>
   );

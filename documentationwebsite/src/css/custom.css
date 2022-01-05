@@ -178,7 +178,6 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="dark-mode"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="cohesivity"]:before,
-.menu__link[href*="accessibility"]:before,
 .menu__link[href*="pearlify"]:before,
 .menu__link[href*="Badge"]:before {
   content: "New";
@@ -191,6 +190,28 @@ html[data-theme="dark"] .header-twitter-link:before {
   border: 1px solid var(--ifm-color-primary);
   border-radius: 3px;
   color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  height: 10px;
+  font-weight: 600;
+}
+
+/*
+  Mark pages as "updated" using href attribute:
+*/
+.menu__link[href*="Stack"]:before,
+.menu__link[href*="default-theme"]:before {
+  content: "Updated";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  margin-right: -6px;
+  padding: 3px 6px;
+  border: 1px solid #ff7f50;
+  border-radius: 3px;
+  color: #ff7f50;
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;

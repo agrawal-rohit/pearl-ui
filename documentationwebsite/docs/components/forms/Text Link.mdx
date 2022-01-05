@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Text Link
 ---
 
-`TextLink` wraps a Text component with a [Pressable](./Pressable) component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
+**TextLink** wraps a [Text](../typography/Text) component with a [Pressable](./Pressable) component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
 
 ## Import
 
@@ -45,7 +45,7 @@ You can set the value only to the keys available in <t>PearlTheme.palette</t> th
 
 ### Override Style
 
-The TextLink component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **TextLink** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 // passing style prop m="xl" overrides the default component config value
@@ -80,24 +80,24 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- TextLink has the `role` of `button`.
-- TextLink has the default accessibility label set as text value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
-- When the TextLink is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
-- Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+- **TextLink** has the `role` of `button`.
+- **TextLink** has the default accessibility label set as text value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+- When **TextLink** is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
+- Similar to [Pressable](./Pressable), **TextLink** expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
 ## Props
 
 ### Supported style props
 
-Since the TextLink component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `TextLink`, in addition to the following.
+Since the **TextLink** component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to it, in addition to the following.
 
 ### Additional props
 
-| Name        | Required | Type                                              | Default     | Description                            |
-| ----------- | -------- | ------------------------------------------------- | ----------- | -------------------------------------- |
-| size        | false    | <t>PearlTheme.components.TextLink["sizes"]</t>    | `"m"`       | Size of the text link.                 |
-| variant     | false    | <t>PearlTheme.components.TextLink["variants"]</t> |             | Variant of the text link.              |
-| colorScheme | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of the text link. |
+| Name          | Required | Type                                              | Default     | Description                            |
+| ------------- | -------- | ------------------------------------------------- | ----------- | -------------------------------------- |
+| `size`        | false    | <t>PearlTheme.components.TextLink["sizes"]</t>    | `"m"`       | Size of the text link.                 |
+| `variant`     | false    | <t>PearlTheme.components.TextLink["variants"]</t> |             | Variant of the text link.              |
+| `colorScheme` | false    | <t>PearlTheme.palette</t>                         | `"primary"` | Active color palette of the text link. |
 
 ## Default component Config
 

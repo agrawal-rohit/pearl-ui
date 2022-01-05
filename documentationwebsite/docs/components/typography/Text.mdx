@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Text
 ---
 
-The `Text` component is the used to render the app typography, such as headings and paragraphs, within an interface. By default, it renders a [React Native Text](https://reactnative.dev/docs/text) element.
+The **Text** component is the used to render the app typography, such as headings and paragraphs, within an interface. By default, it renders a [React Native Text](https://reactnative.dev/docs/text) element.
 
 ## Import
 
@@ -20,7 +20,7 @@ import { Text } from "pearl-ui";
 
 ### Text variants
 
-Use the `variant` prop to change the typography style of the Text component. You can set the value to the keys available in <t>PearlTheme.components.Text["variants"]</t>, which are <t>"h1"</t>, <t>"h2"</t>, etc. in the [default theme](../../theming/default-theme#typography).
+Use the `variant` prop to change the typography style of the **Text** component. You can set the value to the keys available in <t>PearlTheme.components.Text["variants"]</t>, which are <t>"h1"</t>, <t>"h2"</t>, etc. in the [default theme](../../theming/default-theme#typography).
 
 ```jsx
 // variant="h1" refers to the value of `theme.components.Text["variants"]["h1"]`
@@ -29,7 +29,7 @@ Use the `variant` prop to change the typography style of the Text component. You
 
 ### Override Style
 
-The Text component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The **Text** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
 // variant="p1" refers to the value of `theme.components.Text["variants"]["p1"]`
@@ -67,14 +67,14 @@ import TabItem from "@theme/TabItem";
 
 ## Accessibility
 
-- Text has the `role` of `text`.
-- Text has the label set as the text body.
+- **Text** has the `role` of `text`.
+- **Text** has the label set as the text body.
 
 ## Props
 
 ### Supported style props
 
-The `Text` component supports the following style props:
+The **Text** component supports the following style props:
 
 - [color and backgroundColor](../../core-features/style-props#color-and-background-color)
 - [typography](../../core-features/style-props#typography)
@@ -85,11 +85,11 @@ The `Text` component supports the following style props:
 
 ### Additional props
 
-| Name          | Required | Type                                          | Default | Description                                                             |
-| ------------- | -------- | --------------------------------------------- | ------- | ----------------------------------------------------------------------- |
-| size          | false    | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme.                     |
-| variant       | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme.               |
-| scaleFontSize | false    | <t>boolean</t>                                | `true`  | Whether to slightly scale the font size based on the screen dimensions. |
+| Name            | Required | Type                                          | Default | Description                                                             |
+| --------------- | -------- | --------------------------------------------- | ------- | ----------------------------------------------------------------------- |
+| `size`          | false    | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme.                     |
+| `variant`       | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme.               |
+| `scaleFontSize` | false    | <t>boolean</t>                                | `true`  | Whether to slightly scale the font size based on the screen dimensions. |
 
 ## Default Component Config
 
