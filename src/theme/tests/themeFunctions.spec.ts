@@ -1,15 +1,23 @@
 import { baseTheme, extendTheme } from "../src/base/index";
+import { ThemeSkeleton } from "../src/types";
 
 jest.useFakeTimers();
 
 describe("themeFunctions", () => {
   it("enforces type using createTheme", () => {
-    const tempTheme = {
+    const tempTheme: ThemeSkeleton = {
       palette: {},
       spacing: {},
       components: {},
       elevation: {},
       zIndices: {},
+      fonts: {},
+      fontConfig: {},
+      fontSizes: {},
+      fontWeights: {},
+      lineHeights: {},
+      letterSpacings: {},
+      breakpoints: {},
       borderRadii: {},
     };
 

@@ -92,7 +92,7 @@ export interface Dimensions {
   height: number;
 }
 
-interface ThemeSkeleton {
+export interface ThemeSkeleton {
   palette: {
     [key: string]: string | ColorPalette;
   };

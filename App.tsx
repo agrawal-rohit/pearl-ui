@@ -58,7 +58,19 @@ const App = () => {
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
         <Stack direction="horizontal" spacing="s" mt="s">
-          <Avatar backgroundColor="cyan" name="Rohit Agrawal" />
+          <Avatar size="xl" name="Rohit Agrawal" />
+
+          {/* <Image
+            width={200}
+            height={200}
+            source={{
+              uri: "https://wallpaperaccess.com/full/113248.jpg",
+            }}
+            previewSource={{
+              uri: "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+            }}
+            boxShadow="4xl"
+          /> */}
           {/* <Avatar
             src="https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg"
             fallbackSource={{

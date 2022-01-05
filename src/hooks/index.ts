@@ -6,3 +6,4 @@ export { useTheme } from "./useTheme";
 export { useColorModeValue } from "./useColorModeValue";
 export { useAccessibleColor } from "./useAccessibleColor";
 export { useResponsiveProp } from "./useResponsiveProp";
+export { pearlify } from "./pearlify";

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pearlify passes the snapshot test for a <Text> component 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#C0E640",
+      "fontFamily": "Poppins",
+      "fontWeight": "100",
+    }
+  }
+>
+  asdasd
+</Text>
+`;
+
+exports[`pearlify passes the snapshot test for a <View> component 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FF8371",
+      "elevation": 28,
+      "height": 200,
+      "shadowColor": "#1A2138",
+      "shadowOffset": Object {
+        "height": 28,
+        "width": 0,
+      },
+      "shadowOpacity": 0.16,
+      "shadowRadius": 28,
+      "width": 200,
+    }
+  }
+/>
+`;
