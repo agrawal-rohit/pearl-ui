@@ -17,6 +17,14 @@ import {
   FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { useAvatarGroup } from "./AvatarGroup";
+
+const defaultGetInitials = (name: string) =>
+  name
+    .split(" ")
+    .map((el) => el[0])
+    .join("")
+    .toUpperCase();
 
 export type AvatarProps = Omit<ImageProps, "source" | "size" | "variant"> & {
   /** The size of the avatar */
@@ -27,6 +35,8 @@ export type AvatarProps = Omit<ImageProps, "source" | "size" | "variant"> & {
   name?: string;
   /** The source of the Avatar image. This can be a url, or a local image */
   src?: string | number;
+  /** A method to specify how initials are generated from a user's name */
+  getInitials?(name: string): string;
 };
 
 /** The Avatar component is used to represent a user, and displays the profile picture, initials or fallback icon. */
@@ -35,8 +45,15 @@ const Avatar: React.FC<AvatarProps> = ({
   src = undefined,
   name = undefined,
   fallbackComponent = undefined,
+  getInitials = defaultGetInitials,
   ...rest
 }) => {
+  let { size, variant } = useAvatarGroup();
+
+  // Overwrite props from avatar group
+  rest.size = size || rest.size;
+  rest.variant = variant || rest.variant;
+
   const molecularProps = useMolecularComponentConfig("Avatar", rest, {
     size: rest.size,
     variant: rest.variant,
@@ -67,11 +84,7 @@ const Avatar: React.FC<AvatarProps> = ({
 
   const renderFallBack = () => {
     if (name) {
-      const nameInitials = name
-        .split(" ")
-        .map((el) => el[0])
-        .join("")
-        .toUpperCase();
+      const nameInitials = getInitials(name);
       return (
         <Text color={accessibleTextColor} {...molecularProps.text}>
           {nameInitials}

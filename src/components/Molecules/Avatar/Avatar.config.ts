@@ -3,6 +3,11 @@ export default {
   baseStyle: {
     root: {
       borderRadius: "full",
+      borderWidth: 2,
+      borderColor: {
+        light: "neutral.50",
+        dark: "neutral.800",
+      },
     },
   },
   sizes: {

@@ -5,6 +5,7 @@ import { ThemeProvider } from "../../../theme/src/themeContext";
 import Icon, { IconProps } from "../../Atoms/Icon/Icon";
 import withBadge from "../Badge/withBadge";
 import Stack from "../../Atoms/Stack/Stack";
+import AvatarGroup from "./AvatarGroup";
 
 jest.useFakeTimers();
 
@@ -125,5 +126,31 @@ describe("Molecules/Avatar", () => {
 
     expect(tree).toMatchSnapshot();
     expect(root.getByText("0")).toBeTruthy();
+  });
+
+  it("passes the snapshot test when used in a group", () => {
+    const tree = render(
+      <ThemeProvider>
+        <AvatarGroup
+          spacing="2xl"
+          max={2}
+          truncatedBackgroundColor="neutral.200"
+        >
+          <Avatar
+            name="Rohit Agrawal"
+            src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+          />
+          <Avatar
+            name="Rohit Agrawal"
+            src="https://avatars.githubusercontent.com/u/29514438?s=400&u=d194d5de8df93f55038130ccc66429f94f8f900f&v=4"
+          />
+          <Avatar
+            name="Rohit Agrawal"
+            src="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-19/s320x320/160616189_1075891466264003_198594308312142696_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=111&_nc_ohc=-URhWepekUsAX_wt_-J&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-caDqy7XqUUTkGv5_QytlFTxtdZ2wVhZDgB4vU3Jl2qQ&oe=61DF5972&_nc_sid=7bff83"
+          />
+        </AvatarGroup>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

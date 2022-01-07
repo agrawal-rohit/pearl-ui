@@ -55,10 +55,7 @@ export type CheckBoxGroupProps = BoxProps & {
 
 const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   children,
-  size = "m",
-  variant = "filled",
   isDisabled = false,
-  colorScheme = "primary",
   shape = "square",
   value = undefined,
   defaultValue = [],
@@ -79,10 +76,10 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
     <Box {...rest}>
       <checkboxGroupContext.Provider
         value={{
-          size,
-          variant,
+          size: rest.size,
+          variant: rest.variant,
           isDisabled,
-          colorScheme,
+          colorScheme: rest.colorScheme,
           shape,
           checkboxGroupValue: currentValue,
           addCheckBoxGroupValue,
