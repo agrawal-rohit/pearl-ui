@@ -41,9 +41,11 @@ Array [
             "backgroundColor": "#F7F9FC",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderTopLeftRadius": undefined,
             "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
             "height": 40,
             "justifyContent": "center",
@@ -300,9 +302,11 @@ Array [
             "backgroundColor": "#F7F9FC",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderTopLeftRadius": undefined,
             "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
@@ -559,9 +563,11 @@ Array [
             "backgroundColor": "#F7F9FC",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderTopLeftRadius": undefined,
             "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
             "height": 70,
             "justifyContent": "center",
@@ -817,9 +823,11 @@ Array [
             "backgroundColor": "#F7F9FC",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderTopLeftRadius": undefined,
             "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
             "height": 85,
             "justifyContent": "center",
@@ -1086,7 +1094,9 @@ Array [
           Object {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 40,
             "justifyContent": "center",
@@ -1137,7 +1147,9 @@ Array [
           Object {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
@@ -1188,7 +1200,9 @@ Array [
           Object {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 70,
             "justifyContent": "center",
@@ -1238,7 +1252,9 @@ Array [
           Object {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 85,
             "justifyContent": "center",
@@ -1307,7 +1323,9 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
           "borderRadius": 1000,
+          "borderWidth": 2,
           "display": "flex",
           "height": 55,
           "justifyContent": "center",
@@ -1368,9 +1386,11 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
           "backgroundColor": "#ff0000",
           "borderBottomLeftRadius": undefined,
           "borderBottomRightRadius": undefined,
+          "borderColor": "#FFFFFF",
           "borderRadius": 1000,
           "borderTopLeftRadius": undefined,
           "borderTopRightRadius": undefined,
+          "borderWidth": 2,
           "display": "flex",
           "height": 55,
           "justifyContent": "center",
@@ -1619,7 +1639,9 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#EDF1F7",
+          "borderColor": "#FFFFFF",
           "borderRadius": 1000,
+          "borderWidth": 2,
           "display": "flex",
           "height": 55,
           "justifyContent": "center",
@@ -1628,6 +1650,574 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       }
     >
       <Text />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
+<View
+  onLayout={[Function]}
+  spacing="2xl"
+  style={
+    Object {
+      "borderRadius": undefined,
+      "display": "flex",
+    }
+  }
+  truncatedBackgroundColor="neutral.200"
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "borderRadius": undefined,
+        "display": "flex",
+      }
+    }
+  >
+    <View
+      accessibilityRole="image"
+      accessible={true}
+      isCached={true}
+      loaderType="spinner"
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderBottomLeftRadius": undefined,
+          "borderBottomRightRadius": undefined,
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderTopLeftRadius": undefined,
+          "borderTopRightRadius": undefined,
+          "borderWidth": 2,
+          "display": "flex",
+          "height": 55,
+          "justifyContent": "center",
+          "marginLeft": 0,
+          "position": "relative",
+          "width": 55,
+          "zIndex": 3,
+        }
+      }
+      tint="dark"
+      transitionDuration={300}
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "borderRadius": undefined,
+            "bottom": 0,
+            "display": "flex",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animating={true}
+            spinnerSize={15}
+            style={
+              Object {
+                "height": 15,
+                "width": 15,
+              }
+            }
+            variant="spinner"
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": 0,
+                          },
+                          Object {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "top": 7.5,
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": -7.5,
+                          },
+                          Object {
+                            "rotate": "352.5deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityRole="image"
+      accessible={true}
+      isCached={true}
+      loaderType="spinner"
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderBottomLeftRadius": undefined,
+          "borderBottomRightRadius": undefined,
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderTopLeftRadius": undefined,
+          "borderTopRightRadius": undefined,
+          "borderWidth": 2,
+          "display": "flex",
+          "height": 55,
+          "justifyContent": "center",
+          "marginLeft": 40,
+          "position": "absolute",
+          "width": 55,
+          "zIndex": 2,
+        }
+      }
+      tint="dark"
+      transitionDuration={300}
+    >
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "borderRadius": undefined,
+            "bottom": 0,
+            "display": "flex",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animating={true}
+            spinnerSize={15}
+            style={
+              Object {
+                "height": 15,
+                "width": 15,
+              }
+            }
+            variant="spinner"
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": 0,
+                          },
+                          Object {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    Object {
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "top": 7.5,
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": -7.5,
+                          },
+                          Object {
+                            "rotate": "352.5deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "display": "flex",
+          "height": 55,
+          "justifyContent": "center",
+          "marginLeft": 80,
+          "position": "absolute",
+          "width": 55,
+          "zIndex": 1,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        scaleFontSize={true}
+        style={
+          Object {
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 28,
+          }
+        }
+        variant="p1"
+      >
+        +1
+      </Text>
     </View>
   </View>
 </View>
@@ -1682,9 +2272,11 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             "backgroundColor": "#00ffff",
             "borderBottomLeftRadius": undefined,
             "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderTopLeftRadius": undefined,
             "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
@@ -2046,7 +2638,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "#00ffff",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
@@ -2231,7 +2825,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",

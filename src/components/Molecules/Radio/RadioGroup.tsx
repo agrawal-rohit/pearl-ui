@@ -49,10 +49,7 @@ export type RadioGroupProps = BoxProps & {
 
 const RadioGroup: React.FC<RadioGroupProps> = ({
   children,
-  size = "m",
-  variant = "filled",
   isDisabled = false,
-  colorScheme = "primary",
   value = undefined,
   defaultValue = undefined,
   onChange = () => {},
@@ -67,10 +64,10 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
     <Box {...rest} accessibilityRole="radiogroup">
       <radioGroupContext.Provider
         value={{
-          size,
-          variant,
+          size: rest.size,
+          variant: rest.variant,
           isDisabled,
-          colorScheme,
+          colorScheme: rest.colorScheme,
           radioGroupValue: currentValue,
           setRadioGroupValue,
         }}

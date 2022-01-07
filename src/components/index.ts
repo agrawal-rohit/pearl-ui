@@ -2,6 +2,7 @@
 export { default as Box, BoxProps } from "./Atoms/Box/Box";
 export { default as Text, TextProps } from "./Atoms/Text/Text";
 export { default as Center } from "./Atoms/Center/Center";
+export { default as Spacer } from "./Atoms/Spacer/Spacer";
 export {
   default as Stack,
   HStack,
@@ -42,3 +43,7 @@ export { default as Image, ImageProps } from "./Molecules/Image/Image";
 export { default as Badge, BadgeProps } from "./Molecules/Badge/Badge";
 export { default as withBadge } from "./Molecules/Badge/withBadge";
 export { default as Avatar, AvatarProps } from "./Molecules/Avatar/Avatar";
+export {
+  default as AvatarGroup,
+  AvatarGroupProps,
+} from "./Molecules/Avatar/AvatarGroup";

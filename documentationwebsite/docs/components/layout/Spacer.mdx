@@ -1,0 +1,54 @@
+---
+sidebar_position: 4
+title: Spacer
+---
+
+**Spacer** is a layout component that creates an adjustable, empty space that can be used to tune the spacing between sibling elements. By default, it renders a [Box](./box) element.
+
+## Import
+
+```jsx
+import { Spacer } from "pearl-ui";
+```
+
+## Usage
+
+### Horizontal Spacing
+
+```jsx
+<Box flexDirection="row">
+  <Box p="l" bg="danger.400">
+    <Text>Box 1</Text>
+  </Box>
+  <Spacer />
+  <Box p="l" bg="success.400">
+    <Text>Box 2</Text>
+  </Box>
+</Box>
+```
+
+### Vertical Spacing
+
+```jsx
+<Box flex={1}>
+  <Box p="l" bg="danger.400">
+    <Text>Box 1</Text>
+  </Box>
+  <Spacer />
+  <Box p="l" bg="success.400">
+    <Text>Box 2</Text>
+  </Box>
+</Box>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/spacing" />
+
+## Props
+
+### Supported style props
+
+**Spacer** composes [Box](./Box) so you can pass all [Box](./Box) related props.

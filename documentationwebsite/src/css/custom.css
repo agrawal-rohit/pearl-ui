@@ -116,6 +116,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Screen"]:after,
 .menu__link[href*="Stack"]:after,
 .menu__link[href*="Divider"]:after,
+.menu__link[href*="Spacer"]:after,
 .menu__link[href*="Text"]:after,
 .menu__link[href*="Screen"]:after,
 .menu__link[href*="Icon"]:after,
@@ -170,7 +171,8 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Image"]:before,
 .menu__link[href*="CheckBox"]:before,
 .menu__link[href*="Radio"]:before,
-.menu__link[href*="Avatar"]:before,
+.menu__link[href*="Spacer"]:before,
+.menu__link[href*="Badge"]:before,
 .menu__link[href*="useAccessibleColor"]:before,
 .menu__link[href*="useResponsiveProp"]:before,
 .menu__link[href*="typescript-support"]:before,
@@ -178,8 +180,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="dark-mode"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="cohesivity"]:before,
-.menu__link[href*="pearlify"]:before,
-.menu__link[href*="Badge"]:before {
+.menu__link[href*="pearlify"]:before {
   content: "New";
   display: inline-block;
   position: absolute;
@@ -201,6 +202,7 @@ html[data-theme="dark"] .header-twitter-link:before {
   Mark pages as "updated" using href attribute:
 */
 .menu__link[href*="Stack"]:before,
+.menu__link[href*="Avatar"]:before,
 .menu__link[href*="default-theme"]:before {
   content: "Updated";
   display: inline-block;

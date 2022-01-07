@@ -3,12 +3,17 @@ sidebar_position: 3
 title: Avatar
 ---
 
-The **Avatar** component is used to represent a user, and displays the profile picture, initials or fallback icon.
+The **Avatar** component is used to represent a user, and displays the profile picture, initials or a fallback icon.
 
 ## Import
 
+Pearl UI exports 2 avatar-related components:
+
+1. **Avatar:** Used to represent a single user.
+2. **AvatarGroup:** A wrapper which stacks multiple **Avatar** components together and provides the ability to truncate the number of avatars that get shown.
+
 ```jsx
-import { Avatar } from "pearl-ui";
+import { Avatar, AvatarGroup } from "pearl-ui";
 ```
 
 ## Usage
@@ -81,6 +86,29 @@ import { Icon } from "pearl-ui";
 
 If both the props are specified, the `fallbackComponent` prop takes higher precedence over `fallbackSource`.
 
+### Avatar Group
+
+In some cases, you might need to stack avatars as a group. This is where the **AvatarGroup** component comes in handy.
+
+It expects a `max` prop to limit the amount of avatars to show, and shows a "+X" label (where X is the remaining avatars). It also provides a central place to control the `size` and `variant` of all the children **Avatar** components. It also expects a `spacing` prop to adjust the spacing between the avatars.
+
+```jsx
+<AvatarGroup spacing="2xl" max={2} truncatedBackgroundColor="neutral.200">
+  <Avatar
+    name="Rohit Agrawal"
+    src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  />
+  <Avatar
+    name="Rohit Agrawal"
+    src="https://avatars.githubusercontent.com/u/29514438?s=400&u=d194d5de8df93f55038130ccc66429f94f8f900f&v=4"
+  />
+  <Avatar
+    name="Rohit Agrawal"
+    src="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-19/s320x320/160616189_1075891466264003_198594308312142696_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=111&_nc_ohc=-URhWepekUsAX_wt_-J&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-caDqy7XqUUTkGv5_QytlFTxtdZ2wVhZDgB4vU3Jl2qQ&oe=61DF5972&_nc_sid=7bff83"
+  />
+</AvatarGroup>
+```
+
 ### Avatar Badges
 
 You can use [Badge](../feedback/Badge) to add status badges or pressable badges to the avatar to show online/offline status, add action buttons, etc.
@@ -114,6 +142,16 @@ const AvatarWithEditButton = withBadge(
     },
   }
 )(Avatar);
+```
+
+### Changing the initials logic
+
+**Avatar** optionally expects a `getInitials` prop that lets you control how the user's initials should be computed.
+
+```tsx
+const firstNameTwoLetters = (name: string) => `${name[0]}${name[1]}`.toUpperCase()
+
+<Avatar name="Rohit Agrawal" getInitials={firstNameTwoLetters} />;
 ```
 
 ### Override Style
@@ -154,7 +192,7 @@ import TabItem from "@theme/TabItem";
 
 - **Avatar** has the `role` of `image`.
 
-## Props
+## Avatar Props
 
 ### Supported style props
 
@@ -162,12 +200,29 @@ import TabItem from "@theme/TabItem";
 
 ### Additional props
 
-| Name      | Required | Type                                            | Default | Description                                                                                                                 |
-| --------- | -------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `size`    | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`   | The size of the avatar.                                                                                                     |
-| `variant` | false    | <t>PearlTheme.components.Avatar["variants"]</t> |         | The variant of the avatar.                                                                                                  |
-| `src`     | false    | <t>string \| number</t>                         |         | The source of the Avatar image. This can be a url, or a local image.                                                        |
-| `name`    | false    | <t>string</t>                                   |         | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
+| Name          | Required | Type                                            | Default                             | Description                                                                                                                 |
+| ------------- | -------- | ----------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `size`        | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`                               | The size of the avatar.                                                                                                     |
+| `variant`     | false    | <t>PearlTheme.components.Avatar["variants"]</t> |                                     | The variant of the avatar.                                                                                                  |
+| `src`         | false    | <t>string \| number</t>                         |                                     | The source of the Avatar image. This can be a url, or a local image.                                                        |
+| `name`        | false    | <t>string</t>                                   |                                     | The name of the person in the avatar. If 'src' is not loaded or is missing, the 'name' will be used to create the initials. |
+| `getInitials` | false    | <t>(name: string): string</t>                   | Takes the first letters of the name | A method to specify how initials are generated from a user's name.                                                          |
+
+## AvatarGroup Props
+
+### Supported style props
+
+**AvatarGroup** composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to it.
+
+### Additional props
+
+| Name                       | Required | Type                                            | Default                             | Description                                                                                                             |
+| -------------------------- | -------- | ----------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `size`                     | false    | <t>PearlTheme.components.Avatar["sizes"]</t>    | `"m"`                               | The size of all the children avatars in the group..                                                                     |
+| `variant`                  | false    | <t>PearlTheme.components.Avatar["variants"]</t> |                                     | The variant of all the children avatars in the group.                                                                   |
+| `spacing`                  | false    | <t>PearlTheme["spacing"]</t>                    |                                     | The spacing between the avatars.                                                                                        |
+| `truncatedBackgroundColor` | false    | <t>PearlTheme["palette"]</t>                    |                                     | The background color of the circle which shows the "+X" label of remaining avatars.                                     |
+| `max`                      | false    | <t>number</t>                                   | Takes the first letters of the name | Maximum number of avatars to show. It'll truncate the avatars and show a "+X" label (where X is the remaining avatars). |
 
 ## Default component Config
 
@@ -177,6 +232,11 @@ export default {
   baseStyle: {
     root: {
       borderRadius: "full",
+      borderWidth: 2,
+      borderColor: {
+        light: "neutral.50",
+        dark: "neutral.800",
+      },
     },
   },
   sizes: {

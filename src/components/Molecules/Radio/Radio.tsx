@@ -82,7 +82,7 @@ const Radio = React.forwardRef(
       setRadioGroupValue,
     } = useRadioGroup();
 
-    // Overwrite props from checkbox group
+    // Overwrite props from radio group
     rest.size = size || rest.size;
     rest.variant = variant || rest.variant;
     rest.isDisabled = isDisabled || rest.isDisabled || false;
