@@ -1382,7 +1382,7 @@
     ts-node "^9"
     tslib "^2"
 
-"@expo/config-plugins@4.0.15", "@expo/config-plugins@^4.0.2":
+"@expo/config-plugins@4.0.15", "@expo/config-plugins@^4.0.14", "@expo/config-plugins@^4.0.2":
   version "4.0.15"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.0.15.tgz#cc170a0cf890973b6491cf357540e9955296019c"
   integrity sha512-QqxVEt2bFu3ZuI1soULRJv7i0Zrg/FMZ0IxNV7Y3AjH7fhtUJH3pPo9f6MURvqNr+PLxhBlkofkWfunrVejSkw==
@@ -4592,6 +4592,14 @@ expo-file-system@~13.1.0:
   integrity sha512-Hd+aBfcZfiD9p2qOEMvcUJuEnQk5NEostZjT5gVkQmRoITUxf9wGgrX1tSAzF8JQAtOJVjfWYOwTMHq2H9M8AA==
   dependencies:
     "@expo/config-plugins" "^4.0.2"
+    uuid "^3.4.0"
+
+expo-file-system@~13.2.0:
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-13.2.0.tgz#155fecd095d0aa01b9b78423077033e6ab852f0c"
+  integrity sha512-YboLdTuPVhYYcAIwYkJXsh0Ud6d3hwxU2DQ167lVktQ+SUIAyGN/VQQm1pkQBcpj/FFd2IM3NTD0ofx9qxyVGg==
+  dependencies:
+    "@expo/config-plugins" "^4.0.14"
     uuid "^3.4.0"
 
 expo-font@~10.0.4:
