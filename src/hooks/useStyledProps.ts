@@ -5,20 +5,7 @@ import { useTheme } from "./useTheme";
 import composeStyleProps from "../theme/src/composeStyleProps";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
-
-const filterStyledProps = (props: any, omitList: any) => {
-  const omittedProp = omitList.reduce((acc: any, prop: any) => {
-    acc[prop] = true;
-    return acc;
-  }, {});
-
-  return getKeys(props).reduce((acc: any, key: any) => {
-    if (!omittedProp[key]) {
-      acc[key] = props[key];
-    }
-    return acc;
-  }, {});
-};
+import { filterStyledProps } from "./utils/utils";
 
 /**
  * Hook to convert the received style props to appropriate React Native styles
@@ -38,7 +25,10 @@ export const useStyledProps = (
     [styleFunctions]
   );
 
+  if (!props) return { style: {} };
+
   const style = buildStyleProperties.buildStyle(props, { theme, dimensions });
+
   const cleanStyleProps = filterStyledProps(
     props,
     buildStyleProperties.properties

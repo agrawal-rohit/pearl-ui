@@ -64,6 +64,8 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
+  const [color, setColor] = useState("pink");
+
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen></Screen>
