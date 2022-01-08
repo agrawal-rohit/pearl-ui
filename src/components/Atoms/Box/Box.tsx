@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { LayoutChangeEvent, View } from "react-native";
+import {
+  LayoutChangeEvent,
+  View,
+  ViewPropTypes,
+  ViewStyle,
+} from "react-native";
 import { usePercentageBorderRadius } from "../../../hooks/usePercentageBorderRadius";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import {
@@ -20,16 +25,16 @@ import {
   visible,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../../theme/src/types";
-
-type BoxStyleProps = BackgroundColorProps &
-  OpacityProps &
-  VisibleProps &
-  LayoutProps &
-  SpacingProps &
-  BorderProps &
-  ShadowProps &
-  PositionProps;
+import {
+  MotiWithPearlStyleProps,
+  StyleFunctionContainer,
+} from "../../../theme/src/types";
+import {
+  StyleValueWithReplacedTransforms,
+  StyleValueWithSequenceArrays,
+  View as MotiView,
+} from "moti";
+import { useStyledPropsWithMoti } from "../../../hooks/useStyledPropsWithMoti";
 
 export const boxStyleFunctions = [
   backgroundColor,
@@ -45,12 +50,26 @@ export const boxStyleFunctions = [
 /**
  * Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a <View> element.
  */
-type ViewProps = React.ComponentProps<typeof View>;
+type ViewProps = React.ComponentProps<typeof MotiView>;
 
-export type BoxProps = BoxStyleProps & Omit<ViewProps, keyof BoxStyleProps>;
+type BoxStyleProps = BackgroundColorProps &
+  OpacityProps &
+  VisibleProps &
+  LayoutProps &
+  SpacingProps &
+  BorderProps &
+  ShadowProps &
+  PositionProps;
 
-const Box = React.forwardRef((props: BoxProps, ref: any) => {
-  const passedProps = useStyledProps(props, boxStyleFunctions);
+type BoxStylePropsWithMoti = BoxStyleProps &
+  MotiWithPearlStyleProps<ViewStyle, BoxStyleProps>;
+
+export type BoxProps = BoxStylePropsWithMoti &
+  Omit<ViewProps, keyof BoxStylePropsWithMoti>;
+
+const Box = React.forwardRef((rest: BoxProps, ref: any) => {
+  const { children, ...props } = rest;
+  const passedProps = useStyledPropsWithMoti(props, boxStyleFunctions);
 
   // Filter out the borderRadius property to set dynamically
   const { borderRadius, ...otherPropStyles } = passedProps.style;
@@ -58,7 +77,7 @@ const Box = React.forwardRef((props: BoxProps, ref: any) => {
     usePercentageBorderRadius(borderRadius);
 
   return (
-    <View
+    <MotiView
       ref={ref}
       onLayout={onLayoutChange}
       {...passedProps}
@@ -67,8 +86,8 @@ const Box = React.forwardRef((props: BoxProps, ref: any) => {
         borderRadius: computedBorderRadius,
       }}
     >
-      {props.children}
-    </View>
+      {children}
+    </MotiView>
   );
 });
 

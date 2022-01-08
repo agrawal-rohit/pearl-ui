@@ -1,5 +1,11 @@
 import { baseTheme, extendTheme } from "./base/index";
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
+import {
+  MotiTransitionProp,
+  StyleValueWithReplacedTransforms,
+  StyleValueWithSequenceArrays,
+} from "moti";
+import { SharedValue } from "react-native-reanimated";
 
 export type AtLeastOneResponsiveValue<
   TVal extends PropValue = PropValue,
@@ -224,3 +230,54 @@ export type RNStyleProperty =
   | keyof ImageStyle;
 
 export type PropValue = string | number | undefined | boolean | null | object;
+
+// MOTI RELATED PROPS
+type OrSharedValue<T> = T | SharedValue<T>;
+
+export type MotiWithPearlStyleProps<NativeComponent, ComponentStyleProps> = {
+  from?:
+    | (Omit<
+        StyleValueWithSequenceArrays<
+          StyleValueWithReplacedTransforms<ViewStyle>
+        >,
+        keyof NativeComponent
+      > &
+        Omit<NativeComponent, keyof ComponentStyleProps> &
+        ComponentStyleProps)
+    | boolean;
+
+  animate?: OrSharedValue<
+    Omit<
+      StyleValueWithSequenceArrays<StyleValueWithReplacedTransforms<ViewStyle>>,
+      keyof NativeComponent
+    > &
+      Omit<NativeComponent, keyof ComponentStyleProps> &
+      ComponentStyleProps
+  >;
+  exit?:
+    | (Omit<
+        StyleValueWithReplacedTransforms<ViewStyle>,
+        keyof NativeComponent
+      > &
+        Omit<NativeComponent, keyof ComponentStyleProps> &
+        ComponentStyleProps)
+    | boolean
+    | ((
+        custom?: any
+      ) => Omit<
+        StyleValueWithReplacedTransforms<ViewStyle>,
+        keyof NativeComponent
+      > &
+        Omit<NativeComponent, keyof ComponentStyleProps> &
+        ComponentStyleProps);
+  transition?: MotiTransitionProp<
+    Omit<StyleValueWithReplacedTransforms<ViewStyle>, keyof NativeComponent> &
+      Omit<NativeComponent, keyof ComponentStyleProps> &
+      ComponentStyleProps
+  >;
+  exitTransition?: MotiTransitionProp<
+    Omit<StyleValueWithReplacedTransforms<ViewStyle>, keyof NativeComponent> &
+      Omit<NativeComponent, keyof ComponentStyleProps> &
+      ComponentStyleProps
+  >;
+};

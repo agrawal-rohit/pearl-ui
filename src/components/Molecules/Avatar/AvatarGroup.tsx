@@ -1,5 +1,4 @@
 import React, { createContext, ReactElement, useContext } from "react";
-import { useStyledProps } from "../../..";
 import {
   ComponentSizes,
   ComponentVariants,
@@ -11,21 +10,8 @@ import { spacing } from "../../../theme/src/styleFunctions";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import { ZStack } from "../../Atoms/Stack/Stack";
 import Avatar from "./Avatar";
-
-interface IAvatarGroupContext {
-  /** Size of all the children avatars in the group. */
-  size?: ResponsiveValue<ComponentSizes<"Avatar">>;
-  /** Variant of all the children avatars in the group. */
-  variant?: ResponsiveValue<ComponentVariants<"Avatar">>;
-}
-
-const avatarGroupContext = createContext({} as IAvatarGroupContext);
-
-/**
- * Hook to get access to the state of a Checkbox group
- */
-export const useAvatarGroup = () =>
-  useContext(avatarGroupContext) as IAvatarGroupContext;
+import { avatarGroupContext } from "./useAvatarGroup";
+import { useStyledProps } from "../../../hooks/useStyledProps";
 
 export type AvatarGroupProps = BoxProps & {
   /** Size of all the children avatars in the group. */

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -24,6 +24,11 @@ import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
 import Avatar from "./src/components/Molecules/Avatar/Avatar";
 import AvatarGroup from "./src/components/Molecules/Avatar/AvatarGroup";
+import Box from "./src/components/Atoms/Box/Box";
+import Button from "./src/components/Molecules/Button/Button";
+import { MotiText, MotiView } from "moti";
+import { useStyledProps } from "./src/hooks/useStyledProps";
+import { all, spacing } from "./src/theme/src/styleFunctions";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -47,10 +52,18 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
+  const [color, setColor] = useState("pink");
+
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <AvatarGroup
+        <MotiView
+          animate={{ width: 100, height: 200, backgroundColor: color }}
+        />
+
+        <Button onPress={() => setColor("brown")}>Switch Color</Button>
+
+        {/* <AvatarGroup
           spacing="2xl"
           max={2}
           truncatedBackgroundColor={{
@@ -70,7 +83,7 @@ const App = () => {
             name="Rohit Agrawal"
             src="https://instagram.fdel1-3.fna.fbcdn.net/v/t51.2885-19/s320x320/160616189_1075891466264003_198594308312142696_n.jpg?_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=111&_nc_ohc=-URhWepekUsAX_wt_-J&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT-caDqy7XqUUTkGv5_QytlFTxtdZ2wVhZDgB4vU3Jl2qQ&oe=61DF5972&_nc_sid=7bff83"
           />
-        </AvatarGroup>
+        </AvatarGroup> */}
       </Screen>
     </ThemeProvider>
   );

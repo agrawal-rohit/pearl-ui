@@ -17,7 +17,7 @@ import {
   FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
-import { useAvatarGroup } from "./AvatarGroup";
+import { useAvatarGroup } from "./useAvatarGroup";
 
 const defaultGetInitials = (name: string) =>
   name
