@@ -8,16 +8,11 @@ import {
 import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
-import { boxStyleFunctions } from "../components/Atoms/Box/Box";
 import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
-import {
-  getValueForScreenSize,
-  isResponsiveObjectValue,
-} from "../theme/src/responsiveHelpers";
-import { useDimensions } from "./useDimensions";
 import { useResponsiveProp } from "./useResponsiveProp";
+import { boxStyleFunctions } from "../theme/src/styleFunctions";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles
@@ -42,9 +37,6 @@ export const useAtomicComponentConfig = (
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[]
 ) => {
   const { theme } = useTheme();
-
-  // User overriden props
-  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   checkKeyAvailability(
     themeComponentKey as string,
@@ -141,14 +133,18 @@ export const useAtomicComponentConfig = (
   }
 
   finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
-  const componentStyles = useStyledProps(finalComponentProps, styleFunctions);
 
-  return {
-    ...componentStyles,
-    ...overridenProps,
+  // Add user override props here
+  finalComponentProps = {
+    ...finalComponentProps,
+    ...receivedProps,
     style: {
-      ...componentStyles.style,
-      ...overridenProps.style,
+      ...finalComponentProps.style,
+      ...receivedProps.style,
     },
   };
+
+  const componentStyles = useStyledProps(finalComponentProps, styleFunctions);
+
+  return componentStyles;
 };

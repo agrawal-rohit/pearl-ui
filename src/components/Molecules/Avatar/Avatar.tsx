@@ -8,16 +8,13 @@ import Text from "../../Atoms/Text/Text";
 import namedColors from "../../../theme/utils/namedColors.json";
 import { getKeys } from "../../../theme/utils/typeHelpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
-import { useTheme } from "../../../hooks/useTheme";
-import { ColorInput } from "@ctrl/tinycolor";
 import {
   ComponentSizes,
   ComponentVariants,
-  ExpandedColors,
-  FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
 import { useAvatarGroup } from "./AvatarGroup";
+import { pearlify } from "../../../hooks/pearlify";
 
 const defaultGetInitials = (name: string) =>
   name
@@ -39,25 +36,10 @@ export type AvatarProps = Omit<ImageProps, "source" | "size" | "variant"> & {
   getInitials?(name: string): string;
 };
 
-/** The Avatar component is used to represent a user, and displays the profile picture, initials or fallback icon. */
-const Avatar: React.FC<AvatarProps> = ({
-  children,
-  src = undefined,
-  name = undefined,
-  fallbackComponent = undefined,
-  getInitials = defaultGetInitials,
-  ...rest
-}) => {
-  let { size, variant } = useAvatarGroup();
-
-  // Overwrite props from avatar group
-  rest.size = size || rest.size;
-  rest.variant = variant || rest.variant;
-
-  const molecularProps = useMolecularComponentConfig("Avatar", rest, {
-    size: rest.size,
-    variant: rest.variant,
-  });
+const CustomAvatar: React.FC<AvatarProps> = ({ children, ...props }) => {
+  const { name, src, getInitials, fallbackComponent, ...rootProps } = (
+    props as any
+  ).root;
 
   const pickRandomColor = () => {
     const namedColorKeys = getKeys(namedColors).filter(
@@ -71,11 +53,7 @@ const Avatar: React.FC<AvatarProps> = ({
 
   const randomColor = useRef(pickRandomColor()).current;
   const accessibleTextColor = useAccessibleColor(
-    molecularProps.root.backgroundColor ||
-      molecularProps.root.bg ||
-      rest.backgroundColor ||
-      rest.bg ||
-      randomColor,
+    rootProps.backgroundColor || rootProps.bg || randomColor,
     {
       light: "neutral.50",
       dark: "neutral.900",
@@ -84,9 +62,10 @@ const Avatar: React.FC<AvatarProps> = ({
 
   const renderFallBack = () => {
     if (name) {
-      const nameInitials = getInitials(name);
+      const initialComputeFunction = getInitials || defaultGetInitials;
+      const nameInitials = initialComputeFunction(name);
       return (
-        <Text color={accessibleTextColor} {...molecularProps.text}>
+        <Text color={accessibleTextColor} {...(props as any).text}>
           {nameInitials}
         </Text>
       );
@@ -103,24 +82,37 @@ const Avatar: React.FC<AvatarProps> = ({
       : (src as ImageSourcePropType);
 
   if (finalSource) {
-    return <Image source={finalSource} {...molecularProps.root} />;
+    return <Image source={finalSource} {...rootProps} />;
   }
 
   // Render a fallback
   return (
     <Box
-      {...molecularProps.root}
-      backgroundColor={
-        molecularProps.root.backgroundColor ||
-        molecularProps.root.bg ||
-        randomColor
-      }
+      {...rootProps}
+      backgroundColor={rootProps.backgroundColor || rootProps.bg || randomColor}
       justifyContent="center"
       alignItems="center"
     >
       {renderFallBack()}
     </Box>
   );
+};
+
+/** The Avatar component is used to represent a user, and displays the profile picture, initials or fallback icon. */
+const Avatar: React.FC<AvatarProps> = ({ children, ...rest }) => {
+  let { size, variant } = useAvatarGroup();
+
+  // Overwrite props from avatar group
+  rest.size = size || rest.size;
+  rest.variant = variant || rest.variant;
+
+  const StyledAvatar = pearlify(CustomAvatar, {
+    componentName: "Avatar",
+    type: "molecule",
+  });
+
+  // Render a fallback
+  return <StyledAvatar {...rest}>{children}</StyledAvatar>;
 };
 
 export default Avatar;

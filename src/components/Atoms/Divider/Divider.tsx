@@ -1,12 +1,12 @@
 import React from "react";
-import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import { View } from "react-native";
-import { BoxProps } from "../../Atoms/Box/Box";
+import Box, { BoxProps } from "../../Atoms/Box/Box";
 import {
   ComponentSizes,
   ComponentVariants,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { pearlify } from "../../../hooks/pearlify";
 
 export type DividerProps = BoxProps & {
   /** The size of the divider */
@@ -21,28 +21,26 @@ export type DividerProps = BoxProps & {
   orientation?: "horizontal" | "vertical";
 };
 
-/** Divider is used to visually separate content in a list or group. */
-const Divider: React.FC<DividerProps> = ({ children, ...rest }) => {
-  const props = useAtomicComponentConfig("Divider", rest, {
-    size: rest.size,
-    variant: rest.variant,
-  });
-
+const CustomDivider: React.FC<DividerProps> = ({ children, ...props }) => {
   return (
-    <View
-      style={[
-        props.style,
-        {
-          height:
-            props.orientation === "horizontal" ? props.thickness : props.length,
-          width:
-            props.orientation === "vertical" ? props.thickness : props.length,
-        },
-      ]}
+    <Box
+      style={{
+        ...(props.style as any),
+        height:
+          props.orientation === "horizontal" ? props.thickness : props.length,
+        width:
+          props.orientation === "vertical" ? props.thickness : props.length,
+      }}
     >
       {children}
-    </View>
+    </Box>
   );
 };
+
+/** Divider is used to visually separate content in a list or group. */
+const Divider = pearlify(CustomDivider, {
+  componentName: "Divider",
+  type: "atom",
+});
 
 export default Divider;

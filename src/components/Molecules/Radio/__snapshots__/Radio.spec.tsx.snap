@@ -12,12 +12,10 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
   }
   accessible={true}
   direction="horizontal"
-  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
-      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -27,11 +25,9 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -48,11 +44,9 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
         }
       }
       accessible={true}
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "center",
-          "borderRadius": undefined,
           "bottom": undefined,
           "display": "flex",
           "elevation": undefined,
@@ -79,7 +73,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
       }
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
             "borderRadius": 1000,
@@ -141,7 +134,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
         >
           <View
             checkedBackgroundColor="neutral.50"
-            onLayout={[Function]}
             style={
               Object {
                 "backgroundColor": "#EDF1F7",
@@ -157,11 +149,9 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
@@ -171,7 +161,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
-      scaleFontSize={true}
       style={
         Object {
           "alignSelf": "center",
@@ -207,12 +196,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -222,11 +209,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -243,11 +228,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -274,7 +257,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -336,7 +318,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -352,11 +333,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -366,7 +345,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -398,12 +376,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -413,11 +389,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -434,11 +408,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -465,7 +437,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -527,7 +498,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -543,11 +513,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -557,7 +525,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -594,12 +561,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -609,11 +574,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -630,11 +593,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -661,7 +622,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -724,7 +684,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -740,11 +699,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -754,7 +711,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -786,12 +742,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -801,11 +755,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -822,11 +774,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -853,7 +803,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -916,7 +865,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -932,11 +880,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -946,7 +892,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -978,12 +923,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -993,11 +936,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1014,11 +955,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -1045,7 +984,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -1108,7 +1046,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -1124,11 +1061,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1138,7 +1073,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1170,12 +1104,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1185,11 +1117,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1206,11 +1136,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -1237,7 +1165,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -1300,7 +1227,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -1316,11 +1242,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1330,7 +1254,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1367,12 +1290,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1382,11 +1303,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1403,11 +1322,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -1434,7 +1351,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -1497,7 +1413,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -1513,11 +1428,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1527,7 +1440,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1559,12 +1471,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1574,11 +1484,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1595,11 +1503,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -1626,7 +1532,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -1694,7 +1599,6 @@ Array [
           >
             <View
               checkedBackgroundColor="primary.500"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1710,11 +1614,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1724,7 +1626,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1761,12 +1662,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1776,11 +1675,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1797,11 +1694,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -1828,7 +1723,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -1892,7 +1786,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
@@ -1908,11 +1801,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -1922,7 +1813,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -1954,12 +1844,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1969,11 +1857,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -1990,11 +1876,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -2021,7 +1905,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -2090,7 +1973,6 @@ Array [
           >
             <View
               checkedBackgroundColor="primary.500"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#6A7BFF",
@@ -2106,11 +1988,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -2120,7 +2000,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2157,12 +2036,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -2172,11 +2049,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -2193,11 +2068,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -2224,7 +2097,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -2287,7 +2159,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -2303,11 +2174,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -2317,7 +2186,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2349,12 +2217,10 @@ Array [
     }
     accessible={true}
     direction="horizontal"
-    onLayout={[Function]}
     spacing="xs"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -2364,11 +2230,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
@@ -2385,11 +2249,9 @@ Array [
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "center",
-            "borderRadius": undefined,
             "bottom": undefined,
             "display": "flex",
             "elevation": undefined,
@@ -2416,7 +2278,6 @@ Array [
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -2480,7 +2341,6 @@ Array [
           >
             <View
               checkedBackgroundColor="neutral.50"
-              onLayout={[Function]}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
@@ -2496,11 +2356,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -2510,7 +2368,6 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "alignSelf": "center",
@@ -2535,7 +2392,6 @@ Array [
     accessibilityRole="text"
     accessible={true}
     allowFontScaling={true}
-    scaleFontSize={true}
     style={
       Object {
         "color": "#FF4B42",
@@ -2569,15 +2425,10 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
   }
   accessible={true}
   direction="horizontal"
-  onLayout={[Function]}
   spacing="xs"
   style={
     Object {
       "alignSelf": "flex-start",
-      "backgroundColor": "#6A7BFF",
-      "borderColor": "#C5CEE0",
-      "borderRadius": undefined,
-      "borderWidth": 2,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -2587,11 +2438,9 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 8,
@@ -2608,11 +2457,9 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
         }
       }
       accessible={true}
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "center",
-          "borderRadius": undefined,
           "bottom": undefined,
           "display": "flex",
           "elevation": undefined,
@@ -2639,7 +2486,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
       }
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
             "borderRadius": 1000,
@@ -2669,7 +2515,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
             Array [
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#EDF1F7",
+                "backgroundColor": "#6A7BFF",
                 "borderRadius": 1000,
                 "display": "flex",
                 "height": 24,
@@ -2678,10 +2524,10 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
                 "width": 24,
               },
               Object {
-                "backgroundColor": "#EDF1F7",
+                "backgroundColor": "#6A7BFF",
                 "borderBottomColor": undefined,
                 "borderBottomWidth": undefined,
-                "borderColor": "#EDF1F7",
+                "borderColor": "#C5CEE0",
                 "borderEndColor": undefined,
                 "borderEndWidth": undefined,
                 "borderLeftColor": undefined,
@@ -2701,7 +2547,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
         >
           <View
             checkedBackgroundColor="neutral.50"
-            onLayout={[Function]}
             style={
               Object {
                 "backgroundColor": "#EDF1F7",
@@ -2717,11 +2562,9 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
@@ -2731,7 +2574,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
-      scaleFontSize={true}
       style={
         Object {
           "alignSelf": "center",

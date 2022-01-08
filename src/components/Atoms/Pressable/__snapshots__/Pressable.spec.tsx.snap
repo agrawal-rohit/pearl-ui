@@ -11,11 +11,9 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
     }
   }
   accessible={true}
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": undefined,
-      "borderRadius": undefined,
       "bottom": undefined,
       "display": "flex",
       "elevation": undefined,
@@ -42,10 +40,8 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "overflow": "hidden",
       }
@@ -108,11 +104,9 @@ exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
     }
   }
   accessible={true}
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": undefined,
-      "borderRadius": undefined,
       "bottom": undefined,
       "display": "flex",
       "elevation": undefined,
@@ -139,10 +133,8 @@ exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "overflow": "hidden",
       }

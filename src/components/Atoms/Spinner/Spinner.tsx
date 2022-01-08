@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  color,
+  colorStyleFunction,
   ColorProps,
-  layout,
+  layoutStyleFunction,
   LayoutProps,
-  position,
+  positionStyleFunction,
   PositionProps,
-  spacing,
+  spacingStyleFunction,
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
@@ -32,10 +32,10 @@ import WaveIndicator from "./indicators/wave";
 import { useResponsiveProp } from "../../../hooks/useResponsiveProp";
 
 const indicatorStyleFunctions = [
-  color,
-  spacing,
-  layout,
-  position,
+  colorStyleFunction,
+  spacingStyleFunction,
+  layoutStyleFunction,
+  positionStyleFunction,
 ] as StyleFunctionContainer[];
 
 type ViewProps = React.ComponentProps<typeof View>;

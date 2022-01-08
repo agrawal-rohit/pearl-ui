@@ -11,7 +11,6 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
     }
   }
   focusBorderColor="primary.500"
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": "flex-start",
@@ -72,10 +71,8 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
     underlineColorAndroid="transparent"
   />
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
@@ -96,7 +93,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -156,10 +152,8 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -170,7 +164,6 @@ Array [
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -230,10 +223,8 @@ Array [
       variant="outline"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -257,7 +248,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -316,10 +306,8 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -336,7 +324,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -395,10 +382,8 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -415,7 +400,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -474,10 +458,8 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -494,7 +476,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -553,10 +534,8 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -578,7 +557,6 @@ Array [
       }
     }
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -638,10 +616,8 @@ Array [
       variant="filled"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -652,7 +628,6 @@ Array [
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBorderColor="primary.500"
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
@@ -712,10 +687,8 @@ Array [
       variant="outline"
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -736,14 +709,13 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
     }
   }
   focusBorderColor="primary.500"
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": "flex-start",
-      "backgroundColor": "#6A7BFF",
-      "borderColor": "#C5CEE0",
+      "backgroundColor": "#EDF1F7",
+      "borderColor": "#EDF1F7",
       "borderRadius": 8,
-      "borderWidth": 2,
+      "borderWidth": 1,
       "display": "flex",
       "flexDirection": "row",
       "marginVertical": 4,
@@ -768,12 +740,15 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
     onChange={[Function]}
     onChangeText={[Function]}
     onFocus={[Function]}
-    placeholderTextColor="#8F9BB3"
+    placeholderTextColor="#a7a7a7"
     rejectResponderTermination={true}
     selectionColor="#6A7BFF"
     style={
       Array [
         Object {
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#C5CEE0",
+          "borderWidth": 2,
           "display": "flex",
           "marginHorizontal": 8,
         },
@@ -795,10 +770,8 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
     underlineColorAndroid="transparent"
   />
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }

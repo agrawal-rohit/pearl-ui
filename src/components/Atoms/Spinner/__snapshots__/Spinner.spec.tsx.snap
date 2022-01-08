@@ -2512,10 +2512,8 @@ Array [
     variant="bar"
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
@@ -2557,10 +2555,8 @@ Array [
       />
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
@@ -2602,10 +2598,8 @@ Array [
       />
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
@@ -3540,12 +3534,10 @@ Array [
 exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or not 1`] = `
 <View
   direction="vertical"
-  onLayout={[Function]}
   spacing="l"
   style={
     Object {
       "alignSelf": "flex-start",
-      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "column",
       "flexWrap": "nowrap",
@@ -3553,11 +3545,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "column",
         "marginBottom": 24,
@@ -3565,11 +3555,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "backgroundColor": "#EDF1F7",
-          "borderRadius": undefined,
           "display": "flex",
           "height": 100,
           "width": 200,
@@ -3776,22 +3764,18 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "column",
       }
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "backgroundColor": "#EDF1F7",
-          "borderRadius": undefined,
           "display": "flex",
           "height": 100,
           "width": 200,

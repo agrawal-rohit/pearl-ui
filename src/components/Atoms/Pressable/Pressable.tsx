@@ -1,5 +1,5 @@
 import React from "react";
-import Box, { BoxProps, boxStyleFunctions } from "../Box/Box";
+import Box, { BoxProps } from "../Box/Box";
 import {
   Pressable as RNPressable,
   PressableAndroidRippleConfig,
@@ -7,7 +7,8 @@ import {
 } from "react-native";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import {
-  color,
+  boxStyleFunctions,
+  colorStyleFunction,
   createStyleFunction,
   transformColorValue,
 } from "../../../theme/src/styleFunctions";
@@ -86,7 +87,9 @@ const Pressable = React.forwardRef(
     const props = useStyledProps(rest, pressableStyleFunctions);
 
     const androidRippleProps = androidRippleConfig
-      ? useStyledProps({ color: androidRippleConfig?.color }, [color]).style
+      ? useStyledProps({ color: androidRippleConfig?.color }, [
+          colorStyleFunction,
+        ]).style
       : defaultRippleConfig;
 
     const { style, ...nativeProps } = props;

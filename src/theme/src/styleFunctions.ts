@@ -74,12 +74,18 @@ export const createStyleFunction = ({
         }
 
         // Throw error if the target value is undefined
-        if (themeTokenValue === undefined)
+        if (
+          themeTokenValue === undefined &&
+          !getKeys(borderRadiusProperties).includes(property as any)
+        ) {
           throw new Error(
             `Value '${value}' does not exist in theme['${String(themeKey)}']`
           );
+        }
 
-        value = themeTokenValue;
+        if (!getKeys(borderRadiusProperties).includes(property as any))
+          value = themeTokenValue;
+        else value = themeTokenValue || value;
       }
     }
 
@@ -114,7 +120,7 @@ export const transformColorValue = (value: ColorModeColor | ColorValue) => {
   return value;
 };
 
-export const backgroundColor = [
+export const backgroundColorStyleFunction = [
   createStyleFunction({
     property: "backgroundColor",
     themeKey: "palette",
@@ -128,23 +134,23 @@ export const backgroundColor = [
   }),
 ];
 
-export const color = createStyleFunction({
+export const colorStyleFunction = createStyleFunction({
   property: "color",
   themeKey: "palette",
   transform: transformColorValue,
 });
 
-export const opacity = createStyleFunction({
+export const opacityStyleFunction = createStyleFunction({
   property: "opacity",
 });
 
-export const visible = createStyleFunction({
+export const visibleStyleFunction = createStyleFunction({
   property: "visible",
   styleProperty: "display",
   transform: (value: any) => (value === false ? "none" : "flex"),
 });
 
-export const typography = [
+export const typographyStyleFunction = [
   ...getKeys(typographyProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -172,7 +178,7 @@ export const typography = [
   }),
 ];
 
-export const layout = [
+export const layoutStyleFunction = [
   ...getKeys(layoutProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -188,7 +194,7 @@ export const layout = [
   }),
 ];
 
-export const spacing = [
+export const spacingStyleFunction = [
   ...getKeys(spacingProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -207,7 +213,7 @@ export const spacing = [
   }),
 ];
 
-export const position = [
+export const positionStyleFunction = [
   ...getKeys(positionProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -219,7 +225,7 @@ export const position = [
   }),
 ];
 
-export const border = [
+export const borderStyleFunction = [
   ...getKeys(borderProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -240,7 +246,7 @@ export const border = [
   }),
 ];
 
-export const shadow = [
+export const shadowStyleFunction = [
   ...getKeys(shadowProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -258,7 +264,7 @@ export const shadow = [
   }),
 ];
 
-export const textShadow = [
+export const textShadowStyleFunction = [
   ...getKeys(textShadowProperties).map((property) => {
     return createStyleFunction({
       property,
@@ -272,17 +278,40 @@ export const textShadow = [
 ];
 
 export const all = [
-  color,
-  opacity,
-  ...backgroundColor,
-  ...spacing,
-  ...typography,
-  ...layout,
-  ...position,
-  ...border,
-  ...shadow,
-  ...textShadow,
+  colorStyleFunction,
+  opacityStyleFunction,
+  ...backgroundColorStyleFunction,
+  ...spacingStyleFunction,
+  ...typographyStyleFunction,
+  ...layoutStyleFunction,
+  ...positionStyleFunction,
+  ...borderStyleFunction,
+  ...shadowStyleFunction,
+  ...textShadowStyleFunction,
 ];
+
+// Component Specific Style function
+export const boxStyleFunctions = [
+  backgroundColorStyleFunction,
+  opacityStyleFunction,
+  visibleStyleFunction,
+  layoutStyleFunction,
+  spacingStyleFunction,
+  borderStyleFunction,
+  shadowStyleFunction,
+  positionStyleFunction,
+] as StyleFunctionContainer[];
+
+export const textStyleFunctions = [
+  colorStyleFunction,
+  backgroundColorStyleFunction,
+  opacityStyleFunction,
+  visibleStyleFunction,
+  layoutStyleFunction,
+  typographyStyleFunction,
+  spacingStyleFunction,
+  textShadowStyleFunction,
+] as StyleFunctionContainer[];
 
 // PropTypes
 export interface ColorProps {
@@ -375,4 +404,23 @@ export type AllProps = BackgroundColorProps &
   PositionProps &
   BorderProps &
   ShadowProps &
+  TextShadowProps;
+
+// Component Style Prop
+export type BoxStyleProps = BackgroundColorProps &
+  OpacityProps &
+  VisibleProps &
+  LayoutProps &
+  SpacingProps &
+  BorderProps &
+  ShadowProps &
+  PositionProps;
+
+export type TextStyleProps = ColorProps &
+  BackgroundColorProps &
+  OpacityProps &
+  VisibleProps &
+  LayoutProps &
+  TypographyProps &
+  SpacingProps &
   TextShadowProps;

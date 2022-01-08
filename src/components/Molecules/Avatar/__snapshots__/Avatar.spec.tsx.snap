@@ -4,12 +4,10 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
 Array [
   <View
     direction="horizontal"
-    onLayout={[Function]}
     spacing="s"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -17,11 +15,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -31,20 +27,14 @@ Array [
       <View
         accessibilityRole="image"
         accessible={true}
-        isCached={true}
         loaderType="spinner"
-        onLayout={[Function]}
         size="s"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 40,
@@ -53,13 +43,11 @@ Array [
           }
         }
         tint="dark"
-        transitionDuration={300}
+        transitionDuration={600}
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
-              "borderRadius": undefined,
               "bottom": 0,
               "display": "flex",
               "height": "100%",
@@ -278,11 +266,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -292,20 +278,14 @@ Array [
       <View
         accessibilityRole="image"
         accessible={true}
-        isCached={true}
         loaderType="spinner"
-        onLayout={[Function]}
         size="m"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 55,
@@ -314,13 +294,11 @@ Array [
           }
         }
         tint="dark"
-        transitionDuration={300}
+        transitionDuration={600}
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
-              "borderRadius": undefined,
               "bottom": 0,
               "display": "flex",
               "height": "100%",
@@ -539,11 +517,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -553,20 +529,14 @@ Array [
       <View
         accessibilityRole="image"
         accessible={true}
-        isCached={true}
         loaderType="spinner"
-        onLayout={[Function]}
         size="l"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 70,
@@ -575,13 +545,11 @@ Array [
           }
         }
         tint="dark"
-        transitionDuration={300}
+        transitionDuration={600}
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
-              "borderRadius": undefined,
               "bottom": 0,
               "display": "flex",
               "height": "100%",
@@ -800,11 +768,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
@@ -813,20 +779,14 @@ Array [
       <View
         accessibilityRole="image"
         accessible={true}
-        isCached={true}
         loaderType="spinner"
-        onLayout={[Function]}
         size="xl"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 85,
@@ -835,13 +795,11 @@ Array [
           }
         }
         tint="dark"
-        transitionDuration={300}
+        transitionDuration={600}
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
-              "borderRadius": undefined,
               "bottom": 0,
               "display": "flex",
               "height": "100%",
@@ -1062,12 +1020,10 @@ Array [
   </View>,
   <View
     direction="horizontal"
-    onLayout={[Function]}
     spacing="s"
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
@@ -1076,11 +1032,9 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -1088,7 +1042,6 @@ Array [
       }
     >
       <View
-        onLayout={[Function]}
         size="s"
         style={
           Object {
@@ -1108,7 +1061,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1129,11 +1081,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -1141,7 +1091,6 @@ Array [
       }
     >
       <View
-        onLayout={[Function]}
         size="m"
         style={
           Object {
@@ -1161,7 +1110,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1182,11 +1130,9 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
@@ -1194,7 +1140,6 @@ Array [
       }
     >
       <View
-        onLayout={[Function]}
         size="l"
         style={
           Object {
@@ -1214,7 +1159,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1235,18 +1179,15 @@ Array [
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "stretch",
-          "borderRadius": undefined,
           "display": "flex",
           "flexDirection": "row",
         }
       }
     >
       <View
-        onLayout={[Function]}
         size="xl"
         style={
           Object {
@@ -1266,7 +1207,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1293,12 +1233,10 @@ Array [
 exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
 <View
   direction="horizontal"
-  onLayout={[Function]}
   spacing="s"
   style={
     Object {
       "alignSelf": "flex-start",
-      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -1306,11 +1244,9 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 12,
@@ -1318,7 +1254,6 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -1337,7 +1272,6 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "color": "#FFFFFF",
@@ -1358,11 +1292,9 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 12,
@@ -1377,19 +1309,13 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
           "uri": "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
         }
       }
-      isCached={true}
       loaderType="spinner"
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "#ff0000",
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
           "borderColor": "#FFFFFF",
           "borderRadius": 1000,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
           "borderWidth": 2,
           "display": "flex",
           "height": 55,
@@ -1398,13 +1324,11 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         }
       }
       tint="dark"
-      transitionDuration={300}
+      transitionDuration={600}
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
-            "borderRadius": undefined,
             "bottom": 0,
             "display": "flex",
             "height": "100%",
@@ -1623,18 +1547,15 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -1657,22 +1578,18 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
 
 exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
 <View
-  onLayout={[Function]}
   spacing="2xl"
   style={
     Object {
-      "borderRadius": undefined,
       "display": "flex",
     }
   }
   truncatedBackgroundColor="neutral.200"
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
       }
     }
@@ -1680,19 +1597,13 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
     <View
       accessibilityRole="image"
       accessible={true}
-      isCached={true}
       loaderType="spinner"
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "#F7F9FC",
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
           "borderColor": "#FFFFFF",
           "borderRadius": 1000,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
           "borderWidth": 2,
           "display": "flex",
           "height": 55,
@@ -1704,13 +1615,11 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
         }
       }
       tint="dark"
-      transitionDuration={300}
+      transitionDuration={600}
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
-            "borderRadius": undefined,
             "bottom": 0,
             "display": "flex",
             "height": "100%",
@@ -1930,19 +1839,13 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
     <View
       accessibilityRole="image"
       accessible={true}
-      isCached={true}
       loaderType="spinner"
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "#F7F9FC",
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
           "borderColor": "#FFFFFF",
           "borderRadius": 1000,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
           "borderWidth": 2,
           "display": "flex",
           "height": 55,
@@ -1954,13 +1857,11 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
         }
       }
       tint="dark"
-      transitionDuration={300}
+      transitionDuration={600}
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
-            "borderRadius": undefined,
             "bottom": 0,
             "display": "flex",
             "height": "100%",
@@ -2178,7 +2079,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
       </View>
     </View>
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -2200,7 +2100,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "color": "#1A2138",
@@ -2226,12 +2125,10 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
 exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
 <View
   direction="horizontal"
-  onLayout={[Function]}
   spacing="s"
   style={
     Object {
       "alignSelf": "flex-start",
-      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
       "flexWrap": "wrap",
@@ -2239,11 +2136,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 12,
@@ -2251,11 +2146,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "flex-start",
-          "borderRadius": undefined,
           "display": "flex",
         }
       }
@@ -2263,19 +2156,14 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
       <View
         accessibilityRole="image"
         accessible={true}
-        isCached={true}
         loaderType="spinner"
         onLayout={[Function]}
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#00ffff",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 55,
@@ -2284,13 +2172,11 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={300}
+        transitionDuration={600}
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
-              "borderRadius": undefined,
               "bottom": 0,
               "display": "flex",
               "height": "100%",
@@ -2517,11 +2403,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "flex-start",
-            "borderRadius": undefined,
             "bottom": -0,
             "display": "flex",
             "elevation": undefined,
@@ -2548,7 +2432,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -2611,11 +2494,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
         "marginRight": 12,
@@ -2623,11 +2504,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "flex-start",
-          "borderRadius": undefined,
           "display": "flex",
         }
       }
@@ -2652,7 +2531,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#1A2138",
@@ -2681,11 +2559,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "flex-start",
-            "borderRadius": undefined,
             "bottom": -0,
             "display": "flex",
             "elevation": undefined,
@@ -2712,7 +2588,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,
@@ -2774,7 +2649,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               accessibilityRole="text"
               accessible={true}
               allowFontScaling={true}
-              scaleFontSize={true}
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -2799,22 +2673,18 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
     </View>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flexDirection": "row",
       }
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "flex-start",
-          "borderRadius": undefined,
           "display": "flex",
         }
       }
@@ -2845,11 +2715,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         }
         accessible={true}
-        onLayout={[Function]}
         style={
           Object {
             "alignSelf": "flex-start",
-            "borderRadius": undefined,
             "bottom": -5,
             "display": "flex",
             "elevation": undefined,
@@ -2876,7 +2744,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       >
         <View
-          onLayout={[Function]}
           style={
             Object {
               "borderRadius": 1000,

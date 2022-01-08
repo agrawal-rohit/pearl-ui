@@ -6,7 +6,7 @@ export default {
       backgroundColor: "neutral.100",
       isCached: true,
       borderRadius: "l",
-      transitionDuration: 300,
+      transitionDuration: 600,
       tint: "dark",
     },
     spinner: {

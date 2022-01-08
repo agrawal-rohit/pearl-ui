@@ -64,7 +64,7 @@ describe("Molecules/Avatar", () => {
                 iconFamily="FontAwesome"
                 iconName="user-circle"
                 color="neutral.600"
-                rawSize={55}
+                rawSize={40}
               />
             }
           />

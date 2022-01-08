@@ -3,16 +3,18 @@ export { extendTheme } from "./src/base/index";
 
 // Style functions
 export {
-  color,
-  opacity,
-  backgroundColor,
-  spacing,
-  typography,
-  layout,
-  position,
-  border,
-  shadow,
-  textShadow,
+  colorStyleFunction,
+  opacityStyleFunction,
+  backgroundColorStyleFunction,
+  spacingStyleFunction,
+  typographyStyleFunction,
+  layoutStyleFunction,
+  positionStyleFunction,
+  borderStyleFunction,
+  shadowStyleFunction,
+  textShadowStyleFunction,
+  boxStyleFunctions,
+  textStyleFunctions,
 } from "./src/styleFunctions";
 
 // Theme Context

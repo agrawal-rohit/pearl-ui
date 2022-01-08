@@ -8,16 +8,16 @@ import { getKeys, getNestedObject } from "../utils/typeHelpers";
 import { baseTheme } from "../src/base/index";
 import { Dimensions, Text } from "react-native";
 import {
-  backgroundColor,
-  border,
-  color,
-  layout,
-  opacity,
-  position,
-  shadow,
-  spacing,
-  textShadow,
-  typography,
+  backgroundColorStyleFunction,
+  borderStyleFunction,
+  colorStyleFunction,
+  layoutStyleFunction,
+  opacityStyleFunction,
+  positionStyleFunction,
+  shadowStyleFunction,
+  spacingStyleFunction,
+  textShadowStyleFunction,
+  typographyStyleFunction,
 } from "../src/styleFunctions";
 import { render } from "@testing-library/react-native";
 
@@ -55,7 +55,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ backgroundColor: "white" }}
         stylePropertyName="backgroundColor"
-        styleFunction={backgroundColor[0]}
+        styleFunction={backgroundColorStyleFunction[0]}
       />
     );
 
@@ -68,7 +68,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ bg: "white" }}
         stylePropertyName="backgroundColor"
-        styleFunction={backgroundColor[1]}
+        styleFunction={backgroundColorStyleFunction[1]}
       />
     );
 
@@ -81,7 +81,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ backgroundColor: "wrong.400" }}
         stylePropertyName="backgroundColor"
-        styleFunction={backgroundColor[0]}
+        styleFunction={backgroundColorStyleFunction[0]}
       />
     );
 
@@ -93,7 +93,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ color: "white" }}
         stylePropertyName="color"
-        styleFunction={color}
+        styleFunction={colorStyleFunction}
       />
     );
 
@@ -103,7 +103,7 @@ describe("createStyleFunctions", () => {
 
   it("maps oapcity prop correctly", () => {
     const props = { opacity: 0 };
-    const opacityStyle = opacity.func(props, {
+    const opacityStyle = opacityStyleFunction.func(props, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -113,7 +113,9 @@ describe("createStyleFunctions", () => {
 
   it("maps typography props correctly", () => {
     const props = { fontSize: "s" };
-    const fontSizeStyle = typography[typography.length - 2].func(props, {
+    const fontSizeStyle = typographyStyleFunction[
+      typographyStyleFunction.length - 2
+    ].func(props, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -121,7 +123,9 @@ describe("createStyleFunctions", () => {
     expect(fontSizeStyle.fontSize).toBe(14);
 
     const props2 = { lineHeight: "s" };
-    const lineHeightStyle = typography[typography.length - 1].func(props2, {
+    const lineHeightStyle = typographyStyleFunction[
+      typographyStyleFunction.length - 1
+    ].func(props2, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -129,7 +133,9 @@ describe("createStyleFunctions", () => {
     expect(lineHeightStyle.lineHeight).toBe(18);
 
     const props3 = { fontFamily: "body" };
-    const fontFamilyStyle = typography[typography.length - 4].func(props3, {
+    const fontFamilyStyle = typographyStyleFunction[
+      typographyStyleFunction.length - 4
+    ].func(props3, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -137,7 +143,9 @@ describe("createStyleFunctions", () => {
     expect(fontFamilyStyle.fontFamily).toBe("Poppins");
 
     const props4 = { fontWeight: "hairline" };
-    const fontWeightStyle = typography[typography.length - 3].func(props4, {
+    const fontWeightStyle = typographyStyleFunction[
+      typographyStyleFunction.length - 3
+    ].func(props4, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -145,7 +153,9 @@ describe("createStyleFunctions", () => {
     expect(fontWeightStyle.fontWeight).toBe("100");
 
     const props5 = { letterSpacing: "xs" };
-    const letterSpacingStyle = typography[typography.length - 5].func(props5, {
+    const letterSpacingStyle = typographyStyleFunction[
+      typographyStyleFunction.length - 5
+    ].func(props5, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -155,7 +165,7 @@ describe("createStyleFunctions", () => {
 
   it("maps layout props correctly", () => {
     const props = { width: 2 };
-    const widthStyle = layout[0].func(props, {
+    const widthStyle = layoutStyleFunction[0].func(props, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -165,13 +175,15 @@ describe("createStyleFunctions", () => {
 
   it("maps spacing props correctly", () => {
     const props1 = { margin: "s" };
-    const spacingStyle1 = spacing[0].func(props1, {
+    const spacingStyle1 = spacingStyleFunction[0].func(props1, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
 
     const props2 = { m: "s" };
-    const spacingStyle2 = spacing[spacing.length - 18].func(props2, {
+    const spacingStyle2 = spacingStyleFunction[
+      spacingStyleFunction.length - 18
+    ].func(props2, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -182,7 +194,9 @@ describe("createStyleFunctions", () => {
 
   it("maps position props correctly", () => {
     const props = { zIndex: "docked" };
-    const zIndexStyle = position[position.length - 1].func(props, {
+    const zIndexStyle = positionStyleFunction[
+      positionStyleFunction.length - 1
+    ].func(props, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -195,7 +209,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ borderColor: "black" }}
         stylePropertyName="borderColor"
-        styleFunction={border[getKeys(borderProperties).length]}
+        styleFunction={borderStyleFunction[getKeys(borderProperties).length]}
       />
     );
 
@@ -203,7 +217,7 @@ describe("createStyleFunctions", () => {
     expect(getByText(targetBorderColor)).toBeTruthy();
 
     const borderRadiusProps = { borderRadius: "s" };
-    const borderRadiusStyle = border[
+    const borderRadiusStyle = borderStyleFunction[
       getKeys(borderProperties).length + getKeys(borderColorProperties).length
     ].func(borderRadiusProps, {
       theme: baseTheme,
@@ -215,7 +229,9 @@ describe("createStyleFunctions", () => {
 
   it("maps shadow props correctly", () => {
     const props = { boxShadow: "s" };
-    const shadowStyle = shadow[shadow.length - 2].func(props, {
+    const shadowStyle = shadowStyleFunction[
+      shadowStyleFunction.length - 2
+    ].func(props, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
@@ -226,7 +242,7 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ shadowColor: "neutral.600" }}
         stylePropertyName="shadowColor"
-        styleFunction={shadow[shadow.length - 1]}
+        styleFunction={shadowStyleFunction[shadowStyleFunction.length - 1]}
       />
     );
 
@@ -243,7 +259,9 @@ describe("createStyleFunctions", () => {
       <ColorTransformTestComponent
         props={{ textShadowColor: "black" }}
         stylePropertyName="textShadowColor"
-        styleFunction={textShadow[textShadow.length - 1]}
+        styleFunction={
+          textShadowStyleFunction[textShadowStyleFunction.length - 1]
+        }
       />
     );
 

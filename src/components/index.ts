@@ -16,7 +16,11 @@ export {
   PressableProps,
 } from "./Atoms/Pressable/Pressable";
 export { default as Spinner, SpinnerProps } from "./Atoms/Spinner/Spinner";
-export { default as Icon, IconProps } from "./Atoms/Icon/Icon";
+export {
+  default as Icon,
+  IconProps,
+  iconStyleFunctions,
+} from "./Atoms/Icon/Icon";
 export { default as Divider, DividerProps } from "./Atoms/Divider/Divider";
 
 // Molecules

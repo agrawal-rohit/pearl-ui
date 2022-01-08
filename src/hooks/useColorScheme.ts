@@ -10,7 +10,7 @@ const replaceColorValuesInObject = (
   const updatedObj: Record<string, any> = {};
 
   for (const [key, value] of Object.entries(obj)) {
-    if (typeof value === "object") {
+    if (typeof value === "object" && !getKeys(obj).includes("$$typeof")) {
       updatedObj[key] = replaceColorValuesInObject(newValue, value);
     } else if (typeof value === "string" && value.includes("primary")) {
       updatedObj[key] = value.replace("primary", newValue);

@@ -7,16 +7,16 @@ export default {
   },
   sizes: {
     s: {
-      size: 10,
+      rawSize: 10,
     },
     m: {
-      size: 15,
+      rawSize: 15,
     },
     l: {
-      size: 20,
+      rawSize: 20,
     },
     xl: {
-      size: 30,
+      rawSize: 30,
     },
   },
   defaults: {

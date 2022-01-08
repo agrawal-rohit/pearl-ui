@@ -7,7 +7,7 @@ import {
   PaletteColors,
   ResponsiveValue,
 } from "../../../theme/src/types";
-import { spacing } from "../../../theme/src/styleFunctions";
+import { spacingStyleFunction } from "../../../theme/src/styleFunctions";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import { ZStack } from "../../Atoms/Stack/Stack";
 import Avatar from "./Avatar";
@@ -46,7 +46,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
   ...rest
 }) => {
   const convertedElementSpacing = useStyledProps({ marginLeft: rest.spacing }, [
-    ...spacing,
+    ...spacingStyleFunction,
   ]);
   const avatarChildren = React.Children.toArray(children);
 

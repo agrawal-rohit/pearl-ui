@@ -4,7 +4,7 @@ const pixelRatio = PixelRatio.get();
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-const responsiveSize = (size: number) => {
+const responsiveSize = (size: number | undefined) => {
   if (!size) return 0;
 
   if (pixelRatio >= 2 && pixelRatio < 3) {

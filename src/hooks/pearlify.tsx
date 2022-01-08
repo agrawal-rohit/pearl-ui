@@ -1,5 +1,4 @@
 import {
-  AtomicComponentConfig,
   ColorScheme,
   ComponentSizes,
   ComponentVariants,
@@ -8,7 +7,15 @@ import {
 } from "../theme/src/types";
 import React from "react";
 import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
-import { all, AllProps } from "../theme/src/styleFunctions";
+import { boxStyleFunctions } from "../theme/src/styleFunctions";
+import { BoxProps } from "../components/Atoms/Box/Box";
+import { useStyledProps } from "./useStyledProps";
+import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
+
+interface PearlifyConfig {
+  componentName: string;
+  type: "basic" | "atom" | "molecule";
+}
 
 /**
  * Hook to convert a third-party component to a Pearl atom component that can be configured using an atomic component configuration.
@@ -16,9 +23,10 @@ import { all, AllProps } from "../theme/src/styleFunctions";
  * @param componentName Name of the custom component that would be stored in the active Pearl theme.
  * @returns
  */
-export function pearlify<P>(
+export function pearlify<P, CustomStyleProps = BoxProps>(
   Component: React.ComponentType<P>,
-  componentName: string
+  config: PearlifyConfig = { componentName: "undefined", type: "basic" },
+  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) {
   return React.forwardRef(
     (
@@ -26,26 +34,46 @@ export function pearlify<P>(
         children,
         ...rest
       }: P &
-        AllProps & {
-          size?: ResponsiveValue<ComponentSizes<typeof componentName>>;
-          variant?: ResponsiveValue<ComponentVariants<typeof componentName>>;
+        CustomStyleProps & {
+          size?: ResponsiveValue<
+            ComponentSizes<typeof config["componentName"]>
+          >;
+          variant?: ResponsiveValue<
+            ComponentVariants<typeof config["componentName"]>
+          >;
           colorScheme?: ColorScheme;
           children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
         },
       ref: any
     ) => {
-      const atomicProps = useAtomicComponentConfig(
-        componentName,
-        rest,
-        {
-          size: rest.size,
-          variant: rest.variant,
-        },
-        rest.colorScheme,
-        all
-      );
+      let convertedProps;
+      if (config.type === "atom") {
+        convertedProps = useAtomicComponentConfig(
+          config["componentName"],
+          rest,
+          {
+            size: rest.size,
+            variant: rest.variant,
+          },
+          rest.colorScheme,
+          styleFunctions
+        );
+      } else if (config.type === "molecule") {
+        convertedProps = useMolecularComponentConfig(
+          config["componentName"],
+          rest,
+          {
+            size: rest.size,
+            variant: rest.variant,
+          },
+          rest.colorScheme
+        );
+      } else {
+        convertedProps = useStyledProps(rest, styleFunctions);
+      }
+
       return (
-        <Component {...(atomicProps as P)} ref={ref}>
+        <Component {...(convertedProps as P)} ref={ref}>
           {children}
         </Component>
       );

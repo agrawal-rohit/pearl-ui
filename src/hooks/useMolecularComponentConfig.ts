@@ -6,17 +6,9 @@ import {
   StyleFunctionContainer,
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/typeHelpers";
-
 import { useTheme } from "./useTheme";
-import { boxStyleFunctions } from "../components/Atoms/Box/Box";
-import { useStyledProps } from "./useStyledProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
-import {
-  getValueForScreenSize,
-  isResponsiveObjectValue,
-} from "../theme/src/responsiveHelpers";
-import { useDimensions } from "./useDimensions";
 import { useResponsiveProp } from "./useResponsiveProp";
 
 /**
@@ -41,14 +33,10 @@ export const useMolecularComponentConfig = (
     variant: undefined,
   },
   colorScheme: ColorScheme = "primary",
-  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
   targetKeyForOverridenStyleProps: string | undefined = undefined,
   targetKeyForOverridenNativeProps: string | undefined = undefined
 ) => {
   const { theme } = useTheme();
-
-  // User overriden props
-  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   checkKeyAvailability(
     themeComponentKey as string,
@@ -162,7 +150,7 @@ export const useMolecularComponentConfig = (
             ...currentComponentPartProps,
             style: {
               ...currentComponentPartProps.style,
-              ...overridenProps.style,
+              ...receivedProps.style,
             },
           };
         }
@@ -171,7 +159,7 @@ export const useMolecularComponentConfig = (
           targetKeyForOverridenNativeProps &&
           part === targetKeyForOverridenNativeProps
         ) {
-          const { style, ...nativeOverridenProps } = overridenProps;
+          const { style, ...nativeOverridenProps } = receivedProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,
             ...nativeOverridenProps,
@@ -190,13 +178,13 @@ export const useMolecularComponentConfig = (
             ...currentComponentPartProps,
             style: {
               ...currentComponentPartProps.style,
-              ...overridenProps.style,
+              ...receivedProps.style,
             },
           };
         }
 
         if (!targetKeyForOverridenNativeProps) {
-          const { style, ...nativeOverridenProps } = overridenProps;
+          const { style, ...nativeOverridenProps } = receivedProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,
             ...nativeOverridenProps,
@@ -218,10 +206,10 @@ export const useMolecularComponentConfig = (
       ...finalComponentProps,
       [firstPart]: {
         ...finalComponentProps[firstPart],
-        ...overridenProps,
+        ...receivedProps,
         style: {
           ...finalComponentProps[firstPart].style,
-          ...overridenProps.style,
+          ...receivedProps.style,
         },
       },
     };
