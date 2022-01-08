@@ -3,22 +3,24 @@ import { Text as RNText } from "react-native";
 import responsiveSize from "../../../utils/responsiveSize";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import {
-  backgroundColor,
   BackgroundColorProps,
-  color,
+  backgroundColorStyleFunction,
   ColorProps,
-  layout,
+  colorStyleFunction,
   LayoutProps,
-  opacity,
+  layoutStyleFunction,
   OpacityProps,
-  spacing,
+  opacityStyleFunction,
   SpacingProps,
-  textShadow,
+  spacingStyleFunction,
   TextShadowProps,
-  typography,
+  textShadowStyleFunction,
+  textStyleFunctions,
+  TextStyleProps,
   TypographyProps,
-  visible,
+  typographyStyleFunction,
   VisibleProps,
+  visibleStyleFunction,
 } from "../../../theme/src/styleFunctions";
 import {
   ComponentSizes,
@@ -27,15 +29,12 @@ import {
   StyleFunctionContainer,
 } from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
+import { pearlify } from "../../../hooks/pearlify";
 
-type TextStyleProps = ColorProps &
-  BackgroundColorProps &
-  OpacityProps &
-  VisibleProps &
-  LayoutProps &
-  TypographyProps &
-  SpacingProps &
-  TextShadowProps & {
+type RNTextProps = React.ComponentProps<typeof RNText>;
+
+export type TextProps = TextStyleProps &
+  Omit<RNTextProps, keyof TextStyleProps> & {
     /** The size of the text */
     size?: ResponsiveValue<ComponentSizes<"Text">>;
     /** The variant of the text */
@@ -43,22 +42,6 @@ type TextStyleProps = ColorProps &
     /** Whether to slightly scale the font size based on the screen dimensions */
     scaleFontSize?: boolean;
   };
-
-export const textStyleFunctions = [
-  color,
-  backgroundColor,
-  opacity,
-  visible,
-  layout,
-  typography,
-  spacing,
-  textShadow,
-] as StyleFunctionContainer[];
-
-type RNTextProps = React.ComponentProps<typeof RNText>;
-
-export type TextProps = TextStyleProps &
-  Omit<RNTextProps, keyof TextStyleProps>;
 
 export const buildFontConfig = (
   textStyle: any,
@@ -89,35 +72,23 @@ export const buildFontConfig = (
   };
 };
 
-/**
- * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
- */
-const Text = React.forwardRef((rest: TextProps, ref: any) => {
-  const props = useAtomicComponentConfig(
-    "Text",
-    rest,
-    {
-      size: rest.size,
-      variant: rest.variant,
-    },
-    "primary",
-    textStyleFunctions
-  );
-
+const CustomText: React.FC<TextProps> = ({
+  scaleFontSize = true,
+  ...props
+}) => {
   const memoizedBuildFontConfig = React.useCallback(
-    () => buildFontConfig(props.style, props.scaleFontSize),
-    [props.style, props.scaleFontSize]
+    () => buildFontConfig(props.style, scaleFontSize),
+    [props.style, scaleFontSize]
   );
 
   props.style = {
     includeFontPadding: false,
-    ...props.style,
+    ...(props.style as any),
     ...memoizedBuildFontConfig(),
   };
 
   return (
     <RNText
-      ref={ref}
       accessible={true}
       accessibilityRole="text"
       allowFontScaling
@@ -126,6 +97,18 @@ const Text = React.forwardRef((rest: TextProps, ref: any) => {
       {props.children}
     </RNText>
   );
-});
+};
+
+/**
+ * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
+ */
+const Text = pearlify(
+  CustomText,
+  {
+    componentName: "Text",
+    type: "atom",
+  },
+  textStyleFunctions
+);
 
 export default Text;

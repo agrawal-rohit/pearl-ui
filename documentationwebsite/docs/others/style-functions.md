@@ -12,7 +12,7 @@ The following list of style functions are supported in Pearl UI:
 The **spacing** style function converts all the [spacing style props](../core-features/style-props#margin-and-padding) to React Native styles.
 
 ```js
-import { spacing } from "pearl-ui";
+import { spacingStyleFunction } from "pearl-ui";
 ```
 
 ## Typography
@@ -20,7 +20,7 @@ import { spacing } from "pearl-ui";
 The **typography** style function converts all the [typography style props](../core-features/style-props#typography) to React Native styles.
 
 ```js
-import { typography } from "pearl-ui";
+import { typographyStyleFunction } from "pearl-ui";
 ```
 
 ## Layout
@@ -28,7 +28,7 @@ import { typography } from "pearl-ui";
 The **layout** style function converts all the [layout style props](../core-features/style-props#layout) to React Native styles.
 
 ```js
-import { layout } from "pearl-ui";
+import { layoutStyleFunction } from "pearl-ui";
 ```
 
 ## Position
@@ -36,7 +36,7 @@ import { layout } from "pearl-ui";
 The **position** style function converts all the [position style props](../core-features/style-props#position) to React Native styles.
 
 ```js
-import { position } from "pearl-ui";
+import { positionStyleFunction } from "pearl-ui";
 ```
 
 ## Border
@@ -44,7 +44,7 @@ import { position } from "pearl-ui";
 The **border** style function converts all the [border style props](../core-features/style-props#border) to React Native styles.
 
 ```js
-import { border } from "pearl-ui";
+import { borderStyleFunction } from "pearl-ui";
 ```
 
 ## Shadow
@@ -52,7 +52,7 @@ import { border } from "pearl-ui";
 The **shadow** style function converts all the [shadow style props](../core-features/style-props#shadow) to React Native styles.
 
 ```js
-import { shadow } from "pearl-ui";
+import { shadowStyleFunction } from "pearl-ui";
 ```
 
 ## Text Shadow
@@ -60,5 +60,5 @@ import { shadow } from "pearl-ui";
 The **textShadow** style function converts all the [textShadow style props](../core-features/style-props#textShadow) to React Native styles.
 
 ```js
-import { textShadow } from "pearl-ui";
+import { textShadowStyleFunction } from "pearl-ui";
 ```

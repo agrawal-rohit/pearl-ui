@@ -2,10 +2,8 @@
 
 exports[`Atoms/Box passes the snapshot test 1`] = `
 <View
-  onLayout={[Function]}
   style={
     Object {
-      "borderRadius": undefined,
       "display": "flex",
     }
   }

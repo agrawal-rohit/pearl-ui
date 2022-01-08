@@ -17,6 +17,7 @@ import {
   ComponentVariants,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { pearlify } from "../../../hooks/pearlify";
 
 export type ScreenProps = BoxProps &
   Omit<
@@ -54,20 +55,14 @@ export type ScreenProps = BoxProps &
 
 // TODO: Add Custom Pull-to-Refresh components and animations
 
-/** A layout component that you can use to wrap all the views in your app. */
-const Screen: React.FC<ScreenProps> = ({
+const CustomScreen: React.FC<ScreenProps> = ({
   children,
   size,
   variant,
-  ...rest
+  ...props
 }) => {
   const { colorMode } = useTheme();
   const [refreshing, setRefreshing] = useState(false);
-  const props = useAtomicComponentConfig("Screen", rest, {
-    size: size,
-    variant: variant,
-  });
-
   const { style, ...nativeProps } = props;
 
   const onRefresh = React.useCallback(async () => {
@@ -88,14 +83,14 @@ const Screen: React.FC<ScreenProps> = ({
   return (
     <>
       <StatusBar
-        backgroundColor={props.style.backgroundColor}
+        backgroundColor={(props.style as any).backgroundColor}
         barStyle={colorMode === "light" ? "dark-content" : "light-content"}
       />
       <SafeAreaView
         style={{
           flex: 1,
           paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-          backgroundColor: props.style.backgroundColor,
+          backgroundColor: (props.style as any).backgroundColor,
         }}
       >
         <KeyboardAwareScrollView
@@ -132,5 +127,11 @@ const Screen: React.FC<ScreenProps> = ({
     </>
   );
 };
+
+/** A layout component that you can use to wrap all the views in your app. */
+const Screen = pearlify(CustomScreen, {
+  componentName: "Screen",
+  type: "atom",
+});
 
 export default Screen;

@@ -11,11 +11,9 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
     }
   }
   accessible={true}
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": undefined,
-      "borderRadius": undefined,
       "bottom": undefined,
       "display": "flex",
       "elevation": undefined,
@@ -42,10 +40,8 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "overflow": "hidden",
       }
@@ -96,7 +92,6 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "color": "#6A7BFF",
@@ -131,11 +126,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -162,10 +155,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -216,7 +207,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
@@ -247,11 +237,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -278,10 +266,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -332,7 +318,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FF6AC6",
@@ -368,11 +353,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -399,10 +382,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -454,7 +435,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
@@ -485,11 +465,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -516,10 +494,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -571,7 +547,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
@@ -602,11 +577,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -633,10 +606,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -688,7 +659,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
@@ -719,11 +689,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": undefined,
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -750,10 +718,8 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "display": "flex",
           "overflow": "hidden",
         }
@@ -805,7 +771,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#6A7BFF",
@@ -840,11 +805,9 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
     }
   }
   accessible={true}
-  onLayout={[Function]}
   style={
     Object {
       "alignSelf": undefined,
-      "borderRadius": undefined,
       "bottom": undefined,
       "display": "flex",
       "elevation": undefined,
@@ -871,10 +834,8 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "display": "flex",
         "overflow": "hidden",
       }
@@ -926,7 +887,6 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
-        scaleFontSize={true}
         style={
           Object {
             "color": "#6A7BFF",

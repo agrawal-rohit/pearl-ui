@@ -2,21 +2,17 @@
 
 exports[`Atoms/Spacer passes the snapshot test 1`] = `
 <View
-  onLayout={[Function]}
   style={
     Object {
-      "borderRadius": undefined,
       "display": "flex",
       "flexDirection": "row",
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
         "backgroundColor": "#FF8371",
-        "borderRadius": undefined,
         "display": "flex",
         "padding": 24,
       }
@@ -26,7 +22,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
-      scaleFontSize={true}
       style={
         Object {
           "color": "#1A2138",
@@ -45,22 +40,18 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
     </Text>
   </View>
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "stretch",
-        "borderRadius": undefined,
         "display": "flex",
         "flex": 1,
       }
     }
   />
   <View
-    onLayout={[Function]}
     style={
       Object {
         "backgroundColor": "#C0E640",
-        "borderRadius": undefined,
         "display": "flex",
         "padding": 24,
       }
@@ -70,7 +61,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
-      scaleFontSize={true}
       style={
         Object {
           "color": "#1A2138",

@@ -4,9 +4,7 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
 <View
   accessibilityRole="image"
   accessible={true}
-  isCached={true}
   loaderType="spinner"
-  onLayout={[Function]}
   previewSource={
     Object {
       "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
@@ -16,11 +14,7 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
     Object {
       "alignItems": "center",
       "backgroundColor": "#F7F9FC",
-      "borderBottomLeftRadius": undefined,
-      "borderBottomRightRadius": undefined,
       "borderRadius": 16,
-      "borderTopLeftRadius": undefined,
-      "borderTopRightRadius": undefined,
       "display": "flex",
       "height": 200,
       "justifyContent": "center",
@@ -28,7 +22,7 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
     }
   }
   tint="dark"
-  transitionDuration={300}
+  transitionDuration={600}
 >
   <Image
     blurRadius={0}
@@ -38,32 +32,23 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
-          "borderRadius": 16,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
-          "height": "100%",
-          "width": "100%",
-          "zIndex": 1,
-        },
-      ]
+      Object {
+        "borderRadius": 16,
+        "bottom": 0,
+        "display": "flex",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+        "zIndex": 1,
+      }
     }
   />
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
@@ -286,18 +271,12 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
 <View
   accessibilityRole="image"
   accessible={true}
-  isCached={true}
   loaderType="spinner"
-  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#F7F9FC",
-      "borderBottomLeftRadius": undefined,
-      "borderBottomRightRadius": undefined,
       "borderRadius": 16,
-      "borderTopLeftRadius": undefined,
-      "borderTopRightRadius": undefined,
       "display": "flex",
       "height": 200,
       "justifyContent": "center",
@@ -305,44 +284,29 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
     }
   }
   tint="dark"
-  transitionDuration={300}
+  transitionDuration={600}
 >
   <Image
-    backgroundColor="neutral.100"
-    borderRadius="l"
-    isCached={true}
-    loaderType="spinner"
     onError={[Function]}
     source={1}
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
-          "borderRadius": 16,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
-          "height": "100%",
-          "width": "100%",
-          "zIndex": 2,
-        },
-      ]
+      Object {
+        "borderRadius": 16,
+        "bottom": 0,
+        "display": "flex",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+        "zIndex": 2,
+      }
     }
-    tint="dark"
-    transitionDuration={300}
   />
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",
@@ -565,18 +529,12 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
 <View
   accessibilityRole="image"
   accessible={true}
-  isCached={false}
   loaderType="spinner"
-  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#F7F9FC",
-      "borderBottomLeftRadius": undefined,
-      "borderBottomRightRadius": undefined,
       "borderRadius": 16,
-      "borderTopLeftRadius": undefined,
-      "borderTopRightRadius": undefined,
       "display": "flex",
       "height": 200,
       "justifyContent": "center",
@@ -584,13 +542,9 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
     }
   }
   tint="dark"
-  transitionDuration={300}
+  transitionDuration={600}
 >
   <Image
-    backgroundColor="neutral.100"
-    borderRadius="l"
-    isCached={false}
-    loaderType="spinner"
     onError={[Function]}
     source={
       Object {
@@ -598,28 +552,19 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
       }
     }
     style={
-      Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
-          "borderRadius": 16,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
-          "height": "100%",
-          "width": "100%",
-          "zIndex": 2,
-        },
-      ]
+      Object {
+        "borderRadius": 16,
+        "bottom": 0,
+        "display": "flex",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+        "zIndex": 2,
+      }
     }
-    tint="dark"
-    transitionDuration={300}
   />
 </View>
 `;
@@ -629,18 +574,12 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={true}
     loaderType="spinner"
-    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 200,
         "justifyContent": "center",
@@ -648,44 +587,29 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
-      backgroundColor="neutral.100"
-      borderRadius="l"
-      isCached={true}
-      loaderType="spinner"
       onError={[Function]}
       source={1}
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 2,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 2,
+        }
       }
-      tint="dark"
-      transitionDuration={300}
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
@@ -905,9 +829,7 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={true}
     loaderType="spinner"
-    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
@@ -917,11 +839,7 @@ Array [
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 200,
         "justifyContent": "center",
@@ -929,7 +847,7 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
       blurRadius={0}
@@ -939,32 +857,23 @@ Array [
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 1,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
       }
     />
     <View
-      onLayout={[Function]}
       style={
         Object {
-          "borderRadius": undefined,
           "bottom": 0,
           "display": "flex",
           "height": "100%",
@@ -1194,9 +1103,7 @@ Array [
         "uri": "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
       }
     }
-    isCached={true}
     loaderType="progressive"
-    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
@@ -1206,11 +1113,7 @@ Array [
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 100,
         "justifyContent": "center",
@@ -1218,7 +1121,7 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
       blurRadius={0}
@@ -1228,25 +1131,18 @@ Array [
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 1,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
       }
     />
     <View
@@ -1257,11 +1153,7 @@ Array [
           },
           Object {
             "alignItems": "center",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "bottom": 0,
             "justifyContent": "center",
             "left": 0,
@@ -1296,9 +1188,7 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={true}
     loaderType="progressive"
-    onLayout={[Function]}
     previewSource={
       Object {
         "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
@@ -1308,11 +1198,7 @@ Array [
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 100,
         "justifyContent": "center",
@@ -1320,7 +1206,7 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
       blurRadius={0}
@@ -1330,25 +1216,18 @@ Array [
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 1,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
       }
     />
     <View
@@ -1359,11 +1238,7 @@ Array [
           },
           Object {
             "alignItems": "center",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "bottom": 0,
             "justifyContent": "center",
             "left": 0,
@@ -1403,19 +1278,13 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={false}
     loaderType="progressive"
-    onLayout={[Function]}
     previewColor="#934a9a"
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 100,
         "justifyContent": "center",
@@ -1423,54 +1292,36 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
-      backgroundColor="neutral.100"
-      borderRadius="l"
-      isCached={false}
-      loaderType="progressive"
       onError={[Function]}
-      previewColor="#934a9a"
       source={
         Object {
           "uri": "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 2,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 2,
+        }
       }
-      tint="dark"
-      transitionDuration={300}
     />
     <View
       style={
         Object {
           "alignItems": "center",
           "backgroundColor": "#934a9a",
-          "borderBottomLeftRadius": undefined,
-          "borderBottomRightRadius": undefined,
           "borderRadius": 16,
-          "borderTopLeftRadius": undefined,
-          "borderTopRightRadius": undefined,
           "bottom": 0,
           "justifyContent": "center",
           "left": 0,
@@ -1487,19 +1338,13 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={false}
     loaderType="progressive"
-    onLayout={[Function]}
     previewSource={1}
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 100,
         "justifyContent": "center",
@@ -1507,67 +1352,46 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
-      backgroundColor="neutral.100"
-      borderRadius="l"
-      isCached={false}
-      loaderType="progressive"
       onError={[Function]}
-      previewSource={1}
       source={
         Object {
           "uri": "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 2,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 2,
+        }
       }
-      tint="dark"
-      transitionDuration={300}
     />
     <Image
       blurRadius={0}
       source={1}
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 1,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 1,
+        }
       }
     />
     <View
@@ -1578,11 +1402,7 @@ Array [
           },
           Object {
             "alignItems": "center",
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
             "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
             "bottom": 0,
             "justifyContent": "center",
             "left": 0,
@@ -1617,18 +1437,12 @@ Array [
   <View
     accessibilityRole="image"
     accessible={true}
-    isCached={false}
     loaderType="spinner"
-    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#F7F9FC",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
         "borderRadius": 16,
-        "borderTopLeftRadius": undefined,
-        "borderTopRightRadius": undefined,
         "display": "flex",
         "height": 100,
         "justifyContent": "center",
@@ -1636,13 +1450,9 @@ Array [
       }
     }
     tint="dark"
-    transitionDuration={300}
+    transitionDuration={600}
   >
     <Image
-      backgroundColor="neutral.100"
-      borderRadius="l"
-      isCached={false}
-      loaderType="spinner"
       onError={[Function]}
       source={
         Object {
@@ -1650,28 +1460,19 @@ Array [
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "borderBottomLeftRadius": undefined,
-            "borderBottomRightRadius": undefined,
-            "borderRadius": 16,
-            "borderTopLeftRadius": undefined,
-            "borderTopRightRadius": undefined,
-            "height": "100%",
-            "width": "100%",
-            "zIndex": 2,
-          },
-        ]
+        Object {
+          "borderRadius": 16,
+          "bottom": 0,
+          "display": "flex",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 2,
+        }
       }
-      tint="dark"
-      transitionDuration={300}
     />
   </View>,
 ]
@@ -1681,18 +1482,12 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
 <View
   accessibilityRole="image"
   accessible={true}
-  isCached={true}
   loaderType="spinner"
-  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#F7F9FC",
-      "borderBottomLeftRadius": undefined,
-      "borderBottomRightRadius": undefined,
       "borderRadius": 16,
-      "borderTopLeftRadius": undefined,
-      "borderTopRightRadius": undefined,
       "display": "flex",
       "height": 200,
       "justifyContent": "center",
@@ -1700,13 +1495,11 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
     }
   }
   tint="dark"
-  transitionDuration={300}
+  transitionDuration={600}
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": undefined,
         "bottom": 0,
         "display": "flex",
         "height": "100%",

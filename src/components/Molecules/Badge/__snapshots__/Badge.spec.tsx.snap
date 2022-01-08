@@ -12,11 +12,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -43,7 +41,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -103,7 +100,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -135,11 +131,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -166,7 +160,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -226,7 +219,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -258,11 +250,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -289,7 +279,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -349,7 +338,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -381,11 +369,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -412,7 +398,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -472,7 +457,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -504,11 +488,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -535,7 +517,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -595,7 +576,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -632,11 +612,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -663,7 +641,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -723,7 +700,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -755,11 +731,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -786,7 +760,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -846,7 +819,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -878,11 +850,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -909,7 +879,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -969,7 +938,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1001,11 +969,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1032,7 +998,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1092,7 +1057,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1129,11 +1093,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1160,7 +1122,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1227,11 +1188,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1258,7 +1217,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1317,7 +1275,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1349,11 +1306,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1380,7 +1335,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1439,7 +1393,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1471,11 +1424,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1502,7 +1453,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1576,11 +1526,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1607,7 +1555,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 1000,
@@ -1667,7 +1614,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1699,11 +1645,9 @@ Array [
       }
     }
     accessible={true}
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "bottom": undefined,
         "display": "flex",
         "elevation": undefined,
@@ -1730,7 +1674,6 @@ Array [
     }
   >
     <View
-      onLayout={[Function]}
       style={
         Object {
           "borderRadius": 8,
@@ -1790,7 +1733,6 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
-          scaleFontSize={true}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1818,11 +1760,9 @@ Array [
 exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
 Array [
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
       }
     }
@@ -1838,11 +1778,9 @@ Array [
         }
       }
       accessible={true}
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "flex-start",
-          "borderRadius": undefined,
           "bottom": undefined,
           "display": "flex",
           "elevation": undefined,
@@ -1869,7 +1807,6 @@ Array [
       }
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
             "borderRadius": 1000,
@@ -1931,7 +1868,6 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
-            scaleFontSize={true}
             style={
               Object {
                 "color": "#FFFFFF",
@@ -1955,11 +1891,9 @@ Array [
     </View>
   </View>,
   <View
-    onLayout={[Function]}
     style={
       Object {
         "alignSelf": "flex-start",
-        "borderRadius": undefined,
         "display": "flex",
       }
     }
@@ -1975,11 +1909,9 @@ Array [
         }
       }
       accessible={true}
-      onLayout={[Function]}
       style={
         Object {
           "alignSelf": "flex-start",
-          "borderRadius": undefined,
           "bottom": -5,
           "display": "flex",
           "elevation": undefined,
@@ -2006,7 +1938,6 @@ Array [
       }
     >
       <View
-        onLayout={[Function]}
         style={
           Object {
             "borderRadius": 1000,

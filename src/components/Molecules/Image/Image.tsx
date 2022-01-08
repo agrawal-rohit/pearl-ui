@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { border } from "../../../theme/src/styleFunctions";
+import { borderStyleFunction } from "../../../theme/src/styleFunctions";
 import {
   Animated,
   ImageErrorEventData,
@@ -24,6 +24,7 @@ import {
   ComponentVariants,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { pearlify } from "../../../hooks/pearlify";
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -73,28 +74,30 @@ export type ImageProps = BoxProps &
 
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
+const StyledImage = pearlify(RNImage, {
+  componentName: "Image",
+  type: "basic",
+});
+
 /** The Image component is used to display images. */
-const Image: React.FC<ImageProps> = ({
-  children,
-  source,
-  fallbackComponent = undefined,
-  onError = () => {},
-  ...rest
-}) => {
-  const molecularProps = useMolecularComponentConfig("Image", rest, {
-    size: rest.size,
-    variant: rest.variant,
-  });
+const CustomImage: React.FC<ImageProps> = ({ children, ...props }) => {
+  const { source, onError, isCached, fallbackComponent, ...rootProps } = (
+    props as any
+  ).root;
 
   const isMounted = useRef(true);
   const isRemoteImage = typeof source === "object";
-  const shouldCache = isRemoteImage && molecularProps.root.isCached;
+  const shouldCache = isRemoteImage && isCached;
   const [uri, setUri] = useState<string | undefined>(undefined);
   const [error, setError] = useState(false);
   const previousUri = usePrevious(uri);
 
   // The image should be ready by default if it's a local image
   const isImageReady = isRemoteImage ? !!uri : true;
+
+  const finalSource = isRemoteImage
+    ? { ...(source as object), uri: uri }
+    : source;
 
   const intensity = useRef(new Animated.Value(100)).current;
   const previewSourceOverlayOpacity = intensity.interpolate({
@@ -148,7 +151,7 @@ const Image: React.FC<ImageProps> = ({
     borderTopRightRadius,
     testID,
     ...finalRootProps
-  } = molecularProps.root;
+  } = rootProps;
 
   // Compute border props so that they can be used by the native Image element
   let borderRadiiStyles = useStyledProps(
@@ -159,28 +162,8 @@ const Image: React.FC<ImageProps> = ({
       borderTopLeftRadius,
       borderTopRightRadius,
     },
-    border
+    borderStyleFunction
   );
-
-  borderRadiiStyles = {
-    style: {
-      borderRadius:
-        molecularProps.root.style.borderRadius ||
-        borderRadiiStyles.style.borderRadius,
-      borderBottomLeftRadius:
-        molecularProps.root.style.borderBottomLeftRadius ||
-        borderRadiiStyles.style.borderBottomLeftRadius,
-      borderBottomRightRadius:
-        molecularProps.root.style.borderBottomRightRadius ||
-        borderRadiiStyles.style.borderBottomRightRadius,
-      borderTopLeftRadius:
-        molecularProps.root.style.borderTopLeftRadius ||
-        borderRadiiStyles.style.borderTopLeftRadius,
-      borderTopRightRadius:
-        molecularProps.root.style.borderTopRightRadius ||
-        borderRadiiStyles.style.borderTopRightRadius,
-    },
-  };
 
   const renderFallback = () => {
     if (error) {
@@ -195,10 +178,10 @@ const Image: React.FC<ImageProps> = ({
         );
       }
 
-      if (!!molecularProps.root.fallbackSource) {
+      if (!!rootProps.fallbackSource) {
         return (
           <RNImage
-            source={molecularProps.root.fallbackSource}
+            source={rootProps.fallbackSource}
             style={[
               StyleSheet.absoluteFill,
               {
@@ -221,20 +204,17 @@ const Image: React.FC<ImageProps> = ({
   const renderFinalImage = () => {
     if (isImageReady && !error) {
       return (
-        <RNImage
-          {...molecularProps.root}
+        <StyledImage
           onError={errorHandler}
           testID={testID}
           source={finalSource as ImageSourcePropType}
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              width: "100%",
-              height: "100%",
-              ...borderRadiiStyles.style,
-              zIndex: 2,
-            },
-          ]}
+          style={{
+            ...(StyleSheet.absoluteFill as any),
+            width: "100%",
+            height: "100%",
+            ...borderRadiiStyles.style,
+            zIndex: 2,
+          }}
         />
       );
     }
@@ -245,45 +225,41 @@ const Image: React.FC<ImageProps> = ({
   };
 
   const renderPreview = () => {
-    if (!!molecularProps.root.previewSource) {
+    if (!!rootProps.previewSource) {
       return (
-        <RNImage
-          source={molecularProps.root.previewSource}
+        <StyledImage
+          source={rootProps.previewSource}
           blurRadius={
             Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
           }
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              width: "100%",
-              height: "100%",
-              ...borderRadiiStyles.style,
-              zIndex: 1,
-            },
-          ]}
+          style={{
+            ...(StyleSheet.absoluteFill as any),
+            width: "100%",
+            height: "100%",
+            ...borderRadiiStyles.style,
+            zIndex: 1,
+          }}
         />
       );
     }
   };
 
   const renderImageLoader = () => {
-    if (molecularProps.root.loaderType === "progressive") {
-      if (!!molecularProps.root.previewSource) {
+    if (rootProps.loaderType === "progressive") {
+      if (!!rootProps.previewSource) {
         // Render a blur overlay over the preview image
         if (Platform.OS === "ios") {
           return (
             <AnimatedBlurView
-              tint={molecularProps.root.tint}
-              style={[
-                StyleSheet.absoluteFill,
-                {
-                  alignItems: "center",
-                  justifyContent: "center",
-                  ...borderRadiiStyles.style,
-                  zIndex: 3,
-                  overflow: "hidden",
-                },
-              ]}
+              tint={rootProps.tint}
+              style={{
+                ...(StyleSheet.absoluteFill as any),
+                alignItems: "center",
+                justifyContent: "center",
+                ...borderRadiiStyles.style,
+                zIndex: 3,
+                overflow: "hidden",
+              }}
               intensity={intensity}
             >
               {/* Render the fallbackComponent inside the overlay if an error is encountered */}
@@ -296,19 +272,16 @@ const Image: React.FC<ImageProps> = ({
         if (Platform.OS === "android" || Platform.OS === "web") {
           return (
             <Animated.View
-              style={[
-                StyleSheet.absoluteFill,
-                {
-                  backgroundColor:
-                    molecularProps.root.tint === "dark" ? "black" : "white",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  opacity: previewSourceOverlayOpacity,
-                  ...borderRadiiStyles.style,
-                  zIndex: 3,
-                  overflow: "hidden",
-                },
-              ]}
+              style={{
+                ...(StyleSheet.absoluteFill as any),
+                backgroundColor: rootProps.tint === "dark" ? "black" : "white",
+                alignItems: "center",
+                justifyContent: "center",
+                opacity: previewSourceOverlayOpacity,
+                ...borderRadiiStyles.style,
+                zIndex: 3,
+                overflow: "hidden",
+              }}
             >
               {/* Render the fallbackComponent inside the overlay if an error is encountered */}
               {renderFallback()}
@@ -317,13 +290,13 @@ const Image: React.FC<ImageProps> = ({
         }
       }
 
-      if (!!molecularProps.root.previewColor) {
+      if (!!rootProps.previewColor) {
         return (
           <Animated.View
             style={[
               StyleSheet.absoluteFill,
               {
-                backgroundColor: molecularProps.root.previewColor,
+                backgroundColor: rootProps.previewColor,
                 alignItems: "center",
                 justifyContent: "center",
                 opacity: previewColorOverlayOpacity,
@@ -340,11 +313,11 @@ const Image: React.FC<ImageProps> = ({
       }
     }
 
-    if (molecularProps.root.loaderType === "spinner" && !error && !uri) {
+    if (rootProps.loaderType === "spinner" && !error && !uri) {
       // Load the spinner component
       return (
         <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
-          <Spinner {...molecularProps.spinner} isExpanded />
+          <Spinner {...(props as any).spinner} isExpanded />
         </Box>
       );
     }
@@ -355,15 +328,15 @@ const Image: React.FC<ImageProps> = ({
     if (isRemoteImage) {
       loadRemoteImage(
         (source as ImageURISource).uri as string,
-        molecularProps.root.imageDownloadOptions
+        rootProps.imageDownloadOptions
       );
 
       // Start animating the overlay opacity as soon as the URI becomes available
       if (uri && !previousUri) {
         Animated.timing(intensity, {
-          duration: molecularProps.root.transitionDuration,
+          duration: rootProps.transitionDuration,
           toValue: 0,
-          useNativeDriver: Platform.OS === "android" || Platform.OS !== "web",
+          useNativeDriver: Platform.OS === "android",
         }).start();
       }
     }
@@ -372,10 +345,6 @@ const Image: React.FC<ImageProps> = ({
       isMounted.current = false;
     };
   }, [uri]);
-
-  const finalSource = isRemoteImage
-    ? { ...(source as object), uri: uri }
-    : source;
 
   return (
     <Box
@@ -395,5 +364,10 @@ const Image: React.FC<ImageProps> = ({
     </Box>
   );
 };
+
+const Image = pearlify(CustomImage, {
+  componentName: "Image",
+  type: "molecule",
+});
 
 export default Image;

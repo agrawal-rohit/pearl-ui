@@ -1,5 +1,5 @@
 import { ExpandedColors } from "./../theme/src/types";
-import { color } from "./../theme/src/styleFunctions";
+import { colorStyleFunction } from "./../theme/src/styleFunctions";
 import { useStyledProps } from "./useStyledProps";
 import { TinyColor } from "@ctrl/tinycolor";
 
@@ -17,7 +17,7 @@ export const useAccessibleColor = (
   }
 ) => {
   const backgroundColorConverted = useStyledProps({ color: backgroundColor }, [
-    color,
+    colorStyleFunction,
   ]);
 
   const isColorLight = new TinyColor(

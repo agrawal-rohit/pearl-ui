@@ -3,7 +3,7 @@ import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import { getKeys } from "../../../theme/utils/typeHelpers";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import Box, { BoxProps } from "../Box/Box";
-import { position } from "../../../theme/src/styleFunctions";
+import { positionStyleFunction } from "../../../theme/src/styleFunctions";
 
 export type StackProps = BoxProps & {
   /** The direction to stack the items */
@@ -111,7 +111,7 @@ export const ZStack: React.FC<ZStackProps> = ({
         (child as ReactElement).props &&
         getKeys((child as ReactElement).props).includes("zIndex");
       const computedZIndex = useStyledProps((child as ReactElement).props, [
-        ...position,
+        ...positionStyleFunction,
       ]);
 
       return React.cloneElement(child as ReactElement, {

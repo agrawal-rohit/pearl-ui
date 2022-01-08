@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Box, { BoxProps, boxStyleFunctions } from "../../Atoms/Box/Box";
+import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text, { buildFontConfig } from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
@@ -23,10 +23,11 @@ import {
   ComponentVariants,
 } from "../../../theme/src/types";
 import {
-  color,
+  boxStyleFunctions,
+  colorStyleFunction,
   createStyleFunction,
   transformColorValue,
-  typography,
+  typographyStyleFunction,
 } from "../../../theme/src/styleFunctions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
@@ -135,7 +136,10 @@ const inputRootStyleFunctions = [
   errorShadowColorStyleFunction,
 ];
 
-const inputTextStyleFunctions = [color, typography] as StyleFunctionContainer[];
+const inputTextStyleFunctions = [
+  colorStyleFunction,
+  typographyStyleFunction,
+] as StyleFunctionContainer[];
 
 /** The Input component is a component that is used to get user input in a text field. **/
 const Input = React.forwardRef(
@@ -195,7 +199,6 @@ const Input = React.forwardRef(
         variant: filteredReceivedProps["variant"],
       },
       colorScheme,
-      inputRootStyleFunctions,
       "root",
       "input"
     );

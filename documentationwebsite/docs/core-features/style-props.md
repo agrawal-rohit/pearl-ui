@@ -152,32 +152,32 @@ The sections below list the supported style props and their expected values.
 </Box>
 ```
 
-| Prop                      | Stylesheet property       | Type                                   |
-| ------------------------- | ------------------------- | -------------------------------------- |
-| `borderBottomWidth`       | `borderBottomWidth`       | <t>number</t>                          |
-| `borderLeftWidth`         | `borderLeftWidth`         | <t>number</t>                          |
-| `borderRightWidth`        | `borderRightWidth`        | <t>number</t>                          |
-| `borderStyle`             | `borderStyle`             | <t>'solid' \| 'dotted' \| 'dashed'</t> |
-| `borderTopWidth`          | `borderTopWidth`          | <t>number</t>                          |
-| `borderStartWidth`        | `borderStartWidth`        | <t>number</t>                          |
-| `borderEndWidth`          | `borderEndWidth`          | <t>number</t>                          |
-| `borderWidth`             | `borderWidth`             | <t>number</t>                          |
-| `borderColor`             | `borderColor`             | <t>PearlTheme['palette']</t>           |
-| `borderTopColor`          | `borderTopColor`          | <t>PearlTheme['palette']</t>           |
-| `borderRightColor`        | `borderRightColor`        | <t>PearlTheme['palette']</t>           |
-| `borderLeftColor`         | `borderLeftColor`         | <t>PearlTheme['palette']</t>           |
-| `borderBottomColor`       | `borderBottomColor`       | <t>PearlTheme['palette']</t>           |
-| `borderStartColor`        | `borderStartColor`        | <t>PearlTheme['palette']</t>           |
-| `borderEndColor`          | `borderEndColor`          | <t>PearlTheme['palette']</t>           |
-| `borderRadius`            | `borderRadius`            | <t>PearlTheme['borderRadii']</t>       |
-| `borderBottomLeftRadius`  | `borderBottomLeftRadius`  | <t>PearlTheme['borderRadii']</t>       |
-| `borderBottomRightRadius` | `borderBottomRightRadius` | <t>PearlTheme['borderRadii']</t>       |
-| `borderTopLeftRadius`     | `borderTopLeftRadius`     | <t>PearlTheme['borderRadii']</t>       |
-| `borderTopRightRadius`    | `borderTopRightRadius`    | <t>PearlTheme['borderRadii']</t>       |
-| `borderBottomStartRadius` | `borderBottomStartRadius` | <t>PearlTheme['borderRadii']</t>       |
-| `borderBottomEndRadius`   | `borderBottomEndRadius`   | <t>PearlTheme['borderRadii']</t>       |
-| `borderTopStartRadius`    | `borderTopStartRadius`    | <t>PearlTheme['borderRadii']</t>       |
-| `borderTopEndRadius`      | `borderTopEndRadius`      | <t>PearlTheme['borderRadii']</t>       |
+| Prop                      | Stylesheet property       | Type                                       |
+| ------------------------- | ------------------------- | ------------------------------------------ |
+| `borderBottomWidth`       | `borderBottomWidth`       | <t>number</t>                              |
+| `borderLeftWidth`         | `borderLeftWidth`         | <t>number</t>                              |
+| `borderRightWidth`        | `borderRightWidth`        | <t>number</t>                              |
+| `borderStyle`             | `borderStyle`             | <t>'solid' \| 'dotted' \| 'dashed'</t>     |
+| `borderTopWidth`          | `borderTopWidth`          | <t>number</t>                              |
+| `borderStartWidth`        | `borderStartWidth`        | <t>number</t>                              |
+| `borderEndWidth`          | `borderEndWidth`          | <t>number</t>                              |
+| `borderWidth`             | `borderWidth`             | <t>number</t>                              |
+| `borderColor`             | `borderColor`             | <t>PearlTheme['palette']</t>               |
+| `borderTopColor`          | `borderTopColor`          | <t>PearlTheme['palette']</t>               |
+| `borderRightColor`        | `borderRightColor`        | <t>PearlTheme['palette']</t>               |
+| `borderLeftColor`         | `borderLeftColor`         | <t>PearlTheme['palette']</t>               |
+| `borderBottomColor`       | `borderBottomColor`       | <t>PearlTheme['palette']</t>               |
+| `borderStartColor`        | `borderStartColor`        | <t>PearlTheme['palette']</t>               |
+| `borderEndColor`          | `borderEndColor`          | <t>PearlTheme['palette']</t>               |
+| `borderRadius`            | `borderRadius`            | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderBottomLeftRadius`  | `borderBottomLeftRadius`  | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderBottomRightRadius` | `borderBottomRightRadius` | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderTopLeftRadius`     | `borderTopLeftRadius`     | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderTopRightRadius`    | `borderTopRightRadius`    | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderBottomStartRadius` | `borderBottomStartRadius` | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderBottomEndRadius`   | `borderBottomEndRadius`   | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderTopStartRadius`    | `borderTopStartRadius`    | <t>PearlTheme['borderRadii'] \| number</t> |
+| `borderTopEndRadius`      | `borderTopEndRadius`      | <t>PearlTheme['borderRadii'] \| number</t> |
 
 ### Typography
 

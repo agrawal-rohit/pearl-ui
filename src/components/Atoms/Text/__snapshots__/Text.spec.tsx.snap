@@ -5,7 +5,6 @@ exports[`Atoms/Text passes the snapshot test 1`] = `
   accessibilityRole="text"
   accessible={true}
   allowFontScaling={true}
-  scaleFontSize={true}
   style={
     Object {
       "color": "#1A2138",

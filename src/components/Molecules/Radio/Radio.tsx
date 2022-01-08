@@ -11,9 +11,9 @@ import {
 } from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import { useColorScheme } from "../../../hooks/useColorScheme";
 import Stack from "../../Atoms/Stack/Stack";
-import Box, { boxStyleFunctions } from "../../Atoms/Box/Box";
+import Box from "../../Atoms/Box/Box";
+import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
 import { useRadioGroup } from "./RadioGroup";
 import { GestureResponderEvent } from "react-native";
 
@@ -100,7 +100,6 @@ const Radio = React.forwardRef(
         variant: rest.variant,
       },
       rest.colorScheme,
-      boxStyleFunctions,
       "root",
       "outerBox"
     );

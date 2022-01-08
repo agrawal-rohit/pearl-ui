@@ -51,11 +51,9 @@ exports[`Atoms/Screen passes the snapshot test 1`] = `
   >
     <View>
       <View
-        onLayout={[Function]}
         style={
           Object {
             "backgroundColor": "#FFFFFF",
-            "borderRadius": undefined,
             "display": "flex",
             "flex": 1,
             "flexDirection": "column",

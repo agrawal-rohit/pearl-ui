@@ -1,16 +1,16 @@
 import React from "react";
 import {
-  backgroundColor,
+  backgroundColorStyleFunction,
   BackgroundColorProps,
-  color,
+  colorStyleFunction,
   ColorProps,
-  layout,
+  layoutStyleFunction,
   LayoutProps,
-  spacing,
+  spacingStyleFunction,
   SpacingProps,
-  opacity,
+  opacityStyleFunction,
   OpacityProps,
-  visible,
+  visibleStyleFunction,
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
 import {
@@ -38,14 +38,15 @@ import {
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import responsiveSize from "../../../utils/responsiveSize";
 import { View } from "react-native";
+import { pearlify } from "../../../hooks/pearlify";
 
-const iconStyleFunctions = [
-  color,
-  backgroundColor,
-  spacing,
-  layout,
-  opacity,
-  visible,
+export const iconStyleFunctions = [
+  colorStyleFunction,
+  backgroundColorStyleFunction,
+  spacingStyleFunction,
+  layoutStyleFunction,
+  opacityStyleFunction,
+  visibleStyleFunction,
 ] as StyleFunctionContainer[];
 
 type IconStyleProps = ColorProps &
@@ -104,26 +105,13 @@ const iconFamilyMapping = {
   Zocial,
 };
 
-/** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
-const Icon: React.FC<IconProps> = ({
+const CustomIcon: React.FC<IconProps> = ({
   iconFamily,
   iconName,
-  size = "m",
   accessibilityLabel = undefined,
   rawSize = undefined,
-  ...rest
+  ...props
 }) => {
-  const props = useAtomicComponentConfig(
-    "Icon",
-    rest,
-    {
-      size: size,
-      variant: rest.variant,
-    },
-    "primary",
-    iconStyleFunctions
-  );
-
   const IconToUse = iconFamilyMapping[iconFamily];
 
   return (
@@ -134,9 +122,16 @@ const Icon: React.FC<IconProps> = ({
       }
       name={iconName}
       {...props}
-      size={rawSize || responsiveSize(props.size)}
+      size={responsiveSize(rawSize)}
     ></IconToUse>
   );
 };
+
+/** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
+const Icon = pearlify(
+  CustomIcon,
+  { componentName: "Icon", type: "atom" },
+  iconStyleFunctions
+);
 
 export default Icon;

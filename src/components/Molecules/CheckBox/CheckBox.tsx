@@ -12,10 +12,9 @@ import {
 import Icon from "../../Atoms/Icon/Icon";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import { useColorScheme } from "../../../hooks/useColorScheme";
 import Stack from "../../Atoms/Stack/Stack";
-import { boxStyleFunctions } from "../../Atoms/Box/Box";
 import { useCheckBoxGroup } from "./CheckBoxGroup";
+import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
 import { GestureResponderEvent } from "react-native";
 
 export type CheckBoxProps = PressableProps & {
@@ -149,7 +148,6 @@ const CheckBox = React.forwardRef(
         variant: rest.variant,
       },
       rest.colorScheme,
-      boxStyleFunctions,
       "root",
       "box"
     );
