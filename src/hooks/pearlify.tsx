@@ -18,9 +18,10 @@ interface PearlifyConfig {
 }
 
 /**
- * Hook to convert a third-party component to a Pearl atom component that can be configured using an atomic component configuration.
- * @param Component Original component to be passed on where the atomic component configuration has to be applied.
- * @param componentName Name of the custom component that would be stored in the active Pearl theme.
+ * Hook to convert a third-party component to a Pearl atom component that can be configured using style props, an atomic component configuration or a molecular component configuration.
+ * @param Component The base component on which the pearlification has to be applied
+ * @param config A configuration object that adds metadata to a component that's required by Pearl UI
+ * @param styleFunctions The set of style functions that would define the style props that should be supported by the pearlified component
  * @returns
  */
 export function pearlify<P, CustomStyleProps = BoxProps>(

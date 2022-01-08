@@ -46,30 +46,26 @@ export interface ColorPalette {
   [key: number]: string;
 }
 
-export interface AtomicComponentConfig<
-  PropTypes extends Record<string, any> = Record<string, any>
-> {
-  baseStyle: Partial<Omit<PropTypes, "size" | "variant">>;
-  sizes?: Partial<Omit<PropTypes, "size" | "variant">>;
-  variants?: Partial<Omit<PropTypes, "size" | "variant">>;
+export interface AtomicComponentConfig {
+  baseStyle: Record<string, any>;
+  sizes?: Record<string, any>;
+  variants?: Record<string, any>;
   defaults?: {
     size?: string;
     variant?: string;
   };
 }
 
-export interface MolecularComponentConfig<
-  PropTypes extends Record<string, any> = Record<string, any>
-> {
-  parts: string[];
+export interface MolecularComponentConfig {
+  parts?: string[];
   baseStyle: {
-    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
+    [key: string]: Record<string, any>;
   };
   sizes?: {
-    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
+    [key: string]: Record<string, any>;
   };
   variants?: {
-    [key: string]: Partial<Omit<PropTypes, "size" | "variant">>;
+    [key: string]: Record<string, any>;
   };
   defaults?: {
     size?: string;

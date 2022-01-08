@@ -178,9 +178,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="typescript-support"]:before,
 .menu__link[href*="typography"]:before,
 .menu__link[href*="dark-mode"]:before,
-.menu__link[href*="responsivity"]:before,
-.menu__link[href*="cohesivity"]:before,
-.menu__link[href*="pearlify"]:before {
+.menu__link[href*="responsivity"]:before {
   content: "New";
   display: inline-block;
   position: absolute;
@@ -203,7 +201,9 @@ html[data-theme="dark"] .header-twitter-link:before {
 */
 .menu__link[href*="Stack"]:before,
 .menu__link[href*="Avatar"]:before,
-.menu__link[href*="default-theme"]:before {
+.menu__link[href*="pearlify"]:before,
+.menu__link[href*="default-theme"]:before,
+.menu__link[href*="cohesivity"]:before {
   content: "Updated";
   display: inline-block;
   position: absolute;

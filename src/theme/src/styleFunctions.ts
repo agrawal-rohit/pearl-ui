@@ -277,17 +277,18 @@ export const textShadowStyleFunction = [
   }),
 ];
 
-export const all = [
+export const allStyleFunctions = [
   colorStyleFunction,
   opacityStyleFunction,
-  ...backgroundColorStyleFunction,
-  ...spacingStyleFunction,
-  ...typographyStyleFunction,
-  ...layoutStyleFunction,
-  ...positionStyleFunction,
-  ...borderStyleFunction,
-  ...shadowStyleFunction,
-  ...textShadowStyleFunction,
+  visibleStyleFunction,
+  backgroundColorStyleFunction,
+  spacingStyleFunction,
+  typographyStyleFunction,
+  layoutStyleFunction,
+  positionStyleFunction,
+  borderStyleFunction,
+  shadowStyleFunction,
+  textShadowStyleFunction,
 ];
 
 // Component Specific Style function
@@ -311,6 +312,7 @@ export const textStyleFunctions = [
   typographyStyleFunction,
   spacingStyleFunction,
   textShadowStyleFunction,
+  positionStyleFunction,
 ] as StyleFunctionContainer[];
 
 // PropTypes

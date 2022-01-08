@@ -38,6 +38,9 @@ import Spinner from "./src/components/Atoms/Spinner/Spinner";
 import CheckBox from "./src/components/Molecules/CheckBox/CheckBox";
 import CheckBoxGroup from "./src/components/Molecules/CheckBox/CheckBoxGroup";
 import Input from "./src/components/Molecules/Input/Input";
+import { extendTheme } from "./src/theme/src/base";
+import { pearlify } from "./src/hooks/pearlify";
+import { View } from "react-native";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
