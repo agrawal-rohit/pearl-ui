@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.2...v2.1.0) (2022-01-08)
+
+
+### Features
+
+* **avatargroup:** added AvatarGroup component and corresponding docs ([1b12aab](https://github.com/agrawal-rohit/pearl-ui/commit/1b12aabb49201365f5124986ccfbc4f65c6209b7))
+* **factory:** added a pearlify factory hook that converts custom components to pearl components ([214d4f5](https://github.com/agrawal-rohit/pearl-ui/commit/214d4f55f0a9c5bfb4a72ee629202bb92051f417))
+* **stack:** added HStack, VStack, and ZStack components with corresponding docs ([1d33cd3](https://github.com/agrawal-rohit/pearl-ui/commit/1d33cd3569a5dde697cd04f1806c8e96a00274a2))
+
 ## [2.0.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.1...v2.0.2) (2022-01-03)
 
 
