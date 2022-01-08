@@ -5,6 +5,7 @@ export { extendTheme } from "./src/base/index";
 export {
   colorStyleFunction,
   opacityStyleFunction,
+  visibleStyleFunction,
   backgroundColorStyleFunction,
   spacingStyleFunction,
   typographyStyleFunction,
@@ -15,6 +16,7 @@ export {
   textShadowStyleFunction,
   boxStyleFunctions,
   textStyleFunctions,
+  allStyleFunctions,
 } from "./src/styleFunctions";
 
 // Theme Context
