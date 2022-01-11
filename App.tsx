@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -48,6 +48,8 @@ const App = () => {
     "Poppins-Black": Poppins_900Black,
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
+
+  const [color, setColor] = useState("pink");
 
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
