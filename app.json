@@ -2,6 +2,7 @@
   "expo": {
     "name": "pearl-ui",
     "slug": "pearl-ui",
+    "jsEngine": "hermes",
     "version": "1.0.0",
     "orientation": "portrait",
     "splash": {
@@ -15,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "jsEngine": "jsc"
     },
     "android": {
       "adaptiveIcon": {

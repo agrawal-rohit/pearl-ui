@@ -114,7 +114,6 @@ describe("Molecules/Button", () => {
           backgroundColor="primary.500"
           borderColor="neutral.400"
           borderWidth={2}
-          androidRippleConfig={{ color: "red" }}
         >
           Button press
         </Button>

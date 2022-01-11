@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject } from "react";
 import Spinner from "../../Atoms/Spinner/Spinner";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
@@ -12,12 +12,10 @@ import {
   ComponentVariants,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { pearlify } from "../../../hooks/pearlify";
+import { composeMoleculeRootProps } from "../../../hooks/utils/utils";
 
-export type ButtonProps = PressableProps & {
-  /** Size of the button. */
-  size?: ResponsiveValue<ComponentSizes<"Button">>;
-  /** Variant of the button. */
-  variant?: ResponsiveValue<ComponentVariants<"Button">>;
+export type BaseButtonProps = PressableProps & {
   /** Whether the button is in a loading state.  */
   isLoading?: boolean;
   /** Whether the button should span the entire width of the parent container */
@@ -34,28 +32,19 @@ export type ButtonProps = PressableProps & {
   rightIcon?: React.ReactElement;
 };
 
-/** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
-const Button: React.FC<ButtonProps> = ({
-  children,
-  loadingText = null,
-  colorScheme = "primary",
-  spinnerPlacement = "start",
-  isLoading = false,
-  isFullWidth = false,
-  isDisabled = false,
-  leftIcon = null,
-  rightIcon = null,
-  ...rest
-}) => {
-  let molecularProps = useMolecularComponentConfig(
-    "Button",
-    rest,
-    {
-      size: rest["size"],
-      variant: rest["variant"],
-    },
-    colorScheme
-  );
+const CustomButton = (props: any) => {
+  const { children, ref, molecularProps, ...motiProps } = props;
+  const {
+    loadingText = null,
+    colorScheme = "primary",
+    spinnerPlacement = "start",
+    isLoading = false,
+    isFullWidth = false,
+    isDisabled = false,
+    leftIcon = null,
+    rightIcon = null,
+    ...rootProps
+  } = molecularProps.root;
 
   const disabled = isDisabled ? true : isLoading;
 
@@ -66,19 +55,13 @@ const Button: React.FC<ButtonProps> = ({
           {spinnerPlacement === "start" ? (
             <>
               <Spinner {...molecularProps.spinner} />
-              <Text
-                marginLeft={molecularProps.root.py}
-                {...molecularProps.text}
-              >
+              <Text marginLeft={rootProps.py} {...molecularProps.text}>
                 {loadingText}
               </Text>
             </>
           ) : (
             <>
-              <Text
-                marginRight={molecularProps.root.py}
-                {...molecularProps.text}
-              >
+              <Text marginRight={rootProps.py} {...molecularProps.text}>
                 {loadingText}
               </Text>
 
@@ -106,8 +89,7 @@ const Button: React.FC<ButtonProps> = ({
           {leftIcon
             ? React.cloneElement(leftIcon, {
                 ...molecularProps.icon,
-                marginRight:
-                  molecularProps.root.py || molecularProps.root.paddingVertical,
+                marginRight: rootProps.py || rootProps.paddingVertical,
                 ...leftIcon.props,
               })
             : null}
@@ -115,8 +97,7 @@ const Button: React.FC<ButtonProps> = ({
           {rightIcon
             ? React.cloneElement(rightIcon, {
                 ...molecularProps.icon,
-                marginLeft:
-                  molecularProps.root.py || molecularProps.root.paddingVertical,
+                marginLeft: rootProps.py || rootProps.paddingVertical,
                 ...rightIcon.props,
               })
             : null}
@@ -129,20 +110,15 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Pressable
-      {...molecularProps.root}
+      {...composeMoleculeRootProps(motiProps, rootProps)}
       isDisabled={disabled}
       opacity={disabled ? 0.5 : 1}
-      onPress={rest.onPress}
+      onPress={rootProps.onPress}
       alignSelf={isFullWidth ? "stretch" : "flex-start"}
-      androidRippleConfig={
-        rest.androidRippleConfig
-          ? rest.androidRippleConfig
-          : { color: `${colorScheme}.200` }
-      }
       accessibilityLabel={
         !isLoading
-          ? rest.accessibilityLabel
-            ? rest.accessibilityLabel
+          ? rootProps.accessibilityLabel
+            ? rootProps.accessibilityLabel
             : children
           : "Loading"
       }
@@ -152,5 +128,12 @@ const Button: React.FC<ButtonProps> = ({
     </Pressable>
   );
 };
+
+/** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
+const Button = pearlify<BaseButtonProps, "molecule">(CustomButton, {
+  componentName: "Button",
+  type: "molecule",
+  animatable: true,
+});
 
 export default Button;

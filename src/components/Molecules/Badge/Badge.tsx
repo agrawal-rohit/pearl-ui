@@ -37,8 +37,7 @@ const Badge: React.FC<BadgeProps> = ({ children, ...rest }) => {
   const renderValue = () => {
     if (children === undefined) return null;
 
-    if (Array.isArray(children))
-      children = (children as Array<string | number>).join("");
+    if (Array.isArray(children)) children = children.join("");
 
     if (typeof children === "number" || typeof children === "string")
       return <Text {...molecularProps.text}>{children}</Text>;

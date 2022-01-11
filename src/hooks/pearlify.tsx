@@ -1,20 +1,27 @@
 import {
   ColorScheme,
   ComponentSizes,
+  ComponentTypeProps,
   ComponentVariants,
+  FinalPearlTheme,
+  MotiWithPearlStyleProps,
+  PearlComponent,
   ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
-import React from "react";
+import React, { ComponentType, Ref, RefObject } from "react";
 import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
-import { boxStyleFunctions } from "../theme/src/styleFunctions";
-import { BoxProps } from "../components/Atoms/Box/Box";
+import { boxStyleFunctions, BoxStyleProps } from "../theme/src/styleFunctions";
 import { useStyledProps } from "./useStyledProps";
 import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
+import { motify } from "moti";
+import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
+import { ViewStyle } from "react-native";
 
 interface PearlifyConfig {
-  componentName: string;
+  componentName: keyof FinalPearlTheme["components"];
   type: "basic" | "atom" | "molecule";
+  animatable?: boolean;
 }
 
 /**
@@ -24,59 +31,105 @@ interface PearlifyConfig {
  * @param styleFunctions The set of style functions that would define the style props that should be supported by the pearlified component
  * @returns
  */
-export function pearlify<P, CustomStyleProps = BoxProps>(
-  Component: React.ComponentType<P>,
-  config: PearlifyConfig = { componentName: "undefined", type: "basic" },
+export function pearlify<
+  ComponentProps,
+  ComponentType extends "basic" | "atom" | "molecule" = "basic",
+  StyleProps = BoxStyleProps
+>(
+  Component: any,
+  config: PearlifyConfig = {
+    componentName: "None",
+    type: "basic",
+    animatable: true,
+  },
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) {
+  let FinalComponent: any;
+  if (config.animatable) {
+    // Convert the provided component to a Class component
+    class ConvertedClassComponent extends React.Component {
+      static displayName = `PearlMoti${Component.name}` || `NoName`;
+
+      render() {
+        const { children, ...props } = this.props;
+
+        return (
+          <Component ref={(props as any).forwardedRef} {...props}>
+            {children}
+          </Component>
+        );
+      }
+    }
+
+    FinalComponent = motify(ConvertedClassComponent)();
+  } else {
+    FinalComponent = Component;
+  }
+
+  // Types
+
   return React.forwardRef(
     (
       {
         children,
         ...rest
-      }: P &
-        CustomStyleProps & {
-          size?: ResponsiveValue<
-            ComponentSizes<typeof config["componentName"]>
-          >;
-          variant?: ResponsiveValue<
-            ComponentVariants<typeof config["componentName"]>
-          >;
-          colorScheme?: ColorScheme;
+      }: PearlComponent<ComponentProps, StyleProps> &
+        ComponentTypeProps<typeof config["componentName"], ComponentType> & {
           children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
         },
       ref: any
     ) => {
       let convertedProps;
+      let finalProps;
       if (config.type === "atom") {
         convertedProps = useAtomicComponentConfig(
           config["componentName"],
           rest,
           {
-            size: rest.size,
-            variant: rest.variant,
+            size: (rest as any).size,
+            variant: (rest as any).variant,
           },
           rest.colorScheme,
           styleFunctions
         );
+
+        if (config.animatable)
+          convertedProps = useMotiWithStyleProps(
+            convertedProps,
+            styleFunctions
+          );
+
+        finalProps = convertedProps;
       } else if (config.type === "molecule") {
         convertedProps = useMolecularComponentConfig(
           config["componentName"],
           rest,
           {
-            size: rest.size,
-            variant: rest.variant,
+            size: (rest as any).size,
+            variant: (rest as any).variant,
           },
           rest.colorScheme
         );
+
+        finalProps = {
+          molecularProps: convertedProps,
+        };
       } else {
         convertedProps = useStyledProps(rest, styleFunctions);
+
+        if (config.animatable)
+          convertedProps = useMotiWithStyleProps(
+            convertedProps,
+            styleFunctions
+          );
+
+        finalProps = convertedProps;
       }
 
       return (
-        <Component {...(convertedProps as P)} ref={ref}>
+        <FinalComponent {...finalProps} ref={ref}>
           {children}
-        </Component>
+        </FinalComponent>
       );
     }
   );

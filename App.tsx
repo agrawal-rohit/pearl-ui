@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -22,25 +22,10 @@ import {
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
-import Avatar from "./src/components/Molecules/Avatar/Avatar";
-import AvatarGroup from "./src/components/Molecules/Avatar/AvatarGroup";
-import Text from "./src/components/Atoms/Text/Text";
+import Button from "./src/components/Molecules/Button/Button";
 import Box from "./src/components/Atoms/Box/Box";
-import Divider from "./src/components/Atoms/Divider/Divider";
-import Stack, {
-  HStack,
-  VStack,
-  ZStack,
-} from "./src/components/Atoms/Stack/Stack";
-import Icon from "./src/components/Atoms/Icon/Icon";
-import Image from "./src/components/Molecules/Image/Image";
-import Spinner from "./src/components/Atoms/Spinner/Spinner";
-import CheckBox from "./src/components/Molecules/CheckBox/CheckBox";
-import CheckBoxGroup from "./src/components/Molecules/CheckBox/CheckBoxGroup";
-import Input from "./src/components/Molecules/Input/Input";
-import { extendTheme } from "./src/theme/src/base";
-import { pearlify } from "./src/hooks/pearlify";
-import { View } from "react-native";
+import Pressable from "./src/components/Atoms/Pressable/Pressable";
+import Text from "./src/components/Atoms/Text/Text";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -64,11 +49,27 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
-  const [color, setColor] = useState("pink");
-
   return (
     <ThemeProvider haveFontsLoaded={haveFontsLoaded}>
-      <Screen></Screen>
+      <Screen>
+        <Pressable>
+          <Text>Hello</Text>
+        </Pressable>
+
+        <Button
+          onPress={() => {
+            console.log(2);
+          }}
+          from={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "timing" }}
+          backgroundColor="primary.500"
+          isFullWidth
+          boxShadow="4xl"
+        >
+          Press Me
+        </Button>
+      </Screen>
     </ThemeProvider>
   );
 };

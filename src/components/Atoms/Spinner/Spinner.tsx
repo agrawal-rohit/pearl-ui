@@ -12,9 +12,12 @@ import {
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import SpinnerConfig from "./Spinner.config";
 import {
+  AtomComponentProps,
   ColorScheme,
   ComponentSizes,
+  ComponentTypeProps,
   ComponentVariants,
+  PearlComponent,
   ResponsiveValue,
   StyleFunctionContainer,
 } from "../../../theme/src/types";
@@ -30,6 +33,7 @@ import SkypeIndicator from "./indicators/skype";
 import ActivityIndicator from "./indicators/activity";
 import WaveIndicator from "./indicators/wave";
 import { useResponsiveProp } from "../../../hooks/useResponsiveProp";
+import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 
 const indicatorStyleFunctions = [
   colorStyleFunction,
@@ -38,28 +42,19 @@ const indicatorStyleFunctions = [
   positionStyleFunction,
 ] as StyleFunctionContainer[];
 
-type ViewProps = React.ComponentProps<typeof View>;
+type BaseSpinnerProps = React.ComponentProps<typeof View> & {
+  /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
+  isLoading?: boolean;
+  /** Whether the Spinner spans the parent container and centers the spinner within. */
+  isExpanded?: boolean;
+  /** Animation duration in ms.  */
+  animationDuration?: number;
+};
 
 type SpinnerStyleProps = ColorProps &
   SpacingProps &
   LayoutProps &
   PositionProps;
-
-export type SpinnerProps = SpinnerStyleProps &
-  Omit<ViewProps, keyof SpinnerStyleProps> & {
-    /** Size of the spinner. */
-    size?: ResponsiveValue<ComponentSizes<"Spinner">>;
-    /** Type of the spinner. */
-    variant?: ResponsiveValue<ComponentVariants<"Spinner">>;
-    /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
-    isLoading?: boolean;
-    /** Whether the Spinner spans the parent container and centers the spinner within. */
-    isExpanded?: boolean;
-    /** Animation duration in ms.  */
-    animationDuration?: number;
-    /** Active color palette of the spinner */
-    colorScheme?: ColorScheme;
-  };
 
 const IndicatorTypeToComponentMap = {
   ball: BallIndicator,
@@ -74,7 +69,9 @@ const IndicatorTypeToComponentMap = {
 };
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
-const Spinner: React.FC<SpinnerProps> = ({
+const Spinner: React.FC<
+  AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>
+> = ({
   isLoading = true,
   isExpanded = false,
   animationDuration = 1200,
@@ -84,7 +81,7 @@ const Spinner: React.FC<SpinnerProps> = ({
   if (!isLoading) return null;
 
   rest.variant = rest.variant || "spinner";
-  const props = useAtomicComponentConfig(
+  let props = useAtomicComponentConfig(
     "Spinner",
     rest,
     {
@@ -94,6 +91,7 @@ const Spinner: React.FC<SpinnerProps> = ({
     colorScheme,
     indicatorStyleFunctions
   );
+  props = useMotiWithStyleProps(props, indicatorStyleFunctions);
 
   const variantForCurrentScreenSize = useResponsiveProp(rest.variant);
 

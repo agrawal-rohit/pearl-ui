@@ -66,7 +66,7 @@ const newTheme = extendTheme({
         },
       },
       defaults: {
-        variants: "pink",
+        variant: "pink",
       },
     },
   },
@@ -132,7 +132,7 @@ const newTheme = extendTheme({
         },
       },
       defaults: {
-        variants: "blackAndWhite",
+        variant: "blackAndWhite",
       },
     },
   },

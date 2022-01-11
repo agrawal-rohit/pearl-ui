@@ -13,8 +13,8 @@ import {
   ComponentVariants,
   ResponsiveValue,
 } from "../../../theme/src/types";
-import { useAvatarGroup } from "./AvatarGroup";
 import { pearlify } from "../../../hooks/pearlify";
+import { useAvatarGroup } from "./useAvatarGroup";
 
 const defaultGetInitials = (name: string) =>
   name
@@ -112,7 +112,7 @@ const Avatar: React.FC<AvatarProps> = ({ children, ...rest }) => {
   });
 
   // Render a fallback
-  return <StyledAvatar {...rest}>{children}</StyledAvatar>;
+  return <StyledAvatar {...(rest as any)}>{children}</StyledAvatar>;
 };
 
 export default Avatar;

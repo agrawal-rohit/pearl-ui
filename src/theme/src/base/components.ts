@@ -13,6 +13,7 @@ import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
 import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.config";
 
 export default {
+  None: { baseStyle: {} },
   Icon: IconConfig,
   Text: TextConfig,
   Screen: ScreenConfig,

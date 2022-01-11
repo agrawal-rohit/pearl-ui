@@ -6,6 +6,7 @@ import composeStyleProps from "../theme/src/composeStyleProps";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
 import { filterStyledProps } from "./utils/utils";
+import _ from "lodash";
 
 /**
  * Hook to convert the received style props to appropriate React Native styles
@@ -27,13 +28,16 @@ export const useStyledProps = (
 
   if (!props) return { style: {} };
 
-  const style = buildStyleProperties.buildStyle(props, { theme, dimensions });
+  const coreVisualStyle = buildStyleProperties.buildStyle(props, {
+    theme,
+    dimensions,
+  });
 
   const cleanStyleProps = filterStyledProps(
     props,
     buildStyleProperties.properties
   );
 
-  cleanStyleProps.style = { ...style, ...props.style };
+  cleanStyleProps.style = { ...coreVisualStyle, ...props.style };
   return cleanStyleProps;
 };

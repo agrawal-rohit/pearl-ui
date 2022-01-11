@@ -1,54 +1,42 @@
 import React from "react";
-import Box, { BoxProps } from "../Box/Box";
+import { BoxProps } from "../Box/Box";
 import {
-  Pressable as RNPressable,
   PressableAndroidRippleConfig,
   PressableProps as RNPressableProps,
 } from "react-native";
-import { useStyledProps } from "../../../hooks/useStyledProps";
 import {
   boxStyleFunctions,
-  colorStyleFunction,
+  BoxStyleProps,
   createStyleFunction,
   transformColorValue,
 } from "../../../theme/src/styleFunctions";
 import {
-  ColorModeColor,
-  FinalPearlTheme,
+  BasicComponentProps,
   PaletteColors,
   ResponsiveValue,
 } from "../../../theme/src/types";
+import { pearlify } from "../../../hooks/pearlify";
+import {
+  MotiPressable,
+  MotiPressableProps,
+  mergeAnimateProp,
+} from "moti/interactions";
+import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 
-export type PressableProps = BoxProps &
-  Omit<
-    RNPressableProps,
-    | "android_ripple"
-    | "android_disableSound"
-    | "unstable_pressDelay"
-    | "disabled"
-  > & {
-    /** Ripple effect configuration for the android_ripple property. */
-    androidRippleConfig?: PressableAndroidRippleConfig;
+export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
+  Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> & {
     /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
     onPressInDelay?: number;
     /** Whether the press behavior is disabled. */
     isDisabled?: boolean;
     /** If true, doesn't play Android system sound on press. */
     isDisabledAndroidSound?: boolean;
-    /** Enables the Android ripple effect and configures its properties. */
-    isDisabledAndroidRipple?: boolean;
     /** A short description of the action that occurs when this element is interacted with (Used for accessibility) */
     actionDescription?: string;
     /** The opacity of the element when it is pressed */
     activeOpacity?: number;
-    /** The background color of the element when it is pressed */
-    activeBackgroundColor?: ResponsiveValue<PaletteColors>;
   };
-
-const defaultRippleConfig: PressableAndroidRippleConfig = {
-  color: "#E4E9F2",
-  borderless: false,
-};
 
 const activeBackgroundColorStyleFunction = createStyleFunction({
   property: "activeBackgroundColor",
@@ -57,174 +45,52 @@ const activeBackgroundColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
-const pressableStyleFunctions = [
-  ...boxStyleFunctions,
-  activeBackgroundColorStyleFunction,
-];
-
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
 const Pressable = React.forwardRef(
   (
     {
       children,
-      androidRippleConfig,
       onPressInDelay = 100,
       activeOpacity = 1,
       isDisabledAndroidSound = false,
       isDisabled = false,
-      isDisabledAndroidRipple = false,
       accessibilityLabel = "Press me!",
       actionDescription = "",
       accessibilityState = undefined,
-      onPress = null,
-      onPressIn = null,
-      onPressOut = null,
-      onLongPress = null,
+      onPress = undefined,
+      onPressIn = undefined,
+      onPressOut = undefined,
+      onLongPress = undefined,
       ...rest
-    }: PressableProps,
+    }: BasicComponentProps<BasePressableProps>,
     ref: any
   ) => {
-    const props = useStyledProps(rest, pressableStyleFunctions);
-
-    const androidRippleProps = androidRippleConfig
-      ? useStyledProps({ color: androidRippleConfig?.color }, [
-          colorStyleFunction,
-        ]).style
-      : defaultRippleConfig;
-
-    const { style, ...nativeProps } = props;
-    const {
-      margin,
-      marginTop,
-      marginRight,
-      marginBottom,
-      marginLeft,
-      marginHorizontal,
-      marginVertical,
-      marginStart,
-      marginEnd,
-      position,
-      top,
-      right,
-      bottom,
-      left,
-      start,
-      end,
-      borderBottomWidth,
-      borderLeftWidth,
-      borderRightWidth,
-      borderStyle,
-      borderTopWidth,
-      borderStartWidth,
-      borderEndWidth,
-      borderWidth,
-      borderColor,
-      borderTopColor,
-      borderRightColor,
-      borderLeftColor,
-      borderBottomColor,
-      borderStartColor,
-      borderEndColor,
-      shadowOpacity,
-      shadowOffset,
-      shadowRadius,
-      shadowColor,
-      elevation,
-      alignSelf,
-      ...otherPropStyles
-    } = style;
+    let props = useStyledProps(rest, boxStyleFunctions);
+    props = useMotiWithStyleProps(props, boxStyleFunctions);
 
     return (
-      <Box
-        accessible={true}
-        accessibilityLabel={accessibilityLabel}
-        accessibilityHint={actionDescription}
-        accessibilityRole="button"
-        accessibilityState={
-          accessibilityState ? accessibilityState : { disabled: isDisabled }
-        }
-        style={{
-          margin,
-          marginTop,
-          marginRight,
-          marginBottom,
-          marginLeft,
-          marginHorizontal,
-          marginVertical,
-          marginStart,
-          marginEnd,
-          position,
-          top,
-          right,
-          bottom,
-          left,
-          start,
-          end,
-          shadowOpacity,
-          shadowOffset,
-          shadowRadius,
-          shadowColor,
-          elevation,
-          alignSelf,
+      <MotiPressable
+        ref={ref}
+        onPress={!isDisabled ? onPress : undefined}
+        onPressIn={!isDisabled ? onPressIn : undefined}
+        onPressOut={!isDisabled ? onPressOut : undefined}
+        onLongPress={!isDisabled ? onLongPress : undefined}
+        disabled={isDisabled}
+        {...props}
+        animate={(interaction) => {
+          "worklet";
+
+          return mergeAnimateProp(interaction, props.animate, {
+            opacity: interaction.pressed ? activeOpacity : 1,
+          });
         }}
       >
-        <Box
-          borderRadius={rest.borderRadius}
-          borderTopEndRadius={rest.borderTopEndRadius}
-          borderTopLeftRadius={rest.borderTopLeftRadius}
-          borderTopRightRadius={rest.borderTopRightRadius}
-          borderTopStartRadius={rest.borderTopStartRadius}
-          borderBottomEndRadius={rest.borderBottomEndRadius}
-          borderBottomLeftRadius={rest.borderBottomLeftRadius}
-          borderBottomRightRadius={rest.borderBottomRightRadius}
-          borderBottomStartRadius={rest.borderBottomStartRadius}
-          style={{
-            overflow: "hidden",
-          }}
-        >
-          <RNPressable
-            ref={ref}
-            android_ripple={!isDisabledAndroidRipple ? androidRippleProps : {}}
-            onPress={!isDisabled ? onPress : null}
-            onPressIn={!isDisabled ? onPressIn : null}
-            onPressOut={!isDisabled ? onPressOut : null}
-            onLongPress={!isDisabled ? onLongPress : null}
-            disabled={isDisabled}
-            android_disableSound={isDisabledAndroidSound}
-            {...nativeProps}
-            style={({ pressed }) => [
-              otherPropStyles,
-              {
-                opacity: pressed ? activeOpacity : otherPropStyles.opacity,
-                backgroundColor: pressed
-                  ? otherPropStyles.activeBackgroundColor
-                    ? otherPropStyles.activeBackgroundColor
-                    : otherPropStyles.backgroundColor
-                  : otherPropStyles.backgroundColor,
-                borderBottomWidth,
-                borderLeftWidth,
-                borderRightWidth,
-                borderStyle,
-                borderTopWidth,
-                borderStartWidth,
-                borderEndWidth,
-                borderWidth,
-                borderColor,
-                borderTopColor,
-                borderRightColor,
-                borderLeftColor,
-                borderBottomColor,
-                borderStartColor,
-                borderEndColor,
-              },
-            ]}
-          >
-            {children}
-          </RNPressable>
-        </Box>
-      </Box>
+        {children}
+      </MotiPressable>
     );
   }
 );
+
+export type PressableProps = React.ComponentProps<typeof Pressable>;
 
 export default Pressable;

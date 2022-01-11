@@ -5,6 +5,7 @@ export default {
       my: "2xs",
       justifyContent: "center",
       alignItems: "center",
+      activeOpacity: 0.8,
     },
     icon: {
       alignSelf: "center",
@@ -80,7 +81,6 @@ export default {
   variants: {
     filled: {
       root: {
-        activeBackgroundColor: "primary.400",
         backgroundColor: "primary.500",
       },
       text: { color: "neutral.50" },
@@ -93,10 +93,6 @@ export default {
     },
     outline: {
       root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
@@ -114,10 +110,6 @@ export default {
     },
     ghost: {
       root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",

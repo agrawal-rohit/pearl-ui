@@ -4,8 +4,10 @@ import {
   MotiTransitionProp,
   StyleValueWithReplacedTransforms,
   StyleValueWithSequenceArrays,
+  UseAnimationState,
 } from "moti";
 import { SharedValue } from "react-native-reanimated";
+import { BoxStyleProps } from "./styleFunctions";
 
 export type AtLeastOneResponsiveValue<
   TVal extends PropValue = PropValue,
@@ -53,9 +55,15 @@ export interface ColorPalette {
 }
 
 export interface AtomicComponentConfig {
-  baseStyle: Record<string, any>;
-  sizes?: Record<string, any>;
-  variants?: Record<string, any>;
+  baseStyle: {
+    [key: string]: any;
+  };
+  sizes?: {
+    [key: string]: any;
+  };
+  variants?: {
+    [key: string]: any;
+  };
   defaults?: {
     size?: string;
     variant?: string;
@@ -63,15 +71,15 @@ export interface AtomicComponentConfig {
 }
 
 export interface MolecularComponentConfig {
-  parts?: string[];
+  parts: string[];
   baseStyle: {
-    [key: string]: Record<string, any>;
+    [key: string]: any;
   };
   sizes?: {
-    [key: string]: Record<string, any>;
+    [key: string]: any;
   };
   variants?: {
-    [key: string]: Record<string, any>;
+    [key: string]: any;
   };
   defaults?: {
     size?: string;
@@ -102,7 +110,9 @@ export interface ThemeSkeleton {
     [key: string]: number | string;
   };
   components: {
-    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
+    [key: string]:
+      | AtomicComponentConfig
+      | Omit<MolecularComponentConfig, "parts">;
   };
   fonts: {
     [key: string]: string;
@@ -170,27 +180,6 @@ export type ColorModeColor = {
 
 export type PaletteColors = ExpandedColors | ColorModeColor;
 
-// Sizes and Variants
-export type ComponentSizes<
-  ComponentName extends keyof FinalPearlTheme["components"]
-> = FinalPearlTheme["components"][ComponentName] extends
-  | MolecularComponentConfig
-  | AtomicComponentConfig
-  ? FinalPearlTheme["components"][ComponentName]["sizes"] extends object
-    ? keyof FinalPearlTheme["components"][ComponentName]["sizes"]
-    : string
-  : string;
-
-export type ComponentVariants<
-  ComponentName extends keyof FinalPearlTheme["components"]
-> = FinalPearlTheme["components"][ComponentName] extends
-  | MolecularComponentConfig
-  | AtomicComponentConfig
-  ? FinalPearlTheme["components"][ComponentName]["variants"] extends object
-    ? keyof FinalPearlTheme["components"][ComponentName]["variants"]
-    : string
-  : string;
-
 // Style Functions
 export interface StyleFunctionContainer {
   property: string;
@@ -225,55 +214,132 @@ export type RNStyleProperty =
   | keyof TextStyle
   | keyof ImageStyle;
 
-export type PropValue = string | number | undefined | boolean | null | object;
+export type PropValue =
+  | string
+  | number
+  | undefined
+  | boolean
+  | null
+  | object
+  | symbol;
+
+// Sizes and Variants
+export type ComponentTypeProps<
+  ComponentName extends keyof FinalPearlTheme["components"],
+  ComponentType extends "basic" | "atom" | "molecule" = "basic"
+> = ComponentType extends "basic"
+  ? {}
+  : {
+      size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+      variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+    };
+
+export type ComponentSizes<
+  ComponentName extends keyof FinalPearlTheme["components"]
+> = FinalPearlTheme["components"][ComponentName] extends
+  | MolecularComponentConfig
+  | AtomicComponentConfig
+  ? FinalPearlTheme["components"][ComponentName]["sizes"] extends object
+    ? keyof FinalPearlTheme["components"][ComponentName]["sizes"]
+    : string
+  : string;
+
+export type ComponentVariants<
+  ComponentName extends keyof FinalPearlTheme["components"]
+> = FinalPearlTheme["components"][ComponentName] extends
+  | MolecularComponentConfig
+  | AtomicComponentConfig
+  ? FinalPearlTheme["components"][ComponentName]["variants"] extends object
+    ? keyof FinalPearlTheme["components"][ComponentName]["variants"]
+    : string
+  : string;
+
+// TODO: Add Atom and Molecule Component Prop Types
+
+// Component Types
+export type BasicComponentProps<
+  ComponentProps,
+  StyleProps = BoxStyleProps
+> = PearlComponent<ComponentProps, StyleProps>;
+
+export type AtomComponentProps<
+  ComponentName extends keyof FinalPearlTheme["components"],
+  ComponentProps,
+  StyleProps = BoxStyleProps
+> = PearlComponent<ComponentProps, StyleProps> & {
+  size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+  variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+};
+
+export type PearlComponent<
+  ComponentProps,
+  StyleProps = BoxStyleProps
+> = StyleProps &
+  MotiWithPearlStyleProps<ViewStyle, StyleProps> &
+  Omit<
+    ComponentProps,
+    keyof StyleProps & MotiWithPearlStyleProps<ViewStyle, StyleProps>
+  > & {
+    colorScheme?: ColorScheme;
+  };
 
 // MOTI RELATED PROPS
 type OrSharedValue<T> = T | SharedValue<T>;
 
-export type MotiWithPearlStyleProps<NativeComponent, ComponentStyleProps> = {
-  from?:
-    | (Omit<
-        StyleValueWithSequenceArrays<
-          StyleValueWithReplacedTransforms<ViewStyle>
-        >,
-        keyof NativeComponent
-      > &
-        Omit<NativeComponent, keyof ComponentStyleProps> &
-        ComponentStyleProps)
-    | boolean;
+export type MotiWithPearlStyleProps<NativeComponentStyle, ComponentStyleProps> =
+  {
+    from?:
+      | (Omit<
+          StyleValueWithSequenceArrays<
+            StyleValueWithReplacedTransforms<NativeComponentStyle>
+          >,
+          keyof NativeComponentStyle
+        > &
+          Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+          ComponentStyleProps)
+      | boolean;
 
-  animate?: OrSharedValue<
-    Omit<
-      StyleValueWithSequenceArrays<StyleValueWithReplacedTransforms<ViewStyle>>,
-      keyof NativeComponent
-    > &
-      Omit<NativeComponent, keyof ComponentStyleProps> &
-      ComponentStyleProps
-  >;
-  exit?:
-    | (Omit<
-        StyleValueWithReplacedTransforms<ViewStyle>,
-        keyof NativeComponent
+    animate?: OrSharedValue<
+      Omit<
+        StyleValueWithSequenceArrays<
+          StyleValueWithReplacedTransforms<NativeComponentStyle>
+        >,
+        keyof NativeComponentStyle
       > &
-        Omit<NativeComponent, keyof ComponentStyleProps> &
-        ComponentStyleProps)
-    | boolean
-    | ((
-        custom?: any
-      ) => Omit<
-        StyleValueWithReplacedTransforms<ViewStyle>,
-        keyof NativeComponent
+        Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+        ComponentStyleProps
+    >;
+    exit?:
+      | (Omit<
+          StyleValueWithReplacedTransforms<NativeComponentStyle>,
+          keyof NativeComponentStyle
+        > &
+          Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+          ComponentStyleProps)
+      | boolean
+      | ((
+          custom?: any
+        ) => Omit<
+          StyleValueWithReplacedTransforms<NativeComponentStyle>,
+          keyof NativeComponentStyle
+        > &
+          Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+          ComponentStyleProps);
+    transition?: MotiTransitionProp<
+      Omit<
+        StyleValueWithReplacedTransforms<NativeComponentStyle>,
+        keyof NativeComponentStyle
       > &
-        Omit<NativeComponent, keyof ComponentStyleProps> &
-        ComponentStyleProps);
-  transition?: MotiTransitionProp<
-    Omit<StyleValueWithReplacedTransforms<ViewStyle>, keyof NativeComponent> &
-      Omit<NativeComponent, keyof ComponentStyleProps> &
-      ComponentStyleProps
-  >;
-  exitTransition?: MotiTransitionProp<
-    Omit<StyleValueWithReplacedTransforms<ViewStyle>, keyof NativeComponent> &
-      Omit<NativeComponent, keyof ComponentStyleProps> &
-      ComponentStyleProps
-  >;
-};
+        Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+        ComponentStyleProps
+    >;
+    exitTransition?: MotiTransitionProp<
+      Omit<
+        StyleValueWithReplacedTransforms<NativeComponentStyle>,
+        keyof NativeComponentStyle
+      > &
+        Omit<NativeComponentStyle, keyof ComponentStyleProps> &
+        ComponentStyleProps
+    >;
+    state?: Pick<UseAnimationState<any>, "__state">;
+  };

@@ -25,3 +25,17 @@ export const filterStyledProps = (props: any, omitList: any) => {
     return acc;
   }, {});
 };
+
+export const composeMoleculeRootProps = (
+  motiProps: any,
+  molecularProps: any
+) => {
+  return {
+    ...motiProps,
+    ...molecularProps,
+    style: {
+      ...molecularProps.style,
+      ...motiProps.style,
+    },
+  };
+};

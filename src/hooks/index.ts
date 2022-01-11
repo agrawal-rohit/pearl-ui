@@ -7,3 +7,5 @@ export { useColorModeValue } from "./useColorModeValue";
 export { useAccessibleColor } from "./useAccessibleColor";
 export { useResponsiveProp } from "./useResponsiveProp";
 export { pearlify } from "./pearlify";
+
+export { composeMoleculeRootProps } from "./utils/utils";

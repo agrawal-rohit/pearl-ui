@@ -14,8 +14,10 @@ import {
   VisibleProps,
 } from "../../../theme/src/styleFunctions";
 import {
+  AtomComponentProps,
   ComponentSizes,
   ComponentVariants,
+  PearlComponent,
   ResponsiveValue,
   StyleFunctionContainer,
 } from "../../../theme/src/types";
@@ -35,7 +37,6 @@ import {
   SimpleLineIcons,
   Zocial,
 } from "@expo/vector-icons";
-import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import responsiveSize from "../../../utils/responsiveSize";
 import { View } from "react-native";
 import { pearlify } from "../../../hooks/pearlify";
@@ -56,37 +57,30 @@ type IconStyleProps = ColorProps &
   OpacityProps &
   VisibleProps;
 
-type ViewProps = React.ComponentProps<typeof View>;
-
-export type IconProps = IconStyleProps &
-  Omit<ViewProps, keyof IconStyleProps> & {
-    /** Icon family that contains the icon you want to use  */
-    iconFamily:
-      | "AntDesign"
-      | "Entypo"
-      | "EvilIcons"
-      | "Feather"
-      | "FontAwesome"
-      | "FontAwesome5"
-      | "Fontisto"
-      | "Foundation"
-      | "Ionicons"
-      | "MaterialCommunityIcons"
-      | "MaterialIcons"
-      | "Octicons"
-      | "SimpleLineIcons"
-      | "Zocial";
-    /** Name of the icon as given in it's respective icon family */
-    iconName: string;
-    /** The size of the icon */
-    size?: ResponsiveValue<ComponentSizes<"Icon">>;
-    /** The variant of the icon */
-    variant?: ResponsiveValue<ComponentVariants<"Icon">>;
-    /** The accessibility label of the icon */
-    accessibilityLabel?: string;
-    /** Size of the icon in pixels to override the component style size */
-    rawSize?: number;
-  };
+type BaseIconProps = React.ComponentProps<typeof View> & {
+  /** Icon family that contains the icon you want to use  */
+  iconFamily:
+    | "AntDesign"
+    | "Entypo"
+    | "EvilIcons"
+    | "Feather"
+    | "FontAwesome"
+    | "FontAwesome5"
+    | "Fontisto"
+    | "Foundation"
+    | "Ionicons"
+    | "MaterialCommunityIcons"
+    | "MaterialIcons"
+    | "Octicons"
+    | "SimpleLineIcons"
+    | "Zocial";
+  /** Name of the icon as given in it's respective icon family */
+  iconName: string;
+  /** The accessibility label of the icon */
+  accessibilityLabel?: string;
+  /** Size of the icon in pixels to override the component style size */
+  rawSize?: number;
+};
 
 const iconFamilyMapping = {
   AntDesign,
@@ -105,33 +99,41 @@ const iconFamilyMapping = {
   Zocial,
 };
 
-const CustomIcon: React.FC<IconProps> = ({
-  iconFamily,
-  iconName,
-  accessibilityLabel = undefined,
-  rawSize = undefined,
-  ...props
-}) => {
-  const IconToUse = iconFamilyMapping[iconFamily];
+const CustomIcon = React.forwardRef(
+  (
+    {
+      iconFamily,
+      iconName,
+      accessibilityLabel = undefined,
+      rawSize = undefined,
+      ...props
+    }: AtomComponentProps<"Icon", BaseIconProps, IconStyleProps>,
+    ref: any
+  ) => {
+    const IconToUse = iconFamilyMapping[iconFamily];
 
-  return (
-    <IconToUse
-      accessible={true}
-      accessibilityLabel={
-        accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
-      }
-      name={iconName}
-      {...props}
-      size={responsiveSize(rawSize)}
-    ></IconToUse>
-  );
-};
+    return (
+      <IconToUse
+        ref={ref}
+        accessible={true}
+        accessibilityLabel={
+          accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
+        }
+        name={iconName}
+        {...props}
+        size={responsiveSize(rawSize)}
+      ></IconToUse>
+    );
+  }
+);
 
 /** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
-const Icon = pearlify(
+const Icon = pearlify<BaseIconProps, "atom", IconStyleProps>(
   CustomIcon,
-  { componentName: "Icon", type: "atom" },
+  { componentName: "Icon", type: "atom", animatable: true },
   iconStyleFunctions
 );
+
+export type IconProps = React.ComponentProps<typeof Icon>;
 
 export default Icon;

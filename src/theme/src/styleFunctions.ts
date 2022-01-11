@@ -281,26 +281,26 @@ export const allStyleFunctions = [
   colorStyleFunction,
   opacityStyleFunction,
   visibleStyleFunction,
-  backgroundColorStyleFunction,
-  spacingStyleFunction,
-  typographyStyleFunction,
-  layoutStyleFunction,
-  positionStyleFunction,
-  borderStyleFunction,
-  shadowStyleFunction,
-  textShadowStyleFunction,
+  ...backgroundColorStyleFunction,
+  ...spacingStyleFunction,
+  ...typographyStyleFunction,
+  ...layoutStyleFunction,
+  ...positionStyleFunction,
+  ...borderStyleFunction,
+  ...shadowStyleFunction,
+  ...textShadowStyleFunction,
 ];
 
 // Component Specific Style function
 export const boxStyleFunctions = [
-  backgroundColorStyleFunction,
   opacityStyleFunction,
   visibleStyleFunction,
-  layoutStyleFunction,
-  spacingStyleFunction,
-  borderStyleFunction,
-  shadowStyleFunction,
-  positionStyleFunction,
+  ...backgroundColorStyleFunction,
+  ...layoutStyleFunction,
+  ...spacingStyleFunction,
+  ...borderStyleFunction,
+  ...shadowStyleFunction,
+  ...positionStyleFunction,
 ] as StyleFunctionContainer[];
 
 export const textStyleFunctions = [

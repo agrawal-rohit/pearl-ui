@@ -3,6 +3,7 @@ import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
 import { FinalPearlTheme } from "./types";
 import { DimensionsProvider } from "./dimensionsContext";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 type ColorModes = "light" | "dark";
 
@@ -80,7 +81,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
           } as IThemeContext
         }
       >
-        <DimensionsProvider>{children}</DimensionsProvider>
+        <DimensionsProvider>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            {children}
+          </GestureHandlerRootView>
+        </DimensionsProvider>
       </themeContext.Provider>
     );
   }

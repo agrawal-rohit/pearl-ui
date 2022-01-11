@@ -29,9 +29,15 @@ describe("Color mode based color", () => {
       )
       .toJSON();
 
-    expect(tree.props.style.shadowColor).toBe(baseTheme.palette.blue);
-    expect(tree.props.style.borderColor).toBe(baseTheme.palette.tomato);
-    expect(tree.props.style.backgroundColor).toBe(baseTheme.palette.white);
+    expect((tree as any).children[0].props.style.shadowColor).toBe(
+      baseTheme.palette.blue
+    );
+    expect((tree as any).children[0].props.style.borderColor).toBe(
+      baseTheme.palette.tomato
+    );
+    expect((tree as any).children[0].props.style.backgroundColor).toBe(
+      baseTheme.palette.white
+    );
   });
 
   it("uses the light value in light theme", () => {
@@ -56,8 +62,14 @@ describe("Color mode based color", () => {
       )
       .toJSON();
 
-    expect(tree.props.style.shadowColor).toBe(baseTheme.palette.brown);
-    expect(tree.props.style.borderColor).toBe(baseTheme.palette.cyan);
-    expect(tree.props.style.backgroundColor).toBe(baseTheme.palette.black);
+    expect((tree as any).children[0].props.style.shadowColor).toBe(
+      baseTheme.palette.brown
+    );
+    expect((tree as any).children[0].props.style.borderColor).toBe(
+      baseTheme.palette.cyan
+    );
+    expect((tree as any).children[0].props.style.backgroundColor).toBe(
+      baseTheme.palette.black
+    );
   });
 });
