@@ -110,9 +110,7 @@ export interface ThemeSkeleton {
     [key: string]: number | string;
   };
   components: {
-    [key: string]:
-      | AtomicComponentConfig
-      | Omit<MolecularComponentConfig, "parts">;
+    [key: string]: AtomicComponentConfig | MolecularComponentConfig;
   };
   fonts: {
     [key: string]: string;
@@ -229,9 +227,15 @@ export type ComponentTypeProps<
   ComponentType extends "basic" | "atom" | "molecule" = "basic"
 > = ComponentType extends "basic"
   ? {}
+  : ComponentType extends "atom"
+  ? {
+      size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+      variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+    }
   : {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+      atoms?: Record<string, any>;
     };
 
 export type ComponentSizes<
@@ -254,8 +258,6 @@ export type ComponentVariants<
     : string
   : string;
 
-// TODO: Add Atom and Molecule Component Prop Types
-
 // Component Types
 export type BasicComponentProps<
   ComponentProps,
@@ -271,11 +273,31 @@ export type AtomComponentProps<
   variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
 };
 
-export type PearlComponent<
+export type MoleculeComponentProps<
+  ComponentName extends keyof FinalPearlTheme["components"],
   ComponentProps,
   StyleProps = BoxStyleProps
+> = PearlComponent<ComponentProps, StyleProps> & {
+  /** Size of the component. */
+  size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+  /** Variant of the component. */
+  variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+  atoms: Record<string, any>;
+};
+
+type AnimateableProps<
+  StyleProps = BoxStyleProps,
+  Animateable = true
+> = Animateable extends true
+  ? MotiWithPearlStyleProps<ViewStyle, StyleProps>
+  : {};
+
+export type PearlComponent<
+  ComponentProps,
+  StyleProps = BoxStyleProps,
+  Animateable = true
 > = StyleProps &
-  MotiWithPearlStyleProps<ViewStyle, StyleProps> &
+  AnimateableProps<StyleProps, Animateable> &
   Omit<
     ComponentProps,
     keyof StyleProps & MotiWithPearlStyleProps<ViewStyle, StyleProps>

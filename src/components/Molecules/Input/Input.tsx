@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text, { buildFontConfig } from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
@@ -21,6 +21,7 @@ import {
   PaletteColors,
   ComponentSizes,
   ComponentVariants,
+  MoleculeComponentProps,
 } from "../../../theme/src/types";
 import {
   boxStyleFunctions,
@@ -31,6 +32,7 @@ import {
 } from "../../../theme/src/styleFunctions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
+import _ from "lodash";
 
 export type InputProps = Omit<
   TextInputProps,
@@ -160,12 +162,15 @@ const Input = React.forwardRef(
       onChangeText = () => {},
       onChange = () => {},
       ...rest
-    }: InputProps,
+    }: Omit<MoleculeComponentProps<"Input", InputProps>, "atoms"> & {
+      atoms?: Record<string, any>;
+    },
     textInputRef: any
   ) => {
     if (!textInputRef) {
       textInputRef = useRef();
     }
+
     const [isFocused, setIsFocused] = useState(false);
     const [isCleared, setIsCleared] = useState(
       rest.value && rest.value.length > 0 ? false : true
@@ -199,32 +204,56 @@ const Input = React.forwardRef(
         variant: filteredReceivedProps["variant"],
       },
       colorScheme,
+      boxStyleFunctions,
       "root",
       "input"
     );
 
-    const inputProps = useStyledProps(
-      molecularProps.input,
-      inputRootStyleFunctions
-    );
+    const { atoms, ...rootProps } = molecularProps;
+
+    // Transfer the Moti animation props from the 'input' atom props to 'root' props
+    rootProps.animate = atoms.input.animate;
+    rootProps.from = atoms.input.from;
+    rootProps.transition = atoms.input.transition;
+    rootProps.delay = atoms.input.delay;
+    rootProps.state = atoms.input.state;
+    rootProps.stylePriority = atoms.input.stylePriority;
+    rootProps.onDidAnimate = atoms.input.onDidAnimate;
+    rootProps.exit = atoms.input.exit;
+    rootProps.exitTransition = atoms.input.exitTransition;
+    rootProps.animateInitialState = atoms.input.animateInitialState;
+
+    atoms.input = _.omit(atoms.input, [
+      "animate",
+      "from",
+      "transition",
+      "delay",
+      "state",
+      "stylePriority",
+      "onDidAnimate",
+      "exit",
+      "exitTransition",
+      "animateInitialState",
+    ]);
+
+    const inputProps = useStyledProps(atoms.input, inputRootStyleFunctions);
     const { placeholderTextColor, selectionColor, ...finalInputStyle } =
       inputProps.style;
 
     const textProps = useAtomicComponentConfig(
       "Text",
-      molecularProps.text,
+      atoms.text,
       {
         size: size,
-        variant: molecularProps.text.variant,
+        variant: atoms.text.variant,
       },
       "primary",
       inputTextStyleFunctions
     );
 
     const memoizedBuildFontConfig = React.useCallback(
-      () =>
-        buildFontConfig(textProps.style, molecularProps.input.allowFontScaling),
-      [textProps.style, molecularProps.input.allowFontScaling]
+      () => buildFontConfig(textProps.style, atoms.input.allowFontScaling),
+      [textProps.style, atoms.input.allowFontScaling]
     );
 
     const finalTextStyles = {
@@ -291,15 +320,14 @@ const Input = React.forwardRef(
       if (customfallbackProp) {
         fallbackProp = customfallbackProp;
       } else {
-        fallbackProp = molecularProps.root[propertyName];
+        fallbackProp = rootProps[propertyName];
       }
 
       if (isFocused) {
         const focusProp =
           (targetPropertyParent as any)[
             `focus${capitalizeFirstLetter(propertyName)}`
-          ] ||
-          molecularProps.root[`focus${capitalizeFirstLetter(propertyName)}`];
+          ] || rootProps[`focus${capitalizeFirstLetter(propertyName)}`];
         return focusProp ? focusProp : fallbackProp;
       }
 
@@ -307,8 +335,7 @@ const Input = React.forwardRef(
         const errorProp =
           (targetPropertyParent as any)[
             `error${capitalizeFirstLetter(propertyName)}`
-          ] ||
-          molecularProps.root[`error${capitalizeFirstLetter(propertyName)}`];
+          ] || rootProps[`error${capitalizeFirstLetter(propertyName)}`];
         return errorProp ? errorProp : fallbackProp;
       }
 
@@ -319,7 +346,7 @@ const Input = React.forwardRef(
     const renderLeftIcon = () => {
       if (leftIcon) {
         return React.cloneElement(leftIcon, {
-          ...molecularProps.icon,
+          ...atoms.icon,
           ...leftIcon.props,
         });
       }
@@ -328,7 +355,7 @@ const Input = React.forwardRef(
     const renderRightIcon = () => {
       if (rightIcon) {
         return React.cloneElement(rightIcon, {
-          ...molecularProps.icon,
+          ...atoms.icon,
           ...rightIcon.props,
         });
       }
@@ -344,7 +371,7 @@ const Input = React.forwardRef(
             testID="clear-icon"
           >
             <Icon
-              {...molecularProps.icon}
+              {...atoms.icon}
               iconFamily="Ionicons"
               iconName="close"
               marginLeft="xs"
@@ -356,17 +383,17 @@ const Input = React.forwardRef(
 
     const renderErrorMessage = () => {
       if (errorMessage && isInvalid) {
-        return <Text {...molecularProps.errorText}>{errorMessage}</Text>;
+        return <Text {...atoms.errorText}>{errorMessage}</Text>;
       }
     };
 
     return (
       <>
         <Box
-          {...molecularProps.root}
+          {...rootProps}
           backgroundColor={computeFocusOrErrorProps(
             "backgroundColor",
-            molecularProps.root.backgroundColor || molecularProps.root.bg
+            rootProps.backgroundColor || rootProps.bg
           )}
           borderColor={computeFocusOrErrorProps("borderColor")}
           borderStartColor={computeFocusOrErrorProps("borderStartColor")}
@@ -378,11 +405,11 @@ const Input = React.forwardRef(
           opacity={isDisabled ? 0.5 : 1}
           testID="inputFieldContainer"
           style={{
-            ...molecularProps.root.style,
+            ...rootProps.style,
             shadowColor: computeFocusOrErrorProps(
               "shadowColor",
-              molecularProps.root.style.shadowColor,
-              molecularProps.root.style
+              rootProps.style.shadowColor,
+              rootProps.style
             ),
           }}
         >
@@ -397,15 +424,13 @@ const Input = React.forwardRef(
             onChangeText={onChangeTextHandler}
             allowFontScaling={true}
             placeholderTextColor={
-              molecularProps.root.style.placeholderTextColor ||
-              placeholderTextColor
-                ? molecularProps.root.style.placeholderTextColor ||
-                  placeholderTextColor
+              rootProps.style.placeholderTextColor || placeholderTextColor
+                ? rootProps.style.placeholderTextColor || placeholderTextColor
                 : "#a7a7a7"
             }
             selectionColor={
-              molecularProps.root.style.selectionColor || selectionColor
-                ? molecularProps.root.style.selectionColor || selectionColor
+              rootProps.style.selectionColor || selectionColor
+                ? rootProps.style.selectionColor || selectionColor
                 : null
             }
             accessibilityLabel={

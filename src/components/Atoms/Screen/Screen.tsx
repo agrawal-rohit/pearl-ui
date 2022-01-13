@@ -1,6 +1,6 @@
 import React, { LegacyRef, useState } from "react";
 import Box, { BoxProps } from "../Box/Box";
-import { SafeAreaView, StatusBar, RefreshControl } from "react-native";
+import { StatusBar, RefreshControl, Platform } from "react-native";
 import {
   KeyboardAwareScrollView,
   KeyboardAwareScrollViewProps,
@@ -8,6 +8,7 @@ import {
 import { useTheme } from "../../../hooks/useTheme";
 import { pearlify } from "../../../hooks/pearlify";
 import { AtomComponentProps } from "../../../theme/src/types";
+import { SafeAreaView } from "moti";
 
 export type BaseScreenProps = Omit<
   BoxProps,
@@ -83,6 +84,7 @@ const CustomScreen = React.forwardRef(
           style={{
             flex: 1,
             backgroundColor: (props.style as any).backgroundColor,
+            paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
           }}
         >
           <KeyboardAwareScrollView
@@ -128,5 +130,7 @@ const Screen = pearlify<BaseScreenProps, "atom">(CustomScreen, {
   type: "atom",
   animatable: true,
 });
+
+export type ScreenProps = React.ComponentProps<typeof Screen>;
 
 export default Screen;

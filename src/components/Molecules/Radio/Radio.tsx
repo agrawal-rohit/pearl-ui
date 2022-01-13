@@ -8,6 +8,7 @@ import {
   ComponentSizes,
   ComponentVariants,
   PaletteColors,
+  MoleculeComponentProps,
 } from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
@@ -15,7 +16,7 @@ import Stack from "../../Atoms/Stack/Stack";
 import Box from "../../Atoms/Box/Box";
 import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
 import { useRadioGroup } from "./RadioGroup";
-import { GestureResponderEvent } from "react-native";
+import _ from "lodash";
 
 export type RadioProps = PressableProps & {
   /** Size of the radio. */
@@ -72,7 +73,16 @@ export type RadioProps = PressableProps & {
 
 /** The Radio component is used when only one choice may be selected in a series of options. **/
 const Radio = React.forwardRef(
-  ({ children, onPress = () => {}, ...rest }: RadioProps, radioRef: any) => {
+  (
+    {
+      children,
+      onPress = () => {},
+      ...rest
+    }: Omit<MoleculeComponentProps<"Radio", RadioProps>, "atoms"> & {
+      atoms?: Record<string, any>;
+    },
+    radioRef: any
+  ) => {
     let {
       size,
       variant,
@@ -100,17 +110,45 @@ const Radio = React.forwardRef(
         variant: rest.variant,
       },
       rest.colorScheme,
+      boxStyleFunctions,
       "root",
       "outerBox"
     );
 
+    const { atoms, ...rootProps } = molecularProps;
+
+    // Transfer the Moti animation props from the 'outerBox' atom props to 'root' props
+    rootProps.animate = atoms.outerBox.animate;
+    rootProps.from = atoms.outerBox.from;
+    rootProps.transition = atoms.outerBox.transition;
+    rootProps.delay = atoms.outerBox.delay;
+    rootProps.state = atoms.outerBox.state;
+    rootProps.stylePriority = atoms.outerBox.stylePriority;
+    rootProps.onDidAnimate = atoms.outerBox.onDidAnimate;
+    rootProps.exit = atoms.outerBox.exit;
+    rootProps.exitTransition = atoms.outerBox.exitTransition;
+    rootProps.animateInitialState = atoms.outerBox.animateInitialState;
+
+    atoms.outerBox = _.omit(atoms.outerBox, [
+      "animate",
+      "from",
+      "transition",
+      "delay",
+      "state",
+      "stylePriority",
+      "onDidAnimate",
+      "exit",
+      "exitTransition",
+      "animateInitialState",
+    ]);
+
     // OTHER METHODS
-    const radioPressHandler = (event: GestureResponderEvent) => {
+    const radioPressHandler = () => {
       if (isRadioInGroup) {
         setRadioGroupValue(rest.value);
-        if (onPress) onPress(event);
+        if (onPress) onPress();
       }
-      if (onPress) onPress(event);
+      if (onPress) onPress();
     };
 
     const capitalizeFirstLetter = (string: string) => {
@@ -129,22 +167,20 @@ const Radio = React.forwardRef(
       if (customfallbackProp) {
         fallbackProp = customfallbackProp;
       } else {
-        fallbackProp = molecularProps[`${boxType}Box`][propertyName];
+        fallbackProp = atoms[`${boxType}Box`][propertyName];
       }
 
       if (rest.isInvalid) {
         const checkedProp =
           (rest as any)[`error${capitalizeFirstLetter(propertyName)}`] ||
-          molecularProps[`${boxType}Box`][
-            `error${capitalizeFirstLetter(propertyName)}`
-          ];
+          atoms[`${boxType}Box`][`error${capitalizeFirstLetter(propertyName)}`];
         return checkedProp ? checkedProp : fallbackProp;
       }
 
       if (isRadioChecked) {
         const delectedProp =
           (rest as any)[`checked${capitalizeFirstLetter(propertyName)}`] ||
-          molecularProps[`${boxType}Box`][
+          atoms[`${boxType}Box`][
             `checked${capitalizeFirstLetter(propertyName)}`
           ];
 
@@ -157,14 +193,14 @@ const Radio = React.forwardRef(
     // RENDER METHODS
     const renderErrorMessage = () => {
       if (rest.errorMessage && rest.isInvalid) {
-        return <Text {...molecularProps.errorText}>{rest.errorMessage}</Text>;
+        return <Text {...atoms.errorText}>{rest.errorMessage}</Text>;
       }
     };
 
     return (
       <>
         <Stack
-          {...molecularProps.root}
+          {...rootProps}
           accessible={true}
           accessibilityRole="radio"
           accessibilityLabel={
@@ -179,10 +215,10 @@ const Radio = React.forwardRef(
           accessibilityHint={rest.accessibilityHint}
           opacity={rest.isDisabled ? 0.5 : 1}
           direction="horizontal"
-          spacing={rest.spacing || molecularProps.root.spacing}
+          spacing={rest.spacing || rootProps.spacing}
         >
           <Pressable
-            {...molecularProps.outerBox}
+            {...atoms.outerBox}
             ref={radioRef}
             onPress={radioPressHandler}
             alignSelf="center"
@@ -192,8 +228,7 @@ const Radio = React.forwardRef(
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               "outer",
-              molecularProps.outerBox.backgroundColor ||
-                molecularProps.outerBox.bg
+              atoms.outerBox.backgroundColor || atoms.outerBox.bg
             )}
             borderColor={computeCheckedorErrorProps("borderColor", "outer")}
             borderStartColor={computeCheckedorErrorProps(
@@ -220,21 +255,15 @@ const Radio = React.forwardRef(
               "borderBottomColor",
               "outer"
             )}
-            androidRippleConfig={
-              rest.androidRippleConfig
-                ? rest.androidRippleConfig
-                : { color: `${rest.colorScheme}.200` }
-            }
           >
             <Box
-              {...molecularProps.innerBox}
+              {...atoms.innerBox}
               width="100%"
               height="100%"
               backgroundColor={computeCheckedorErrorProps(
                 "backgroundColor",
                 "inner",
-                molecularProps.innerBox.backgroundColor ||
-                  molecularProps.innerBox.bg
+                atoms.innerBox.backgroundColor || atoms.innerBox.bg
               )}
               borderColor={computeCheckedorErrorProps("borderColor", "inner")}
               borderStartColor={computeCheckedorErrorProps(
@@ -265,7 +294,7 @@ const Radio = React.forwardRef(
           </Pressable>
 
           {children && (
-            <Text {...molecularProps.text} alignSelf="center">
+            <Text {...atoms.text} alignSelf="center">
               {children}
             </Text>
           )}

@@ -121,4 +121,6 @@ const Spinner: React.FC<
   );
 };
 
+export type SpinnerProps = React.ComponentProps<typeof Spinner>;
+
 export default Spinner;

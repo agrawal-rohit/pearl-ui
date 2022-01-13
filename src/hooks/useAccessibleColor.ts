@@ -1,7 +1,14 @@
-import { ExpandedColors } from "./../theme/src/types";
+import { useTheme } from "./useTheme";
+import { ColorValue } from "react-native";
+import {
+  ExpandedColors,
+  PaletteColors,
+  ResponsiveValue,
+} from "./../theme/src/types";
 import { colorStyleFunction } from "./../theme/src/styleFunctions";
 import { useStyledProps } from "./useStyledProps";
 import { TinyColor } from "@ctrl/tinycolor";
+import { getNestedObject } from "../theme/utils/typeHelpers";
 
 /**
  * Hook to get the most accessible foreground color value based on a provided background color
@@ -10,19 +17,31 @@ import { TinyColor } from "@ctrl/tinycolor";
  * @returns
  */
 export const useAccessibleColor = (
-  backgroundColor: ExpandedColors,
+  backgroundColor: PaletteColors | string,
   foregroundChoices: { light: ExpandedColors; dark: ExpandedColors } = {
     light: "white",
     dark: "black",
   }
 ) => {
-  const backgroundColorConverted = useStyledProps({ color: backgroundColor }, [
-    colorStyleFunction,
-  ]);
+  const { theme } = useTheme();
 
-  const isColorLight = new TinyColor(
-    backgroundColorConverted.style.color
-  ).isLight();
+  let finalBackgroundColor;
+  if ((backgroundColor as any).includes("#")) {
+    finalBackgroundColor = backgroundColor;
+  }
+
+  // For color palettes with multiple shades
+  else if ((backgroundColor as any).includes(".")) {
+    finalBackgroundColor = getNestedObject(theme, [
+      "palette",
+      (backgroundColor as any).split(".")[0],
+      (backgroundColor as any).split(".")[1],
+    ]);
+  } else {
+    finalBackgroundColor = theme.palette[backgroundColor as any];
+  }
+
+  const isColorLight = new TinyColor(finalBackgroundColor).isLight();
   if (isColorLight) {
     return foregroundChoices.dark;
   }

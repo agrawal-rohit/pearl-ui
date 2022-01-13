@@ -10,6 +10,9 @@ import { useTheme } from "./useTheme";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
+import _, { over } from "lodash";
+import { useStyledProps } from "./useStyledProps";
+import { boxStyleFunctions } from "../theme/src/styleFunctions";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
@@ -23,7 +26,7 @@ import { useResponsiveProp } from "./useResponsiveProp";
  * @returns
  */
 export const useMolecularComponentConfig = (
-  themeComponentKey: keyof FinalPearlTheme["components"],
+  componentName: keyof FinalPearlTheme["components"],
   receivedProps: Record<string, any>,
   sizeAndVariantProps: {
     size?: ResponsiveValue<string | undefined>;
@@ -33,16 +36,20 @@ export const useMolecularComponentConfig = (
     variant: undefined,
   },
   colorScheme: ColorScheme = "primary",
+  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
   targetKeyForOverridenStyleProps: string | undefined = undefined,
   targetKeyForOverridenNativeProps: string | undefined = undefined
 ) => {
   const { theme } = useTheme();
 
   checkKeyAvailability(
-    themeComponentKey as string,
+    componentName as string,
     theme.components,
     "theme.components"
   );
+
+  // User overriden props
+  const overridenProps = useStyledProps(receivedProps, styleFunctions);
 
   // Responsive Size and Variant
   const sizeForCurrentScreenSize = useResponsiveProp(
@@ -53,7 +60,7 @@ export const useMolecularComponentConfig = (
   ) as string;
 
   const componentStyleConfig = theme.components[
-    themeComponentKey
+    componentName
   ] as MolecularComponentConfig;
   const activeSizeAndVariantConfig: MolecularComponentConfig["defaults"] = {};
 
@@ -77,10 +84,15 @@ export const useMolecularComponentConfig = (
 
     if (!componentStyleConfig.hasOwnProperty("parts")) {
       throw new Error(
-        `Key 'parts' does not exist in theme.components["${themeComponentKey}"]`
+        `Key 'parts' does not exist in theme.components["${componentName}"]`
       );
     }
     const componentParts = componentStyleConfig.parts;
+
+    if (!componentParts.includes("root") && componentParts[0] !== "root")
+      throw new Error(
+        `The first part in the component '${componentName}' should be named 'root'`
+      );
 
     finalComponentProps = componentParts.reduce(
       (partStyle: any, part: string) => {
@@ -93,13 +105,13 @@ export const useMolecularComponentConfig = (
               checkKeyAvailability(
                 "sizes",
                 componentStyleConfig,
-                `theme.components['${String(themeComponentKey)}']`
+                `theme.components['${String(componentName)}']`
               );
 
               checkKeyAvailability(
                 activeSizeAndVariantConfig["size"] as string,
                 componentStyleConfig!.sizes!,
-                `theme.components['${String(themeComponentKey)}']['sizes']`
+                `theme.components['${String(componentName)}']['sizes']`
               );
 
               activeSizeAndVariantStyles =
@@ -110,13 +122,13 @@ export const useMolecularComponentConfig = (
               checkKeyAvailability(
                 "variants",
                 componentStyleConfig,
-                `theme.components['${String(themeComponentKey)}']`
+                `theme.components['${String(componentName)}']`
               );
 
               checkKeyAvailability(
                 activeSizeAndVariantConfig["variant"] as string,
                 componentStyleConfig!.variants!,
-                `theme.components['${String(themeComponentKey)}']['variants']`
+                `theme.components['${String(componentName)}']['variants']`
               );
 
               activeSizeAndVariantStyles =
@@ -150,7 +162,7 @@ export const useMolecularComponentConfig = (
             ...currentComponentPartProps,
             style: {
               ...currentComponentPartProps.style,
-              ...receivedProps.style,
+              ...overridenProps.style,
             },
           };
         }
@@ -159,58 +171,68 @@ export const useMolecularComponentConfig = (
           targetKeyForOverridenNativeProps &&
           part === targetKeyForOverridenNativeProps
         ) {
-          const { style, ...nativeOverridenProps } = receivedProps;
+          const { style, ...nativeOverridenProps } = overridenProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,
             ...nativeOverridenProps,
           };
         }
 
+        // For child references
         if (partStyle) {
+          if (overridenProps.atoms)
+            currentComponentPartProps = {
+              ...currentComponentPartProps,
+              ...overridenProps.atoms[part],
+            };
+
           return {
             ...partStyle,
-            [part]: currentComponentPartProps,
+            atoms: {
+              ...partStyle.atoms,
+              [part]: currentComponentPartProps,
+            },
           };
         }
 
+        // Style props by default go to the 'root' part
         if (!targetKeyForOverridenStyleProps) {
           currentComponentPartProps = {
             ...currentComponentPartProps,
             style: {
               ...currentComponentPartProps.style,
-              ...receivedProps.style,
+              ...overridenProps.style,
             },
           };
         }
 
+        // Native props by default go to the 'root' part
         if (!targetKeyForOverridenNativeProps) {
-          const { style, ...nativeOverridenProps } = receivedProps;
+          const { style, ...nativeOverridenProps } = overridenProps;
           currentComponentPartProps = {
             ...currentComponentPartProps,
             ...nativeOverridenProps,
           };
         }
 
-        return {
-          [part]: currentComponentPartProps,
-        };
+        return currentComponentPartProps;
       },
       null
     );
   } else {
     finalComponentProps = componentStyleConfig["baseStyle"];
-    const firstPart = componentStyleConfig.parts[0];
 
     // Pass the overriden props to the first part
     finalComponentProps = {
-      ...finalComponentProps,
-      [firstPart]: {
-        ...finalComponentProps[firstPart],
-        ...receivedProps,
-        style: {
-          ...finalComponentProps[firstPart].style,
-          ...receivedProps.style,
-        },
+      ...finalComponentProps.root,
+      ...overridenProps,
+      style: {
+        ...finalComponentProps.root.style,
+        ...overridenProps.style,
+      },
+      atoms: {
+        ..._.omit(finalComponentProps, "root"),
+        ...overridenProps.atoms,
       },
     };
   }

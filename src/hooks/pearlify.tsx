@@ -1,22 +1,16 @@
 import {
-  ColorScheme,
-  ComponentSizes,
   ComponentTypeProps,
-  ComponentVariants,
   FinalPearlTheme,
-  MotiWithPearlStyleProps,
   PearlComponent,
-  ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
-import React, { ComponentType, Ref, RefObject } from "react";
+import React from "react";
 import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
 import { boxStyleFunctions, BoxStyleProps } from "../theme/src/styleFunctions";
 import { useStyledProps } from "./useStyledProps";
 import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 import { motify } from "moti";
 import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
-import { ViewStyle } from "react-native";
 
 interface PearlifyConfig {
   componentName: keyof FinalPearlTheme["components"];
@@ -45,7 +39,7 @@ export function pearlify<
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) {
   let FinalComponent: any;
-  if (config.animatable) {
+  if (config.animatable && config.type !== "molecule") {
     // Convert the provided component to a Class component
     class ConvertedClassComponent extends React.Component {
       static displayName = `PearlMoti${Component.name}` || `NoName`;
@@ -66,8 +60,6 @@ export function pearlify<
     FinalComponent = Component;
   }
 
-  // Types
-
   return React.forwardRef(
     (
       {
@@ -80,7 +72,6 @@ export function pearlify<
       ref: any
     ) => {
       let convertedProps;
-      let finalProps;
       if (config.type === "atom") {
         convertedProps = useAtomicComponentConfig(
           config["componentName"],
@@ -98,8 +89,6 @@ export function pearlify<
             convertedProps,
             styleFunctions
           );
-
-        finalProps = convertedProps;
       } else if (config.type === "molecule") {
         convertedProps = useMolecularComponentConfig(
           config["componentName"],
@@ -108,12 +97,9 @@ export function pearlify<
             size: (rest as any).size,
             variant: (rest as any).variant,
           },
-          rest.colorScheme
+          rest.colorScheme,
+          styleFunctions
         );
-
-        finalProps = {
-          molecularProps: convertedProps,
-        };
       } else {
         convertedProps = useStyledProps(rest, styleFunctions);
 
@@ -122,12 +108,10 @@ export function pearlify<
             convertedProps,
             styleFunctions
           );
-
-        finalProps = convertedProps;
       }
 
       return (
-        <FinalComponent {...finalProps} ref={ref}>
+        <FinalComponent {...convertedProps} ref={ref}>
           {children}
         </FinalComponent>
       );

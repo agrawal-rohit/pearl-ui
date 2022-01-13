@@ -38,6 +38,9 @@ export type {
   ComponentVariants,
   ColorScheme,
   StyleFunctionContainer,
+  BasicComponentProps,
+  AtomComponentProps,
+  MoleculeComponentProps,
 } from "./src/types";
 export type {
   AllProps,

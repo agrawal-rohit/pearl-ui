@@ -1,3 +1,5 @@
+import _ from "lodash";
+import { Dimensions, FinalPearlTheme } from "../../theme/src/types";
 import { getKeys } from "../../theme/utils/typeHelpers";
 
 export const checkKeyAvailability = (
@@ -26,16 +28,35 @@ export const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
-export const composeMoleculeRootProps = (
-  motiProps: any,
-  molecularProps: any
+export const buildFinalStyleProps = (
+  props: Record<string, any>,
+  buildStyleProperties: any,
+  { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
 ) => {
-  return {
-    ...motiProps,
-    ...molecularProps,
-    style: {
-      ...molecularProps.style,
-      ...motiProps.style,
-    },
-  };
+  const coreVisualStyle = buildStyleProperties.buildStyle(props, {
+    theme,
+    dimensions,
+  });
+
+  const cleanStyleProps = filterStyledProps(
+    props,
+    buildStyleProperties.properties
+  );
+
+  cleanStyleProps.style = { ...coreVisualStyle, ...props.style };
+  return cleanStyleProps;
+};
+
+export const composeMotiProps = (
+  props: Record<string, any>,
+  buildStyleProperties: any,
+  { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
+) => {
+  let motiStyleProps = buildFinalStyleProps(props, buildStyleProperties, {
+    theme,
+    dimensions,
+  });
+  motiStyleProps = { ...motiStyleProps, ...motiStyleProps.style };
+  motiStyleProps = _.omit(motiStyleProps, ["style", "display", "shadowOffset"]);
+  return motiStyleProps;
 };

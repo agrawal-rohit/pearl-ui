@@ -5,7 +5,7 @@ import { useTheme } from "./useTheme";
 import composeStyleProps from "../theme/src/composeStyleProps";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
-import { filterStyledProps } from "./utils/utils";
+import { buildFinalStyleProps, filterStyledProps } from "./utils/utils";
 import _ from "lodash";
 
 /**
@@ -15,7 +15,7 @@ import _ from "lodash";
  * @returns
  */
 export const useStyledProps = (
-  props: { [key: string]: any },
+  props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
 ) => {
   const { theme } = useTheme();
@@ -28,16 +28,8 @@ export const useStyledProps = (
 
   if (!props) return { style: {} };
 
-  const coreVisualStyle = buildStyleProperties.buildStyle(props, {
+  return buildFinalStyleProps(props, buildStyleProperties, {
     theme,
     dimensions,
   });
-
-  const cleanStyleProps = filterStyledProps(
-    props,
-    buildStyleProperties.properties
-  );
-
-  cleanStyleProps.style = { ...coreVisualStyle, ...props.style };
-  return cleanStyleProps;
 };

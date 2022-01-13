@@ -8,6 +8,7 @@ import {
   ComponentSizes,
   ComponentVariants,
   PaletteColors,
+  MoleculeComponentProps,
 } from "../../../theme/src/types";
 import Icon from "../../Atoms/Icon/Icon";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
@@ -113,7 +114,13 @@ export type CheckBoxProps = PressableProps & {
 /** The Checkbox component is used in forms when a user needs to select multiple values from several options. **/
 const CheckBox = React.forwardRef(
   (
-    { children, onPress = () => {}, ...rest }: CheckBoxProps,
+    {
+      children,
+      onPress = () => {},
+      ...rest
+    }: Omit<MoleculeComponentProps<"CheckBox", CheckBoxProps>, "atoms"> & {
+      atoms?: Record<string, any>;
+    },
     checkboxRef: any
   ) => {
     let {
@@ -148,20 +155,22 @@ const CheckBox = React.forwardRef(
         variant: rest.variant,
       },
       rest.colorScheme,
+      boxStyleFunctions,
       "root",
       "box"
     );
+    const { atoms, ...rootProps } = molecularProps;
 
     // OTHER METHODS
-    const checkboxPressHandler = (event: GestureResponderEvent) => {
+    const checkboxPressHandler = () => {
       if (isCheckBoxInGroup) {
         // Add the value to the group if the checkbox is currently unchecked
         if (!isCheckBoxChecked) addCheckBoxGroupValue(rest.value);
         else deleteCheckBoxGroupValue(rest.value);
 
-        if (onPress) onPress(event);
+        if (onPress) onPress();
       }
-      if (onPress) onPress(event);
+      if (onPress) onPress();
     };
 
     const capitalizeFirstLetter = (string: string) => {
@@ -179,20 +188,20 @@ const CheckBox = React.forwardRef(
       if (customfallbackProp) {
         fallbackProp = customfallbackProp;
       } else {
-        fallbackProp = molecularProps.box[propertyName];
+        fallbackProp = atoms.box[propertyName];
       }
 
       if (rest.isInvalid) {
         const checkedProp =
           (rest as any)[`error${capitalizeFirstLetter(propertyName)}`] ||
-          molecularProps.box[`error${capitalizeFirstLetter(propertyName)}`];
+          atoms.box[`error${capitalizeFirstLetter(propertyName)}`];
         return checkedProp ? checkedProp : fallbackProp;
       }
 
       if (isCheckBoxChecked) {
         const checkedProp =
           (rest as any)[`checked${capitalizeFirstLetter(propertyName)}`] ||
-          molecularProps.box[`checked${capitalizeFirstLetter(propertyName)}`];
+          atoms.box[`checked${capitalizeFirstLetter(propertyName)}`];
         return checkedProp ? checkedProp : fallbackProp;
       }
 
@@ -202,14 +211,14 @@ const CheckBox = React.forwardRef(
     // RENDER METHODS
     const renderErrorMessage = () => {
       if (rest.errorMessage && rest.isInvalid) {
-        return <Text {...molecularProps.errorText}>{rest.errorMessage}</Text>;
+        return <Text {...atoms.errorText}>{rest.errorMessage}</Text>;
       }
     };
 
     return (
       <>
         <Stack
-          {...molecularProps.root}
+          {...rootProps}
           accessible={true}
           accessibilityRole="checkbox"
           accessibilityLabel={
@@ -224,10 +233,10 @@ const CheckBox = React.forwardRef(
           accessibilityHint={rest.accessibilityHint}
           opacity={rest.isDisabled ? 0.5 : 1}
           direction="horizontal"
-          spacing={rest.spacing || molecularProps.root.spacing}
+          spacing={rest.spacing || rootProps.spacing}
         >
           <Pressable
-            {...molecularProps.box}
+            {...atoms.box}
             ref={checkboxRef}
             onPress={checkboxPressHandler}
             alignSelf="center"
@@ -236,12 +245,10 @@ const CheckBox = React.forwardRef(
             isDisabled={rest.isDisabled}
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
-              molecularProps.box.backgroundColor || molecularProps.box.bg
+              atoms.box.backgroundColor || atoms.box.bg
             )}
             borderRadius={
-              molecularProps.box.shape === "square"
-                ? molecularProps.box.borderRadius
-                : "full"
+              atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
             }
             borderColor={computeCheckedorErrorProps("borderColor")}
             borderStartColor={computeCheckedorErrorProps("borderStartColor")}
@@ -250,35 +257,27 @@ const CheckBox = React.forwardRef(
             borderLeftColor={computeCheckedorErrorProps("borderLeftColor")}
             borderRightColor={computeCheckedorErrorProps("borderRightColor")}
             borderBottomColor={computeCheckedorErrorProps("borderBottomColor")}
-            androidRippleConfig={
-              rest.androidRippleConfig
-                ? rest.androidRippleConfig
-                : { color: `${rest.colorScheme}.200` }
-            }
           >
             <Icon
-              {...molecularProps.icon}
+              {...atoms.icon}
               iconFamily={
                 rest.isIndeterminate
                   ? rest.indeterminateIconFamily ||
-                    molecularProps.icon.indeterminateIconFamily
-                  : rest.checkedIconFamily ||
-                    molecularProps.icon.checkedIconFamily
+                    atoms.icon.indeterminateIconFamily
+                  : rest.checkedIconFamily || atoms.icon.checkedIconFamily
               }
               iconName={
                 rest.isIndeterminate
                   ? rest.indeterminateIconName ||
-                    molecularProps.icon.indeterminateIconName
-                  : rest.checkedIconName || molecularProps.icon.checkedIconName
+                    atoms.icon.indeterminateIconName
+                  : rest.checkedIconName || atoms.icon.checkedIconName
               }
-              color={
-                isCheckBoxChecked ? molecularProps.icon.color : "transparent"
-              }
+              color={isCheckBoxChecked ? atoms.icon.color : "transparent"}
             />
           </Pressable>
 
           {children && (
-            <Text {...molecularProps.text} alignSelf="center">
+            <Text {...atoms.text} alignSelf="center">
               {children}
             </Text>
           )}

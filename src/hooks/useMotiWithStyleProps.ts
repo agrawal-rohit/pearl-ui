@@ -1,58 +1,81 @@
+import { useMemo } from "react";
 import { getKeys } from "../theme/utils/typeHelpers";
 import { StyleFunctionContainer } from "../theme/src/types";
 import _ from "lodash";
 import { useStyledProps } from "./useStyledProps";
+import { useTheme } from "./useTheme";
+import { useDimensions } from "./useDimensions";
+import composeStyleProps from "../theme/src/composeStyleProps";
+import { composeMotiProps } from "./utils/utils";
 
 export const useMotiWithStyleProps = (
-  props: { [key: string]: any },
+  props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
 ) => {
+  const { theme } = useTheme();
+  const dimensions = useDimensions();
+
+  const buildStyleProperties = useMemo(
+    () => composeStyleProps(styleFunctions),
+    [styleFunctions]
+  );
+
   // Convert Moti Props using style props as well
   // From
-  let fromStyleProps = useStyledProps(props.from, styleFunctions);
-  fromStyleProps = { ...fromStyleProps, ...fromStyleProps.style };
-  fromStyleProps = _.omit(fromStyleProps, ["style", "display", "shadowOffset"]);
-  if (getKeys(fromStyleProps).length > 0) props.from = fromStyleProps;
+  if (props.from)
+    props.from = composeMotiProps(props.from, buildStyleProperties, {
+      theme,
+      dimensions,
+    });
 
   // Animate
-  let animateStyleProps = useStyledProps(props.animate, styleFunctions);
-  animateStyleProps = { ...animateStyleProps, ...animateStyleProps.style };
-  animateStyleProps = _.omit(animateStyleProps, ["style", "display"]);
-  if (getKeys(animateStyleProps).length > 0) props.animate = animateStyleProps;
+  if (props.animate)
+    props.animate = composeMotiProps(props.animate, buildStyleProperties, {
+      theme,
+      dimensions,
+    });
 
   // Transition
-  let transitionStyleProps = useStyledProps(props.transition, styleFunctions);
-  transitionStyleProps = {
-    ...transitionStyleProps,
-    ...transitionStyleProps.style,
-  };
-  transitionStyleProps = _.omit(transitionStyleProps, ["style", "display"]);
-  if (getKeys(transitionStyleProps).length > 0)
-    props.transition = transitionStyleProps;
+  if (props.transition)
+    props.transition = composeMotiProps(
+      props.transition,
+      buildStyleProperties,
+      {
+        theme,
+        dimensions,
+      }
+    );
 
   // Exit
-  let exitStyleProps = useStyledProps(props.exit, styleFunctions);
-  exitStyleProps = { ...exitStyleProps, ...exitStyleProps.style };
-  exitStyleProps = _.omit(exitStyleProps, ["style", "display"]);
-  if (getKeys(exitStyleProps).length > 0) props.exit = exitStyleProps;
+  if (props.exit)
+    props.exit = composeMotiProps(props.exit, buildStyleProperties, {
+      theme,
+      dimensions,
+    });
 
   // Exit Transform
-  let exitTransitionStyleProps = useStyledProps(
-    props.exitTransition,
-    styleFunctions
-  );
-  exitTransitionStyleProps = {
-    ...exitTransitionStyleProps,
-    ...exitTransitionStyleProps.style,
-  };
-  exitTransitionStyleProps = _.omit(exitTransitionStyleProps, [
-    "style",
-    "display",
-  ]);
-  if (getKeys(exitTransitionStyleProps).length > 0)
-    props.exitTransition = exitTransitionStyleProps;
+  if (props.exitTransition)
+    props.exitTransition = composeMotiProps(
+      props.exitTransition,
+      buildStyleProperties,
+      {
+        theme,
+        dimensions,
+      }
+    );
 
-  // TODO: Add transform to animation state
+  if (props.state) {
+    const stateKeys = getKeys(props.state);
+    props.state = stateKeys.reduce((convertedState, key) => {
+      return {
+        ...convertedState,
+        [key]: composeMotiProps(props.state[key], buildStyleProperties, {
+          theme,
+          dimensions,
+        }),
+      };
+    }, {});
+  }
 
   return props;
 };

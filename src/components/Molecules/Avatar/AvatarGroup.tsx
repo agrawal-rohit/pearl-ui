@@ -1,4 +1,4 @@
-import React, { createContext, ReactElement, useContext } from "react";
+import React, { ReactElement } from "react";
 import {
   ComponentSizes,
   ComponentVariants,
@@ -21,7 +21,9 @@ export type AvatarGroupProps = BoxProps & {
   /** The spacing between the avatars */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** The background color of the circle which shows the "+X" label of remaining avatars */
-  truncatedBackgroundColor?: PaletteColors;
+  truncatedBackgroundColor?: ResponsiveValue<PaletteColors>;
+  /** A custom component to show in place of the truncated avatars  */
+  customTruncatedComponent?: React.ReactElement;
   /** Maximum number of avatars to show. It'll truncate the avatars and show a "+X" label (where X is the remaining avatars) */
   max?: number;
 };
@@ -52,6 +54,16 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
           },
         });
       else {
+        if (rest.customTruncatedComponent)
+          return React.cloneElement(rest.customTruncatedComponent, {
+            ...rest.customTruncatedComponent.props,
+            remainingAvatars: avatarChildren.length - max,
+            style: {
+              ...rest.customTruncatedComponent.props.style,
+              marginLeft: index * convertedElementSpacing.style.marginLeft,
+            },
+          });
+
         return (
           <Avatar
             name={`+${avatarChildren.length - max}`}

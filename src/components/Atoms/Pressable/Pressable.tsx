@@ -1,21 +1,7 @@
 import React from "react";
-import { BoxProps } from "../Box/Box";
-import {
-  PressableAndroidRippleConfig,
-  PressableProps as RNPressableProps,
-} from "react-native";
-import {
-  boxStyleFunctions,
-  BoxStyleProps,
-  createStyleFunction,
-  transformColorValue,
-} from "../../../theme/src/styleFunctions";
-import {
-  BasicComponentProps,
-  PaletteColors,
-  ResponsiveValue,
-} from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import Box, { BoxProps } from "../Box/Box";
+import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
+import { BasicComponentProps } from "../../../theme/src/types";
 import {
   MotiPressable,
   MotiPressableProps,
@@ -23,6 +9,8 @@ import {
 } from "moti/interactions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
+import { Platform } from "react-native";
+import _ from "lodash";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> & {
@@ -37,13 +25,6 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     /** The opacity of the element when it is pressed */
     activeOpacity?: number;
   };
-
-const activeBackgroundColorStyleFunction = createStyleFunction({
-  property: "activeBackgroundColor",
-  styleProperty: "activeBackgroundColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
 
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
 const Pressable = React.forwardRef(
