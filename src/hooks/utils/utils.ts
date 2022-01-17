@@ -1,5 +1,10 @@
 import _ from "lodash";
-import { Dimensions, FinalPearlTheme } from "../../theme/src/types";
+import { AllProps } from "../../theme/src/styleFunctions";
+import {
+  Dimensions,
+  FinalPearlTheme,
+  StyleFunctionContainer,
+} from "../../theme/src/types";
 import { getKeys } from "../../theme/utils/typeHelpers";
 
 export const checkKeyAvailability = (
@@ -12,6 +17,40 @@ export const checkKeyAvailability = (
       `Key '${key}' does not exist in ${objectVarName ? objectVarName : object}`
     );
   }
+};
+
+export const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
+  // Create a single array of all property objects
+  const flattenedStyleFunctions = styleFunctions.reduce(
+    (acc: StyleFunctionContainer[], item: any) => {
+      return acc.concat(item);
+    },
+    []
+  );
+
+  // Array of all property names
+  const properties = flattenedStyleFunctions.map((styleFunc: any) => {
+    return styleFunc.property;
+  });
+
+  const funcs = flattenedStyleFunctions.map((styleFunc: any) => {
+    return styleFunc.func;
+  });
+
+  // Convert the component props to the equivalent style properties
+  const buildStyle = (
+    props: AllProps,
+    { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
+  ) => {
+    return funcs.reduce((acc: any, func: any) => {
+      return Object.assign(acc, func(props, { theme, dimensions }));
+    }, {});
+  };
+
+  return {
+    buildStyle,
+    properties,
+  };
 };
 
 export const filterStyledProps = (props: any, omitList: any) => {
@@ -47,7 +86,7 @@ export const buildFinalStyleProps = (
   return cleanStyleProps;
 };
 
-export const composeMotiProps = (
+export const composeCleanStyleProps = (
   props: Record<string, any>,
   buildStyleProperties: any,
   { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }

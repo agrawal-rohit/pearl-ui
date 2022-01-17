@@ -8,7 +8,6 @@ export type BaseTextLinkProps = PressableProps & {
   children?: string;
 };
 
-/** TextLink wraps a Text component with a Pressable component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
 const CustomTextLink = React.forwardRef(
   (
     {
@@ -42,6 +41,7 @@ const CustomTextLink = React.forwardRef(
   }
 );
 
+/** TextLink wraps a Text component with a Pressable component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
 const TextLink = pearlify<BaseTextLinkProps, "molecule">(CustomTextLink, {
   componentName: "TextLink",
   type: "molecule",

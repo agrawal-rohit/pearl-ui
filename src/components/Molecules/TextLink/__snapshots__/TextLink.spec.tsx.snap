@@ -27,7 +27,6 @@ exports[`Molecules/TextLink passes the snapshot test for basic setup 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -104,7 +103,6 @@ exports[`Molecules/TextLink passes the snapshot test for different color schemes
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -170,7 +168,6 @@ exports[`Molecules/TextLink passes the snapshot test for different color schemes
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -247,7 +244,6 @@ exports[`Molecules/TextLink passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -313,7 +309,6 @@ exports[`Molecules/TextLink passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -379,7 +374,6 @@ exports[`Molecules/TextLink passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -445,7 +439,6 @@ exports[`Molecules/TextLink passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -522,7 +515,6 @@ exports[`Molecules/TextLink passes the snapshot test when using style props 1`] 
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }

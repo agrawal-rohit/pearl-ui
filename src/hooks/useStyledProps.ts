@@ -2,10 +2,9 @@ import { useMemo } from "react";
 import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
-import composeStyleProps from "../theme/src/composeStyleProps";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
-import { buildFinalStyleProps, filterStyledProps } from "./utils/utils";
+import { buildFinalStyleProps, composeStyleProps } from "./utils/utils";
 import _ from "lodash";
 
 /**

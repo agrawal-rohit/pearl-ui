@@ -23,14 +23,14 @@ import {
 import { ThemeProvider } from "./src/theme/src/themeContext";
 import Screen from "./src/components/Atoms/Screen/Screen";
 import Button from "./src/components/Molecules/Button/Button";
-import Pressable from "./src/components/Atoms/Pressable/Pressable";
-import Text from "./src/components/Atoms/Text/Text";
 import Image from "./src/components/Molecules/Image/Image";
 import Avatar from "./src/components/Molecules/Avatar/Avatar";
 import AvatarGroup from "./src/components/Molecules/Avatar/AvatarGroup";
 import Input from "./src/components/Molecules/Input/Input";
 import Radio from "./src/components/Molecules/Radio/Radio";
 import CheckBox from "./src/components/Molecules/CheckBox/CheckBox";
+import Box from "./src/components/Atoms/Box/Box";
+import { MotiView } from "moti";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -67,6 +67,9 @@ const App = () => {
           backgroundColor="primary.500"
           isFullWidth
           boxShadow="4xl"
+          _pressed={{
+            mt: "m",
+          }}
         >
           Press Me
         </Button>

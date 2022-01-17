@@ -16,7 +16,6 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import Stack from "../../Atoms/Stack/Stack";
 import { useCheckBoxGroup } from "./CheckBoxGroup";
 import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
-import { GestureResponderEvent } from "react-native";
 
 export type CheckBoxProps = PressableProps & {
   /** Size of the checkbox. */

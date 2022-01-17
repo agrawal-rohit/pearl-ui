@@ -2905,7 +2905,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               animatedStyle={
                 Object {
                   "value": Object {
-                    "opacity": 1,
                     "transform": Array [],
                   },
                 }
@@ -2923,7 +2922,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 15,
                   "justifyContent": "center",
                   "minWidth": 15,
-                  "opacity": 1,
                   "position": "absolute",
                   "right": -0,
                   "transform": Array [],
@@ -3046,7 +3044,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               animatedStyle={
                 Object {
                   "value": Object {
-                    "opacity": 1,
                     "transform": Array [],
                   },
                 }
@@ -3064,7 +3061,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 20,
                   "justifyContent": "center",
                   "minWidth": 20,
-                  "opacity": 1,
                   "position": "absolute",
                   "right": -0,
                   "transform": Array [],
@@ -3187,7 +3183,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               animatedStyle={
                 Object {
                   "value": Object {
-                    "opacity": 1,
                     "transform": Array [],
                   },
                 }
@@ -3205,7 +3200,6 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "height": 25,
                   "justifyContent": "center",
                   "minWidth": 25,
-                  "opacity": 1,
                   "position": "absolute",
                   "right": -5,
                   "transform": Array [],

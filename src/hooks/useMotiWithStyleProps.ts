@@ -2,11 +2,9 @@ import { useMemo } from "react";
 import { getKeys } from "../theme/utils/typeHelpers";
 import { StyleFunctionContainer } from "../theme/src/types";
 import _ from "lodash";
-import { useStyledProps } from "./useStyledProps";
 import { useTheme } from "./useTheme";
 import { useDimensions } from "./useDimensions";
-import composeStyleProps from "../theme/src/composeStyleProps";
-import { composeMotiProps } from "./utils/utils";
+import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
 
 export const useMotiWithStyleProps = (
   props: Record<string, any>,
@@ -20,24 +18,40 @@ export const useMotiWithStyleProps = (
     [styleFunctions]
   );
 
+  const componentStyles = _.omit(props.style, [
+    "shadowOffset",
+    "textShadowOffset",
+  ]);
+
   // Convert Moti Props using style props as well
   // From
-  if (props.from)
-    props.from = composeMotiProps(props.from, buildStyleProperties, {
+  if (props.from) {
+    props.from = composeCleanStyleProps(props.from, buildStyleProperties, {
       theme,
       dimensions,
     });
+  }
 
   // Animate
-  if (props.animate)
-    props.animate = composeMotiProps(props.animate, buildStyleProperties, {
-      theme,
-      dimensions,
-    });
+  if (props.animate) {
+    props.animate = composeCleanStyleProps(
+      props.animate,
+      buildStyleProperties,
+      {
+        theme,
+        dimensions,
+      }
+    );
+
+    props.animate = {
+      ...componentStyles,
+      ...props.animate,
+    };
+  }
 
   // Transition
-  if (props.transition)
-    props.transition = composeMotiProps(
+  if (props.transition) {
+    props.transition = composeCleanStyleProps(
       props.transition,
       buildStyleProperties,
       {
@@ -45,17 +59,19 @@ export const useMotiWithStyleProps = (
         dimensions,
       }
     );
+  }
 
   // Exit
-  if (props.exit)
-    props.exit = composeMotiProps(props.exit, buildStyleProperties, {
+  if (props.exit) {
+    props.exit = composeCleanStyleProps(props.exit, buildStyleProperties, {
       theme,
       dimensions,
     });
+  }
 
   // Exit Transform
-  if (props.exitTransition)
-    props.exitTransition = composeMotiProps(
+  if (props.exitTransition) {
+    props.exitTransition = composeCleanStyleProps(
       props.exitTransition,
       buildStyleProperties,
       {
@@ -63,13 +79,14 @@ export const useMotiWithStyleProps = (
         dimensions,
       }
     );
+  }
 
   if (props.state) {
     const stateKeys = getKeys(props.state);
     props.state = stateKeys.reduce((convertedState, key) => {
       return {
         ...convertedState,
-        [key]: composeMotiProps(props.state[key], buildStyleProperties, {
+        [key]: composeCleanStyleProps(props.state[key], buildStyleProperties, {
           theme,
           dimensions,
         }),

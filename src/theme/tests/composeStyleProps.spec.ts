@@ -4,7 +4,7 @@ import {
   layoutStyleFunction,
   positionStyleFunction,
 } from "./../src/styleFunctions";
-import composeStyleProps from "../src/composeStyleProps";
+import { composeStyleProps } from "../../hooks/utils/utils";
 
 jest.useFakeTimers();
 

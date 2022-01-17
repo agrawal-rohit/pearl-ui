@@ -1,12 +1,4 @@
-import { baseTheme } from "./../../theme/src/base/index";
-import composeStyleProps from "../../theme/src/composeStyleProps";
-import {
-  backgroundColorStyleFunction,
-  layoutStyleFunction,
-  positionStyleFunction,
-} from "../../theme/src/styleFunctions";
-import { StyleFunctionContainer } from "../../theme/src/types";
-import { buildFinalStyleProps, checkKeyAvailability } from "../utils/utils";
+import { checkKeyAvailability } from "../utils/utils";
 
 jest.useFakeTimers();
 

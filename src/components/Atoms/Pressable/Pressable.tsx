@@ -10,6 +10,7 @@ import {
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 import _ from "lodash";
+import { usePressedState } from "../../../hooks/stateHooks/usePressedState";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> & {
@@ -17,10 +18,7 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     onPressInDelay?: number;
     /** Whether the press behavior is disabled. */
     isDisabled?: boolean;
-    /** A short description of the action that occurs when this element is interacted with (Used for accessibility) */
-    actionDescription?: string;
-    /** The opacity of the element when it is pressed */
-    activeOpacity?: number;
+    _pressed?: Record<string, any>;
   };
 
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
@@ -29,10 +27,8 @@ const Pressable = React.forwardRef(
     {
       children,
       onPressInDelay = 100,
-      activeOpacity = 1,
       isDisabled = false,
       accessibilityLabel = "Press me!",
-      actionDescription = "",
       accessibilityState = undefined,
       onPress = undefined,
       onPressIn = undefined,
@@ -45,14 +41,33 @@ const Pressable = React.forwardRef(
     let props = useStyledProps(rest, boxStyleFunctions);
     props = useMotiWithStyleProps(props, boxStyleFunctions);
 
+    // Use Pressed State for dynamic styles
+    const { setPressed, pressedStyles } = usePressedState(
+      props,
+      false,
+      boxStyleFunctions
+    );
+
+    // Methods to handle local pressable state
+    const onPressInHandler = () => {
+      setPressed(true);
+      if (onPressIn) onPressIn();
+    };
+
+    const onPressOutHandler = () => {
+      setPressed(false);
+      if (onPressOut) onPressOut();
+    };
+
+    // Initialize
+
     return (
       <MotiPressable
         ref={ref}
         accessibilityLabel={accessibilityLabel}
-        actionDescription={actionDescription}
         onPress={!isDisabled ? onPress : undefined}
-        onPressIn={!isDisabled ? onPressIn : undefined}
-        onPressOut={!isDisabled ? onPressOut : undefined}
+        onPressIn={!isDisabled ? onPressInHandler : undefined}
+        onPressOut={!isDisabled ? onPressOutHandler : undefined}
         onLongPress={!isDisabled ? onLongPress : undefined}
         disabled={isDisabled}
         {...props}
@@ -60,9 +75,7 @@ const Pressable = React.forwardRef(
         animate={(interaction) => {
           "worklet";
 
-          return mergeAnimateProp(interaction, props.animate, {
-            opacity: interaction.pressed ? activeOpacity : 1,
-          });
+          return mergeAnimateProp(interaction, props.animate, pressedStyles);
         }}
       >
         {children}

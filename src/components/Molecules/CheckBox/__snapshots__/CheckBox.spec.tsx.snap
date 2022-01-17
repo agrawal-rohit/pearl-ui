@@ -78,7 +78,6 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -94,7 +93,6 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -237,7 +235,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -253,7 +250,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -422,7 +418,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -438,7 +433,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -618,7 +612,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -634,7 +627,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -803,7 +795,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -819,7 +810,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -988,7 +978,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1004,7 +993,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -1173,7 +1161,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1189,7 +1176,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -1369,7 +1355,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1385,7 +1370,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -1554,7 +1538,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1570,7 +1553,6 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -1750,7 +1732,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1766,7 +1747,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -1935,7 +1915,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1951,7 +1930,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -2120,7 +2098,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2136,7 +2113,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -2305,7 +2281,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2321,7 +2296,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -2501,7 +2475,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2517,7 +2490,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -2686,7 +2658,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2702,7 +2673,6 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }
@@ -2916,7 +2886,6 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2932,7 +2901,6 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
                 "borderWidth": 2,
                 "display": "flex",
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 2,
                 "transform": Array [],
               }

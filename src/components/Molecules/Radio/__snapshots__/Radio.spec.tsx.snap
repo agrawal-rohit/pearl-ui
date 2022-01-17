@@ -78,7 +78,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -95,7 +94,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -259,7 +257,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -276,7 +273,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -429,7 +425,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -446,7 +441,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -610,7 +604,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -627,7 +620,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
                 "display": "flex",
                 "height": 18,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 3,
                 "transform": Array [],
                 "width": 18,
@@ -780,7 +772,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -797,7 +788,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -950,7 +940,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -967,7 +956,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
                 "display": "flex",
                 "height": 30,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 7,
                 "transform": Array [],
                 "width": 30,
@@ -1120,7 +1108,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1137,7 +1124,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
                 "display": "flex",
                 "height": 36,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 9,
                 "transform": Array [],
                 "width": 36,
@@ -1301,7 +1287,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1318,7 +1303,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -1471,7 +1455,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1488,7 +1471,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -1652,7 +1634,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1669,7 +1650,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -1822,7 +1802,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -1839,7 +1818,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -2003,7 +1981,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2020,7 +1997,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -2173,7 +2149,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2190,7 +2165,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,
@@ -2388,7 +2362,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
             animatedStyle={
               Object {
                 "value": Object {
-                  "opacity": 1,
                   "transform": Array [],
                 },
               }
@@ -2405,7 +2378,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
-                "opacity": 1,
                 "padding": 5,
                 "transform": Array [],
                 "width": 24,

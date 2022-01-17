@@ -27,7 +27,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -44,7 +43,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -102,7 +100,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -119,7 +116,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -177,7 +173,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -194,7 +189,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -252,7 +246,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -269,7 +262,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -327,7 +319,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -344,7 +335,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -413,7 +403,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -429,7 +418,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "height": 20,
             "justifyContent": "center",
             "minWidth": 20,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -487,7 +475,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -503,7 +490,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "height": 25,
             "justifyContent": "center",
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -561,7 +547,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -577,7 +562,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "height": 30,
             "justifyContent": "center",
             "minWidth": 30,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -635,7 +619,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -651,7 +634,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "height": 35,
             "justifyContent": "center",
             "minWidth": 35,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -720,7 +702,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -736,7 +717,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "height": 25,
             "justifyContent": "center",
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -762,7 +742,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -778,7 +757,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "height": 25,
             "justifyContent": "center",
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -836,7 +814,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -852,7 +829,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "height": 25,
             "justifyContent": "center",
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -910,7 +886,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -926,7 +901,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "height": 25,
             "justifyContent": "center",
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -965,7 +939,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -982,7 +955,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -1040,7 +1012,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
         animatedStyle={
           Object {
             "value": Object {
-              "opacity": 1,
               "transform": Array [],
             },
           }
@@ -1057,7 +1028,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "justifyContent": "center",
             "marginBottom": 12,
             "minWidth": 25,
-            "opacity": 1,
             "transform": Array [],
           }
         }
@@ -1144,7 +1114,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
           animatedStyle={
             Object {
               "value": Object {
-                "opacity": 1,
                 "transform": Array [],
               },
             }
@@ -1161,7 +1130,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
               "height": 20,
               "justifyContent": "center",
               "minWidth": 20,
-              "opacity": 1,
               "position": "absolute",
               "right": -5,
               "top": -5,
@@ -1242,7 +1210,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
           animatedStyle={
             Object {
               "value": Object {
-                "opacity": 1,
                 "transform": Array [],
               },
             }
@@ -1260,7 +1227,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
               "height": 25,
               "justifyContent": "center",
               "minWidth": 25,
-              "opacity": 1,
               "position": "absolute",
               "right": -5,
               "transform": Array [],
