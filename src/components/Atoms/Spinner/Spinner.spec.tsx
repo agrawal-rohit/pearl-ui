@@ -76,7 +76,8 @@ describe("Atoms/Spinner", () => {
         </ThemeProvider>
       )
       .toJSON();
-    expect(tree).toBe(null);
+
+    expect((tree as any).children).toBe(null);
   });
 
   it("renders when loading", () => {

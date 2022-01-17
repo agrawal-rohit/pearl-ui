@@ -50,7 +50,7 @@ describe("Molecules/Image", () => {
     });
 
     const tree = (comp as any).toJSON();
-    const imageSource = tree?.children[0].props.source;
+    const imageSource = tree?.children[0].children[0].props.source;
 
     expect(tree).toMatchSnapshot();
     expect(typeof imageSource).toBe("number");
@@ -157,7 +157,7 @@ describe("Molecules/Image", () => {
     });
 
     const tree = (comp as any).toJSON();
-    const imageSource = tree?.children[0].props.source;
+    const imageSource = tree?.children[0].children[0].props.source;
 
     expect(tree).toMatchSnapshot();
     expect(typeof imageSource).toBe("object");

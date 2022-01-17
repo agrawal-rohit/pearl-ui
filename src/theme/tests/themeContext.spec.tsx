@@ -31,6 +31,15 @@ const ThemeTestComponent: React.FC<TestComponentProps> = (props) => {
 };
 
 describe("Theme Context", () => {
+  it("returns null if fonts haven't loaded", () => {
+    const tree = render(
+      <ThemeProvider haveFontsLoaded={false}>
+        <ThemeTestComponent />
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toBe(null);
+  });
+
   it("initially loads the light theme", () => {
     const { getByText } = render(
       <ThemeProvider>

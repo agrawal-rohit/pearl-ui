@@ -14,6 +14,7 @@ describe("Atoms/Pressable", () => {
         <Pressable onPress={onPress}>Button press</Pressable>
       </ThemeProvider>
     ).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 
@@ -38,7 +39,7 @@ describe("Atoms/Pressable", () => {
   it("captures the onPress event", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <Pressable onPress={onPress} testID="testOnPress">
           Button press
@@ -46,8 +47,11 @@ describe("Atoms/Pressable", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("testOnPress");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(1);
+    const tree = component.toJSON();
+    if ((tree as any).children[0].type !== "RNGestureHandlerButton") {
+      const pressableInstance = component.getByTestId("testOnPress");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(1);
+    }
   });
 });

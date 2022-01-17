@@ -103,7 +103,7 @@ describe("Molecules/CheckBox", () => {
   it("captures the onPress event", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <CheckBox onPress={onPress} testID="checkBox">
           Check me
@@ -111,9 +111,15 @@ describe("Molecules/CheckBox", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("checkBox");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(1);
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].type !==
+      "RNGestureHandlerButton"
+    ) {
+      const pressableInstance = component.getByTestId("checkBox");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(1);
+    }
   });
 
   it("changes the active value successfully when used in a group", async () => {
@@ -151,42 +157,48 @@ describe("Molecules/CheckBox", () => {
       );
     };
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <Wrapper />
       </ThemeProvider>
     );
 
-    const checkbox1 = getByTestId("checkbox1");
-    fireEvent.press(checkbox1);
-    expect(onChange).toHaveBeenCalledTimes(1);
-    expect(onChange).toBeCalledWith(["1"]);
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].children[0].children[0]
+        .children[0].type !== "RNGestureHandlerButton"
+    ) {
+      const checkbox1 = component.getByTestId("checkbox1");
+      fireEvent.press(checkbox1);
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toBeCalledWith(["1"]);
 
-    const checkbox2 = getByTestId("checkbox2");
-    fireEvent.press(checkbox2);
-    expect(onChange).toHaveBeenCalledTimes(2);
-    expect(onChange).toBeCalledWith(["1", "2"]);
+      const checkbox2 = component.getByTestId("checkbox2");
+      fireEvent.press(checkbox2);
+      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toBeCalledWith(["1", "2"]);
 
-    // Remove the value
-    fireEvent.press(checkbox2);
-    expect(onChange).toHaveBeenCalledTimes(3);
-    expect(onChange).toBeCalledWith(["1"]);
+      // Remove the value
+      fireEvent.press(checkbox2);
+      expect(onChange).toHaveBeenCalledTimes(3);
+      expect(onChange).toBeCalledWith(["1"]);
 
-    const checkbox3 = getByTestId("checkbox3");
-    fireEvent.press(checkbox3);
-    expect(onChange).toHaveBeenCalledTimes(4);
-    expect(onChange).toBeCalledWith(["1", 3]);
+      const checkbox3 = component.getByTestId("checkbox3");
+      fireEvent.press(checkbox3);
+      expect(onChange).toHaveBeenCalledTimes(4);
+      expect(onChange).toBeCalledWith(["1", 3]);
 
-    const checkbox4 = getByTestId("checkbox4");
-    fireEvent.press(checkbox4);
-    expect(onChange).toHaveBeenCalledTimes(5);
-    expect(onChange).toBeCalledWith(["1", 3, 4]);
+      const checkbox4 = component.getByTestId("checkbox4");
+      fireEvent.press(checkbox4);
+      expect(onChange).toHaveBeenCalledTimes(5);
+      expect(onChange).toBeCalledWith(["1", 3, 4]);
+    }
   });
 
   it("doesn't capture the onPress event when the checkbox is disabled ", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <CheckBox onPress={onPress} isDisabled testID="checkBox">
           Check me
@@ -194,9 +206,15 @@ describe("Molecules/CheckBox", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("checkBox");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(0);
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].type !==
+      "RNGestureHandlerButton"
+    ) {
+      const pressableInstance = component.getByTestId("checkBox");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(0);
+    }
   });
 
   it("shows error message correctly", () => {

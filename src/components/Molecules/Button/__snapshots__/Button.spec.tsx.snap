@@ -2,229 +2,65 @@
 
 exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
 <View
-  accessibilityHint=""
-  accessibilityLabel="Button press"
-  accessibilityRole="button"
-  accessibilityState={
-    Object {
-      "busy": false,
-      "disabled": false,
-    }
-  }
-  accessible={true}
   style={
     Object {
-      "alignSelf": "flex-start",
-      "bottom": undefined,
-      "display": "flex",
-      "elevation": undefined,
-      "end": undefined,
-      "left": undefined,
-      "margin": undefined,
-      "marginBottom": undefined,
-      "marginEnd": undefined,
-      "marginHorizontal": undefined,
-      "marginLeft": undefined,
-      "marginRight": undefined,
-      "marginStart": undefined,
-      "marginTop": undefined,
-      "marginVertical": 4,
-      "position": undefined,
-      "right": undefined,
-      "shadowColor": undefined,
-      "shadowOffset": undefined,
-      "shadowOpacity": undefined,
-      "shadowRadius": undefined,
-      "start": undefined,
-      "top": undefined,
+      "flex": 1,
     }
   }
 >
-  <View
-    style={
-      Object {
-        "borderRadius": 8,
-        "display": "flex",
-        "overflow": "hidden",
-      }
-    }
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
       accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
+      style={Object {}}
+    >
+      <View
+        animatedStyle={
           Object {
-            "activeBackgroundColor": "#8F9DFF",
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
             "alignItems": "center",
+            "alignSelf": "flex-start",
             "backgroundColor": "#6A7BFF",
             "borderRadius": 8,
             "display": "flex",
             "justifyContent": "center",
+            "marginVertical": 4,
             "opacity": 1,
             "paddingHorizontal": 12,
             "paddingVertical": 12,
-          },
-          Object {
-            "backgroundColor": "#6A7BFF",
-            "borderBottomColor": undefined,
-            "borderBottomWidth": undefined,
-            "borderColor": undefined,
-            "borderEndColor": undefined,
-            "borderEndWidth": undefined,
-            "borderLeftColor": undefined,
-            "borderLeftWidth": undefined,
-            "borderRightColor": undefined,
-            "borderRightWidth": undefined,
-            "borderStartColor": undefined,
-            "borderStartWidth": undefined,
-            "borderStyle": undefined,
-            "borderTopColor": undefined,
-            "borderTopWidth": undefined,
-            "borderWidth": undefined,
-            "opacity": 1,
-          },
-        ]
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "display": "flex",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
+            "transform": Array [],
           }
-        }
-        variant="btn2"
-      >
-        Button press
-      </Text>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Molecules/Button passes the snapshot test for different color schemes 1`] = `
-Array [
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Primary button"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
-    >
-      <View
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -236,6 +72,92 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
+            }
+          }
+          variant="btn2"
+        >
+          Button press
+        </Text>
+      </View>
+    </View>
+  </RNGestureHandlerButton>
+</View>
+`;
+
+exports[`Molecules/Button passes the snapshot test for different color schemes 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
+  >
+    <View
+      accessibilityLabel="Primary button"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
+    >
+      <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -244,107 +166,60 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Secondary button"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Secondary button"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#FF8FC9",
-              "alignItems": "center",
-              "backgroundColor": "#FF6AC6",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#FF6AC6",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FF6AC6",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -356,6 +231,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -364,113 +240,73 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </RNGestureHandlerButton>
+</View>
 `;
 
 exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
-Array [
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button with left icon"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
+<View
+  style={
+    Object {
+      "flex": 1,
     }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button with left icon"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "display": "flex",
               "flexDirection": "row",
+              "transform": Array [],
             }
           }
         >
@@ -479,6 +315,14 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
             style={
               Object {
                 "color": "#FFFFFF",
@@ -490,6 +334,7 @@ Array [
                 "includeFontPadding": false,
                 "letterSpacing": 0,
                 "lineHeight": 22,
+                "transform": Array [],
               }
             }
             variant="btn2"
@@ -499,109 +344,64 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button with right icon"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button with right icon"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#F0F2FF",
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
               "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
+              "transform": Array [],
             },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": "#6A7BFF",
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": 1,
-              "opacity": 1,
-            },
-          ]
+          }
         }
-        variant="outline"
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
+        }
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "display": "flex",
               "flexDirection": "row",
+              "transform": Array [],
             }
           }
         >
@@ -609,6 +409,14 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
             style={
               Object {
                 "color": "#6A7BFF",
@@ -620,6 +428,7 @@ Array [
                 "includeFontPadding": false,
                 "letterSpacing": 0,
                 "lineHeight": 22,
+                "transform": Array [],
               }
             }
             variant="btn2"
@@ -630,113 +439,71 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </RNGestureHandlerButton>
+</View>
 `;
 
 exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
-Array [
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
+<View
+  style={
+    Object {
+      "flex": 1,
     }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 4,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="xs"
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 4,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 8,
-              "paddingVertical": 4,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 4,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 8,
+            "paddingVertical": 4,
+            "transform": Array [],
+          }
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -748,6 +515,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 16,
+              "transform": Array [],
             }
           }
           variant="btn4"
@@ -756,108 +524,60 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 4,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="s"
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 4,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 8,
-              "paddingVertical": 8,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 4,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 8,
+            "paddingVertical": 8,
+            "transform": Array [],
+          }
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -869,6 +589,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 20,
+              "transform": Array [],
             }
           }
           variant="btn3"
@@ -877,108 +598,60 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="m"
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -990,6 +663,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -998,108 +672,60 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        size="l"
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 1,
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+            "transform": Array [],
+          }
         }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1111,6 +737,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 26,
+              "transform": Array [],
             }
           }
           variant="btn1"
@@ -1119,113 +746,71 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </RNGestureHandlerButton>
+</View>
 `;
 
 exports[`Molecules/Button passes the snapshot test for different variants 1`] = `
-Array [
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
+<View
+  style={
+    Object {
+      "flex": 1,
     }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
               "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
+              "transform": Array [],
             },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          }
         }
-        variant="filled"
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
+        }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1237,6 +822,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -1245,108 +831,62 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#F0F2FF",
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
               "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
+              "transform": Array [],
             },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": "#6A7BFF",
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": 1,
-              "opacity": 1,
-            },
-          ]
+          }
         }
-        variant="outline"
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
+        }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#6A7BFF",
@@ -1358,6 +898,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -1366,108 +907,60 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Button press"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": false,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#F0F2FF",
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
               "opacity": 1,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
+              "transform": Array [],
             },
-            Object {
-              "backgroundColor": "#FFFFFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 1,
-            },
-          ]
+          }
         }
-        variant="ghost"
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
+        }
       >
         <Text
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#6A7BFF",
@@ -1479,6 +972,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -1487,106 +981,57 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </RNGestureHandlerButton>
+</View>
 `;
 
 exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
-Array [
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Loading"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": true,
-        "disabled": false,
-      }
+<View
+  style={
+    Object {
+      "flex": 1,
     }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  }
+>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Loading"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 0.5,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 0.5,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <View
@@ -1796,6 +1241,14 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "transparent",
@@ -1807,6 +1260,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
+              "transform": Array [],
             }
           }
           variant="btn2"
@@ -1815,109 +1269,63 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Loading"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Loading"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 0.5,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 0.5,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "alignItems": "center",
               "display": "flex",
               "flexDirection": "row",
+              "transform": Array [],
             }
           }
         >
@@ -2122,6 +1530,14 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
             style={
               Object {
                 "color": "#FFFFFF",
@@ -2134,6 +1550,7 @@ Array [
                 "letterSpacing": 0,
                 "lineHeight": 22,
                 "marginLeft": 12,
+                "transform": Array [],
               }
             }
             variant="btn2"
@@ -2143,109 +1560,63 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-  <View
-    accessibilityHint=""
-    accessibilityLabel="Loading"
-    accessibilityRole="button"
-    accessibilityState={
-      Object {
-        "busy": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "bottom": undefined,
-        "display": "flex",
-        "elevation": undefined,
-        "end": undefined,
-        "left": undefined,
-        "margin": undefined,
-        "marginBottom": undefined,
-        "marginEnd": undefined,
-        "marginHorizontal": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginStart": undefined,
-        "marginTop": undefined,
-        "marginVertical": 4,
-        "position": undefined,
-        "right": undefined,
-        "shadowColor": undefined,
-        "shadowOffset": undefined,
-        "shadowOpacity": undefined,
-        "shadowRadius": undefined,
-        "start": undefined,
-        "top": undefined,
-      }
-    }
+  </RNGestureHandlerButton>
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
-      style={
-        Object {
-          "borderRadius": 8,
-          "display": "flex",
-          "overflow": "hidden",
-        }
-      }
+      accessibilityLabel="Loading"
+      accessibilityRole="button"
+      accessible={true}
+      style={Object {}}
     >
       <View
-        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
         collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "activeBackgroundColor": "#8F9DFF",
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 8,
-              "display": "flex",
-              "justifyContent": "center",
-              "opacity": 0.5,
-              "paddingHorizontal": 12,
-              "paddingVertical": 12,
-            },
-            Object {
-              "backgroundColor": "#6A7BFF",
-              "borderBottomColor": undefined,
-              "borderBottomWidth": undefined,
-              "borderColor": undefined,
-              "borderEndColor": undefined,
-              "borderEndWidth": undefined,
-              "borderLeftColor": undefined,
-              "borderLeftWidth": undefined,
-              "borderRightColor": undefined,
-              "borderRightWidth": undefined,
-              "borderStartColor": undefined,
-              "borderStartWidth": undefined,
-              "borderStyle": undefined,
-              "borderTopColor": undefined,
-              "borderTopWidth": undefined,
-              "borderWidth": undefined,
-              "opacity": 0.5,
-            },
-          ]
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderRadius": 8,
+            "display": "flex",
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "paddingHorizontal": 12,
+            "paddingVertical": 12,
+            "transform": Array [],
+          }
         }
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "alignItems": "center",
               "display": "flex",
               "flexDirection": "row",
+              "transform": Array [],
             }
           }
         >
@@ -2253,6 +1624,14 @@ Array [
             accessibilityRole="text"
             accessible={true}
             allowFontScaling={true}
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
             style={
               Object {
                 "color": "#FFFFFF",
@@ -2265,6 +1644,7 @@ Array [
                 "letterSpacing": 0,
                 "lineHeight": 22,
                 "marginRight": 12,
+                "transform": Array [],
               }
             }
             variant="btn2"
@@ -2471,129 +1851,93 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </RNGestureHandlerButton>
+</View>
 `;
 
 exports[`Molecules/Button passes the snapshot test when using style props 1`] = `
 <View
-  accessibilityHint=""
-  accessibilityLabel="Button press"
-  accessibilityRole="button"
-  accessibilityState={
-    Object {
-      "busy": false,
-      "disabled": false,
-    }
-  }
-  accessible={true}
   style={
     Object {
-      "alignSelf": "flex-start",
-      "bottom": undefined,
-      "display": "flex",
-      "elevation": undefined,
-      "end": undefined,
-      "left": undefined,
-      "margin": undefined,
-      "marginBottom": undefined,
-      "marginEnd": undefined,
-      "marginHorizontal": undefined,
-      "marginLeft": undefined,
-      "marginRight": undefined,
-      "marginStart": undefined,
-      "marginTop": undefined,
-      "marginVertical": 4,
-      "position": undefined,
-      "right": undefined,
-      "shadowColor": undefined,
-      "shadowOffset": undefined,
-      "shadowOpacity": undefined,
-      "shadowRadius": undefined,
-      "start": undefined,
-      "top": undefined,
+      "flex": 1,
     }
   }
 >
-  <View
-    style={
-      Object {
-        "borderRadius": 8,
-        "display": "flex",
-        "overflow": "hidden",
-      }
-    }
+  <RNGestureHandlerButton
+    collapsable={false}
+    exclusive={true}
+    onGestureEvent={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onHandlerStateChange={[Function]}
+    rippleColor={0}
   >
     <View
+      accessibilityLabel="Button press"
+      accessibilityRole="button"
       accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
+      style={Object {}}
+    >
+      <View
+        animatedStyle={
           Object {
-            "activeBackgroundColor": "#8F9DFF",
+            "value": Object {
+              "opacity": 1,
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
             "alignItems": "center",
+            "alignSelf": "flex-start",
             "backgroundColor": "#6A7BFF",
+            "borderColor": "#C5CEE0",
             "borderRadius": 8,
+            "borderWidth": 2,
             "display": "flex",
             "justifyContent": "center",
+            "marginVertical": 4,
             "opacity": 1,
             "paddingHorizontal": 12,
             "paddingVertical": 12,
-          },
-          Object {
-            "backgroundColor": "#6A7BFF",
-            "borderBottomColor": undefined,
-            "borderBottomWidth": undefined,
-            "borderColor": "#C5CEE0",
-            "borderEndColor": undefined,
-            "borderEndWidth": undefined,
-            "borderLeftColor": undefined,
-            "borderLeftWidth": undefined,
-            "borderRightColor": undefined,
-            "borderRightWidth": undefined,
-            "borderStartColor": undefined,
-            "borderStartWidth": undefined,
-            "borderStyle": undefined,
-            "borderTopColor": undefined,
-            "borderTopWidth": undefined,
-            "borderWidth": 2,
-            "opacity": 1,
-          },
-        ]
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "display": "flex",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
+            "transform": Array [],
           }
         }
-        variant="btn2"
       >
-        Button press
-      </Text>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Medium",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
+              "transform": Array [],
+            }
+          }
+          variant="btn2"
+        >
+          Button press
+        </Text>
+      </View>
     </View>
-  </View>
+  </RNGestureHandlerButton>
 </View>
 `;

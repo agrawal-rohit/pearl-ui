@@ -1,8 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="s"
     style={
@@ -11,34 +25,57 @@ Array [
         "display": "flex",
         "flexDirection": "row",
         "flexWrap": "wrap",
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
         accessibilityRole="image"
         accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         loaderType="spinner"
         size="s"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 40,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 40,
           }
         }
@@ -46,6 +83,14 @@ Array [
         transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -55,6 +100,7 @@ Array [
               "position": "absolute",
               "right": 0,
               "top": 0,
+              "transform": Array [],
               "width": "100%",
             }
           }
@@ -266,30 +312,52 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
         accessibilityRole="image"
         accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         loaderType="spinner"
         size="m"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 55,
           }
         }
@@ -297,6 +365,14 @@ Array [
         transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -306,6 +382,7 @@ Array [
               "position": "absolute",
               "right": 0,
               "top": 0,
+              "transform": Array [],
               "width": "100%",
             }
           }
@@ -517,30 +594,52 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
         accessibilityRole="image"
         accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         loaderType="spinner"
         size="l"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 70,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 70,
           }
         }
@@ -548,6 +647,14 @@ Array [
         transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -557,6 +664,7 @@ Array [
               "position": "absolute",
               "right": 0,
               "top": 0,
+              "transform": Array [],
               "width": "100%",
             }
           }
@@ -768,29 +876,51 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
       <View
         accessibilityRole="image"
         accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         loaderType="spinner"
         size="xl"
         style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
             "borderWidth": 2,
             "display": "flex",
             "height": 85,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 85,
           }
         }
@@ -798,6 +928,14 @@ Array [
         transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -807,6 +945,7 @@ Array [
               "position": "absolute",
               "right": 0,
               "top": 0,
+              "transform": Array [],
               "width": "100%",
             }
           }
@@ -1017,8 +1156,16 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="s"
     style={
@@ -1028,20 +1175,38 @@ Array [
         "flexDirection": "row",
         "flexWrap": "wrap",
         "marginTop": 12,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         size="s"
         style={
           Object {
@@ -1053,6 +1218,7 @@ Array [
             "display": "flex",
             "height": 40,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 40,
           }
         }
@@ -1061,6 +1227,14 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1072,6 +1246,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 20,
+              "transform": Array [],
             }
           }
           variant="caption"
@@ -1081,16 +1256,33 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         size="m"
         style={
           Object {
@@ -1102,6 +1294,7 @@ Array [
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 55,
           }
         }
@@ -1110,6 +1303,14 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1121,6 +1322,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 28,
+              "transform": Array [],
             }
           }
           variant="p1"
@@ -1130,16 +1332,33 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         size="l"
         style={
           Object {
@@ -1151,6 +1370,7 @@ Array [
             "display": "flex",
             "height": 70,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 70,
           }
         }
@@ -1159,6 +1379,14 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1170,6 +1398,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 28,
+              "transform": Array [],
             }
           }
           variant="p1"
@@ -1179,15 +1408,32 @@ Array [
       </View>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
       <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         size="xl"
         style={
           Object {
@@ -1199,6 +1445,7 @@ Array [
             "display": "flex",
             "height": 85,
             "justifyContent": "center",
+            "transform": Array [],
             "width": 85,
           }
         }
@@ -1207,6 +1454,14 @@ Array [
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#FFFFFF",
@@ -1218,6 +1473,7 @@ Array [
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 38,
+              "transform": Array [],
             }
           }
           variant="p1"
@@ -1226,948 +1482,165 @@ Array [
         </Text>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
 <View
-  direction="horizontal"
-  spacing="s"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
+      "flex": 1,
     }
   }
 >
   <View
-    style={
+    animatedStyle={
       Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-        "marginRight": 12,
+        "value": Object {
+          "transform": Array [],
+        },
       }
     }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ff0000",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "width": 55,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 28,
-          }
-        }
-        variant="p1"
-      >
-        RA
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-        "marginRight": 12,
-      }
-    }
-  >
-    <View
-      accessibilityRole="image"
-      accessible={true}
-      fallbackSource={
-        Object {
-          "uri": "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
-        }
-      }
-      loaderType="spinner"
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ff0000",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "width": 55,
-        }
-      }
-      tint="dark"
-      transitionDuration={600}
-    >
-      <View
-        style={
-          Object {
-            "bottom": 0,
-            "display": "flex",
-            "height": "100%",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "color": "#C5CEE0",
-                  "flex": 0,
-                },
-              ],
-            ]
-          }
-        >
-          <View
-            accessibilityLabel="Loading indicator"
-            accessibilityRole="progressbar"
-            accessible={true}
-            animating={true}
-            spinnerSize={15}
-            style={
-              Object {
-                "height": 15,
-                "width": 15,
-              }
-            }
-            variant="spinner"
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": 0,
-                          },
-                          Object {
-                            "rotate": "-172.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "top": 7.5,
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": -7.5,
-                          },
-                          Object {
-                            "rotate": "352.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#EDF1F7",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "width": 55,
-        }
-      }
-    >
-      <Text />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
-<View
-  spacing="2xl"
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
-  truncatedBackgroundColor="neutral.200"
->
-  <View
+    collapsable={false}
+    direction="horizontal"
+    spacing="s"
     style={
       Object {
         "alignSelf": "flex-start",
         "display": "flex",
-      }
-    }
-  >
-    <View
-      accessibilityRole="image"
-      accessible={true}
-      loaderType="spinner"
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F7F9FC",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "marginLeft": 0,
-          "position": "relative",
-          "width": 55,
-          "zIndex": 3,
-        }
-      }
-      tint="dark"
-      transitionDuration={600}
-    >
-      <View
-        style={
-          Object {
-            "bottom": 0,
-            "display": "flex",
-            "height": "100%",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "color": "#C5CEE0",
-                  "flex": 0,
-                },
-              ],
-            ]
-          }
-        >
-          <View
-            accessibilityLabel="Loading indicator"
-            accessibilityRole="progressbar"
-            accessible={true}
-            animating={true}
-            spinnerSize={15}
-            style={
-              Object {
-                "height": 15,
-                "width": 15,
-              }
-            }
-            variant="spinner"
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": 0,
-                          },
-                          Object {
-                            "rotate": "-172.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "top": 7.5,
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": -7.5,
-                          },
-                          Object {
-                            "rotate": "352.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      accessibilityRole="image"
-      accessible={true}
-      loaderType="spinner"
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F7F9FC",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "marginLeft": 40,
-          "position": "absolute",
-          "width": 55,
-          "zIndex": 2,
-        }
-      }
-      tint="dark"
-      transitionDuration={600}
-    >
-      <View
-        style={
-          Object {
-            "bottom": 0,
-            "display": "flex",
-            "height": "100%",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "color": "#C5CEE0",
-                  "flex": 0,
-                },
-              ],
-            ]
-          }
-        >
-          <View
-            accessibilityLabel="Loading indicator"
-            accessibilityRole="progressbar"
-            accessible={true}
-            animating={true}
-            spinnerSize={15}
-            style={
-              Object {
-                "height": 15,
-                "width": 15,
-              }
-            }
-            variant="spinner"
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": 0,
-                          },
-                          Object {
-                            "rotate": "-172.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
-                        "rotate": "82.5deg",
-                      },
-                      Object {
-                        "rotate": "0deg",
-                      },
-                    ],
-                    "width": 15,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    Object {
-                      "height": 7.5,
-                      "overflow": "hidden",
-                      "top": 7.5,
-                      "width": 15,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": -7.5,
-                          },
-                          Object {
-                            "rotate": "352.5deg",
-                          },
-                        ],
-                        "width": 15,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        Object {
-                          "height": 7.5,
-                          "overflow": "hidden",
-                          "width": 15,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Object {
-                            "borderColor": "#C5CEE0",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#EDF1F7",
-          "borderColor": "#FFFFFF",
-          "borderRadius": 1000,
-          "borderWidth": 2,
-          "display": "flex",
-          "height": 55,
-          "justifyContent": "center",
-          "marginLeft": 80,
-          "position": "absolute",
-          "width": 55,
-          "zIndex": 1,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 28,
-          }
-        }
-        variant="p1"
-      >
-        +1
-      </Text>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
-<View
-  direction="horizontal"
-  spacing="s"
-  style={
-    Object {
-      "alignSelf": "flex-start",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
         "flexDirection": "row",
-        "marginRight": 12,
+        "flexWrap": "wrap",
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
-          "alignSelf": "flex-start",
+          "alignSelf": "stretch",
           "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
-        accessibilityRole="image"
-        accessible={true}
-        loaderType="spinner"
-        onLayout={[Function]}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#00ffff",
+            "backgroundColor": "#ff0000",
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
+            "transform": Array [],
+            "width": 55,
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "display": "flex",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 18.4,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 28,
+              "transform": Array [],
+            }
+          }
+          variant="p1"
+        >
+          RA
+        </Text>
+      </View>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+          "transform": Array [],
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        fallbackSource={
+          Object {
+            "uri": "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+          }
+        }
+        loaderType="spinner"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "borderWidth": 2,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "transform": Array [],
             "width": 55,
           }
         }
@@ -2175,6 +1648,14 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -2184,6 +1665,364 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               "position": "absolute",
               "right": 0,
               "top": 0,
+              "transform": Array [],
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                },
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "color": "#C5CEE0",
+                    "flex": 0,
+                  },
+                ],
+              ]
+            }
+          >
+            <View
+              accessibilityLabel="Loading indicator"
+              accessibilityRole="progressbar"
+              accessible={true}
+              animating={true}
+              spinnerSize={15}
+              style={
+                Object {
+                  "height": 15,
+                  "width": 15,
+                }
+              }
+              variant="spinner"
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "rotate": "82.5deg",
+                        },
+                        Object {
+                          "rotate": "0deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "height": 15,
+                          "transform": Array [
+                            Object {
+                              "translateY": 0,
+                            },
+                            Object {
+                              "rotate": "-172.5deg",
+                            },
+                          ],
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "height": 7.5,
+                            "overflow": "hidden",
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "borderColor": "#C5CEE0",
+                              "borderRadius": 7.5,
+                              "borderWidth": 1.5,
+                              "height": 15,
+                              "width": 15,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "rotate": "82.5deg",
+                        },
+                        Object {
+                          "rotate": "0deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "top": 7.5,
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "height": 15,
+                          "transform": Array [
+                            Object {
+                              "translateY": -7.5,
+                            },
+                            Object {
+                              "rotate": "352.5deg",
+                            },
+                          ],
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "height": 7.5,
+                            "overflow": "hidden",
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "borderColor": "#C5CEE0",
+                              "borderRadius": 7.5,
+                              "borderWidth": 1.5,
+                              "height": 15,
+                              "width": 15,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
+    >
+      <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#EDF1F7",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "transform": Array [],
+            "width": 55,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    spacing="2xl"
+    style={
+      Object {
+        "display": "flex",
+        "transform": Array [],
+      }
+    }
+    truncatedBackgroundColor="neutral.200"
+  >
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "display": "flex",
+          "transform": Array [],
+        }
+      }
+    >
+      <View
+        accessibilityRole="image"
+        accessible={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        loaderType="spinner"
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "borderWidth": 2,
+            "display": "flex",
+            "height": 55,
+            "justifyContent": "center",
+            "marginLeft": 0,
+            "position": "relative",
+            "transform": Array [],
+            "width": 55,
+            "zIndex": 3,
+          }
+        }
+        tint="dark"
+        transitionDuration={600}
+      >
+        <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            Object {
+              "bottom": 0,
+              "display": "flex",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": Array [],
               "width": "100%",
             }
           }
@@ -2394,136 +2233,293 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         </View>
       </View>
       <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
+        accessibilityRole="image"
+        accessible={true}
+        animatedStyle={
           Object {
-            "disabled": false,
+            "value": Object {
+              "transform": Array [],
+            },
           }
         }
-        accessible={true}
+        collapsable={false}
+        loaderType="spinner"
         style={
           Object {
-            "alignSelf": "flex-start",
-            "bottom": -0,
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderBottomLeftRadius": undefined,
+            "borderBottomRightRadius": undefined,
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderTopLeftRadius": undefined,
+            "borderTopRightRadius": undefined,
+            "borderWidth": 2,
             "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
+            "height": 55,
+            "justifyContent": "center",
+            "marginLeft": 40,
             "position": "absolute",
-            "right": -0,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
+            "transform": Array [],
+            "width": 55,
+            "zIndex": 2,
           }
         }
+        tint="dark"
+        transitionDuration={600}
       >
         <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
-              "borderRadius": 1000,
+              "bottom": 0,
               "display": "flex",
-              "overflow": "hidden",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": Array [],
+              "width": "100%",
             }
           }
         >
           <View
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onLayout={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="s"
             style={
               Array [
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#A2D608",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 15,
+                  "flex": 1,
                   "justifyContent": "center",
-                  "minWidth": 15,
-                  "zIndex": 1300,
                 },
-                Object {
-                  "backgroundColor": "#A2D608",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": undefined,
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": undefined,
-                  "opacity": undefined,
-                },
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "color": "#C5CEE0",
+                    "flex": 0,
+                  },
+                ],
               ]
             }
-          />
+          >
+            <View
+              accessibilityLabel="Loading indicator"
+              accessibilityRole="progressbar"
+              accessible={true}
+              animating={true}
+              spinnerSize={15}
+              style={
+                Object {
+                  "height": 15,
+                  "width": 15,
+                }
+              }
+              variant="spinner"
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "rotate": "82.5deg",
+                        },
+                        Object {
+                          "rotate": "0deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "height": 15,
+                          "transform": Array [
+                            Object {
+                              "translateY": 0,
+                            },
+                            Object {
+                              "rotate": "-172.5deg",
+                            },
+                          ],
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "height": 7.5,
+                            "overflow": "hidden",
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "borderColor": "#C5CEE0",
+                              "borderRadius": 7.5,
+                              "borderWidth": 1.5,
+                              "height": 15,
+                              "width": 15,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "bottom": 0,
+                    "justifyContent": "center",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "height": 15,
+                      "transform": Array [
+                        Object {
+                          "rotate": "82.5deg",
+                        },
+                        Object {
+                          "rotate": "0deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      Object {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "top": 7.5,
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "height": 15,
+                          "transform": Array [
+                            Object {
+                              "translateY": -7.5,
+                            },
+                            Object {
+                              "rotate": "352.5deg",
+                            },
+                          ],
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "height": 7.5,
+                            "overflow": "hidden",
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "borderColor": "#C5CEE0",
+                              "borderRadius": 7.5,
+                              "borderWidth": 1.5,
+                              "height": 15,
+                              "width": 15,
+                            }
+                          }
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
         </View>
       </View>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-        "marginRight": 12,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "flex-start",
-          "display": "flex",
-        }
-      }
-    >
       <View
-        onLayout={[Function]}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#00ffff",
+            "backgroundColor": "#EDF1F7",
             "borderColor": "#FFFFFF",
             "borderRadius": 1000,
             "borderWidth": 2,
             "display": "flex",
             "height": 55,
             "justifyContent": "center",
+            "marginLeft": 80,
+            "position": "absolute",
+            "transform": Array [],
             "width": 55,
+            "zIndex": 1,
           }
         }
       >
@@ -2531,6 +2527,14 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           accessibilityRole="text"
           accessible={true}
           allowFontScaling={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
           style={
             Object {
               "color": "#1A2138",
@@ -2542,268 +2546,677 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 28,
+              "transform": Array [],
             }
           }
           variant="p1"
         >
-          RA
+          +1
         </Text>
-      </View>
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "flex-start",
-            "bottom": -0,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": "absolute",
-            "right": -0,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
-        >
-          <View
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onLayout={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="s"
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#FF4B42",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 20,
-                  "justifyContent": "center",
-                  "minWidth": 20,
-                  "zIndex": 1300,
-                },
-                Object {
-                  "backgroundColor": "#FF4B42",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": undefined,
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": undefined,
-                  "opacity": undefined,
-                },
-              ]
-            }
-          >
-            <Text
-              accessibilityRole="text"
-              accessible={true}
-              allowFontScaling={true}
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "display": "flex",
-                  "fontFamily": "Poppins-Medium",
-                  "fontSize": 11.5,
-                  "fontStyle": "normal",
-                  "fontWeight": "500",
-                  "includeFontPadding": false,
-                  "letterSpacing": 0,
-                  "lineHeight": 16,
-                  "paddingHorizontal": 4,
-                }
-              }
-              variant="btn4"
-            >
-              0
-            </Text>
-          </View>
-        </View>
       </View>
     </View>
   </View>
+</View>
+`;
+
+exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    direction="horizontal"
+    spacing="s"
     style={
       Object {
-        "alignSelf": "stretch",
+        "alignSelf": "flex-start",
         "display": "flex",
         "flexDirection": "row",
+        "flexWrap": "wrap",
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
-          "alignSelf": "flex-start",
+          "alignSelf": "stretch",
           "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+          "transform": Array [],
         }
       }
     >
       <View
-        onLayout={[Function]}
-        style={
+        animatedStyle={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "display": "flex",
-            "height": 55,
-            "justifyContent": "center",
-            "width": 55,
+            "value": Object {
+              "transform": Array [],
+            },
           }
         }
-      />
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
+        collapsable={false}
         style={
           Object {
             "alignSelf": "flex-start",
-            "bottom": -5,
             "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": "absolute",
-            "right": -5,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
+            "transform": Array [],
           }
         }
       >
         <View
+          accessibilityRole="image"
+          accessible={true}
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          loaderType="spinner"
+          onLayout={[Function]}
           style={
             Object {
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderBottomLeftRadius": undefined,
+              "borderBottomRightRadius": undefined,
+              "borderColor": "#FFFFFF",
               "borderRadius": 1000,
+              "borderTopLeftRadius": undefined,
+              "borderTopRightRadius": undefined,
+              "borderWidth": 2,
               "display": "flex",
-              "overflow": "hidden",
+              "height": 55,
+              "justifyContent": "center",
+              "transform": Array [],
+              "width": 55,
+            }
+          }
+          tint="dark"
+          transitionDuration={600}
+        >
+          <View
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              Object {
+                "bottom": 0,
+                "display": "flex",
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "transform": Array [],
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                  },
+                  Array [
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    Object {
+                      "color": "#C5CEE0",
+                      "flex": 0,
+                    },
+                  ],
+                ]
+              }
+            >
+              <View
+                accessibilityLabel="Loading indicator"
+                accessibilityRole="progressbar"
+                accessible={true}
+                animating={true}
+                spinnerSize={15}
+                style={
+                  Object {
+                    "height": 15,
+                    "width": 15,
+                  }
+                }
+                variant="spinner"
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "rotate": "82.5deg",
+                          },
+                          Object {
+                            "rotate": "0deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "height": 15,
+                            "transform": Array [
+                              Object {
+                                "translateY": 0,
+                              },
+                              Object {
+                                "rotate": "-172.5deg",
+                              },
+                            ],
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          collapsable={false}
+                          style={
+                            Object {
+                              "height": 7.5,
+                              "overflow": "hidden",
+                              "width": 15,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderColor": "#C5CEE0",
+                                "borderRadius": 7.5,
+                                "borderWidth": 1.5,
+                                "height": 15,
+                                "width": 15,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "rotate": "82.5deg",
+                          },
+                          Object {
+                            "rotate": "0deg",
+                          },
+                        ],
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        Object {
+                          "height": 7.5,
+                          "overflow": "hidden",
+                          "top": 7.5,
+                          "width": 15,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "height": 15,
+                            "transform": Array [
+                              Object {
+                                "translateY": -7.5,
+                              },
+                              Object {
+                                "rotate": "352.5deg",
+                              },
+                            ],
+                            "width": 15,
+                          }
+                        }
+                      >
+                        <View
+                          collapsable={false}
+                          style={
+                            Object {
+                              "height": 7.5,
+                              "overflow": "hidden",
+                              "width": 15,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderColor": "#C5CEE0",
+                                "borderRadius": 7.5,
+                                "borderWidth": 1.5,
+                                "height": 15,
+                                "width": 15,
+                              }
+                            }
+                          />
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessible={true}
+            style={Object {}}
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "opacity": 1,
+                    "transform": Array [],
+                  },
+                }
+              }
+              collapsable={false}
+              onLayout={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "flex-start",
+                  "backgroundColor": "#A2D608",
+                  "borderRadius": 1000,
+                  "bottom": -0,
+                  "display": "flex",
+                  "height": 15,
+                  "justifyContent": "center",
+                  "minWidth": 15,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": -0,
+                  "transform": Array [],
+                  "zIndex": 1300,
+                }
+              }
+            />
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 12,
+          "transform": Array [],
+        }
+      }
+    >
+      <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "display": "flex",
+            "transform": Array [],
+          }
+        }
+      >
+        <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          onLayout={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "display": "flex",
+              "height": 55,
+              "justifyContent": "center",
+              "transform": Array [],
+              "width": 55,
             }
           }
         >
-          <View
+          <Text
+            accessibilityRole="text"
             accessible={true}
+            allowFontScaling={true}
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onLayout={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="m"
             style={
-              Array [
+              Object {
+                "color": "#1A2138",
+                "display": "flex",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 18.4,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 28,
+                "transform": Array [],
+              }
+            }
+            variant="p1"
+          >
+            RA
+          </Text>
+        </View>
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessible={true}
+            style={Object {}}
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "opacity": 1,
+                    "transform": Array [],
+                  },
+                }
+              }
+              collapsable={false}
+              onLayout={[Function]}
+              style={
                 Object {
                   "alignItems": "center",
+                  "alignSelf": "flex-start",
+                  "backgroundColor": "#FF4B42",
+                  "borderRadius": 1000,
+                  "bottom": -0,
+                  "display": "flex",
+                  "height": 20,
+                  "justifyContent": "center",
+                  "minWidth": 20,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": -0,
+                  "transform": Array [],
+                  "zIndex": 1300,
+                }
+              }
+            >
+              <Text
+                accessibilityRole="text"
+                accessible={true}
+                allowFontScaling={true}
+                animatedStyle={
+                  Object {
+                    "value": Object {
+                      "transform": Array [],
+                    },
+                  }
+                }
+                collapsable={false}
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "display": "flex",
+                    "fontFamily": "Poppins-Medium",
+                    "fontSize": 11.5,
+                    "fontStyle": "normal",
+                    "fontWeight": "500",
+                    "includeFontPadding": false,
+                    "letterSpacing": 0,
+                    "lineHeight": 16,
+                    "paddingHorizontal": 4,
+                    "transform": Array [],
+                  }
+                }
+                variant="btn4"
+              >
+                0
+              </Text>
+            </View>
+          </View>
+        </RNGestureHandlerButton>
+      </View>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
+    >
+      <View
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignSelf": "flex-start",
+            "display": "flex",
+            "transform": Array [],
+          }
+        }
+      >
+        <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          onLayout={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ff0000",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "display": "flex",
+              "height": 55,
+              "justifyContent": "center",
+              "transform": Array [],
+              "width": 55,
+            }
+          }
+        />
+        <RNGestureHandlerButton
+          collapsable={false}
+          exclusive={true}
+          onGestureEvent={[Function]}
+          onGestureHandlerEvent={[Function]}
+          onGestureHandlerStateChange={[Function]}
+          onHandlerStateChange={[Function]}
+          rippleColor={0}
+        >
+          <View
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessible={true}
+            style={Object {}}
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "opacity": 1,
+                    "transform": Array [],
+                  },
+                }
+              }
+              collapsable={false}
+              onLayout={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "flex-start",
                   "backgroundColor": "#6A7BFF",
                   "borderRadius": 1000,
+                  "bottom": -5,
                   "display": "flex",
                   "height": 25,
                   "justifyContent": "center",
                   "minWidth": 25,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": -5,
+                  "transform": Array [],
                   "zIndex": 1300,
-                },
-                Object {
-                  "backgroundColor": "#6A7BFF",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": undefined,
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": undefined,
-                  "opacity": undefined,
-                },
-              ]
-            }
-          >
-            <Text />
+                }
+              }
+            >
+              <Text />
+            </View>
           </View>
-        </View>
+        </RNGestureHandlerButton>
       </View>
     </View>
   </View>

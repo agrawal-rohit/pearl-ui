@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Array [
@@ -198,7 +204,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -395,7 +401,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -592,7 +598,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -789,7 +795,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -986,12 +992,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Array [
@@ -1188,7 +1200,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -1385,7 +1397,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -1582,7 +1594,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -1779,12 +1791,18 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Array [
@@ -2178,7 +2196,7 @@ Array [
         />
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -2493,7 +2511,7 @@ Array [
         />
       </View>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Loading indicator"
     accessibilityRole="progressbar"
@@ -2512,11 +2530,20 @@ Array [
     variant="bar"
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
+          "transform": Array [],
           "width": 3,
         }
       }
@@ -2555,11 +2582,20 @@ Array [
       />
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
+          "transform": Array [],
           "width": 3,
         }
       }
@@ -2598,11 +2634,20 @@ Array [
       />
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "height": 15,
           "marginHorizontal": 2,
+          "transform": Array [],
           "width": 3,
         }
       }
@@ -2640,7 +2685,7 @@ Array [
         }
       />
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Loading indicator"
     accessibilityRole="progressbar"
@@ -2723,7 +2768,7 @@ Array [
         }
       }
     />
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -2874,7 +2919,7 @@ Array [
         }
       />
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -2968,7 +3013,7 @@ Array [
         />
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -3172,7 +3217,7 @@ Array [
         />
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -3369,7 +3414,7 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -3527,233 +3572,268 @@ Array [
         />
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or not 1`] = `
 <View
-  direction="vertical"
-  spacing="l"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "display": "flex",
-      "flexDirection": "column",
-      "flexWrap": "nowrap",
+      "flex": 1,
     }
   }
 >
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    direction="vertical"
+    spacing="l"
     style={
       Object {
-        "alignSelf": "stretch",
+        "alignSelf": "flex-start",
         "display": "flex",
         "flexDirection": "column",
-        "marginBottom": 24,
+        "flexWrap": "nowrap",
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
-          "backgroundColor": "#EDF1F7",
+          "alignSelf": "stretch",
           "display": "flex",
-          "height": 100,
-          "width": 200,
+          "flexDirection": "column",
+          "marginBottom": 24,
+          "transform": Array [],
         }
       }
     >
       <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "flex": 1,
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
             },
-            Array [
-              false,
-              Object {
-                "color": "#6A7BFF",
-                "flex": 0,
-              },
-            ],
-          ]
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "display": "flex",
+            "height": 100,
+            "transform": Array [],
+            "width": 200,
+          }
         }
       >
         <View
-          accessibilityLabel="Loading indicator"
-          accessibilityRole="progressbar"
-          accessible={true}
-          animating={true}
-          spinnerSize={15}
           style={
-            Object {
-              "height": 15,
-              "width": 15,
-            }
-          }
-          variant="spinner"
-        >
-          <View
-            style={
+            Array [
               Object {
                 "alignItems": "center",
-                "bottom": 0,
+                "flex": 1,
                 "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+              },
+              Array [
+                false,
+                Object {
+                  "color": "#6A7BFF",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animating={true}
+            spinnerSize={15}
+            style={
+              Object {
+                "height": 15,
+                "width": 15,
               }
             }
+            variant="spinner"
           >
             <View
               style={
                 Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "rotate": "82.5deg",
-                    },
-                    Object {
-                      "rotate": "0deg",
-                    },
-                  ],
-                  "width": 15,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
             >
               <View
-                collapsable={false}
                 style={
                   Object {
-                    "height": 7.5,
-                    "overflow": "hidden",
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
                     "width": 15,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
-                      "height": 15,
-                      "transform": Array [
-                        Object {
-                          "translateY": 0,
-                        },
-                        Object {
-                          "rotate": "-172.5deg",
-                        },
-                      ],
+                      "height": 7.5,
+                      "overflow": "hidden",
                       "width": 15,
                     }
                   }
                 >
                   <View
-                    collapsable={false}
                     style={
                       Object {
-                        "height": 7.5,
-                        "overflow": "hidden",
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": 0,
+                          },
+                          Object {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
                         "width": 15,
                       }
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
-                          "borderColor": "#6A7BFF",
-                          "borderRadius": 7.5,
-                          "borderWidth": 1.5,
-                          "height": 15,
+                          "height": 7.5,
+                          "overflow": "hidden",
                           "width": 15,
                         }
                       }
-                    />
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#6A7BFF",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
             </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "bottom": 0,
-                "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
-            }
-          >
             <View
               style={
                 Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "rotate": "82.5deg",
-                    },
-                    Object {
-                      "rotate": "0deg",
-                    },
-                  ],
-                  "width": 15,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
             >
               <View
-                collapsable={false}
                 style={
                   Object {
-                    "height": 7.5,
-                    "overflow": "hidden",
-                    "top": 7.5,
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
                     "width": 15,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
-                      "height": 15,
-                      "transform": Array [
-                        Object {
-                          "translateY": -7.5,
-                        },
-                        Object {
-                          "rotate": "352.5deg",
-                        },
-                      ],
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "top": 7.5,
                       "width": 15,
                     }
                   }
                 >
                   <View
-                    collapsable={false}
                     style={
                       Object {
-                        "height": 7.5,
-                        "overflow": "hidden",
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": -7.5,
+                          },
+                          Object {
+                            "rotate": "352.5deg",
+                          },
+                        ],
                         "width": 15,
                       }
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
-                          "borderColor": "#6A7BFF",
-                          "borderRadius": 7.5,
-                          "borderWidth": 1.5,
-                          "height": 15,
+                          "height": 7.5,
+                          "overflow": "hidden",
                           "width": 15,
                         }
                       }
-                    />
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#6A7BFF",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
@@ -3762,222 +3842,240 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
         </View>
       </View>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "column",
-      }
-    }
-  >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
-          "backgroundColor": "#EDF1F7",
+          "alignSelf": "stretch",
           "display": "flex",
-          "height": 100,
-          "width": 200,
+          "flexDirection": "column",
+          "transform": Array [],
         }
       }
     >
       <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "flex": 1,
-              "justifyContent": "center",
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
             },
-            Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "color": "#6A7BFF",
-                "flex": 0,
-              },
-            ],
-          ]
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#EDF1F7",
+            "display": "flex",
+            "height": 100,
+            "transform": Array [],
+            "width": 200,
+          }
         }
       >
         <View
-          accessibilityLabel="Loading indicator"
-          accessibilityRole="progressbar"
-          accessible={true}
-          animating={true}
-          spinnerSize={15}
           style={
-            Object {
-              "height": 15,
-              "width": 15,
-            }
-          }
-          variant="spinner"
-        >
-          <View
-            style={
+            Array [
               Object {
                 "alignItems": "center",
-                "bottom": 0,
+                "flex": 1,
                 "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+              },
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "color": "#6A7BFF",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animating={true}
+            spinnerSize={15}
+            style={
+              Object {
+                "height": 15,
+                "width": 15,
               }
             }
+            variant="spinner"
           >
             <View
               style={
                 Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "rotate": "82.5deg",
-                    },
-                    Object {
-                      "rotate": "0deg",
-                    },
-                  ],
-                  "width": 15,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
             >
               <View
-                collapsable={false}
                 style={
                   Object {
-                    "height": 7.5,
-                    "overflow": "hidden",
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
                     "width": 15,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
-                      "height": 15,
-                      "transform": Array [
-                        Object {
-                          "translateY": 0,
-                        },
-                        Object {
-                          "rotate": "-172.5deg",
-                        },
-                      ],
+                      "height": 7.5,
+                      "overflow": "hidden",
                       "width": 15,
                     }
                   }
                 >
                   <View
-                    collapsable={false}
                     style={
                       Object {
-                        "height": 7.5,
-                        "overflow": "hidden",
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": 0,
+                          },
+                          Object {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
                         "width": 15,
                       }
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
-                          "borderColor": "#6A7BFF",
-                          "borderRadius": 7.5,
-                          "borderWidth": 1.5,
-                          "height": 15,
+                          "height": 7.5,
+                          "overflow": "hidden",
                           "width": 15,
                         }
                       }
-                    />
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#6A7BFF",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
             </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "bottom": 0,
-                "justifyContent": "center",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
-            }
-          >
             <View
               style={
                 Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "rotate": "82.5deg",
-                    },
-                    Object {
-                      "rotate": "0deg",
-                    },
-                  ],
-                  "width": 15,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
             >
               <View
-                collapsable={false}
                 style={
                   Object {
-                    "height": 7.5,
-                    "overflow": "hidden",
-                    "top": 7.5,
+                    "height": 15,
+                    "transform": Array [
+                      Object {
+                        "rotate": "82.5deg",
+                      },
+                      Object {
+                        "rotate": "0deg",
+                      },
+                    ],
                     "width": 15,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
-                      "height": 15,
-                      "transform": Array [
-                        Object {
-                          "translateY": -7.5,
-                        },
-                        Object {
-                          "rotate": "352.5deg",
-                        },
-                      ],
+                      "height": 7.5,
+                      "overflow": "hidden",
+                      "top": 7.5,
                       "width": 15,
                     }
                   }
                 >
                   <View
-                    collapsable={false}
                     style={
                       Object {
-                        "height": 7.5,
-                        "overflow": "hidden",
+                        "height": 15,
+                        "transform": Array [
+                          Object {
+                            "translateY": -7.5,
+                          },
+                          Object {
+                            "rotate": "352.5deg",
+                          },
+                        ],
                         "width": 15,
                       }
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
-                          "borderColor": "#6A7BFF",
-                          "borderRadius": 7.5,
-                          "borderWidth": 1.5,
-                          "height": 15,
+                          "height": 7.5,
+                          "overflow": "hidden",
                           "width": 15,
                         }
                       }
-                    />
+                    >
+                      <View
+                        style={
+                          Object {
+                            "borderColor": "#6A7BFF",
+                            "borderRadius": 7.5,
+                            "borderWidth": 1.5,
+                            "height": 15,
+                            "width": 15,
+                          }
+                        }
+                      />
+                    </View>
                   </View>
                 </View>
               </View>

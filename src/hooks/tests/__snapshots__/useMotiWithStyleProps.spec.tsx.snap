@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Divider passes the snapshot test for different length modes 1`] = `
+exports[`useMotiWithStyleProps transforms Moti 'animate' props correctly 1`] = `
 <View
   style={
     Object {
@@ -12,6 +12,8 @@ exports[`Atoms/Divider passes the snapshot test for different length modes 1`] =
     animatedStyle={
       Object {
         "value": Object {
+          "backgroundColor": "#ffc0cb",
+          "padding": 12,
           "transform": Array [],
         },
       }
@@ -19,37 +21,16 @@ exports[`Atoms/Divider passes the snapshot test for different length modes 1`] =
     collapsable={false}
     style={
       Object {
-        "backgroundColor": "#1A2138",
-        "display": "flex",
-        "height": 1,
+        "backgroundColor": "#ffc0cb",
+        "padding": 12,
         "transform": Array [],
-        "width": "50%",
-      }
-    }
-  />
-  <View
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    style={
-      Object {
-        "backgroundColor": "#ee82ee",
-        "display": "flex",
-        "height": 20,
-        "transform": Array [],
-        "width": 1,
       }
     }
   />
 </View>
 `;
 
-exports[`Atoms/Divider passes the snapshot test in dark mode 1`] = `
+exports[`useMotiWithStyleProps transforms Moti 'exit' props correctly 1`] = `
 <View
   style={
     Object {
@@ -68,37 +49,14 @@ exports[`Atoms/Divider passes the snapshot test in dark mode 1`] = `
     collapsable={false}
     style={
       Object {
-        "backgroundColor": "#1A2138",
-        "display": "flex",
-        "height": 1,
         "transform": Array [],
-        "width": "100%",
-      }
-    }
-  />
-  <View
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    style={
-      Object {
-        "backgroundColor": "#1A2138",
-        "display": "flex",
-        "height": "100%",
-        "transform": Array [],
-        "width": 1,
       }
     }
   />
 </View>
 `;
 
-exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
+exports[`useMotiWithStyleProps transforms Moti 'exitTransition' props correctly 1`] = `
 <View
   style={
     Object {
@@ -117,14 +75,51 @@ exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
     collapsable={false}
     style={
       Object {
-        "backgroundColor": "#E4E9F2",
-        "display": "flex",
-        "height": 1,
         "transform": Array [],
-        "width": "100%",
       }
     }
   />
+</View>
+`;
+
+exports[`useMotiWithStyleProps transforms Moti 'from' props correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "backgroundColor": "#ffc0cb",
+          "padding": 12,
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Object {
+        "backgroundColor": "#ffc0cb",
+        "padding": 12,
+        "transform": Array [],
+      }
+    }
+  />
+</View>
+`;
+
+exports[`useMotiWithStyleProps transforms Moti 'state' props correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     animatedStyle={
       Object {
@@ -136,11 +131,33 @@ exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
     collapsable={false}
     style={
       Object {
-        "backgroundColor": "#E4E9F2",
-        "display": "flex",
-        "height": "100%",
         "transform": Array [],
-        "width": 1,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`useMotiWithStyleProps transforms Moti 'transition' props correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Object {
+        "transform": Array [],
       }
     }
   />

@@ -1,59 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
-<Text
-  accessibilityLabel="stepforward Icon"
-  accessible={true}
-  allowFontScaling={false}
+<View
   style={
-    Array [
-      Object {
-        "color": undefined,
-        "fontSize": 17.25,
-      },
-      Object {
-        "color": "#1A2138",
-        "display": "flex",
-      },
-      Object {
-        "fontFamily": "anticon",
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
 >
-  
-</Text>
+  <Text
+    accessibilityLabel="stepforward Icon"
+    accessible={true}
+    allowFontScaling={false}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 17.25,
+        },
+        Object {
+          "color": "#1A2138",
+          "display": "flex",
+          "transform": Array [],
+        },
+        Object {
+          "fontFamily": "anticon",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
 `;
 
-exports[`Atoms/Icon passes the snapshot test in light mode 1`] = `<Text />`;
-
-exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
-<Text
-  accessibilityLabel="stepforward Icon"
-  accessible={true}
-  allowFontScaling={false}
+exports[`Atoms/Icon passes the snapshot test in light mode 1`] = `
+<View
   style={
-    Array [
-      Object {
-        "color": undefined,
-        "fontSize": 17.25,
-      },
-      Object {
-        "color": "#6A7BFF",
-        "display": "flex",
-      },
-      Object {
-        "fontFamily": "anticon",
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      Object {},
-    ]
+    Object {
+      "flex": 1,
+    }
   }
 >
-  
-</Text>
+  <Text />
+</View>
+`;
+
+exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    accessibilityLabel="stepforward Icon"
+    accessible={true}
+    allowFontScaling={false}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 17.25,
+        },
+        Object {
+          "color": "#6A7BFF",
+          "display": "flex",
+          "transform": Array [],
+        },
+        Object {
+          "fontFamily": "anticon",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
 `;

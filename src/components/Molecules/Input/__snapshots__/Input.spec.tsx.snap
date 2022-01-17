@@ -2,88 +2,21 @@
 
 exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
 <View
-  errorBorderColor="danger.500"
-  errorMessageColor="danger.500"
-  focusBackgroundColor={
-    Object {
-      "dark": "neutral.800",
-      "light": "neutral.50",
-    }
-  }
-  focusBorderColor="primary.500"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "backgroundColor": "#EDF1F7",
-      "borderColor": "#EDF1F7",
-      "borderRadius": 8,
-      "borderWidth": 1,
-      "display": "flex",
-      "flexDirection": "row",
-      "marginVertical": 4,
-      "opacity": 1,
-      "paddingHorizontal": 12,
-      "paddingVertical": 12,
-      "shadowColor": undefined,
+      "flex": 1,
     }
   }
-  testID="inputFieldContainer"
 >
-  <TextInput
-    accessibilityLabel="This is a placeholder"
-    accessibilityState={
+  <View
+    animatedStyle={
       Object {
-        "disabled": false,
-        "selected": false,
+        "value": Object {
+          "transform": Array [],
+        },
       }
     }
-    allowFontScaling={true}
-    editable={true}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeText={[Function]}
-    onFocus={[Function]}
-    placeholder="This is a placeholder"
-    placeholderTextColor="#8F9BB3"
-    rejectResponderTermination={true}
-    selectionColor="#6A7BFF"
-    style={
-      Array [
-        Object {
-          "display": "flex",
-          "marginHorizontal": 8,
-        },
-        Object {
-          "color": "#1A2138",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 16.099999999999998,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "letterSpacing": 0,
-          "lineHeight": 22,
-        },
-        Object {
-          "flex": null,
-        },
-        false,
-      ]
-    }
-    underlineColorAndroid="transparent"
-  />
-  <View
-    style={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-      }
-    }
-  />
-</View>
-`;
-
-exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
-Array [
-  <View
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -107,6 +40,114 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 12,
         "shadowColor": undefined,
+        "transform": Array [],
+      }
+    }
+    testID="inputFieldContainer"
+  >
+    <TextInput
+      accessibilityLabel="This is a placeholder"
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="This is a placeholder"
+      placeholderTextColor="#8F9BB3"
+      rejectResponderTermination={true}
+      selectionColor="#6A7BFF"
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          },
+          Object {
+            "flex": null,
+          },
+          false,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
+    }
+    focusBorderColor="primary.500"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#EDF1F7",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "display": "flex",
+        "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+        "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -152,15 +193,32 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBorderColor="primary.500"
@@ -178,6 +236,7 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 12,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -223,22 +282,45 @@ Array [
       variant="outline"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
       <Text />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -262,6 +344,7 @@ Array [
         "paddingHorizontal": 8,
         "paddingVertical": 4,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -306,15 +389,32 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -338,6 +438,7 @@ Array [
         "paddingHorizontal": 8,
         "paddingVertical": 8,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -382,15 +483,32 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -414,6 +532,7 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 12,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -458,15 +577,32 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -490,6 +626,7 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 16,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -534,20 +671,43 @@ Array [
       underlineColorAndroid="transparent"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBackgroundColor={
@@ -571,6 +731,7 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 12,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -616,15 +777,32 @@ Array [
       variant="filled"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
+  </View>
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     errorBorderColor="danger.500"
     errorMessageColor="danger.500"
     focusBorderColor="primary.500"
@@ -642,6 +820,7 @@ Array [
         "paddingHorizontal": 12,
         "paddingVertical": 12,
         "shadowColor": undefined,
+        "transform": Array [],
       }
     }
     testID="inputFieldContainer"
@@ -687,95 +866,127 @@ Array [
       variant="outline"
     />
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     />
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
 <View
-  errorBorderColor="danger.500"
-  errorMessageColor="danger.500"
-  focusBackgroundColor={
-    Object {
-      "dark": "neutral.800",
-      "light": "neutral.50",
-    }
-  }
-  focusBorderColor="primary.500"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "backgroundColor": "#EDF1F7",
-      "borderColor": "#EDF1F7",
-      "borderRadius": 8,
-      "borderWidth": 1,
-      "display": "flex",
-      "flexDirection": "row",
-      "marginVertical": 4,
-      "opacity": 1,
-      "paddingHorizontal": 12,
-      "paddingVertical": 12,
-      "shadowColor": undefined,
+      "flex": 1,
     }
   }
-  testID="inputFieldContainer"
 >
-  <TextInput
-    accessibilityState={
+  <View
+    animatedStyle={
       Object {
-        "disabled": false,
-        "selected": false,
+        "value": Object {
+          "transform": Array [],
+        },
       }
     }
-    allowFontScaling={true}
-    editable={true}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onChangeText={[Function]}
-    onFocus={[Function]}
-    placeholderTextColor="#a7a7a7"
-    rejectResponderTermination={true}
-    selectionColor="#6A7BFF"
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#6A7BFF",
-          "borderColor": "#C5CEE0",
-          "borderWidth": 2,
-          "display": "flex",
-          "marginHorizontal": 8,
-        },
-        Object {
-          "color": "#1A2138",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 16.099999999999998,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "letterSpacing": 0,
-          "lineHeight": 22,
-        },
-        Object {
-          "flex": 1,
-        },
-        false,
-      ]
+    collapsable={false}
+    errorBorderColor="danger.500"
+    errorMessageColor="danger.500"
+    focusBackgroundColor={
+      Object {
+        "dark": "neutral.800",
+        "light": "neutral.50",
+      }
     }
-    underlineColorAndroid="transparent"
-  />
-  <View
+    focusBorderColor="primary.500"
     style={
       Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 2,
         "display": "flex",
         "flexDirection": "row",
+        "marginVertical": 4,
+        "opacity": 1,
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+        "shadowColor": undefined,
+        "transform": Array [],
       }
     }
-  />
+    testID="inputFieldContainer"
+  >
+    <TextInput
+      accessibilityState={
+        Object {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#a7a7a7"
+      rejectResponderTermination={true}
+      selectionColor="#6A7BFF"
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "marginHorizontal": 8,
+          },
+          Object {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          },
+          Object {
+            "flex": 1,
+          },
+          false,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
+    />
+  </View>
 </View>
 `;

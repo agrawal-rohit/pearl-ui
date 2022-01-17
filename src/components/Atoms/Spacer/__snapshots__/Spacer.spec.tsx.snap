@@ -4,79 +4,141 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
 <View
   style={
     Object {
-      "display": "flex",
-      "flexDirection": "row",
+      "flex": 1,
     }
   }
 >
   <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     style={
       Object {
-        "backgroundColor": "#FF8371",
         "display": "flex",
-        "padding": 24,
+        "flexDirection": "row",
+        "transform": Array [],
       }
     }
   >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
-          "color": "#1A2138",
+          "backgroundColor": "#FF8371",
           "display": "flex",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 18.4,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "includeFontPadding": false,
-          "letterSpacing": 0,
-          "lineHeight": 24,
+          "padding": 24,
+          "transform": Array [],
         }
       }
     >
-      Box 1
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flex": 1,
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 24,
+            "transform": Array [],
+          }
+        }
+      >
+        Box 1
+      </Text>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "backgroundColor": "#C0E640",
-        "display": "flex",
-        "padding": 24,
-      }
-    }
-  >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
+      collapsable={false}
       style={
         Object {
-          "color": "#1A2138",
+          "alignSelf": "stretch",
           "display": "flex",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 18.4,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "includeFontPadding": false,
-          "letterSpacing": 0,
-          "lineHeight": 24,
+          "flex": 1,
+          "transform": Array [],
+        }
+      }
+    />
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "backgroundColor": "#C0E640",
+          "display": "flex",
+          "padding": 24,
+          "transform": Array [],
         }
       }
     >
-      Box 2
-    </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 24,
+            "transform": Array [],
+          }
+        }
+      >
+        Box 2
+      </Text>
+    </View>
   </View>
 </View>
 `;

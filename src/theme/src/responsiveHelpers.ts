@@ -1,5 +1,4 @@
-import { breakpoints } from "./base/breakpoints";
-import { getKeys, isThemeKey } from "../utils/typeHelpers";
+import { getKeys } from "../utils/typeHelpers";
 import {
   AtLeastOneResponsiveValue,
   FinalPearlTheme,
@@ -7,7 +6,6 @@ import {
   Dimensions,
   PropValue,
   ResponsiveValue,
-  StyleTransformFunction,
 } from "./types";
 
 export const getValueForScreenSize = ({

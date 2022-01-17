@@ -2,189 +2,193 @@
 
 exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
 <View
-  accessibilityLabel="Check me!"
-  accessibilityRole="radio"
-  accessibilityState={
-    Object {
-      "checked": undefined,
-      "disabled": false,
-    }
-  }
-  accessible={true}
-  direction="horizontal"
-  spacing="xs"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-      "marginVertical": 4,
-      "opacity": 1,
+      "flex": 1,
     }
   }
 >
   <View
+    accessibilityLabel="Check me!"
+    accessibilityRole="radio"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    direction="horizontal"
+    spacing="xs"
     style={
       Object {
-        "alignSelf": "stretch",
+        "alignSelf": "flex-start",
         "display": "flex",
         "flexDirection": "row",
-        "marginRight": 8,
+        "flexWrap": "wrap",
+        "marginVertical": 4,
+        "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
-      accessibilityHint=""
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animatedStyle={
         Object {
-          "disabled": false,
+          "value": Object {
+            "transform": Array [],
+          },
         }
       }
-      accessible={true}
+      collapsable={false}
       style={
         Object {
-          "alignSelf": "center",
-          "bottom": undefined,
+          "alignSelf": "stretch",
           "display": "flex",
-          "elevation": undefined,
-          "end": undefined,
-          "left": undefined,
-          "margin": undefined,
-          "marginBottom": undefined,
-          "marginEnd": undefined,
-          "marginHorizontal": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginStart": undefined,
-          "marginTop": undefined,
-          "marginVertical": undefined,
-          "position": undefined,
-          "right": undefined,
-          "shadowColor": undefined,
-          "shadowOffset": undefined,
-          "shadowOpacity": undefined,
-          "shadowRadius": undefined,
-          "start": undefined,
-          "top": undefined,
+          "flexDirection": "row",
+          "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        style={
-          Object {
-            "borderRadius": 1000,
-            "display": "flex",
-            "overflow": "hidden",
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
           accessible={true}
-          checkedBackgroundColor="primary.500"
-          checkedBorderColor="primary.500"
-          collapsable={false}
-          colorScheme="primary"
-          errorBorderColor="danger.500"
-          focusable={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Array [
+          style={Object {}}
+        >
+          <View
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
+            style={
               Object {
                 "alignItems": "center",
+                "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
                 "borderRadius": 1000,
+                "borderWidth": 2,
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
+                "opacity": 1,
                 "padding": 5,
+                "transform": Array [],
                 "width": 24,
-              },
-              Object {
-                "backgroundColor": "#EDF1F7",
-                "borderBottomColor": undefined,
-                "borderBottomWidth": undefined,
-                "borderColor": "#EDF1F7",
-                "borderEndColor": undefined,
-                "borderEndWidth": undefined,
-                "borderLeftColor": undefined,
-                "borderLeftWidth": undefined,
-                "borderRightColor": undefined,
-                "borderRightWidth": undefined,
-                "borderStartColor": undefined,
-                "borderStartWidth": undefined,
-                "borderStyle": undefined,
-                "borderTopColor": undefined,
-                "borderTopWidth": undefined,
-                "borderWidth": 2,
-                "opacity": undefined,
-              },
-            ]
-          }
-        >
-          <View
-            checkedBackgroundColor="neutral.50"
-            style={
-              Object {
-                "backgroundColor": "#EDF1F7",
-                "borderRadius": 1000,
-                "display": "flex",
-                "height": "100%",
-                "width": "100%",
               }
             }
-          />
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
+              checkedBackgroundColor="neutral.50"
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "transform": Array [],
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-      }
-    }
-  >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      style={
+    <View
+      animatedStyle={
         Object {
-          "alignSelf": "center",
-          "color": "#1A2138",
-          "display": "flex",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 16.099999999999998,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "includeFontPadding": false,
-          "letterSpacing": 0,
-          "lineHeight": 22,
+          "value": Object {
+            "transform": Array [],
+          },
         }
       }
-      variant="p2"
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
     >
-      Check me!
-    </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "transform": Array [],
+          }
+        }
+        variant="p2"
+      >
+        Check me!
+      </Text>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test for different color schemes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     accessibilityLabel="Primary Radio"
     accessibilityRole="radio"
@@ -195,6 +199,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -205,139 +217,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -345,6 +330,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -357,6 +350,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -364,7 +358,7 @@ Array [
         Primary Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Secondary Radio"
     accessibilityRole="radio"
@@ -375,6 +369,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -385,139 +387,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="secondary.500"
-            checkedBorderColor="secondary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="secondary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -525,6 +500,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -537,6 +520,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -544,12 +528,18 @@ Array [
         Secondary Radio
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     accessibilityLabel="Small Radio"
     accessibilityRole="radio"
@@ -560,6 +550,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -570,140 +568,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="s"
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 18,
-                  "justifyContent": "center",
-                  "padding": 3,
-                  "width": 18,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 18,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 3,
+                "transform": Array [],
+                "width": 18,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -711,6 +681,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -723,6 +701,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -730,7 +709,7 @@ Array [
         Small Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Regular Radio"
     accessibilityRole="radio"
@@ -741,6 +720,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -751,140 +738,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="m"
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -892,6 +851,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -904,6 +871,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -911,7 +879,7 @@ Array [
         Regular Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Large Radio"
     accessibilityRole="radio"
@@ -922,6 +890,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -932,140 +908,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="l"
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 30,
-                  "justifyContent": "center",
-                  "padding": 7,
-                  "width": 30,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 30,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 7,
+                "transform": Array [],
+                "width": 30,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -1073,6 +1021,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -1085,6 +1041,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 24,
+            "transform": Array [],
           }
         }
         variant="p1"
@@ -1092,7 +1049,7 @@ Array [
         Large Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Extra Large Radio"
     accessibilityRole="radio"
@@ -1103,6 +1060,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -1113,140 +1078,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            size="xl"
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 36,
-                  "justifyContent": "center",
-                  "padding": 9,
-                  "width": 36,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 36,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 9,
+                "transform": Array [],
+                "width": 36,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -1254,6 +1191,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -1266,6 +1211,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 24,
+            "transform": Array [],
           }
         }
         variant="p1"
@@ -1273,12 +1219,18 @@ Array [
         Extra Large Radio
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     accessibilityLabel="Filled Radio"
     accessibilityRole="radio"
@@ -1289,6 +1241,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -1299,140 +1259,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
-            collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
                 },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#EDF1F7",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              }
             }
-            variant="filled"
+            collapsable={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
+            }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -1440,6 +1372,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -1452,6 +1392,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -1459,7 +1400,7 @@ Array [
         Filled Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Outline Radio"
     accessibilityRole="radio"
@@ -1470,6 +1411,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -1480,145 +1429,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor={
+            animatedStyle={
               Object {
-                "dark": "neutral.800",
-                "light": "neutral.50",
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
               }
             }
-            checkedBorderColor="primary.500"
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#FFFFFF",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#C5CEE0",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#C5CEE0",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
-            variant="outline"
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="primary.500"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#FFFFFF",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -1626,6 +1542,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -1638,6 +1562,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -1645,12 +1570,18 @@ Array [
         Outline Radio
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     accessibilityLabel="Checked Radio"
     accessibilityRole="radio"
@@ -1661,6 +1592,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -1671,328 +1610,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
-            collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            isChecked={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#6A7BFF",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#6A7BFF",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#6A7BFF",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
-            }
-            variant="filled"
-          >
-            <View
-              checkedBackgroundColor="neutral.50"
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": "100%",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-          }
-        }
-        variant="p2"
-      >
-        Checked Radio
-      </Text>
-    </View>
-  </View>,
-  <View
-    accessibilityLabel="Checked Radio"
-    accessibilityRole="radio"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-        }
-      }
-    >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
-        >
-          <View
-            accessible={true}
-            checkedBackgroundColor={
+            animatedStyle={
               Object {
-                "dark": "neutral.800",
-                "light": "neutral.50",
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
               }
             }
-            checkedBorderColor="primary.500"
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            isChecked={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#FFFFFF",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#6A7BFF",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
-            variant="outline"
           >
             <View
-              checkedBackgroundColor="primary.500"
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
+              checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
-                  "backgroundColor": "#6A7BFF",
+                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -2000,6 +1723,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -2012,6 +1743,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -2019,12 +1751,188 @@ Array [
         Checked Radio
       </Text>
     </View>
-  </View>,
-]
+  </View>
+  <View
+    accessibilityLabel="Checked Radio"
+    accessibilityRole="radio"
+    accessibilityState={
+      Object {
+        "checked": true,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    direction="horizontal"
+    spacing="xs"
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginVertical": 4,
+        "opacity": 1,
+        "transform": Array [],
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "marginRight": 8,
+          "transform": Array [],
+        }
+      }
+    >
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
+      >
+        <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
+        >
+          <View
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
+            }
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
+              checkedBackgroundColor="primary.500"
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "transform": Array [],
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+        </View>
+      </RNGestureHandlerButton>
+    </View>
+    <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "transform": Array [],
+          }
+        }
+        variant="p2"
+      >
+        Checked Radio
+      </Text>
+    </View>
+  </View>
+</View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     accessibilityLabel="Error Radio"
     accessibilityRole="radio"
@@ -2035,6 +1943,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -2045,140 +1961,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            focusable={true}
-            isInvalid={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#FF4B42",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#FF4B42",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -2186,6 +2074,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -2198,6 +2094,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -2205,7 +2102,7 @@ Array [
         Error Radio
       </Text>
     </View>
-  </View>,
+  </View>
   <View
     accessibilityLabel="Error Radio with message"
     accessibilityRole="radio"
@@ -2216,6 +2113,14 @@ Array [
       }
     }
     accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     direction="horizontal"
     spacing="xs"
     style={
@@ -2226,141 +2131,112 @@ Array [
         "flexWrap": "wrap",
         "marginVertical": 4,
         "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
           "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        accessibilityHint=""
-        accessibilityLabel="Press me!"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "disabled": false,
-          }
-        }
-        accessible={true}
-        style={
-          Object {
-            "alignSelf": "center",
-            "bottom": undefined,
-            "display": "flex",
-            "elevation": undefined,
-            "end": undefined,
-            "left": undefined,
-            "margin": undefined,
-            "marginBottom": undefined,
-            "marginEnd": undefined,
-            "marginHorizontal": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginStart": undefined,
-            "marginTop": undefined,
-            "marginVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
-            "start": undefined,
-            "top": undefined,
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
-          style={
-            Object {
-              "borderRadius": 1000,
-              "display": "flex",
-              "overflow": "hidden",
-            }
-          }
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessible={true}
+          style={Object {}}
         >
           <View
-            accessible={true}
-            checkedBackgroundColor="primary.500"
-            checkedBorderColor="primary.500"
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
             collapsable={false}
-            colorScheme="primary"
-            errorBorderColor="danger.500"
-            errorMessage="This is an error message!"
-            focusable={true}
-            isInvalid={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": 24,
-                  "justifyContent": "center",
-                  "padding": 5,
-                  "width": 24,
-                },
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderBottomColor": undefined,
-                  "borderBottomWidth": undefined,
-                  "borderColor": "#FF4B42",
-                  "borderEndColor": undefined,
-                  "borderEndWidth": undefined,
-                  "borderLeftColor": undefined,
-                  "borderLeftWidth": undefined,
-                  "borderRightColor": undefined,
-                  "borderRightWidth": undefined,
-                  "borderStartColor": undefined,
-                  "borderStartWidth": undefined,
-                  "borderStyle": undefined,
-                  "borderTopColor": undefined,
-                  "borderTopWidth": undefined,
-                  "borderWidth": 2,
-                  "opacity": undefined,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#FF4B42",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "display": "flex",
+                "height": 24,
+                "justifyContent": "center",
+                "opacity": 1,
+                "padding": 5,
+                "transform": Array [],
+                "width": 24,
+              }
             }
           >
             <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
               checkedBackgroundColor="neutral.50"
+              collapsable={false}
               style={
                 Object {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
                   "display": "flex",
                   "height": "100%",
+                  "transform": Array [],
                   "width": "100%",
                 }
               }
             />
           </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
     <View
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
       style={
         Object {
           "alignSelf": "stretch",
           "display": "flex",
           "flexDirection": "row",
+          "transform": Array [],
         }
       }
     >
@@ -2368,6 +2244,14 @@ Array [
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
         style={
           Object {
             "alignSelf": "center",
@@ -2380,6 +2264,7 @@ Array [
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
+            "transform": Array [],
           }
         }
         variant="p2"
@@ -2387,11 +2272,19 @@ Array [
         Error Radio with message
       </Text>
     </View>
-  </View>,
+  </View>
   <Text
     accessibilityRole="text"
     accessible={true}
     allowFontScaling={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
     style={
       Object {
         "color": "#FF4B42",
@@ -2404,194 +2297,196 @@ Array [
         "letterSpacing": 0,
         "lineHeight": 20,
         "marginBottom": 4,
+        "transform": Array [],
       }
     }
     variant="caption"
   >
     This is an error message!
-  </Text>,
-]
+  </Text>
+</View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
 <View
-  accessibilityLabel="Button press"
-  accessibilityRole="radio"
-  accessibilityState={
-    Object {
-      "checked": undefined,
-      "disabled": false,
-    }
-  }
-  accessible={true}
-  direction="horizontal"
-  spacing="xs"
   style={
     Object {
-      "alignSelf": "flex-start",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-      "marginVertical": 4,
-      "opacity": 1,
+      "flex": 1,
     }
   }
 >
   <View
+    accessibilityLabel="Button press"
+    accessibilityRole="radio"
+    accessibilityState={
+      Object {
+        "checked": undefined,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    direction="horizontal"
+    spacing="xs"
     style={
       Object {
-        "alignSelf": "stretch",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#6A7BFF",
+        "borderColor": "#C5CEE0",
+        "borderWidth": 2,
         "display": "flex",
         "flexDirection": "row",
-        "marginRight": 8,
+        "flexWrap": "wrap",
+        "marginVertical": 4,
+        "opacity": 1,
+        "transform": Array [],
       }
     }
   >
     <View
-      accessibilityHint=""
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animatedStyle={
         Object {
-          "disabled": false,
+          "value": Object {
+            "transform": Array [],
+          },
         }
       }
-      accessible={true}
+      collapsable={false}
       style={
         Object {
-          "alignSelf": "center",
-          "bottom": undefined,
+          "alignSelf": "stretch",
           "display": "flex",
-          "elevation": undefined,
-          "end": undefined,
-          "left": undefined,
-          "margin": undefined,
-          "marginBottom": undefined,
-          "marginEnd": undefined,
-          "marginHorizontal": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginStart": undefined,
-          "marginTop": undefined,
-          "marginVertical": undefined,
-          "position": undefined,
-          "right": undefined,
-          "shadowColor": undefined,
-          "shadowOffset": undefined,
-          "shadowOpacity": undefined,
-          "shadowRadius": undefined,
-          "start": undefined,
-          "top": undefined,
+          "flexDirection": "row",
+          "marginRight": 8,
+          "transform": Array [],
         }
       }
     >
-      <View
-        style={
-          Object {
-            "borderRadius": 1000,
-            "display": "flex",
-            "overflow": "hidden",
-          }
-        }
+      <RNGestureHandlerButton
+        collapsable={false}
+        exclusive={true}
+        onGestureEvent={[Function]}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        onHandlerStateChange={[Function]}
+        rippleColor={0}
       >
         <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
           accessible={true}
-          checkedBackgroundColor="primary.500"
-          checkedBorderColor="primary.500"
-          collapsable={false}
-          colorScheme="primary"
-          errorBorderColor="danger.500"
-          focusable={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Array [
+          style={Object {}}
+        >
+          <View
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "opacity": 1,
+                  "transform": Array [],
+                },
+              }
+            }
+            collapsable={false}
+            style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#EDF1F7",
                 "borderRadius": 1000,
+                "borderWidth": 2,
                 "display": "flex",
                 "height": 24,
                 "justifyContent": "center",
+                "opacity": 1,
                 "padding": 5,
+                "transform": Array [],
                 "width": 24,
-              },
-              Object {
-                "backgroundColor": "#6A7BFF",
-                "borderBottomColor": undefined,
-                "borderBottomWidth": undefined,
-                "borderColor": "#C5CEE0",
-                "borderEndColor": undefined,
-                "borderEndWidth": undefined,
-                "borderLeftColor": undefined,
-                "borderLeftWidth": undefined,
-                "borderRightColor": undefined,
-                "borderRightWidth": undefined,
-                "borderStartColor": undefined,
-                "borderStartWidth": undefined,
-                "borderStyle": undefined,
-                "borderTopColor": undefined,
-                "borderTopWidth": undefined,
-                "borderWidth": 2,
-                "opacity": undefined,
-              },
-            ]
-          }
-        >
-          <View
-            checkedBackgroundColor="neutral.50"
-            style={
-              Object {
-                "backgroundColor": "#EDF1F7",
-                "borderRadius": 1000,
-                "display": "flex",
-                "height": "100%",
-                "width": "100%",
               }
             }
-          />
+          >
+            <View
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "transform": Array [],
+                  },
+                }
+              }
+              checkedBackgroundColor="neutral.50"
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "display": "flex",
+                  "height": "100%",
+                  "transform": Array [],
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
         </View>
-      </View>
+      </RNGestureHandlerButton>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "display": "flex",
-        "flexDirection": "row",
-      }
-    }
-  >
-    <Text
-      accessibilityRole="text"
-      accessible={true}
-      allowFontScaling={true}
-      style={
+    <View
+      animatedStyle={
         Object {
-          "alignSelf": "center",
-          "color": "#1A2138",
-          "display": "flex",
-          "fontFamily": "Poppins-Regular",
-          "fontSize": 16.099999999999998,
-          "fontStyle": "normal",
-          "fontWeight": "400",
-          "includeFontPadding": false,
-          "letterSpacing": 0,
-          "lineHeight": 22,
+          "value": Object {
+            "transform": Array [],
+          },
         }
       }
-      variant="p2"
+      collapsable={false}
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flexDirection": "row",
+          "transform": Array [],
+        }
+      }
     >
-      Button press
-    </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animatedStyle={
+          Object {
+            "value": Object {
+              "transform": Array [],
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#1A2138",
+            "display": "flex",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "transform": Array [],
+          }
+        }
+        variant="p2"
+      >
+        Button press
+      </Text>
+    </View>
   </View>
 </View>
 `;

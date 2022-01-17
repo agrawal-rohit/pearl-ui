@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useStyledProps return correct style object for props 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Object {
+        "backgroundColor": "#ffc0cb",
+        "display": "flex",
+        "padding": 12,
+        "transform": Array [],
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "color": "#1A2138",
+          "display": "flex",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 18.4,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "includeFontPadding": false,
+          "letterSpacing": 0,
+          "lineHeight": 24,
+          "transform": Array [],
+        }
+      }
+    >
+      3
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`useStyledProps return empty style object for missing props 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "transform": Array [],
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Object {
+        "display": "flex",
+        "transform": Array [],
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "color": "#1A2138",
+          "display": "flex",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 18.4,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "includeFontPadding": false,
+          "letterSpacing": 0,
+          "lineHeight": 24,
+          "transform": Array [],
+        }
+      }
+    >
+      0
+    </Text>
+  </View>
+</View>
+`;

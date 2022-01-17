@@ -9,7 +9,6 @@ import {
 } from "moti/interactions";
 import { useStyledProps } from "../../../hooks/useStyledProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
-import { Platform } from "react-native";
 import _ from "lodash";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
@@ -18,8 +17,6 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     onPressInDelay?: number;
     /** Whether the press behavior is disabled. */
     isDisabled?: boolean;
-    /** If true, doesn't play Android system sound on press. */
-    isDisabledAndroidSound?: boolean;
     /** A short description of the action that occurs when this element is interacted with (Used for accessibility) */
     actionDescription?: string;
     /** The opacity of the element when it is pressed */
@@ -33,7 +30,6 @@ const Pressable = React.forwardRef(
       children,
       onPressInDelay = 100,
       activeOpacity = 1,
-      isDisabledAndroidSound = false,
       isDisabled = false,
       accessibilityLabel = "Press me!",
       actionDescription = "",
@@ -52,12 +48,15 @@ const Pressable = React.forwardRef(
     return (
       <MotiPressable
         ref={ref}
+        accessibilityLabel={accessibilityLabel}
+        actionDescription={actionDescription}
         onPress={!isDisabled ? onPress : undefined}
         onPressIn={!isDisabled ? onPressIn : undefined}
         onPressOut={!isDisabled ? onPressOut : undefined}
         onLongPress={!isDisabled ? onLongPress : undefined}
         disabled={isDisabled}
         {...props}
+        accessibilityRole="button"
         animate={(interaction) => {
           "worklet";
 

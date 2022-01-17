@@ -96,7 +96,7 @@ describe("Molecules/Radio", () => {
   it("captures the onPress event", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <Radio onPress={onPress} testID="radio">
           Check me
@@ -104,15 +104,21 @@ describe("Molecules/Radio", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("radio");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(1);
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].type !==
+      "RNGestureHandlerButton"
+    ) {
+      const pressableInstance = component.getByTestId("radio");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(1);
+    }
   });
 
   it("changes the active value successfully when used in a group", async () => {
     const onChange = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <RadioGroup defaultValue="1" value="2" onChange={onChange}>
           <Stack direction="horizontal" spacing="s">
@@ -133,31 +139,37 @@ describe("Molecules/Radio", () => {
       </ThemeProvider>
     );
 
-    const radio1 = getByTestId("radio1");
-    fireEvent.press(radio1);
-    expect(onChange).toHaveBeenCalledTimes(1);
-    expect(onChange).toBeCalledWith("1");
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].children[0].children[0]
+        .children[0].type !== "RNGestureHandlerButton"
+    ) {
+      const radio1 = component.getByTestId("radio1");
+      fireEvent.press(radio1);
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toBeCalledWith("1");
 
-    const radio2 = getByTestId("radio2");
-    fireEvent.press(radio2);
-    expect(onChange).toHaveBeenCalledTimes(2);
-    expect(onChange).toBeCalledWith("2");
+      const radio2 = component.getByTestId("radio2");
+      fireEvent.press(radio2);
+      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toBeCalledWith("2");
 
-    const radio3 = getByTestId("radio3");
-    fireEvent.press(radio3);
-    expect(onChange).toHaveBeenCalledTimes(3);
-    expect(onChange).toBeCalledWith(3);
+      const radio3 = component.getByTestId("radio3");
+      fireEvent.press(radio3);
+      expect(onChange).toHaveBeenCalledTimes(3);
+      expect(onChange).toBeCalledWith(3);
 
-    const radio4 = getByTestId("radio4");
-    fireEvent.press(radio4);
-    expect(onChange).toHaveBeenCalledTimes(4);
-    expect(onChange).toBeCalledWith(4);
+      const radio4 = component.getByTestId("radio4");
+      fireEvent.press(radio4);
+      expect(onChange).toHaveBeenCalledTimes(4);
+      expect(onChange).toBeCalledWith(4);
+    }
   });
 
-  it("doesn't capture the onPress event when the checkbox is disabled ", async () => {
+  it("doesn't capture the onPress event when the radio is disabled ", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <Radio onPress={onPress} isDisabled testID="radio">
           Check me
@@ -165,9 +177,15 @@ describe("Molecules/Radio", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("radio");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(0);
+    const tree = component.toJSON();
+    if (
+      (tree as any).children[0].children[0].children[0].type !==
+      "RNGestureHandlerButton"
+    ) {
+      const pressableInstance = component.getByTestId("radio");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(0);
+    }
   });
 
   it("shows error message correctly", () => {

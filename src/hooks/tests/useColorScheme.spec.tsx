@@ -8,18 +8,14 @@ import { useColorScheme } from "../useColorScheme";
 
 jest.useFakeTimers();
 
-const ThemeTestComponent: React.FC = () => {
+const TestComponent: React.FC<any> = (props: any) => {
   const [useScheme, setUseScheme] = useState(false);
 
-  const initialObj: Record<string, any> = {
-    color: "primary100",
-    fontSize: 20,
-  };
-  const updatedObj = useColorScheme("secondary", initialObj);
+  const updatedObj = useColorScheme(props.colorScheme, props.object);
 
   return (
     <Box>
-      <Text>{useScheme ? updatedObj.color : initialObj.color}</Text>
+      <Text>{useScheme ? updatedObj.color : props.object.color}</Text>
       <Pressable onPress={() => setUseScheme(true)} testID="switchButton">
         Use color scheme
       </Pressable>
@@ -27,11 +23,34 @@ const ThemeTestComponent: React.FC = () => {
   );
 };
 
-describe("useColorScheme.spec", () => {
+describe("useColorScheme", () => {
+  it("leaves values unchanged for missing color scheme", () => {
+    const { getByText, getByTestId } = render(
+      <ThemeProvider>
+        <TestComponent
+          colorScheme={null}
+          object={{
+            color: "primary100",
+            fontSize: 20,
+          }}
+        />
+      </ThemeProvider>
+    );
+    expect(getByText("primary100")).toBeTruthy();
+    const toggleButton = getByTestId("switchButton");
+    fireEvent.press(toggleButton);
+    expect(getByText("primary100")).toBeTruthy();
+  });
   it("switches values containing primary to secondary", () => {
     const { getByText, getByTestId } = render(
       <ThemeProvider>
-        <ThemeTestComponent />
+        <TestComponent
+          colorScheme="secondary"
+          object={{
+            color: "primary100",
+            fontSize: 20,
+          }}
+        />
       </ThemeProvider>
     );
     expect(getByText("primary100")).toBeTruthy();

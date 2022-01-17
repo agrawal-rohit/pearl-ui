@@ -70,7 +70,7 @@ describe("Molecules/TextLink", () => {
   it("captures the onPress event", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <TextLink onPress={onPress} testID="testOnPress">
           Button press
@@ -78,15 +78,18 @@ describe("Molecules/TextLink", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("testOnPress");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(1);
+    const tree = component.toJSON();
+    if ((tree as any).children[0].type !== "RNGestureHandlerButton") {
+      const pressableInstance = component.getByTestId("testOnPress");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(1);
+    }
   });
 
   it("doesn't capture the onPress event when the button is disabled ", async () => {
     const onPress = jest.fn();
 
-    const { getByTestId } = await render(
+    const component = await render(
       <ThemeProvider>
         <TextLink onPress={onPress} isDisabled testID="testOnPress">
           Button press
@@ -94,8 +97,11 @@ describe("Molecules/TextLink", () => {
       </ThemeProvider>
     );
 
-    const pressableInstance = getByTestId("testOnPress");
-    fireEvent.press(pressableInstance);
-    expect(onPress).toHaveBeenCalledTimes(0);
+    const tree = component.toJSON();
+    if ((tree as any).children[0].type !== "RNGestureHandlerButton") {
+      const pressableInstance = component.getByTestId("testOnPress");
+      fireEvent.press(pressableInstance);
+      expect(onPress).toHaveBeenCalledTimes(0);
+    }
   });
 });

@@ -1,67 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Atoms/Screen passes the snapshot test 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
-      "backgroundColor": "#FFFFFF",
       "flex": 1,
-      "paddingTop": 0,
     }
   }
 >
-  <RCTScrollView
-    automaticallyAdjustContentInsets={false}
-    bounces={true}
-    contentContainerStyle={
+  <RCTSafeAreaView
+    animatedStyle={
       Object {
-        "flexGrow": 1,
+        "value": Object {
+          "transform": Array [],
+        },
       }
     }
-    contentInset={
+    collapsable={false}
+    emulateUnlessSupported={true}
+    style={
       Object {
-        "bottom": 0,
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "paddingTop": 0,
+        "transform": Array [],
       }
     }
-    enableAutomaticScroll={true}
-    enableOnAndroid={true}
-    enableResetScrollToCoords={true}
-    extraHeight={100}
-    extraScrollHeight={0}
-    getScrollResponder={[Function]}
-    handleOnScroll={[Function]}
-    keyboardDismissMode="interactive"
-    keyboardOpeningTime={250}
-    keyboardSpace={0}
-    onScroll={[Function]}
-    resetKeyboardSpace={[Function]}
-    scrollEnabled={true}
-    scrollEventThrottle={1}
-    scrollForExtraHeightOnAndroid={[Function]}
-    scrollIntoView={[Function]}
-    scrollToEnd={[Function]}
-    scrollToFocusedInput={[Function]}
-    scrollToPosition={[Function]}
-    scrollable={true}
-    showScrollBar={false}
-    showsVerticalScrollIndicator={false}
-    update={[Function]}
-    viewIsInsideTabBar={false}
   >
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#FFFFFF",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "column",
-            "padding": 16,
-          }
+    <RCTScrollView
+      animatedStyle={
+        Object {
+          "value": Object {
+            "transform": Array [],
+          },
         }
-      />
-    </View>
-  </RCTScrollView>
-</RCTSafeAreaView>
+      }
+      automaticallyAdjustContentInsets={false}
+      bounces={true}
+      collapsable={false}
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+      contentInset={
+        Object {
+          "bottom": 0,
+        }
+      }
+      enableAutomaticScroll={true}
+      enableOnAndroid={true}
+      enableResetScrollToCoords={true}
+      extraHeight={100}
+      extraScrollHeight={0}
+      getScrollResponder={[Function]}
+      handleOnScroll={[Function]}
+      keyboardDismissMode="interactive"
+      keyboardOpeningTime={250}
+      keyboardSpace={0}
+      onScroll={[Function]}
+      resetKeyboardSpace={[Function]}
+      scrollEnabled={true}
+      scrollEventThrottle={1}
+      scrollForExtraHeightOnAndroid={[Function]}
+      scrollIntoView={[Function]}
+      scrollToEnd={[Function]}
+      scrollToFocusedInput={[Function]}
+      scrollToPosition={[Function]}
+      scrollable={true}
+      showScrollBar={false}
+      showsVerticalScrollIndicator={false}
+      update={[Function]}
+      viewIsInsideTabBar={false}
+    >
+      <View>
+        <View
+          animatedStyle={
+            Object {
+              "value": Object {
+                "transform": Array [],
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "display": "flex",
+              "flex": 1,
+              "flexDirection": "column",
+              "padding": 16,
+              "transform": Array [],
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </RCTSafeAreaView>
+</View>
 `;
