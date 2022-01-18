@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`useStyledProps return correct style object for props 1`] = `
+exports[`useStyleProps return correct style object for props 1`] = `
 <View
   style={
     Object {
@@ -59,7 +59,7 @@ exports[`useStyledProps return correct style object for props 1`] = `
 </View>
 `;
 
-exports[`useStyledProps return empty style object for missing props 1`] = `
+exports[`useStyleProps return empty style object for missing props 1`] = `
 <View
   style={
     Object {

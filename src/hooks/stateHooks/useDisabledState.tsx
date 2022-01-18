@@ -4,37 +4,37 @@ import { ComponentTypes, StyleFunctionContainer } from "../../theme/src/types";
 import { useDynamicStateStyle } from "./useDynamicStateStyle";
 
 /**
- * Hook to manage a pressed state and compose extra styling while a component is pressed
+ * Hook to manage a disabled state and compose extra styling while a component is disabled
  */
-export const usePressedState = (
+export const useDisabledState = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions,
   activeComponentType: ComponentTypes = "basic",
   animateable = true,
-  parentStateValue = undefined
+  parentStateValue: boolean | undefined = undefined
 ) => {
-  const [pressed, setPressed] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
-  // Override the pressed state if the parentStateValue is provided
-  let finalPressedFlag;
+  // Override the disabled state if the parentStateValue is provided
+  let finalDisabledFlag;
   if (parentStateValue !== undefined) {
-    finalPressedFlag = parentStateValue;
+    finalDisabledFlag = parentStateValue;
   } else {
-    finalPressedFlag = pressed;
+    finalDisabledFlag = disabled;
   }
 
-  const propsWithPressedStyles = useDynamicStateStyle(
+  const propsWithDisabledStyles = useDynamicStateStyle(
     props,
-    "_pressed",
-    finalPressedFlag,
+    "_disabled",
+    finalDisabledFlag,
     styleFunctions,
     activeComponentType,
     animateable
   );
 
   return {
-    pressed,
-    setPressed,
-    propsWithPressedStyles,
+    disabled,
+    setDisabled,
+    propsWithDisabledStyles,
   };
 };

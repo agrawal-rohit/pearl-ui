@@ -8,7 +8,7 @@ import {
 import { getKeys } from "../theme/utils/typeHelpers";
 
 import { useTheme } from "./useTheme";
-import { useStyledProps } from "./useStyledProps";
+import { useStyleProps } from "./useStyleProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
@@ -144,7 +144,7 @@ export const useAtomicComponentConfig = (
     },
   };
 
-  const componentStyles = useStyledProps(finalComponentProps, styleFunctions);
+  const componentStyles = useStyleProps(finalComponentProps, styleFunctions);
 
   return componentStyles;
 };

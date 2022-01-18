@@ -3,14 +3,14 @@ import Text from "../../components/Atoms/Text/Text";
 import { fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../theme/src/themeContext";
 import Box from "../../components/Atoms/Box/Box";
-import { useStyledProps } from "../useStyledProps";
+import { useStyleProps } from "../useStyleProps";
 import { allStyleFunctions } from "../../theme/src/styleFunctions";
 import { getKeys } from "../../theme/utils/typeHelpers";
 
 jest.useFakeTimers();
 
 const TestComponent: React.FC<any> = (props: any) => {
-  const rest = useStyledProps(props.object, allStyleFunctions);
+  const rest = useStyleProps(props.object, allStyleFunctions);
 
   return (
     <Box {...rest}>
@@ -19,7 +19,7 @@ const TestComponent: React.FC<any> = (props: any) => {
   );
 };
 
-describe("useStyledProps", () => {
+describe("useStyleProps", () => {
   it("return empty style object for missing props", () => {
     const comp = render(
       <ThemeProvider>

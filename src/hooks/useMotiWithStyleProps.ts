@@ -1,10 +1,19 @@
 import { useMemo } from "react";
 import { getKeys } from "../theme/utils/typeHelpers";
 import { StyleFunctionContainer } from "../theme/src/types";
-import _ from "lodash";
+import _, { keys } from "lodash";
 import { useTheme } from "./useTheme";
 import { useDimensions } from "./useDimensions";
 import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
+import {
+  layoutPropertiesShorthand,
+  spacingPropertiesShorthand,
+} from "../theme/src/styleProperties";
+
+const shorthandPropMapper = {
+  ...layoutPropertiesShorthand,
+  ...spacingPropertiesShorthand,
+};
 
 export const useMotiWithStyleProps = (
   props: Record<string, any>,
@@ -51,6 +60,23 @@ export const useMotiWithStyleProps = (
 
   // Transition
   if (props.transition) {
+    // Filter object values from 'transition'
+    const keysWithObjectValues = getKeys(props.transition).filter(
+      (key) => typeof props.transition[key] === "object"
+    );
+    const propsWithObjectValues = _.pick(
+      props.transition,
+      keysWithObjectValues
+    );
+    const nullObject = keysWithObjectValues.reduce((obj, key) => {
+      return {
+        ...obj,
+        [key]: null,
+      };
+    }, {});
+    props.transition = { ...props.transition, ...nullObject };
+
+    // Comvert style props
     props.transition = composeCleanStyleProps(
       props.transition,
       buildStyleProperties,
@@ -59,6 +85,19 @@ export const useMotiWithStyleProps = (
         dimensions,
       }
     );
+
+    // Add the filtered values back into 'transition'
+    props.transition = keysWithObjectValues.reduce((obj, key: any) => {
+      let finalKey = key;
+      if (getKeys(shorthandPropMapper).includes(key)) {
+        finalKey = (shorthandPropMapper as any)[key];
+      }
+
+      return {
+        ...obj,
+        [finalKey]: propsWithObjectValues[key],
+      };
+    }, props.transition);
   }
 
   // Exit
@@ -71,6 +110,23 @@ export const useMotiWithStyleProps = (
 
   // Exit Transform
   if (props.exitTransition) {
+    // Filter object values from 'exitTransition'
+    const keysWithObjectValues = getKeys(props.exitTransition).filter(
+      (key) => typeof props.exitTransition[key] === "object"
+    );
+    const propsWithObjectValues = _.pick(
+      props.exitTransition,
+      keysWithObjectValues
+    );
+    const nullObject = keysWithObjectValues.reduce((obj, key) => {
+      return {
+        ...obj,
+        [key]: null,
+      };
+    }, {});
+    props.exitTransition = { ...props.exitTransition, ...nullObject };
+
+    // Comvert style props
     props.exitTransition = composeCleanStyleProps(
       props.exitTransition,
       buildStyleProperties,
@@ -79,6 +135,19 @@ export const useMotiWithStyleProps = (
         dimensions,
       }
     );
+
+    // Add the filtered values back into 'exitTransition'
+    props.exitTransition = keysWithObjectValues.reduce((obj, key: any) => {
+      let finalKey = key;
+      if (getKeys(shorthandPropMapper).includes(key)) {
+        finalKey = (shorthandPropMapper as any)[key];
+      }
+
+      return {
+        ...obj,
+        [finalKey]: propsWithObjectValues[key],
+      };
+    }, props.exitTransition);
   }
 
   if (props.state) {

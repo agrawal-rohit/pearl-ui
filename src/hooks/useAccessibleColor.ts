@@ -6,7 +6,7 @@ import {
   ResponsiveValue,
 } from "./../theme/src/types";
 import { colorStyleFunction } from "./../theme/src/styleFunctions";
-import { useStyledProps } from "./useStyledProps";
+import { useStyleProps } from "./useStyleProps";
 import { TinyColor } from "@ctrl/tinycolor";
 import { getNestedObject } from "../theme/utils/typeHelpers";
 

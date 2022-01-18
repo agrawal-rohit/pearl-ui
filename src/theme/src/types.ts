@@ -221,10 +221,12 @@ export type PropValue =
   | object
   | symbol;
 
+export type ComponentTypes = "basic" | "atom" | "molecule";
+
 // Sizes and Variants
 export type ComponentTypeProps<
   ComponentName extends keyof FinalPearlTheme["components"],
-  ComponentType extends "basic" | "atom" | "molecule" = "basic"
+  ComponentType extends ComponentTypes = "basic"
 > = ComponentType extends "basic"
   ? {}
   : ComponentType extends "atom"
@@ -304,6 +306,9 @@ export type PearlComponent<
   > & {
     colorScheme?: ColorScheme;
   };
+
+// STATE PROPS
+export type StateProps<States extends string> = Partial<Record<States, any>>;
 
 // MOTI RELATED PROPS
 type OrSharedValue<T> = T | SharedValue<T>;

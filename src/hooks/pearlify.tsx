@@ -1,5 +1,6 @@
 import {
   ComponentTypeProps,
+  ComponentTypes,
   FinalPearlTheme,
   PearlComponent,
   StyleFunctionContainer,
@@ -7,14 +8,14 @@ import {
 import React from "react";
 import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
 import { boxStyleFunctions, BoxStyleProps } from "../theme/src/styleFunctions";
-import { useStyledProps } from "./useStyledProps";
+import { useStyleProps } from "./useStyleProps";
 import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 import { motify } from "moti";
 import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
 
 interface PearlifyConfig {
   componentName: keyof FinalPearlTheme["components"];
-  type: "basic" | "atom" | "molecule";
+  type: ComponentTypes;
   animatable?: boolean;
 }
 
@@ -27,7 +28,7 @@ interface PearlifyConfig {
  */
 export function pearlify<
   ComponentProps,
-  ComponentType extends "basic" | "atom" | "molecule" = "basic",
+  ComponentType extends ComponentTypes = "basic",
   StyleProps = BoxStyleProps
 >(
   Component: any,
@@ -101,7 +102,7 @@ export function pearlify<
           styleFunctions
         );
       } else {
-        convertedProps = useStyledProps(rest, styleFunctions);
+        convertedProps = useStyleProps(rest, styleFunctions);
 
         if (config.animatable)
           convertedProps = useMotiWithStyleProps(

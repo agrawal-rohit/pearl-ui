@@ -11,7 +11,7 @@ import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
 import _, { over } from "lodash";
-import { useStyledProps } from "./useStyledProps";
+import { useStyleProps } from "./useStyleProps";
 import { boxStyleFunctions } from "../theme/src/styleFunctions";
 
 /**
@@ -49,7 +49,7 @@ export const useMolecularComponentConfig = (
   );
 
   // User overriden props
-  const overridenProps = useStyledProps(receivedProps, styleFunctions);
+  const overridenProps = useStyleProps(receivedProps, styleFunctions);
 
   // Responsive Size and Variant
   const sizeForCurrentScreenSize = useResponsiveProp(

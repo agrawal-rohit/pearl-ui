@@ -54,6 +54,8 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
+  const [disabled, setDisabled] = useState(false);
+
   return (
     <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Screen>
@@ -61,19 +63,27 @@ const App = () => {
           onPress={() => {
             console.log(2);
           }}
+          isDisabled={disabled}
           from={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "timing" }}
+          transition={{
+            type: "timing",
+            duration: 200,
+            mt: { type: "spring" },
+          }}
           backgroundColor="primary.500"
           isFullWidth
-          boxShadow="4xl"
           _pressed={{
-            mt: "m",
+            mt: "s",
+            opacity: 0.6,
+          }}
+          _disabled={{
+            opacity: 0.1,
           }}
         >
           Press Me
         </Button>
-
+        {/* 
         <Image
           width={"100%"}
           height={200}
@@ -111,12 +121,14 @@ const App = () => {
         <Input isFullWidth placeholder="Hey there" />
 
         <Radio variant="filled">Filled Radio</Radio>
-        <Radio variant="outline">Outline Radio</Radio>
+        <Radio variant="outline">Outline Radio</Radio> */}
 
         <CheckBox
           from={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ type: "timing" }}
+          isChecked={disabled}
+          onPress={() => setDisabled(!disabled)}
         >
           Button press
         </CheckBox>

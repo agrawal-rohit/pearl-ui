@@ -30,7 +30,7 @@ import {
   transformColorValue,
   typographyStyleFunction,
 } from "../../../theme/src/styleFunctions";
-import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useStyleProps } from "../../../hooks/useStyleProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
 import _ from "lodash";
 
@@ -236,7 +236,7 @@ const Input = React.forwardRef(
       "animateInitialState",
     ]);
 
-    const inputProps = useStyledProps(atoms.input, inputRootStyleFunctions);
+    const inputProps = useStyleProps(atoms.input, inputRootStyleFunctions);
     const { placeholderTextColor, selectionColor, ...finalInputStyle } =
       inputProps.style;
 
@@ -366,7 +366,6 @@ const Input = React.forwardRef(
         return (
           <Pressable
             onPress={clearInputHandler}
-            activeOpacity={0.8}
             alignSelf="center"
             testID="clear-icon"
           >

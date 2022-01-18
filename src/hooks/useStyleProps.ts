@@ -13,7 +13,7 @@ import _ from "lodash";
  * @param styleFunctions List of style functions to use for computing the received style props
  * @returns
  */
-export const useStyledProps = (
+export const useStyleProps = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
 ) => {

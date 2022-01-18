@@ -1,24 +1,25 @@
 import React from "react";
 import Box, { BoxProps } from "../Box/Box";
 import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
-import { BasicComponentProps } from "../../../theme/src/types";
+import { BasicComponentProps, StateProps } from "../../../theme/src/types";
 import {
   MotiPressable,
   MotiPressableProps,
   mergeAnimateProp,
 } from "moti/interactions";
-import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useStyleProps } from "../../../hooks/useStyleProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 import _ from "lodash";
 import { usePressedState } from "../../../hooks/stateHooks/usePressedState";
+import { useDisabledState } from "../../../hooks/stateHooks/useDisabledState";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
-  Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> & {
+  Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> &
+  StateProps<"_pressed" | "_disabled"> & {
     /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
     onPressInDelay?: number;
     /** Whether the press behavior is disabled. */
     isDisabled?: boolean;
-    _pressed?: Record<string, any>;
   };
 
 /** A wrapper around the React Native Pressable component which allows you use Pearl style props */
@@ -38,15 +39,24 @@ const Pressable = React.forwardRef(
     }: BasicComponentProps<BasePressableProps>,
     ref: any
   ) => {
-    let props = useStyledProps(rest, boxStyleFunctions);
+    let props = useStyleProps(rest, boxStyleFunctions);
     props = useMotiWithStyleProps(props, boxStyleFunctions);
 
-    // Use Pressed State for dynamic styles
-    const { setPressed, pressedStyles } = usePressedState(
+    // Use State for dynamic styles
+    const { setPressed, propsWithPressedStyles } = usePressedState(
       props,
-      false,
       boxStyleFunctions
     );
+    props = propsWithPressedStyles;
+
+    const { propsWithDisabledStyles } = useDisabledState(
+      props,
+      boxStyleFunctions,
+      "basic",
+      true,
+      isDisabled
+    );
+    props = propsWithDisabledStyles;
 
     // Methods to handle local pressable state
     const onPressInHandler = () => {
@@ -58,8 +68,6 @@ const Pressable = React.forwardRef(
       setPressed(false);
       if (onPressOut) onPressOut();
     };
-
-    // Initialize
 
     return (
       <MotiPressable
@@ -75,7 +83,7 @@ const Pressable = React.forwardRef(
         animate={(interaction) => {
           "worklet";
 
-          return mergeAnimateProp(interaction, props.animate, pressedStyles);
+          return mergeAnimateProp(interaction, props.animate);
         }}
       >
         {children}

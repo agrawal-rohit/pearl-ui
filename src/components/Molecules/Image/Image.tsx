@@ -17,7 +17,7 @@ import CacheManager from "./CacheManager";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import { BlurView } from "expo-blur";
 import Spinner from "../../Atoms/Spinner/Spinner";
-import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useStyleProps } from "../../../hooks/useStyleProps";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 
@@ -152,7 +152,7 @@ const CustomImage = React.forwardRef(
     } = rootProps;
 
     // Compute border props so that they can be used by the native Image element
-    let borderRadiiStyles = useStyledProps(
+    let borderRadiiStyles = useStyleProps(
       {
         borderRadius,
         borderBottomLeftRadius,

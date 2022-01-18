@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import { getKeys } from "../../../theme/utils/typeHelpers";
-import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useStyleProps } from "../../../hooks/useStyleProps";
 import Box, { BoxProps } from "../Box/Box";
 import { positionStyleFunction } from "../../../theme/src/styleFunctions";
 
@@ -110,7 +110,7 @@ export const ZStack: React.FC<ZStackProps> = ({
       const isOverridenZIndexProvided =
         (child as ReactElement).props &&
         getKeys((child as ReactElement).props).includes("zIndex");
-      const computedZIndex = useStyledProps((child as ReactElement).props, [
+      const computedZIndex = useStyleProps((child as ReactElement).props, [
         ...positionStyleFunction,
       ]);
 

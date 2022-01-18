@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Style Functions
 ---
 
-**Style Functions** are a set of pre-defined functions used by the [useStyledProps](../hooks/useStyledProps) to add support for style props to any React Native element. They also connect specific style properties to the values in the active theme object for a design-system-driven development experience.
+**Style Functions** are a set of pre-defined functions used by the [useStyleProps](../hooks/useStyleProps) to add support for style props to any React Native element. They also connect specific style properties to the values in the active theme object for a design-system-driven development experience.
 
 The following list of style functions are supported in Pearl UI:
 

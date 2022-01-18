@@ -11,7 +11,7 @@ import Box, { BoxProps } from "../../Atoms/Box/Box";
 import { ZStack } from "../../Atoms/Stack/Stack";
 import Avatar from "./Avatar";
 import { avatarGroupContext } from "./useAvatarGroup";
-import { useStyledProps } from "../../../hooks/useStyledProps";
+import { useStyleProps } from "../../../hooks/useStyleProps";
 
 export type AvatarGroupProps = BoxProps & {
   /** Size of all the children avatars in the group. */
@@ -33,7 +33,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
   max = 3,
   ...rest
 }) => {
-  const convertedElementSpacing = useStyledProps({ marginLeft: rest.spacing }, [
+  const convertedElementSpacing = useStyleProps({ marginLeft: rest.spacing }, [
     ...spacingStyleFunction,
   ]);
   const avatarChildren = React.Children.toArray(children);

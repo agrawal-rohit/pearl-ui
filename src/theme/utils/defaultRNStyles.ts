@@ -19,8 +19,6 @@ export default {
   paddingEnd: 0,
   fontStyle: "normal",
   fontWeight: "normal",
-  textAlign: "auto",
-  textDecorationLine: "none",
   textDecorationStyle: "solid",
   textTransform: "none",
   borderBottomWidth: 0,
