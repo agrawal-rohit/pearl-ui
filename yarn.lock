@@ -4594,10 +4594,10 @@ expo-file-system@~13.1.0:
     "@expo/config-plugins" "^4.0.2"
     uuid "^3.4.0"
 
-expo-file-system@~13.2.0:
-  version "13.2.0"
-  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-13.2.0.tgz#155fecd095d0aa01b9b78423077033e6ab852f0c"
-  integrity sha512-YboLdTuPVhYYcAIwYkJXsh0Ud6d3hwxU2DQ167lVktQ+SUIAyGN/VQQm1pkQBcpj/FFd2IM3NTD0ofx9qxyVGg==
+expo-file-system@~14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-14.0.0.tgz#8367af10969a486fcba2f1e1c7cc0148f855e962"
+  integrity sha512-Asva7ehLUq/PIem6Y+/OQvoIqhFqYDd7l4l49yDRDgLSbK2I7Fr8qGhDeDpnUXrMVamg2uwt9zRGhyrjFNRhVw==
   dependencies:
     "@expo/config-plugins" "^4.0.14"
     uuid "^3.4.0"
