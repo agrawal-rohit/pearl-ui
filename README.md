@@ -74,7 +74,7 @@ $ yarn add pearl-ui
 
 ## Documentation
 
-See the complete usage and API docs [here](https://www.pearl-ui.dev/).
+See the complete usage and API docs [here](https://docs.pearl-ui.dev/).
 
 ## Changelog
 
@@ -98,7 +98,7 @@ All developers who wish to contribute through code or issues, take a look at the
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people 🙌🏻:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
