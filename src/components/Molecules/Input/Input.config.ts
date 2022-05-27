@@ -1,13 +1,9 @@
 export default {
-  parts: ["root", "input", "text", "icon", "errorText"],
+  parts: ["root", "input", "text", "icon"],
   baseStyle: {
     root: {
       flexDirection: "row",
       alignSelf: "flex-start",
-      my: "2xs",
-      focusBorderColor: "primary.500",
-      errorBorderColor: "danger.500",
-      errorMessageColor: "danger.500",
     },
     text: {
       color: {
@@ -31,11 +27,6 @@ export default {
       },
       selectionColor: "primary.500",
       allowFontScaling: true,
-    },
-    errorText: {
-      variant: "caption",
-      color: "danger.500",
-      marginBottom: "2xs",
     },
   },
   sizes: {
@@ -110,10 +101,6 @@ export default {
         backgroundColor: {
           light: "neutral.200",
           dark: "neutral.900",
-        },
-        focusBackgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
         },
         borderWidth: 1,
         borderColor: {

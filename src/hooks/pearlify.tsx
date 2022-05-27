@@ -1,7 +1,8 @@
 import {
-  ComponentTypeProps,
+  AtomComponent,
   ComponentTypes,
   FinalPearlTheme,
+  MoleculeComponent,
   PearlComponent,
   StyleFunctionContainer,
 } from "../theme/src/types";
@@ -29,7 +30,8 @@ interface PearlifyConfig {
 export function pearlify<
   ComponentProps,
   ComponentType extends ComponentTypes = "basic",
-  StyleProps = BoxStyleProps
+  StyleProps = BoxStyleProps,
+  Animateable extends boolean = true
 >(
   Component: any,
   config: PearlifyConfig = {
@@ -66,8 +68,9 @@ export function pearlify<
       {
         children,
         ...rest
-      }: PearlComponent<ComponentProps, StyleProps> &
-        ComponentTypeProps<typeof config["componentName"], ComponentType> & {
+      }: PearlComponent<ComponentProps, StyleProps, Animateable> &
+        AtomComponent<typeof config["componentName"], ComponentType> &
+        MoleculeComponent<typeof config["componentName"], ComponentType> & {
           children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
         },
       ref: any

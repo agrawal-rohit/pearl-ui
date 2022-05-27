@@ -8,11 +8,7 @@ import Text from "../../Atoms/Text/Text";
 import namedColors from "../../../theme/utils/namedColors.json";
 import { getKeys } from "../../../theme/utils/typeHelpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
-import {
-  ComponentTypeProps,
-  MoleculeComponentProps,
-  PearlComponent,
-} from "../../../theme/src/types";
+import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 import { useAvatarGroup } from "./useAvatarGroup";
 
@@ -106,12 +102,12 @@ const CustomAvatar = React.forwardRef(
   }
 );
 
-export type AvatarProps = PearlComponent<BaseAvatarProps> &
-  ComponentTypeProps<"Avatar", "molecule">;
-
 /** The Avatar component is used to represent a user, and displays the profile picture, initials or fallback icon. */
 const Avatar = React.forwardRef(
-  ({ children, ...rest }: AvatarProps, ref: any) => {
+  (
+    { children, ...rest }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
+    ref: any
+  ) => {
     let { size, variant } = useAvatarGroup();
 
     // Overwrite props from avatar group
@@ -131,5 +127,7 @@ const Avatar = React.forwardRef(
     );
   }
 );
+
+export type AvatarProps = React.ComponentProps<typeof Avatar>;
 
 export default Avatar;

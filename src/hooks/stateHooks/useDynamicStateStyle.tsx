@@ -17,14 +17,17 @@ export const useDynamicStateStyle = (
   animateable = true
 ) => {
   // Override the pressed state if the parentStateValue is provided
-  let pressedStyles = props[stateKey];
+  let stateStyles = props[stateKey];
+
+  if (!stateStyles) return props;
+
   if (activeComponentType !== "molecule")
-    pressedStyles = useStateWithStyleProps(props[stateKey], styleFunctions);
+    stateStyles = useStateWithStyleProps(stateStyles, styleFunctions);
 
   let finalProps = props;
   if (animateable) {
     // Add missing required from the 'from' prop to the base style
-    finalProps.animate = getKeys(pressedStyles).reduce((final, key: any) => {
+    finalProps.animate = getKeys(stateStyles).reduce((final, key: any) => {
       if (getKeys(defaultRNStyles).includes(key)) {
         return {
           [key]: (defaultRNStyles as any)[key],
@@ -38,7 +41,7 @@ export const useDynamicStateStyle = (
     if (currentState) {
       finalProps.animate = {
         ...finalProps.animate,
-        ...pressedStyles,
+        ...stateStyles,
       };
     }
   } else {
@@ -46,12 +49,12 @@ export const useDynamicStateStyle = (
       if (activeComponentType !== "molecule") {
         finalProps.style = {
           ...finalProps.style,
-          ...pressedStyles,
+          ...stateStyles,
         };
       } else {
         finalProps = {
           ...finalProps,
-          ...pressedStyles,
+          ...stateStyles,
         };
       }
     }

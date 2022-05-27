@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Box, { BoxProps } from "../../Atoms/Box/Box";
 import Text, { buildFontConfig } from "../../Atoms/Text/Text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
@@ -13,8 +13,6 @@ import {
   TextInputProps,
 } from "react-native";
 import {
-  FinalPearlTheme,
-  ColorModeColor,
   StyleFunctionContainer,
   ResponsiveValue,
   ColorScheme,
@@ -22,6 +20,7 @@ import {
   ComponentSizes,
   ComponentVariants,
   MoleculeComponentProps,
+  StateProps,
 } from "../../../theme/src/types";
 import {
   boxStyleFunctions,
@@ -33,12 +32,16 @@ import {
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import Pressable from "../../Atoms/Pressable/Pressable";
 import _ from "lodash";
+import { useFocusedState } from "../../../hooks/stateHooks/useFocusedState";
+import { useDisabledState } from "../../../hooks/stateHooks/useDisabledState";
+import { useInvalidState } from "../../../hooks/stateHooks/useInvalidState";
 
 export type InputProps = Omit<
   TextInputProps,
   "placeholderTextColor" | "selectionColor"
 > &
-  BoxProps & {
+  BoxProps &
+  StateProps<"_focused" | "_disabled" | "_invalid"> & {
     /** Size of the input field. */
     size?: ResponsiveValue<ComponentSizes<"Input">>;
     /** Variant of the input field. */
@@ -55,50 +58,12 @@ export type InputProps = Omit<
     leftIcon?: React.ReactElement;
     /** Icon to display on the right side of the text input */
     rightIcon?: React.ReactElement;
-    /** The error message to be displayed if the input field is in an error state */
-    errorMessage?: string;
     /** Active color palette of the input field */
     colorScheme?: ColorScheme;
     /** Custom color of the placeholder text string */
     placeholderTextColor?: ResponsiveValue<PaletteColors>;
     /** Custom color of the highlight and cursor color */
     selectionColor?: ResponsiveValue<PaletteColors>;
-    /** The background color of the input field when it is in focus */
-    focusBackgroundColor?: ResponsiveValue<PaletteColors>;
-    /** The border color of the input field when it is in focus */
-    focusBorderColor?: ResponsiveValue<PaletteColors>;
-    /** The border start color of the input field when it is in focus */
-    focusBorderStartColor?: ResponsiveValue<PaletteColors>;
-    /** The border end color of the input field when it is in focus */
-    focusBorderEndColor?: ResponsiveValue<PaletteColors>;
-    /** The border top color of the input field when it is in focus */
-    focusBorderTopColor?: ResponsiveValue<PaletteColors>;
-    /** The border left color of the input field when it is in focus */
-    focusBorderLeftColor?: ResponsiveValue<PaletteColors>;
-    /** The border right color of the input field when it is in focus */
-    focusBorderRightColor?: ResponsiveValue<PaletteColors>;
-    /** The border bottom color of the input field when it is in focus */
-    focusBorderBottomColor?: ResponsiveValue<PaletteColors>;
-    /** The shadow color of the input field when it is in focus */
-    focusShadowColor?: ResponsiveValue<PaletteColors>;
-    /** The background color of the input field when it is in an error state */
-    errorBackgroundColor?: ResponsiveValue<PaletteColors>;
-    /** The border color of the input field when it is in an error state */
-    errorBorderColor?: ResponsiveValue<PaletteColors>;
-    /** The border start color of the input field when it is in an error state */
-    errorBorderStartColor?: ResponsiveValue<PaletteColors>;
-    /** The border end color of the input field when it is in an error state */
-    errorBorderEndColor?: ResponsiveValue<PaletteColors>;
-    /** The border top color of the input field when it is in an error state */
-    errorBorderTopColor?: ResponsiveValue<PaletteColors>;
-    /** The border left color of the input field when it is in an error state */
-    errorBorderLeftColor?: ResponsiveValue<PaletteColors>;
-    /** The border right color of the input field when it is in an error state */
-    errorBorderRightColor?: ResponsiveValue<PaletteColors>;
-    /** The border bottom color of the input field when it is in an error state */
-    errorBorderBottomColor?: ResponsiveValue<PaletteColors>;
-    /** The shadow color of the input field when it is in an error state */
-    errorShadowColor?: ResponsiveValue<PaletteColors>;
   };
 
 // Additional style Functions used for this component
@@ -116,26 +81,10 @@ const selectionColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
-const focusShadowColorStyleFunction = createStyleFunction({
-  property: "focusShadowColor",
-  styleProperty: "focusShadowColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
-const errorShadowColorStyleFunction = createStyleFunction({
-  property: "errorShadowColor",
-  styleProperty: "errorShadowColor",
-  themeKey: "palette",
-  transform: transformColorValue,
-});
-
 const inputRootStyleFunctions = [
   ...boxStyleFunctions,
   placeholderTextColorStyleFunction,
   selectionColorStyleFunction,
-  focusShadowColorStyleFunction,
-  errorShadowColorStyleFunction,
 ];
 
 const inputTextStyleFunctions = [
@@ -157,7 +106,6 @@ const Input = React.forwardRef(
       isInvalid = false,
       leftIcon = undefined,
       rightIcon = undefined,
-      errorMessage = "",
       colorScheme = "primary",
       onChangeText = () => {},
       onChange = () => {},
@@ -171,37 +119,16 @@ const Input = React.forwardRef(
       textInputRef = useRef();
     }
 
-    const [isFocused, setIsFocused] = useState(false);
     const [isCleared, setIsCleared] = useState(
       rest.value && rest.value.length > 0 ? false : true
     );
 
-    const {
-      focusBackgroundColor,
-      focusBorderColor,
-      focusBorderStartColor,
-      focusBorderEndColor,
-      focusBorderTopColor,
-      focusBorderLeftColor,
-      focusBorderRightColor,
-      focusBorderBottomColor,
-      errorBackgroundColor,
-      errorBorderColor,
-      errorBorderStartColor,
-      errorBorderEndColor,
-      errorBorderTopColor,
-      errorBorderLeftColor,
-      errorBorderRightColor,
-      errorBorderBottomColor,
-      ...filteredReceivedProps
-    } = rest;
-
     let molecularProps = useMolecularComponentConfig(
       "Input",
-      filteredReceivedProps,
+      rest,
       {
         size: size,
-        variant: filteredReceivedProps["variant"],
+        variant: rest["variant"],
       },
       colorScheme,
       boxStyleFunctions,
@@ -209,7 +136,7 @@ const Input = React.forwardRef(
       "input"
     );
 
-    const { atoms, ...rootProps } = molecularProps;
+    let { atoms, ...rootProps } = molecularProps;
 
     // Transfer the Moti animation props from the 'input' atom props to 'root' props
     rootProps.animate = atoms.input.animate;
@@ -222,12 +149,18 @@ const Input = React.forwardRef(
     rootProps.exit = atoms.input.exit;
     rootProps.exitTransition = atoms.input.exitTransition;
     rootProps.animateInitialState = atoms.input.animateInitialState;
+    rootProps._focused = atoms.input._focused;
+    rootProps._disabled = atoms.input._disabled;
+    rootProps._invalid = atoms.input._invalid;
 
     atoms.input = _.omit(atoms.input, [
       "animate",
       "from",
       "transition",
       "delay",
+      "_focused",
+      "_disabled",
+      "_invalid",
       "state",
       "stylePriority",
       "onDidAnimate",
@@ -261,6 +194,30 @@ const Input = React.forwardRef(
       ...memoizedBuildFontConfig(),
     };
 
+    // Use State for dynamic styles
+    const { focused, setFocused, propsWithFocusedStyles } = useFocusedState(
+      rootProps,
+      boxStyleFunctions,
+      "molecule"
+    );
+    rootProps = propsWithFocusedStyles;
+    const { propsWithDisabledStyles } = useDisabledState(
+      rootProps,
+      boxStyleFunctions,
+      "molecule",
+      true,
+      isDisabled
+    );
+    rootProps = propsWithDisabledStyles;
+    const { propsWithInvalidStyles } = useInvalidState(
+      rootProps,
+      boxStyleFunctions,
+      "molecule",
+      true,
+      isInvalid
+    );
+    rootProps = propsWithInvalidStyles;
+
     // METHODS
     const clearInputHandler = () => {
       (textInputRef.current as any).clear();
@@ -289,7 +246,7 @@ const Input = React.forwardRef(
     const focusInputHandler = (
       event: NativeSyntheticEvent<TextInputFocusEventData>
     ) => {
-      setIsFocused(true);
+      setFocused(true);
       if (onFocus) {
         onFocus(event);
       }
@@ -298,48 +255,10 @@ const Input = React.forwardRef(
     const blurInputHandler = (
       event: NativeSyntheticEvent<TextInputFocusEventData>
     ) => {
-      setIsFocused(false);
+      setFocused(false);
       if (onBlur) {
         onBlur(event);
       }
-    };
-
-    const capitalizeFirstLetter = (string: string) => {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    };
-
-    const computeFocusOrErrorProps = (
-      propertyName: string,
-      customfallbackProp:
-        | ResponsiveValue<keyof FinalPearlTheme["palette"] | ColorModeColor>
-        | ColorModeColor
-        | undefined = undefined,
-      targetPropertyParent: object = rest
-    ) => {
-      let fallbackProp;
-      if (customfallbackProp) {
-        fallbackProp = customfallbackProp;
-      } else {
-        fallbackProp = rootProps[propertyName];
-      }
-
-      if (isFocused) {
-        const focusProp =
-          (targetPropertyParent as any)[
-            `focus${capitalizeFirstLetter(propertyName)}`
-          ] || rootProps[`focus${capitalizeFirstLetter(propertyName)}`];
-        return focusProp ? focusProp : fallbackProp;
-      }
-
-      if (isInvalid) {
-        const errorProp =
-          (targetPropertyParent as any)[
-            `error${capitalizeFirstLetter(propertyName)}`
-          ] || rootProps[`error${capitalizeFirstLetter(propertyName)}`];
-        return errorProp ? errorProp : fallbackProp;
-      }
-
-      return fallbackProp;
     };
 
     // Render Functions
@@ -380,79 +299,45 @@ const Input = React.forwardRef(
       }
     };
 
-    const renderErrorMessage = () => {
-      if (errorMessage && isInvalid) {
-        return <Text {...atoms.errorText}>{errorMessage}</Text>;
-      }
-    };
-
     return (
-      <>
-        <Box
-          {...rootProps}
-          backgroundColor={computeFocusOrErrorProps(
-            "backgroundColor",
-            rootProps.backgroundColor || rootProps.bg
-          )}
-          borderColor={computeFocusOrErrorProps("borderColor")}
-          borderStartColor={computeFocusOrErrorProps("borderStartColor")}
-          borderEndColor={computeFocusOrErrorProps("borderEndColor")}
-          borderTopColor={computeFocusOrErrorProps("borderTopColor")}
-          borderBottomColor={computeFocusOrErrorProps("borderBottomColor")}
-          borderLeftColor={computeFocusOrErrorProps("borderLeftColor")}
-          borderRightColor={computeFocusOrErrorProps("borderRightColor")}
-          opacity={isDisabled ? 0.5 : 1}
-          testID="inputFieldContainer"
-          style={{
-            ...rootProps.style,
-            shadowColor: computeFocusOrErrorProps(
-              "shadowColor",
-              rootProps.style.shadowColor,
-              rootProps.style
-            ),
-          }}
-        >
-          {renderLeftIcon()}
-          <TextInput
-            {...inputProps}
-            ref={textInputRef}
-            editable={!isDisabled}
-            onFocus={focusInputHandler}
-            onBlur={blurInputHandler}
-            onChange={onChangeHandler}
-            onChangeText={onChangeTextHandler}
-            allowFontScaling={true}
-            placeholderTextColor={
-              rootProps.style.placeholderTextColor || placeholderTextColor
-                ? rootProps.style.placeholderTextColor || placeholderTextColor
-                : "#a7a7a7"
-            }
-            selectionColor={
-              rootProps.style.selectionColor || selectionColor
-                ? rootProps.style.selectionColor || selectionColor
-                : null
-            }
-            accessibilityLabel={
-              rest.accessibilityLabel
-                ? rest.accessibilityLabel
-                : rest.placeholder
-            }
-            accessibilityState={{ disabled: isDisabled, selected: isFocused }}
-            style={[
-              finalInputStyle,
-              finalTextStyles,
-              { flex: isFullWidth ? 1 : null },
-              Platform.OS === "web" && { outlineStyle: "none" },
-            ]}
-          />
+      <Box {...rootProps}>
+        {renderLeftIcon()}
+        <TextInput
+          {...inputProps}
+          ref={textInputRef}
+          editable={!isDisabled}
+          onFocus={focusInputHandler}
+          onBlur={blurInputHandler}
+          onChange={onChangeHandler}
+          onChangeText={onChangeTextHandler}
+          allowFontScaling={true}
+          placeholderTextColor={
+            rootProps.style.placeholderTextColor || placeholderTextColor
+              ? rootProps.style.placeholderTextColor || placeholderTextColor
+              : "#a7a7a7"
+          }
+          selectionColor={
+            rootProps.style.selectionColor || selectionColor
+              ? rootProps.style.selectionColor || selectionColor
+              : null
+          }
+          accessibilityLabel={
+            rest.accessibilityLabel ? rest.accessibilityLabel : rest.placeholder
+          }
+          accessibilityState={{ disabled: isDisabled, selected: focused }}
+          style={[
+            finalInputStyle,
+            finalTextStyles,
+            { flex: isFullWidth ? 1 : null },
+            Platform.OS === "web" && { outlineStyle: "none" },
+          ]}
+        />
 
-          <Box flexDirection="row">
-            {renderRightIcon()}
-            {renderClearIcon()}
-          </Box>
+        <Box flexDirection="row">
+          {renderRightIcon()}
+          {renderClearIcon()}
         </Box>
-        {renderErrorMessage()}
-      </>
+      </Box>
     );
   }
 );

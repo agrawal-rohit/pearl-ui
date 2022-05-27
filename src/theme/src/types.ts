@@ -224,21 +224,42 @@ export type PropValue =
 export type ComponentTypes = "basic" | "atom" | "molecule";
 
 // Sizes and Variants
-export type ComponentTypeProps<
+// export type ComponentTypeProps<
+//   ComponentName extends keyof FinalPearlTheme["components"],
+//   ComponentType extends ComponentTypes = "basic"
+// > = ComponentType extends "basic"
+//   ? {}
+//   : ComponentType extends "atom"
+//   ? {
+//       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+//       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+//     }
+//   : {
+//       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
+//       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
+//       atoms?: Record<string, any>;
+//     };
+
+export type AtomComponent<
   ComponentName extends keyof FinalPearlTheme["components"],
-  ComponentType extends ComponentTypes = "basic"
-> = ComponentType extends "basic"
-  ? {}
-  : ComponentType extends "atom"
+  ComponentType extends ComponentTypes = "atom"
+> = ComponentType extends "atom"
   ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
     }
-  : {
+  : {};
+
+export type MoleculeComponent<
+  ComponentName extends keyof FinalPearlTheme["components"],
+  ComponentType extends ComponentTypes = "molecule"
+> = ComponentType extends "molecule"
+  ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
       atoms?: Record<string, any>;
-    };
+    }
+  : {};
 
 export type ComponentSizes<
   ComponentName extends keyof FinalPearlTheme["components"]
@@ -278,8 +299,9 @@ export type AtomComponentProps<
 export type MoleculeComponentProps<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentProps,
-  StyleProps = BoxStyleProps
-> = PearlComponent<ComponentProps, StyleProps> & {
+  StyleProps = BoxStyleProps,
+  Animateable = true
+> = PearlComponent<ComponentProps, StyleProps, Animateable> & {
   /** Size of the component. */
   size?: ResponsiveValue<ComponentSizes<ComponentName>>;
   /** Variant of the component. */
@@ -308,7 +330,10 @@ export type PearlComponent<
   };
 
 // STATE PROPS
-export type StateProps<States extends string> = Partial<Record<States, any>>;
+export type StateProps<
+  States extends string,
+  StyleProps = BoxStyleProps
+> = Partial<Record<States, StyleProps>>;
 
 // MOTI RELATED PROPS
 type OrSharedValue<T> = T | SharedValue<T>;

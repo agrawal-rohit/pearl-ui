@@ -5,7 +5,9 @@ export default {
       my: "2xs",
       justifyContent: "center",
       alignItems: "center",
-      activeOpacity: 0.8,
+      _pressed: {
+        opacity: 0.8,
+      },
     },
     icon: {
       alignSelf: "center",

@@ -55,10 +55,23 @@ const App = () => {
   });
 
   const [disabled, setDisabled] = useState(false);
+  const [invalid, setInvalid] = useState(false);
 
   return (
     <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Screen>
+        <Input
+          isFullWidth
+          placeholder="Enter some text..."
+          from={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          isDisabled={disabled}
+          isInvalid={invalid}
+          _disabled={{
+            opacity: 0.1,
+          }}
+        />
+
         <Button
           onPress={() => {
             console.log(2);
@@ -83,8 +96,8 @@ const App = () => {
         >
           Press Me
         </Button>
-        {/* 
-        <Image
+
+        {/* <Image
           width={"100%"}
           height={200}
           loaderType="progressive"
@@ -130,7 +143,18 @@ const App = () => {
           isChecked={disabled}
           onPress={() => setDisabled(!disabled)}
         >
-          Button press
+          Disabled
+        </CheckBox>
+
+        <CheckBox
+          from={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "timing" }}
+          isChecked={invalid}
+          colorScheme="danger"
+          onPress={() => setInvalid(!invalid)}
+        >
+          Invalid
         </CheckBox>
       </Screen>
     </ThemeProvider>

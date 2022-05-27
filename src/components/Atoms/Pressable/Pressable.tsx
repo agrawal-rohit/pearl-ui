@@ -1,17 +1,19 @@
 import React from "react";
-import Box, { BoxProps } from "../Box/Box";
-import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
+import { BoxProps } from "../Box/Box";
+import {
+  boxStyleFunctions,
+  BoxStyleProps,
+} from "../../../theme/src/styleFunctions";
 import { BasicComponentProps, StateProps } from "../../../theme/src/types";
 import {
   MotiPressable,
   MotiPressableProps,
   mergeAnimateProp,
 } from "moti/interactions";
-import { useStyleProps } from "../../../hooks/useStyleProps";
-import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 import _ from "lodash";
 import { usePressedState } from "../../../hooks/stateHooks/usePressedState";
 import { useDisabledState } from "../../../hooks/stateHooks/useDisabledState";
+import { pearlify } from "../../../hooks/pearlify";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> &
@@ -22,8 +24,7 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     isDisabled?: boolean;
   };
 
-/** A wrapper around the React Native Pressable component which allows you use Pearl style props */
-const Pressable = React.forwardRef(
+const CustomPressable = React.forwardRef(
   (
     {
       children,
@@ -35,13 +36,10 @@ const Pressable = React.forwardRef(
       onPressIn = undefined,
       onPressOut = undefined,
       onLongPress = undefined,
-      ...rest
+      ...props
     }: BasicComponentProps<BasePressableProps>,
     ref: any
   ) => {
-    let props = useStyleProps(rest, boxStyleFunctions);
-    props = useMotiWithStyleProps(props, boxStyleFunctions);
-
     // Use State for dynamic styles
     const { setPressed, propsWithPressedStyles } = usePressedState(
       props,
@@ -89,6 +87,16 @@ const Pressable = React.forwardRef(
         {children}
       </MotiPressable>
     );
+  }
+);
+
+/** A component which allows you to capture pressed events */
+const Pressable = pearlify<BasePressableProps, "basic", BoxStyleProps, false>(
+  CustomPressable,
+  {
+    componentName: "None",
+    type: "basic",
+    animatable: false,
   }
 );
 

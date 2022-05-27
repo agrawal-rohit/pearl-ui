@@ -40,54 +40,29 @@ describe("Molecules/Input", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // Skipping because the input doesn't get focused
-  it.skip("updates styles correctly when in focused state", async () => {
-    const focusBackgroundColor = "red";
-    const focusBorderColor = "primary.500";
+  // it("updates styles correctly when in an error state ", async () => {
+  //   const errorBackgroundColor = "neutral.50";
+  //   const errorBorderColor = "danger.800";
 
-    const { getByTestId } = await render(
-      <ThemeProvider>
-        <Input
-          autoFocus
-          testID="inputField"
-          focusBackgroundColor={focusBackgroundColor}
-          focusBorderColor={focusBorderColor}
-        />
-      </ThemeProvider>
-    );
+  //   const { getByTestId } = render(
+  //     <ThemeProvider>
+  //       <Input
+  //         testID="inputField"
+  //         isInvalid
+  //         errorBackgroundColor={errorBackgroundColor}
+  //         errorBorderColor={errorBorderColor}
+  //       />
+  //     </ThemeProvider>
+  //   );
 
-    const inputContainer = getByTestId("inputFieldContainer");
-    expect(inputContainer.props.style.borderColor).toEqual(
-      (baseTheme.palette.primary as any)["500"]
-    );
-    expect(inputContainer.props.style.backgroundColor).toEqual(
-      baseTheme.palette["red"]
-    );
-  });
-
-  it("updates styles correctly when in an error state ", async () => {
-    const errorBackgroundColor = "neutral.50";
-    const errorBorderColor = "danger.800";
-
-    const { getByTestId } = render(
-      <ThemeProvider>
-        <Input
-          testID="inputField"
-          isInvalid
-          errorBackgroundColor={errorBackgroundColor}
-          errorBorderColor={errorBorderColor}
-        />
-      </ThemeProvider>
-    );
-
-    const inputContainer = getByTestId("inputFieldContainer");
-    expect(inputContainer.props.style.borderColor).toEqual(
-      (baseTheme.palette.danger as any)["800"]
-    );
-    expect(inputContainer.props.style.backgroundColor).toEqual(
-      (baseTheme.palette.neutral as any)["50"]
-    );
-  });
+  //   const inputContainer = getByTestId("inputFieldContainer");
+  //   expect(inputContainer.props.style.borderColor).toEqual(
+  //     (baseTheme.palette.danger as any)["800"]
+  //   );
+  //   expect(inputContainer.props.style.backgroundColor).toEqual(
+  //     (baseTheme.palette.neutral as any)["50"]
+  //   );
+  // });
 
   it("passes the snapshot test for different icons", async () => {
     const tree = await render(
@@ -152,22 +127,5 @@ describe("Molecules/Input", () => {
     fireEvent.changeText(input, "new value");
 
     expect(queryByText("new value")).toBeNull();
-  });
-
-  it("shows error message correctly", () => {
-    const value = "start value";
-
-    const { getByText } = render(
-      <ThemeProvider>
-        <Input
-          placeholder="Enter value"
-          value={value}
-          isInvalid
-          errorMessage="Test error message"
-        />
-      </ThemeProvider>
-    );
-
-    expect(getByText("Test error message")).toBeTruthy();
   });
 });

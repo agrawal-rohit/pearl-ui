@@ -1,5 +1,5 @@
 export default {
-  parts: ["root", "box", "icon", "text", "errorText"],
+  parts: ["root", "box", "icon", "text"],
   baseStyle: {
     root: {
       my: "2xs",
@@ -9,8 +9,9 @@ export default {
       p: "hairline",
       shape: "square",
       borderColor: "neutral.300",
-      checkedBackgroundColor: "primary.500",
-      errorBorderColor: "danger.500",
+      _invalid: {
+        borderColor: "danger.500",
+      },
     },
     icon: {
       checkedIconFamily: "Ionicons",
@@ -18,11 +19,6 @@ export default {
       indeterminateIconFamily: "Ionicons",
       indeterminateIconName: "remove-outline",
       color: "neutral.50",
-    },
-    errorText: {
-      variant: "caption",
-      color: "danger.500",
-      marginBottom: "2xs",
     },
   },
   sizes: {
@@ -83,7 +79,10 @@ export default {
           light: "neutral.200",
           dark: "neutral.600",
         },
-        checkedBorderColor: "primary.500",
+        _checked: {
+          bg: "primary.500",
+          borderColor: "primary.500",
+        },
       },
     },
     outline: {
@@ -97,7 +96,10 @@ export default {
           light: "neutral.400",
           dark: "neutral.500",
         },
-        checkedBorderColor: "primary.500",
+        _checked: {
+          bg: "primary.500",
+          borderColor: "primary.500",
+        },
       },
     },
   },

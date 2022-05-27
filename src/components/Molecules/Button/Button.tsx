@@ -1,9 +1,9 @@
-import React, { RefObject } from "react";
+import React from "react";
 import Spinner from "../../Atoms/Spinner/Spinner";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
+import Box from "../../Atoms/Box/Box";
 import Text from "../../Atoms/Text/Text";
 import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
-import { ColorScheme, MoleculeComponentProps } from "../../../theme/src/types";
+import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 
 export type BaseButtonProps = PressableProps & {
@@ -107,7 +107,6 @@ const CustomButton = React.forwardRef(
         {...otherRootProps}
         ref={ref}
         isDisabled={disabled}
-        opacity={disabled ? 0.5 : 1}
         onPress={rootProps.onPress}
         alignSelf={isFullWidth ? "stretch" : "flex-start"}
         accessibilityLabel={
