@@ -39,7 +39,6 @@ write cleaner code, and get your product to market faster!
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Changelog](#changelog)
-- [Support](#support)
 - [License](#license)
 
 ## Key Features
@@ -79,10 +78,6 @@ See the complete usage and API docs [here](https://docs.pearl-ui.dev/).
 ## Changelog
 
 We're using the github [releases](https://github.com/agrawal-rohit/pearl-ui/releases) for [changelog](https://github.com/agrawal-rohit/pearl-ui/blob/main/CHANGELOG.md) entries.
-
-## Support
-
-<a href="https://www.buymeacoffee.com/rohitagrawal" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Contributing
 
