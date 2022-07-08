@@ -44,7 +44,7 @@
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.7"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
