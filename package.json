@@ -39,7 +39,7 @@
     "expo-file-system": "~13.2.0",
     "expo-status-bar": "~1.2.0",
     "lodash": "^4.17.21",
-    "prettier": "^2.5.0",
+    "prettier": "^2.7.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
