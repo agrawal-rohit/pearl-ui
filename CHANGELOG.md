@@ -1,3 +1,102 @@
+# 1.0.0 (2022-07-08)
+
+
+### Bug Fixes
+
+* added backgroundColor style props to Text, added Text and ActivityIndicator docs ([3cc611d](https://github.com/agrawal-rohit/pearl-ui/commit/3cc611d59db7d5986046708760698cba5a72b898))
+* added fix for focus/error shadowColor to Input, finished Input docs ([0d330a1](https://github.com/agrawal-rohit/pearl-ui/commit/0d330a17d58a5ed700f51e3205857d38f81219f5))
+* added tons of docs, Added algolia search, some bug fixes ([c71b6ce](https://github.com/agrawal-rohit/pearl-ui/commit/c71b6ce590164501126cc84b0344897b933dfeec))
+* **divider:** fixed issue related to divider length not changing in vertical orientation ([339eb1d](https://github.com/agrawal-rohit/pearl-ui/commit/339eb1deac3aeeee58df64b17bfde3a8878060c2))
+* **elevation:** updated default elevation system, added default theme docs ([3696c43](https://github.com/agrawal-rohit/pearl-ui/commit/3696c43e3c429bdf5369282bcbc33513d588b375))
+* **extendtheme:** removing type-enforcing for config files to fix circular dependency in extendTheme ([28acca9](https://github.com/agrawal-rohit/pearl-ui/commit/28acca93fa7d3e93062140d3c65b3bf11f01b7eb))
+* **extendtheme:** updated to a leaner and more readable implementation of extendTheme ([758c40f](https://github.com/agrawal-rohit/pearl-ui/commit/758c40f7d51fa899b4eb673de2c14ca1c6424805))
+* fake fix commit to trigger test release to npm ([2f5716e](https://github.com/agrawal-rohit/pearl-ui/commit/2f5716e489e431dea24288f32b13b333a6d38eb6))
+* fixed componentConfig hooks for non-style props, made minor bug fixes, added docs for Button ([14021c5](https://github.com/agrawal-rohit/pearl-ui/commit/14021c58788a0222dbb3efa6f2eb7c65a410604b))
+* fixed componentConfig hooks for non-style props, made minor bug fixes, added docs for Button ([5ec3f29](https://github.com/agrawal-rohit/pearl-ui/commit/5ec3f29068a55edc6d4cc7aec037f6632378e913))
+* fixed hot reloading of color modes in the theme provider ([b7d3e59](https://github.com/agrawal-rohit/pearl-ui/commit/b7d3e59ec2de0afd639e826d50000c9123d4efc6))
+* fixing icon implementation ([2b421f0](https://github.com/agrawal-rohit/pearl-ui/commit/2b421f01c5af522679384185f0c09b2536d21779))
+* fixing icon implementation ([0133030](https://github.com/agrawal-rohit/pearl-ui/commit/01330304f30ef88d602371215fc5028332ac84c4))
+* fixing missing exports, removed the temporary offline noticebar ([087133c](https://github.com/agrawal-rohit/pearl-ui/commit/087133ce6457919c65b2814b6f9bb74be2d73b29))
+* **generatepalette:** updated generateTintsAndShades function, added docs ([8b559d7](https://github.com/agrawal-rohit/pearl-ui/commit/8b559d78e68180916f9c2fc5b2c90f532ef16bd2))
+* **hotreloading:** fixed app hot reload on updating the theme object ([44dd222](https://github.com/agrawal-rohit/pearl-ui/commit/44dd222550b6b7f9b6dd384d5a34b0c3e5a881e0))
+* **hotreloading:** fixed app hot reload on updating the theme object ([59ff74c](https://github.com/agrawal-rohit/pearl-ui/commit/59ff74cefdda7637520e5b16c226889da6375f4e))
+* **image, badge, input:** adding web support for Image, Badge, and Input ([4501a9f](https://github.com/agrawal-rohit/pearl-ui/commit/4501a9fb17c1bd5a519276b579856b3581af288e))
+* **palette types:** fixed the expanded color types for the theme palette ([44c9112](https://github.com/agrawal-rohit/pearl-ui/commit/44c91128ca4dfb8ae5deae604ca01a3e2dd070b8))
+* **palette:** refactored base theme, updated theme palette format, added theme docs ([543d84a](https://github.com/agrawal-rohit/pearl-ui/commit/543d84a56f37f79083a10ada6b9fa99a652487dd))
+* **palette:** updated base palette ([cac3e98](https://github.com/agrawal-rohit/pearl-ui/commit/cac3e9805ef671286acdd00b6a68e466de20a80f))
+* **pressable:** fixed the bleeding android ripple effect with border radius applied to pressable ([d540131](https://github.com/agrawal-rohit/pearl-ui/commit/d540131cbf14999807ac5603909d0285cace4f72))
+* renamed ActivityIndicator component to Spinner ([5cf0b61](https://github.com/agrawal-rohit/pearl-ui/commit/5cf0b6147dd8ed19f190a5a6ec9187ed06f49630))
+* reverted back the OG extendTheme implementation and removed type safety from default theme ([cd0167e](https://github.com/agrawal-rohit/pearl-ui/commit/cd0167e4a82a4ee4b489d162949f4f9f8fb21b33))
+* **screen:** fixed SafeAreaView and Box heirarchy, updated copy on website, Added Product Hunt badge ([d9d2acc](https://github.com/agrawal-rohit/pearl-ui/commit/d9d2acc96e929a07e1f9e16283abd8add5ae8028))
+* **screen:** fixed screen onPullToRefresh promise execution bug ([5eaa81a](https://github.com/agrawal-rohit/pearl-ui/commit/5eaa81abf642432f386f8a0ba750b8cf15470bf9))
+* **text:** fixed text responsive size, added typography docs, updated default typography ([60873b2](https://github.com/agrawal-rohit/pearl-ui/commit/60873b29f3fd50ec8a51c0910e1329234af610b8))
+* **themeprovider:** fixed perpetual light theme error in theme provider ([07ef8f6](https://github.com/agrawal-rohit/pearl-ui/commit/07ef8f6d4c3c5ccbcd17c3fc0935e61d38c1e280))
+* **themeprovider:** fixed perpetual light theme error in theme provider ([6fa8f7a](https://github.com/agrawal-rohit/pearl-ui/commit/6fa8f7ae5a33adb073ebf997436fba14f95a0dfe))
+* **themeprovider:** renamed prop to defaultColorMode ([fb1337d](https://github.com/agrawal-rohit/pearl-ui/commit/fb1337d391419d75b519405fef0730d2a0cd88eb))
+* **useaccessiblecolors:** fixed random input issue with useAccessibleColors ([9461740](https://github.com/agrawal-rohit/pearl-ui/commit/9461740edc4c4b5bfd66b49259da662121b60405))
+* **useaccessiblecolor:** updated the input types for useAccessibleColorand updated its docs ([813a15a](https://github.com/agrawal-rohit/pearl-ui/commit/813a15a77f9068ef3a84a936d14d0b746f6e6439))
+
+
+### Features
+
+* added custom background color support for Button ([1e4de50](https://github.com/agrawal-rohit/pearl-ui/commit/1e4de50d662ca25101c010c93816d39426827b11))
+* added focus and error states for Input, added test files for the same, fixed some bugs ([eeafe44](https://github.com/agrawal-rohit/pearl-ui/commit/eeafe44436783fd22752e747ed49ca6f684989b7))
+* added textlink and input component, updated useMolecularConfig hook, Added docs ([5c3c7b6](https://github.com/agrawal-rohit/pearl-ui/commit/5c3c7b637236c42b692a2347b7fa908ef3d6e657))
+* added theme ([918ba53](https://github.com/agrawal-rohit/pearl-ui/commit/918ba538bb81aa9935d4d67608f9ba6858bad7c4))
+* added useColorScheme hook, and a custom Pressable component ([f0c2208](https://github.com/agrawal-rohit/pearl-ui/commit/f0c22085678ee29450e58bf1abcab46217b79e31))
+* added web support for the Spinner component ([0fcd05f](https://github.com/agrawal-rohit/pearl-ui/commit/0fcd05f1e606a9dffe6109a82d098383939aa9e5))
+* added web support for the Spinner component ([b9d3358](https://github.com/agrawal-rohit/pearl-ui/commit/b9d33582af3f341e5dd0c1f47014531c93892f05))
+* **avatar:** added functionality for the new Avatar component ([1e67598](https://github.com/agrawal-rohit/pearl-ui/commit/1e675983920b905ca3f5bfc74dc8fe0507638d70))
+* **avatar:** added functionality for the new Avatar component ([fa0aeb8](https://github.com/agrawal-rohit/pearl-ui/commit/fa0aeb88859e45b2f03c704f79e1f12120acb1b9))
+* **avatargroup:** added AvatarGroup component and corresponding docs ([58ffed6](https://github.com/agrawal-rohit/pearl-ui/commit/58ffed6219bbc5693ea77e4c05aa074d7699360a))
+* **badge:** added a Badge component and an HOC component to add badges to other components ([1e176a3](https://github.com/agrawal-rohit/pearl-ui/commit/1e176a37d32bd5343d04cb90c9bb443f0fd67f3a))
+* **button:** added multiComponentConfig hook, added button component ([2acaaec](https://github.com/agrawal-rohit/pearl-ui/commit/2acaaeca8176c297122583266bc9f14da85df0d5))
+* **checkbox:** added new CheckBox component, fixed the inconsistent Hook call error + bug fixes ([29bf863](https://github.com/agrawal-rohit/pearl-ui/commit/29bf863e2f21224bfc62841204b3f4809d5872fd))
+* **colormodecolors:** added ability to add color-mode based colors directly into theme config ([0f7ee03](https://github.com/agrawal-rohit/pearl-ui/commit/0f7ee037bddc88110d86711ad7dbd60ebb7f29e1))
+* **colormodecolors:** added ability to add color-mode based colors directly into theme config ([d49beae](https://github.com/agrawal-rohit/pearl-ui/commit/d49beae6560b8b076d1ada230ef5dd7e20451d48))
+* **componentconfig:** added component specific configuration to the theme ([c6aac22](https://github.com/agrawal-rohit/pearl-ui/commit/c6aac229be543126e8dbd14daeb0e9cb25eab313))
+* **componentconfig:** added component specific configuration to the theme ([522ade2](https://github.com/agrawal-rohit/pearl-ui/commit/522ade2481a30f4e29b14e9918cbd3c7673159be))
+* **divider:** added Divider component with corresponding docs ([7951eea](https://github.com/agrawal-rohit/pearl-ui/commit/7951eead0f2e2c7cadcdbbde8bbc310a07b88c72))
+* **elevation:** added elevation config to theme and a custom prop 'boxShadow' to Box components ([2e5a3bb](https://github.com/agrawal-rohit/pearl-ui/commit/2e5a3bb801d9487c1f8a85982e937899188b20ec))
+* **elevation:** added elevation config to theme and a custom prop 'boxShadow' to Box components ([90de08e](https://github.com/agrawal-rohit/pearl-ui/commit/90de08eac0fad6275401822aa0d220dd334abb96))
+* **extendtheme:** added function to extend the baseTheme ([1321376](https://github.com/agrawal-rohit/pearl-ui/commit/132137643d9a6e07606f67e14ad3baf9f38979cb))
+* **extendtheme:** updated the extendTheme function to return a type-enforced theme object ([9e00281](https://github.com/agrawal-rohit/pearl-ui/commit/9e002810d3122268bbee260d9830e33c9981426c))
+* **factory:** added a pearlify factory hook that converts custom components to pearl components ([050b3cb](https://github.com/agrawal-rohit/pearl-ui/commit/050b3cbc6ec0fec2644ceddf8d98dffc59920ef1))
+* **icon:** added Icon component and respective documentation ([b1f6da9](https://github.com/agrawal-rohit/pearl-ui/commit/b1f6da913d7022333867f8d6a1b47456805e6154))
+* **image:** adding new Image component with caching and progressive loading ([e8e8a83](https://github.com/agrawal-rohit/pearl-ui/commit/e8e8a83a0a3169d4346fa63c418a1807c5fed8bc))
+* **layout:** added center component ([b7992a7](https://github.com/agrawal-rohit/pearl-ui/commit/b7992a71d591626b8b472df57a190de8da19301b))
+* **layoutprops:** added shorthand support for layout props ([da079b2](https://github.com/agrawal-rohit/pearl-ui/commit/da079b2a2f492ac60e78c2676f470f7fdd5def6d))
+* **offlinenotice:** added OfflineNotice component and story ([40b474c](https://github.com/agrawal-rohit/pearl-ui/commit/40b474c39e6db9cf2f705987909fdf7461a287df))
+* **radio, radiogroup, checkboxgroup:** added new Radio, RadioGroup, and CheckBoxGroup components ([6cd0780](https://github.com/agrawal-rohit/pearl-ui/commit/6cd07809115173eb06b8ffa2bc0a919da8fbde15))
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([5605a94](https://github.com/agrawal-rohit/pearl-ui/commit/5605a9490d9500e6ce895eae97778c294fb331e3))
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([8e1c53a](https://github.com/agrawal-rohit/pearl-ui/commit/8e1c53a8aba6ca20ee45a38b4a397731293aa054)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([c83b606](https://github.com/agrawal-rohit/pearl-ui/commit/c83b606973ecf84b4850148d4db30fff546c5e61)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **responsivity:** added breakpoints in theme and updated the expected format for responsive props ([1ff1e39](https://github.com/agrawal-rohit/pearl-ui/commit/1ff1e390a8515f8d2317e38b1066a00d60877c65)), closes [#106](https://github.com/agrawal-rohit/pearl-ui/issues/106)
+* **screen and activityindicator:** added Screen and ActivityIndicator components ([9b40ccc](https://github.com/agrawal-rohit/pearl-ui/commit/9b40ccce28799b592e8b436cc1ffc326dadb77ec))
+* **screen:** added scrollable, pull-to-refresh, and keyboard aware functionality to screen ([0c3a008](https://github.com/agrawal-rohit/pearl-ui/commit/0c3a008c9f553e110ae3e2824427031cb36dbb68))
+* **stack:** added HStack, VStack, and ZStack components with corresponding docs ([006bc5c](https://github.com/agrawal-rohit/pearl-ui/commit/006bc5cd56766bb8aa2d0c1adfface9f1a1886a9))
+* **stack:** added Stack layout component and corresponding docs ([39e0c1e](https://github.com/agrawal-rohit/pearl-ui/commit/39e0c1e57c0135e41afc2db89ff487f6ba564cfe))
+* **text, documentation:** added typography system, added unit tests, added documentation website ([7af9ce3](https://github.com/agrawal-rohit/pearl-ui/commit/7af9ce3b6a74519730f075f71c2209056681c92f))
+* **type enforcing:** added type-enforcing for all props and config files ([75a38fa](https://github.com/agrawal-rohit/pearl-ui/commit/75a38faf87d3bb040d32185526fe98595313a790))
+* **types:** exporting types from the module ([cd236bf](https://github.com/agrawal-rohit/pearl-ui/commit/cd236bf3adcfb2a1a456cfb2d35be88128134e78))
+
+
+### Performance Improvements
+
+* added CheckBox, Badge, Radio, Image, and Screen components. Updates styles, core API, and docs ([a47c7ed](https://github.com/agrawal-rohit/pearl-ui/commit/a47c7ed158b1d6ce971104b4670fb5fe2f8f901c))
+* **typography:** adopted a Chakra UI inspired typography specification system ([1b211d8](https://github.com/agrawal-rohit/pearl-ui/commit/1b211d822e7f0abadd6e2847c613c9d3553db7a1)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([28e08b4](https://github.com/agrawal-rohit/pearl-ui/commit/28e08b4ef24e2883ae08ded1bf7c4317baff64d3)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([0d52e51](https://github.com/agrawal-rohit/pearl-ui/commit/0d52e51c0f6eac401c4f8e40ce27182b1144d0c9)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+* **typography:** adopted a Chakra UI inspired typography specification system ([b1c1559](https://github.com/agrawal-rohit/pearl-ui/commit/b1c1559a8bb4a001e5217e3bee5e537e870e8b6d)), closes [#141](https://github.com/agrawal-rohit/pearl-ui/issues/141)
+
+
+### BREAKING CHANGES
+
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+* **typography:** Removed the previous text style configuration process and subbed i
+
 # [2.1.0](https://github.com/agrawal-rohit/pearl-ui/compare/v2.0.2...v2.1.0) (2022-01-08)
 
 
