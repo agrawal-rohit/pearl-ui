@@ -1,13 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import Text from "../../Atoms/Text/Text";
 import {
   FinalPearlTheme,
-  ColorModeColor,
   ResponsiveValue,
   ColorScheme,
   ComponentSizes,
   ComponentVariants,
-  PaletteColors,
   MoleculeComponentProps,
   StateProps,
 } from "../../../theme/src/types";
@@ -140,7 +138,6 @@ const CheckBox = React.forwardRef(
       rest.isChecked
     );
     atoms.box = propsWithCheckedStyles;
-
     const { propsWithInvalidStyles } = useInvalidState(
       atoms.box,
       boxStyleFunctions,

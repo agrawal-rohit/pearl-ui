@@ -64,9 +64,6 @@ describe("Molecules/CheckBox", () => {
     const tree = await render(
       <ThemeProvider>
         <CheckBox isInvalid>Error Checkbox</CheckBox>
-        <CheckBox isInvalid errorMessage="This is an error message!">
-          Error Checkbox with message
-        </CheckBox>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -215,15 +212,5 @@ describe("Molecules/CheckBox", () => {
       fireEvent.press(pressableInstance);
       expect(onPress).toHaveBeenCalledTimes(0);
     }
-  });
-
-  it("shows error message correctly", () => {
-    const { getByText } = render(
-      <ThemeProvider>
-        <CheckBox isInvalid errorMessage="Test error message" />
-      </ThemeProvider>
-    );
-
-    expect(getByText("Test error message")).toBeTruthy();
   });
 });

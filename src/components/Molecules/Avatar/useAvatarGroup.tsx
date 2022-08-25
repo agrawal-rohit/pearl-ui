@@ -15,7 +15,7 @@ interface IAvatarGroupContext {
 export const avatarGroupContext = createContext({} as IAvatarGroupContext);
 
 /**
- * Hook to get access to the state of a Checkbox group
+ * Hook to get access to the state of an Avatar group
  */
 export const useAvatarGroup = () =>
   useContext(avatarGroupContext) as IAvatarGroupContext;

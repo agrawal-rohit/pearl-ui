@@ -105,7 +105,12 @@ const CustomAvatar = React.forwardRef(
 /** The Avatar component is used to represent a user, and displays the profile picture, initials or fallback icon. */
 const Avatar = React.forwardRef(
   (
-    { children, ...rest }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
+    {
+      children,
+      ...rest
+    }: Omit<MoleculeComponentProps<"Avatar", BaseAvatarProps>, "atoms"> & {
+      atoms?: Record<string, any>;
+    },
     ref: any
   ) => {
     let { size, variant } = useAvatarGroup();

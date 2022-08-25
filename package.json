@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --clear",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -47,7 +47,7 @@
     "react-native": "0.64.3",
     "react-native-gesture-handler": "^2.1.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
-    "react-native-reanimated": "~2.3.1",
+    "react-native-reanimated": "^2.10.0",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {

@@ -10,15 +10,8 @@ import {
   SpacingProps,
 } from "../../../theme/src/styleFunctions";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
-import SpinnerConfig from "./Spinner.config";
 import {
   AtomComponentProps,
-  ColorScheme,
-  ComponentSizes,
-  ComponentTypeProps,
-  ComponentVariants,
-  PearlComponent,
-  ResponsiveValue,
   StyleFunctionContainer,
 } from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
