@@ -1,6 +1,7 @@
 import { FinalPearlTheme } from "../src/types";
 
-export const getKeys = <T>(object: T) => Object.keys(object) as (keyof T)[];
+export const getKeys = <T extends object>(object: T) =>
+  Object.keys(object) as (keyof T)[];
 
 export const getNestedObject = (nestedObj: object, pathArr: string[]) => {
   return pathArr.reduce(

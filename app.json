@@ -12,12 +12,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
-      "jsEngine": "jsc"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
