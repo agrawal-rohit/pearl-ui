@@ -10,7 +10,7 @@ jest.useFakeTimers();
 describe("isResponsiveObjectValue", () => {
   it("returns false for a regular object", () => {
     const object = {
-      bg: "red",
+      bgColor: "red",
       p: "xs",
     };
 
@@ -21,11 +21,11 @@ describe("isResponsiveObjectValue", () => {
   it("returns true for a responsive object", () => {
     const object = {
       phone: {
-        bg: "red",
+        bgColor: "red",
         p: "xs",
       },
       tablet: {
-        bg: "pink",
+        bgColor: "pink",
         p: "l",
       },
     };
@@ -38,15 +38,15 @@ describe("isResponsiveObjectValue", () => {
 describe("getValueForScreenSize", () => {
   const object = {
     phone: {
-      bg: "red",
+      bgColor: "red",
       p: "xs",
     },
     longPhone: {
-      bg: "navy",
+      bgColor: "navy",
       p: "m",
     },
     tablet: {
-      bg: "pink",
+      bgColor: "pink",
       p: "l",
     },
   };
@@ -72,7 +72,7 @@ describe("getValueForScreenSize", () => {
       dimensions,
     });
     expect(result).toMatchObject({
-      bg: "red",
+      bgColor: "red",
       p: "xs",
     });
   });
@@ -89,7 +89,7 @@ describe("getValueForScreenSize", () => {
       dimensions,
     });
     expect(result).toMatchObject({
-      bg: "navy",
+      bgColor: "navy",
       p: "m",
     });
   });
@@ -106,7 +106,7 @@ describe("getValueForScreenSize", () => {
       dimensions,
     });
     expect(result).toMatchObject({
-      bg: "pink",
+      bgColor: "pink",
       p: "l",
     });
   });

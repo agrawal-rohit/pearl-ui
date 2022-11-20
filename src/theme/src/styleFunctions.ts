@@ -127,7 +127,7 @@ export const backgroundColorStyleFunction = [
     transform: transformColorValue,
   }),
   createStyleFunction({
-    property: "bg",
+    property: "bgColor",
     styleProperty: "backgroundColor",
     themeKey: "palette",
     transform: transformColorValue,
@@ -329,7 +329,7 @@ export interface VisibleProps {
 
 export interface BackgroundColorProps {
   backgroundColor?: ResponsiveValue<PaletteColors>;
-  bg?: ResponsiveValue<PaletteColors>;
+  bgColor?: ResponsiveValue<PaletteColors>;
 }
 
 type SpacingPropsBase = {

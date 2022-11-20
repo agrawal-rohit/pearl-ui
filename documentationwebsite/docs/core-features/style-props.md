@@ -43,17 +43,17 @@ The sections below list the supported style props and their expected values.
 ### Color and Background Color
 
 ```jsx
-// bg="primary.500" refers to the value of `theme.palette["primary"]["500"]`
-<Box bg="primary.500">Primary Box</Box>
+// bgColor="primary.500" refers to the value of `theme.palette["primary"]["500"]`
+<Box bgColor="primary.500">Primary Box</Box>
 
 // The specified 'light' and 'dark' values get activated based on the current color mode of the theme
 <Box color={{ light: "neutral.200", dark: "primary.100" }}>Red</Box>
 ```
 
-| Prop                    | Stylesheet property | Type                         |
-| ----------------------- | ------------------- | ---------------------------- |
-| `bg`, `backgroundColor` | `backgroundColor`   | <t>PearlTheme['palette']</t> |
-| `color`                 | `color`             | <t>PearlTheme['palette']</t> |
+| Prop                         | Stylesheet property | Type                         |
+| ---------------------------- | ------------------- | ---------------------------- |
+| `bgColor`, `backgroundColor` | `backgroundColor`   | <t>PearlTheme['palette']</t> |
+| `color`                      | `color`             | <t>PearlTheme['palette']</t> |
 
 ### Opacity and Visibility
 

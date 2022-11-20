@@ -7,7 +7,7 @@ import { useAccessibleColor } from "../useAccessibleColor";
 jest.useFakeTimers();
 
 const TestComponent: React.FC<any> = (props: any) => {
-  const accessibleColor = useAccessibleColor(props.bg);
+  const accessibleColor = useAccessibleColor(props.bgColor);
 
   return <Text>{accessibleColor}</Text>;
 };
@@ -16,7 +16,7 @@ describe("useAccessibleColor", () => {
   it("shows the correct color for theme colors (light bg)", () => {
     const comp = render(
       <ThemeProvider>
-        <TestComponent bg="neutral.50" />
+        <TestComponent bgColor="neutral.50" />
       </ThemeProvider>
     );
 
@@ -26,7 +26,7 @@ describe("useAccessibleColor", () => {
   it("shows the correct color for theme colors (dark bg)", () => {
     const comp = render(
       <ThemeProvider>
-        <TestComponent bg="neutral.900" />
+        <TestComponent bgColor="neutral.900" />
       </ThemeProvider>
     );
 
@@ -36,7 +36,7 @@ describe("useAccessibleColor", () => {
   it("shows the correct color for named colors", () => {
     const comp = render(
       <ThemeProvider>
-        <TestComponent bg="navy" />
+        <TestComponent bgColor="navy" />
       </ThemeProvider>
     );
 
@@ -46,7 +46,7 @@ describe("useAccessibleColor", () => {
   it("shows the correct color for raw hex colors", () => {
     const comp = render(
       <ThemeProvider>
-        <TestComponent bg="#000300" />
+        <TestComponent bgColor="#000300" />
       </ThemeProvider>
     );
 

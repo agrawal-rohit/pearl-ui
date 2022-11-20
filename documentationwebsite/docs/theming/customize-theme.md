@@ -50,7 +50,7 @@ function App() {
     // 3. Pass the new theme to `ThemeProvider`
     <ThemeProvider theme={theme}>
       {/* 4. Now you can use these colors in your components */}
-      <Box bg="tertiary.100" p="3xs">
+      <Box bgColor="tertiary.100" p="3xs">
         I'm a tertiary box!
       </Box>
     </ThemeProvider>

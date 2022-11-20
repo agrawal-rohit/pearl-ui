@@ -31,7 +31,7 @@ type ColorTransformTestComponentProps = {
 
 const ColorTransformTestComponent: React.FC<
   ColorTransformTestComponentProps
-> = ({ children, props, stylePropertyName, styleFunction }) => {
+> = ({ props, stylePropertyName, styleFunction }) => {
   let value;
   try {
     value = styleFunction.func(props, {
@@ -66,7 +66,7 @@ describe("createStyleFunctions", () => {
   it("maps bg prop correctly", () => {
     const { getByText } = render(
       <ColorTransformTestComponent
-        props={{ bg: "white" }}
+        props={{ bgColor: "white" }}
         stylePropertyName="backgroundColor"
         styleFunction={backgroundColorStyleFunction[1]}
       />

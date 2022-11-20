@@ -32,8 +32,8 @@ Use the `orientation` prop to change the direction of the divider.
 The **Divider** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
 
 ```jsx
-// passing style prop bg="red" overrides the default component config value of bg="neutral.300"
-<Divider bg="red" />
+// passing style prop bgColor="red" overrides the default component config value of bgColor="neutral.300"
+<Divider bgColor="red" />
 ```
 
 ## Example
@@ -90,7 +90,7 @@ The **Divider** component supports the following style props:
 export default {
   baseStyle: {
     orientation: "horizontal",
-    bg: {
+    bgColor: {
       light: "neutral.300",
       dark: "neutral.900",
     },

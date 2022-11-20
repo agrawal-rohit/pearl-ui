@@ -11,7 +11,7 @@ jest.useFakeTimers();
 describe("composeStyleProps", () => {
   it("composes properties from style functions correctly", () => {
     const props = {
-      bg: "red",
+      bgColor: "red",
       p: "xs",
       zIndex: "base",
       position: "absolute",
@@ -27,7 +27,7 @@ describe("composeStyleProps", () => {
 
     const expectedProperties = [
       "backgroundColor",
-      "bg",
+      "bgColor",
       "width",
       "height",
       "minWidth",

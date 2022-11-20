@@ -12,11 +12,11 @@ describe("Atoms/Spacer", () => {
     const tree = render(
       <ThemeProvider>
         <Box flexDirection="row">
-          <Box p="l" bg="danger.400">
+          <Box p="l" bgColor="danger.400">
             <Text>Box 1</Text>
           </Box>
           <Spacer />
-          <Box p="l" bg="success.400">
+          <Box p="l" bgColor="success.400">
             <Text>Box 2</Text>
           </Box>
         </Box>

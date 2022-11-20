@@ -80,7 +80,7 @@ export default {
           dark: "neutral.600",
         },
         _checked: {
-          bg: "primary.500",
+          bgColor: "primary.500",
           borderColor: "primary.500",
         },
       },
@@ -97,7 +97,7 @@ export default {
           dark: "neutral.500",
         },
         _checked: {
-          bg: "primary.500",
+          bgColor: "primary.500",
           borderColor: "primary.500",
         },
       },

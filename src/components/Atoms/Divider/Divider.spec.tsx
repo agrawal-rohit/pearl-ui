@@ -30,7 +30,7 @@ describe("Atoms/Divider", () => {
     const tree = render(
       <ThemeProvider initialColorMode="dark">
         <Divider length="50%" />
-        <Divider orientation="vertical" length={20} bg="violet" />
+        <Divider orientation="vertical" length={20} bgColor="violet" />
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

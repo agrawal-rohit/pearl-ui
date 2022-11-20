@@ -228,7 +228,7 @@ const Radio = React.forwardRef(
             backgroundColor={computeCheckedorErrorProps(
               "backgroundColor",
               "outer",
-              atoms.outerBox.backgroundColor || atoms.outerBox.bg
+              atoms.outerBox.backgroundColor || atoms.outerBox.bgColor
             )}
             borderColor={computeCheckedorErrorProps("borderColor", "outer")}
             borderStartColor={computeCheckedorErrorProps(
@@ -263,7 +263,7 @@ const Radio = React.forwardRef(
               backgroundColor={computeCheckedorErrorProps(
                 "backgroundColor",
                 "inner",
-                atoms.innerBox.backgroundColor || atoms.innerBox.bg
+                atoms.innerBox.backgroundColor || atoms.innerBox.bgColor
               )}
               borderColor={computeCheckedorErrorProps("borderColor", "inner")}
               borderStartColor={computeCheckedorErrorProps(

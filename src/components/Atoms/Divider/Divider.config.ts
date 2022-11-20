@@ -1,7 +1,7 @@
 export default {
   baseStyle: {
     orientation: "horizontal",
-    bg: {
+    bgColor: {
       light: "neutral.300",
       dark: "neutral.900",
     },

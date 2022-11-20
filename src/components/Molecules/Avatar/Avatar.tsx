@@ -52,7 +52,7 @@ const CustomAvatar = React.forwardRef(
     const randomColor = useRef(pickRandomColor()).current;
     const accessibleTextColor = useAccessibleColor(
       rootProps.backgroundColor ||
-        rootProps.bg ||
+        rootProps.bgColor ||
         (rootProps as any).style.backgroundColor ||
         randomColor,
       {
@@ -91,7 +91,7 @@ const CustomAvatar = React.forwardRef(
       <Box
         {...rootProps}
         backgroundColor={
-          rootProps.backgroundColor || rootProps.bg || randomColor
+          rootProps.backgroundColor || rootProps.bgColor || randomColor
         }
         justifyContent="center"
         alignItems="center"

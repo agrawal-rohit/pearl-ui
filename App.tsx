@@ -55,8 +55,8 @@ const App = () => {
         <Box
           w="100%"
           h={30}
-          from={{ bg: "red" }}
-          animate={{ bg: "pink" }}
+          from={{ bgColor: "red" }}
+          animate={{ bgColor: "pink" }}
           transition={{ type: "timing", duration: 600 }}
         />
       </Screen>
