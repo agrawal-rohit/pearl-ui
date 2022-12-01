@@ -29,7 +29,7 @@
     "@expo-google-fonts/poppins": "^0.2.0",
     "@react-native-async-storage/async-storage": "~1.17.11",
     "@types/crypto-js": "^4.0.2",
-    "@types/lodash": "^4.14.177",
+    "@types/lodash": "^4.14.191",
     "@types/react-test-renderer": "^18.0.0",
     "crypto-js": "^4.1.1",
     "eslint-config-prettier": "^8.3.0",
