@@ -22,12 +22,20 @@ export type BaseButtonProps = PressableProps & {
   children?: string;
 };
 
+/**
+ * CustomButton is a forwardRef component that accepts children and props.
+ * It destructures the props to get the atoms and rootProps.
+ * It also destructures the rootProps to get the necessary properties.
+ * It then renders the button based on the loading status and the presence of left and right icons.
+ */
 const CustomButton = React.forwardRef(
   (
     { children, ...props }: MoleculeComponentProps<"Button", BaseButtonProps>,
     ref: any
   ) => {
+    // Destructure the props to get atoms and rootProps
     const { atoms, ...rootProps } = props;
+    // Destructure the rootProps to get the necessary properties
     const {
       loadingText = null,
       colorScheme = "primary",
@@ -40,9 +48,12 @@ const CustomButton = React.forwardRef(
       ...otherRootProps
     } = rootProps;
 
+    // Determine if the button is disabled
     const disabled = isDisabled ? true : isLoading;
 
+    // Function to render the loading status of the button
     const renderLoadingStatus = () => {
+      // If there is loading text, render the spinner and the loading text
       if (loadingText) {
         return (
           <Box alignItems="center" flexDirection="row">
@@ -65,6 +76,7 @@ const CustomButton = React.forwardRef(
           </Box>
         );
       } else {
+        // If there is no loading text, render the spinner and the children with transparent color
         return (
           <>
             <Spinner isExpanded {...atoms.spinner} />
@@ -76,7 +88,9 @@ const CustomButton = React.forwardRef(
       }
     };
 
+    // Function to render the main content of the button
     const renderMainContent = () => {
+      // If there are left or right icons, render them along with the children
       if (leftIcon || rightIcon) {
         return (
           <Box flexDirection="row">
@@ -98,10 +112,12 @@ const CustomButton = React.forwardRef(
           </Box>
         );
       } else {
+        // If there are no icons, render only the children
         return <Text {...atoms.text}>{children}</Text>;
       }
     };
 
+    // Return the Pressable component with the appropriate props and children
     return (
       <Pressable
         {...otherRootProps}

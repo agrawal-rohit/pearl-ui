@@ -53,6 +53,9 @@ export type CheckBoxGroupProps = BoxProps & {
   onChange?(value: any): void;
 };
 
+/**
+ * CheckBoxGroup is a component that groups together multiple CheckBox components.
+ */
 const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   children,
   isDisabled = false,

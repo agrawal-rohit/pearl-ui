@@ -6,6 +6,14 @@ import { pearlify } from "../../../hooks/pearlify";
 
 export type BaseBadgeProps = PressableProps;
 
+/**
+ * CustomBadge is a component that renders a badge with a value.
+ * The value can be a number, a string, or a React element.
+ * If the value is a number or a string, it will be rendered inside a Text component.
+ * If the value is a React element, it will be cloned and rendered as is.
+ * If the value is an array, it will be joined into a string and rendered inside a Text component.
+ * If the value is undefined, nothing will be rendered.
+ */
 const CustomBadge = React.forwardRef(
   (
     { children, ...props }: MoleculeComponentProps<"Badge", BaseBadgeProps>,
@@ -13,16 +21,21 @@ const CustomBadge = React.forwardRef(
   ) => {
     const { atoms, ...rootProps } = props;
 
+    // Function to render the value of the badge
     const renderValue = () => {
       if (children === undefined) return null;
 
+      // If children is an array, join it into a string
       if (Array.isArray(children)) children = children.join("");
 
+      // If children is a number or a string, render it inside a Text component
       if (typeof children === "number" || typeof children === "string")
         return <Text {...atoms.text}>{children}</Text>;
+      // If children is a React element, clone it and render it as is
       else return React.cloneElement(children as React.ReactElement);
     };
 
+    // Return a Pressable component with the value rendered inside it
     return (
       <Pressable
         {...rootProps}

@@ -28,16 +28,26 @@ export type AvatarGroupProps = BoxProps & {
   max?: number;
 };
 
+/**
+ * AvatarGroup is a component that groups multiple Avatar components together. It can truncate the avatars and show a "+X" label (where X is the remaining avatars).
+ */
 const AvatarGroup: React.FC<AvatarGroupProps> = ({
   children,
   max = 3,
   ...rest
 }) => {
+  // Convert the spacing to a style object
   const convertedElementSpacing = useStyleProps({ marginLeft: rest.spacing }, [
     ...spacingStyleFunction,
   ]);
+
+  // Convert the children to an array
   const avatarChildren = React.Children.toArray(children);
 
+  /**
+   * Render the avatars.
+   * @returns An array of Avatar components.
+   */
   const renderAvatars = () => {
     return React.Children.map(avatarChildren, (child, index) => {
       const shouldBreakLoop = index > max;

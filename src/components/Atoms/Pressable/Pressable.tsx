@@ -15,6 +15,7 @@ import { usePressedState } from "../../../hooks/state/usePressedState";
 import { useDisabledState } from "../../../hooks/state/useDisabledState";
 import { pearlify } from "../../../hooks/pearlify";
 
+// Define the properties for the BasePressable component
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> &
   StateProps<"_pressed" | "_disabled"> & {
@@ -24,6 +25,20 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     isDisabled?: boolean;
   };
 
+/**
+ * CustomPressable is a functional component that returns a MotiPressable component with specific styles based on the props.
+ * It uses the usePressedState and useDisabledState hooks to update the component's styles based on its state.
+ * @param children The children to render inside the MotiPressable
+ * @param onPressInDelay Duration (in milliseconds) to wait after press down before calling onPressIn.
+ * @param isDisabled Whether the press behavior is disabled.
+ * @param accessibilityLabel A label for the pressable component that is used by screen readers.
+ * @param accessibilityState Additional accessibility state information for the pressable component.
+ * @param onPress A function to be called when the pressable component is pressed.
+ * @param onPressIn A function to be called when the pressable component is pressed and held down.
+ * @param onPressOut A function to be called when the pressable component is released.
+ * @param onLongPress A function to be called when the pressable component is pressed and held down for a long time.
+ * @returns A MotiPressable component with updated props and styles.
+ */
 const CustomPressable = React.forwardRef(
   (
     {
@@ -45,8 +60,10 @@ const CustomPressable = React.forwardRef(
       props,
       boxStyleFunctions
     );
+    // Update props with pressed styles
     props = propsWithPressedStyles;
 
+    // Use State for disabled styles
     const { propsWithDisabledStyles } = useDisabledState(
       props,
       boxStyleFunctions,
@@ -54,6 +71,7 @@ const CustomPressable = React.forwardRef(
       true,
       isDisabled
     );
+    // Update props with disabled styles
     props = propsWithDisabledStyles;
 
     // Methods to handle local pressable state
@@ -67,6 +85,7 @@ const CustomPressable = React.forwardRef(
       if (onPressOut) onPressOut();
     };
 
+    // Return the MotiPressable component with the updated props
     return (
       <MotiPressable
         ref={ref}
@@ -81,6 +100,7 @@ const CustomPressable = React.forwardRef(
         animate={(interaction) => {
           "worklet";
 
+          // Merge the interaction and animate props
           return mergeAnimateProp(interaction, props.animate);
         }}
       >

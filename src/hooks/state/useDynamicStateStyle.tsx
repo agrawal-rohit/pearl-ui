@@ -6,6 +6,14 @@ import { useStateWithStyleProps } from "../useStateWithStyleProps";
 
 /**
  * Hook to manage a pressed state and compose extra styling while a component is pressed
+ *
+ * @param props - The props of the component
+ * @param stateKey - The key of the state to manage
+ * @param currentState - The current state of the component
+ * @param styleFunctions - The style functions to use
+ * @param activeComponentType - The active component type
+ * @param animateable - Whether the component is animateable
+ * @returns The final props of the component
  */
 export const useDynamicStateStyle = (
   props: Record<string, any>,
@@ -18,14 +26,17 @@ export const useDynamicStateStyle = (
   // Override the pressed state if the parentStateValue is provided
   let stateStyles = props[stateKey];
 
+  // If there are no state styles, return the original props
   if (!stateStyles) return props;
 
+  // If the component type is not "molecule", use the useStateWithStyleProps hook
   if (activeComponentType !== "molecule")
     stateStyles = useStateWithStyleProps(stateStyles, styleFunctions);
 
   let finalProps = props;
+
+  // If the component is animateable, add missing required styles from the 'from' prop to the base style
   if (animateable) {
-    // Add missing required from the 'from' prop to the base style
     finalProps.animate = getKeys(stateStyles).reduce((final, key: any) => {
       if (getKeys(defaultRNStyles).includes(key)) {
         return {
@@ -37,6 +48,7 @@ export const useDynamicStateStyle = (
       return final;
     }, finalProps.animate);
 
+    // If the current state is true, add the state styles to the animate prop
     if (currentState) {
       finalProps.animate = {
         ...finalProps.animate,
@@ -44,6 +56,7 @@ export const useDynamicStateStyle = (
       };
     }
   } else {
+    // If the component is not animateable and the current state is true, add the state styles to the style prop
     if (currentState) {
       if (activeComponentType !== "molecule") {
         finalProps.style = {

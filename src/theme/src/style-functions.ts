@@ -35,6 +35,14 @@ interface CreateStyleFunctionProps {
   themeKey?: keyof FinalPearlTheme | undefined;
 }
 
+/**
+ * Creates a style function container that can be used to create a style function.
+ * @param property - The name of the property to create a style function for.
+ * @param transform - An optional transformation function to apply to the value of the property.
+ * @param styleProperty - An optional name of the style property to use instead of the property name.
+ * @param themeKey - An optional name of the theme key to use for the property value.
+ * @returns A style function container that can be used to create a style function.
+ */
 export const createStyleFunction = ({
   property,
   transform,
@@ -43,6 +51,13 @@ export const createStyleFunction = ({
 }: CreateStyleFunctionProps): StyleFunctionContainer => {
   const styleProp = styleProperty || property.toString();
 
+  /**
+   * A style function that returns a style object with the given property and value.
+   * @param props - The props object to get the property value from.
+   * @param theme - The theme object to get the theme value from.
+   * @param dimensions - The dimensions object to get the screen size from.
+   * @returns A style object with the given property and value.
+   */
   const func: StyleFunction = (props: any, { theme, dimensions }: any): any => {
     // Initial value is the raw prop value
     let value = isResponsiveObjectValue(props[property], theme)
@@ -106,6 +121,11 @@ export const createStyleFunction = ({
   };
 };
 
+/**
+ * Transforms a color value based on the current color mode.
+ * @param value - The color value to transform.
+ * @returns The transformed color value.
+ */
 export const transformColorValue = (value: ColorModeColor | ColorValue) => {
   const { colorMode } = useTheme();
 

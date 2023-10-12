@@ -1,12 +1,5 @@
 import { useTheme } from "./useTheme";
-import { ColorValue } from "react-native";
-import {
-  ExpandedColors,
-  PaletteColors,
-  ResponsiveValue,
-} from "./../theme/src/types";
-import { colorStyleFunction } from "../theme/src/style-functions";
-import { useStyleProps } from "./useStyleProps";
+import { ExpandedColors, PaletteColors } from "./../theme/src/types";
 import { TinyColor } from "@ctrl/tinycolor";
 import { getNestedObject } from "../theme/utils/type-helpers";
 
@@ -14,7 +7,7 @@ import { getNestedObject } from "../theme/utils/type-helpers";
  * Hook to get the most accessible foreground color value based on a provided background color
  * @param backgroundColor The color value of the background color
  * @param foregroundChoices The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color)
- * @returns
+ * @returns The most accessible foreground color value
  */
 export const useAccessibleColor = (
   backgroundColor: PaletteColors | string,
@@ -23,15 +16,14 @@ export const useAccessibleColor = (
     dark: "black",
   }
 ) => {
+  // Get the current theme
   const { theme } = useTheme();
 
+  // Get the final background color value
   let finalBackgroundColor;
   if ((backgroundColor as any).includes("#")) {
     finalBackgroundColor = backgroundColor;
-  }
-
-  // For color palettes with multiple shades
-  else if ((backgroundColor as any).includes(".")) {
+  } else if ((backgroundColor as any).includes(".")) {
     finalBackgroundColor = getNestedObject(theme, [
       "palette",
       (backgroundColor as any).split(".")[0],
@@ -41,10 +33,15 @@ export const useAccessibleColor = (
     finalBackgroundColor = theme.palette[backgroundColor as any];
   }
 
+  // Determine if the background color is light or dark
   const isColorLight = new TinyColor(finalBackgroundColor).isLight();
-  if (isColorLight) {
-    return foregroundChoices.dark;
-  }
 
-  return foregroundChoices.light;
+  // Return the most accessible foreground color value
+  if (isColorLight) {
+    // If the background color is light, return the dark foreground color
+    return foregroundChoices.dark;
+  } else {
+    // If the background color is dark, return the light foreground color
+    return foregroundChoices.light;
+  }
 };

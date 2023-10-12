@@ -19,6 +19,7 @@ export const useFocusedState = (
   animateable = true,
   parentStateValue: boolean | undefined = undefined
 ) => {
+  // Initialize the focused state
   const [focused, setFocused] = useState(false);
 
   // Override the focused state if the parentStateValue is provided
@@ -29,6 +30,7 @@ export const useFocusedState = (
     finalFocusedFlag = focused;
   }
 
+  // Compose extra styling while a component is focused
   const propsWithFocusedStyles = useDynamicStateStyle(
     props,
     "_focused",
@@ -38,6 +40,7 @@ export const useFocusedState = (
     animateable
   );
 
+  // Return the props object with updated styles according the current 'focused' state
   return {
     focused,
     setFocused,

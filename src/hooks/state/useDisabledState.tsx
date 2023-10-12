@@ -19,6 +19,7 @@ export const useDisabledState = (
   animateable = true,
   parentStateValue: boolean | undefined = undefined
 ) => {
+  // Initialize the disabled state to false
   const [disabled, setDisabled] = useState(false);
 
   // Override the disabled state if the parentStateValue is provided
@@ -29,6 +30,7 @@ export const useDisabledState = (
     finalDisabledFlag = disabled;
   }
 
+  // Compose extra styling while a component is disabled
   const propsWithDisabledStyles = useDynamicStateStyle(
     props,
     "_disabled",
@@ -38,6 +40,7 @@ export const useDisabledState = (
     animateable
   );
 
+  // Return the disabled state, a function to update the disabled state, and the props with updated styles
   return {
     disabled,
     setDisabled,

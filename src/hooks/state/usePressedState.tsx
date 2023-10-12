@@ -19,6 +19,7 @@ export const usePressedState = (
   animateable = true,
   parentStateValue: boolean | undefined = undefined
 ) => {
+  // Initialize pressed state to false
   const [pressed, setPressed] = useState(false);
 
   // Override the pressed state if the parentStateValue is provided
@@ -29,6 +30,7 @@ export const usePressedState = (
     finalPressedFlag = pressed;
   }
 
+  // Compose extra styling while a component is pressed
   const propsWithPressedStyles = useDynamicStateStyle(
     props,
     "_pressed",

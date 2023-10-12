@@ -12,6 +12,11 @@ import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 import { useAvatarGroup } from "./useAvatarGroup";
 
+/**
+ * A function that generates initials from a name
+ * @param name The name to generate initials from
+ * @returns The initials generated from the name
+ */
 const defaultGetInitials = (name: string) =>
   name
     .split(" ")
@@ -31,6 +36,14 @@ export type BaseAvatarProps = Omit<
   getInitials?(name: string): string;
 };
 
+/**
+ * CustomAvatar is a component that renders an avatar image, initials or a fallback component.
+ * It uses the name, src, getInitials, atoms, and fallbackComponent props from the parent Avatar component.
+ * If an image source is provided, it will render the image.
+ * If no image source is provided but a name is provided, it will render the initials of the name.
+ * If neither image source nor name is provided, it will render the fallbackComponent.
+ * If no fallbackComponent is provided, it will render nothing.
+ */
 const CustomAvatar = React.forwardRef(
   (
     { children, ...props }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
@@ -39,6 +52,7 @@ const CustomAvatar = React.forwardRef(
     const { name, src, getInitials, atoms, fallbackComponent, ...rootProps } =
       props;
 
+    // Function to pick a random color from the namedColors object
     const pickRandomColor = () => {
       const namedColorKeys = getKeys(namedColors).filter(
         (color) => color !== "transparent"
@@ -49,7 +63,9 @@ const CustomAvatar = React.forwardRef(
       return randomColorKey;
     };
 
+    // Store the random color in a ref to prevent it from changing on re-renders
     const randomColor = useRef(pickRandomColor()).current;
+    // Determine the text color based on the background color to ensure accessibility
     const accessibleTextColor = useAccessibleColor(
       rootProps.backgroundColor ||
         rootProps.bgColor ||
@@ -61,6 +77,7 @@ const CustomAvatar = React.forwardRef(
       }
     );
 
+    // Function to render the fallback component (initials or fallbackComponent prop)
     const renderFallBack = () => {
       if (name) {
         const initialComputeFunction = getInitials || defaultGetInitials;
@@ -77,16 +94,18 @@ const CustomAvatar = React.forwardRef(
       return null;
     };
 
+    // Determine the final source of the image
     const finalSource =
       src && typeof src === "string"
         ? ({ uri: src } as ImageSourcePropType)
         : (src as ImageSourcePropType);
 
+    // If a source is provided, render the image
     if (finalSource) {
       return <Image ref={ref} source={finalSource} {...rootProps} />;
     }
 
-    // Render a fallback
+    // If no source is provided, render the fallback
     return (
       <Box
         {...rootProps}

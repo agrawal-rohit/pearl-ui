@@ -25,6 +25,7 @@ const withBadge =
   ) =>
   (WrappedComponent: React.FC<P>) =>
   (props: P) => {
+    // Destructure options with default values
     const {
       placement = "topRight",
       offset = 5,
@@ -32,9 +33,11 @@ const withBadge =
       ...badgeProps
     } = options;
 
+    // State variables to hold the width of the base component and the badge
     const [baseComponentWidth, setBaseComponentWidth] = useState(0);
     const [badgeWidth, setBadgeWidth] = useState(0);
 
+    // Function to compute the position of the badge based on the placement option
     const computePositionForBadge = () => {
       const positionValue = -1 * offset;
 
@@ -51,16 +54,19 @@ const withBadge =
       return { bottom: positionValue, right: positionValue };
     };
 
+    // Function to update the width of the badge when its layout changes
     const onBadgeLayoutChange = (event: LayoutChangeEvent) => {
-      const { x, y, width, height } = event.nativeEvent.layout;
+      const { width } = event.nativeEvent.layout;
       setBadgeWidth(width);
     };
 
+    // Function to update the width of the base component when its layout changes
     const onBaseComponentLayoutChange = (event: LayoutChangeEvent) => {
-      const { x, y, width, height } = event.nativeEvent.layout;
+      const { width } = event.nativeEvent.layout;
       setBaseComponentWidth(width);
     };
 
+    // Function to compute the position of the badge with margins for web platform
     const computePositionWithWebMarginsForBadge = () => {
       const position = computePositionForBadge();
 
@@ -79,6 +85,7 @@ const withBadge =
       return position;
     };
 
+    // Render the wrapped component with the badge
     return (
       <Box alignSelf="flex-start">
         <WrappedComponent

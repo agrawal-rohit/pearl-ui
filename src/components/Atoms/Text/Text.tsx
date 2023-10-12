@@ -24,6 +24,13 @@ type BaseTextProps = React.ComponentProps<typeof RNText> & {
   scaleFontSize?: boolean;
 };
 
+/**
+ * Builds a font configuration object based on the provided text style and whether font scaling is allowed.
+ *
+ * @param textStyle - The text style to build the font configuration from.
+ * @param allowFontScaling - Whether font scaling is allowed.
+ * @returns A font configuration object.
+ */
 export const buildFontConfig = (
   textStyle: any,
   allowFontScaling: boolean
@@ -53,6 +60,14 @@ export const buildFontConfig = (
   };
 };
 
+/**
+ * CustomText is a forwardRef component that applies a font configuration to the provided text style.
+ *
+ * @param scaleFontSize - Whether to slightly scale the font size based on the screen dimensions.
+ * @param props - The props to apply the font configuration to.
+ * @param ref - The ref to forward.
+ * @returns A <RNText /> component with the font configuration applied.
+ */
 const CustomText = React.forwardRef(
   (
     {
@@ -61,11 +76,15 @@ const CustomText = React.forwardRef(
     }: AtomComponentProps<"Text", BaseTextProps, TextStyleProps>,
     ref: any
   ) => {
+    /**
+     * Memoized function that builds the font configuration object.
+     */
     const memoizedBuildFontConfig = React.useCallback(
       () => buildFontConfig(props.style, scaleFontSize),
       [props.style, scaleFontSize]
     );
 
+    // Apply the font configuration to the provided text style.
     props.style = {
       includeFontPadding: false,
       ...(props.style as any),

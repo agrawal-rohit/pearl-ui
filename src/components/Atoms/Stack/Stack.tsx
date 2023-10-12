@@ -19,10 +19,17 @@ export type ZStackProps = BoxProps & {
   reversed?: boolean;
 };
 
-/** Stack is a layout component that makes it easy to stack elements together and apply a space between them. */
+/**
+ * Stack is a layout component that makes it easy to stack elements together and apply a space between them.
+ */
 const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
   const arrayChildren = React.Children.toArray(children);
 
+  /**
+   * Renders the children of the stack.
+   *
+   * @returns The rendered children.
+   */
   const renderChildren = () => {
     return React.Children.map(arrayChildren, (child, index) => {
       const isLast = index === arrayChildren.length - 1;
@@ -73,7 +80,9 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
   );
 };
 
-/** HStack is a layout component that stacks elements horizontally and apply a space between them. */
+/**
+ * HStack is a layout component that stacks elements horizontally and apply a space between them.
+ */
 export const HStack: React.FC<Omit<StackProps, "direction">> = ({
   children,
   ...rest
@@ -85,7 +94,9 @@ export const HStack: React.FC<Omit<StackProps, "direction">> = ({
   );
 };
 
-/** VStack is a layout component that stacks elements vertically and apply a space between them. */
+/**
+ * VStack is a layout component that stacks elements vertically and apply a space between them.
+ */
 export const VStack: React.FC<Omit<StackProps, "direction">> = ({
   children,
   ...rest
@@ -97,7 +108,9 @@ export const VStack: React.FC<Omit<StackProps, "direction">> = ({
   );
 };
 
-/** ZStack is a layout component that stacks elements on top of each other. */
+/**
+ * ZStack is a layout component that stacks elements on top of each other.
+ */
 export const ZStack: React.FC<ZStackProps> = ({
   children,
   reversed = false,
@@ -105,6 +118,11 @@ export const ZStack: React.FC<ZStackProps> = ({
 }) => {
   const arrayChildren = React.Children.toArray(children);
 
+  /**
+   * Renders the children of the stack.
+   *
+   * @returns The rendered children.
+   */
   const renderChildren = () => {
     return React.Children.map(arrayChildren, (child, index) => {
       const isOverridenZIndexProvided =

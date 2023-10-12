@@ -38,13 +38,14 @@ export const useAtomicComponentConfig = (
 ) => {
   const { theme } = useTheme();
 
+  // Check if the themeComponentKey exists in theme.components
   checkKeyAvailability(
     themeComponentKey as string,
     theme.components,
     "theme.components"
   );
 
-  // Responsive Size and Variant
+  // Get the size and variant for the current screen size
   const sizeForCurrentScreenSize = useResponsiveProp(
     sizeAndVariantProps.size
   ) as string;
@@ -52,6 +53,7 @@ export const useAtomicComponentConfig = (
     sizeAndVariantProps.variant
   ) as string;
 
+  // Get the component style config from theme.components
   const componentStyleConfig = theme.components[themeComponentKey];
   const activeSizeAndVariantConfig: AtomicComponentConfig["defaults"] = {};
 
@@ -73,6 +75,7 @@ export const useAtomicComponentConfig = (
         : defaultComponentConfig.variant;
     }
 
+    // Get the component type styles
     const componentTypeStyles: Record<string, any> = getKeys(
       activeSizeAndVariantConfig
     ).reduce(
@@ -124,6 +127,7 @@ export const useAtomicComponentConfig = (
       null
     );
 
+    // Merge the component base style with the component type styles
     finalComponentProps = {
       ...componentStyleConfig["baseStyle"],
       ...componentTypeStyles,
@@ -132,9 +136,10 @@ export const useAtomicComponentConfig = (
     finalComponentProps = componentStyleConfig["baseStyle"];
   }
 
+  // Apply the active color scheme to the final component props
   finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
 
-  // Add user override props here
+  // Merge the user override props with the final component props
   finalComponentProps = {
     ...finalComponentProps,
     ...receivedProps,
@@ -144,6 +149,7 @@ export const useAtomicComponentConfig = (
     },
   };
 
+  // Compute the component styles using the useStyleProps hook
   const componentStyles = useStyleProps(finalComponentProps, styleFunctions);
 
   return componentStyles;

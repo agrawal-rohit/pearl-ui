@@ -19,6 +19,7 @@ export const useCheckedState = (
   animateable = true,
   parentStateValue: boolean | undefined = undefined
 ) => {
+  // Initialize the checked state to false
   const [checked, setChecked] = useState(false);
 
   // Override the focused state if the parentStateValue is provided
@@ -29,6 +30,7 @@ export const useCheckedState = (
     finalCheckedFlag = checked;
   }
 
+  // Dynamically update the styles based on the checked state
   const propsWithCheckedStyles = useDynamicStateStyle(
     props,
     "_checked",
@@ -38,6 +40,7 @@ export const useCheckedState = (
     animateable
   );
 
+  // Return the checked state, a function to update the checked state, and the props with updated styles
   return {
     checked,
     setChecked,

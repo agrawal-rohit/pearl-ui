@@ -44,13 +44,40 @@ export type BaseScreenProps = Omit<
   };
 
 // TODO: Add Custom Pull-to-Refresh components and animations
-
+/**
+ * CustomScreen is a functional component that returns a SafeAreaView component with specific styles based on the props.
+ * It uses the forwardRef function from React to pass the ref to the KeyboardAwareScrollView component.
+ * @param children The children to render inside the KeyboardAwareScrollView
+ * @param size The size of the Screen component
+ * @param variant The variant of the Screen component
+ * @param scrollable Whether the screen is scrollable
+ * @param showScrollBar Whether to show the vertical scrollbar if the Screen is scrollable
+ * @param onPullToRefresh Method to execute when a pull-to-refresh action is performed
+ * @param refreshIndicatorColors The colors (at least one) that will be used to draw the refresh indicator (Android only)
+ * @param refreshProgressBackgroundColor Progress view top offset
+ * @param refreshProgressViewOffset The background color of the refresh indicator
+ * @param refreshIndicatorSize Size of the refresh indicator (Android only)
+ * @param refreshTintColor The color of the refresh indicator (iOS only)
+ * @param refreshTitle The title displayed under the refresh indicator (iOS only)
+ * @param refreshTitleColor The color of the refresh indicator title (iOS only)
+ * @returns A SafeAreaView component with a KeyboardAwareScrollView component inside
+ */
 const CustomScreen = React.forwardRef(
   (
     {
       children,
       size,
       variant,
+      scrollable,
+      showScrollBar,
+      onPullToRefresh,
+      refreshIndicatorColors,
+      refreshProgressBackgroundColor,
+      refreshProgressViewOffset,
+      refreshIndicatorSize,
+      refreshTintColor,
+      refreshTitle,
+      refreshTitleColor,
       ...props
     }: AtomComponentProps<"Screen", BaseScreenProps>,
     ref: any
@@ -59,10 +86,13 @@ const CustomScreen = React.forwardRef(
     const [refreshing, setRefreshing] = useState(false);
     const { style, ...nativeProps } = props;
 
+    /**
+     * Function to execute when a pull-to-refresh action is performed
+     */
     const onRefresh = React.useCallback(async () => {
-      if (nativeProps.onPullToRefresh) {
+      if (onPullToRefresh) {
         setRefreshing(true);
-        const functionValue = await nativeProps.onPullToRefresh();
+        const functionValue = await onPullToRefresh();
         let isPromise = functionValue instanceof Promise;
         if (isPromise)
           Promise.resolve(functionValue).then(() => {
@@ -72,7 +102,7 @@ const CustomScreen = React.forwardRef(
           setRefreshing(false);
         }
       }
-    }, [nativeProps.onPullToRefresh]);
+    }, [onPullToRefresh]);
 
     return (
       <>
@@ -93,21 +123,19 @@ const CustomScreen = React.forwardRef(
             ref={ref}
             bounces={true}
             extraHeight={100}
-            scrollEnabled={nativeProps.scrollable}
-            showsVerticalScrollIndicator={nativeProps.showScrollBar}
+            scrollEnabled={scrollable}
+            showsVerticalScrollIndicator={showScrollBar}
             contentContainerStyle={{ flexGrow: 1 }}
             refreshControl={
-              nativeProps.onPullToRefresh ? (
+              onPullToRefresh ? (
                 <RefreshControl
-                  colors={nativeProps.refreshIndicatorColors}
-                  progressBackgroundColor={
-                    nativeProps.refreshProgressBackgroundColor
-                  }
-                  progressViewOffset={nativeProps.refreshProgressViewOffset}
-                  size={nativeProps.refreshIndicatorSize === "large" ? 0 : 1}
-                  tintColor={nativeProps.refreshTintColor}
-                  title={nativeProps.refreshTitle}
-                  titleColor={nativeProps.refreshTitleColor}
+                  colors={refreshIndicatorColors}
+                  progressBackgroundColor={refreshProgressBackgroundColor}
+                  progressViewOffset={refreshProgressViewOffset}
+                  size={refreshIndicatorSize === "large" ? 0 : 1}
+                  tintColor={refreshTintColor}
+                  title={refreshTitle}
+                  titleColor={refreshTitleColor}
                   refreshing={refreshing}
                   onRefresh={onRefresh}
                 />

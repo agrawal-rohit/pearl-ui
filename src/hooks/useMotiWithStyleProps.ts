@@ -15,6 +15,12 @@ const shorthandPropMapper = {
   ...spacingPropertiesShorthand,
 };
 
+/**
+ * Converts Moti Props using style props as well
+ * @param props - The props to convert
+ * @param styleFunctions - The style functions to use
+ * @returns The converted props
+ */
 export const useMotiWithStyleProps = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
@@ -22,18 +28,19 @@ export const useMotiWithStyleProps = (
   const { theme } = useTheme();
   const dimensions = useDimensions();
 
+  // Compose style properties
   const buildStyleProperties = useMemo(
     () => composeStyleProps(styleFunctions),
     [styleFunctions]
   );
 
+  // Remove shadowOffset and textShadowOffset from componentStyles
   const componentStyles = _.omit(props.style, [
     "shadowOffset",
     "textShadowOffset",
   ]);
 
-  // Convert Moti Props using style props as well
-  // From
+  // Convert 'from' prop
   if (props.from) {
     props.from = composeCleanStyleProps(props.from, buildStyleProperties, {
       theme,
@@ -41,7 +48,7 @@ export const useMotiWithStyleProps = (
     });
   }
 
-  // Animate
+  // Convert 'animate' prop
   if (props.animate) {
     props.animate = composeCleanStyleProps(
       props.animate,
@@ -52,13 +59,14 @@ export const useMotiWithStyleProps = (
       }
     );
 
+    // Merge componentStyles and animate
     props.animate = {
       ...componentStyles,
       ...props.animate,
     };
   }
 
-  // Transition
+  // Convert 'transition' prop
   if (props.transition) {
     // Filter object values from 'transition'
     const keysWithObjectValues = getKeys(props.transition).filter(
@@ -76,7 +84,7 @@ export const useMotiWithStyleProps = (
     }, {});
     props.transition = { ...props.transition, ...nullObject };
 
-    // Comvert style props
+    // Convert style props
     props.transition = composeCleanStyleProps(
       props.transition,
       buildStyleProperties,
@@ -100,7 +108,7 @@ export const useMotiWithStyleProps = (
     }, props.transition);
   }
 
-  // Exit
+  // Convert 'exit' prop
   if (props.exit) {
     props.exit = composeCleanStyleProps(props.exit, buildStyleProperties, {
       theme,
@@ -108,7 +116,7 @@ export const useMotiWithStyleProps = (
     });
   }
 
-  // Exit Transform
+  // Convert 'exitTransition' prop
   if (props.exitTransition) {
     // Filter object values from 'exitTransition'
     const keysWithObjectValues = getKeys(props.exitTransition).filter(
@@ -126,7 +134,7 @@ export const useMotiWithStyleProps = (
     }, {});
     props.exitTransition = { ...props.exitTransition, ...nullObject };
 
-    // Comvert style props
+    // Convert style props
     props.exitTransition = composeCleanStyleProps(
       props.exitTransition,
       buildStyleProperties,
@@ -150,6 +158,7 @@ export const useMotiWithStyleProps = (
     }, props.exitTransition);
   }
 
+  // Convert 'state' prop
   if (props.state) {
     const stateKeys = getKeys(props.state);
     props.state = stateKeys.reduce((convertedState, key) => {

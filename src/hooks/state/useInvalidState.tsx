@@ -19,6 +19,7 @@ export const useInvalidState = (
   animateable = true,
   parentStateValue: boolean | undefined = undefined
 ) => {
+  // Initialize invalid state to false
   const [invalid, setInvalid] = useState(false);
 
   // Override the focused state if the parentStateValue is provided
@@ -29,6 +30,7 @@ export const useInvalidState = (
     finalInvalidFlag = invalid;
   }
 
+  // Update the props object with dynamic styles based on the invalid state
   const propsWithInvalidStyles = useDynamicStateStyle(
     props,
     "_invalid",
@@ -38,6 +40,7 @@ export const useInvalidState = (
     animateable
   );
 
+  // Return an object with the current invalid state, a function to update the invalid state, and the updated props object
   return {
     invalid,
     setInvalid,

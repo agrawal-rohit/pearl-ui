@@ -61,7 +61,9 @@ const IndicatorTypeToComponentMap = {
   wave: WaveIndicator,
 };
 
-/** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
+/**
+ * A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result.
+ */
 const Spinner: React.FC<
   AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>
 > = ({
@@ -71,9 +73,13 @@ const Spinner: React.FC<
   colorScheme = "primary",
   ...rest
 }) => {
+  // If isLoading is false, return null
   if (!isLoading) return null;
 
+  // Set default variant to "spinner"
   rest.variant = rest.variant || "spinner";
+
+  // Get props for the Spinner
   let props = useAtomicComponentConfig(
     "Spinner",
     rest,
@@ -84,10 +90,14 @@ const Spinner: React.FC<
     colorScheme,
     indicatorStyleFunctions
   );
+
+  // Add style props to props using useMotiWithStyleProps
   props = useMotiWithStyleProps(props, indicatorStyleFunctions);
 
+  // Get variant for current screen size
   const variantForCurrentScreenSize = useResponsiveProp(rest.variant);
 
+  // Create and return the Spinner component
   return React.createElement(
     IndicatorTypeToComponentMap[
       variantForCurrentScreenSize as keyof typeof IndicatorTypeToComponentMap

@@ -47,6 +47,9 @@ export type RadioGroupProps = BoxProps & {
   onChange?(value: any): void;
 };
 
+/**
+ * RadioGroup is a component that groups together multiple Radio components.
+ */
 const RadioGroup: React.FC<RadioGroupProps> = ({
   children,
   isDisabled = false,

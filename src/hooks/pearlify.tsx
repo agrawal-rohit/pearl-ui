@@ -14,9 +14,21 @@ import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 import { motify } from "moti";
 import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
 
+/**
+ * Configuration object that adds metadata to a component that's required by Pearl UI
+ */
 interface PearlifyConfig {
+  /**
+   * The name of the component in the FinalPearlTheme
+   */
   componentName: keyof FinalPearlTheme["components"];
+  /**
+   * The type of the component
+   */
   type: ComponentTypes;
+  /**
+   * Whether the component is animatable or not
+   */
   animatable?: boolean;
 }
 
@@ -41,8 +53,14 @@ export function pearlify<
   },
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) {
+  /**
+   * The final component that will be returned
+   */
   let FinalComponent: any | undefined;
   if (config.animatable && config.type !== "molecule") {
+    /**
+     * Class component that wraps the base component and adds animation functionality
+     */
     class ConvertedClassComponent extends React.Component<any, any> {
       static displayName = `PearlMoti${Component.name}` || `NoName`;
 
@@ -62,6 +80,9 @@ export function pearlify<
     FinalComponent = Component;
   }
 
+  /**
+   * The final component that will be returned
+   */
   return React.forwardRef(
     (
       {
@@ -74,6 +95,9 @@ export function pearlify<
         },
       ref: any
     ) => {
+      /**
+       * The converted props that will be passed to the final component
+       */
       let convertedProps;
       if (config.type === "atom") {
         convertedProps = useAtomicComponentConfig(

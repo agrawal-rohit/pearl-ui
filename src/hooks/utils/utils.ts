@@ -7,6 +7,13 @@ import {
 } from "../../theme/src/types";
 import { getKeys } from "../../theme/utils/type-helpers";
 
+/**
+ * Checks if a key exists in an object and throws an error if it doesn't.
+ * @param key - The key to check for.
+ * @param object - The object to check in.
+ * @param objectVarName - Optional name of the object variable to include in the error message.
+ * @throws {Error} - If the key does not exist in the object.
+ */
 export const checkKeyAvailability = (
   key: string,
   object: object,
@@ -19,6 +26,11 @@ export const checkKeyAvailability = (
   }
 };
 
+/**
+ * Composes style properties from an array of style functions.
+ * @param styleFunctions - An array of style functions.
+ * @returns An object containing a buildStyle function and an array of property names.
+ */
 export const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
   // Create a single array of all property objects
   const flattenedStyleFunctions = styleFunctions.reduce(
@@ -37,7 +49,13 @@ export const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
     return styleFunc.func;
   });
 
-  // Convert the component props to the equivalent style properties
+  /**
+   * Converts component props to the equivalent style properties.
+   * @param props - The component props.
+   * @param theme - The theme object.
+   * @param dimensions - The dimensions object.
+   * @returns An object containing the style properties.
+   */
   const buildStyle = (
     props: AllProps,
     { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
@@ -53,6 +71,12 @@ export const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
   };
 };
 
+/**
+ * Filters out properties from an object based on a list of properties to omit.
+ * @param props - The object to filter.
+ * @param omitList - The list of properties to omit.
+ * @returns An object with the omitted properties removed.
+ */
 export const filterStyledProps = (props: any, omitList: any) => {
   const omittedProp = omitList.reduce((acc: any, prop: any) => {
     acc[prop] = true;
@@ -67,6 +91,14 @@ export const filterStyledProps = (props: any, omitList: any) => {
   }, {});
 };
 
+/**
+ * Builds the final style properties object by composing the core visual style with the component props.
+ * @param props - The component props.
+ * @param buildStyleProperties - The style properties to build.
+ * @param theme - The theme object.
+ * @param dimensions - The dimensions object.
+ * @returns An object containing the final style properties.
+ */
 export const buildFinalStyleProps = (
   props: Record<string, any>,
   buildStyleProperties: any,
@@ -86,6 +118,14 @@ export const buildFinalStyleProps = (
   return cleanStyleProps;
 };
 
+/**
+ * Composes the clean style properties object by filtering out unnecessary properties.
+ * @param props - The component props.
+ * @param buildStyleProperties - The style properties to build.
+ * @param theme - The theme object.
+ * @param dimensions - The dimensions object.
+ * @returns An object containing the clean style properties.
+ */
 export const composeCleanStyleProps = (
   props: Record<string, any>,
   buildStyleProperties: any,

@@ -15,10 +15,6 @@ import {
 } from "../../../theme/src/style-functions";
 import {
   AtomComponentProps,
-  ComponentSizes,
-  ComponentVariants,
-  PearlComponent,
-  ResponsiveValue,
   StyleFunctionContainer,
 } from "../../../theme/src/types";
 import {
@@ -57,6 +53,7 @@ type IconStyleProps = ColorProps &
   OpacityProps &
   VisibleProps;
 
+// BaseIconProps defines the basic properties for the Icon component
 type BaseIconProps = React.ComponentProps<typeof View> & {
   /** Icon family that contains the icon you want to use  */
   iconFamily:
@@ -82,6 +79,7 @@ type BaseIconProps = React.ComponentProps<typeof View> & {
   rawSize?: number;
 };
 
+// Mapping of icon families to their respective components
 const iconFamilyMapping = {
   AntDesign,
   Entypo,
@@ -99,6 +97,7 @@ const iconFamilyMapping = {
   Zocial,
 };
 
+// CustomIcon is a wrapper around the icon components that allows for additional customization
 const CustomIcon = React.forwardRef(
   (
     {
@@ -110,6 +109,7 @@ const CustomIcon = React.forwardRef(
     }: AtomComponentProps<"Icon", BaseIconProps, IconStyleProps>,
     ref: any
   ) => {
+    // Select the appropriate icon component based on the iconFamily prop
     const IconToUse = iconFamilyMapping[iconFamily];
 
     return (
