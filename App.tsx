@@ -20,9 +20,9 @@ import {
   Poppins_900Black_Italic,
   Poppins_200ExtraLight_Italic,
 } from "@expo-google-fonts/poppins";
-import { ThemeProvider } from "./src/theme/src/themeContext";
-import Screen from "./src/components/Atoms/Screen/Screen";
-import Box from "./src/components/Atoms/Box/Box";
+import { ThemeProvider } from "./src/theme/src/theme-context";
+import Screen from "./src/components/atoms/screen/screen";
+import Box from "./src/components/atoms/box/box";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -46,8 +46,6 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
-  const [disabled, setDisabled] = React.useState(false);
-  const [invalid, setInvalid] = React.useState(false);
   return (
     <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Screen>

@@ -1,5 +1,5 @@
 import { breakpoints } from "./breakpoints";
-import { borderRadii } from "./borderRadii";
+import { borderRadii } from "./border-radii";
 import { elevation } from "./elevation";
 import { palette } from "./palette";
 import { spacing } from "./spacing";
@@ -37,7 +37,7 @@ export const baseTheme = {
  * @returns
  */
 export const extendTheme = <
-  T extends typeof baseTheme | (Record<string, any> & {})
+  T extends typeof baseTheme | (Record<string, any> & {}),
 >(
   overrideConfig: T
 ) => {

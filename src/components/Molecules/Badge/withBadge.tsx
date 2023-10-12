@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LayoutChangeEvent, Platform } from "react-native";
-import Box from "../../Atoms/Box/Box";
-import Badge, { BadgeProps } from "./Badge";
+import Box from "../../atoms/box/box";
+import Badge, { BadgeProps } from "./badge";
 
 interface BadgeOptions {
   /** The position of the badge with respect to the provided base component */

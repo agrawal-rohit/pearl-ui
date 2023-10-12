@@ -1,11 +1,11 @@
 import _ from "lodash";
-import { AllProps } from "../../theme/src/styleFunctions";
+import { AllProps } from "../../theme/src/style-functions";
 import {
   Dimensions,
   FinalPearlTheme,
   StyleFunctionContainer,
 } from "../../theme/src/types";
-import { getKeys } from "../../theme/utils/typeHelpers";
+import { getKeys } from "../../theme/utils/type-helpers";
 
 export const checkKeyAvailability = (
   key: string,

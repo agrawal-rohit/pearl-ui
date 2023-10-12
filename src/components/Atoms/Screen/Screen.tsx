@@ -1,5 +1,5 @@
-import React, { LegacyRef, useState } from "react";
-import Box, { BoxProps } from "../Box/Box";
+import React, { useState } from "react";
+import Box, { BoxProps } from "../box/box";
 import { StatusBar, RefreshControl, Platform } from "react-native";
 import {
   KeyboardAwareScrollView,

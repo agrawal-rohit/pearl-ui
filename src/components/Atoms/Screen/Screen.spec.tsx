@@ -1,9 +1,9 @@
 import React from "react";
-import Screen from "./Screen";
-import { act, fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Box from "../Box/Box";
-import Text from "../Text/Text";
+import Screen from "./screen";
+import { act, render } from "@testing-library/react-native";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Box from "../box/box";
+import Text from "../text/text";
 
 jest.useFakeTimers();
 

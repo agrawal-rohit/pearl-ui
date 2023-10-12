@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Stack, { HStack, VStack, ZStack } from "./Stack";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Divider from "../Divider/Divider";
-import Box from "../Box/Box";
+import Stack, { HStack, VStack, ZStack } from "./stack";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Divider from "../divider/divider";
+import Box from "../box/box";
 
 jest.useFakeTimers();
 

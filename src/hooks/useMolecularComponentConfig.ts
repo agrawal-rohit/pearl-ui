@@ -5,14 +5,14 @@ import {
   ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
-import { getKeys } from "../theme/utils/typeHelpers";
+import { getKeys } from "../theme/utils/type-helpers";
 import { useTheme } from "./useTheme";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
 import _, { over } from "lodash";
 import { useStyleProps } from "./useStyleProps";
-import { boxStyleFunctions } from "../theme/src/styleFunctions";
+import { boxStyleFunctions } from "../theme/src/style-functions";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles. It takes the benefits of the useAtomicComponentConfig hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.

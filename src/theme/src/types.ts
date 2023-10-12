@@ -7,11 +7,11 @@ import {
   UseAnimationState,
 } from "moti";
 import { SharedValue } from "react-native-reanimated";
-import { BoxStyleProps } from "./styleFunctions";
+import { BoxStyleProps } from "./style-functions";
 
 export type AtLeastOneResponsiveValue<
   TVal extends PropValue = PropValue,
-  R = { [Key in keyof FinalPearlTheme["breakpoints"]]: Record<Key, TVal> }
+  R = { [Key in keyof FinalPearlTheme["breakpoints"]]: Record<Key, TVal> },
 > = Partial<{
   [K in keyof FinalPearlTheme["breakpoints"]]: TVal;
 }> &
@@ -242,7 +242,7 @@ export type ComponentTypes = "basic" | "atom" | "molecule";
 
 export type AtomComponent<
   ComponentName extends keyof FinalPearlTheme["components"],
-  ComponentType extends ComponentTypes = "atom"
+  ComponentType extends ComponentTypes = "atom",
 > = ComponentType extends "atom"
   ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
@@ -252,7 +252,7 @@ export type AtomComponent<
 
 export type MoleculeComponent<
   ComponentName extends keyof FinalPearlTheme["components"],
-  ComponentType extends ComponentTypes = "molecule"
+  ComponentType extends ComponentTypes = "molecule",
 > = ComponentType extends "molecule"
   ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
@@ -262,7 +262,7 @@ export type MoleculeComponent<
   : {};
 
 export type ComponentSizes<
-  ComponentName extends keyof FinalPearlTheme["components"]
+  ComponentName extends keyof FinalPearlTheme["components"],
 > = FinalPearlTheme["components"][ComponentName] extends
   | MolecularComponentConfig
   | AtomicComponentConfig
@@ -272,7 +272,7 @@ export type ComponentSizes<
   : string;
 
 export type ComponentVariants<
-  ComponentName extends keyof FinalPearlTheme["components"]
+  ComponentName extends keyof FinalPearlTheme["components"],
 > = FinalPearlTheme["components"][ComponentName] extends
   | MolecularComponentConfig
   | AtomicComponentConfig
@@ -284,13 +284,13 @@ export type ComponentVariants<
 // Component Types
 export type BasicComponentProps<
   ComponentProps,
-  StyleProps = BoxStyleProps
+  StyleProps = BoxStyleProps,
 > = PearlComponent<ComponentProps, StyleProps>;
 
 export type AtomComponentProps<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentProps,
-  StyleProps = BoxStyleProps
+  StyleProps = BoxStyleProps,
 > = PearlComponent<ComponentProps, StyleProps> & {
   size?: ResponsiveValue<ComponentSizes<ComponentName>>;
   variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
@@ -300,7 +300,7 @@ export type MoleculeComponentProps<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentProps,
   StyleProps = BoxStyleProps,
-  Animateable = true
+  Animateable = true,
 > = PearlComponent<ComponentProps, StyleProps, Animateable> & {
   /** Size of the component. */
   size?: ResponsiveValue<ComponentSizes<ComponentName>>;
@@ -311,7 +311,7 @@ export type MoleculeComponentProps<
 
 type AnimateableProps<
   StyleProps = BoxStyleProps,
-  Animateable = true
+  Animateable = true,
 > = Animateable extends true
   ? MotiWithPearlStyleProps<ViewStyle, StyleProps>
   : {};
@@ -319,7 +319,7 @@ type AnimateableProps<
 export type PearlComponent<
   ComponentProps,
   StyleProps = BoxStyleProps,
-  Animateable = true
+  Animateable = true,
 > = StyleProps &
   AnimateableProps<StyleProps, Animateable> &
   Omit<
@@ -332,7 +332,7 @@ export type PearlComponent<
 // STATE PROPS
 export type StateProps<
   States extends string,
-  StyleProps = BoxStyleProps
+  StyleProps = BoxStyleProps,
 > = Partial<Record<States, StyleProps>>;
 
 // MOTI RELATED PROPS

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { borderStyleFunction } from "../../../theme/src/styleFunctions";
+import { borderStyleFunction } from "../../../theme/src/style-functions";
 import {
   Animated,
   ImageErrorEventData,
@@ -13,10 +13,10 @@ import {
   ColorValue,
 } from "react-native";
 import { DownloadOptions } from "expo-file-system";
-import CacheManager from "./CacheManager";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
+import CacheManager from "./cache-manager";
+import Box, { BoxProps } from "../../atoms/box/box";
 import { BlurView } from "expo-blur";
-import Spinner from "../../Atoms/Spinner/Spinner";
+import Spinner from "../../atoms/spinner/spinner";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";

@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon from "./Icon";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Icon from "./icon";
 
 jest.useFakeTimers();
 

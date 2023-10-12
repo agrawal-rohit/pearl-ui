@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Divider from "./Divider";
-import { ThemeProvider } from "../../../theme/src/themeContext";
+import Divider from "./divider";
+import { ThemeProvider } from "../../../theme/src/theme-context";
 
 jest.useFakeTimers();
 

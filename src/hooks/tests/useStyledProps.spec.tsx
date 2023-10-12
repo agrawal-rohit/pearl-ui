@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Text from "../../components/Atoms/Text/Text";
+import Text from "../../components/atoms/text/text";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../theme/src/themeContext";
-import Box from "../../components/Atoms/Box/Box";
+import { ThemeProvider } from "../../theme/src/theme-context";
+import Box from "../../components/atoms/box/box";
 import { useStyleProps } from "../useStyleProps";
-import { allStyleFunctions } from "../../theme/src/styleFunctions";
-import { getKeys } from "../../theme/utils/typeHelpers";
+import { allStyleFunctions } from "../../theme/src/style-functions";
+import { getKeys } from "../../theme/utils/type-helpers";
 
 jest.useFakeTimers();
 

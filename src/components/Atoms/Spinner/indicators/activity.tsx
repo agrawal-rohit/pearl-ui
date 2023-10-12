@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
-import { Animated, Easing, I18nManager, StyleSheet, View } from "react-native";
-import Box from "../../../Atoms/Box/Box";
+import React from "react";
+import { Animated, StyleSheet, View } from "react-native";
 import Indicator, { IndicatorProps } from "./indicator";
 
 export type ActivityIndicatorProps = IndicatorProps & {

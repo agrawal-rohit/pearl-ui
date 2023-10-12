@@ -1,9 +1,9 @@
 import React from "react";
-import { BoxProps } from "../Box/Box";
+import { BoxProps } from "../box/box";
 import {
   boxStyleFunctions,
   BoxStyleProps,
-} from "../../../theme/src/styleFunctions";
+} from "../../../theme/src/style-functions";
 import { BasicComponentProps, StateProps } from "../../../theme/src/types";
 import {
   MotiPressable,
@@ -11,8 +11,8 @@ import {
   mergeAnimateProp,
 } from "moti/interactions";
 import _ from "lodash";
-import { usePressedState } from "../../../hooks/stateHooks/usePressedState";
-import { useDisabledState } from "../../../hooks/stateHooks/useDisabledState";
+import { usePressedState } from "../../../hooks/state/usePressedState";
+import { useDisabledState } from "../../../hooks/state/useDisabledState";
 import { pearlify } from "../../../hooks/pearlify";
 
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &

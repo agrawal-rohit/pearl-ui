@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../theme/src/themeContext";
-import { allStyleFunctions } from "../../theme/src/styleFunctions";
+import { ThemeProvider } from "../../theme/src/theme-context";
+import { allStyleFunctions } from "../../theme/src/style-functions";
 import { useMotiWithStyleProps } from "../useMotiWithStyleProps";
 import { MotiView } from "moti";
 

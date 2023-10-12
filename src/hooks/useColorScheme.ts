@@ -1,5 +1,5 @@
 import { ColorScheme } from "../theme/src/types";
-import { getKeys } from "../theme/utils/typeHelpers";
+import { getKeys } from "../theme/utils/type-helpers";
 import { useTheme } from "./useTheme";
 import { checkKeyAvailability } from "./utils/utils";
 

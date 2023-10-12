@@ -1,9 +1,8 @@
-import React, { createRef } from "react";
-import Input from "./Input";
+import React from "react";
+import Input from "./input";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon from "../../Atoms/Icon/Icon";
-import { baseTheme } from "../../../theme/src/base/index";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Icon from "../../atoms/icon/icon";
 
 jest.useFakeTimers();
 

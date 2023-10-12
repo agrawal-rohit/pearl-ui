@@ -5,10 +5,10 @@ import {
   PaletteColors,
   ResponsiveValue,
 } from "./../theme/src/types";
-import { colorStyleFunction } from "./../theme/src/styleFunctions";
+import { colorStyleFunction } from "../theme/src/style-functions";
 import { useStyleProps } from "./useStyleProps";
 import { TinyColor } from "@ctrl/tinycolor";
-import { getNestedObject } from "../theme/utils/typeHelpers";
+import { getNestedObject } from "../theme/utils/type-helpers";
 
 /**
  * Hook to get the most accessible foreground color value based on a provided background color

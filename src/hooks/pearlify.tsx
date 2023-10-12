@@ -8,7 +8,7 @@ import {
 } from "../theme/src/types";
 import React from "react";
 import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
-import { boxStyleFunctions, BoxStyleProps } from "../theme/src/styleFunctions";
+import { boxStyleFunctions, BoxStyleProps } from "../theme/src/style-functions";
 import { useStyleProps } from "./useStyleProps";
 import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
 import { motify } from "moti";
@@ -31,7 +31,7 @@ export function pearlify<
   ComponentProps,
   ComponentType extends ComponentTypes = "basic",
   StyleProps = BoxStyleProps,
-  Animateable extends boolean = true
+  Animateable extends boolean = true,
 >(
   Component: any,
   config: PearlifyConfig = {
@@ -68,8 +68,8 @@ export function pearlify<
         children,
         ...rest
       }: PearlComponent<ComponentProps, StyleProps, Animateable> &
-        AtomComponent<typeof config["componentName"], ComponentType> &
-        MoleculeComponent<typeof config["componentName"], ComponentType> & {
+        AtomComponent<(typeof config)["componentName"], ComponentType> &
+        MoleculeComponent<(typeof config)["componentName"], ComponentType> & {
           children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
         },
       ref: any

@@ -1,7 +1,7 @@
 import React from "react";
-import Text from "../../Atoms/Text/Text";
+import Text from "../../atoms/text/text";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { pearlify } from "../../../hooks/pearlify";
 
 export type BaseBadgeProps = PressableProps;

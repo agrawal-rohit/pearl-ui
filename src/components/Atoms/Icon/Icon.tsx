@@ -12,7 +12,7 @@ import {
   OpacityProps,
   visibleStyleFunction,
   VisibleProps,
-} from "../../../theme/src/styleFunctions";
+} from "../../../theme/src/style-functions";
 import {
   AtomComponentProps,
   ComponentSizes,
@@ -37,7 +37,7 @@ import {
   SimpleLineIcons,
   Zocial,
 } from "@expo/vector-icons";
-import responsiveSize from "../../../utils/responsiveSize";
+import responsiveSize from "../../../utils/responsive-size";
 import { View } from "react-native";
 import { pearlify } from "../../../hooks/pearlify";
 

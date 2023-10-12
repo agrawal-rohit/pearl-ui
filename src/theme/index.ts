@@ -17,10 +17,10 @@ export {
   boxStyleFunctions,
   textStyleFunctions,
   allStyleFunctions,
-} from "./src/styleFunctions";
+} from "./src/style-functions";
 
 // Theme Context
-export { ThemeProvider } from "./src/themeContext";
+export { ThemeProvider } from "./src/theme-context";
 export { baseTheme } from "./src/base/index";
 
 // Utils
@@ -54,4 +54,4 @@ export type {
   BorderProps,
   ShadowProps,
   TextShadowProps,
-} from "./src/styleFunctions";
+} from "./src/style-functions";

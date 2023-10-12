@@ -1,10 +1,10 @@
 import React, { PropsWithChildren } from "react";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../theme/src/themeContext";
+import { ThemeProvider } from "../../theme/src/theme-context";
 import { pearlify } from "../pearlify";
 import { Text, View } from "react-native";
 import { extendTheme } from "../../theme/src/base/index";
-import Box, { BoxProps } from "../../components/Atoms/Box/Box";
+import Box, { BoxProps } from "../../components/atoms/box/box";
 
 jest.useFakeTimers();
 

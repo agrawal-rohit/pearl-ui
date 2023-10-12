@@ -8,7 +8,7 @@ import {
   PositionProps,
   spacingStyleFunction,
   SpacingProps,
-} from "../../../theme/src/styleFunctions";
+} from "../../../theme/src/style-functions";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import {
   AtomComponentProps,

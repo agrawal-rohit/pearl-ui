@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react";
 import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
-import { getKeys } from "../../../theme/utils/typeHelpers";
+import { getKeys } from "../../../theme/utils/type-helpers";
 import { useStyleProps } from "../../../hooks/useStyleProps";
-import Box, { BoxProps } from "../Box/Box";
-import { positionStyleFunction } from "../../../theme/src/styleFunctions";
+import Box, { BoxProps } from "../box/box";
+import { positionStyleFunction } from "../../../theme/src/style-functions";
 
 export type StackProps = BoxProps & {
   /** The direction to stack the items */

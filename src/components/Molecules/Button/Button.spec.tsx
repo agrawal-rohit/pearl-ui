@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./button";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon from "../../Atoms/Icon/Icon";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Icon from "../../atoms/icon/icon";
 
 jest.useFakeTimers();
 

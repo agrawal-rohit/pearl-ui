@@ -103,13 +103,7 @@
               "aria-label": "GitHub repository",
             },
             {
-              href: "https://github.com/agrawal-rohit/pearl-ui/discussions",
-              position: "right",
-              className: "header-discord-link",
-              "aria-label": "Discussions",
-            },
-            {
-              href: "https://twitter.com/pearl_ui",
+              href: "https://twitter.com/_rohitagrawal_",
               position: "right",
               className: "header-twitter-link",
               "aria-label": "Twitter account",

@@ -5,14 +5,14 @@ import {
   ResponsiveValue,
   StyleFunctionContainer,
 } from "../theme/src/types";
-import { getKeys } from "../theme/utils/typeHelpers";
+import { getKeys } from "../theme/utils/type-helpers";
 
 import { useTheme } from "./useTheme";
 import { useStyleProps } from "./useStyleProps";
 import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
-import { boxStyleFunctions } from "../theme/src/styleFunctions";
+import { boxStyleFunctions } from "../theme/src/style-functions";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles

@@ -4,7 +4,7 @@ import { PropValue, ResponsiveValue } from "../theme/src/types";
 import {
   getValueForScreenSize,
   isResponsiveObjectValue,
-} from "../theme/src/responsiveHelpers";
+} from "../theme/src/responsive-helpers";
 
 /**
  * Hook to get the appropriate value from a responsive style object based on the current screen size.

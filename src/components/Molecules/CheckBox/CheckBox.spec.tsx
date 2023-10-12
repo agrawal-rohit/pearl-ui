@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import CheckBox from "./CheckBox";
+import CheckBox from "./checkbox";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import CheckBoxGroup from "./CheckBoxGroup";
-import Stack from "../../Atoms/Stack/Stack";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import CheckBoxGroup from "./checkbox-group";
+import Stack from "../../atoms/stack/stack";
 
 jest.useFakeTimers();
 

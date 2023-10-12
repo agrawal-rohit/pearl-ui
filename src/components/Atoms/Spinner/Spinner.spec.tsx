@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react-native";
 import React from "react";
 import renderer from "react-test-renderer";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Box from "../Box/Box";
-import Stack from "../Stack/Stack";
-import Spinner from "./Spinner";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Box from "../box/box";
+import Stack from "../stack/stack";
+import Spinner from "./spinner";
 
 jest.useFakeTimers();
 

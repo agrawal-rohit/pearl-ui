@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Text from "../../components/Atoms/Text/Text";
+import Text from "../../components/atoms/text/text";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../theme/src/themeContext";
-import Box from "../../components/Atoms/Box/Box";
+import { ThemeProvider } from "../../theme/src/theme-context";
+import Box from "../../components/atoms/box/box";
 import { Pressable } from "react-native";
 import { useColorScheme } from "../useColorScheme";
 

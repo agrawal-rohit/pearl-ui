@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { getKeys } from "../theme/utils/typeHelpers";
+import { getKeys } from "../theme/utils/type-helpers";
 
 import { useTheme } from "./useTheme";
 import { StyleFunctionContainer } from "../theme/src/types";

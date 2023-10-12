@@ -46,9 +46,7 @@ const Indicator: React.FC<IndicatorProps> = ({
 
   return (
     <Animated.View {...rest}>
-      <>
-      {Array.from(new Array(count), _renderComponent, this)}
-      </>
+      <>{Array.from(new Array(count), _renderComponent, this)}</>
     </Animated.View>
   );
 };

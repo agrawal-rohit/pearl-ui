@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Badge from "./Badge";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon, { IconProps } from "../../Atoms/Icon/Icon";
+import Badge from "./badge";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Icon, { IconProps } from "../../atoms/icon/icon";
 import withBadge from "./withBadge";
 
 jest.useFakeTimers();

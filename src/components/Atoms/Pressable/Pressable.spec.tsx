@@ -1,7 +1,7 @@
 import React from "react";
-import Pressable from "./Pressable";
+import Pressable from "./pressable";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
+import { ThemeProvider } from "../../../theme/src/theme-context";
 
 jest.useFakeTimers();
 

@@ -1,6 +1,5 @@
 import React from "react";
-import { View } from "react-native";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
+import Box, { BoxProps } from "../box/box";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 

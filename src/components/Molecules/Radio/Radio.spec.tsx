@@ -1,9 +1,9 @@
 import React from "react";
-import Radio from "./Radio";
+import Radio from "./radio";
 import { fireEvent, render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import RadioGroup from "./RadioGroup";
-import Stack from "../../Atoms/Stack/Stack";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import RadioGroup from "./radio-group";
+import Stack from "../../atoms/stack/stack";
 
 jest.useFakeTimers();
 

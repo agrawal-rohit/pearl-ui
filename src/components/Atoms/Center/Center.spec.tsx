@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Center from "./Center";
-import { ThemeProvider } from "../../../theme/src/themeContext";
+import Center from "./center";
+import { ThemeProvider } from "../../../theme/src/theme-context";
 
 jest.useFakeTimers();
 

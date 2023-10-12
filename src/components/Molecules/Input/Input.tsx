@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import Box, { BoxProps } from "../../Atoms/Box/Box";
-import Text, { buildFontConfig } from "../../Atoms/Text/Text";
+import Box, { BoxProps } from "../../atoms/box/box";
+import Text, { buildFontConfig } from "../../atoms/text/text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
-import Icon from "../../Atoms/Icon/Icon";
+import Icon from "../../atoms/icon/icon";
 import {
   NativeSyntheticEvent,
   Platform,
@@ -28,13 +28,13 @@ import {
   createStyleFunction,
   transformColorValue,
   typographyStyleFunction,
-} from "../../../theme/src/styleFunctions";
+} from "../../../theme/src/style-functions";
 import { useStyleProps } from "../../../hooks/useStyleProps";
-import Pressable from "../../Atoms/Pressable/Pressable";
+import Pressable from "../../atoms/pressable/pressable";
 import _ from "lodash";
-import { useFocusedState } from "../../../hooks/stateHooks/useFocusedState";
-import { useDisabledState } from "../../../hooks/stateHooks/useDisabledState";
-import { useInvalidState } from "../../../hooks/stateHooks/useInvalidState";
+import { useFocusedState } from "../../../hooks/state/useFocusedState";
+import { useDisabledState } from "../../../hooks/state/useDisabledState";
+import { useInvalidState } from "../../../hooks/state/useInvalidState";
 
 export type InputProps = Omit<
   TextInputProps,

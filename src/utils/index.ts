@@ -1,1 +1,1 @@
-export { default as responsiveSize } from "./responsiveSize";
+export { default as responsiveSize } from "./responsive-size";

@@ -1,6 +1,5 @@
 import React from "react";
-import { Animated, Easing, I18nManager, StyleSheet, View } from "react-native";
-import Box from "../../../Atoms/Box/Box";
+import { Animated, Easing, StyleSheet, View } from "react-native";
 import Indicator, { IndicatorProps } from "./indicator";
 
 export type WaveIndicatorProps = IndicatorProps & {

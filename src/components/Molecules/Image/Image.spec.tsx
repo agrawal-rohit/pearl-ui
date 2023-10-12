@@ -1,10 +1,10 @@
 import React from "react";
-import Image from "./Image";
-import { fireEvent, render, act, waitFor } from "@testing-library/react-native";
+import Image from "./image";
+import { render, act } from "@testing-library/react-native";
 import { create } from "react-test-renderer";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import CacheManager from "./CacheManager";
-import Icon from "../../Atoms/Icon/Icon";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import CacheManager from "./cache-manager";
+import Icon from "../../atoms/icon/icon";
 
 jest.useFakeTimers();
 
@@ -15,7 +15,7 @@ describe("Molecules/Image", () => {
         <Image
           width={200}
           height={200}
-          source={require("./testLocalImage.jpeg")}
+          source={require("./test-local-image.jpeg")}
         />
 
         <Image
@@ -43,7 +43,7 @@ describe("Molecules/Image", () => {
             width={200}
             height={200}
             isCached={true}
-            source={require("./testLocalImage.jpeg")}
+            source={require("./test-local-image.jpeg")}
           />
         </ThemeProvider>
       );
@@ -78,7 +78,7 @@ describe("Molecules/Image", () => {
           source={{
             uri: "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
           }}
-          previewSource={require("./testPreviewImage.jpeg")}
+          previewSource={require("./test-preview-image.jpeg")}
         />
 
         <Image

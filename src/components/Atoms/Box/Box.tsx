@@ -6,7 +6,7 @@ import { pearlify } from "../../../hooks/pearlify";
  * Box is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a <View> element.
  */
 const Box = pearlify<ViewProps>(View, {
-  componentName: "None",
+  componentName: "Box",
   type: "basic",
   animatable: true,
 });

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { getKeys } from "../theme/utils/typeHelpers";
+import { getKeys } from "../theme/utils/type-helpers";
 import { StyleFunctionContainer } from "../theme/src/types";
 import _, { keys } from "lodash";
 import { useTheme } from "./useTheme";
@@ -8,7 +8,7 @@ import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
 import {
   layoutPropertiesShorthand,
   spacingPropertiesShorthand,
-} from "../theme/src/styleProperties";
+} from "../theme/src/style-properties";
 
 const shorthandPropMapper = {
   ...layoutPropertiesShorthand,

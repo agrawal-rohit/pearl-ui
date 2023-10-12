@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../../Atoms/Text/Text";
+import Text from "../../atoms/text/text";
 import {
   FinalPearlTheme,
   ResponsiveValue,
@@ -9,14 +9,14 @@ import {
   MoleculeComponentProps,
   StateProps,
 } from "../../../theme/src/types";
-import Icon from "../../Atoms/Icon/Icon";
-import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import Icon from "../../atoms/icon/icon";
+import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import Stack from "../../Atoms/Stack/Stack";
-import { useCheckBoxGroup } from "./CheckBoxGroup";
-import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
-import { useInvalidState } from "../../../hooks/stateHooks/useInvalidState";
-import { useCheckedState } from "../../../hooks/stateHooks/useCheckedState";
+import Stack from "../../atoms/stack/stack";
+import { useCheckBoxGroup } from "./checkbox-group";
+import { boxStyleFunctions } from "../../../theme/src/style-functions";
+import { useInvalidState } from "../../../hooks/state/useInvalidState";
+import { useCheckedState } from "../../../hooks/state/useCheckedState";
 
 export type CheckBoxProps = PressableProps &
   StateProps<"_checked" | "_invalid"> & {

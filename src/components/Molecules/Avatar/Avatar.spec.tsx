@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import Avatar, { AvatarProps } from "./Avatar";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Icon, { IconProps } from "../../Atoms/Icon/Icon";
-import withBadge from "../Badge/withBadge";
-import Stack from "../../Atoms/Stack/Stack";
-import AvatarGroup from "./AvatarGroup";
+import Avatar, { AvatarProps } from "./avatar";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Icon, { IconProps } from "../../atoms/icon/icon";
+import withBadge from "../badge/withBadge";
+import Stack from "../../atoms/stack/stack";
+import AvatarGroup from "./avatar-group";
 
 jest.useFakeTimers();
 

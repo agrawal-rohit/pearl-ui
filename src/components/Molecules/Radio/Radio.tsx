@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../../Atoms/Text/Text";
+import Text from "../../atoms/text/text";
 import {
   FinalPearlTheme,
   ColorModeColor,
@@ -10,12 +10,12 @@ import {
   PaletteColors,
   MoleculeComponentProps,
 } from "../../../theme/src/types";
-import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import Stack from "../../Atoms/Stack/Stack";
-import Box from "../../Atoms/Box/Box";
-import { boxStyleFunctions } from "../../../theme/src/styleFunctions";
-import { useRadioGroup } from "./RadioGroup";
+import Stack from "../../atoms/stack/stack";
+import Box from "../../atoms/box/box";
+import { boxStyleFunctions } from "../../../theme/src/style-functions";
+import { useRadioGroup } from "./radio-group";
 import _ from "lodash";
 
 export type RadioProps = PressableProps & {

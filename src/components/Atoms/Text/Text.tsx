@@ -1,10 +1,10 @@
 import React from "react";
 import { Text as RNText } from "react-native";
-import responsiveSize from "../../../utils/responsiveSize";
+import responsiveSize from "../../../utils/responsive-size";
 import {
   textStyleFunctions,
   TextStyleProps,
-} from "../../../theme/src/styleFunctions";
+} from "../../../theme/src/style-functions";
 import {
   AtomComponentProps,
   ComponentSizes,

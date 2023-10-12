@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
-import { ImageProps } from "../Image/Image";
-import Image from "../Image/Image";
+import { ImageProps } from "../image/image";
+import Image from "../image/image";
 import { ImageSourcePropType } from "react-native";
-import Box from "../../Atoms/Box/Box";
-import Text from "../../Atoms/Text/Text";
-import namedColors from "../../../theme/utils/namedColors.json";
-import { getKeys } from "../../../theme/utils/typeHelpers";
+import Box from "../../atoms/box/box";
+import Text from "../../atoms/text/text";
+import namedColors from "../../../theme/utils/named-colors.json";
+import { getKeys } from "../../../theme/utils/type-helpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";

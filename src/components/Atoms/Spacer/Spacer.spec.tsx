@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../../theme/src/themeContext";
-import Spacer from "./Spacer";
-import Box from "../Box/Box";
-import Text from "../Text/Text";
+import { ThemeProvider } from "../../../theme/src/theme-context";
+import Spacer from "./spacer";
+import Box from "../box/box";
+import Text from "../text/text";
 
 jest.useFakeTimers();
 

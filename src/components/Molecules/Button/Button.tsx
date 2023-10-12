@@ -1,8 +1,8 @@
 import React from "react";
-import Spinner from "../../Atoms/Spinner/Spinner";
-import Box from "../../Atoms/Box/Box";
-import Text from "../../Atoms/Text/Text";
-import Pressable, { PressableProps } from "../../Atoms/Pressable/Pressable";
+import Spinner from "../../atoms/spinner/spinner";
+import Box from "../../atoms/box/box";
+import Text from "../../atoms/text/text";
+import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../hooks/pearlify";
 

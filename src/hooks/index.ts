@@ -11,4 +11,4 @@ export { useResponsiveProp } from "./useResponsiveProp";
 export { pearlify } from "./pearlify";
 
 // State Hooks
-export * from "./stateHooks/index";
+export * from "./state/index";

@@ -1,7 +1,7 @@
 import React from "react";
-import Text from "../../components/Atoms/Text/Text";
+import Text from "../../components/atoms/text/text";
 import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "../../theme/src/themeContext";
+import { ThemeProvider } from "../../theme/src/theme-context";
 import { useAccessibleColor } from "../useAccessibleColor";
 
 jest.useFakeTimers();

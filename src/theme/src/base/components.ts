@@ -1,16 +1,16 @@
-import DividerConfig from "../../../components/Atoms/Divider/Divider.config";
-import IconConfig from "../../../components/Atoms/Icon/Icon.config";
-import ScreenConfig from "../../../components/Atoms/Screen/Screen.config";
-import SpinnerConfig from "../../../components/Atoms/Spinner/Spinner.config";
-import TextConfig from "../../../components/Atoms/Text/Text.config";
-import AvatarConfig from "../../../components/Molecules/Avatar/Avatar.config";
-import BadgeConfig from "../../../components/Molecules/Badge/Badge.config";
-import ButtonConfig from "../../../components/Molecules/Button/Button.config";
-import CheckBoxConfig from "../../../components/Molecules/CheckBox/CheckBox.config";
-import ImageConfig from "../../../components/Molecules/Image/Image.config";
-import InputConfig from "../../../components/Molecules/Input/Input.config";
-import RadioConfig from "../../../components/Molecules/Radio/Radio.config";
-import TextLinkConfig from "../../../components/Molecules/TextLink/TextLink.config";
+import DividerConfig from "../../../components/atoms/divider/divider.config";
+import IconConfig from "../../../components/atoms/icon/icon.config";
+import ScreenConfig from "../../../components/atoms/screen/screen.config";
+import SpinnerConfig from "../../../components/atoms/spinner/spinner.config";
+import TextConfig from "../../../components/atoms/text/text.config";
+import AvatarConfig from "../../../components/molecules/avatar/avatar.config";
+import BadgeConfig from "../../../components/molecules/badge/badge.config";
+import ButtonConfig from "../../../components/molecules/button/button.config";
+import CheckBoxConfig from "../../../components/molecules/checkbox/checkbox.config";
+import ImageConfig from "../../../components/molecules/image/image.config";
+import InputConfig from "../../../components/molecules/input/input.config";
+import RadioConfig from "../../../components/molecules/radio/radio.config";
+import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
 
 export default {
   None: { baseStyle: {} },
