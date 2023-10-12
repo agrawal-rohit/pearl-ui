@@ -8,8 +8,7 @@ jest.useFakeTimers();
 
 const TestComponent: React.FC = () => {
   const bg = useColorModeValue("neutral.200", "pink");
-
-  return <Text>{bg}</Text>;
+  return <Text>{bg.toString()}</Text>;
 };
 
 describe("useColorModeValue", () => {

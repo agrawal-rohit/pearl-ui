@@ -10,7 +10,7 @@ import { useTheme } from "./useTheme";
 export const useColorModeValue = (
   lightColor: PaletteColors,
   darkColor: PaletteColors
-) => {
+): PaletteColors => {
   const { colorMode } = useTheme();
 
   if (colorMode === "light") return lightColor;

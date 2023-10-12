@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
 import { Dimensions } from "react-native";
-
+import React, { useState, useEffect } from "react";
 import { Dimensions as DimensionsType } from "./types";
 
 export const DimensionsContext = React.createContext<DimensionsType>({
@@ -22,13 +21,13 @@ export const DimensionsProvider = ({
   };
 
   useEffect(() => {
-    const subscription = Dimensions.addEventListener("change", onChange) as any;
+    const subscription = Dimensions.addEventListener("change", onChange) ;
 
     return () =>
       // Using removeEventListener is deprecated in react-native > 0.65 and will throw warning. Use .remove() if available.
       subscription && subscription.remove
         ? subscription.remove()
-        : Dimensions.removeEventListener("change", onChange);
+        : undefined
   }, []);
 
   return (

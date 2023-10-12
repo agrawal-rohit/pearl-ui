@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Animated, Easing, Platform, View } from "react-native";
 
 type ViewProps = React.ComponentProps<typeof View>;
@@ -46,7 +46,9 @@ const Indicator: React.FC<IndicatorProps> = ({
 
   return (
     <Animated.View {...rest}>
+      <>
       {Array.from(new Array(count), _renderComponent, this)}
+      </>
     </Animated.View>
   );
 };

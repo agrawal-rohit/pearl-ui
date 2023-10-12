@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../theme/src/themeContext";
 import { pearlify } from "../pearlify";
@@ -9,7 +9,10 @@ import Box, { BoxProps } from "../../components/Atoms/Box/Box";
 jest.useFakeTimers();
 
 describe("pearlify/basic", () => {
-  const PearlifyViewComponent: React.FC = ({ children, ...props }) => {
+  const PearlifyViewComponent: React.FC<PropsWithChildren> = ({
+    children,
+    ...props
+  }) => {
     const PearlView = pearlify(View, {
       componentName: "TestView",
       type: "basic",
@@ -18,7 +21,10 @@ describe("pearlify/basic", () => {
     return <PearlView {...props}>{children}</PearlView>;
   };
 
-  const PearlifyTextComponent: React.FC = ({ children, ...props }) => {
+  const PearlifyTextComponent: React.FC<PropsWithChildren> = ({
+    children,
+    ...props
+  }) => {
     const PearlText = pearlify(Text, {
       componentName: "TestText",
       type: "basic",
@@ -67,7 +73,10 @@ describe("pearlify/atoms", () => {
     },
   });
 
-  const PearlifyViewComponent: React.FC = ({ children, ...props }) => {
+  const PearlifyViewComponent: React.FC<PropsWithChildren> = ({
+    children,
+    ...props
+  }) => {
     const PearlView = pearlify(View, {
       componentName: "TestView",
       type: "atom",
@@ -76,7 +85,10 @@ describe("pearlify/atoms", () => {
     return <PearlView {...props}>{children}</PearlView>;
   };
 
-  const PearlifyTextComponent: React.FC = ({ children, ...props }) => {
+  const PearlifyTextComponent: React.FC<PropsWithChildren> = ({
+    children,
+    ...props
+  }) => {
     const PearlText = pearlify(Text, {
       componentName: "TestText",
       type: "atom",

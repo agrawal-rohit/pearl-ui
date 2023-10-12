@@ -41,10 +41,9 @@ export function pearlify<
   },
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) {
-  let FinalComponent: any;
+  let FinalComponent: any | undefined;
   if (config.animatable && config.type !== "molecule") {
-    // Convert the provided component to a Class component
-    class ConvertedClassComponent extends React.Component {
+    class ConvertedClassComponent extends React.Component<any, any> {
       static displayName = `PearlMoti${Component.name}` || `NoName`;
 
       render() {

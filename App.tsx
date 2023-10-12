@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -46,17 +46,16 @@ const App = () => {
     "Poppins-BlackItalic": Poppins_900Black_Italic,
   });
 
-  const [disabled, setDisabled] = useState(false);
-  const [invalid, setInvalid] = useState(false);
-
+  const [disabled, setDisabled] = React.useState(false);
+  const [invalid, setInvalid] = React.useState(false);
   return (
     <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Screen>
         <Box
           w="100%"
           h={30}
-          from={{ bgColor: "red" }}
-          animate={{ bgColor: "pink" }}
+          from={{ bgColor: "black" }}
+          animate={{ bgColor: "white" }}
           transition={{ type: "timing", duration: 600 }}
         />
       </Screen>
