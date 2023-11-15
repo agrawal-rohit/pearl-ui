@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Button
 ---
 
-**Button** is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
+The `Button` component in Pearl UI is a versatile and customizable element used to trigger various actions or events within your application. These actions could range from submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, the `Button` component renders the [Pressable](./Pressable) component.
 
 ## Import
 
@@ -19,7 +19,7 @@ import { Button } from "pearl-ui";
 
 ### Button sizes
 
-Use the `size` prop to change the size of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Button size="xs">Tiny Button</Button>
@@ -33,7 +33,7 @@ Use the `size` prop to change the size of the button. You can set the value to t
 
 ### Button variants
 
-Use the `variant` prop to change the visual style of the button. You can set the value to the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-config).
+The `variant` prop allows you to change the visual style of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <Button variant="solid">Solid Button</Button>
@@ -43,9 +43,9 @@ Use the `variant` prop to change the visual style of the button. You can set the
 <Button variant="ghost">Ghost Button</Button>
 ```
 
-### Button with icon
+### Button with Icon
 
-You can add left and right icons to **Button** using the `leftIcon` and `rightIcon` props respectively.
+The `Button` component supports the addition of icons on either side of the button text. This can be achieved using the `leftIcon` and `rightIcon` props for left and right icons respectively.
 
 :::info
 The `leftIcon` and `rightIcon` prop values should be React elements, **NOT** strings.
@@ -68,11 +68,9 @@ import { Icon } from "pearl-ui";
 </Button>
 ```
 
-### Button loading state
+### Loading State of Button
 
-Pass the `isLoading` prop to show a loading state on the button. By default, **Button** will show a spinner and leave the button's width unchanged.
-
-You can also pass the `loadingText` prop to show a spinner and the loading text. When a `loadingText` is present, you can change the placement of the spinner element to either <t>start</t> or <t>end</t> using the `spinnerPlacement` prop. It is <t>start</t> by default.
+The `isLoading` prop can be used to display a loading state on the button. By default, `Button` will show a spinner and maintain the button's width. The `loadingText` prop can be used to display a spinner and the loading text. When a `loadingText` is present, the placement of the spinner element can be adjusted to either <t>start</t> or <t>end</t> using the `spinnerPlacement` prop. It is <t>start</t> by default.
 
 ```jsx
 <Button isLoading>Basic loading button</Button>
@@ -88,11 +86,9 @@ You can also pass the `loadingText` prop to show a spinner and the loading text.
 </Button>
 ```
 
-### Button color scheme
+### Customizing Button Color Scheme
 
-Use the `colorScheme` prop to change the color palette of the button. This is much more powerful than simply passing a `backgroundColor` style prop as the `colorScheme` prop changes all the use color values in a palette through a single prop.
-
-You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+The `colorScheme` prop allows you to change the color palette of the button. This is a powerful feature as it changes all the use color values in a palette through a single prop. The value for this prop should be one of the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
 
 ```jsx
 <Button colorScheme="primary">Primary Button</Button>
@@ -100,13 +96,13 @@ You can set the value only to the keys available in <t>PearlTheme.palette</t> th
 <Button colorScheme="secondary">Secondary Button</Button>
 ```
 
-### Android Ripple effect
+### Android Ripple Effect
 
-In order to preserve the native ripple effect on Android devices, **Button** provides a default ripple effect that should work for most scenarios. By default, the ripple color is the `200` palette value of the active color scheme.
+To maintain the native ripple effect on Android devices, `Button` provides a default ripple effect that should work for most scenarios. By default, the ripple color is the `200` palette value of the active color scheme.
 
-### Override Style
+### Overriding Styles
 
-The **Button** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The `Button` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component config](#default-component-config).
 
 ```jsx
 // passing style prop m="xl" overrides the default component config value of m="2xs"
@@ -117,196 +113,32 @@ The **Button** component also supports a [variety of style props](#supported-sty
 ## Example
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/button-light" />
 
-</TabItem>
-
-<TabItem value="dark">
-
-<Snack snackId="@agrawal-rohit/button-dark" />
-
-</TabItem>
-</Tabs>
-
 ## Accessibility
 
-- **Button** has the `role` of `button`.
-- **Button** has the default accessibility label set as the text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t>. A custom label can be specified using the `accessibilityLabel` prop.
-- When the **Button** is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
+- `Button` has the `role` of `button`.
+- `Button` has the default accessibility label set as the text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t>. A custom label can be specified using the `accessibilityLabel` prop.
+- When the `Button` is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
 - Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
-## Props
+## Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-Since the **Button** component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to `Button`, in addition to the props given below.
+The `Button` component is a composition of the [Pressable](./Pressable) component. Therefore, all properties related to the [Pressable](./Pressable) component can be passed to the `Button` component, in addition to the properties listed below.
 
-### Additional props
+### Additional Properties
 
-| Name               | Required | Type                                            | Default     | Description                                                                                                                                                     |
-| ------------------ | -------- | ----------------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `size`             | false    | <t>PearlTheme.components.Button["sizes"]</t>    | `"m"`       | Size of the button.                                                                                                                                             |
-| `variant`          | false    | <t>PearlTheme.components.Button["variants"]</t> | `"filled"`  | Variant of the button.                                                                                                                                          |
-| `isLoading`        | false    | <t>boolean</t>                                  | `false`     | Whether the button is in a loading state.                                                                                                                       |
-| `isFullWidth`      | false    | <t>boolean</t>                                  | `false`     | Whether the button should span the entire width of the parent container.                                                                                        |
-| `loadingText`      | false    | <t>string</t>                                   | `null`      | The text value to display when the button is in a loading state.                                                                                                |
-| `colorScheme`      | false    | <t>PearlTheme["palette"]</t>                    | `"primary"` | Active color palette of the button. The expected value is the key of a palette object eg `primary`, `secondary`, `neutral`, etc. instead of an individual color |
-| `spinnerPlacement` | false    | <t>"start" \| "end"</t>                         | `"start"`   | The position of the loading spinner with respect to the `loadingText`.                                                                                          |
-| `leftIcon`         | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the left side of the main text.                                                                                                              |
-| `rightIcon`        | false    | <t>React.ReactElement</t>                       | `null`      | Icon to display on the right side of the main text.                                                                                                             |
-
-## Default component Config
-
-```js
-export default {
-  parts: ["root", "text", "spinner", "icon"],
-  baseStyle: {
-    root: {
-      my: "2xs",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    icon: {
-      alignSelf: "center",
-    },
-  },
-  sizes: {
-    xs: {
-      root: {
-        py: "2xs",
-        px: "xs",
-        borderRadius: "s",
-      },
-      text: {
-        variant: "btn4",
-      },
-      spinner: {
-        my: "2xs",
-        size: "s",
-      },
-      icon: {
-        size: "s",
-      },
-    },
-    s: {
-      root: {
-        py: "xs",
-        px: "xs",
-        borderRadius: "s",
-      },
-      text: {
-        variant: "btn3",
-      },
-      spinner: {
-        size: "m",
-      },
-      icon: {
-        size: "s",
-      },
-    },
-    m: {
-      root: {
-        py: "s",
-        px: "s",
-        borderRadius: "m",
-      },
-      text: {
-        variant: "btn2",
-      },
-      spinner: {
-        size: "m",
-      },
-      icon: {
-        size: "m",
-      },
-    },
-    l: {
-      root: {
-        py: "m",
-        px: "m",
-        borderRadius: "m",
-      },
-      text: {
-        variant: "btn1",
-      },
-      spinner: {
-        size: "l",
-      },
-      icon: {
-        size: "m",
-      },
-    },
-  },
-  variants: {
-    filled: {
-      root: {
-        activeBackgroundColor: "primary.400",
-        backgroundColor: "primary.500",
-      },
-      text: { color: "neutral.50" },
-      spinner: {
-        color: "neutral.50",
-      },
-      icon: {
-        color: "neutral.50",
-      },
-    },
-    outline: {
-      root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
-        borderWidth: 1,
-        borderColor: "primary.500",
-      },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
-      },
-      icon: {
-        color: "primary.500",
-      },
-    },
-    ghost: {
-      root: {
-        activeBackgroundColor: {
-          light: "primary.50",
-          dark: "primary.800",
-        },
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
-      },
-      text: { color: "primary.500" },
-      spinner: {
-        color: "primary.500",
-      },
-      icon: {
-        color: "primary.500",
-      },
-    },
-  },
-  defaults: {
-    size: "m",
-    variant: "filled",
-  },
-};
-```
+| Property Name      | Required | Data Type                                       | Default     | Description                                                                                                                                  |
+| ------------------ | -------- | ----------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `size`             | No       | <t>PearlTheme.components.Button["sizes"]</t>    | `"m"`       | Defines the size of the button.                                                                                                              |
+| `variant`          | No       | <t>PearlTheme.components.Button["variants"]</t> | `"filled"`  | Specifies the variant of the button.                                                                                                         |
+| `isLoading`        | No       | <t>boolean</t>                                  | `false`     | Indicates whether the button is in a loading state.                                                                                          |
+| `isFullWidth`      | No       | <t>boolean</t>                                  | `false`     | Determines whether the button should span the entire width of the parent container.                                                          |
+| `loadingText`      | No       | <t>string</t>                                   | `null`      | Specifies the text to display when the button is in a loading state.                                                                         |
+| `colorScheme`      | No       | <t>PearlTheme["palette"]</t>                    | `"primary"` | Defines the active color palette of the button. The expected value is the key of a palette object eg `primary`, `secondary`, `neutral`, etc. |
+| `spinnerPlacement` | No       | <t>"start" \| "end"</t>                         | `"start"`   | Specifies the position of the loading spinner relative to the `loadingText`.                                                                 |
+| `leftIcon`         | No       | <t>React.ReactElement</t>                       | `null`      | Defines the icon to display on the left side of the main text.                                                                               |
+| `rightIcon`        | No       | <t>React.ReactElement</t>                       | `null`      | Defines the icon to display on the right side of the main text.                                                                              |

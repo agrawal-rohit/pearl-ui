@@ -29,9 +29,7 @@ export const useDynamicStateStyle = (
   // If there are no state styles, return the original props
   if (!stateStyles) return props;
 
-  // If the component type is not "molecule", use the useStateWithStyleProps hook
-  if (activeComponentType !== "molecule")
-    stateStyles = useStateWithStyleProps(stateStyles, styleFunctions);
+  stateStyles = useStateWithStyleProps(stateStyles, styleFunctions);
 
   let finalProps = props;
 

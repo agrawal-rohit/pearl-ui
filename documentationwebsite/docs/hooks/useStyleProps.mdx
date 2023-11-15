@@ -1,0 +1,115 @@
+---
+sidebar_position: 2
+title: useStyleProps
+---
+
+`useStyleProps` is a custom hook in Pearl UI that transforms the style props you provide into a format that React Native can understand and apply.
+
+This hook takes in a props object, filters it based on the style properties you want, and generates a style object that can be passed to any React Native component.
+
+## Import
+
+```js
+import { useStyleProps } from "pearl-ui";
+```
+
+## Return value
+
+The `useStyleProps` hook returns the processed React Native styles as an object.
+
+```json
+{
+    style: {
+        color: "#000",
+        ....
+    }
+}
+```
+
+## Usage
+
+You can use the `useStyleProps` hook to add style props support to any React Native element. Here's an example of how you can add `border` and `backgroundColor` style props support to a native [View](https://reactnative.dev/docs/view) element:
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="js"
+  values={[
+    { label: 'Javascript', value: 'js', },
+    { label: 'Typescript', value: 'ts', },
+  ]
+}>
+<TabItem value="ts">
+
+```tsx title="ColorView.tsx"
+import React from "react";
+import { View } from "react-native";
+import {
+  useStyleProps,
+  backgroundColor,
+  BackgroundColorProps,
+  border,
+  BorderProps,
+  StyleFunctionContainer,
+} from "pearl-ui";
+
+type ColorViewProps = BackgroundColorProps & BorderProps;
+
+const colorViewStyleFunctions = [
+  border,
+  backgroundColor,
+] as StyleFunctionContainer[];
+
+type ViewProps = React.ComponentProps<typeof View> & {
+  children?: React.ReactNode;
+};
+type ComponentProps = ColorViewProps & Omit<ViewProps, keyof ColorViewProps>;
+
+const ColorView: React.FC<ComponentProps> = (props) => {
+  const passedProps = useStyleProps(props, colorViewStyleFunctions);
+
+  return <View {...passedProps}>{props.children}</View>;
+};
+```
+
+</TabItem>
+
+<TabItem value="js">
+
+```jsx title="ColorView.jsx"
+import React from "react";
+import { View } from "react-native";
+import { useStyleProps, backgroundColor, border } from "pearl-ui";
+
+const colorViewStyleFunctions = [border, backgroundColor];
+
+const ColorView = (props) => {
+  const passedProps = useStyleProps(props, colorViewStyleFunctions);
+
+  return <View {...passedProps}>{props.children}</View>;
+};
+```
+
+</TabItem>
+</Tabs>
+
+In the examples above, the `useStyleProps` hook takes the raw props of the component and the desired [style functions](../others/style-functions) as parameters. It then generates a style object that can be directly passed to the target React Native element.
+
+Now, any props passed into this component will automatically be converted into valid React Native styles:
+
+```jsx
+<ColorView
+  backgroundColor="neutral.700"
+  borderColor="blue"
+  borderWidth={4}
+  borderStyle="dotted"
+/>
+```
+
+## Parameters
+
+| Name             | Required | Type                                                         | Description                                                                                             |
+| ---------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `props`          | true     | <t>object</t>                                                | The raw props passed to the component where the hook is being used                                      |
+| `styleFunctions` | true     | <t>Array of [Style Functions](../others/style-functions)</t> | The list of [style functions](../others/style-functions) to use for processing the received style props |

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-title: Style Props
+title: Style Properties
 ---
 
-Style props provide a way to set the styling of a component by simply passing props to it. It helps developers save time while maintaining readability of complex components.
+Style properties in Pearl UI offer a convenient method to apply styling to components by passing properties directly to them. This feature enhances developer productivity and ensures the readability of complex components remains intact.
 
 ## Reference
 
-The sections below list the supported style props and their expected values.
+The following sections provide a comprehensive list of supported style properties and the values they accept.
 
 ### Margin and padding
 

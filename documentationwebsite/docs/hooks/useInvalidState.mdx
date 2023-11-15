@@ -1,0 +1,74 @@
+---
+sidebar_position: 5
+title: useInvalidState
+---
+
+The `useInvalidState` hook is a powerful utility in Pearl UI that not only manages an invalid state but also transforms the `_invalid` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to invalid events with custom styles.
+
+## Import
+
+```js
+import { useInvalidState } from "pearl-ui";
+```
+
+## Return value
+
+The `useInvalidState` hook returns an object with three properties:
+
+- `invalid`: A boolean representing the current invalid state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setInvalid`: A function that can be used to set the `invalid` state. This function updates the local state.
+- `propsWithInvalidStyles`: The props object of the component with updated styles according to the current 'invalid' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `useInvalidState` to manage an invalid state and compose extra styling while a form field is invalid:
+
+```js
+import { useInvalidState } from "pearl-ui";
+import { useState } from "react";
+
+const InputField = ({ isInvalid, ...props }) => {
+  // Use the hook to transform the props based on the invalid state
+  const { invalid, setInvalid, propsWithInvalidStyles } = useInvalidState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false,
+    isInvalid
+  );
+
+  // Render the input field with the transformed props
+  return <input {...propsWithInvalidStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the invalid state
+  const [isInvalid, setIsInvalid] = useState(false);
+
+  // Render the InputField and a toggle button to change the invalid state
+  return (
+    <div>
+      <InputField
+        isInvalid={isInvalid}
+        // Specify the styling of the component when the isInvalid value is true
+        _invalid={{ borderColor: "red", color: "black" }}
+      />
+      <button onClick={() => setIsInvalid(!isInvalid)}>
+        Toggle Invalid State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useInvalidState` hook is utilized within an `InputField` component. The purpose of this hook is to dynamically alter the input field's border and text colors in response to changes in the `isInvalid` prop. Specifically, when `isInvalid` is set to true, the input field's border color transitions to red, and the text color changes to black.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                       |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                       |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                       |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                        |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                             |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'invalid' state instead of the local state value. |

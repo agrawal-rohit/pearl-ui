@@ -7,12 +7,12 @@ import {
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/type-helpers";
 import { useTheme } from "./useTheme";
-import { checkKeyAvailability } from "./utils/utils";
+import { checkKeyAvailability, composeStyleProps } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
-import _, { over } from "lodash";
 import { useStyleProps } from "./useStyleProps";
 import { boxStyleFunctions } from "../theme/src/style-functions";
+import _ from "lodash";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles.
@@ -23,8 +23,9 @@ import { boxStyleFunctions } from "../theme/src/style-functions";
  * @param sizeAndVariantProps Custom size and variant configuration to use
  * @param colorScheme Active color scheme of the component
  * @param styleFunctions List of style functions to use for computing the received style props
- * @param targetKeyForAdditionalStyleProps The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config
- * @param targetKeyForNativeProps The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config
+ * @param partForOverridenStyleProps The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config
+ * @param partForOverridenNativeProps The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config
+ * @param partForOverridenAnimationProps The part where animation props passed to the component instance should be reflected. If undefined, the animation props are passed to the first part as specified in the config
  * @returns
  */
 export const useMolecularComponentConfig = (
@@ -39,8 +40,9 @@ export const useMolecularComponentConfig = (
   },
   colorScheme: ColorScheme = "primary",
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions as StyleFunctionContainer[],
-  targetKeyForOverridenStyleProps: string | undefined = undefined,
-  targetKeyForOverridenNativeProps: string | undefined = undefined
+  partForOverridenStyleProps: string | undefined = undefined,
+  partForOverridenNativeProps: string | undefined = undefined,
+  partForOverridenAnimationProps: string | undefined = undefined
 ) => {
   const { theme } = useTheme();
 
@@ -51,6 +53,38 @@ export const useMolecularComponentConfig = (
   );
 
   // User overriden props
+  const buildStyleProperties = composeStyleProps(styleFunctions);
+  const overridenStyleProps = _.pick(
+    receivedProps,
+    buildStyleProperties.properties
+  );
+  const overridenAnimationProps = _.pick(receivedProps, [
+    "animate",
+    "from",
+    "transition",
+    "delay",
+    "state",
+    "stylePriority",
+    "onDidAnimate",
+    "exit",
+    "exitTransition",
+    "animateInitialState",
+  ]);
+  const overridenNativeProps = _.omit(receivedProps, [
+    "atoms",
+    "animate",
+    "from",
+    "transition",
+    "delay",
+    "state",
+    "stylePriority",
+    "onDidAnimate",
+    "exit",
+    "exitTransition",
+    "animateInitialState",
+    "style",
+    ...buildStyleProperties.properties,
+  ]);
   const overridenProps = useStyleProps(receivedProps, styleFunctions);
 
   // Responsive Size and Variant
@@ -66,180 +100,157 @@ export const useMolecularComponentConfig = (
   ] as MolecularComponentConfig;
   const activeSizeAndVariantConfig: MolecularComponentConfig["defaults"] = {};
 
-  let finalComponentProps: Record<string, any> = {};
-  if (componentStyleConfig.hasOwnProperty("defaults")) {
-    const defaultComponentConfig = componentStyleConfig[
-      "defaults"
-    ] as NonNullable<MolecularComponentConfig["defaults"]>;
+  const defaultComponentConfig = componentStyleConfig[
+    "defaults"
+  ] as NonNullable<MolecularComponentConfig["defaults"]>;
 
-    if (defaultComponentConfig.hasOwnProperty("size")) {
-      activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
-        ? sizeForCurrentScreenSize
-        : defaultComponentConfig.size;
-    }
+  if (defaultComponentConfig.hasOwnProperty("size")) {
+    activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
+      ? sizeForCurrentScreenSize
+      : defaultComponentConfig.size;
+  }
 
-    if (defaultComponentConfig.hasOwnProperty("variant")) {
-      activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
-        ? variantForCurrentScreenSize
-        : defaultComponentConfig.variant;
-    }
+  if (defaultComponentConfig.hasOwnProperty("variant")) {
+    activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
+      ? variantForCurrentScreenSize
+      : defaultComponentConfig.variant;
+  }
 
-    if (!componentStyleConfig.hasOwnProperty("parts")) {
-      throw new Error(
-        `Key 'parts' does not exist in theme.components["${componentName}"]`
-      );
-    }
-    const componentParts = componentStyleConfig.parts;
-
-    if (!componentParts.includes("root") && componentParts[0] !== "root")
-      throw new Error(
-        `The first part in the component '${componentName}' should be named 'root'`
-      );
-
-    finalComponentProps = componentParts.reduce(
-      (partStyle: any, part: string) => {
-        const componentTypeStyles: Record<string, any> = getKeys(
-          activeSizeAndVariantConfig
-        ).reduce(
-          (style: any, currProp: keyof typeof activeSizeAndVariantConfig) => {
-            let activeSizeAndVariantStyles: Record<string, any>;
-            if (currProp === "size") {
-              checkKeyAvailability(
-                "sizes",
-                componentStyleConfig,
-                `theme.components['${String(componentName)}']`
-              );
-
-              checkKeyAvailability(
-                activeSizeAndVariantConfig["size"] as string,
-                componentStyleConfig!.sizes!,
-                `theme.components['${String(componentName)}']['sizes']`
-              );
-
-              activeSizeAndVariantStyles =
-                componentStyleConfig!.sizes![
-                  activeSizeAndVariantConfig[currProp] as string
-                ][part];
-            } else {
-              checkKeyAvailability(
-                "variants",
-                componentStyleConfig,
-                `theme.components['${String(componentName)}']`
-              );
-
-              checkKeyAvailability(
-                activeSizeAndVariantConfig["variant"] as string,
-                componentStyleConfig!.variants!,
-                `theme.components['${String(componentName)}']['variants']`
-              );
-
-              activeSizeAndVariantStyles =
-                componentStyleConfig!.variants![
-                  activeSizeAndVariantConfig[currProp] as string
-                ][part];
-            }
-
-            if (style) {
-              return {
-                ...style,
-                ...activeSizeAndVariantStyles,
-              };
-            }
-
-            return activeSizeAndVariantStyles;
-          },
-          null
-        );
-
-        let currentComponentPartProps = {
-          ...componentStyleConfig["baseStyle"][part],
-          ...componentTypeStyles,
-        };
-
-        if (
-          targetKeyForOverridenStyleProps &&
-          part === targetKeyForOverridenStyleProps
-        ) {
-          currentComponentPartProps = {
-            ...currentComponentPartProps,
-            style: {
-              ...currentComponentPartProps.style,
-              ...overridenProps.style,
-            },
-          };
-        }
-
-        if (
-          targetKeyForOverridenNativeProps &&
-          part === targetKeyForOverridenNativeProps
-        ) {
-          const { style, ...nativeOverridenProps } = overridenProps;
-          currentComponentPartProps = {
-            ...currentComponentPartProps,
-            ...nativeOverridenProps,
-          };
-        }
-
-        // For child references
-        if (partStyle) {
-          if (overridenProps.atoms)
-            currentComponentPartProps = {
-              ...currentComponentPartProps,
-              ...overridenProps.atoms[part],
-            };
-
-          return {
-            ...partStyle,
-            atoms: {
-              ...partStyle.atoms,
-              [part]: currentComponentPartProps,
-            },
-          };
-        }
-
-        // Style props by default go to the 'root' part
-        if (!targetKeyForOverridenStyleProps) {
-          currentComponentPartProps = {
-            ...currentComponentPartProps,
-            style: {
-              ...currentComponentPartProps.style,
-              ...overridenProps.style,
-            },
-          };
-        }
-
-        // Native props by default go to the 'root' part
-        if (!targetKeyForOverridenNativeProps) {
-          const { style, ...nativeOverridenProps } = overridenProps;
-          currentComponentPartProps = {
-            ...currentComponentPartProps,
-            ...nativeOverridenProps,
-          };
-        }
-
-        return currentComponentPartProps;
-      },
-      null
+  if (!componentStyleConfig.hasOwnProperty("parts")) {
+    throw new Error(
+      `Key 'parts' does not exist in theme.components["${componentName}"]`
     );
-  } else {
-    finalComponentProps = componentStyleConfig["baseStyle"];
+  }
 
-    // Pass the overriden props to the first part
+  let finalComponentProps: Record<string, any> = {};
+
+  // Assign overriden props to the root
+  if (!partForOverridenStyleProps) {
     finalComponentProps = {
-      ...finalComponentProps.root,
-      ...overridenProps,
-      style: {
-        ...finalComponentProps.root.style,
-        ...overridenProps.style,
-      },
-      atoms: {
-        ..._.omit(finalComponentProps, "root"),
-        ...overridenProps.atoms,
-      },
+      ...finalComponentProps,
+      ...overridenStyleProps,
+      style: receivedProps.style,
     };
   }
 
-  finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
+  // Native props by default go to the 'root' part
+  if (!partForOverridenNativeProps) {
+    finalComponentProps = {
+      ...finalComponentProps,
+      ...overridenNativeProps,
+    };
+  }
 
+  // Native props by default go to the 'root' part
+  if (!partForOverridenAnimationProps) {
+    finalComponentProps = {
+      ...finalComponentProps,
+      ...overridenAnimationProps,
+    };
+  }
+
+  componentStyleConfig.parts.forEach((part) => {
+    const componentTypeStyles: Record<string, any> = getKeys(
+      activeSizeAndVariantConfig
+    ).reduce(
+      (style: any, currProp: keyof typeof activeSizeAndVariantConfig) => {
+        let activeSizeAndVariantStyles: Record<string, any>;
+        if (currProp === "size") {
+          checkKeyAvailability(
+            "sizes",
+            componentStyleConfig,
+            `theme.components['${String(componentName)}']`
+          );
+
+          checkKeyAvailability(
+            activeSizeAndVariantConfig["size"] as string,
+            componentStyleConfig!.sizes!,
+            `theme.components['${String(componentName)}']['sizes']`
+          );
+
+          activeSizeAndVariantStyles =
+            componentStyleConfig!.sizes![
+              activeSizeAndVariantConfig[currProp] as string
+            ][part];
+        } else {
+          checkKeyAvailability(
+            "variants",
+            componentStyleConfig,
+            `theme.components['${String(componentName)}']`
+          );
+
+          checkKeyAvailability(
+            activeSizeAndVariantConfig["variant"] as string,
+            componentStyleConfig!.variants!,
+            `theme.components['${String(componentName)}']['variants']`
+          );
+
+          activeSizeAndVariantStyles =
+            componentStyleConfig!.variants![
+              activeSizeAndVariantConfig[currProp] as string
+            ][part];
+        }
+
+        if (style) {
+          return {
+            ...style,
+            ...activeSizeAndVariantStyles,
+          };
+        }
+
+        return activeSizeAndVariantStyles;
+      },
+      null
+    );
+
+    let currentComponentPartProps = {
+      ...componentStyleConfig["baseStyle"][part],
+      ...componentTypeStyles,
+    };
+
+    if (partForOverridenStyleProps && part === partForOverridenStyleProps) {
+      currentComponentPartProps = {
+        ...currentComponentPartProps,
+        style: {
+          ...currentComponentPartProps.style,
+          ...overridenProps.style,
+        },
+      };
+    }
+
+    if (partForOverridenNativeProps && part === partForOverridenNativeProps) {
+      currentComponentPartProps = {
+        ...currentComponentPartProps,
+        ...overridenNativeProps,
+      };
+    }
+
+    if (
+      partForOverridenAnimationProps &&
+      part === partForOverridenAnimationProps
+    ) {
+      currentComponentPartProps = {
+        ...currentComponentPartProps,
+        ...overridenAnimationProps,
+      };
+    }
+
+    // For child references
+    if (overridenProps.atoms && overridenProps.atoms[part])
+      currentComponentPartProps = {
+        ...currentComponentPartProps,
+        ...overridenProps.atoms[part],
+      };
+
+    finalComponentProps = {
+      ...finalComponentProps,
+      atoms: {
+        ...finalComponentProps.atoms,
+        [part]: currentComponentPartProps,
+      },
+    };
+  });
+
+  finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
   return finalComponentProps;
 };

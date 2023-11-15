@@ -35,7 +35,7 @@ import {
 } from "@expo/vector-icons";
 import responsiveSize from "../../../utils/responsive-size";
 import { View } from "react-native";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 export const iconStyleFunctions = [
   colorStyleFunction,

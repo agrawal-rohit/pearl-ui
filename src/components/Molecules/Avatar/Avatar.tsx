@@ -9,7 +9,7 @@ import namedColors from "../../../theme/utils/named-colors.json";
 import { getKeys } from "../../../theme/utils/type-helpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 import { useAvatarGroup } from "./useAvatarGroup";
 
 /**
@@ -49,8 +49,7 @@ const CustomAvatar = React.forwardRef(
     { children, ...props }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
     ref: any
   ) => {
-    const { name, src, getInitials, atoms, fallbackComponent, ...rootProps } =
-      props;
+    const { name, src, getInitials, atoms, fallbackComponent } = props;
 
     // Function to pick a random color from the namedColors object
     const pickRandomColor = () => {
@@ -67,9 +66,9 @@ const CustomAvatar = React.forwardRef(
     const randomColor = useRef(pickRandomColor()).current;
     // Determine the text color based on the background color to ensure accessibility
     const accessibleTextColor = useAccessibleColor(
-      rootProps.backgroundColor ||
-        rootProps.bgColor ||
-        (rootProps as any).style.backgroundColor ||
+      atoms.box.backgroundColor ??
+        atoms.box.bgColor ??
+        atoms.box.style.backgroundColor ??
         randomColor,
       {
         light: "neutral.50",
@@ -80,7 +79,7 @@ const CustomAvatar = React.forwardRef(
     // Function to render the fallback component (initials or fallbackComponent prop)
     const renderFallBack = () => {
       if (name) {
-        const initialComputeFunction = getInitials || defaultGetInitials;
+        const initialComputeFunction = getInitials ?? defaultGetInitials;
         const nameInitials = initialComputeFunction(name);
         return (
           <Text color={accessibleTextColor} {...atoms.text}>
@@ -102,15 +101,15 @@ const CustomAvatar = React.forwardRef(
 
     // If a source is provided, render the image
     if (finalSource) {
-      return <Image ref={ref} source={finalSource} {...rootProps} />;
+      return <Image ref={ref} source={finalSource} {...atoms.box} />;
     }
 
     // If no source is provided, render the fallback
     return (
       <Box
-        {...rootProps}
+        {...atoms.box}
         backgroundColor={
-          rootProps.backgroundColor || rootProps.bgColor || randomColor
+          atoms.box.backgroundColor ?? atoms.box.bgColor ?? randomColor
         }
         justifyContent="center"
         alignItems="center"
@@ -118,6 +117,21 @@ const CustomAvatar = React.forwardRef(
         {renderFallBack()}
       </Box>
     );
+  }
+);
+
+const StyledAvatar = pearlify<BaseAvatarProps, "molecule">(
+  CustomAvatar,
+  {
+    componentName: "Avatar",
+    type: "molecule",
+    animatable: true,
+  },
+  undefined,
+  {
+    partForOverridenStyleProps: "box",
+    partForOverridenNativeProps: "box",
+    partForOverridenAnimationProps: "box",
   }
 );
 
@@ -135,13 +149,8 @@ const Avatar = React.forwardRef(
     let { size, variant } = useAvatarGroup();
 
     // Overwrite props from avatar group
-    rest.size = size || rest.size;
-    rest.variant = variant || rest.variant;
-
-    const StyledAvatar = pearlify<BaseAvatarProps, "molecule">(CustomAvatar, {
-      componentName: "Avatar",
-      type: "molecule",
-    });
+    rest.size = size ?? rest.size;
+    rest.variant = variant ?? rest.variant;
 
     // Render a fallback
     return (

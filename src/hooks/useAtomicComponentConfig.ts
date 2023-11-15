@@ -6,7 +6,6 @@ import {
   StyleFunctionContainer,
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/type-helpers";
-
 import { useTheme } from "./useTheme";
 import { useStyleProps } from "./useStyleProps";
 import { checkKeyAvailability } from "./utils/utils";

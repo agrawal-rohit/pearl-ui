@@ -129,15 +129,15 @@ html[data-theme="dark"] .header-twitter-link:before {
   margin-right: auto;
   margin-left: 10px;
   padding: 3px 6px;
-  border: 1px solid #ff6ac6;
+  border: 1px solid #ffecf8;
   border-radius: 10px;
-  color: white;
-  background-color: #ff6ac6;
+  color: #ff6ac6;
+  background-color: #ffecf8;
   text-transform: uppercase;
   font-size: 8px;
   line-height: 10px;
   height: 10px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .menu__link[href*="Image"]:after,
@@ -154,31 +154,31 @@ html[data-theme="dark"] .header-twitter-link:before {
   margin-right: auto;
   margin-left: 10px;
   padding: 3px 6px;
-  border: 1px solid #2ea6d4;
+  border: 1px solid #d6f3ff;
   border-radius: 10px;
-  color: white;
-  background-color: #2ea6d4;
+  color: #2ea6d4;
+  background-color: #d6f3ff;
   text-transform: uppercase;
   font-size: 8px;
   line-height: 10px;
   height: 10px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /*
   Mark pages as "new" using href attribute:
 */
-.menu__link[href*="Image"]:before,
-.menu__link[href*="CheckBox"]:before,
-.menu__link[href*="Radio"]:before,
-.menu__link[href*="Spacer"]:before,
 .menu__link[href*="Badge"]:before,
-.menu__link[href*="useAccessibleColor"]:before,
-.menu__link[href*="useResponsiveProp"]:before,
-.menu__link[href*="typescript-support"]:before,
-.menu__link[href*="typography"]:before,
-.menu__link[href*="dark-mode"]:before,
-.menu__link[href*="responsivity"]:before {
+.menu__link[href*="responsivity"]:before,
+.menu__link[href*="animation-support"]:before,
+.menu__link[href*="useDimensions"]:before,
+.menu__link[href*="useMotiWithStyleProps"]:before,
+.menu__link[href*="useDynamicStateStyle"]:before,
+.menu__link[href*="useFocusedState"]:before,
+.menu__link[href*="usePressedState"]:before,
+.menu__link[href*="useDisabledState"]:before,
+.menu__link[href*="useCheckedState"]:before,
+.menu__link[href*="useInvalidState"]:before {
   content: "New";
   display: inline-block;
   position: absolute;
@@ -199,11 +199,8 @@ html[data-theme="dark"] .header-twitter-link:before {
 /*
   Mark pages as "updated" using href attribute:
 */
-.menu__link[href*="Stack"]:before,
-.menu__link[href*="Avatar"]:before,
 .menu__link[href*="pearlify"]:before,
-.menu__link[href*="default-theme"]:before,
-.menu__link[href*="cohesivity"]:before {
+.menu__link[href*="extensibility"]:before {
   content: "Updated";
   display: inline-block;
   position: absolute;
@@ -310,6 +307,11 @@ a.menu__link:not([href]) {
 }
 
 /* Adjust footer link colors */
+#__docusaurus > footer {
+  padding: 20px;
+  font-size: 0.85rem;
+}
+
 #__docusaurus > footer > div > div.text--center > div > a {
   color: unset;
 }

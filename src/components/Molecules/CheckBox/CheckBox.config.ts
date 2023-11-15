@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "box", "icon", "text"],
+  parts: ["container", "box", "icon", "text"],
   baseStyle: {
-    root: {
+    container: {
       my: "2xs",
       spacing: "xs",
     },
@@ -10,6 +10,7 @@ export default {
       shape: "square",
       borderColor: "neutral.300",
       _invalid: {
+        borderWidth: 1,
         borderColor: "danger.500",
       },
     },

@@ -3,7 +3,7 @@ sidebar_position: 7
 title: useColorScheme
 ---
 
-`useColorScheme` is a custom hook to covert an existing props object to a different color scheme from the active theme palette. By default, it is included inside the [useAtomicComponentConfig](./useAtomicComponentConfig) and [useMolecularComponentConfig](./useMolecularComponentConfig) hooks.
+The `useColorScheme` hook is a powerful tool in Pearl UI that allows you to transform an existing props object to a different color scheme from the active theme palette. This hook is particularly useful for creating responsive designs that adapt to user preferences for different color schemes.
 
 ## Import
 
@@ -13,15 +13,13 @@ import { useColorScheme } from "pearl-ui";
 
 ## Return value
 
-The `useColorScheme` hook returns the same style props object passed into it, but with the `primary` color palette switched out for the desired color scheme (eg secondary, accent, etc)
+The `useColorScheme` hook returns the same style props object passed into it, but with the `primary` color palette replaced with the desired color scheme (e.g., secondary, accent, etc.)
 
 ## Usage
 
-All components use the `primary` color scheme in their components by default. However, in some special cases, you might need to use a different set of colors in the component (eg. secondary/accent color buttons)
+By default, all components use the `primary` color scheme. However, you may need to use a different set of colors in certain cases (e.g., secondary/accent color buttons). For simple atomic components, changing the color scheme is as easy as overriding the desired properties of the component using [style props](../core-features/style-props). For complex molecular components, the `useColorScheme` hook simplifies this process.
 
-For simple atomic components, changing the color scheme is as easy overriding the desired properties of the component using [style props](../core-features/style-props). However, things get complicated when you want to do the same with complex molecular components. That's where the `useColorScheme` hook comes in.
-
-As an example, let's take the following style props object returned by a [useMolecularComponentConfig](./useMolecularComponentConfig) hook:
+For instance, consider the following style props object returned by a [useMolecularComponentConfig](./useMolecularComponentConfig) hook:
 
 ```js {3,9,21,25}
 const componentConfig = {
@@ -54,13 +52,13 @@ const componentConfig = {
 };
 ```
 
-To add support for switching the color scheme to use instead of `primary`, we can do so easily using the `useColorScheme` hook as follows:
+To switch the color scheme from `primary` to `secondary`, you can use the `useColorScheme` hook as follows:
 
 ```js
 const secondaryComponentConfig = useColorScheme("secondary", componentConfig);
 ```
 
-`secondaryComponentConfig` then has the following value:
+The `secondaryComponentConfig` then has the following value:
 
 ```js {3,9,21,25}
 {
@@ -97,5 +95,5 @@ const secondaryComponentConfig = useColorScheme("secondary", componentConfig);
 
 | Name                | Required | Type                          | Description                     |
 | ------------------- | -------- | ----------------------------- | ------------------------------- |
-| `targetColorScheme` | true     | <t>PearlTheme['palette'] </t> | Name of the target color scheme |
-| `props`             | true     | <t>object</t>                 | Style props object              |
+| `targetColorScheme` | Yes      | <t>PearlTheme['palette'] </t> | Name of the target color scheme |
+| `props`             | Yes      | <t>object</t>                 | Style props object              |

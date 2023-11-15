@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Image
 ---
 
-The **Image** component can be used to display local or remote images. It also includes support built-in support for [image fallback](#image-fallback), [caching](#caching), and [progressive loading](#progressive-image-loading).
+The `Image` component is a versatile tool for displaying images in your application. It supports both local and remote images, and includes built-in features for image fallback, caching, and progressive loading.
 
 ## Import
 
@@ -33,7 +33,7 @@ import { Image } from "pearl-ui";
 
 ### Aspect Ratio
 
-In some cases, you might need to maintain the aspect ratio of an image to prevent cropping. You can easily do this by using the `aspectRatio` style prop.
+The `aspectRatio` style prop can be used to maintain the aspect ratio of an image and prevent it from being cropped.
 
 ```jsx
 // Maintains aspect ratio for an image having fixed width
@@ -55,7 +55,7 @@ In some cases, you might need to maintain the aspect ratio of an image to preven
 
 ### Caching
 
-If your application deals with a lot of heavy images, it's a wise decision to cache these images locally to make them load faster. **Image** let's you cache your remote images easily with the help of the `isCached` prop. By default, this value is set to `true`.
+Caching is a useful feature for applications that handle a lot of heavy images. It allows images to load faster by storing them locally. The `isCached` prop can be used to enable or disable caching for individual images. By default, this value is set to `true`.
 
 ```jsx
 // The image is cached by default
@@ -80,15 +80,15 @@ If your application deals with a lot of heavy images, it's a wise decision to ca
 
 ### Image loading indicators
 
-While a remote image is being downloaded, a temporary placeholder that serves as a loading indicator provide can drastically improve your app's UX. You can choose among the following options to serve as loading indicators for your images:
+While a remote image is being downloaded, a temporary placeholder can be displayed as a loading indicator. This can significantly improve the user experience of your application. The `Image` component supports two types of loading indicators: progressive image loading and spinner loading.
 
 #### Progressive image loading
 
 ![Progressive Loading Medium](https://miro.medium.com/max/2000/1*JIph8aM2PyQb-o_RJhnmnQ.png)
 
-[Progressive images](https://www.keycdn.com/support/progressive-images) loading displays as blurred low quality image that improves in resolution after the entire image is successfully fetched. This method is actively in popular apps like [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/).
+Progressive image loading displays a blurred low-quality image that gradually improves in resolution as the image is downloaded. This method is used in popular apps like [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/).
 
-**Image** supports progressive loading of images with the use help of the `loaderType` and `previewSource` props. The `previewSource` is usually a low resolution version of the desired source image.
+The `loaderType` and `previewSource` props can be used to enable progressive loading. The `previewSource` should be a low-resolution version of the source image.
 
 ```jsx
 // The loaderType prop specifies that this image needs to be loaded progressively
@@ -105,7 +105,7 @@ While a remote image is being downloaded, a temporary placeholder that serves as
 />
 ```
 
-If you do not have a preview source image to work with, you can make use of the `previewColor` to emulate the progressive image loading behaviour used widely in [Google Image Search](https://www.google.com/imghp?hl=en) as follows:
+If you do not have a preview source image, you can use the `previewColor` prop to emulate the progressive image loading behavior used in [Google Image Search](https://www.google.com/imghp?hl=en).
 
 ![Progressive Loading Google Images](https://miro.medium.com/max/4800/1*STsY5lfD4DA2wigfN76QpQ.png)
 
@@ -122,14 +122,14 @@ If you do not have a preview source image to work with, you can make use of the 
 />
 ```
 
-When both `previewSource` and `previewColor` props are specified, `previewSource` has a higher precedence.
+If both `previewSource` and `previewColor` props are specified, `previewSource` has a higher precedence.
 
 #### Spinner loading
 
-You could also add a good ol' [Spinner](../feedback/Spinner) while the image is loading by setting the value of the `loaderType` props to <t>"spinner"</t>. The visual styling of the spinner can be updated using the [default component config](#default-component-config).
+You can also display a [Spinner](../feedback/Spinner) while the image is loading by setting the `loaderType` prop to <t>"spinner"</t>. The appearance of the spinner can be customized using the [default component config](#default-component-config).
 
 ```jsx
-// The loaderType prop specifies that a spinner should be added while this image is being loaded
+// The loaderType prop specifies that a spinner should be displayed while this image is being loaded
 <Image
   width={100}
   height={100}
@@ -142,12 +142,10 @@ You could also add a good ol' [Spinner](../feedback/Spinner) while the image is 
 
 ### Image Fallback
 
-Sometimes, the image you want to display doesn't exist or cannot be accessed due to network issues. In these cases, it is a good practice to show a replacement to the user as a fallback.
-
-This is possible with the use of the `fallbackSource` and `fallbackComponent` props.
+If an image cannot be displayed due to network issues or because it does not exist, a fallback image or component can be displayed instead. This can be achieved using the `fallbackSource` and `fallbackComponent` props.
 
 ```jsx
-// Displays an image saying 'No Image Available' in case the source image doesn't exist
+// Displays an image saying 'No Image Available' if the source image doesn't exist
 <Image
   width={100}
   height={100}
@@ -159,7 +157,7 @@ This is possible with the use of the `fallbackSource` and `fallbackComponent` pr
   }}
 />;
 
-// Displays a custom component with an error icon in case the source image doesn't exist
+// Displays a custom component with an error icon if the source image doesn't exist
 import { Icon } from "pearl-ui";
 
 <Image
@@ -179,11 +177,11 @@ import { Icon } from "pearl-ui";
 />;
 ```
 
-If both the props are specified, the `fallbackComponent` prop takes higher precedence over `fallbackSource`.
+If both `fallbackComponent` and `fallbackSource` props are specified, `fallbackComponent` has a higher precedence.
 
-### Override Style
+### Override Styles
 
-The **Image** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined component style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The `Image` component supports a variety of style props that can be used to override the default component style. Any style props passed to the component will take precedence over the [default component config](#default-component-config).
 
 ```jsx
 <Image
@@ -201,74 +199,33 @@ The **Image** component also supports a [variety of style props](#supported-styl
 ## Example
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/image-light" />
 
-</TabItem>
-
-<TabItem value="dark">
-
-<Snack snackId="@agrawal-rohit/image-dark" />
-
-</TabItem>
-</Tabs>
-
 ## Accessibility
 
-- **Image** has the `role` of `image`.
+- `Image` has the `role` of `image`.
 
-## Props
+## Component Properties
 
-### Supported style props
+### Supported Styling Properties
 
-**Image** composes the [Box](../layout/Box) component, you can pass all [Box](../layout/Box) props to it.
+The `Image` component is built upon the [Box](../layout/Box) component, hence all properties of [Box](../layout/Box) can be applied to it.
 
-### Additional props
+### Additional Properties
 
-**Image** also composes the [Image](https://reactnative.dev/docs/image) component from React Native, therefore all of it's props are supported in addition to the props given below:
+Apart from the properties listed below, the `Image` component also inherits all properties of the [Image](https://reactnative.dev/docs/image) component from React Native.
 
-| Name                   | Required | Type                                                                                        | Default     | Description                                                                                        |
-| ---------------------- | -------- | ------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------- |
-| `size`                 | false    | <t>PearlTheme.components.Image["sizes"]</t>                                                 |             | Size of the image.                                                                                 |
-| `variant`              | false    | <t>PearlTheme.components.Image["variants"]</t>                                              |             | Variant of the image.                                                                              |
-| `isCached`             | false    | <t>boolean</t>                                                                              | `true`      | Whether a remote image should be cached.                                                           |
-| `loaderType`           | false    | <t>"progressive" \| "spinner"</t>                                                           | `"spinner"` | The type of loading to use until the image has loaded.                                             |
-| `previewSource`        | false    | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Source of the image to show while the remote image is being fetched.                               |
-| `previewColor`         | false    | <t>string</t>                                                                               |             | Color of the image container while the remote image is being fetched.                              |
-| `transitionDuration`   | false    | <t>number</t>                                                                               | `300`       | Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded. |
-| `imageDownloadOptions` | false    | <t>[DownloadOptions](https://docs.expo.dev/versions/latest/sdk/filesystem/#arguments-8)</t> | {}          | Download configuration when fetching the remote image.                                             |
-| `tint`                 | false    | <t>"dark" \| "light" \| "default"</t>                                                       | `"dark"`    | Tint of the progressive loading overlay.                                                           |
-| `fallbackComponent`    | false    | <t>React.ReactElement</t>                                                                   |             | A custom component to show if an error occurs while loading the image.                             |
-| `fallbackSource`       | false    | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Source of the image to show if an error occurs while loading the image.                            |
-
-## Default component Config
-
-```js
-export default {
-  parts: ["root", "spinner"],
-  baseStyle: {
-    root: {
-      loaderType: "spinner",
-      backgroundColor: "neutral.100",
-      isCached: true,
-      borderRadius: "l",
-      transitionDuration: 300,
-      tint: "dark",
-    },
-    spinner: {
-      color: "neutral.400",
-    },
-  },
-};
-```
+| Name                   | Required | Type                                                                                        | Default     | Description                                                                                       |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| `size`                 | No       | <t>PearlTheme.components.Image["sizes"]</t>                                                 |             | Defines the size of the image.                                                                    |
+| `variant`              | No       | <t>PearlTheme.components.Image["variants"]</t>                                              |             | Specifies the variant of the image.                                                               |
+| `isCached`             | No       | <t>boolean</t>                                                                              | `true`      | Determines if a remote image should be cached.                                                    |
+| `loaderType`           | No       | <t>"progressive" \| "spinner"</t>                                                           | `"spinner"` | Specifies the type of loader to display until the image is fully loaded.                          |
+| `previewSource`        | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the placeholder image while the remote image is loading.                  |
+| `previewColor`         | No       | <t>string</t>                                                                               |             | Defines the color of the image container while the remote image is loading.                       |
+| `transitionDuration`   | No       | <t>number</t>                                                                               | `300`       | Specifies the duration (in ms) for the progressive loading overlay to fade after the image loads. |
+| `imageDownloadOptions` | No       | <t>[DownloadOptions](https://docs.expo.dev/versions/latest/sdk/filesystem/#arguments-8)</t> | {}          | Configures the download options when fetching the remote image.                                   |
+| `tint`                 | No       | <t>"dark" \| "light" \| "default"</t>                                                       | `"dark"`    | Specifies the tint of the progressive loading overlay.                                            |
+| `fallbackComponent`    | No       | <t>React.ReactElement</t>                                                                   |             | Specifies a custom component to display if an error occurs while loading the image.               |
+| `fallbackSource`       | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the fallback image to display if an error occurs while loading the image. |

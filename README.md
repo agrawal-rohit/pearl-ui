@@ -7,9 +7,7 @@
 <h4 align="center">Build accessible mobile apps with a <span style="color: #6356e5">design-first</span> approach.</h4>
 
 <p align="center" style="width: 70%; margin: auto">
-Pearl UI is a powerful UI toolkit that helps you build beautiful
-production-ready mobile apps right out of the box. Skip the designer,
-write cleaner code, and get your product to market faster!
+Pearl UI is a powerful UI toolkit for building beautiful, production-ready mobile apps. It offers a design-first approach, ready-to-use components, and accelerates your time to market.
 </p>
 
 <br />
@@ -44,21 +42,23 @@ write cleaner code, and get your product to market faster!
 
 ## Key Features
 
-- 👐 Completely Open Source and Free
-- 🪐 Universal: Works on iOS, Android, and Web (powered by [Expo](https://docs.expo.dev/) and [React Native](https://reactnative.dev/))
-- 💎 15+ modular UI components _(with new ones added monthly...)_
-- 🎨 Effortlessly themeable
-- 🌓 Dark mode support out-of-the-box
-- 📱 Support for responsive design using breakpoints
-- ⚡️ Blazing fast development speed using [style props](https://docs.pearl-ui.dev/docs/core-features/style-props)
-- ♿️ Accessible by default, abiding by the official Android and Apple guidelines.
-- 📜 Extensive documentation
-- 💪🏻 Strong Typescript support
-- ⚙️ Powerful API for creating custom components
+Pearl UI is a comprehensive UI library for React Native projects, offering a wide range of features:
+
+- **Open Source and Free** 🆓: Pearl UI is completely open source and free to use.
+- **Universal Compatibility** 🌐: Write once and run on both iOS and Android platforms, thanks to the power of [Expo](https://docs.expo.dev/) and [React Native](https://reactnative.dev/).
+- **Rich Component Library** 📚: Over 15 built-in components are available, with the flexibility to create custom components as needed.
+- **Theming Control** 🎨: Full control over the theme allows for a highly customizable UI.
+- **Animation Support** 🎬: Out-of-the-box support for animations using [Moti](https://moti.fyi/).
+- **Dark Mode** 🌙: Dark mode is supported out-of-the-box, making it easy to cater to user preferences.
+- **Responsive Design** 📱: Support for responsive design using breakpoints ensures your UI looks great on any device.
+- **Fast Development** ⚡: Speed up your development process with [style props](https://docs.pearl-ui.dev/docs/core-features/style-props).
+- **Accessibility** ♿: Pearl UI is accessible by default, adhering to official Android and Apple guidelines.
+- **Strong Typescript Support** 🦾: Typescript is fully supported, ensuring type safety and enhancing developer productivity.
+- **Powerful API** 💪: A powerful API is available for creating custom components, providing flexibility and control.
 
 ## Installation
 
-Inside your React Native/Expo project directory, install Pearl UI by running:
+To install Pearl UI in your React Native/Expo project directory, execute one of the following commands:
 
 **npm**
 
@@ -74,27 +74,28 @@ $ yarn add pearl-ui
 
 ## Documentation
 
-See the complete usage and API docs [here](https://www.pearl-ui.dev/).
+For comprehensive usage instructions and API documentation, please visit our [official website](https://www.pearl-ui.dev/).
 
 ## Changelog
 
-We're using the github [releases](https://github.com/agrawal-rohit/pearl-ui/releases) for [changelog](https://github.com/agrawal-rohit/pearl-ui/blob/main/CHANGELOG.md) entries.
+To keep track of all the changes and updates, please refer to our [changelog](https://github.com/agrawal-rohit/pearl-ui/blob/main/CHANGELOG.md) and [GitHub releases](https://github.com/agrawal-rohit/pearl-ui/releases).
 
 ## Support
 
+If you find our project useful and want to support us, consider buying us a coffee. Click on the image below to proceed:
 <a href="https://www.buymeacoffee.com/rohitagrawal" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Contributing
 
-For help on setting up the repo locally, building, testing, and contributing please see [CONTRIBUTING.md](./CONTRIBUTING.md).
+We welcome contributions from the community. For instructions on how to set up the repository locally, build, test, and contribute, please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
 
 ## Code of Conduct
 
-All developers who wish to contribute through code or issues, take a look at the [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+We believe in fostering an open and welcoming environment. To ensure that, we have a [Code of Conduct](./CODE_OF_CONDUCT.md) that we expect all contributors to adhere to.
 
 ## License
 
-[MIT](https://github.com/agrawal-rohit/pearl-ui/blob/main/LICENSE)
+Pearl UI is licensed under the [MIT License](https://github.com/agrawal-rohit/pearl-ui/blob/main/LICENSE).
 
 ## Contributors ✨
 

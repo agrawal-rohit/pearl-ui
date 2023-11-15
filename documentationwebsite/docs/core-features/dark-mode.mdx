@@ -3,15 +3,15 @@ sidebar_position: 2
 title: Color Mode (Dark Mode)
 ---
 
-Pearl UI comes with built-in support for managing the active color mode in your apps. By default, most of the included components are dark mode compatible.
+Pearl UI is equipped with a built-in feature for managing the active color mode in your applications. By default, the majority of the included components are compatible with dark mode.
 
-## Specifying the initial color mode
+## Setting the initial color mode
 
-The color mode of your app on it's first load can be specified using the [ThemeProvider](../getting-started/setup#setting-up-the-theme-provider). It expects an `initialColorMode` prop which can take the following values:
+You can specify the color mode of your application upon its first load using the [ThemeProvider](../getting-started/setup#setting-up-the-theme-provider). This component expects an `initialColorMode` prop which can accept the following values:
 
-1. **light**: The app would always start in _light_ mode
-2. **dark**: The app would always start in _dark_ mode
-3. **system**: The app would start with the mode corresponding to the color mode of the underlying device.
+1. **light**: The application will always start in _light_ mode
+2. **dark**: The application will always start in _dark_ mode
+3. **system**: The application will start in the mode that matches the color mode of the underlying device.
 
 <br />
 
@@ -23,7 +23,7 @@ import { ThemeProvider } from "pearl-ui";
 
 const App = () => {
   return (
-    // Wrap your app components with the ThemeProvider
+    // Wrap your application components with the ThemeProvider
     <ThemeProvider initialColorMode="system">
         // {... other components go here}
     </ThemeProvider>
@@ -31,17 +31,17 @@ const App = () => {
 };
 ```
 
-## Accessing the active color mode
+## Retrieving the active color mode
 
-The active color mode can be accessed using the [useTheme](../hooks/useTheme) hook.
+You can access the active color mode using the [useTheme](../hooks/useTheme) hook.
 
 import Snack from "../../src/components/ExpoSnack";
 
 <Snack snackId="@agrawal-rohit/color-mode-access" />
 
-## Changing the color mode
+## Modifying the color mode
 
-The [useTheme](../hooks/useTheme) hook comes back to the rescue! It exposes the following functions to change the active color mode.
+The [useTheme](../hooks/useTheme) hook provides the following functions to change the active color mode.
 
 ### Toggling the active mode
 
@@ -51,13 +51,13 @@ The [useTheme](../hooks/useTheme) hook comes back to the rescue! It exposes the 
 
 <Snack snackId="@agrawal-rohit/color-mode-switch" />
 
-## Color mode specific colors
+## Colors specific to color mode
 
-To enable dark-mode compatibility for any component, you need to specify how the colors in the component change based on the active color mode. You can achieve this easily using the following 2 methods:
+To make any component compatible with dark mode, you need to define how the colors in the component change based on the active color mode. This can be achieved using the following two methods:
 
 ### Object syntax
 
-The [color and background color](./style-props#color-and-background-color) style props optionally expect color mode specific values that get activated based on the active mode.
+The [color and background color](./style-props#color-and-background-color) style props can optionally accept color mode specific values that are activated based on the active mode.
 
 The following structure is expected when specifying color mode values:
 
@@ -74,9 +74,9 @@ type ColorModeColor = {
 
 ### useColorModeValue
 
-Pearl UI also provides the [useColorModeValue](../hooks/useColorModeValue) hook that achieves the same result as [the object syntax](#object-syntax).
+Pearl UI also offers the [useColorModeValue](../hooks/useColorModeValue) hook that achieves the same result as [the object syntax](#object-syntax).
 
-Here's how you would re-write the example above using the [useColorModeValue](../hooks/useColorModeValue) hook:
+Here's how you can re-write the example above using the [useColorModeValue](../hooks/useColorModeValue) hook:
 
 #### Example
 

@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "spinner"],
+  parts: ["image", "spinner"],
   baseStyle: {
-    root: {
+    image: {
       loaderType: "spinner",
       backgroundColor: "neutral.100",
       isCached: true,

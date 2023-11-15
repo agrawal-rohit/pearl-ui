@@ -3,22 +3,26 @@ sidebar_position: 4
 title: Stack
 ---
 
-**Stack** is a layout component that makes it easy to stack elements together in any direction (horizontally, vertically, and even along depth). By default, it renders a [Box](./box) element.
+The `Stack` component is a versatile layout tool that allows you to easily stack elements in various directions - horizontally, vertically, or along the depth axis. By default, it renders a [Box](./box) element, providing a flexible and consistent way to manage your layout.
 
 ## Import
 
-Pearl UI exports 4 stack-related components:
+Pearl UI provides four stack-related components to cater to different layout needs:
 
-1. **Stack:** Used to stack elements in the horizontal or vertical direction. Particularly useful when you need to dynamically control the stacking direction.
-2. **HStack:** Used to stack elements in the horizontal direction.
-3. **VStack:** Used to stack elements in the vertical direction.
-4. **ZStack:** Used to stack elements on top of each other.
+1. `Stack`: This is a flexible component that can stack elements either horizontally or vertically. It's especially useful when you need to dynamically control the stacking direction.
+2. `HStack`: This component is designed to stack elements horizontally.
+3. `VStack`: Use this component when you need to stack elements vertically.
+4. `ZStack`: This component stacks elements on top of each other, providing a way to manage depth in your layout.
+
+You can import these components from Pearl UI like so:
 
 ```jsx
 import { Stack, HStack, VStack, ZStack } from "pearl-ui";
 ```
 
-## Usage
+## How to Use Stack Components
+
+Here's a basic example of how to use the `Stack` component:
 
 ```jsx
 <Stack direction="horizontal" spacing="m">
@@ -29,7 +33,9 @@ import { Stack, HStack, VStack, ZStack } from "pearl-ui";
 </Stack>
 ```
 
-### Horizontal Stacking
+### Stacking Horizontally
+
+You can use either the `HStack` component or the `Stack` component with the direction prop set to `"horizontal"` to stack elements horizontally. Here's how:
 
 ```jsx
 <HStack spacing="s">
@@ -43,7 +49,9 @@ import { Stack, HStack, VStack, ZStack } from "pearl-ui";
 </Stack>
 ```
 
-### Vertical Stacking
+### Stacking Vertically
+
+To stack elements vertically, you can use the `VStack` component or the `Stack` component with the direction prop set to `"vertical"`. Here's an example:
 
 ```jsx
 <VStack spacing="s">
@@ -57,9 +65,9 @@ import { Stack, HStack, VStack, ZStack } from "pearl-ui";
 </Stack>
 ```
 
-### Depth Stacking
+### Stacking Along the Depth Axis
 
-By default, the elements are stacked in an increasing order of the provided elements. For instance, in the example below, the second [Box](./Box) will be stacked on top of the first [Box](./Box). This order can be reversed using the `reversed` prop expected by **ZStack**.
+The `ZStack` component allows you to stack elements along the depth axis. By default, the elements are stacked in the order they are provided. For instance, in the example below, the second [Box](./Box) will be stacked on top of the first [Box](./Box). You can reverse this order using the `reversed` prop.
 
 ```jsx
 <ZStack>
@@ -79,9 +87,9 @@ In some cases, you might need to explicitly specify the `zIndex` of one of the s
 </ZStack>
 ```
 
-### Responsive direction
+### Responsive Stacking
 
-You can control the direction of the **Stack** component responsively to change the stack direction based on the screen size.
+The `Stack` component allows you to responsively control the stack direction based on the screen size. Here's an example:
 
 ```jsx
 <Stack direction={{ phone: "vertical", tablet: "horizontal" }} spacing="s">
@@ -90,7 +98,7 @@ You can control the direction of the **Stack** component responsively to change 
 </Stack>
 ```
 
-### Adding dividers
+### Adding Dividers Between Elements
 
 In some scenarios, you may want to add dividers between the stacked elements. This can be done by passing the [Divider](./Divider)(or any custom React element) to the `divider` prop.
 
@@ -108,39 +116,21 @@ import { Divider } from 'pearl-ui'
 </VStack>
 ```
 
-## Example
+## Examples
+
+Here are some examples of how you can use the `Stack` components in your project:
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/stack-light" />
 
-</TabItem>
+## Stack Component Properties
 
-<TabItem value="dark">
+### Supported Style Properties
 
-<Snack snackId="@agrawal-rohit/stack-dark" />
+The `Stack` component composes the [Box](./Box) component, so you can pass all [Box](./Box) related props to it.
 
-</TabItem>
-</Tabs>
-
-## Stack Props
-
-### Supported style props
-
-**Stack** composes [Box](./Box) so you can pass all [Box](./Box) related props to it.
-
-### Additional props
+### Additional Properties
 
 | Name        | Required | Type                              | Default | Description                                                   |
 | ----------- | -------- | --------------------------------- | ------- | ------------------------------------------------------------- |
@@ -148,39 +138,39 @@ import TabItem from "@theme/TabItem";
 | `spacing`   | false    | <t>PearlTheme["spacing"]</t>      |         | The spacing between the elements.                             |
 | `divider`   | false    | <t>React.ReactElement</t>         |         | If specified, each stack item will show the provided divider. |
 
-## HStack Props
+## HStack Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-**HStack** composes [Box](./Box) so you can pass all [Box](./Box) related props to it.
+The `HStack` component composes the [Box](./Box) component, so you can pass all [Box](./Box) related props to it.
 
-### Additional props
-
-| Name      | Required | Type                         | Default | Description                                                   |
-| --------- | -------- | ---------------------------- | ------- | ------------------------------------------------------------- |
-| `spacing` | false    | <t>PearlTheme["spacing"]</t> |         | The spacing between the elements.                             |
-| `divider` | false    | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
-
-## VStack Props
-
-### Supported style props
-
-**VStack** composes [Box](./Box) so you can pass all [Box](./Box) related props to it.
-
-### Additional props
+### Additional Properties
 
 | Name      | Required | Type                         | Default | Description                                                   |
 | --------- | -------- | ---------------------------- | ------- | ------------------------------------------------------------- |
 | `spacing` | false    | <t>PearlTheme["spacing"]</t> |         | The spacing between the elements.                             |
 | `divider` | false    | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
 
-## ZStack Props
+## VStack Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-**ZStack** composes [Box](./Box) so you can pass all [Box](./Box) related props to it.
+The `VStack` component composes the [Box](./Box) component, so you can pass all [Box](./Box) related props to it.
 
-### Additional props
+### Additional Properties
+
+| Name      | Required | Type                         | Default | Description                                                   |
+| --------- | -------- | ---------------------------- | ------- | ------------------------------------------------------------- |
+| `spacing` | false    | <t>PearlTheme["spacing"]</t> |         | The spacing between the elements.                             |
+| `divider` | false    | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
+
+## ZStack Component Properties
+
+### Supported Style Properties
+
+The `ZStack` component composes the [Box](./Box) component, so you can pass all [Box](./Box) related props to it.
+
+### Additional Properties
 
 | Name       | Required | Type           | Default | Description                                            |
 | ---------- | -------- | -------------- | ------- | ------------------------------------------------------ |

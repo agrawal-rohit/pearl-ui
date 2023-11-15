@@ -1,16 +1,15 @@
 ---
 sidebar_position: 1
+title: Box
 ---
 
-# Box
+The `Box` component is a fundamental building block in the Pearl UI library. It is a highly abstract component that serves as the foundation for all other components in Pearl UI. By default, it renders a [React Native View](https://reactnative.dev/docs/view) element.
 
-**Box** is the most abstract component on top of which all other Pearl UI components are built. By default, it renders a [React Native View](https://reactnative.dev/docs/view) element.
+The Box component enhances the development experience by providing the following benefits
 
-**The Box component improves the development experience in the following ways:**
-
-1. Create flexible layouts with ease.
-2. Provides an easier way to pass styles via props (`backgroundColor` can be passed as a prop instead of using [React Stylesheet](https://reactjs.org/docs/faq-styling.html) or inline styles). Shorthand props are also supported (`bgColor` instead of `backgroundColor`).
-3. Create more complex components using `Box` as the base component, instead of `View` (All components in Pearl UI use `Box` under the hood).
+1. **Simplified Layout Creation**: The Box component allows developers to create flexible layouts with ease.
+2. **Style Prop Support**: It provides a more intuitive way to pass styles via props. For instance, `backgroundColor` can be passed as a prop instead of using [React Stylesheet](https://reactjs.org/docs/faq-styling.html) or inline styles. Shorthand props are also supported (e.g., `bgColor` instead of `backgroundColor`).
+3. **Base for Complex Components**: The Box component can be used as the base component for creating more complex components, replacing the need for `View`. All components in Pearl UI use `Box` as their base.
 
 ## Import
 
@@ -32,16 +31,30 @@ import Snack from "../../../src/components/ExpoSnack";
 
 <Snack snackId="@agrawal-rohit/box" />
 
-## Props
+## Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-The **Box** component supports the following style props:
+The `Box` component supports the following style props:
 
-- [backgroundColor](../../core-features/style-props#color-and-background-color) (Only `backgroundColor` props are supported, not the `color` prop)
+- [backgroundColor](../../core-features/style-props#color-and-background-color) (Note: Only `backgroundColor` props are supported, not the `color` prop)
 - [layout](../../core-features/style-props#layout)
 - [position](../../core-features/style-props#position)
-- [opacity and visiblity](../../core-features/style-props#opacity-and-visibility)
+- [opacity and visibility](../../core-features/style-props#opacity-and-visibility)
 - [margin and padding](../../core-features/style-props#margin-and-padding)
 - [border](../../core-features/style-props#border)
 - [shadow](../../core-features/style-props#shadow)
+- [shadow](../../core-features/style-props#shadow)
+
+### Animation Properties
+
+The `Box` component also supports animation properties from the [Moti](https://moti.fyi/) library, which allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
+
+Property         | Type          | Description
+---------------- | ------------- | -----------------------------------------------------------------------------------------
+`from`           | <t>object</t>        | Defines the starting state of the animation.
+`to`             | <t>object</t>        | Defines the ending state of the animation.
+`transition`     | <t>object</t>        | Specifies the type of transition that the animation will use.
+`exitTransition` | <t>object</t>        | Determines the transition type that will be used when the component is unmounted.
+`state`          | <t>object</t>        | Manages the overall state of the animation, including the `from` and `to` states.
+

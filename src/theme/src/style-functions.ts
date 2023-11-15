@@ -49,7 +49,7 @@ export const createStyleFunction = ({
   styleProperty,
   themeKey,
 }: CreateStyleFunctionProps): StyleFunctionContainer => {
-  const styleProp = styleProperty || property.toString();
+  const styleProp = styleProperty ?? property.toString();
 
   /**
    * A style function that returns a style object with the given property and value.
@@ -79,7 +79,7 @@ export const createStyleFunction = ({
         let themeTokenValue = theme[themeKey][value];
 
         // For color palettes with multiple shades
-        if (typeof value === "string" && value.includes(".")) {
+        if (typeof value === "string" && value.match(/^[a-z]+\.\d+$/)) {
           themeTokenValue = getNestedObject(theme, [
             themeKey,
             value.split(".")[0],
@@ -87,19 +87,8 @@ export const createStyleFunction = ({
           ]);
         }
 
-        // Throw error if the target value is undefined
-        if (
-          themeTokenValue === undefined &&
-          !getKeys(borderRadiusProperties).includes(property as any)
-        ) {
-          throw new Error(
-            `Value '${value}' does not exist in theme['${String(themeKey)}']`
-          );
-        }
-
-        if (!getKeys(borderRadiusProperties).includes(property as any))
-          value = themeTokenValue;
-        else value = themeTokenValue || value;
+        // Apply the value
+        value = themeTokenValue ?? value;
       }
     }
 
@@ -165,8 +154,9 @@ export const opacityStyleFunction = createStyleFunction({
 
 export const visibleStyleFunction = createStyleFunction({
   property: "visible",
-  styleProperty: "display",
-  transform: (value: any) => (value === false ? "none" : "flex"),
+  styleProperty: "opacity",
+  transform: (value: any) =>
+    value !== undefined ? (value === false ? 0 : 1) : undefined,
 });
 
 export const typographyStyleFunction = [
@@ -220,10 +210,8 @@ export const spacingStyleFunction = [
       themeKey: "spacing",
     });
   }),
-
   ...getKeys(spacingPropertiesShorthand).map((property) => {
     const styleProperty = spacingPropertiesShorthand[property];
-
     return createStyleFunction({
       property,
       styleProperty,

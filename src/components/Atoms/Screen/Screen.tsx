@@ -6,7 +6,7 @@ import {
   KeyboardAwareScrollViewProps,
 } from "react-native-keyboard-aware-scroll-view";
 import { useTheme } from "../../../hooks/useTheme";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { SafeAreaView } from "moti";
 

@@ -1,0 +1,74 @@
+---
+sidebar_position: 5
+title: useFocusedState
+---
+
+The `useFocusedState` hook is a powerful utility in Pearl UI that not only manages a focused state but also transforms the `_focused` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to focus events with custom styles.
+
+## Import
+
+```js
+import { useFocusedState } from "pearl-ui";
+```
+
+## Return value
+
+The `useFocusedState` hook returns an object with three properties:
+
+- `focused`: A boolean representing the current focused state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setFocused`: A function that can be used to set the `focused` state. This function updates the local state.
+- `propsWithFocusedStyles`: The props object of the component with updated styles according to the current 'focused' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `useFocusedState` to manage a focused state and compose extra styling while an input field is focused:
+
+```js
+import { useFocusedState } from "pearl-ui";
+import { useState } from "react";
+
+const InputField = ({ isFocused, ...props }) => {
+  // Use the hook to transform the props based on the focused state
+  const { focused, setFocused, propsWithFocusedStyles } = useFocusedState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false
+    isFocused,
+  );
+
+  // Render the input field with the transformed props
+  return <input {...propsWithFocusedStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the focused state
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Render the InputField and a toggle button to change the focused state
+  return (
+    <div>
+      <InputField
+        isFocused={isFocused}
+        // Specify the styling of the component when the isFocused value is true
+        _focused={{ borderColor: "blue", color: "black" }}
+      />
+      <button onClick={() => setIsFocused(!isFocused)}>
+        Toggle Focused State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useFocusedState` hook is utilized within an `InputField` component. The purpose of this hook is to dynamically alter the input field's border and text colors in response to changes in the `isFocused` prop. Specifically, when `isFocused` is set to true, the input field's border color transitions to blue, and the text color changes to black.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                       |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                       |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                       |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                        |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                             |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'focused' state instead of the local state value. |

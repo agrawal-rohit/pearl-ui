@@ -1,0 +1,74 @@
+---
+sidebar_position: 5
+title: useCheckedState
+---
+
+The `useCheckedState` hook is a powerful utility in Pearl UI that not only manages a checked state but also transforms the `_checked` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to check events with custom styles.
+
+## Import
+
+```js
+import { useCheckedState } from "pearl-ui";
+```
+
+## Return value
+
+The `useCheckedState` hook returns an object with three properties:
+
+- `checked`: A boolean representing the current checked state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setChecked`: A function that can be used to set the `checked` state. This function updates the local state.
+- `propsWithCheckedStyles`: The props object of the component with updated styles according to the current 'checked' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `useCheckedState` to manage a checked state and compose extra styling while a checkbox is checked:
+
+```js
+import { useCheckedState } from "pearl-ui";
+import { useState } from "react";
+
+const Checkbox = ({ isChecked, ...props }) => {
+  // Use the hook to transform the props based on the checked state
+  const { checked, setChecked, propsWithCheckedStyles } = useCheckedState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false,
+    isChecked
+  );
+
+  // Render the checkbox with the transformed props
+  return <input type="checkbox" {...propsWithCheckedStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the checked state
+  const [isChecked, setIsChecked] = useState(false);
+
+  // Render the Checkbox and a toggle button to change the checked state
+  return (
+    <div>
+      <Checkbox
+        isChecked={isChecked}
+        // Specify the styling of the component when the isChecked value is true
+        _checked={{ backgroundColor: "blue", color: "white" }}
+      />
+      <button onClick={() => setIsChecked(!isChecked)}>
+        Toggle Checked State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useCheckedState` hook is utilized within a `Checkbox` component. The purpose of this hook is to dynamically alter the checkbox's background and text colors in response to changes in the `isChecked` prop. Specifically, when `isChecked` is set to true, the checkbox's background color transitions to blue, and the text color changes to white.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                       |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                       |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                       |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                        |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                             |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'checked' state instead of the local state value. |

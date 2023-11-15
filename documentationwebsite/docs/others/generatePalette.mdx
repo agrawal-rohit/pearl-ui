@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Generate Color Palette
 ---
 
-Pearl UI provides a utility function to create a color palette from a single color. This color palette can then be inserted into `theme.palette` to be used by components.
+Pearl UI offers a powerful utility function, `generatePalette`, that allows you to create a comprehensive color palette from a single base color. This generated palette can then be seamlessly integrated into `theme.palette`, enabling consistent color usage across all components in your application.
 
 ## Import
 
@@ -13,12 +13,13 @@ import { generatePalette } from "pearl-ui";
 
 ## Usage
 
-### Allowed color inputs
+### Color Input Formats
 
-The function uses [TinyColor](https://github.com/bgrins/TinyColor) under the hood, so it's very permissive with the input value for the `color` property
+The `generatePalette` function utilizes [TinyColor](https://github.com/bgrins/TinyColor) internally, which allows for a wide range of color input formats. Here are some examples:
+
+#### Hexadecimal Colors
 
 ```js
-// Support for Hex values and 8-digit (RGBA) Hex values
 generatePalette("#000", "label");
 generatePalette("000", "label");
 generatePalette("#369C", "label");
@@ -27,25 +28,37 @@ generatePalette("#f0f0f6", "label");
 generatePalette("f0f0f6", "label");
 generatePalette("#f0f0f688", "label");
 generatePalette("f0f0f688", "label");
+```
 
-// Support for RGB and RGBA values
+#### RGB and RGBA Colors
+
+```js
 generatePalette("rgb (255, 0, 0)", "label");
 generatePalette("rgb 255 0 0", "label");
 generatePalette("rgba (255, 0, 0, .5)", "label");
+```
 
-// Support for HSL and HSLA values
+#### HSL and HSLA Colors
+
+```js
 generatePalette("hsl(0, 100%, 50%)", "label");
 generatePalette("hsla(0, 100%, 50%, .5)", "label");
 generatePalette("hsl(0, 100%, 50%)", "label");
 generatePalette("hsl 0 1.0 0.5", "label");
+```
 
-// Support for HSV and HSVA values
+#### HSV and HSVA Colors
+
+```js
 generatePalette("hsv(0, 100%, 100%)", "label");
 generatePalette("hsva(0, 100%, 100%, .5)", "label");
 generatePalette("hsv (0 100% 100%)", "label");
 generatePalette("hsv 0 1 1", "label");
+```
 
-// Support for Named color values
+#### Named Colors
+
+```js
 generatePalette("RED", "label");
 generatePalette("blanchedalmond", "label");
 generatePalette("darkblue", "label");
@@ -56,24 +69,25 @@ import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
 ### Basic Usage
 
 ```js
+// Generate a color palette with a base color of "#00fa9a" and a label of "accent"
 const colorPalette = generatePalette("#00fa9a", "accent");
 ```
 
 #### Output
 
 ```json
-// colorPalette
+// The generated color palette is an object with the label as the key and the color shades as the values
 {
   "accent": {
-    "100": "#b6fee2",
+    "100": "#b6fee2", // Lightest shade
     "200": "#89fdd0",
     "300": "#5bfcbe",
     "400": "#2efbac",
-    "500": "#00fa9a",
+    "500": "#00fa9a", // Base color
     "600": "#00cd7f",
     "700": "#00a163",
     "800": "#007448",
-    "900": "#00472c"
+    "900": "#00472c" // Darkest shade
   }
 }
 ```
@@ -94,23 +108,24 @@ const colorPalette = generatePalette("#00fa9a", "accent");
 
 ### Advanced Usage
 
-You can tweak the `count` and `similarity` prop values to have more fine grained control over the palette generation.
+For more control over the palette generation, you can adjust the `count` and `similarity` properties. The `count` property determines the number of color shades in the palette, while the `similarity` property adjusts the difference between each shade.
 
 ```js
+// Generate a color palette with a base color of "#00fa9a", a label of "accent", 5 color shades, and a similarity of 4
 const colorPalette = generatePalette("#00fa9a", "accent", 5, 4);
 ```
 
 #### Output
 
 ```json
-// colorPalette
+// The generated color palette is an object with the label as the key and the color shades as the values
 {
   "accent": {
-    "100": "#40fbb3",
+    "100": "#40fbb3", // Lightest shade
     "200": "#20fba7",
-    "300": "#00fa9a",
+    "300": "#00fa9a", // Base color
     "400": "#00db87",
-    "500": "#00bc74"
+    "500": "#00bc74" // Darkest shade
   }
 }
 ```
@@ -129,6 +144,7 @@ const colorPalette = generatePalette("#00fa9a", "accent", 5, 4);
 <br />
 
 ```js
+// Generate a color palette with a base color of "#00fa9a", a label of "accent", 14 color shades, and a similarity of 1
 const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
 ```
 
@@ -179,9 +195,9 @@ const colorPalette = generatePalette("#00fa9a", "accent", 14, 1);
   <PaletteColor colorName="Accent 1400" colorValue="#000000" />
 </div>
 
-### Adding palette to theme
+### Integrating the Palette into the Theme
 
-You can insert the generated palette into your theme object as follows. The values `accent.100`, `accent.200`, `accent.300`, etc. would then be available to the props which query the <t>PearlTheme['palette']</t> values (ie, `color` and `backgroundColor`).
+Once the palette is generated, it can be integrated into your theme object. This allows the values `accent.100`, `accent.200`, `accent.300`, etc. to be accessed by props that query the <t>PearlTheme['palette']</t> values, such as `color` and `backgroundColor`.
 
 ```js
 // theme.js
@@ -197,20 +213,20 @@ export default {
       700: "#3541B7",
       800: "#212A93",
       900: "#141B7A",
-    }
+    },
 
     ...colorPalette,
 
-    // ...
+    // Additional palette configurations...
   },
 };
 ```
 
-## Props
+## Function Parameters
 
-| Name       | Required | Type          | Default | Description                                                                                                                                                                       |
-| ---------- | -------- | ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color      | true     | <t>string</t> |         | Color to generate tints and shades for                                                                                                                                            |
-| label      | true     | <t>string</t> |         | Identifier for the generated colors ('primary', 'secondary', etc). Eg, for a label of 'primary', the generated tints and shades be referred as 'primary.100', 'primary.200', etc. |
-| count      | false    | <t>number</t> | `9`     | The number of color values to be generated                                                                                                                                        |
-| similarity | false    | <t>number</t> | `1.4`   | The similarity between the generated colors                                                                                                                                       |
+| Parameter  | Required | Type          | Default | Description                                                                                                                                                                                |
+| ---------- | -------- | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| color      | true     | <t>string</t> |         | The base color for generating tints and shades                                                                                                                                             |
+| label      | true     | <t>string</t> |         | The identifier for the generated colors (e.g., 'primary', 'secondary'). For a label of 'primary', the generated tints and shades will be referred to as 'primary.100', 'primary.200', etc. |
+| count      | false    | <t>number</t> | `9`     | The number of color values to generate                                                                                                                                                     |
+| similarity | false    | <t>number</t> | `1.4`   | The degree of similarity between the generated colors                                                                                                                                      |

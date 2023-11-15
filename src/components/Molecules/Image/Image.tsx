@@ -19,7 +19,7 @@ import { BlurView } from "expo-blur";
 import Spinner from "../../atoms/spinner/spinner";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -70,14 +70,7 @@ const CustomImage = React.forwardRef(
     { children, ...props }: MoleculeComponentProps<"Image", BaseImageProps>,
     ref: any
   ) => {
-    const {
-      source,
-      onError,
-      atoms,
-      isCached,
-      fallbackComponent,
-      ...rootProps
-    } = props;
+    const { source, onError, atoms, isCached, fallbackComponent } = props;
 
     const isMounted = useRef(true);
     const isRemoteImage = typeof source === "object";
@@ -149,7 +142,7 @@ const CustomImage = React.forwardRef(
       borderTopRightRadius,
       testID,
       ...finalRootProps
-    } = rootProps;
+    } = atoms.image;
 
     // Compute border props so that they can be used by the native Image element
     let borderRadiiStyles = useStyleProps(
@@ -166,19 +159,19 @@ const CustomImage = React.forwardRef(
     borderRadiiStyles = {
       style: {
         borderRadius:
-          (props as any).style.borderRadius ||
+          (props as any).style.borderRadius ??
           borderRadiiStyles.style.borderRadius,
         borderBottomLeftRadius:
-          (props as any).style.borderBottomLeftRadius ||
+          (props as any).style.borderBottomLeftRadius ??
           borderRadiiStyles.style.borderBottomLeftRadius,
         borderBottomRightRadius:
-          (props as any).style.borderBottomRightRadius ||
+          (props as any).style.borderBottomRightRadius ??
           borderRadiiStyles.style.borderBottomRightRadius,
         borderTopLeftRadius:
-          (props as any).style.borderTopLeftRadius ||
+          (props as any).style.borderTopLeftRadius ??
           borderRadiiStyles.style.borderTopLeftRadius,
         borderTopRightRadius:
-          (props as any).style.borderTopRightRadius ||
+          (props as any).style.borderTopRightRadius ??
           borderRadiiStyles.style.borderTopRightRadius,
       },
     };
@@ -196,10 +189,10 @@ const CustomImage = React.forwardRef(
           );
         }
 
-        if (!!rootProps.fallbackSource) {
+        if (!!atoms.image.fallbackSource) {
           return (
             <RNImage
-              source={rootProps.fallbackSource}
+              source={atoms.image.fallbackSource}
               style={[
                 StyleSheet.absoluteFill,
                 {
@@ -243,10 +236,10 @@ const CustomImage = React.forwardRef(
     };
 
     const renderPreview = () => {
-      if (!!rootProps.previewSource) {
+      if (!!atoms.image.previewSource) {
         return (
           <RNImage
-            source={rootProps.previewSource}
+            source={atoms.image.previewSource}
             blurRadius={
               Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
             }
@@ -263,13 +256,13 @@ const CustomImage = React.forwardRef(
     };
 
     const renderImageLoader = () => {
-      if (rootProps.loaderType === "progressive") {
-        if (!!rootProps.previewSource) {
+      if (atoms.image.loaderType === "progressive") {
+        if (!!atoms.image.previewSource) {
           // Render a blur overlay over the preview image
           if (Platform.OS === "ios") {
             return (
               <AnimatedBlurView
-                tint={rootProps.tint}
+                tint={atoms.image.tint}
                 style={{
                   ...(StyleSheet.absoluteFill as any),
                   alignItems: "center",
@@ -293,7 +286,7 @@ const CustomImage = React.forwardRef(
                 style={{
                   ...(StyleSheet.absoluteFill as any),
                   backgroundColor:
-                    rootProps.tint === "dark" ? "black" : "white",
+                    atoms.image.tint === "dark" ? "black" : "white",
                   alignItems: "center",
                   justifyContent: "center",
                   opacity: previewSourceOverlayOpacity,
@@ -309,13 +302,13 @@ const CustomImage = React.forwardRef(
           }
         }
 
-        if (!!rootProps.previewColor) {
+        if (!!atoms.image.previewColor) {
           return (
             <Animated.View
               style={[
                 StyleSheet.absoluteFill,
                 {
-                  backgroundColor: rootProps.previewColor,
+                  backgroundColor: atoms.image.previewColor,
                   alignItems: "center",
                   justifyContent: "center",
                   opacity: previewColorOverlayOpacity,
@@ -332,7 +325,7 @@ const CustomImage = React.forwardRef(
         }
       }
 
-      if (rootProps.loaderType === "spinner" && !error && !uri) {
+      if (atoms.image.loaderType === "spinner" && !error && !uri) {
         // Load the spinner component
         return (
           <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
@@ -347,13 +340,13 @@ const CustomImage = React.forwardRef(
       if (isRemoteImage) {
         loadRemoteImage(
           (source as ImageURISource).uri as string,
-          rootProps.imageDownloadOptions
+          atoms.image.imageDownloadOptions
         );
 
         // Start animating the overlay opacity as soon as the URI becomes available
         if (uri && !previousUri) {
           Animated.timing(intensity, {
-            duration: rootProps.transitionDuration,
+            duration: atoms.image.transitionDuration,
             toValue: 0,
             useNativeDriver: Platform.OS === "android",
           }).start();
@@ -387,11 +380,20 @@ const CustomImage = React.forwardRef(
 );
 
 /** The Image component is used to display images. */
-const Image = pearlify<BaseImageProps, "molecule">(CustomImage, {
-  componentName: "Image",
-  type: "molecule",
-  animatable: true,
-});
+const Image = pearlify<BaseImageProps, "molecule">(
+  CustomImage,
+  {
+    componentName: "Image",
+    type: "molecule",
+    animatable: true,
+  },
+  undefined,
+  {
+    partForOverridenStyleProps: "image",
+    partForOverridenNativeProps: "image",
+    partForOverridenAnimationProps: "image",
+  }
+);
 
 export type ImageProps = React.ComponentProps<typeof Image>;
 

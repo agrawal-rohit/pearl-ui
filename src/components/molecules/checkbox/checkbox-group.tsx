@@ -65,7 +65,7 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   onChange = () => {},
   ...rest
 }) => {
-  const currentValue = value || defaultValue || [];
+  const currentValue = value ?? defaultValue ?? [];
 
   const addCheckBoxGroupValue = (valueToAdd: string | number) => {
     onChange([...currentValue, valueToAdd]);

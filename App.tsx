@@ -22,7 +22,10 @@ import {
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/theme-context";
 import Screen from "./src/components/atoms/screen/screen";
-import Box from "./src/components/atoms/box/box";
+import Checkbox from "./src/components/molecules/checkbox/checkbox";
+import Radio from "./src/components/molecules/radio/radio";
+import Input from "./src/components/molecules/input/input";
+import Stack from "./src/components/atoms/stack/stack";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -49,13 +52,35 @@ const App = () => {
   return (
     <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Screen>
-        <Box
-          w="100%"
-          h={30}
-          from={{ bgColor: "black" }}
-          animate={{ bgColor: "white" }}
-          transition={{ type: "timing", duration: 600 }}
-        />
+        <Stack w="100%" direction="vertical" spacing="m">
+          <Input
+            size="s"
+            isFullWidth
+            placeholder="You can also enter me"
+            from={{ opacity: 0, translateY: 10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: "spring" }}
+          >
+            Pick me
+          </Input>
+
+          <Checkbox
+            from={{ opacity: 0, translateY: 10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: "spring" }}
+          >
+            Pick me
+          </Checkbox>
+
+          <Radio
+            borderRadius="m"
+            from={{ opacity: 0, translateY: 10 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ type: "spring" }}
+          >
+            NOO! Pick me
+          </Radio>
+        </Stack>
       </Screen>
     </ThemeProvider>
   );

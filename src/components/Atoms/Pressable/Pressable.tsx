@@ -13,7 +13,7 @@ import {
 import _ from "lodash";
 import { usePressedState } from "../../../hooks/state/usePressedState";
 import { useDisabledState } from "../../../hooks/state/useDisabledState";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 // Define the properties for the BasePressable component
 export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &

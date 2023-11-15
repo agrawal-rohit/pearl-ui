@@ -17,9 +17,11 @@ import { useCheckBoxGroup } from "./checkbox-group";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { useInvalidState } from "../../../hooks/state/useInvalidState";
 import { useCheckedState } from "../../../hooks/state/useCheckedState";
+import { useDisabledState } from "../../../hooks";
+import _ from "lodash";
 
 export type CheckBoxProps = PressableProps &
-  StateProps<"_checked" | "_invalid"> & {
+  StateProps<"_checked" | "_invalid" | "_disabled"> & {
     /** Size of the checkbox. */
     size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
     /** Variant of the checkbox. */
@@ -103,11 +105,11 @@ const CheckBox = React.forwardRef(
     } = useCheckBoxGroup();
 
     // Overwrite props from checkbox group
-    rest.size = size || rest.size;
-    rest.variant = variant || rest.variant;
-    rest.isDisabled = isDisabled || rest.isDisabled || false;
-    rest.colorScheme = colorScheme || rest.colorScheme || "primary";
-    rest.shape = shape || rest.shape || "square";
+    rest.size = size ?? rest.size;
+    rest.variant = variant ?? rest.variant;
+    rest.isDisabled = isDisabled ?? rest.isDisabled ?? false;
+    rest.colorScheme = colorScheme ?? rest.colorScheme ?? "primary";
+    rest.shape = shape ?? rest.shape ?? "square";
 
     const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
     const isCheckBoxChecked = isCheckBoxInGroup
@@ -124,10 +126,11 @@ const CheckBox = React.forwardRef(
       },
       rest.colorScheme,
       boxStyleFunctions,
-      "root",
-      "box"
+      "container",
+      "box",
+      "container"
     );
-    const { atoms, ...rootProps } = molecularProps;
+    const { atoms } = molecularProps;
 
     // Use state for dynamic style
     const { propsWithCheckedStyles } = useCheckedState(
@@ -146,6 +149,14 @@ const CheckBox = React.forwardRef(
       rest.isInvalid
     );
     atoms.box = propsWithInvalidStyles;
+    const { propsWithDisabledStyles } = useDisabledState(
+      atoms.box,
+      boxStyleFunctions,
+      "molecule",
+      true,
+      rest.isDisabled
+    );
+    atoms.box = propsWithDisabledStyles;
 
     // OTHER METHODS
     const checkboxPressHandler = () => {
@@ -162,7 +173,7 @@ const CheckBox = React.forwardRef(
     // RENDER METHODS
     return (
       <Stack
-        {...rootProps}
+        {...atoms.container}
         accessible={true}
         accessibilityRole="checkbox"
         accessibilityLabel={
@@ -174,7 +185,6 @@ const CheckBox = React.forwardRef(
         }}
         accessibilityHint={rest.accessibilityHint}
         direction="horizontal"
-        spacing={rest.spacing || rootProps.spacing}
       >
         <Pressable
           {...atoms.box}
@@ -192,14 +202,14 @@ const CheckBox = React.forwardRef(
             {...atoms.icon}
             iconFamily={
               rest.isIndeterminate
-                ? rest.indeterminateIconFamily ||
+                ? rest.indeterminateIconFamily ??
                   atoms.icon.indeterminateIconFamily
-                : rest.checkedIconFamily || atoms.icon.checkedIconFamily
+                : rest.checkedIconFamily ?? atoms.icon.checkedIconFamily
             }
             iconName={
               rest.isIndeterminate
-                ? rest.indeterminateIconName || atoms.icon.indeterminateIconName
-                : rest.checkedIconName || atoms.icon.checkedIconName
+                ? rest.indeterminateIconName ?? atoms.icon.indeterminateIconName
+                : rest.checkedIconName ?? atoms.icon.checkedIconName
             }
             color={isCheckBoxChecked ? atoms.icon.color : "transparent"}
           />

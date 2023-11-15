@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Box, { BoxProps } from "../../atoms/box/box";
-import Text, { buildFontConfig } from "../../atoms/text/text";
+import { buildFontConfig } from "../../atoms/text/text";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { useAtomicComponentConfig } from "../../../hooks/useAtomicComponentConfig";
 import Icon from "../../atoms/icon/icon";
@@ -81,13 +81,13 @@ const selectionColorStyleFunction = createStyleFunction({
   transform: transformColorValue,
 });
 
-const inputRootStyleFunctions = [
+const inputRootStyleFunction = [
   ...boxStyleFunctions,
   placeholderTextColorStyleFunction,
   selectionColorStyleFunction,
 ];
 
-const inputTextStyleFunctions = [
+const inputTextStyleFunction = [
   colorStyleFunction,
   typographyStyleFunction,
 ] as StyleFunctionContainer[];
@@ -132,44 +132,14 @@ const Input = React.forwardRef(
       },
       colorScheme,
       boxStyleFunctions,
-      "root",
-      "input"
+      "container",
+      "input",
+      "container"
     );
 
-    let { atoms, ...rootProps } = molecularProps;
+    let { atoms } = molecularProps;
 
-    // Transfer the Moti animation props from the 'input' atom props to 'root' props
-    rootProps.animate = atoms.input.animate;
-    rootProps.from = atoms.input.from;
-    rootProps.transition = atoms.input.transition;
-    rootProps.delay = atoms.input.delay;
-    rootProps.state = atoms.input.state;
-    rootProps.stylePriority = atoms.input.stylePriority;
-    rootProps.onDidAnimate = atoms.input.onDidAnimate;
-    rootProps.exit = atoms.input.exit;
-    rootProps.exitTransition = atoms.input.exitTransition;
-    rootProps.animateInitialState = atoms.input.animateInitialState;
-    rootProps._focused = atoms.input._focused;
-    rootProps._disabled = atoms.input._disabled;
-    rootProps._invalid = atoms.input._invalid;
-
-    atoms.input = _.omit(atoms.input, [
-      "animate",
-      "from",
-      "transition",
-      "delay",
-      "_focused",
-      "_disabled",
-      "_invalid",
-      "state",
-      "stylePriority",
-      "onDidAnimate",
-      "exit",
-      "exitTransition",
-      "animateInitialState",
-    ]);
-
-    const inputProps = useStyleProps(atoms.input, inputRootStyleFunctions);
+    const inputProps = useStyleProps(atoms.input, inputRootStyleFunction);
     const { placeholderTextColor, selectionColor, ...finalInputStyle } =
       inputProps.style;
 
@@ -181,7 +151,7 @@ const Input = React.forwardRef(
         variant: atoms.text.variant,
       },
       "primary",
-      inputTextStyleFunctions
+      inputTextStyleFunction
     );
 
     const memoizedBuildFontConfig = React.useCallback(
@@ -196,27 +166,27 @@ const Input = React.forwardRef(
 
     // Use State for dynamic styles
     const { focused, setFocused, propsWithFocusedStyles } = useFocusedState(
-      rootProps,
+      atoms.container,
       boxStyleFunctions,
       "molecule"
     );
-    rootProps = propsWithFocusedStyles;
+    atoms.container = propsWithFocusedStyles;
     const { propsWithDisabledStyles } = useDisabledState(
-      rootProps,
+      atoms.container,
       boxStyleFunctions,
       "molecule",
       true,
       isDisabled
     );
-    rootProps = propsWithDisabledStyles;
+    atoms.container = propsWithDisabledStyles;
     const { propsWithInvalidStyles } = useInvalidState(
-      rootProps,
+      atoms.container,
       boxStyleFunctions,
       "molecule",
       true,
       isInvalid
     );
-    rootProps = propsWithInvalidStyles;
+    atoms.container = propsWithInvalidStyles;
 
     // METHODS
     const clearInputHandler = () => {
@@ -227,7 +197,7 @@ const Input = React.forwardRef(
     const onChangeHandler = (
       event: NativeSyntheticEvent<TextInputChangeEventData>
     ) => {
-      const { eventCount, target, text } = event.nativeEvent;
+      const { text } = event.nativeEvent;
       if (text.length > 0) {
         setIsCleared(false);
       }
@@ -300,7 +270,7 @@ const Input = React.forwardRef(
     };
 
     return (
-      <Box {...rootProps}>
+      <Box {...atoms.container}>
         {renderLeftIcon()}
         <TextInput
           {...inputProps}
@@ -312,24 +282,22 @@ const Input = React.forwardRef(
           onChangeText={onChangeTextHandler}
           allowFontScaling={true}
           placeholderTextColor={
-            rootProps.style.placeholderTextColor || placeholderTextColor
-              ? rootProps.style.placeholderTextColor || placeholderTextColor
+            atoms.container.placeholderTextColor ?? placeholderTextColor
+              ? atoms.container.placeholderTextColor ?? placeholderTextColor
               : "#a7a7a7"
           }
           selectionColor={
-            rootProps.style.selectionColor || selectionColor
-              ? rootProps.style.selectionColor || selectionColor
+            atoms.container.selectionColor ?? selectionColor
+              ? atoms.container.selectionColor ?? selectionColor
               : null
           }
-          accessibilityLabel={
-            rest.accessibilityLabel ? rest.accessibilityLabel : rest.placeholder
-          }
+          accessibilityLabel={rest.accessibilityLabel ?? rest.placeholder}
           accessibilityState={{ disabled: isDisabled, selected: focused }}
           style={[
             finalInputStyle,
             finalTextStyles,
             { flex: isFullWidth ? 1 : null },
-            Platform.OS === "web" && { outlineStyle: "none" },
+            Platform.OS === "web" ? { outlineStyle: "none" } : {},
           ]}
         />
 

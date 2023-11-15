@@ -1,4 +1,3 @@
-import { baseTheme, extendTheme } from "./base/index";
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
 import {
   MotiTransitionProp,
@@ -223,23 +222,6 @@ export type PropValue =
 
 export type ComponentTypes = "basic" | "atom" | "molecule";
 
-// Sizes and Variants
-// export type ComponentTypeProps<
-//   ComponentName extends keyof FinalPearlTheme["components"],
-//   ComponentType extends ComponentTypes = "basic"
-// > = ComponentType extends "basic"
-//   ? {}
-//   : ComponentType extends "atom"
-//   ? {
-//       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
-//       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
-//     }
-//   : {
-//       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
-//       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
-//       atoms?: Record<string, any>;
-//     };
-
 export type AtomComponent<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentType extends ComponentTypes = "atom",
@@ -350,7 +332,6 @@ export type MotiWithPearlStyleProps<NativeComponentStyle, ComponentStyleProps> =
           Omit<NativeComponentStyle, keyof ComponentStyleProps> &
           ComponentStyleProps)
       | boolean;
-
     animate?: OrSharedValue<
       Omit<
         StyleValueWithSequenceArrays<

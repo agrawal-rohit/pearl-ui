@@ -3,7 +3,7 @@ sidebar_position: 8
 title: useAccessibleColor
 ---
 
-`useAccessibleColor` is a custom hook to get the most accessible foreground color value based on a provided background color. For instance, it is used under-the-hood in the [Avatar](../components/media/Avatar) component when displaying a name fallback.
+The `useAccessibleColor` hook is a powerful utility in Pearl UI that allows you to determine the most accessible foreground color based on a given background color. This hook is particularly useful in components like the [Avatar](../components/media/Avatar) where a name fallback is displayed against a variable background color.
 
 ## Import
 
@@ -13,9 +13,11 @@ import { useAccessibleColor } from "pearl-ui";
 
 ## Return value
 
-The `useAccessibleColor` hook returns the most accessible color as a <t>string</t>
+The `useAccessibleColor` hook returns a string representing the most accessible color based on the provided background color.
 
 ## Usage
+
+Here's an example of how you can use `useAccessibleColor` to determine the most accessible text color for a given background color:
 
 ```js
 const accessibleTextColor = useAccessibleColor("red", {
@@ -26,7 +28,7 @@ const accessibleTextColor = useAccessibleColor("red", {
 
 ## Parameters
 
-| Name                | Required | Type                                                                        | Default                             | Description                                                                                                                                          |
-| ------------------- | -------- | --------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `backgroundColor`   | true     | <t>PearlTheme['palette']</t>                                                |                                     | The color value of the background color.                                                                                                             |
-| `foregroundChoices` | false    | { light: <t>PearlTheme['palette']</t>, dark: <t>PearlTheme['palette']</t> } | `{ light: "white", dark: "black" }` | The foreground color values to choose from. It expects an object which a 'light' key (for the lighter color) and a 'dark' key (for the darker color) |
+| Name                | Required | Type                                                                        | Default                             | Description                                                                                                                                 |
+| ------------------- | -------- | --------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `backgroundColor`   | Yes      | <t>PearlTheme['palette']</t>                                                |                                     | The color value of the background against which the text will be displayed.                                                                 |
+| `foregroundChoices` | No       | { light: <t>PearlTheme['palette']</t>, dark: <t>PearlTheme['palette']</t> } | `{ light: "white", dark: "black" }` | An object containing potential foreground colors. It should have a 'light' key for the lighter color and a 'dark' key for the darker color. |

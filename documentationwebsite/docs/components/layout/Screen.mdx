@@ -3,11 +3,7 @@ sidebar_position: 3
 title: Screen
 ---
 
-**Screen** is a layout component that you can use to wrap all the views in your app. By default, it renders a [Box](./box) element.
-
-The **Screen** component also implements a [React Native SafeAreaView](https://reactnative.dev/docs/safeareaview) under the hood. This allows the content wrapped by the **Screen** component to
-always be within the safe areas of the device. (This is especially helpful for keeping your app accessible on devices with rounded corners
-or camera notches)
+The `Screen` component is a versatile layout tool designed to wrap all views in your application. It is built on top of the [Box](./box) element and implements a [React Native SafeAreaView](https://reactnative.dev/docs/safeareaview), ensuring that your content is always within the safe areas of the device. This is particularly useful for maintaining accessibility on devices with rounded corners or camera notches.
 
 ## Import
 
@@ -21,9 +17,9 @@ import { Screen } from "pearl-ui";
 <Screen>This is the screen</Screen>
 ```
 
-### Scrolling behaviour
+### Scrolling Behaviour
 
-More often than not the contents inside your screen would exceed the device height, thus **Screen** allows you to add scrolling support to all your screens using the `scrollable` prop. By default, it's value is set to `true`.
+If the content inside your screen exceeds the device height, the `Screen` component allows you to add scrolling support using the `scrollable` prop. By default, this prop is set to `true`.
 
 ```jsx
 <Screen scrollable={true}>This is a scrollable screen</Screen>
@@ -37,11 +33,9 @@ More often than not the contents inside your screen would exceed the device heig
 The Pull-to-Refresh functionality is not supported on web.
 :::
 
-The pull-to-refresh (or swipe-to-refresh) pattern lets a user pull down on a list of data using touch in order to retrieve more data.
+The pull-to-refresh (or swipe-to-refresh) pattern lets a user pull down on a list of data using touch in order to retrieve more data. This can be added using the `onPullToRefresh` prop which expects a function/Promise to be executed when a pull-to-refresh action has occurred.
 
-This can be added using the `onPullToRefresh` prop which expects a function/Promise which should be executed if a pull-to-refresh action has occured.
-
-_(Note: The screen needs to scrollable to allow this behaviour to work on iOS devices)_.
+_(Note: The screen needs to be scrollable to allow this behaviour to work on iOS devices)_.
 
 ```tsx
 <Screen
@@ -58,76 +52,42 @@ _(Note: The screen needs to scrollable to allow this behaviour to work on iOS de
 </Screen>
 ```
 
-## Example
+## Example Usage
+
+Here are examples of the `Screen` component in both light and dark themes:
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/screen-light" />
 
-</TabItem>
+## Component Properties
 
-<TabItem value="dark">
+### Supported Style Properties
 
-<Snack snackId="@agrawal-rohit/screen-dark" />
+The `Screen` component is built upon the [Box](./Box) component, and as such, it inherits all the properties related to [Box](./Box).
 
-</TabItem>
-</Tabs>
+### Additional Properties
 
-## Props
-
-### Supported style props
-
-**Screen** composes [Box](./Box) so you can pass all [Box](./Box) related props.
-
-### Additional props
-
-**Screen** also composes a [KeyboardAwareScrollView](https://github.com/APSL/react-native-keyboard-aware-scroll-view), therefore it supports all of it's props excluding:
+In addition to the [Box](./Box) properties, the `Screen` component also integrates a [KeyboardAwareScrollView](https://github.com/APSL/react-native-keyboard-aware-scroll-view), and supports all of its properties with the exception of:
 
 - `refresh`
 - `scrollEnabled`
 - `showsHorizontalScrollIndicator`
 - `showsVerticalScrollIndicator`
 
-Finally, the following additional props are supported as well:
+The `Screen` component also supports the following additional properties:
 
-| Name                             | Required | Type                                            | Default     | Description                                                                               |
-| -------------------------------- | -------- | ----------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
-| `size`                           | false    | <t>PearlTheme.components.Screen["sizes"]</t>    |             | The size of the screen.                                                                   |
-| `variant`                        | false    | <t>PearlTheme.components.Screen["variants"]</t> |             | The variant of the screen.                                                                |
-| `scrollable`                     | false    | <t>boolean</t>                                  | `true`      | Whether the screen is scrollable.                                                         |
-| `showScrollBar`                  | false    | <t>boolean</t>                                  | `false`     | Whether to show the vertical scrollbar if the Screen is scrollable.                       |
-| `onPullToRefresh`                | false    | <t>Function</t>                                 |             | Method to execute when a pull-to-refresh action is performed.                             |
-| `refreshIndicatorColors`         | false    | <t>string[]</t>                                 |             | The colors (at least one) that will be used to draw the refresh indicator (Android only). |
-| `refreshProgressBackgroundColor` | false    | <t>string</t>                                   |             | Progress view top offset.                                                                 |
-| `refreshProgressViewOffset`      | false    | <t>number</t>                                   | `0`         | The background color of the refresh indicator.                                            |
-| `refreshIndicatorSize`           | false    | <t>"default" \| "large"</t>                     | `"default"` | Size of the refresh indicator (Android only).                                             |
-| `refreshTintColor`               | false    | <t>string</t>                                   | `"default"` | The color of the refresh indicator (iOS only).                                            |
-| `refreshTitle`                   | false    | <t>string</t>                                   | `"default"` | The title displayed under the refresh indicator (iOS only).                               |
-| `refreshTitleColor`              | false    | <t>string</t>                                   | `"default"` | The color of the refresh indicator title (iOS only).                                      |
-
-## Default Component Config
-
-```js
-export default {
-  baseStyle: {
-    scrollable: true,
-    showScrollBar: false,
-    backgroundColor: {
-      light: "neutral.50",
-      dark: "neutral.800",
-    },
-    padding: "m",
-  },
-};
-```
+| Property Name                    | Mandatory | Data Type                                       | Default     | Description                                                                    |
+| -------------------------------- | --------- | ----------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| `size`                           | No        | <t>PearlTheme.components.Screen["sizes"]</t>    |             | Defines the size of the screen.                                                |
+| `variant`                        | No        | <t>PearlTheme.components.Screen["variants"]</t> |             | Defines the variant of the screen.                                             |
+| `scrollable`                     | No        | <t>boolean</t>                                  | `true`      | Determines if the screen is scrollable.                                        |
+| `showScrollBar`                  | No        | <t>boolean</t>                                  | `false`     | Determines if the vertical scrollbar is visible when the Screen is scrollable. |
+| `onPullToRefresh`                | No        | <t>Function</t>                                 |             | Function to execute when a pull-to-refresh action is performed.                |
+| `refreshIndicatorColors`         | No        | <t>string[]</t>                                 |             | Defines the colors used to draw the refresh indicator (Android only).          |
+| `refreshProgressBackgroundColor` | No        | <t>string</t>                                   |             | Defines the background color of the refresh indicator.                         |
+| `refreshProgressViewOffset`      | No        | <t>number</t>                                   | `0`         | Sets the top offset for the progress view.                                     |
+| `refreshIndicatorSize`           | No        | <t>"default" \| "large"</t>                     | `"default"` | Sets the size of the refresh indicator (Android only).                         |
+| `refreshTintColor`               | No        | <t>string</t>                                   | `"default"` | Sets the color of the refresh indicator (iOS only).                            |
+| `refreshTitle`                   | No        | <t>string</t>                                   | `"default"` | Sets the title displayed under the refresh indicator (iOS only).               |
+| `refreshTitleColor`              | No        | <t>string</t>                                   | `"default"` | Sets the color of the refresh indicator title (iOS only).                      |

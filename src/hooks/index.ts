@@ -8,7 +8,6 @@ export { useAccessibleColor } from "./useAccessibleColor";
 export { useDimensions } from "./useDimensions";
 export { useMotiWithStyleProps } from "./useMotiWithStyleProps";
 export { useResponsiveProp } from "./useResponsiveProp";
-export { pearlify } from "./pearlify";
 
 // State Hooks
 export * from "./state/index";

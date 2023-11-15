@@ -1,0 +1,167 @@
+---
+sidebar_position: 4
+title: Animation Support
+---
+
+Pearl UI leverages the power of [Moti](https://moti.fyi/) and [Reanimated](https://docs.swmansion.com/react-native-reanimated/) to provide robust animation support. This allows for seamless addition of animations to components using style props and Moti props.
+
+## Understanding Moti and Reanimated
+
+Pearl UI integrates the power of [Moti](https://moti.fyi/) and [Reanimated](https://docs.swmansion.com/react-native-reanimated/) to deliver a smooth and efficient animation experience. These libraries are renowned for their superior performance and user-friendly approach to crafting animations in React Native.
+
+Moti, a high-performance, customizable, and versatile library, simplifies the process of creating complex animations in React Native. It offers a straightforward and intuitive syntax that makes animation creation a breeze. To explore Moti and its extensive features, we recommend diving into the official [Moti documentation](https://moti.fyi/).
+
+Reanimated, on the other hand, is a low-level abstraction designed for building intricate animations in a more declarative manner. It provides a direct and flexible approach to managing animations in React Native, giving you more control over your animations. For a deeper understanding of Reanimated and its capabilities, we suggest checking out the official [Reanimated documentation](https://docs.swmansion.com/react-native-reanimated/).
+
+## Implementing Animations with Pearl UI
+
+Pearl UI, with the help of Moti, provides a flexible and efficient way to implement animations in your React Native applications. Here are some examples demonstrating the implementation of various animations such as size, color, and opacity transitions.
+
+### FadeInUp Animation Example
+
+This example demonstrates a fade-in-up animation where the component starts with an opacity of 0 and a slight translation along the Y-axis, and then animates to an opacity of 1 and a Y translation of 0.
+
+```jsx
+import React from "react";
+import { ThemeProvider, Screen, Box } from "pearl-ui";
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <Screen>
+        <Box
+          h={50}
+          w="100%"
+          borderRadius="m"
+          bgColor="primary.500"
+          from={{ opacity: 0, translateY: 10 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ type: "spring", duration: 200 }}
+        />
+      </Screen>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+```
+
+### ScaleIn Animation Example
+
+This example shows a scale-in animation where the component starts from a scale of 0 and animates to a scale of 1.
+
+```jsx
+import React from "react";
+import { ThemeProvider, Screen, Box } from "pearl-ui";
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <Screen>
+        <Box
+          h={50}
+          w="100%"
+          borderRadius="m"
+          bgColor="primary.500"
+          from={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", duration: 200 }}
+        />
+      </Screen>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+```
+
+### Color Transition Animation Example
+
+This example illustrates a color transition animation where the component changes its background color from <t>'primary.500'</t> to <t>'secondary.500'</t>.
+
+```jsx
+import React from "react";
+import { ThemeProvider, Screen, Box } from "pearl-ui";
+
+const App = () => {
+  return (
+    <ThemeProvider initialColorMode="light">
+      <Screen>
+        <Box
+          h={50}
+          w="100%"
+          borderRadius="m"
+          from={{ bgColor: "primary.500" }}
+          animate={{ bgColor: "secondary.500" }}
+          transition={{ type: "timing", duration: 200 }}
+        />
+      </Screen>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+```
+
+These examples demonstrate the flexibility and power of Pearl UI's animation support. You can create complex animations by combining different animation properties and transition types.
+
+### Animating Components Based on State
+
+This section provides an example of how to animate a component based on its state using the [useFocusedState](../hooks/useFocusedState) hook. The component's background color changes depending on the focused state of an input field. It's important to note that the `useFocusedState` hook must be used within the [`ThemeProvider`](./components/ThemeProvider.mdx) context.
+
+```jsx
+import React, { useState } from "react";
+import {
+  ThemeProvider,
+  Screen,
+  Box,
+  Input,
+  useFocusedState,
+  boxStyleFunctions,
+} from "pearl-ui";
+
+const FocusedBox = ({ isFocused, ...props }) => {
+  // The useFocusedState hook is used to manage the focused state and styles
+  const { propsWithFocusedStyles } = useFocusedState(
+    props, // Dynamic styles that change based on the focused state
+    boxStyleFunctions,
+    "basic",
+    true, // Enable animation support when transforming the props
+    isFocused
+  );
+
+  return (
+    <Box
+      h={50}
+      w="100%"
+      borderRadius="m"
+      {...propsWithFocusedStyles} // Apply the dynamic styles
+      transition={{ type: "timing", duration: 200 }} // Animate the transition
+    />
+  );
+};
+
+const App = () => {
+  // Initialize the isFocused state
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Render the component
+  return (
+    <ThemeProvider initialColorMode="light">
+      <Screen>
+        <FocusedBox
+          isFocused={isFocused}
+          bgColor="primary.500"
+          _focused={{ bgColor: "secondary.500" }}
+        />
+        <Input
+          onFocus={() => setIsFocused(true)} // Update the focused state when the input field is in focus
+          onBlur={() => setIsFocused(false)} // Update the focused state when the input field loses focus
+        />
+      </Screen>
+    </ThemeProvider>
+  );
+};
+```
+
+This example showcases the use of the [useFocusedState](../hooks/useFocusedState) hook to dynamically alter the style of a component based on the focused state of an input field. This allows for more interactive and responsive UI elements.

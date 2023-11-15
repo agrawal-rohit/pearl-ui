@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Text Link
 ---
 
-**TextLink** wraps a [Text](../typography/Text) component with a [Pressable](./Pressable) component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
+The `TextLink` component in Pearl UI is a versatile and customizable element that combines a [Text](../typography/Text) component with a [Pressable](./Pressable) component. It can be used to trigger various actions or events within your application, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, it renders the [Pressable](./Pressable) component.
 
 ## Import
 
@@ -19,7 +19,7 @@ import { TextLink } from "pearl-ui";
 
 ### TextLink sizes
 
-Use the `size` prop to change the size of the text link. You can set the value to the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the text link. The value for this prop should be one of the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
 
 ```jsx
 <TextLink size="xs">Tiny Pressable Text</TextLink>
@@ -33,9 +33,7 @@ Use the `size` prop to change the size of the text link. You can set the value t
 
 ### TextLink color scheme
 
-Use the `colorScheme` prop to change the color palette of the text link. This is much more powerful than simply passing a `backgroundColor` style prop as the `colorScheme` prop changes all the use color values in a palette through a single prop.
-
-You can set the value only to the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+The `colorScheme` prop allows you to change the color palette of the text link. This is a powerful feature as it changes all the use color values in a palette through a single prop. The value for this prop should be one of the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
 
 ```jsx
 <TextLink colorScheme="primary">Primary Pressable Text</TextLink>
@@ -45,7 +43,7 @@ You can set the value only to the keys available in <t>PearlTheme.palette</t> th
 
 ### Override Style
 
-The **TextLink** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The `TextLink` component supports a wide range of style props which can be used to override the pre-defined variant style in the theme. These manual style props have higher precedence than the [default component config](#default-component-config), allowing for greater customization.
 
 ```jsx
 // passing style prop m="xl" overrides the default component config value
@@ -55,91 +53,26 @@ The **TextLink** component also supports a [variety of style props](#supported-s
 ## Example
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/textlink-light" />
 
-</TabItem>
-
-<TabItem value="dark">
-
-<Snack snackId="@agrawal-rohit/textlink-dark" />
-
-</TabItem>
-</Tabs>
-
 ## Accessibility
 
-- **TextLink** has the `role` of `button`.
-- **TextLink** has the default accessibility label set as text value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
-- When **TextLink** is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
-- Similar to [Pressable](./Pressable), **TextLink** expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+- `TextLink` has the `role` of `button`.
+- `TextLink` has the default accessibility label set as text value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+- When `TextLink` is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
+- Similar to [Pressable](./Pressable), `TextLink` expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
-## Props
+## Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-Since the **TextLink** component composes the [Pressable](./Pressable) component, you can pass all [Pressable](./Pressable) related props to it, in addition to the following.
+The `TextLink` component is a composition of the [Pressable](./Pressable) component. Therefore, all properties related to the [Pressable](./Pressable) component can be passed to the `TextLink` component, in addition to the properties listed below.
 
-### Additional props
+### Additional Properties
 
-| Name          | Required | Type                                              | Default     | Description                            |
-| ------------- | -------- | ------------------------------------------------- | ----------- | -------------------------------------- |
-| `size`        | false    | <t>PearlTheme.components.TextLink["sizes"]</t>    | `"m"`       | Size of the text link.                 |
-| `variant`     | false    | <t>PearlTheme.components.TextLink["variants"]</t> |             | Variant of the text link.              |
-| `colorScheme` | false    | <t>PearlTheme["palette"]</t>                      | `"primary"` | Active color palette of the text link. |
-
-## Default component Config
-
-```js
-export default {
-  parts: ["root", "text"],
-  baseStyle: {
-    root: {
-      activeOpacity: 0.9,
-    },
-    text: {
-      color: "primary.500",
-    },
-  },
-  sizes: {
-    xs: {
-      root: {},
-      text: {
-        variant: "btn4",
-      },
-    },
-    s: {
-      root: {},
-      text: {
-        variant: "btn3",
-      },
-    },
-    m: {
-      root: {},
-      text: {
-        variant: "btn2",
-      },
-    },
-    l: {
-      root: {},
-      text: {
-        variant: "btn1",
-      },
-    },
-  },
-  defaults: {
-    size: "m",
-  },
-};
-```
+| Name          | Required | Type                                              | Default     | Description                                     |
+| ------------- | -------- | ------------------------------------------------- | ----------- | ----------------------------------------------- |
+| `size`        | No       | <t>PearlTheme.components.TextLink["sizes"]</t>    | `"m"`       | Defines the size of the text link.              |
+| `variant`     | No       | <t>PearlTheme.components.TextLink["variants"]</t> |             | Specifies the variant of the text link.         |
+| `colorScheme` | No       | <t>PearlTheme["palette"]</t>                      | `"primary"` | Sets the active color palette of the text link. |

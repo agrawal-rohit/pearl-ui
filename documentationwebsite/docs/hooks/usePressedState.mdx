@@ -1,0 +1,74 @@
+---
+sidebar_position: 5
+title: usePressedState
+---
+
+The `usePressedState` hook is a powerful utility in Pearl UI that not only manages a pressed state but also transforms the `_pressed` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to press events with custom styles.
+
+## Import
+
+```js
+import { usePressedState } from "pearl-ui";
+```
+
+## Return value
+
+The `usePressedState` hook returns an object with three properties:
+
+- `pressed`: A boolean representing the current pressed state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setPressed`: A function that can be used to set the `pressed` state. This function updates the local state.
+- `propsWithPressedStyles`: The props object of the component with updated styles according to the current 'pressed' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `usePressedState` to manage a pressed state and compose extra styling while a button is pressed:
+
+```js
+import { usePressedState } from "pearl-ui";
+import { useState } from "react";
+
+const Button = ({ isPressed, ...props }) => {
+  // Use the hook to transform the props based on the pressed state
+  const { pressed, setPressed, propsWithPressedStyles } = usePressedState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false,
+    isPressed
+  );
+
+  // Render the button with the transformed props
+  return <button {...propsWithPressedStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the pressed state
+  const [isPressed, setIsPressed] = useState(false);
+
+  // Render the Button and a toggle button to change the pressed state
+  return (
+    <div>
+      <Button
+        isPressed={isPressed}
+        // Specify the styling of the component when the isPressed value is true
+        _pressed={{ backgroundColor: "blue", color: "white" }}
+      />
+      <button onClick={() => setIsPressed(!isPressed)}>
+        Toggle Pressed State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `usePressedState` hook is utilized within a `Button` component. The purpose of this hook is to dynamically alter the button's background and text colors in response to changes in the `isPressed` prop. Specifically, when `isPressed` is set to true, the button's background color transitions to blue, and the text color changes to white.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                       |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                       |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                       |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                        |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                             |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'pressed' state instead of the local state value. |

@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "text"],
+  parts: ["container", "text"],
   baseStyle: {
-    root: {
+    container: {
       activeOpacity: 0.8,
     },
     text: {

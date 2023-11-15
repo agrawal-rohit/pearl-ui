@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "text", "spinner", "icon"],
+  parts: ["box", "text", "spinner", "icon"],
   baseStyle: {
-    root: {
+    box: {
       my: "2xs",
       justifyContent: "center",
       alignItems: "center",
@@ -15,7 +15,7 @@ export default {
   },
   sizes: {
     xs: {
-      root: {
+      box: {
         py: "2xs",
         px: "xs",
         borderRadius: "s",
@@ -32,7 +32,7 @@ export default {
       },
     },
     s: {
-      root: {
+      box: {
         py: "xs",
         px: "xs",
         borderRadius: "s",
@@ -48,7 +48,7 @@ export default {
       },
     },
     m: {
-      root: {
+      box: {
         py: "s",
         px: "s",
         borderRadius: "m",
@@ -64,7 +64,7 @@ export default {
       },
     },
     l: {
-      root: {
+      box: {
         py: "m",
         px: "m",
         borderRadius: "m",
@@ -82,7 +82,7 @@ export default {
   },
   variants: {
     filled: {
-      root: {
+      box: {
         backgroundColor: "primary.500",
       },
       text: { color: "neutral.50" },
@@ -94,7 +94,7 @@ export default {
       },
     },
     outline: {
-      root: {
+      box: {
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
@@ -111,7 +111,7 @@ export default {
       },
     },
     ghost: {
-      root: {
+      box: {
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",

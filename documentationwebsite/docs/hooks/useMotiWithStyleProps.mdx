@@ -1,0 +1,67 @@
+---
+sidebar_position: 5
+title: useMotiWithStyleProps
+---
+
+The `useMotiWithStyleProps` is a powerful custom hook provided by Pearl UI, designed to transform [Moti](https://moti.fyi/) configurations written using [style props](../core-features/style-props) into a format suitable for creating dynamic animations in your React Native components.
+
+This hook accepts a props object as an argument, which should contain the desired animation properties. It then processes these properties and generates an animation object. This object can be seamlessly integrated into any React Native component to bring it to life with animations.
+
+The following are the [Moti](https://moti.fyi/) props that `useMotiWithStyleProps` can process:
+
+- `from`: This prop is used to set the initial state of the animation.
+- `to`: This prop is used to set the final state of the animation.
+- `transition`: This prop allows you to specify the type of transition for the animation.
+- `exitTransition`: This prop lets you define the type of transition that occurs when the component unmounts.
+- `state`: This prop is used to define the state of the animation, which includes the `from` and `to` states.
+
+## Import
+
+```js
+import { useMotiWithStyleProps } from "pearl-ui";
+```
+
+## Return Value
+
+`useMotiWithStyleProps` returns an object of animated props that can be spread into any React Native component to apply the animations.
+
+## Usage
+
+Here's an example of how to use these props in a component with some style props:
+
+```jsx
+import { colorStyleFunction, borderStyleFunction } from "pearl-ui";
+import { MotiView } from "moti";
+
+const AnimatedComponent = () => {
+  const animationProps = useMotiWithStyleProps(
+    {
+      from: { opacity: 0, backgroundColor: "neutral.100", borderRadius: "l" },
+      to: { opacity: 1, backgroundColor: "primary.500", borderRadius: "m" },
+      transition: { type: "timing" },
+    },
+    [colorStyleFunction, borderStyleFunction]
+  );
+
+  return <MotiView {...animationProps} />;
+};
+```
+
+## Parameters
+
+The `useMotiWithStyleProps` hook accepts two parameters:
+
+| Name             | Required | Type                                                         | Default | Description                          |
+| ---------------- | -------- | ------------------------------------------------------------ | ------- | ------------------------------------ |
+| `props`          | Yes      | <t>object</t>                                                |         | An object containing the Moti props. |
+| `styleFunctions` | Yes      | <t>Array of [Style Functions](../others/style-functions)</t> |         | An array of style functions.         |
+
+The `props` object should include the following properties:
+
+| Name             | Required | Type          | Default | Description                                                                               |
+| ---------------- | -------- | ------------- | ------- | ----------------------------------------------------------------------------------------- |
+| `from`           | No       | <t>object</t> |         | An object defining the initial state of the animation.                                    |
+| `to`             | No       | <t>object</t> |         | An object defining the final state of the animation.                                      |
+| `transition`     | No       | <t>object</t> |         | An object specifying the type of transition for the animation.                            |
+| `exitTransition` | No       | <t>object</t> |         | An object defining the type of transition that occurs when the component unmounts.        |
+| `state`          | No       | <t>object</t> |         | An object defining the state of the animation, which includes the `from` and `to` states. |

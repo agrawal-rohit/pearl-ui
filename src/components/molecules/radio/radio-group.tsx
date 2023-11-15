@@ -58,7 +58,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   onChange = () => {},
   ...rest
 }) => {
-  const currentValue = value || defaultValue;
+  const currentValue = value ?? defaultValue;
   const setRadioGroupValue = (value: string | number) => {
     onChange(value);
   };

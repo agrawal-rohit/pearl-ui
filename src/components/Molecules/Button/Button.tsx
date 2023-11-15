@@ -4,7 +4,7 @@ import Box from "../../atoms/box/box";
 import Text from "../../atoms/text/text";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 export type BaseButtonProps = PressableProps & {
   /** Whether the button is in a loading state.  */
@@ -30,11 +30,13 @@ export type BaseButtonProps = PressableProps & {
  */
 const CustomButton = React.forwardRef(
   (
-    { children, ...props }: MoleculeComponentProps<"Button", BaseButtonProps>,
+    {
+      children,
+      atoms,
+      ...props
+    }: MoleculeComponentProps<"Button", BaseButtonProps>,
     ref: any
   ) => {
-    // Destructure the props to get atoms and rootProps
-    const { atoms, ...rootProps } = props;
     // Destructure the rootProps to get the necessary properties
     const {
       loadingText = null,
@@ -45,8 +47,7 @@ const CustomButton = React.forwardRef(
       isDisabled = false,
       leftIcon = null,
       rightIcon = null,
-      ...otherRootProps
-    } = rootProps;
+    } = props;
 
     // Determine if the button is disabled
     const disabled = isDisabled ? true : isLoading;
@@ -60,13 +61,13 @@ const CustomButton = React.forwardRef(
             {spinnerPlacement === "start" ? (
               <>
                 <Spinner {...atoms.spinner} />
-                <Text marginLeft={rootProps.py} {...atoms.text}>
+                <Text marginLeft={props.py} {...atoms.text}>
                   {loadingText}
                 </Text>
               </>
             ) : (
               <>
-                <Text marginRight={rootProps.py} {...atoms.text}>
+                <Text marginRight={props.py} {...atoms.text}>
                   {loadingText}
                 </Text>
 
@@ -97,7 +98,7 @@ const CustomButton = React.forwardRef(
             {leftIcon
               ? React.cloneElement(leftIcon, {
                   ...atoms.icon,
-                  marginRight: rootProps.py || rootProps.paddingVertical,
+                  marginRight: props.py ?? props.paddingVertical,
                   ...leftIcon.props,
                 })
               : null}
@@ -105,7 +106,7 @@ const CustomButton = React.forwardRef(
             {rightIcon
               ? React.cloneElement(rightIcon, {
                   ...atoms.icon,
-                  marginLeft: rootProps.py || rootProps.paddingVertical,
+                  marginLeft: props.py ?? props.paddingVertical,
                   ...rightIcon.props,
                 })
               : null}
@@ -120,15 +121,15 @@ const CustomButton = React.forwardRef(
     // Return the Pressable component with the appropriate props and children
     return (
       <Pressable
-        {...otherRootProps}
+        {...atoms.box}
         ref={ref}
         isDisabled={disabled}
-        onPress={rootProps.onPress}
+        onPress={props.onPress}
         alignSelf={isFullWidth ? "stretch" : "flex-start"}
         accessibilityLabel={
           !isLoading
-            ? rootProps.accessibilityLabel
-              ? rootProps.accessibilityLabel
+            ? props.accessibilityLabel
+              ? props.accessibilityLabel
               : children
             : "Loading"
         }
@@ -141,11 +142,20 @@ const CustomButton = React.forwardRef(
 );
 
 /** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
-const Button = pearlify<BaseButtonProps, "molecule">(CustomButton, {
-  componentName: "Button",
-  type: "molecule",
-  animatable: true,
-});
+const Button = pearlify<BaseButtonProps, "molecule">(
+  CustomButton,
+  {
+    componentName: "Button",
+    type: "molecule",
+    animatable: true,
+  },
+  undefined,
+  {
+    partForOverridenStyleProps: "box",
+    partForOverridenNativeProps: "box",
+    partForOverridenAnimationProps: "box",
+  }
+);
 
 export type ButtonProps = React.ComponentProps<typeof Button>;
 

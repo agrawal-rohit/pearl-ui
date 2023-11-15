@@ -7,6 +7,7 @@ import styles from "./index.module.css";
 import useThemeContext from "@theme/hooks/useThemeContext"; //docs: https://v2.docusaurus.io/docs/2.0.0-alpha.69/theme-classic#usethemecontext
 import { AiFillBuild } from "react-icons/ai";
 import { HiLightningBolt } from "react-icons/hi";
+import { MdMovie } from "react-icons/md";
 import { IoColorPaletteSharp, IoAccessibility, IoMoon } from "react-icons/io5";
 
 function HomepageHeader() {
@@ -89,6 +90,12 @@ function FeaturesSection() {
       description:
         "Out of the box support for multiple color modes. Let it be light, dark, or based on users' system preferences.",
       icon: <IoMoon fontSize={30} />,
+    },
+    {
+      title: "Animations",
+      description:
+        "Built-in animations to enhance your UI. Smooth and responsive animations are readily available for a dynamic user experience.",
+      icon: <MdMovie fontSize={30} />,
     },
     {
       title: "Developer Experience",

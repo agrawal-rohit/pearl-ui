@@ -13,7 +13,7 @@ import {
   ResponsiveValue,
 } from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 type BaseTextProps = React.ComponentProps<typeof RNText> & {
   /** The size of the text */
@@ -36,7 +36,7 @@ export const buildFontConfig = (
   allowFontScaling: boolean
 ): object => {
   const fontWeight = textStyle.fontWeight;
-  const fontStyle = textStyle.fontStyle || "normal";
+  const fontStyle = textStyle.fontStyle ?? "normal";
 
   let fontSize = textStyle.fontSize;
   let lineHeight = textStyle.lineHeight;

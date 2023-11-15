@@ -2,7 +2,7 @@ import React from "react";
 import Text from "../../atoms/text/text";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 export type BaseBadgeProps = PressableProps;
 
@@ -19,7 +19,7 @@ const CustomBadge = React.forwardRef(
     { children, ...props }: MoleculeComponentProps<"Badge", BaseBadgeProps>,
     ref: any
   ) => {
-    const { atoms, ...rootProps } = props;
+    const { atoms } = props;
 
     // Function to render the value of the badge
     const renderValue = () => {
@@ -38,7 +38,7 @@ const CustomBadge = React.forwardRef(
     // Return a Pressable component with the value rendered inside it
     return (
       <Pressable
-        {...rootProps}
+        {...atoms.box}
         ref={ref}
         alignItems="center"
         justifyContent="center"
@@ -51,11 +51,20 @@ const CustomBadge = React.forwardRef(
 );
 
 /** A Badge is a small component typically used to communicate a numerical value or indicate the status of an item to the user. */
-const Badge = pearlify<BaseBadgeProps, "molecule">(CustomBadge, {
-  componentName: "Badge",
-  type: "molecule",
-  animatable: true,
-});
+const Badge = pearlify<BaseBadgeProps, "molecule">(
+  CustomBadge,
+  {
+    componentName: "Badge",
+    type: "molecule",
+    animatable: true,
+  },
+  undefined,
+  {
+    partForOverridenStyleProps: "box",
+    partForOverridenNativeProps: "box",
+    partForOverridenAnimationProps: "box",
+  }
+);
 
 export type BadgeProps = React.ComponentProps<typeof Badge>;
 

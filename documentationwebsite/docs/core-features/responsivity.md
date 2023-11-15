@@ -1,25 +1,23 @@
 ---
 sidebar_position: 3
-title: Responsivity
+title: Responsive Design
 ---
 
-Pearl UI supports responsive styles out of the box! Any [style props](./style-props) can _optionally_ accept a value for each screen size, as defined by the [breakpoints configuration](../theming/default-theme#breakpoints) in the theme.
+Pearl UI is designed with a mobile-first approach and supports responsive styles right out of the box! This means that any [style props](./style-props) can _optionally_ accept a value for each screen size, as defined by the [breakpoints configuration](../theming/default-theme#breakpoints) in the theme.
 
-To add make a style responsive, you can use the following object syntax:
+To make a style responsive, you can use the following object syntax:
 
 ```jsx
 propName={{ breakpoint: propValue }}
 ```
 
-## Adding responsivity to custom props
+## Implementing Responsivity in Style Props
 
-In addition to the included [style props](./style-props), you can easily add responsivity to any custom props you want using the [useResponsiveProp](../hooks/useResponsiveProp) hook.
-
-## Example
+To add responsivity to your style props, you can assign different values to different breakpoints. This allows you to customize the appearance of your components based on the screen size. Here's an example of how you can implement this:
 
 <p float="left" align="center">
-<img src="/img/responsivity_phone_demo.png" alt="welcome" width="200"/>
-<img src="/img/responsivity_tablet_demo.png" alt="welcome" width="500"/>
+<img src="/img/responsivity_phone_demo.png" alt="Phone view" width="200"/>
+<img src="/img/responsivity_tablet_demo.png" alt="Tablet view" width="500"/>
 </p>
 
 ```jsx
@@ -79,3 +77,31 @@ const App = () => {
   );
 };
 ```
+
+## Custom Prop Responsivity
+
+Pearl UI extends its responsivity features beyond the built-in [style props](./style-props). You can add responsive behavior to any custom prop using the [useResponsiveProp](../hooks/useResponsiveProp) hook. This powerful feature allows for greater flexibility and control over your component's behavior across different screen sizes.
+
+```jsx
+const CustomComponent = styled.View`
+  width: ${(props) => props.theme.space[props.size]};
+  height: ${(props) => props.theme.space[props.size]};
+`;
+
+const App = () => {
+  const size = useResponsiveProp({ phone: "m", tablet: "l" });
+
+  return (
+    <ThemeProvider>
+      <Screen>
+        <Header />
+        <Box flexDirection={{ phone: "column", tablet: "row" }}>
+          <CustomComponent size={size} />
+        </Box>
+      </Screen>
+    </ThemeProvider>
+  );
+};
+```
+
+In the above example, the `CustomComponent` is designed to adapt its size based on the device's screen size. It will have a medium size on phone screens and a large size on tablet screens, providing an optimal user experience across different devices.

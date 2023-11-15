@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { useTheme } from "./useTheme";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
@@ -19,10 +18,7 @@ export const useStyleProps = (
   const dimensions = useDimensions();
 
   // Compose the style functions
-  const buildStyleProperties = useMemo(
-    () => composeStyleProps(styleFunctions),
-    [styleFunctions]
-  );
+  const buildStyleProperties = composeStyleProps(styleFunctions);
 
   // If no props are passed, return an empty style object
   if (!props) return { style: {} };

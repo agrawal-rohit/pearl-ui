@@ -77,7 +77,7 @@ const Spinner: React.FC<
   if (!isLoading) return null;
 
   // Set default variant to "spinner"
-  rest.variant = rest.variant || "spinner";
+  rest.variant = rest.variant ?? "spinner";
 
   // Get props for the Spinner
   let props = useAtomicComponentConfig(

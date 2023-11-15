@@ -3,7 +3,7 @@ sidebar_position: 9
 title: useResponsiveProp
 ---
 
-`useResponsiveProp` is a custom hook to get the appropriate value from a [responsive style object](../core-features/responsivity) based on the current screen size.
+The `useResponsiveProp` is a custom hook provided by Pearl UI. It is designed to fetch the appropriate value from a [responsive style object](../core-features/responsivity) based on the current screen size. This allows for dynamic styling that adapts to different device screens.
 
 ## Import
 
@@ -13,7 +13,7 @@ import { useResponsiveProp } from "pearl-ui";
 
 ## Return value
 
-The `useResponsiveProp` hook returns the value that corresponds to the [breakpoint](../theming/default-theme#breakpoints) of the active device.
+The `useResponsiveProp` hook returns the value that corresponds to the [breakpoint](../theming/default-theme#breakpoints) of the active device. This means it will return the value that matches the current screen size.
 
 ## Usage
 
@@ -25,8 +25,10 @@ const responsiveWidth = useResponsiveProp({
 });
 ```
 
+In the example above, the `responsiveWidth` will be "100%" on phones, "50%" on tablets, and "300" on large tablets.
+
 ## Parameters
 
-| Name        | Required | Type                                                                      | Description                                                             |
-| ----------- | -------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `propValue` | true     | <t>{[breakpoint](../theming/default-theme#breakpoints): <t>value</t>}</t> | An object that specifies the values based on the different breakpoints. |
+| Name        | Required | Type                                                                      | Description                                                                                                                   |
+| ----------- | -------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `propValue` | Yes      | <t>{[breakpoint](../theming/default-theme#breakpoints): <t>value</t>}</t> | An object that specifies the values for different breakpoints. This object is used to determine the return value of the hook. |

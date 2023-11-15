@@ -3,7 +3,7 @@ sidebar_position: 1
 title: useTheme
 ---
 
-`useTheme` is a custom hook used to get the active theme object, active color mode, and a function to toggle the active color mode.
+The `useTheme` hook is a powerful tool that allows you to access the currently active theme object, the active color mode, and provides a function to switch the active color mode. This hook is essential for dynamically adjusting the appearance of your application based on the user's preferred color scheme.
 
 ## Import
 
@@ -11,16 +11,20 @@ title: useTheme
 import { useTheme } from "pearl-ui";
 ```
 
-## Return value
+## Return Values
 
-| Name              | Type                                 | Description                                                  |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------ |
-| `theme`           | <t>PearlTheme</t>                    | Theme configuration object for the active color mode.        |
-| `colorMode`       | <t>"light" \|"dark"</t>              | Active color mode.                                           |
-| `toggleColorMode` | <t>() => void</t>                    | Function to toggle the active color mode.                    |
-| `switchColorMode` | <t>"light" \| "dark" \| "system"</t> | Function to switch the active color mode to a specific mode. |
+The `useTheme` hook returns an object containing the following properties:
 
-## Usage
+| Name              | Type                                                 | Description                                                                    |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `theme`           | <t>PearlTheme</t>                                    | The theme configuration object for the currently active color mode.            |
+| `colorMode`       | <t>"light" \|"dark"</t>                              | The currently active color mode.                                               |
+| `toggleColorMode` | <t>() => void</t>                                    | A function that toggles the active color mode between light and dark.          |
+| `switchColorMode` | <t>(mode: "light" \| "dark" \| "system") => void</t> | A function that allows you to switch the active color mode to a specific mode. |
+
+## How to Use
+
+Here's an example of how you can use the `useTheme` hook in your application:
 
 ```js
 const { theme, colorMode, toggleColorMode, switchColorMode } = useTheme();

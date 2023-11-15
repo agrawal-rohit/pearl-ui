@@ -1,11 +1,11 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 title: useMolecularComponentConfig
 ---
 
-`useMolecularComponentConfig` is a custom hook used to convert a [molecular component style config](../theming/customize-theme#component-style-config) to the appropriate React Native styles.
+The `useMolecularComponentConfig` is a custom hook that transforms a [molecular component style config](../theming/customize-theme#component-style-config) into corresponding React Native styles.
 
-It takes the benefits of the [useAtomicComponentConfig](./useAtomicComponentConfig) hook to the next level, allowing you to create complex components by combining different atomic components while still maintaining the ease of the styling through a component style config.
+This hook extends the functionality of the [useAtomicComponentConfig](./useAtomicComponentConfig) hook, enabling the creation of intricate components by merging various atomic components. It also simplifies the styling process through a component style config.
 
 ## Import
 
@@ -15,9 +15,9 @@ import { useMolecularComponentConfig } from "pearl-ui";
 
 ## Return value
 
-The `useMolecularComponentConfig` hook returns an object which contains the style props grouped by their respective parts.
+The `useMolecularComponentConfig` hook yields an object that includes the style props, which are grouped according to their respective parts.
 
-As an example, here's what the output value looks like for the [Button](../components/forms/Button#default-component-config) component:
+For instance, the output value for the [Button](../components/forms/Button#default-component-config) component would look like this:
 
 ```json
 {
@@ -48,11 +48,11 @@ As an example, here's what the output value looks like for the [Button](../compo
 }
 ```
 
-As you can see, the hook returns the appropriate props in their respective buckets so that they can be passed on to the underlying atomic components directly.
+As demonstrated, the hook segregates the appropriate props into their respective categories, allowing them to be directly passed to the underlying atomic components.
 
 ## Usage
 
-Let's update the `ColorView` example mentioned in the [useAtomicComponentConfig](./useAtomicComponentConfig#usage) section to a molecular component built using 2 atomic components:
+To demonstrate the application of `useMolecularComponentConfig`, we'll modify the `ColorView` example from the [useAtomicComponentConfig](./useAtomicComponentConfig#usage) section. We'll convert it into a molecular component that merges two atomic components:
 
 1. [View](https://reactnative.dev/docs/view)
 2. [Text](../components/typography/Text)
@@ -133,7 +133,7 @@ import {
 type ColorViewProps = BackgroundColorProps &
   BorderProps & {
     /** Variant to use as defined in the active theme */
-    variant?: keyof typeof colorViewConfig["variants"];
+    variant?: keyof (typeof colorViewConfig)["variants"];
   };
 
 const colorViewStyleFunctions = [
@@ -199,7 +199,7 @@ const ColorView = (props) => {
 </TabItem>
 </Tabs>
 
-That's it! Now, you can control the active visual style of the component using the `variant` prop:
+And there you have it! You can now manipulate the active visual style of the component using the `variant` prop:
 
 ```jsx
 <ColorView variant="cyanBox" />
@@ -207,11 +207,11 @@ That's it! Now, you can control the active visual style of the component using t
 
 ## Parameters
 
-| Name                               | Required | Type                                                             | Default                                 | Description                                                                                                                                                                                      |
-| ---------------------------------- | -------- | ---------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `themeComponentKey`                | true     | <t>PearlTheme.components</t>                                     |                                         | Name of the component in <t>PearlTheme.components</t> who's config needs to be used                                                                                                              |
-| `receivedProps`                    | true     | <t>object</t>                                                    |                                         | Raw props passed to the component where the hook is being used                                                                                                                                   |
-| `sizeAndVariantProps`              | false    | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined } | Custom size and variant configuration to use                                                                                                                                                     |
-| `colorScheme`                      | false    | <t>string</t>                                                    | `"primary"`                             | Active color scheme of the component.                                                                                                                                                            |
-| `targetKeyForOverridenStyleProps`  | false    | <t>string \| undefined</t>                                       |                                         | The part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config                       |
-| `targetKeyForOverridenNativeProps` | false    | <t>string \| undefined</t>                                       |                                         | The part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config |
+| Name                               | Required | Type                                                             | Default                                 | Description                                                                                                                                                                                                 |
+| ---------------------------------- | -------- | ---------------------------------------------------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `themeComponentKey`                | Yes      | <t>PearlTheme.components</t>                                     |                                         | Identifies the component in <t>PearlTheme.components</t> whose config will be used                                                                                                                          |
+| `receivedProps`                    | Yes      | <t>object</t>                                                    |                                         | The raw props that are passed to the component where the hook is being used                                                                                                                                 |
+| `sizeAndVariantProps`              | No       | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined } | Specifies the custom size and variant configuration to be used                                                                                                                                              |
+| `colorScheme`                      | No       | <t>string</t>                                                    | `"primary"`                             | Defines the active color scheme of the component                                                                                                                                                            |
+| `targetKeyForOverridenStyleProps`  | No       | <t>string \| undefined</t>                                       |                                         | Identifies the part where the style props passed to the component instance should be reflected. If undefined, the style props are passed to the first part as specified in the config                       |
+| `targetKeyForOverridenNativeProps` | No       | <t>string \| undefined</t>                                       |                                         | Identifies the part where other native props (non-style props) passed to the component instance should be reflected. If undefined, the native props are passed to the first part as specified in the config |

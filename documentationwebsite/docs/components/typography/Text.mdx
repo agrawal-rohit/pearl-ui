@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Text
 ---
 
-The **Text** component is the used to render the app typography, such as headings and paragraphs, within an interface. By default, it renders a [React Native Text](https://reactnative.dev/docs/text) element.
+The `Text` component is a versatile tool for rendering typography within your application's interface. It is designed to handle a variety of text elements, such as headings and paragraphs. By default, it renders a [React Native Text](https://reactnative.dev/docs/text) element.
 
 ## Import
 
@@ -13,23 +13,24 @@ import { Text } from "pearl-ui";
 
 ## Usage
 
+The `Text` component can be used to display any text within your application. By default, the variant is set as "p3" in the default Pearl theme. Here's an example:
+
 ```jsx
-// default variant is set as "p3" in the default Pearl theme
-<Text>Heya! I am displaying some text</Text>
+<Text>Hello, I am a Text component!</Text>
 ```
 
 ### Text variants
 
-Use the `variant` prop to change the typography style of the **Text** component. You can set the value to the keys available in <t>PearlTheme.components.Text["variants"]</t>, which are <t>"h1"</t>, <t>"h2"</t>, etc. in the [default theme](../../theming/default-theme#typography).
+The `Text` component comes with a `variant` prop that allows you to change the typography style. You can set the value to the keys available in <t>PearlTheme.components.Text["variants"]</t>, which include <t>"h1"</t>, <t>"h2"</t>, and so on, as defined in the [default theme](../../theming/default-theme#typography).
 
 ```jsx
 // variant="h1" refers to the value of `theme.components.Text["variants"]["h1"]`
 <Text variant="h1">This is a heading</Text>
 ```
 
-### Override Style
+### Overriding Styles
 
-The **Text** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The `Text` component supports a wide range of style props that can be used to override the pre-defined variant style in the theme. Any manual style props passed into the component will take precedence over the [default component config](#default-component-config).
 
 ```jsx
 // variant="p1" refers to the value of `theme.components.Text["variants"]["p1"]`
@@ -42,39 +43,19 @@ The **Text** component also supports a [variety of style props](#supported-style
 ## Example
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/text-light" />
 
-</TabItem>
-
-<TabItem value="dark">
-
-<Snack snackId="@agrawal-rohit/text-dark" />
-
-</TabItem>
-</Tabs>
-
 ## Accessibility
 
-- **Text** has the `role` of `text`.
-- **Text** has the label set as the text body.
+- `Text` has the `role` of `text`.
+- `Text` has the label set as the text body.
 
-## Props
+## Component Properties
 
-### Supported style props
+### Supported Style Properties
 
-The **Text** component supports the following style props:
+The `Text` component supports the following style props:
 
 - [color and backgroundColor](../../core-features/style-props#color-and-background-color)
 - [typography](../../core-features/style-props#typography)
@@ -83,108 +64,22 @@ The **Text** component supports the following style props:
 - [margin and padding](../../core-features/style-props#margin-and-padding)
 - [textShadow](../../core-features/style-props#text-shadow)
 
-### Additional props
+### Animation Properties
+
+The `Text` component supports animation properties from the [Moti](https://moti.fyi/) library, enabling the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is used to manage these animation properties.
+
+Property         | Type          | Description
+---------------- | ------------- | -----------------------------------------------------------------------------------------
+`from`           | <t>object</t> | Defines the initial state of the animation.
+`to`             | <t>object</t> | Defines the final state of the animation.
+`transition`     | <t>object</t> | Specifies the transition type for the animation.
+`exitTransition` | <t>object</t> | Specifies the transition type when the component is unmounted.
+`state`          | <t>object</t> | Manages the overall state of the animation, including the `from` and `to` states.
+
+### Additional Properties
 
 | Name            | Required | Type                                          | Default | Description                                                             |
 | --------------- | -------- | --------------------------------------------- | ------- | ----------------------------------------------------------------------- |
-| `size`          | false    | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme.                     |
-| `variant`       | false    | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme.               |
-| `scaleFontSize` | false    | <t>boolean</t>                                | `true`  | Whether to slightly scale the font size based on the screen dimensions. |
-
-## Default Component Config
-
-```js
-export default {
-  baseStyle: {
-    color: {
-      light: "neutral.900",
-      dark: "neutral.50",
-    },
-    scaleFontSize: true,
-    letterSpacing: "m",
-  },
-  variants: {
-    h1: {
-      fontFamily: "heading",
-      fontWeight: "bold",
-      fontSize: "8xl",
-      lineHeight: "12xl",
-    },
-    h2: {
-      fontFamily: "heading",
-      fontWeight: "bold",
-      fontSize: "5xl",
-      lineHeight: "8xl",
-    },
-    t1: {
-      fontFamily: "heading",
-      fontWeight: "semibold",
-      fontSize: "2xl",
-      lineHeight: "7xl",
-    },
-    t2: {
-      fontFamily: "heading",
-      fontWeight: "semibold",
-      fontSize: "l",
-      lineHeight: "3xl",
-    },
-    st1: {
-      fontFamily: "heading",
-      fontWeight: "semibold",
-      fontSize: "m",
-      lineHeight: "2xl",
-    },
-    st2: {
-      fontFamily: "heading",
-      fontWeight: "semibold",
-      fontSize: "s",
-      lineHeight: "l",
-    },
-    p1: {
-      fontFamily: "body",
-      fontWeight: "normal",
-      fontSize: "m",
-      lineHeight: "xl",
-    },
-    p2: {
-      fontFamily: "body",
-      fontWeight: "normal",
-      fontSize: "s",
-      lineHeight: "l",
-    },
-    btn1: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "m",
-      lineHeight: "2xl",
-    },
-    btn2: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "s",
-      lineHeight: "l",
-    },
-    btn3: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "xs",
-      lineHeight: "m",
-    },
-    btn4: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "2xs",
-      lineHeight: "xs",
-    },
-    caption: {
-      fontFamily: "body",
-      fontWeight: "normal",
-      fontSize: "xs",
-      lineHeight: "m",
-    },
-  },
-  defaults: {
-    variant: "p1",
-  },
-};
-```
+| `size`          | No       | <t>PearlTheme.components.Text["sizes"]</t>    |         | Size variant to use as defined in the active theme.                     |
+| `variant`       | No       | <t>PearlTheme.components.Text["variants"]</t> | `"p1"`  | Typography variant to use as defined in the active theme.               |
+| `scaleFontSize` | No       | <t>boolean</t>                                | `true`  | Whether to slightly scale the font size based on the screen dimensions. |

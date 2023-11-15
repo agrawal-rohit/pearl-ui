@@ -1,13 +1,13 @@
 import React from "react";
 import Box, { BoxProps } from "../box/box";
 import { AtomComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 /**
  * BaseDividerProps is a type that extends BoxProps and adds properties specific to the Divider component.
  * It includes properties for length, thickness, and orientation of the divider.
  */
-export type BaseDividerProps = BoxProps & {
+type BaseDividerProps = BoxProps & {
   /** The length of the divider, can be a number or a string */
   length?: number | string;
   /** The thickness of the divider, represented as a number */

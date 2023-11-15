@@ -3,7 +3,7 @@ sidebar_position: 5
 title: Divider
 ---
 
-**Divider** is used to visually separate content in a list or group.
+The `Divider` component in Pearl UI is a versatile tool used to create a visual separation between different sections of content in a list or group. It can be customized in terms of orientation, color, size, and more.
 
 ## Import
 
@@ -14,12 +14,25 @@ import { Divider } from "pearl-ui";
 ## Usage
 
 ```jsx
+// Basic usage of Divider
 <Divider />
+
+// Customizing Divider with orientation and color
+<Divider orientation="horizontal" bgColor="red" />
+
+// Using Divider in a list
+<View>
+  <Text>Item 1</Text>
+  <Divider orientation="horizontal" />
+  <Text>Item 2</Text>
+  <Divider orientation="horizontal" />
+  <Text>Item 3</Text>
+</View>
 ```
 
-### Divider orientation
+### Changing Divider Orientation
 
-Use the `orientation` prop to change the direction of the divider.
+The `Divider`'s orientation can be changed using the `orientation` prop. This allows you to set the direction of the divider as either horizontal or vertical.
 
 ```jsx
 <Divider orientation="horizontal" />
@@ -27,46 +40,26 @@ Use the `orientation` prop to change the direction of the divider.
 <Divider orientation="vertical" />
 ```
 
-### Override Style
+### Overriding Default Styles
 
-The **Divider** component also supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined style in the theme. Manual style props passed into the component have a higher precedance than the [default component config](#default-component-config).
+The `Divider` component supports a variety of style props which can be used to override the pre-defined styles in the theme. Any manual style props passed into the component will take precedence over the default component configuration.
 
 ```jsx
-// passing style prop bgColor="red" overrides the default component config value of bgColor="neutral.300"
+// Example: Overriding the default background color
 <Divider bgColor="red" />
 ```
 
 ## Example
 
 import Snack from "../../../src/components/ExpoSnack";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-<Tabs
-  defaultValue="light"
-  values={[
-    { label: 'Light', value: 'light', },
-    { label: 'Dark', value: 'dark', },
-  ]
-}>
-<TabItem value="light">
 
 <Snack snackId="@agrawal-rohit/divider-light" />
 
-</TabItem>
+## Component Properties
 
-<TabItem value="dark">
+### Supported Style Properties
 
-<Snack snackId="@agrawal-rohit/divider-dark" />
-
-</TabItem>
-</Tabs>
-
-## Props
-
-### Supported style props
-
-The **Divider** component supports the following style props:
+The `Divider` component supports the following style props:
 
 - [backgroundColor](../../core-features/style-props#color-and-background-color) (Only `backgroundColor` props are supported, not the `color` prop)
 - [layout](../../core-features/style-props#layout)
@@ -74,7 +67,24 @@ The **Divider** component supports the following style props:
 - [opacity and visiblity](../../core-features/style-props#opacity-and-visibility)
 - [margin and padding](../../core-features/style-props#margin-and-padding)
 
-### Additional props
+### Animation Properties
+
+The `Divider` component inherits animation properties from the `Box` component, which are managed by the [Moti](https://moti.fyi/) library. This allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
+
+Property         | Type          | Description
+---------------- | ------------- | -----------------------------------------------------------------------------------------
+`from`           | <t>object</t>        | Defines the initial state of the animation.
+`to`             | <t>object</t>        | Defines the final state of the animation.
+`transition`     | <t>object</t>        | Specifies the transition type that the animation will use.
+`exitTransition` | <t>object</t>        | Determines the transition type that will be used when the component is unmounted.
+`state`          | <t>object</t>        | Manages the overall state of the animation, including the `from` and `to` states.
+
+
+
+### Additional Properties
+
+
+The `Divider` component also accepts the following additional props:
 
 | Name          | Required | Type                                             | Default        | Description                  |
 | ------------- | -------- | ------------------------------------------------ | -------------- | ---------------------------- |
@@ -83,19 +93,3 @@ The **Divider** component supports the following style props:
 | `thickness`   | false    | <t>number</t>                                    | `1`            | The thickness of the divider |
 | `length`      | false    | <t>number \| string</t>                          | `"100%"`       | The length of the divider    |
 | `orientation` | false    | <t>"horizontal" \| "vertical"</t>                | `"horizontal"` | The direction of the divider |
-
-## Default Component Config
-
-```js
-export default {
-  baseStyle: {
-    orientation: "horizontal",
-    bgColor: {
-      light: "neutral.300",
-      dark: "neutral.900",
-    },
-    thickness: 1,
-    length: "100%",
-  },
-};
-```

@@ -1,15 +1,15 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: useAtomicComponentConfig
 ---
 
-`useAtomicComponentConfig` is a custom hook used to convert an [atomic component style config](../theming/customize-theme#component-style-config) to the appropriate React Native styles.
+The `useAtomicComponentConfig` hook is a powerful tool that transforms an [atomic component style config](../theming/customize-theme#component-style-config) into a format that React Native can understand and apply.
 
-It intakes the default component config, desired size/variant configuration, and custom style props passed into a component to stitch together a final styles object in the following priority order:
+This hook takes in the default component config, the desired size/variant configuration, and any custom style props passed into a component. It then combines these inputs into a final styles object, prioritizing them in the following order:
 
 1. [Custom style props](../core-features/style-props) (Highest priority)
-1. `size`/`variant` styles in the component style config (Medium priority)
-1. `baseStyle` in the component style config (Lowest priority)
+2. `size`/`variant` styles from the component style config (Medium priority)
+3. `baseStyle` from the component style config (Lowest priority)
 
 ## Import
 
@@ -19,9 +19,9 @@ import { useAtomicComponentConfig } from "pearl-ui";
 
 ## Return value
 
-The `useAtomicComponentConfig` hook returns an object which is a combination of custom props and React Native styles computed using style props.
+The `useAtomicComponentConfig` hook returns an object that merges custom props with React Native styles computed using style props.
 
-As an example, here's what the output value looks like for the wave variant of the [Spinner](../components/feedback/Spinner#default-component-config) component:
+For instance, consider the output value for the wave variant of the [Spinner](../components/feedback/Spinner#default-component-config) component:
 
 ```json
 {
@@ -37,11 +37,11 @@ As an example, here's what the output value looks like for the wave variant of t
 }
 ```
 
-As you can see, the `color` style prop gets converted to a valid React Native style and the other props are returned without any modification. This is very powerful when you're trying to convert a third-party component to a Pearl UI compatible component.
+In this example, the `color` style prop is transformed into a valid React Native style, while the other props are returned without any changes. This functionality is particularly useful when you need to adapt a third-party component to be compatible with Pearl UI.
 
 ## Usage
 
-Let's update the `ColorView` example mentioned in the [useStyleProps](./useStyleProps#usage) section to use the component style config approach:
+To demonstrate the use of `useAtomicComponentConfig`, we will modify the `ColorView` example from the [useStyleProps](./useStyleProps#usage) section to utilize the component style config approach:
 
 ```js
 import { extendTheme } from "pearl-ui";
@@ -103,7 +103,7 @@ import {
 type ColorViewProps = BackgroundColorProps &
   BorderProps & {
     /** Variant to use as defined in the active theme */
-    variant?: keyof typeof colorViewConfig["variants"];
+    variant?: keyof (typeof colorViewConfig)["variants"];
   };
 
 const colorViewStyleFunctions = [
@@ -155,7 +155,7 @@ const ColorView = (props) => {
 </TabItem>
 </Tabs>
 
-That's it! Now, you can control the active visual style of the component using the `variant` prop:
+And there you have it! You can now control the active visual style of the component using the `variant` prop:
 
 ```jsx
 <ColorView variant="cyanBox" />
@@ -163,10 +163,10 @@ That's it! Now, you can control the active visual style of the component using t
 
 ## Parameters
 
-| Name                  | Required | Type                                                             | Default                                                            | Description                                                                                        |
-| --------------------- | -------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| `themeComponentKey`   | true     | <t>PearlTheme.components</t>                                     |                                                                    | Name of the component in theme.components who's config needs to be used                            |
-| `receivedProps`       | true     | <t>object</t>                                                    |                                                                    | Raw props passed to the component where the hook is being used                                     |
-| `sizeAndVariantProps` | false    | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined }                            | Custom size and variant configuration to use                                                       |
-| `colorScheme`         | false    | <t>string</t>                                                    | `"primary"`                                                        | Active color scheme of the component.                                                              |
-| `styleFunctions`      | false    | <t>Array of [Style Functions](../others/style-functions)</t>     | [boxStyleFunctions](../others/style-functions#box-style-functions) | List of [style functions](../others/style-functions) to use for computing the received style props |
+| Name                  | Required | Type                                                             | Default                                                            | Description                                                                                               |
+| --------------------- | -------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `themeComponentKey`   | Yes      | <t>PearlTheme.components</t>                                     |                                                                    | Identifies the component in theme.components whose configuration is to be used                            |
+| `receivedProps`       | Yes      | <t>object</t>                                                    |                                                                    | The raw props passed to the component where the hook is being used                                        |
+| `sizeAndVariantProps` | No       | <t>{size: string \| undefined, variant: string \| undefined}</t> | { size: undefined, variant: undefined }                            | Specifies custom size and variant configuration                                                           |
+| `colorScheme`         | No       | <t>string</t>                                                    | `"primary"`                                                        | Defines the active color scheme of the component                                                          |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t>     | [boxStyleFunctions](../others/style-functions#box-style-functions) | Specifies the list of [style functions](../others/style-functions) for computing the received style props |

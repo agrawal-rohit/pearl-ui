@@ -1,21 +1,20 @@
 export default {
-  parts: ["root", "outerBox", "innerBox", "text", "errorText"],
+  parts: ["container", "outerBox", "innerBox", "text"],
   baseStyle: {
-    root: {
+    container: {
       my: "2xs",
       spacing: "xs",
     },
     outerBox: {
-      errorBorderColor: "danger.500",
       borderRadius: "full",
+      borderColor: "neutral.300",
+      _invalid: {
+        borderWidth: 1,
+        borderColor: "danger.500",
+      },
     },
     innerBox: {
       borderRadius: "full",
-    },
-    errorText: {
-      variant: "caption",
-      color: "danger.500",
-      marginBottom: "2xs",
     },
   },
   sizes: {

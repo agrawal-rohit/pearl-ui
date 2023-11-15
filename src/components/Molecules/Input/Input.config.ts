@@ -1,9 +1,13 @@
 export default {
-  parts: ["root", "input", "text", "icon"],
+  parts: ["container", "input", "text", "icon"],
   baseStyle: {
-    root: {
+    container: {
       flexDirection: "row",
       alignSelf: "flex-start",
+      _invalid: {
+        borderWidth: 1,
+        borderColor: "danger.500",
+      },
     },
     text: {
       color: {
@@ -31,7 +35,7 @@ export default {
   },
   sizes: {
     xs: {
-      root: {
+      container: {
         py: "2xs",
         px: "xs",
         borderRadius: "s",
@@ -47,7 +51,7 @@ export default {
       },
     },
     s: {
-      root: {
+      container: {
         py: "xs",
         px: "xs",
         borderRadius: "s",
@@ -63,7 +67,7 @@ export default {
       },
     },
     m: {
-      root: {
+      container: {
         py: "s",
         px: "s",
         borderRadius: "m",
@@ -79,7 +83,7 @@ export default {
       },
     },
     l: {
-      root: {
+      container: {
         py: "m",
         px: "s",
         borderRadius: "m",
@@ -97,7 +101,7 @@ export default {
   },
   variants: {
     filled: {
-      root: {
+      container: {
         backgroundColor: {
           light: "neutral.200",
           dark: "neutral.900",
@@ -110,7 +114,7 @@ export default {
       },
     },
     outline: {
-      root: {
+      container: {
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",

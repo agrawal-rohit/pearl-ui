@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "text"],
+  parts: ["box", "text"],
   baseStyle: {
-    root: {
+    box: {
       backgroundColor: "primary.500",
     },
     text: {
@@ -10,7 +10,7 @@ export default {
   },
   sizes: {
     s: {
-      root: {
+      box: {
         minW: 20,
         h: 20,
       },
@@ -20,7 +20,7 @@ export default {
       },
     },
     m: {
-      root: {
+      box: {
         minW: 25,
         h: 25,
       },
@@ -30,7 +30,7 @@ export default {
       },
     },
     l: {
-      root: {
+      box: {
         minW: 30,
         h: 30,
       },
@@ -40,7 +40,7 @@ export default {
       },
     },
     xl: {
-      root: {
+      box: {
         minW: 35,
         h: 35,
       },
@@ -52,12 +52,12 @@ export default {
   },
   variants: {
     rounded: {
-      root: {
+      box: {
         borderRadius: "full",
       },
     },
     square: {
-      root: {
+      box: {
         borderRadius: "m",
       },
     },

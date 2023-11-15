@@ -1,7 +1,7 @@
 export default {
-  parts: ["root", "text"],
+  parts: ["box", "text"],
   baseStyle: {
-    root: {
+    box: {
       borderRadius: "full",
       borderWidth: 2,
       borderColor: {
@@ -12,7 +12,7 @@ export default {
   },
   sizes: {
     s: {
-      root: {
+      box: {
         width: 40,
         height: 40,
       },
@@ -21,7 +21,7 @@ export default {
       },
     },
     m: {
-      root: {
+      box: {
         width: 55,
         height: 55,
       },
@@ -32,7 +32,7 @@ export default {
       },
     },
     l: {
-      root: {
+      box: {
         width: 70,
         height: 70,
       },
@@ -43,7 +43,7 @@ export default {
       },
     },
     xl: {
-      root: {
+      box: {
         width: 85,
         height: 85,
       },

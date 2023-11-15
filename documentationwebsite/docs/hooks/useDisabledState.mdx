@@ -1,0 +1,74 @@
+---
+sidebar_position: 5
+title: useDisabledState
+---
+
+The `useDisabledState` hook is a powerful utility in Pearl UI that not only manages a disabled state but also transforms the `_disabled` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to disable events with custom styles.
+
+## Import
+
+```js
+import { useDisabledState } from "pearl-ui";
+```
+
+## Return value
+
+The `useDisabledState` hook returns an object with three properties:
+
+- `disabled`: A boolean representing the current disabled state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setDisabled`: A function that can be used to set the `disabled` state. This function updates the local state.
+- `propsWithDisabledStyles`: The props object of the component with updated styles according to the current 'disabled' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `useDisabledState` to manage a disabled state and compose extra styling while a button is disabled:
+
+```js
+import { useDisabledState } from "pearl-ui";
+import { useState } from "react";
+
+const Button = ({ isDisabled, ...props }) => {
+  // Use the hook to transform the props based on the disabled state
+  const { disabled, setDisabled, propsWithDisabledStyles } = useDisabledState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false,
+    isDisabled
+  );
+
+  // Render the button with the transformed props
+  return <button {...propsWithDisabledStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the disabled state
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  // Render the Button and a toggle button to change the disabled state
+  return (
+    <div>
+      <Button
+        isDisabled={isDisabled}
+        // Specify the styling of the component when the isDisabled value is true
+        _disabled={{ backgroundColor: "grey", color: "white" }}
+      />
+      <button onClick={() => setIsDisabled(!isDisabled)}>
+        Toggle Disabled State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useDisabledState` hook is utilized within a `Button` component. The purpose of this hook is to dynamically alter the button's background and text colors in response to changes in the `isDisabled` prop. Specifically, when `isDisabled` is set to true, the button's background color transitions to grey, and the text color changes to white.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                        |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                        |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                        |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                         |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                              |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'disabled' state instead of the local state value. |

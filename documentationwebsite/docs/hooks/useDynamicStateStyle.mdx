@@ -1,0 +1,91 @@
+---
+sidebar_position: 5
+title: useDynamicStateStyle
+---
+
+The `useDynamicStateStyle` hook is a utility in Pearl UI that allows you to manage a dynamic state and compose extra styling while a component is in a certain state.
+
+## Import
+
+```js
+import { useDynamicStateStyle } from "pearl-ui";
+```
+
+## Return value
+
+The `useDynamicStateStyle` hook returns the final props of the component with updated styles according to the current state.
+
+## Usage
+
+Here's an example of how you can use `useDynamicStateStyle` to manage a dynamic state and compose extra styling:
+
+```js
+import { useDynamicStateStyle, allStyleFunctions } from "pearl-ui";
+
+const Button = ({ isActive, ...props }) => {
+  // Use the hook to transform the props based on the active state
+  const transformedProps = useDynamicStateStyle(
+    props,
+    "_active",
+    isActive,
+    allStyleFunctions,
+    "basic",
+    false
+  );
+
+  // Render the button with the transformed props
+  return <button {...transformedProps}>Click me</button>;
+};
+
+const App = () => {
+  // Use a state variable to manage the active state
+  const [isActive, setIsActive] = useState(false);
+
+  // Render the Button and a toggle button to change the active state
+  return (
+    <div>
+      <Button
+        isActive={isActive}
+        // Specify the styling of the component when the isActive value is true
+        _active={{ backgroundColor: "tomato", color: "white" }}
+      />
+      <button onClick={() => setIsActive(!isActive)}>
+        Toggle Active State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useDynamicStateStyle` hook is utilized within a `Button` component. The purpose of this hook is to dynamically alter the button's background and text colors in response to changes in the `isActive` prop. Specifically, when `isActive` is set to true, the button's background color transitions to blue, and the text color changes to white.
+
+### Focus State
+
+The `useFocusedState` hook, a derivative of the `useDynamicStateStyle` hook, is responsible for managing the focus state of a component. It applies specific styles when the component is in focus. For a more comprehensive understanding, please refer to the [useFocusedState](../hooks/useFocusedState) documentation.
+
+### Disabled State
+
+The `useDisabledState` hook, built using the `useDynamicStateStyle` hook, handles the disabled state of a component. It applies distinct styles when the component is disabled. For additional information, please refer to the [useDisabledState](../hooks/useDisabledState) documentation.
+
+### Pressed State
+
+The `usePressedState` hook, which is created using the `useDynamicStateStyle` hook, manages the pressed state of a component. It applies unique styles when the component is pressed. For more details, please refer to the [usePressedState](../hooks/usePressedState) documentation.
+
+### Invalid State
+
+The `useInvalidState` hook, a product of the `useDynamicStateStyle` hook, controls the invalid state of a component. It applies specific styles when the component is in an invalid state. For a deeper understanding, please refer to the [useInvalidState](../hooks/useInvalidState) documentation.
+
+### Checked State
+
+The `useCheckedState` hook, developed using the `useDynamicStateStyle` hook, manages the checked state of a component. It applies distinct styles when the component is checked. For further details, please refer to the [useCheckedState](../hooks/useCheckedState) documentation.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                           |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.           |
+| `stateKey`            | Yes      | <t>string</t>                                                |                                                                    | The key of the state to manage.       |
+| `currentState`        | Yes      | <t>boolean</t>                                               |                                                                    | The current state of the component.   |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.           |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.            |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable. |

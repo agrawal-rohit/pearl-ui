@@ -5,14 +5,14 @@ import {
   MoleculeComponent,
   PearlComponent,
   StyleFunctionContainer,
-} from "../theme/src/types";
+} from "./theme/src/types";
 import React from "react";
-import { useAtomicComponentConfig } from "./useAtomicComponentConfig";
-import { boxStyleFunctions, BoxStyleProps } from "../theme/src/style-functions";
-import { useStyleProps } from "./useStyleProps";
-import { useMolecularComponentConfig } from "./useMolecularComponentConfig";
+import { useAtomicComponentConfig } from "./hooks/useAtomicComponentConfig";
+import { boxStyleFunctions, BoxStyleProps } from "./theme/src/style-functions";
+import { useStyleProps } from "./hooks/useStyleProps";
+import { useMolecularComponentConfig } from "./hooks/useMolecularComponentConfig";
 import { motify } from "moti";
-import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
+import { useMotiWithStyleProps } from "./hooks/useMotiWithStyleProps";
 
 /**
  * Configuration object that adds metadata to a component that's required by Pearl UI
@@ -37,6 +37,7 @@ interface PearlifyConfig {
  * @param Component The base component on which the pearlification has to be applied
  * @param config A configuration object that adds metadata to a component that's required by Pearl UI
  * @param styleFunctions The set of style functions that would define the style props that should be supported by the pearlified component
+ * @param moleculeConfigOptions The options for configuring the molecular component
  * @returns
  */
 export function pearlify<
@@ -51,7 +52,12 @@ export function pearlify<
     type: "basic",
     animatable: true,
   },
-  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
+  styleFunctions: StyleFunctionContainer[] = boxStyleFunctions,
+  moleculeConfigOptions: {
+    partForOverridenStyleProps?: string | undefined;
+    partForOverridenNativeProps?: string | undefined;
+    partForOverridenAnimationProps?: string | undefined;
+  } = {}
 ) {
   /**
    * The final component that will be returned
@@ -62,7 +68,7 @@ export function pearlify<
      * Class component that wraps the base component and adds animation functionality
      */
     class ConvertedClassComponent extends React.Component<any, any> {
-      static displayName = `PearlMoti${Component.name}` || `NoName`;
+      static displayName = `PearlMoti${Component.name ?? `NoName`}`;
 
       render() {
         const { children, ...props } = this.props;
@@ -125,7 +131,10 @@ export function pearlify<
             variant: (rest as any).variant,
           },
           rest.colorScheme,
-          styleFunctions
+          styleFunctions,
+          moleculeConfigOptions.partForOverridenStyleProps,
+          moleculeConfigOptions.partForOverridenNativeProps,
+          moleculeConfigOptions.partForOverridenAnimationProps
         );
       } else {
         convertedProps = useStyleProps(rest, styleFunctions);

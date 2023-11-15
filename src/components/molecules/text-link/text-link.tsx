@@ -2,7 +2,7 @@ import React from "react";
 import Text from "../../atoms/text/text";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../hooks/pearlify";
+import { pearlify } from "../../../pearlify";
 
 export type BaseTextLinkProps = PressableProps & {
   children?: string;
@@ -16,16 +16,12 @@ const CustomTextLink = React.forwardRef(
     }: MoleculeComponentProps<"TextLink", BaseTextLinkProps>,
     ref: any
   ) => {
-    const {
-      colorScheme = "primary",
-      isDisabled = false,
-      atoms,
-      ...props
-    } = rest;
+    const { atoms } = rest;
+    const isDisabled = atoms.container.isDisabled ?? false;
 
     return (
       <Pressable
-        {...props}
+        {...atoms.container}
         ref={ref}
         isDisabled={isDisabled}
         opacity={isDisabled ? 0.5 : 1}
