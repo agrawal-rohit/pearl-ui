@@ -48,7 +48,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/config-conventional": "^18.4.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@testing-library/react-native": "^12.3.0",
