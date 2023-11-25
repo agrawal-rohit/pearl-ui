@@ -50,10 +50,10 @@ export type InputProps = Omit<
     isDisabled?: boolean;
     /** Whether the input field should span the entire width of the parent container */
     isFullWidth?: boolean;
-    /** Whether the input field should display a clear button */
-    hasClearButton?: boolean;
     /** Whether there the input field is in an error state */
     isInvalid?: boolean;
+    /** Whether the input field should display a clear button */
+    hasClearButton?: boolean;
     /** Icon to display on the left side of the text input */
     leftIcon?: React.ReactElement;
     /** Icon to display on the right side of the text input */

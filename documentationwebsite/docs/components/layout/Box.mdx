@@ -3,6 +3,15 @@ sidebar_position: 1
 title: Box
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/box/box.tsx"
+  />
+</div>
+
 The `Box` component is a fundamental building block in the Pearl UI library. It is a highly abstract component that serves as the foundation for all other components in Pearl UI. By default, it renders a [React Native View](https://reactnative.dev/docs/view) element.
 
 The Box component enhances the development experience by providing the following benefits
@@ -50,11 +59,10 @@ The `Box` component supports the following style props:
 
 The `Box` component also supports animation properties from the [Moti](https://moti.fyi/) library, which allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
 
-Property         | Type          | Description
----------------- | ------------- | -----------------------------------------------------------------------------------------
-`from`           | <t>object</t>        | Defines the starting state of the animation.
-`to`             | <t>object</t>        | Defines the ending state of the animation.
-`transition`     | <t>object</t>        | Specifies the type of transition that the animation will use.
-`exitTransition` | <t>object</t>        | Determines the transition type that will be used when the component is unmounted.
-`state`          | <t>object</t>        | Manages the overall state of the animation, including the `from` and `to` states.
-
+| Property         | Type          | Description                                                                       |
+| ---------------- | ------------- | --------------------------------------------------------------------------------- |
+| `from`           | <t>object</t> | Defines the starting state of the animation.                                      |
+| `to`             | <t>object</t> | Defines the ending state of the animation.                                        |
+| `transition`     | <t>object</t> | Specifies the type of transition that the animation will use.                     |
+| `exitTransition` | <t>object</t> | Determines the transition type that will be used when the component is unmounted. |
+| `state`          | <t>object</t> | Manages the overall state of the animation, including the `from` and `to` states. |

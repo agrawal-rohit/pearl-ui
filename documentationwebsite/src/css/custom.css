@@ -117,7 +117,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Stack"]:after,
 .menu__link[href*="Divider"]:after,
 .menu__link[href*="Spacer"]:after,
-.menu__link[href*="Text"]:after,
+.menu__link[href*="Text"]:not([href*="Text Link"]):after,
 .menu__link[href*="Screen"]:after,
 .menu__link[href*="Icon"]:after,
 .menu__link[href*="Pressable"]:after,
@@ -144,6 +144,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Avatar"]:after,
 .menu__link[href*="Button"]:after,
 .menu__link[href*="Input"]:after,
+.menu__link[href*="Text Link"]:after,
 .menu__link[href*="CheckBox"]:after,
 .menu__link[href*="Radio"]:after,
 .menu__link[href*="Badge"]:after {

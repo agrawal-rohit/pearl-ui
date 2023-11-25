@@ -3,6 +3,20 @@ sidebar_position: 5
 title: CheckBox
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/checkbox/checkbox.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/checkbox/checkbox.config.ts"
+  />
+</div>
+
 The `CheckBox` component is a versatile and customizable input control that allows users to select one or more options from a set. It is commonly used in forms and surveys.
 
 ## Import
@@ -228,9 +242,9 @@ Here is a list of additional properties that the `CheckBox` component supports:
 | `checkedIconName`         | No       | <t>string</t>                                                                                                                                                                                                                           | "checkmark"      | Sets the name of the icon when the checkbox is in checked state.             |
 | `indeterminateIconFamily` | No       | <t>"AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> | "Ionicons"       | Sets the family of the icon when the checkbox is in indeterminate state.     |
 | `indeterminateIconName`   | No       | <t>string</t>                                                                                                                                                                                                                           | "remove-outline" | Sets the name of the icon when the checkbox is in indeterminate state.       |
-| `_checked`                | No       | <t>object</t>                                                                                                                                                                                                                           | `{}`             | Style properties that are applied when the component is in a focused state.  |
-| `_disabled`               | No       | <t>object</t>                                                                                                                                                                                                                           | `{}`             | Style properties that are applied when the component is in a disabled state. |
+| `_checked`                | No       | <t>object</t>                                                                                                                                                                                                                           | `{}`             | Style properties that are applied when the component is in a checked state.  |
 | `_invalid`                | No       | <t>object</t>                                                                                                                                                                                                                           | `{}`             | Style properties that are applied when the component is in an invalid state. |
+| `_disabled`               | No       | <t>object</t>                                                                                                                                                                                                                           | `{}`             | Style properties that are applied when the component is in a disabled state. |
 
 ## CheckBoxGroup Properties
 

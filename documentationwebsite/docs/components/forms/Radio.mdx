@@ -3,6 +3,20 @@ sidebar_position: 6
 title: Radio
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/radio/radio.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/radio/radio.config.ts"
+  />
+</div>
+
 The `Radio` component is a user interface element that allows the user to select a single option from a list of choices. It is commonly used in forms and surveys.
 
 ## Import
@@ -161,33 +175,19 @@ The `Radio` component is composed from the [Stack](../layout/Stack) component, w
 
 Here is a list of additional properties that can be used with the `Radio` component:
 
-| Name                       | Required | Type                                           | Default         | Description                                                                  |
-| -------------------------- | -------- | ---------------------------------------------- | --------------- | ---------------------------------------------------------------------------- |
-| `size`                     | No       | <t>PearlTheme.components.Radio["sizes"]</t>    | `"m"`           | Defines the size of the radio.                                               |
-| `variant`                  | No       | <t>PearlTheme.components.Radio["variants"]</t> | `"filled"`      | Defines the variant of the radio.                                            |
-| `value`                    | No       | <t>string \| number \| undefined</t>           |                 | Defines the value of the radio if it is part of a group.                     |
-| `isDisabled`               | No       | <t>boolean</t>                                 | `false`         | Indicates whether the radio is disabled.                                     |
-| `isChecked`                | No       | <t>boolean</t>                                 | `false`         | Indicates whether the radio is in a checked state.                           |
-| `isInvalid`                | No       | <t>boolean</t>                                 | `false`         | Indicates whether the radio is in an error state.                            |
-| `errorMessage`             | No       | <t>string</t>                                  |                 | Defines the error message to be displayed if the radio is in an error state. |
-| `colorScheme`              | No       | <t>PearlTheme.palette</t>                      | `"primary"`     | Defines the active color palette of the radio.                               |
-| `spacing`                  | No       | <t>PearlTheme.spacing</t>                      | `"xs"`          | Defines the spacing between the radio and the label text.                    |
-| `checkedBackgroundColor`   | No       | <t>PearlTheme.palette</t>                      | `"primary.500"` | Defines the background color of the radio when it is in checked state.       |
-| `checkedBorderColor`       | No       | <t>PearlTheme.palette</t>                      | `"primary.500"` | Defines the border color of the radio when it is in checked state.           |
-| `checkedBorderStartColor`  | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border start color of the radio when it is in checked state.     |
-| `checkedBorderEndColor`    | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border end color of the radio when it is in checked state.       |
-| `checkedBorderTopColor`    | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border top color of the radio when it is in checked state.       |
-| `checkedBorderLeftColor`   | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border left color of the radio when it is in checked state.      |
-| `checkedBorderRightColor`  | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border right color of the radio when it is in checked state.     |
-| `checkedBorderBottomColor` | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border bottom color of the radio when it is in checked state.    |
-| `errorBackgroundColor`     | No       | <t>PearlTheme.palette</t>                      |                 | Defines the background color of the radio when it is in an error state.      |
-| `errorBorderColor`         | No       | <t>PearlTheme.palette</t>                      | `"danger.500"`  | Defines the border color of the radio when it is in an error state.          |
-| `errorBorderStartColor`    | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border start color of the radio when it is in an error state.    |
-| `errorBorderEndColor`      | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border end color of the radio when it is in an error state.      |
-| `errorBorderTopColor`      | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border top color of the radio when it is in an error state.      |
-| `errorBorderLeftColor`     | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border left color of the radio when it is in an error state.     |
-| `errorBorderRightColor`    | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border right color of the radio when it is in an error state.    |
-| `errorBorderBottomColor`   | No       | <t>PearlTheme.palette</t>                      |                 | Defines the border bottom color of the radio when it is in an error state.   |
+| Name          | Required | Type                                           | Default     | Description                                                                  |
+| ------------- | -------- | ---------------------------------------------- | ----------- | ---------------------------------------------------------------------------- |
+| `size`        | No       | <t>PearlTheme.components.Radio["sizes"]</t>    | `"m"`       | Defines the size of the radio.                                               |
+| `variant`     | No       | <t>PearlTheme.components.Radio["variants"]</t> | `"filled"`  | Defines the variant of the radio.                                            |
+| `value`       | No       | <t>string \| number \| undefined</t>           |             | Defines the value of the radio if it is part of a group.                     |
+| `isDisabled`  | No       | <t>boolean</t>                                 | `false`     | Indicates whether the radio is disabled.                                     |
+| `isChecked`   | No       | <t>boolean</t>                                 | `false`     | Indicates whether the radio is in a checked state.                           |
+| `isInvalid`   | No       | <t>boolean</t>                                 | `false`     | Indicates whether the radio is in an error state.                            |
+| `colorScheme` | No       | <t>PearlTheme.palette</t>                      | `"primary"` | Defines the active color palette of the radio.                               |
+| `spacing`     | No       | <t>PearlTheme.spacing</t>                      | `"xs"`      | Defines the spacing between the radio and the label text.                    |
+| `_checked`    | No       | <t>object</t>                                  | `{}`        | Style properties that are applied when the component is in a checked state.  |
+| `_invalid`    | No       | <t>object</t>                                  | `{}`        | Style properties that are applied when the component is in an invalid state. |
+| `_disabled`   | No       | <t>object</t>                                  | `{}`        | Style properties that are applied when the component is in a disabled state. |
 
 ## RadioGroup Component Properties
 
@@ -205,6 +205,6 @@ Here is a list of additional properties that can be used with the `RadioGroup` c
 | `variant`      | No       | <t>PearlTheme.components.Radio["variants"]</t> | `"filled"`  | Defines the variant of all the children radio in the group.                     |
 | `value`        | No       | <t>string \| number</t>                        |             | Defines the active value of the radio group.                                    |
 | `defaultValue` | No       | <t>string \| number</t>                        |             | Defines the default active value of the radio group.                            |
-| `onChange`     | No       | <t>(value: string \| number) => void</t>       |             | Defines the method that gets invoked when the value of the radio group changes. |
+| `onChange`     | No       | <t>(value: string \| number) =&gt; void</t>    |             | Defines the method that gets invoked when the value of the radio group changes. |
 | `isDisabled`   | No       | <t>boolean</t>                                 | `false`     | Indicates whether the radio group is disabled.                                  |
 | `colorScheme`  | No       | <t>PearlTheme["palette"]</t>                   | `"primary"` | Defines the active color palette of all the children radio in the group.        |

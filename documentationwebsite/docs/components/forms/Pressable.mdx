@@ -3,6 +3,15 @@ sidebar_position: 1
 title: Pressable
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/pressable/pressable.tsx"
+  />
+</div>
+
 The `Pressable` component is a wrapper around the [React Native Pressable](https://reactnative.dev/docs/pressable) component. It is designed to incorporate Pearl style props, making it a versatile tool for creating interactive components such as buttons, links, and more.
 
 ## Importing the Component
@@ -92,5 +101,5 @@ import Snack from "../../../src/components/ExpoSnack";
 | `androidRippleConfig`     | No       | <t>{ color: PearlTheme["palette"], borderless: boolean, radius: number, foreground: boolean }</t> | { color: "#E4E9F2", borderless: false }      | Configures the ripple effect for the android_ripple property.                                                                   |
 | `isDisabledAndroidRipple` | No       | <t>boolean</t>                                                                                    | `false`                                      | If true, the Android ripple effect is enabled and its properties are configured.                                                |
 | `actionDescription`       | No       | <t>string</t>                                                                                     |                                              | A short description of the action that occurs when this element is interacted with (Used for accessibility).                    |
-| `_pressed`                | No       | <t>object</t>                                                                                    | `{}`                                      | Style properties that are applied when the component is in a pressed state. |
-| `_disabled`               | No       | <t>object</t>                                                                                    | `{}`                                      | Style properties that are applied when the component is in a disabled state. |
+| `_pressed`                | No       | <t>object</t>                                                                                     | `{}`                                         | Style properties that are applied when the component is in a pressed state.                                                     |
+| `_disabled`               | No       | <t>object</t>                                                                                     | `{}`                                         | Style properties that are applied when the component is in a disabled state.                                                    |

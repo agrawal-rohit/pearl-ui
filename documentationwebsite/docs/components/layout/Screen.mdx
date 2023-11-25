@@ -3,6 +3,20 @@ sidebar_position: 3
 title: Screen
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/screen/screen.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/screen/screen.config.ts"
+  />
+</div>
+
 The `Screen` component is a versatile layout tool designed to wrap all views in your application. It is built on top of the [Box](./box) element and implements a [React Native SafeAreaView](https://reactnative.dev/docs/safeareaview), ensuring that your content is always within the safe areas of the device. This is particularly useful for maintaining accessibility on devices with rounded corners or camera notches.
 
 ## Import

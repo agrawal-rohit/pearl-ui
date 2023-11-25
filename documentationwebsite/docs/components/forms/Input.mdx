@@ -3,6 +3,20 @@ sidebar_position: 4
 title: Input
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/input/input.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/input/input.config.ts"
+  />
+</div>
+
 The `Input` component in Pearl UI is a versatile and customizable element used to gather user input in a text field. It supports various sizes, variants, color schemes, and additional features like icons and clear buttons. By default, it renders a text field with a medium size and filled variant.
 
 ## Import
@@ -163,22 +177,21 @@ The `Input` component is a composition of the [Box](../layout/Box) component, wh
 
 ### Additional Properties
 
-The `Input` component  also composes the [TextInput](https://reactnative.dev/docs/textinput) component from React Native. This means that all the [TextInput](https://reactnative.dev/docs/textinput) props are supported, in addition to the following extra props:
+The `Input` component also composes the [TextInput](https://reactnative.dev/docs/textinput) component from React Native. This means that all the [TextInput](https://reactnative.dev/docs/textinput) props are supported, in addition to the following extra props:
 
-| Name                     | Required | Type                                           | Default         | Description                                                                     |
-| ------------------------ | -------- | ---------------------------------------------- | --------------- | ------------------------------------------------------------------------------- |
-| `size`                   | No       | <t>PearlTheme.components.Input["sizes"]</t>    | `"m"`           | Determines the size of the input field.                                         |
-| `variant`                | No       | <t>PearlTheme.components.Input["variants"]</t> | `"filled"`      | Defines the variant of the input field.                                         |
-| `isDisabled`             | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will be disabled.                             |
-| `isFullWidth`            | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will occupy the full width of its container.  |
-| `isInvalid`              | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will be in an error state.                    |
-| `colorScheme`            | No       | <t>PearlTheme["palette"]</t>                   | `"primary"`     | Determines the active color palette of the input field.                         |
-| `hasClearButton`         | No       | <t>boolean</t>                                 | `false`         | If set to `true`, a clear button will be displayed in the input field.          |
-| `leftIcon`               | No       | <t>React.ReactElement</t>                      | `null`          | Specifies an icon to be displayed on the left side of the input field.          |
-| `rightIcon`              | No       | <t>React.ReactElement</t>                      | `null`          | Specifies an icon to be displayed on the right side of the input field.         |
-| `placeholderTextColor`   | No       | <t>PearlTheme["palette"]</t>                   | `"neutral.500"` | Determines the color of the placeholder text.                                   |
-| `selectionColor`         | No       | <t>PearlTheme["palette"]</t>                   | `"primary.500"` | Determines the color of the highlight and cursor.                               |
-| `_focused`                | No       | <t>object</t>                                  | `{}`         | Style properties that are applied when the component is in a focused state.     |
-| `_disabled`               | No       | <t>object</t>                                  | `{}`         | Style properties that are applied when the component is in a disabled state.    |
-| `_invalid`                | No       | <t>object</t>                                  | `{}`         | Style properties that are applied when the component is in an invalid state.    |
-
+| Name                   | Required | Type                                           | Default         | Description                                                                    |
+| ---------------------- | -------- | ---------------------------------------------- | --------------- | ------------------------------------------------------------------------------ |
+| `size`                 | No       | <t>PearlTheme.components.Input["sizes"]</t>    | `"m"`           | Determines the size of the input field.                                        |
+| `variant`              | No       | <t>PearlTheme.components.Input["variants"]</t> | `"filled"`      | Defines the variant of the input field.                                        |
+| `isDisabled`           | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will be disabled.                            |
+| `isFullWidth`          | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will occupy the full width of its container. |
+| `isInvalid`            | No       | <t>boolean</t>                                 | `false`         | If set to `true`, the input field will be in an error state.                   |
+| `colorScheme`          | No       | <t>PearlTheme["palette"]</t>                   | `"primary"`     | Determines the active color palette of the input field.                        |
+| `hasClearButton`       | No       | <t>boolean</t>                                 | `false`         | If set to `true`, a clear button will be displayed in the input field.         |
+| `leftIcon`             | No       | <t>React.ReactElement</t>                      | `null`          | Specifies an icon to be displayed on the left side of the input field.         |
+| `rightIcon`            | No       | <t>React.ReactElement</t>                      | `null`          | Specifies an icon to be displayed on the right side of the input field.        |
+| `placeholderTextColor` | No       | <t>PearlTheme["palette"]</t>                   | `"neutral.500"` | Determines the color of the placeholder text.                                  |
+| `selectionColor`       | No       | <t>PearlTheme["palette"]</t>                   | `"primary.500"` | Determines the color of the highlight and cursor.                              |
+| `_focused`             | No       | <t>object</t>                                  | `{}`            | Style properties that are applied when the component is in a focused state.    |
+| `_disabled`            | No       | <t>object</t>                                  | `{}`            | Style properties that are applied when the component is in a disabled state.   |
+| `_invalid`             | No       | <t>object</t>                                  | `{}`            | Style properties that are applied when the component is in an invalid state.   |

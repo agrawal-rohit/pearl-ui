@@ -3,6 +3,20 @@ sidebar_position: 5
 title: Divider
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/divider/divider.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/divider/divider.config.ts"
+  />
+</div>
+
 The `Divider` component in Pearl UI is a versatile tool used to create a visual separation between different sections of content in a list or group. It can be customized in terms of orientation, color, size, and more.
 
 ## Import
@@ -71,18 +85,15 @@ The `Divider` component supports the following style props:
 
 The `Divider` component inherits animation properties from the `Box` component, which are managed by the [Moti](https://moti.fyi/) library. This allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
 
-Property         | Type          | Description
----------------- | ------------- | -----------------------------------------------------------------------------------------
-`from`           | <t>object</t>        | Defines the initial state of the animation.
-`to`             | <t>object</t>        | Defines the final state of the animation.
-`transition`     | <t>object</t>        | Specifies the transition type that the animation will use.
-`exitTransition` | <t>object</t>        | Determines the transition type that will be used when the component is unmounted.
-`state`          | <t>object</t>        | Manages the overall state of the animation, including the `from` and `to` states.
-
-
+| Property         | Type          | Description                                                                       |
+| ---------------- | ------------- | --------------------------------------------------------------------------------- |
+| `from`           | <t>object</t> | Defines the initial state of the animation.                                       |
+| `to`             | <t>object</t> | Defines the final state of the animation.                                         |
+| `transition`     | <t>object</t> | Specifies the transition type that the animation will use.                        |
+| `exitTransition` | <t>object</t> | Determines the transition type that will be used when the component is unmounted. |
+| `state`          | <t>object</t> | Manages the overall state of the animation, including the `from` and `to` states. |
 
 ### Additional Properties
-
 
 The `Divider` component also accepts the following additional props:
 

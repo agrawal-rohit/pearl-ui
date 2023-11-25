@@ -3,6 +3,20 @@ sidebar_position: 1
 title: Icon
 ---
 
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts"
+  />
+</div>
+
 The `Icon` component is a versatile tool for adding [Expo Icons](https://icons.expo.fyi/) to your application. It offers customization options through the use of [style props](../../core-features/style-props).
 
 ## Import
@@ -78,13 +92,13 @@ The `Icon` component supports the following style props:
 
 The `Icon` component supports animation properties from the [Moti](https://moti.fyi/) library, enabling the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is used to manage these animation properties.
 
-Property         | Type          | Description
----------------- | ------------- | -----------------------------------------------------------------------------------------
-`from`           | <t>object</t> | Sets the initial state of the animation.
-`to`             | <t>object</t> | Sets the final state of the animation.
-`transition`     | <t>object</t> | Defines the transition type for the animation.
-`exitTransition` | <t>object</t> | Specifies the transition type when the component is unmounted.
-`state`          | <t>object</t> | Manages the animation's overall state, including the `from` and `to` states.
+| Property         | Type          | Description                                                                  |
+| ---------------- | ------------- | ---------------------------------------------------------------------------- |
+| `from`           | <t>object</t> | Sets the initial state of the animation.                                     |
+| `to`             | <t>object</t> | Sets the final state of the animation.                                       |
+| `transition`     | <t>object</t> | Defines the transition type for the animation.                               |
+| `exitTransition` | <t>object</t> | Specifies the transition type when the component is unmounted.               |
+| `state`          | <t>object</t> | Manages the animation's overall state, including the `from` and `to` states. |
 
 ### Additional Properties
 

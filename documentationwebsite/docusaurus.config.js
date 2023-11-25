@@ -6,7 +6,7 @@
       "Pearl UI - Build accessible mobile apps with a design-first approach",
     tagline:
       "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
-    url: "https://www.pearl-ui.dev/",
+    url: "https://docs.pearl-ui.dev/",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -15,7 +15,6 @@
     projectName: "pearl-ui", // Usually your repo name.
     plugins: ["docusaurus-plugin-react-native-web"],
     themes: ["@docusaurus/theme-live-codeblock"],
-
     presets: [
       [
         "@docusaurus/preset-classic",
@@ -33,7 +32,6 @@
         }),
       ],
     ],
-
     themeConfig:
       /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
