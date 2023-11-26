@@ -107,7 +107,7 @@ These examples demonstrate the flexibility and power of Pearl UI's animation sup
 
 ### Animating Components Based on State
 
-This section provides an example of how to animate a component based on its state using the [useFocusedState](../hooks/useFocusedState) hook. The component's background color changes depending on the focused state of an input field. It's important to note that the `useFocusedState` hook must be used within the [`ThemeProvider`](./components/ThemeProvider.mdx) context.
+This section provides an example of how to animate a component based on its state using the [useFocusedState](../hooks/useFocusedState) hook. The component's background color changes depending on the focused state of an input field. It's important to note that the `useFocusedState` hook must be used within the `ThemeProvider` context.
 
 ```jsx
 import React, { useState } from "react";
@@ -165,3 +165,69 @@ const App = () => {
 ```
 
 This example showcases the use of the [useFocusedState](../hooks/useFocusedState) hook to dynamically alter the style of a component based on the focused state of an input field. This allows for more interactive and responsive UI elements.
+
+## Animation Variants
+
+Pearl UI provides a powerful way to create and manage animations using the [useAnimationState](../hooks/useAnimationState) function. This function allows you to define animation states and apply them to your components, creating dynamic and engaging user interfaces.
+
+Here are some common animations provided in Pearl UI:
+
+### Fade-In Animation
+
+The Fade-In animation gradually increases the opacity of an element from 0 to 1, causing it to slowly appear over time. This is useful for highlighting new elements or creating smooth transitions when elements enter the screen.
+
+```jsx
+import { useFade } from "pearl-ui";
+
+const fadeInAnimationState = useFade();
+
+return <Box w={30} h={100} bgColor="pink" state={fadeInAnimationState} />;
+```
+
+### Scale Fade Animation
+
+The Scale Fade animation combines scaling and fading effects. The element starts at half its original size and completely transparent, then scales up to its full size while becoming fully opaque. This creates a dynamic entrance effect.
+
+```jsx
+import { useScaleFade } from "pearl-ui";
+
+const scaleFadeAnimationState = useScaleFade();
+
+return <Box w={30} h={100} bgColor="pink" state={scaleFadeAnimationState} />;
+```
+
+### Slide Animation
+
+The Slide animation moves an element from off-screen to its final position on the screen, creating a sense of motion and progress. This is useful for sequentially revealing elements.
+
+```jsx
+import { useSlide } from "pearl-ui";
+
+const slideAnimationState = useSlide();
+
+return <Box w={30} h={100} bgColor="pink" state={slideAnimationState} />;
+```
+
+### Slide Fade Animation
+
+The Slide Fade animation combines sliding and fading effects. The element starts off-screen and completely transparent, then moves to its final position on the screen while becoming fully opaque. This creates a dynamic and engaging entrance effect.
+
+```jsx
+import { useSlideFade } from "pearl-ui";
+
+const slideFadeAnimationState = useSlideFade();
+
+return <Box w={30} h={100} bgColor="pink" state={slideFadeAnimationState} />;
+```
+
+### Collapse Animation
+
+The Collapse animation reduces the height of an element to zero, creating a collapsing effect. This is useful for hiding elements or creating accordion-style interactions.
+
+```jsx
+import { useCollapse } from "pearl-ui";
+
+const collapseAnimationState = useCollapse();
+
+return <Box w={30} h={100} bgColor="pink" state={collapseAnimationState} />;
+```

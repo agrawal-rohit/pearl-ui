@@ -179,7 +179,8 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="usePressedState"]:before,
 .menu__link[href*="useDisabledState"]:before,
 .menu__link[href*="useCheckedState"]:before,
-.menu__link[href*="useInvalidState"]:before {
+.menu__link[href*="useInvalidState"]:before,
+.menu__link[href*="useAnimationState"]:before {
   content: "New";
   display: inline-block;
   position: absolute;

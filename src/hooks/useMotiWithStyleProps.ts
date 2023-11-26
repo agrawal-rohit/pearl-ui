@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { getKeys } from "../theme/utils/type-helpers";
 import { StyleFunctionContainer } from "../theme/src/types";
-import _, { keys } from "lodash";
 import { useTheme } from "./useTheme";
 import { useDimensions } from "./useDimensions";
 import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
@@ -9,6 +8,7 @@ import {
   layoutPropertiesShorthand,
   spacingPropertiesShorthand,
 } from "../theme/src/style-properties";
+import _ from "lodash";
 
 const shorthandPropMapper = {
   ...layoutPropertiesShorthand,
@@ -156,20 +156,6 @@ export const useMotiWithStyleProps = (
         [finalKey]: propsWithObjectValues[key],
       };
     }, props.exitTransition);
-  }
-
-  // Convert 'state' prop
-  if (props.state) {
-    const stateKeys = getKeys(props.state);
-    props.state = stateKeys.reduce((convertedState, key) => {
-      return {
-        ...convertedState,
-        [key]: composeCleanStyleProps(props.state[key], buildStyleProperties, {
-          theme,
-          dimensions,
-        }),
-      };
-    }, {});
   }
 
   return props;
