@@ -24,7 +24,7 @@
             sidebarPath: require.resolve("./sidebars.js"),
             sidebarCollapsible: false,
             editUrl:
-              "https://github.com/agrawal-rohit/pearl-ui/tree/main/documentationwebsite/",
+              "https://github.com/agrawal-rohit/pearl-ui/tree/main/documentation/",
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
@@ -42,6 +42,7 @@
         },
         image: "img/logo.png",
         algolia: {
+          // deepcode ignore HardcodedNonCryptoSecret: <please specify a reason of ignoring this>
           apiKey: "92c72ce8bc4acdda47492dbbe56f0e2d",
           indexName: "pearl-ui",
           contextualSearch: true,

@@ -147,7 +147,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/agrawa
 
 We use the [Docusaurus V2](https://docusaurus.io/) framework to manage documentation for Pearl UI. It uses the popular [MDX](https://mdxjs.com/) format to provide easy formatting and modern functionality.
 
-Once you get acquainted with them, you may then start adding and updating files in the [documentation section](https://github.com/agrawal-rohit/pearl-ui/tree/main/documentationwebsite/docs).
+Once you get acquainted with them, you may then start adding and updating files in the [documentation section](https://github.com/agrawal-rohit/pearl-ui/tree/main/documentation/docs).
 
 ## Styleguides
 

@@ -95,9 +95,14 @@ const CustomScreen = React.forwardRef(
         const functionValue = await onPullToRefresh();
         let isPromise = functionValue instanceof Promise;
         if (isPromise)
-          Promise.resolve(functionValue).then(() => {
-            setRefreshing(false);
-          });
+          Promise.resolve(functionValue)
+            .then(() => {
+              setRefreshing(false);
+            })
+            .catch((error) => {
+              console.error(error);
+              setRefreshing(false);
+            });
         else {
           setRefreshing(false);
         }

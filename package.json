@@ -99,7 +99,7 @@
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/",
-      "<rootDir>/documentationwebsite/"
+      "<rootDir>/documentation/"
     ]
   },
   "files": [
