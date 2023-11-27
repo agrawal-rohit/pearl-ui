@@ -33,7 +33,7 @@ import { Button } from "pearl-ui";
 
 ### Button sizes
 
-The `size` prop allows you to adjust the size of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/button/button.config.ts).
 
 ```jsx
 <Button size="xs">Tiny Button</Button>
@@ -47,7 +47,7 @@ The `size` prop allows you to adjust the size of the button. The value for this 
 
 ### Button variants
 
-The `variant` prop allows you to change the visual style of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default theme](#default-component-config).
+The `variant` prop allows you to change the visual style of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.Button["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/button/button.config.ts).
 
 ```jsx
 <Button variant="solid">Solid Button</Button>
@@ -116,12 +116,12 @@ To maintain the native ripple effect on Android devices, `Button` provides a def
 
 ### Overriding Styles
 
-The `Button` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component config](#default-component-config).
+The `Button` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/button/button.config.ts).
 
 ```jsx
-// passing style prop m="xl" overrides the default component config value of m="2xs"
+// passing style prop m="8" overrides the default component config value of m="1"
 // passing style prop boxShadow="xl" adds a box shadow to the button
-<Button m="xl" boxShadow="3xl" variant="outline" />
+<Button m="8" boxShadow="3xl" variant="outline" />
 ```
 
 ## Example

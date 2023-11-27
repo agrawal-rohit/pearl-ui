@@ -5,28 +5,29 @@ export default {
       activeOpacity: 0.8,
     },
     text: {
+      fontWeight: 500,
       color: "primary.500",
     },
   },
   sizes: {
     xs: {
       text: {
-        variant: "btn4",
+        variant: "p4",
       },
     },
     s: {
       text: {
-        variant: "btn3",
+        variant: "p3",
       },
     },
     m: {
       text: {
-        variant: "btn2",
+        variant: "p2",
       },
     },
     l: {
       text: {
-        variant: "btn1",
+        variant: "p1",
       },
     },
   },

@@ -12,7 +12,7 @@ describe("composeStyleProps", () => {
   it("composes properties from style functions correctly", () => {
     const props = {
       bgColor: "red",
-      p: "xs",
+      p: "1.5",
       zIndex: "base",
       position: "absolute",
     };

@@ -36,7 +36,6 @@ const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
 
       return (
         <Box
-          alignSelf="stretch"
           flexDirection={rest.direction === "horizontal" ? "row" : "column"}
           mr={
             !isLast
@@ -54,7 +53,6 @@ const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
           }
         >
           {React.cloneElement(child as ReactElement)}
-
           {rest.divider &&
             !isLast &&
             React.cloneElement(rest.divider, {

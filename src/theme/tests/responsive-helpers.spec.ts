@@ -10,7 +10,7 @@ describe("isResponsiveObjectValue", () => {
   it("returns false for a regular object", () => {
     const object = {
       bgColor: "red",
-      p: "xs",
+      p: "1.5",
     };
 
     const result = isResponsiveObjectValue(object, baseTheme);
@@ -21,7 +21,7 @@ describe("isResponsiveObjectValue", () => {
     const object = {
       phone: {
         bgColor: "red",
-        p: "xs",
+        p: "1.5",
       },
       tablet: {
         bgColor: "pink",
@@ -38,7 +38,7 @@ describe("getValueForScreenSize", () => {
   const object = {
     phone: {
       bgColor: "red",
-      p: "xs",
+      p: "1.5",
     },
     longPhone: {
       bgColor: "navy",
@@ -72,7 +72,7 @@ describe("getValueForScreenSize", () => {
     });
     expect(result).toMatchObject({
       bgColor: "red",
-      p: "xs",
+      p: "1.5",
     });
   });
 

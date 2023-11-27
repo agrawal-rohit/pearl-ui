@@ -44,7 +44,7 @@ The `Avatar` component can display a local user image or a user image from a rem
 
 ### Avatar Sizes
 
-The `size` prop can be used to adjust the size of the avatar. The available sizes are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
+The `size` prop can be used to adjust the size of the avatar. The available sizes are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/avatar/avatar.config.ts).
 
 ```jsx
 <Avatar
@@ -107,7 +107,7 @@ If both the `fallbackComponent` and `fallbackSource` props are specified, the `f
 The `AvatarGroup` component can be used to display a group of avatars. It allows you to limit the number of avatars displayed and adjust the spacing between them.
 
 ```jsx
-<AvatarGroup spacing="2xl" max={2} truncatedBackgroundColor="neutral.200">
+<AvatarGroup spacing="10" max={2} truncatedBackgroundColor="neutral.200">
   <Avatar
     name="Rohit Agrawal"
     src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
@@ -173,7 +173,7 @@ const firstNameTwoLetters = (name: string) => `${name[0]}${name[1]}`.toUpperCase
 The `Avatar` component supports a variety of style props which can be used to override the pre-defined component style in the theme.
 
 ```jsx
-<Avatar mt="xl" borderRadius="m" />
+<Avatar mt="6" borderRadius="m" />
 ```
 
 ## Example

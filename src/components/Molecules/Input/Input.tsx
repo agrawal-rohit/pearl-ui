@@ -31,10 +31,11 @@ import {
 } from "../../../theme/src/style-functions";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import Pressable from "../../atoms/pressable/pressable";
-import _ from "lodash";
 import { useFocusedState } from "../../../hooks/state/useFocusedState";
 import { useDisabledState } from "../../../hooks/state/useDisabledState";
 import { useInvalidState } from "../../../hooks/state/useInvalidState";
+import { HStack } from "../../atoms/stack/stack";
+import _ from "lodash";
 
 export type InputProps = Omit<
   TextInputProps,
@@ -192,6 +193,7 @@ const Input = React.forwardRef(
     const clearInputHandler = () => {
       (textInputRef.current as any).clear();
       setIsCleared(true);
+      onChangeText("");
     };
 
     const onChangeHandler = (
@@ -253,16 +255,12 @@ const Input = React.forwardRef(
     const renderClearIcon = () => {
       if (hasClearButton && !isCleared) {
         return (
-          <Pressable
-            onPress={clearInputHandler}
-            alignSelf="center"
-            testID="clear-icon"
-          >
+          <Pressable testID="clear-icon" onPress={clearInputHandler}>
             <Icon
               {...atoms.icon}
               iconFamily="Ionicons"
               iconName="close"
-              marginLeft="xs"
+              marginLeft="2"
             />
           </Pressable>
         );
@@ -270,8 +268,9 @@ const Input = React.forwardRef(
     };
 
     return (
-      <Box {...atoms.container}>
+      <Box {...atoms.container} w={isFullWidth ? "100%" : undefined}>
         {renderLeftIcon()}
+
         <TextInput
           {...inputProps}
           ref={textInputRef}
@@ -296,15 +295,15 @@ const Input = React.forwardRef(
           style={[
             finalInputStyle,
             finalTextStyles,
-            { flex: isFullWidth ? 1 : null },
             Platform.OS === "web" ? { outlineStyle: "none" } : {},
+            { flex: 1 },
           ]}
         />
 
-        <Box flexDirection="row">
+        <HStack spacing="0" alignSelf="center" alignItems="center">
           {renderRightIcon()}
           {renderClearIcon()}
-        </Box>
+        </HStack>
       </Box>
     );
   }

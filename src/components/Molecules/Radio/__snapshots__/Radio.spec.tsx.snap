@@ -27,7 +27,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -206,7 +206,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -374,7 +374,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -553,7 +553,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -721,7 +721,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -889,7 +889,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1057,7 +1057,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1236,7 +1236,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1404,7 +1404,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1583,7 +1583,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1751,7 +1751,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -1930,7 +1930,7 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -2098,7 +2098,7 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",
@@ -2308,7 +2308,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
     }
     collapsable={false}
     direction="horizontal"
-    spacing="xs"
+    spacing="1.5"
     style={
       Object {
         "alignSelf": "flex-start",

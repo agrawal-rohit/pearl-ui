@@ -26,10 +26,10 @@ import { Pressable } from "pearl-ui";
 
 ```jsx
 <Pressable
+  p="4"
   onPress={() => {
     console.log("I was pressed!");
   }}
-  p="m"
   backgroundColor="primary.500"
 >
   <Text>Press me!</Text>
@@ -43,10 +43,10 @@ The `Pressable` component provides a default ripple effect for Android devices. 
 ```jsx
 // Customizing the ripple effect
 <Pressable
+  p="4"
   onPress={() => {
     console.log("I was pressed!");
   }}
-  p="m"
   backgroundColor="primary.500"
   androidRippleConfig={{ color: "primary.800" }}
 >
@@ -55,10 +55,10 @@ The `Pressable` component provides a default ripple effect for Android devices. 
 
 // Disabling the ripple effect
 <Pressable
+  p="4"
   onPress={() => {
     console.log("I was pressed!");
   }}
-  p="m"
   backgroundColor="primary.500"
   isDisabledAndroidRipple
 >

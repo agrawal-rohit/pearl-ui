@@ -174,13 +174,13 @@ describe("createStyleFunctions", () => {
   });
 
   it("maps spacing props correctly", () => {
-    const props1 = { margin: "s" };
+    const props1 = { margin: "2" };
     const spacingStyle1 = spacingStyleFunction[0].func(props1, {
       theme: baseTheme,
       dimensions: Dimensions.get("window"),
     });
 
-    const props2 = { m: "s" };
+    const props2 = { m: "2" };
     const spacingStyle2 = spacingStyleFunction[
       spacingStyleFunction.length - 18
     ].func(props2, {
@@ -188,8 +188,8 @@ describe("createStyleFunctions", () => {
       dimensions: Dimensions.get("window"),
     });
 
-    expect(spacingStyle1.margin).toBe(baseTheme.spacing.s);
-    expect(spacingStyle2.margin).toBe(baseTheme.spacing.s);
+    expect(spacingStyle1.margin).toBe(baseTheme.spacing[2]);
+    expect(spacingStyle2.margin).toBe(baseTheme.spacing[2]);
   });
 
   it("maps position props correctly", () => {

@@ -564,7 +564,8 @@ We use a t-shirt size naming convention for our sizing system, but it's customiz
 // theme.js
 export default {
   spacing: {
-    px: 1,
+    0: 0,
+    0.25: 1,
     0.5: 2,
     1: 4,
     1.5: 6,
@@ -603,41 +604,42 @@ export default {
 
 import SpacingBox from "../../src/components/SpacingBox/SpacingBox";
 
-| Name  | Space |                            |
-| ----- | ----- | -------------------------- |
-| `px`  | 1     | <SpacingBox width={1} />   |
-| `0.5` | 2     | <SpacingBox width={2} />   |
-| `1`   | 4     | <SpacingBox width={4} />   |
-| `1.5` | 6     | <SpacingBox width={6} />   |
-| `2`   | 8     | <SpacingBox width={8} />   |
-| `2.5` | 10    | <SpacingBox width={10} />  |
-| `3`   | 12    | <SpacingBox width={12} />  |
-| `3.5` | 14    | <SpacingBox width={14} />  |
-| `4`   | 16    | <SpacingBox width={16} />  |
-| `5`   | 20    | <SpacingBox width={20} />  |
-| `6`   | 24    | <SpacingBox width={24} />  |
-| `7`   | 28    | <SpacingBox width={28} />  |
-| `8`   | 32    | <SpacingBox width={32} />  |
-| `9`   | 36    | <SpacingBox width={36} />  |
-| `10`  | 40    | <SpacingBox width={40} />  |
-| `12`  | 48    | <SpacingBox width={48} />  |
-| `14`  | 56    | <SpacingBox width={56} />  |
-| `16`  | 64    | <SpacingBox width={64} />  |
-| `20`  | 80    | <SpacingBox width={80} />  |
-| `24`  | 96    | <SpacingBox width={96} />  |
-| `28`  | 112   | <SpacingBox width={112} /> |
-| `32`  | 128   | <SpacingBox width={128} /> |
-| `36`  | 144   | <SpacingBox width={144} /> |
-| `40`  | 160   | <SpacingBox width={160} /> |
-| `44`  | 176   | <SpacingBox width={176} /> |
-| `48`  | 192   | <SpacingBox width={192} /> |
-| `52`  | 208   | <SpacingBox width={208} /> |
-| `56`  | 224   | <SpacingBox width={224} /> |
-| `60`  | 240   | <SpacingBox width={240} /> |
-| `64`  | 256   | <SpacingBox width={256} /> |
-| `72`  | 288   | <SpacingBox width={288} /> |
-| `80`  | 320   | <SpacingBox width={320} /> |
-| `96`  | 384   | <SpacingBox width={384} /> |
+| Name   | Space |                            |
+| ------ | ----- | -------------------------- |
+| `0`    | 1     | <SpacingBox width={0} />   |
+| `0.25` | 1     | <SpacingBox width={1} />   |
+| `0.5`  | 2     | <SpacingBox width={2} />   |
+| `1`    | 4     | <SpacingBox width={4} />   |
+| `1.5`  | 6     | <SpacingBox width={6} />   |
+| `2`    | 8     | <SpacingBox width={8} />   |
+| `2.5`  | 10    | <SpacingBox width={10} />  |
+| `3`    | 12    | <SpacingBox width={12} />  |
+| `3.5`  | 14    | <SpacingBox width={14} />  |
+| `4`    | 16    | <SpacingBox width={16} />  |
+| `5`    | 20    | <SpacingBox width={20} />  |
+| `6`    | 24    | <SpacingBox width={24} />  |
+| `7`    | 28    | <SpacingBox width={28} />  |
+| `8`    | 32    | <SpacingBox width={32} />  |
+| `9`    | 36    | <SpacingBox width={36} />  |
+| `10`   | 40    | <SpacingBox width={40} />  |
+| `12`   | 48    | <SpacingBox width={48} />  |
+| `14`   | 56    | <SpacingBox width={56} />  |
+| `16`   | 64    | <SpacingBox width={64} />  |
+| `20`   | 80    | <SpacingBox width={80} />  |
+| `24`   | 96    | <SpacingBox width={96} />  |
+| `28`   | 112   | <SpacingBox width={112} /> |
+| `32`   | 128   | <SpacingBox width={128} /> |
+| `36`   | 144   | <SpacingBox width={144} /> |
+| `40`   | 160   | <SpacingBox width={160} /> |
+| `44`   | 176   | <SpacingBox width={176} /> |
+| `48`   | 192   | <SpacingBox width={192} /> |
+| `52`   | 208   | <SpacingBox width={208} /> |
+| `56`   | 224   | <SpacingBox width={224} /> |
+| `60`   | 240   | <SpacingBox width={240} /> |
+| `64`   | 256   | <SpacingBox width={256} /> |
+| `72`   | 288   | <SpacingBox width={288} /> |
+| `80`   | 320   | <SpacingBox width={320} /> |
+| `96`   | 384   | <SpacingBox width={384} /> |
 
 ## Border Radius
 

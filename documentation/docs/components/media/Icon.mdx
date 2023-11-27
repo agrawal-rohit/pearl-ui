@@ -33,7 +33,7 @@ import { Icon } from "pearl-ui";
 
 ### Icon sizes
 
-The `size` prop allows you to adjust the size of the icon. You can use the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the icon. You can use the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
 
 ```jsx
 <Icon iconFamily="AntDesign" iconName="stepforward" size="s" />
@@ -53,7 +53,7 @@ For more precise control over the size of a single `Icon` instance, you can use 
 
 ### Overriding Styles
 
-The `Icon` component supports a variety of style props which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component config](#default-component-config).
+The `Icon` component supports a variety of style props which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
 
 ```jsx
 // passing style prop color="primary.500" overrides the default component config value of color="neutral.900"
@@ -62,7 +62,7 @@ The `Icon` component supports a variety of style props which can be used to over
   iconName="stepforward"
   size="l"
   color="primary.500"
-  margin="xl"
+  margin="4"
 />
 ```
 

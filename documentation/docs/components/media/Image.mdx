@@ -140,7 +140,7 @@ If both `previewSource` and `previewColor` props are specified, `previewSource` 
 
 #### Spinner loading
 
-You can also display a [Spinner](../feedback/Spinner) while the image is loading by setting the `loaderType` prop to <t>"spinner"</t>. The appearance of the spinner can be customized using the [default component config](#default-component-config).
+You can also display a [Spinner](../feedback/Spinner) while the image is loading by setting the `loaderType` prop to <t>"spinner"</t>. The appearance of the spinner can be customized using the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/image/image.config.ts).
 
 ```jsx
 // The loaderType prop specifies that a spinner should be displayed while this image is being loaded
@@ -195,11 +195,11 @@ If both `fallbackComponent` and `fallbackSource` props are specified, `fallbackC
 
 ### Override Styles
 
-The `Image` component supports a variety of style props that can be used to override the default component style. Any style props passed to the component will take precedence over the [default component config](#default-component-config).
+The `Image` component supports a variety of style props that can be used to override the default component style. Any style props passed to the component will take precedence over the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/image/image.config.ts).
 
 ```jsx
 <Image
-  mt="xl"
+  mt="5"
   boxShadow="xl"
   borderRadius="m"
   width="50%"

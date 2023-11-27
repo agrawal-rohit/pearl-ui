@@ -1,0 +1,146 @@
+---
+sidebar_position: 4
+title: Textarea
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/textarea/textarea.tsx"
+  />
+</div>
+
+The `Textarea` component in Pearl UI is a versatile and customizable element used to gather user input in a multiline text field. It is a composition of the `Input` component, therefore it supports all its sizes, variants, color schemes, and most of its props. By default, it renders a text field with a medium size and filled variant.
+
+## Import
+
+```jsx
+import { Textarea } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Textarea
+  placeholder="Enter text here"
+  onChangeText={(newValue) => console.log(newValue)}
+/>
+```
+
+### Textarea sizes
+
+Use the `size` prop to change the size of the textarea field. You can set the value to the keys available in <t>PearlTheme.components.Input["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/input/input.config.ts).
+
+```jsx
+<Textarea
+  size="xs"
+  placeholder="Extra small textarea"
+/>
+
+<Textarea
+  size="s"
+  placeholder="Small textarea"
+/>
+
+<Textarea
+  size="m"
+  placeholder="Medium textarea"
+/>
+
+<Textarea
+  size="l"
+  placeholder="Large textarea"
+/>
+```
+
+### Textarea variants
+
+The `variant` prop allows you to change the visual style of the textarea field. The available variants are <t>"filled"</t> and <t>"outline"</t> as defined in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/input/input.config.ts).
+
+```jsx
+<Textarea
+  variant="filled"
+  placeholder="Filled variant"
+/>
+
+<Textarea
+  variant="outline"
+  placeholder="Outlined variant"
+/>
+```
+
+### Textarea Color Schemes
+
+The `colorScheme` prop allows you to change the color palette of the textarea field. The available color schemes are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc as defined in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Textarea
+  colorScheme="primary"
+  placeholder="Primary color scheme"
+/>
+
+<Textarea
+  colorScheme="secondary"
+  placeholder="Secondary color scheme"
+/>
+```
+
+### Textarea Focus State
+
+The `Textarea` component supports a `focus` state, which is activated when the text inside the field can be edited. You can customize the visual style of the textarea field when it is focused using the `focusBackgroundColor` and `focusBorderColor` props.
+
+```jsx
+<Textarea
+  focusBackgroundColor="cyan"
+  focusBorderColor="violet"
+  onFocus={() => console.log("Field was focused!")}
+/>
+```
+
+### Textarea Error State
+
+The `Textarea` component supports an `error` state, which can be activated based on your validation criteria. You can customize the visual style of the textarea field when it is in an error state using the `errorBackgroundColor` and `errorBorderColor` props. The `isInvalid` prop is used to define whether the textarea field has an error or not. You can also pass the `errorMessage` prop to add a helper text describing the error below the textarea field.
+
+```jsx
+<Textarea
+  isInvalid={true}
+  errorMessage="An error occurred!"
+  errorBackgroundColor="pink"
+  errorBorderColor="red"
+/>
+```
+
+### Overriding Styles
+
+The `Textarea` component supports a variety of style props which can be used to override the pre-defined variant style in the theme.
+
+```jsx
+// The backgroundColor prop overrides the default component config value of backgroundColor="neutral.200"
+<Textarea variant="filled" backgroundColor="green" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/textarea-light" />
+
+## Accessibility
+
+- `Textarea` has the `role` of `text field`.
+- When `Textarea` is disabled, it is reflected as `disabled` in screen readers.
+- `Textarea` has the default accessibility label set as the placeholder value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Textarea` component is a composition of the [Input](../layout/Input) component, which means all [Input](../layout/Input) props can be passed to it.
+
+### Additional Properties
+
+| Name   | Required | Type          | Default | Description                                     |
+| ------ | -------- | ------------- | ------- | ----------------------------------------------- |
+| `rows` | No       | <t>number</t> | `4`     | Number of rows in the text field (Android Only) |

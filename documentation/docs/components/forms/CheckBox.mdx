@@ -55,7 +55,7 @@ const [checkedGroupValue, setCheckedGroupValue] = React.useState([])
     setCheckedGroupValue(value);
   }}
 >
-  <Stack direction="vertical" spacing="xs">
+  <Stack direction="vertical" spacing="1.5">
     <CheckBox value="1">Value 1</CheckBox>
     <CheckBox value="2">Value 2</CheckBox>
     <CheckBox value="3">Value 3</CheckBox>
@@ -66,7 +66,7 @@ const [checkedGroupValue, setCheckedGroupValue] = React.useState([])
 
 ### Checkbox sizes
 
-The `size` prop allows you to adjust the size of the checkbox. You can use any of the keys available in <t>PearlTheme.components.CheckBox["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the checkbox. You can use any of the keys available in <t>PearlTheme.components.CheckBox["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/checkbox/checkbox.config.ts).
 
 ```jsx
 <CheckBox size="s">Small Checkbox</CheckBox>
@@ -80,7 +80,7 @@ The `size` prop allows you to adjust the size of the checkbox. You can use any o
 
 ### Checkbox variants
 
-The `variant` prop allows you to change the visual style of the checkbox. You can use any of the keys available in <t>PearlTheme.components.CheckBox["variants"]</t>, which are <t>"filled"</t> and <t>"outline"</t> in the [default theme](#default-component-config).
+The `variant` prop allows you to change the visual style of the checkbox. You can use any of the keys available in <t>PearlTheme.components.CheckBox["variants"]</t>, which are <t>"filled"</t> and <t>"outline"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/checkbox/checkbox.config.ts).
 
 ```jsx
 <CheckBox variant="filled">Filled Checkbox</CheckBox>
@@ -167,9 +167,9 @@ You can also pass the `errorMessage` prop to add a helper text describing the er
 You can use the `spacing` prop to customize the spacing between the checkbox and label text. You can use any of the keys available in <t>PearlTheme.spacing</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"l"</t>, etc. in the [default Pearl theme](../../theming/default-theme#color-palette). By default, this value is set to `"xs"`.
 
 ```jsx
-<CheckBox spacing="l">Checkbox with lots of spacing</CheckBox>
+<CheckBox spacing="5">Checkbox with lots of spacing</CheckBox>
 
-<CheckBox spacing="xs">Checkbox with less spacing</CheckBox>
+<CheckBox spacing="1.5">Checkbox with less spacing</CheckBox>
 ```
 
 ### Checkbox icons
@@ -195,11 +195,11 @@ You can customize the icons used in the checkbox using the following props:
 
 ### Overriding Styles
 
-The `CheckBox` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component config](#default-component-config).
+The `CheckBox` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/checkbox/checkbox.config.ts).
 
 ```jsx
-// passing style prop marginTop="l" adds a top margin to the checkbox
-<CheckBox variant="filled" marginTop="l" borderWidth={2} borderColor="green">
+// passing style prop marginTop="3" adds a top margin to the checkbox
+<CheckBox variant="filled" marginTop="3" borderWidth={2} borderColor="green">
   Check Me!
 </CheckBox>
 ```

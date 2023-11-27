@@ -12,11 +12,11 @@ The following sections provide a comprehensive list of supported style propertie
 ### Margin and padding
 
 ```jsx
-// m="s" refers to the value of `theme.spacing["s"]`
-<Box m="s">Tomato</Box>
+// m="1" refers to the value of `theme.spacing["1"]`
+<Box m="1">Tomato</Box>
 
-// pt="xl" refers to the value of `theme.spacing["xl"]`
-<Box pt="xl">Red</Box>
+// pt="3" refers to the value of `theme.spacing["3"]`
+<Box pt="3">Red</Box>
 ```
 
 | Prop                      | Stylesheet property | Type                         |

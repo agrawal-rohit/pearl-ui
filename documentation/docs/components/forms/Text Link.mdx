@@ -33,7 +33,7 @@ import { TextLink } from "pearl-ui";
 
 ### TextLink sizes
 
-The `size` prop allows you to adjust the size of the text link. The value for this prop should be one of the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default theme](#default-component-config).
+The `size` prop allows you to adjust the size of the text link. The value for this prop should be one of the keys available in <t>PearlTheme.components.TextLink["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/text-link/text-link.config.ts).
 
 ```jsx
 <TextLink size="xs">Tiny Pressable Text</TextLink>
@@ -57,11 +57,11 @@ The `colorScheme` prop allows you to change the color palette of the text link. 
 
 ### Override Style
 
-The `TextLink` component supports a wide range of style props which can be used to override the pre-defined variant style in the theme. These manual style props have higher precedence than the [default component config](#default-component-config), allowing for greater customization.
+The `TextLink` component supports a wide range of style props which can be used to override the pre-defined variant style in the theme. These manual style props have higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/text-link/text-link.config.ts), allowing for greater customization.
 
 ```jsx
-// passing style prop m="xl" overrides the default component config value
-<TextLink m="xl" />
+// passing style prop m="6" overrides the default component config value
+<TextLink m="6" />
 ```
 
 ## Example

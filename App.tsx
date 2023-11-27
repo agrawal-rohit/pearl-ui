@@ -23,11 +23,16 @@ import {
 import { ThemeProvider } from "./src/theme/src/theme-context";
 import Screen from "./src/components/atoms/screen/screen";
 import Text from "./src/components/atoms/text/text";
+import Icon from "./src/components/atoms/icon/icon";
 import Radio from "./src/components/molecules/radio/radio";
 import RadioGroup from "./src/components/molecules/radio/radio-group";
 import CheckBox from "./src/components/molecules/checkbox/checkbox";
 import CheckBoxGroup from "./src/components/molecules/checkbox/checkbox-group";
+import Textarea from "./src/components/molecules/textarea/textarea";
+import Input from "./src/components/molecules/input/input";
 import Stack from "./src/components/atoms/stack/stack";
+import { HStack } from "./src/components/atoms/stack/stack";
+import Center from "./src/components/atoms/center/center";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -52,7 +57,7 @@ const App = () => {
   });
 
   return (
-    <ThemeProvider initialColorMode="dark" haveFontsLoaded={haveFontsLoaded}>
+    <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
       <Index />
     </ThemeProvider>
   );
@@ -62,11 +67,12 @@ const Index = () => {
   const [radioGroupValue, setRadioGroupValue] = React.useState("B");
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
+  const [text, settext] = React.useState("");
 
   return (
     <Screen>
       <Stack direction="vertical" spacing="8">
-        <Stack direction="vertical">
+        {/* <Stack direction="vertical">
           <Radio isChecked={checked} onPress={() => setChecked(true)}>
             Default Radio
           </Radio>
@@ -97,7 +103,64 @@ const Index = () => {
             <CheckBox value="B">B</CheckBox>
             <CheckBox value="C">C</CheckBox>
           </CheckBoxGroup>
-        </Stack>
+        </Stack> */}
+
+        <Textarea
+          value={text}
+          placeholder="Default Textrea"
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input
+          value={text}
+          variant="filled"
+          placeholder="Default Filled Input"
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input
+          size="xs"
+          variant="outline"
+          placeholder="Small Outline Input"
+          leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          hasClearButton
+          value={text}
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input
+          size="s"
+          variant="outline"
+          placeholder="Small Outline Input"
+          // leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          hasClearButton
+          value={text}
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input
+          size="m"
+          variant="outline"
+          placeholder="Small Outline Input"
+          leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          hasClearButton
+          value={text}
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input
+          size="l"
+          variant="outline"
+          placeholder="Small Outline Input"
+          rightIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          hasClearButton
+          value={text}
+          onChangeText={(val) => settext(val)}
+        />
+
+        <Input isFullWidth placeholder="Focused Input" autoFocus />
+        <Input isFullWidth isDisabled placeholder="Disabled Input" />
+        <Input isFullWidth placeholder="Error Input" isInvalid />
       </Stack>
     </Screen>
   );

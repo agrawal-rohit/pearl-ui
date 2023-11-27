@@ -34,7 +34,7 @@ import { Stack, HStack, VStack, ZStack } from "pearl-ui";
 Here's a basic example of how to use the `Stack` component:
 
 ```jsx
-<Stack direction="horizontal" spacing="m">
+<Stack direction="horizontal" spacing="4">
   <Box w={20} h={20} backgroundColor="primary.500" />
   <Box w={20} h={20} backgroundColor="primary.500" />
   <Box w={20} h={20} backgroundColor="primary.500" />
@@ -47,12 +47,12 @@ Here's a basic example of how to use the `Stack` component:
 You can use either the `HStack` component or the `Stack` component with the direction prop set to `"horizontal"` to stack elements horizontally. Here's how:
 
 ```jsx
-<HStack spacing="s">
+<HStack spacing="2">
   <Box w={20} h={20} backgroundColor="secondary.500" />
   <Box w={20} h={20} backgroundColor="secondary.500" />
 </HStack>
 
-<Stack direction="horizontal" spacing="m">
+<Stack direction="horizontal" spacing="4">
   <Box w={20} h={20} backgroundColor="primary.500" />
   <Box w={20} h={20} backgroundColor="primary.500" />
 </Stack>
@@ -63,12 +63,12 @@ You can use either the `HStack` component or the `Stack` component with the dire
 To stack elements vertically, you can use the `VStack` component or the `Stack` component with the direction prop set to `"vertical"`. Here's an example:
 
 ```jsx
-<VStack spacing="s">
+<VStack spacing="2">
   <Box w={20} h={20} backgroundColor="secondary.500" />
   <Box w={20} h={20} backgroundColor="secondary.500" />
 </VStack>
 
-<Stack direction="vertical" spacing="m">
+<Stack direction="vertical" spacing="4">
   <Box w={20} h={20} backgroundColor="primary.500" />
   <Box w={20} h={20} backgroundColor="primary.500" />
 </Stack>
@@ -101,7 +101,7 @@ In some cases, you might need to explicitly specify the `zIndex` of one of the s
 The `Stack` component allows you to responsively control the stack direction based on the screen size. Here's an example:
 
 ```jsx
-<Stack direction={{ phone: "vertical", tablet: "horizontal" }} spacing="s">
+<Stack direction={{ phone: "vertical", tablet: "horizontal" }} spacing="2">
   <Box w={20} h={20} backgroundColor="secondary.500" />
   <Box w={20} h={20} backgroundColor="secondary.500" />
 </Stack>
@@ -114,12 +114,12 @@ In some scenarios, you may want to add dividers between the stacked elements. Th
 ```jsx
 import { Divider } from 'pearl-ui'
 
-<HStack spacing="s" divider={<Divider />}>
+<HStack spacing="2" divider={<Divider />}>
   <Box w={20} h={20} backgroundColor="primary.500" />
   <Box w={20} h={20} backgroundColor="primary.500" />
 </HStack>
 
-<VStack spacing="s" divider={<Divider bgColor="cyan" />}>
+<VStack spacing="2" divider={<Divider bgColor="cyan" />}>
   <Box w={20} h={20} backgroundColor="secondary.500" />
   <Box w={20} h={20} backgroundColor="secondary.500" />
 </VStack>

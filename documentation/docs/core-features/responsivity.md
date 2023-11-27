@@ -46,7 +46,7 @@ const App = () => {
         <Box flexDirection={{ phone: "column", tablet: "row" }}>
           <Center
             backgroundColor="cornflowerblue"
-            p="4xl"
+            p="14"
             flex={1}
             borderRadius="l"
           >
@@ -56,7 +56,7 @@ const App = () => {
           </Center>
           <Center
             backgroundColor="coral"
-            p="4xl"
+            p="14"
             flex={1}
             borderRadius="l"
             marginVertical={{ phone: "l", tablet: null }}
@@ -66,7 +66,7 @@ const App = () => {
               Item 2
             </Text>
           </Center>
-          <Center backgroundColor="deeppink" p="4xl" flex={1} borderRadius="l">
+          <Center backgroundColor="deeppink" p="14" flex={1} borderRadius="l">
             <Text color="neutral.50" variant={{ phone: "p2", tablet: "st1" }}>
               Item 3
             </Text>

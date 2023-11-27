@@ -54,7 +54,7 @@ const [radioGroupValue, setRadioGroupValue] = React.useState([])
     setRadioGroupValue(value);
   }}
 >
-  <Stack direction="vertical" spacing="xs">
+  <Stack direction="vertical" spacing="1.5">
     <Radio value="1">Value 1</Radio>
     <Radio value="2">Value 2</Radio>
     <Radio value="3">Value 3</Radio>
@@ -137,9 +137,9 @@ The `isInvalid` prop is used to indicate whether the radio button is in an error
 The `spacing` prop can be used to adjust the spacing between the radio button and its label. The available spacing values are "xs", "s", "l", and others:
 
 ```jsx
-<Radio spacing="l">Radio with lots of spacing</Radio>
+<Radio spacing="5">Radio with lots of spacing</Radio>
 
-<Radio spacing="xs">Radio with less spacing</Radio>
+<Radio spacing="1.5">Radio with less spacing</Radio>
 ```
 
 ### Overriding Styles
@@ -147,8 +147,8 @@ The `spacing` prop can be used to adjust the spacing between the radio button an
 You can override the default styles of the `Radio` component by passing style props to it. These props have higher precedence than the default styles:
 
 ```jsx
-// passing style prop marginTop="l" adds a top margin to the radio
-<Radio variant="outline" marginTop="l" borderWidth={2} borderColor="green">
+// passing style prop marginTop="3" adds a top margin to the radio
+<Radio variant="outline" marginTop="3" borderWidth={2} borderColor="green">
   Check Me!
 </Radio>
 ```
