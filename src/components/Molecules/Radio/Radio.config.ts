@@ -2,37 +2,50 @@ export default {
   parts: ["container", "outerBox", "innerBox", "text"],
   baseStyle: {
     container: {
-      my: "2xs",
-      spacing: "xs",
+      my: "1.5",
+      spacing: "2.5",
+      _disabled: {
+        opacity: 0.5,
+      },
     },
     outerBox: {
+      p: "0.5",
+      shape: "square",
+      borderWidth: 2,
       borderRadius: "full",
       borderColor: "neutral.300",
       _invalid: {
-        borderWidth: 1,
         borderColor: "danger.500",
+      },
+      transition: {
+        duration: 100,
       },
     },
     innerBox: {
+      w: "100%",
+      h: "100%",
       borderRadius: "full",
+      transition: {
+        duration: 100,
+      },
     },
   },
   sizes: {
     s: {
       outerBox: {
-        width: 18,
-        height: 18,
-        style: { padding: 3 },
+        p: 0.5,
+        w: 18,
+        h: 18,
       },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
     },
     m: {
       outerBox: {
-        width: 24,
-        height: 24,
-        style: { padding: 5 },
+        p: 1,
+        w: 24,
+        h: 24,
       },
       text: {
         variant: "p2",
@@ -40,19 +53,19 @@ export default {
     },
     l: {
       outerBox: {
-        width: 30,
-        height: 30,
-        style: { padding: 7 },
+        p: 1.5,
+        w: 30,
+        h: 30,
       },
       text: {
-        variant: "p1",
+        variant: "p2",
       },
     },
     xl: {
       outerBox: {
-        width: 36,
-        height: 36,
-        style: { padding: 9 },
+        p: 2,
+        w: 36,
+        h: 36,
       },
       text: {
         variant: "p1",
@@ -62,49 +75,62 @@ export default {
   variants: {
     filled: {
       outerBox: {
-        borderWidth: 2,
-        checkedBackgroundColor: "primary.500",
-        backgroundColor: {
-          light: "neutral.200",
-          dark: "neutral.900",
+        animate: {
+          backgroundColor: {
+            light: "neutral.200",
+            dark: "neutral.900",
+          },
         },
         borderColor: {
           light: "neutral.200",
           dark: "neutral.600",
         },
-        checkedBorderColor: "primary.500",
+        _checked: {
+          bgColor: "primary.500",
+          borderColor: "primary.500",
+        },
       },
       innerBox: {
-        backgroundColor: {
-          light: "neutral.200",
-          dark: "neutral.900",
+        animate: {
+          backgroundColor: {
+            light: "neutral.200",
+            dark: "neutral.900",
+          },
         },
-        checkedBackgroundColor: "neutral.50",
+        _checked: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.900",
+          },
+        },
       },
     },
     outline: {
       outerBox: {
-        borderWidth: 2,
-        checkedBackgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        animate: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
         },
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
-        checkedBorderColor: "primary.500",
         borderColor: {
           light: "neutral.400",
           dark: "neutral.500",
         },
+        _checked: {
+          borderColor: "primary.500",
+        },
       },
       innerBox: {
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        animate: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
         },
-        checkedBackgroundColor: "primary.500",
+        _checked: {
+          backgroundColor: "primary.500",
+        },
       },
     },
   },

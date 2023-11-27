@@ -6,47 +6,50 @@ export default {
     },
     text: {
       color: "neutral.50",
+      fontWeight: "500",
     },
   },
   sizes: {
-    s: {
+    xs: {
       box: {
         minW: 20,
         h: 20,
       },
       text: {
-        px: "2xs",
-        variant: "btn4",
+        px: "1.5",
+        variant: "p4",
+        fontSize: "2xs",
+        lineHeight: "m",
       },
     },
-    m: {
+    s: {
       box: {
         minW: 25,
         h: 25,
       },
       text: {
-        px: "xs",
-        variant: "btn4",
+        px: "2",
+        variant: "p4",
       },
     },
-    l: {
+    m: {
       box: {
         minW: 30,
         h: 30,
       },
       text: {
-        px: "xs",
-        variant: "btn3",
+        px: "2.5",
+        variant: "p4",
       },
     },
-    xl: {
+    l: {
       box: {
         minW: 35,
         h: 35,
       },
       text: {
-        px: "s",
-        variant: "btn3",
+        px: "3",
+        variant: "p3",
       },
     },
   },

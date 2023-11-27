@@ -2,15 +2,21 @@ export default {
   parts: ["container", "box", "icon", "text"],
   baseStyle: {
     container: {
-      my: "2xs",
-      spacing: "xs",
+      my: "1",
+      spacing: "2.5",
+      _disabled: {
+        opacity: 0.5,
+      },
     },
     box: {
-      p: "hairline",
+      p: "0.5",
       shape: "square",
+      borderWidth: 2,
       borderColor: "neutral.300",
+      transition: {
+        duration: 100,
+      },
       _invalid: {
-        borderWidth: 1,
         borderColor: "danger.500",
       },
     },
@@ -31,7 +37,7 @@ export default {
         size: "s",
       },
       text: {
-        variant: "p2",
+        variant: "p4",
       },
     },
     m: {
@@ -42,7 +48,7 @@ export default {
         size: "m",
       },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
     },
     l: {
@@ -53,7 +59,7 @@ export default {
         size: "l",
       },
       text: {
-        variant: "p1",
+        variant: "p2",
       },
     },
     xl: {
@@ -71,14 +77,15 @@ export default {
   variants: {
     filled: {
       box: {
-        borderWidth: 2,
-        backgroundColor: {
-          light: "neutral.200",
-          dark: "neutral.900",
-        },
-        borderColor: {
-          light: "neutral.200",
-          dark: "neutral.600",
+        animate: {
+          backgroundColor: {
+            light: "neutral.200",
+            dark: "neutral.900",
+          },
+          borderColor: {
+            light: "neutral.200",
+            dark: "neutral.600",
+          },
         },
         _checked: {
           bgColor: "primary.500",
@@ -89,13 +96,15 @@ export default {
     outline: {
       box: {
         borderWidth: 2,
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
-        borderColor: {
-          light: "neutral.400",
-          dark: "neutral.500",
+        animate: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
+          borderColor: {
+            light: "neutral.400",
+            dark: "neutral.500",
+          },
         },
         _checked: {
           bgColor: "primary.500",

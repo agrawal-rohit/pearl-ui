@@ -14,7 +14,7 @@ export const useStateWithStyleProps = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
 ) => {
-  const { theme } = useTheme();
+  const { theme, colorMode } = useTheme();
   const dimensions = useDimensions();
 
   const buildStyleProperties = useMemo(
@@ -30,6 +30,7 @@ export const useStateWithStyleProps = (
   // Compose clean style properties from props, buildStyleProperties, theme, and dimensions.
   return composeCleanStyleProps(props, buildStyleProperties, {
     theme,
+    colorMode,
     dimensions,
   });
 };

@@ -24,13 +24,12 @@ export const useDynamicStateStyle = (
   animateable = true
 ) => {
   // Override the pressed state if the parentStateValue is provided
-  let stateStyles = props[stateKey];
+  let stateStyles = useStateWithStyleProps(props[stateKey], styleFunctions);
 
   // If there are no state styles, return the original props
   if (!stateStyles) return props;
 
-  stateStyles = useStateWithStyleProps(stateStyles, styleFunctions);
-
+  delete props[stateKey];
   let finalProps = props;
 
   // If the component is animateable, add missing required styles from the 'from' prop to the base style

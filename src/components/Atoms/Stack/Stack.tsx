@@ -22,7 +22,7 @@ export type ZStackProps = BoxProps & {
 /**
  * Stack is a layout component that makes it easy to stack elements together and apply a space between them.
  */
-const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
+const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
   const arrayChildren = React.Children.toArray(children);
 
   /**
@@ -41,14 +41,14 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
           mr={
             !isLast
               ? rest.direction === "horizontal"
-                ? rest.spacing
+                ? spacing
                 : undefined
               : undefined
           }
           mb={
             !isLast
               ? rest.direction === "vertical"
-                ? rest.spacing
+                ? spacing
                 : undefined
               : undefined
           }
@@ -60,8 +60,8 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
             React.cloneElement(rest.divider, {
               orientation:
                 rest.direction === "horizontal" ? "vertical" : "horizontal",
-              ml: rest.direction === "horizontal" ? rest.spacing : undefined,
-              mt: rest.direction === "vertical" ? rest.spacing : undefined,
+              ml: rest.direction === "horizontal" ? spacing : undefined,
+              mt: rest.direction === "vertical" ? spacing : undefined,
             })}
         </Box>
       );
@@ -70,7 +70,6 @@ const Stack: React.FC<StackProps> = ({ children, ...rest }) => {
 
   return (
     <Box
-      alignSelf="flex-start"
       {...rest}
       flexDirection={rest.direction === "horizontal" ? "row" : "column"}
       flexWrap={rest.direction === "horizontal" ? "wrap" : "nowrap"}

@@ -4,12 +4,12 @@ import Box, { BoxProps } from "../box/box";
 /**
  * A layout component that centers its child within itself across both axes
  */
-const Center: React.FC<BoxProps> = ({ children, ...rest }) => {
+const Center = React.forwardRef(({ children, ...rest }: BoxProps, ref: any) => {
   return (
-    <Box {...rest} alignItems="center" justifyContent="center">
+    <Box {...rest} ref={ref} alignItems="center" justifyContent="center">
       {children}
     </Box>
   );
-};
+});
 
 export default Center;

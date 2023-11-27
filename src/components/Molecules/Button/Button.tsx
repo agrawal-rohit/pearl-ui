@@ -30,24 +30,19 @@ export type BaseButtonProps = PressableProps & {
  */
 const CustomButton = React.forwardRef(
   (
-    {
-      children,
-      atoms,
-      ...props
-    }: MoleculeComponentProps<"Button", BaseButtonProps>,
+    { children, atoms }: MoleculeComponentProps<"Button", BaseButtonProps>,
     ref: any
   ) => {
     // Destructure the rootProps to get the necessary properties
     const {
       loadingText = null,
-      colorScheme = "primary",
       spinnerPlacement = "start",
       isLoading = false,
       isFullWidth = false,
       isDisabled = false,
       leftIcon = null,
       rightIcon = null,
-    } = props;
+    } = atoms.box;
 
     // Determine if the button is disabled
     const disabled = isDisabled ? true : isLoading;
@@ -61,13 +56,13 @@ const CustomButton = React.forwardRef(
             {spinnerPlacement === "start" ? (
               <>
                 <Spinner {...atoms.spinner} />
-                <Text marginLeft={props.py} {...atoms.text}>
+                <Text marginLeft={atoms.box.py} {...atoms.text}>
                   {loadingText}
                 </Text>
               </>
             ) : (
               <>
-                <Text marginRight={props.py} {...atoms.text}>
+                <Text marginRight={atoms.box.py} {...atoms.text}>
                   {loadingText}
                 </Text>
 
@@ -98,7 +93,7 @@ const CustomButton = React.forwardRef(
             {leftIcon
               ? React.cloneElement(leftIcon, {
                   ...atoms.icon,
-                  marginRight: props.py ?? props.paddingVertical,
+                  marginRight: atoms.box.py ?? atoms.box.paddingVertical,
                   ...leftIcon.props,
                 })
               : null}
@@ -106,7 +101,7 @@ const CustomButton = React.forwardRef(
             {rightIcon
               ? React.cloneElement(rightIcon, {
                   ...atoms.icon,
-                  marginLeft: props.py ?? props.paddingVertical,
+                  marginLeft: atoms.box.py ?? atoms.box.paddingVertical,
                   ...rightIcon.props,
                 })
               : null}
@@ -124,12 +119,12 @@ const CustomButton = React.forwardRef(
         {...atoms.box}
         ref={ref}
         isDisabled={disabled}
-        onPress={props.onPress}
+        onPress={atoms.box.onPress}
         alignSelf={isFullWidth ? "stretch" : "flex-start"}
         accessibilityLabel={
           !isLoading
-            ? props.accessibilityLabel
-              ? props.accessibilityLabel
+            ? atoms.box.accessibilityLabel
+              ? atoms.box.accessibilityLabel
               : children
             : "Loading"
         }

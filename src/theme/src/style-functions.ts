@@ -22,11 +22,11 @@ import {
   StyleFunctionContainer,
   PaletteColors,
 } from "./types";
-import { useTheme } from "../../hooks/useTheme";
 import {
   getValueForScreenSize,
   isResponsiveObjectValue,
 } from "./responsive-helpers";
+import { ColorMode } from "./theme-context";
 
 interface CreateStyleFunctionProps {
   property: string;
@@ -58,7 +58,10 @@ export const createStyleFunction = ({
    * @param dimensions - The dimensions object to get the screen size from.
    * @returns A style object with the given property and value.
    */
-  const func: StyleFunction = (props: any, { theme, dimensions }: any): any => {
+  const func: StyleFunction = (
+    props: any,
+    { theme, colorMode, dimensions }: any
+  ): any => {
     // Initial value is the raw prop value
     let value = isResponsiveObjectValue(props[property], theme)
       ? getValueForScreenSize({
@@ -70,7 +73,7 @@ export const createStyleFunction = ({
 
     // Transform the value if transformation function exists
     if (transform) {
-      value = transform(value);
+      value = transform(value, colorMode);
     }
 
     // Check if this value refers to a key in the theme config
@@ -115,13 +118,13 @@ export const createStyleFunction = ({
  * @param value - The color value to transform.
  * @returns The transformed color value.
  */
-export const transformColorValue = (value: ColorModeColor | ColorValue) => {
-  const { colorMode } = useTheme();
-
+export const transformColorValue = (
+  value: ColorModeColor | ColorValue,
+  colorMode: ColorMode
+) => {
   // Color Mode color provided
   if (typeof value === "object") {
     if (colorMode === "light") return value.light;
-
     return value.dark;
   }
 

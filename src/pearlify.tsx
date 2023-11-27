@@ -116,7 +116,6 @@ export function pearlify<
           rest.colorScheme,
           styleFunctions
         );
-
         if (config.animatable)
           convertedProps = useMotiWithStyleProps(
             convertedProps,
@@ -138,12 +137,12 @@ export function pearlify<
         );
       } else {
         convertedProps = useStyleProps(rest, styleFunctions);
-
-        if (config.animatable)
+        if (config.animatable) {
           convertedProps = useMotiWithStyleProps(
             convertedProps,
             styleFunctions
           );
+        }
       }
 
       return (

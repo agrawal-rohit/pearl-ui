@@ -34,7 +34,8 @@ export const useAccessibleColor = (
   }
 
   // Determine if the background color is light or dark
-  const isColorLight = new TinyColor(finalBackgroundColor).isLight();
+  const isColorLight =
+    new TinyColor(finalBackgroundColor).getBrightness() > 150;
 
   // Return the most accessible foreground color value
   if (isColorLight) {

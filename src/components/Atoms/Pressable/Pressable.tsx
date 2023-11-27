@@ -95,6 +95,9 @@ const CustomPressable = React.forwardRef(
         onPressOut={!isDisabled ? onPressOutHandler : undefined}
         onLongPress={!isDisabled ? onLongPress : undefined}
         disabled={isDisabled}
+        transition={{
+          duration: 50,
+        }}
         {...props}
         accessibilityRole="button"
         animate={(interaction) => {
@@ -116,7 +119,7 @@ const Pressable = pearlify<BasePressableProps, "basic", BoxStyleProps, false>(
   {
     componentName: "None",
     type: "basic",
-    animatable: false,
+    animatable: true,
   }
 );
 

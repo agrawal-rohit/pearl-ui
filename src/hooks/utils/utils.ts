@@ -6,6 +6,20 @@ import {
   StyleFunctionContainer,
 } from "../../theme/src/types";
 import { getKeys } from "../../theme/utils/type-helpers";
+import { ColorMode } from "../../theme/src/theme-context";
+
+export const MOTI_PROPS = [
+  "animate",
+  "from",
+  "transition",
+  "delay",
+  "state",
+  "stylePriority",
+  "onDidAnimate",
+  "exit",
+  "exitTransition",
+  "animateInitialState",
+];
 
 /**
  * Checks if a key exists in an object and throws an error if it doesn't.
@@ -58,10 +72,14 @@ export const composeStyleProps = (styleFunctions: StyleFunctionContainer[]) => {
    */
   const buildStyle = (
     props: AllProps,
-    { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
+    {
+      theme,
+      colorMode,
+      dimensions,
+    }: { theme: FinalPearlTheme; colorMode: ColorMode; dimensions: Dimensions }
   ) => {
     return funcs.reduce((acc: any, func: any) => {
-      return Object.assign(acc, func(props, { theme, dimensions }));
+      return Object.assign(acc, func(props, { theme, colorMode, dimensions }));
     }, {});
   };
 
@@ -102,10 +120,15 @@ export const filterStyledProps = (props: any, omitList: any) => {
 export const buildFinalStyleProps = (
   props: Record<string, any>,
   buildStyleProperties: any,
-  { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
+  {
+    theme,
+    colorMode,
+    dimensions,
+  }: { theme: FinalPearlTheme; colorMode: ColorMode; dimensions: Dimensions }
 ) => {
   const coreVisualStyle = buildStyleProperties.buildStyle(props, {
     theme,
+    colorMode,
     dimensions,
   });
 
@@ -129,10 +152,15 @@ export const buildFinalStyleProps = (
 export const composeCleanStyleProps = (
   props: Record<string, any>,
   buildStyleProperties: any,
-  { theme, dimensions }: { theme: FinalPearlTheme; dimensions: Dimensions }
+  {
+    theme,
+    colorMode,
+    dimensions,
+  }: { theme: FinalPearlTheme; colorMode: ColorMode; dimensions: Dimensions }
 ) => {
   let motiStyleProps = buildFinalStyleProps(props, buildStyleProperties, {
     theme,
+    colorMode,
     dimensions,
   });
   motiStyleProps = { ...motiStyleProps, ...motiStyleProps.style };

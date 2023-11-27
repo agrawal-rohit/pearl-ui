@@ -25,7 +25,7 @@ export const useMotiWithStyleProps = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
 ) => {
-  const { theme } = useTheme();
+  const { theme, colorMode } = useTheme();
   const dimensions = useDimensions();
 
   // Compose style properties
@@ -44,6 +44,7 @@ export const useMotiWithStyleProps = (
   if (props.from) {
     props.from = composeCleanStyleProps(props.from, buildStyleProperties, {
       theme,
+      colorMode,
       dimensions,
     });
   }
@@ -55,6 +56,7 @@ export const useMotiWithStyleProps = (
       buildStyleProperties,
       {
         theme,
+        colorMode,
         dimensions,
       }
     );
@@ -90,6 +92,7 @@ export const useMotiWithStyleProps = (
       buildStyleProperties,
       {
         theme,
+        colorMode,
         dimensions,
       }
     );
@@ -112,6 +115,7 @@ export const useMotiWithStyleProps = (
   if (props.exit) {
     props.exit = composeCleanStyleProps(props.exit, buildStyleProperties, {
       theme,
+      colorMode,
       dimensions,
     });
   }
@@ -140,6 +144,7 @@ export const useMotiWithStyleProps = (
       buildStyleProperties,
       {
         theme,
+        colorMode,
         dimensions,
       }
     );

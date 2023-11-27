@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Box, { BoxProps } from "../box/box";
+import { BoxProps } from "../box/box";
 import { StatusBar, RefreshControl, Platform } from "react-native";
 import {
   KeyboardAwareScrollView,
@@ -8,7 +8,9 @@ import {
 import { useTheme } from "../../../hooks/useTheme";
 import { pearlify } from "../../../pearlify";
 import { AtomComponentProps } from "../../../theme/src/types";
-import { SafeAreaView } from "moti";
+import { SafeAreaView, View as MotiView } from "moti";
+import { MOTI_PROPS } from "../../../hooks/utils/utils";
+import _ from "lodash";
 
 export type BaseScreenProps = Omit<
   BoxProps,
@@ -84,7 +86,8 @@ const CustomScreen = React.forwardRef(
   ) => {
     const { colorMode } = useTheme();
     const [refreshing, setRefreshing] = useState(false);
-    const { style, ...nativeProps } = props;
+    const animationProps = _.pick(props, MOTI_PROPS);
+    const nativeProps = _.omit(props, [...MOTI_PROPS, "style"]);
 
     /**
      * Function to execute when a pull-to-refresh action is performed
@@ -147,9 +150,9 @@ const CustomScreen = React.forwardRef(
               ) : undefined
             }
           >
-            <Box flex={1} flexDirection="column" style={props.style}>
+            <MotiView {...(animationProps as any)} style={props.style}>
               {children}
-            </Box>
+            </MotiView>
           </KeyboardAwareScrollView>
         </SafeAreaView>
       </>

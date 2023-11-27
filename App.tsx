@@ -21,14 +21,13 @@ import {
   Poppins_200ExtraLight_Italic,
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/theme-context";
-import {
-  useFade,
-  useScaleFade,
-  useSlide,
-  useSlideFade,
-  useCollapse,
-} from "./src/animations/index";
-import Box from "./src/components/atoms/box/box";
+import Screen from "./src/components/atoms/screen/screen";
+import Text from "./src/components/atoms/text/text";
+import Radio from "./src/components/molecules/radio/radio";
+import RadioGroup from "./src/components/molecules/radio/radio-group";
+import CheckBox from "./src/components/molecules/checkbox/checkbox";
+import CheckBoxGroup from "./src/components/molecules/checkbox/checkbox-group";
+import Stack from "./src/components/atoms/stack/stack";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -53,25 +52,54 @@ const App = () => {
   });
 
   return (
-    <ThemeProvider initialColorMode="light" haveFontsLoaded={haveFontsLoaded}>
+    <ThemeProvider initialColorMode="dark" haveFontsLoaded={haveFontsLoaded}>
       <Index />
     </ThemeProvider>
   );
 };
 
 const Index = () => {
-  const animationState = useCollapse();
+  const [radioGroupValue, setRadioGroupValue] = React.useState("B");
+  const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
+  const [checked, setChecked] = React.useState(false);
 
   return (
-    <Box
-      w="100%"
-      h={100}
-      bgColor="pink"
-      state={animationState}
-      transition={{
-        type: "timing",
-      }}
-    ></Box>
+    <Screen>
+      <Stack direction="vertical" spacing="8">
+        <Stack direction="vertical">
+          <Radio isChecked={checked} onPress={() => setChecked(true)}>
+            Default Radio
+          </Radio>
+          <Radio isDisabled>Disabled Radio</Radio>
+          <Radio isChecked>Checked Radio</Radio>
+          <Radio isInvalid>Error Radio</Radio>
+        </Stack>
+
+        <Stack direction="vertical">
+          <Text variant="h4">Controlled Radio group</Text>
+          <RadioGroup
+            value={radioGroupValue}
+            onChange={(newVal) => setRadioGroupValue(newVal)}
+          >
+            <Radio value="A">A</Radio>
+            <Radio value="B">B</Radio>
+            <Radio value="C">C</Radio>
+          </RadioGroup>
+        </Stack>
+
+        <Stack direction="vertical">
+          <Text variant="h4">Controlled Checkbox group</Text>
+          <CheckBoxGroup
+            value={checkboxGroupValue}
+            onChange={(newVal) => setCheckboxGroupValue(newVal)}
+          >
+            <CheckBox value="A">A</CheckBox>
+            <CheckBox value="B">B</CheckBox>
+            <CheckBox value="C">C</CheckBox>
+          </CheckBoxGroup>
+        </Stack>
+      </Stack>
+    </Screen>
   );
 };
 

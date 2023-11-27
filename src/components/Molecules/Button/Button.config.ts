@@ -2,7 +2,7 @@ export default {
   parts: ["box", "text", "spinner", "icon"],
   baseStyle: {
     box: {
-      my: "2xs",
+      my: "1",
       justifyContent: "center",
       alignItems: "center",
       _pressed: {
@@ -16,15 +16,15 @@ export default {
   sizes: {
     xs: {
       box: {
-        py: "2xs",
-        px: "xs",
+        py: "1",
+        px: "1.5",
         borderRadius: "s",
       },
       text: {
-        variant: "btn4",
+        variant: "p4",
       },
       spinner: {
-        my: "2xs",
+        my: "1",
         size: "s",
       },
       icon: {
@@ -33,12 +33,12 @@ export default {
     },
     s: {
       box: {
-        py: "xs",
-        px: "xs",
+        py: "1.5",
+        px: "1.5",
         borderRadius: "s",
       },
       text: {
-        variant: "btn3",
+        variant: "p3",
       },
       spinner: {
         size: "m",
@@ -49,12 +49,12 @@ export default {
     },
     m: {
       box: {
-        py: "s",
-        px: "s",
+        py: "2",
+        px: "2",
         borderRadius: "m",
       },
       text: {
-        variant: "btn2",
+        variant: "p2",
       },
       spinner: {
         size: "m",
@@ -65,12 +65,12 @@ export default {
     },
     l: {
       box: {
-        py: "m",
-        px: "m",
+        py: "2.5",
+        px: "2.5",
         borderRadius: "m",
       },
       text: {
-        variant: "btn1",
+        variant: "p1",
       },
       spinner: {
         size: "l",

@@ -6,6 +6,6 @@ export default {
       light: "neutral.50",
       dark: "neutral.800",
     },
-    padding: "m",
+    padding: "4",
   },
 };

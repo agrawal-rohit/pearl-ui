@@ -66,11 +66,9 @@ export type BaseImageProps = BoxProps &
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
 
 const CustomImage = React.forwardRef(
-  (
-    { children, ...props }: MoleculeComponentProps<"Image", BaseImageProps>,
-    ref: any
-  ) => {
-    const { source, onError, atoms, isCached, fallbackComponent } = props;
+  ({ atoms }: MoleculeComponentProps<"Image", BaseImageProps>, ref: any) => {
+    const { source, onError, isCached, fallbackComponent, ...restImageProps } =
+      atoms.image;
 
     const isMounted = useRef(true);
     const isRemoteImage = typeof source === "object";
@@ -142,7 +140,7 @@ const CustomImage = React.forwardRef(
       borderTopRightRadius,
       testID,
       ...finalRootProps
-    } = atoms.image;
+    } = restImageProps;
 
     // Compute border props so that they can be used by the native Image element
     let borderRadiiStyles = useStyleProps(
@@ -159,19 +157,19 @@ const CustomImage = React.forwardRef(
     borderRadiiStyles = {
       style: {
         borderRadius:
-          (props as any).style.borderRadius ??
+          restImageProps.style.borderRadius ??
           borderRadiiStyles.style.borderRadius,
         borderBottomLeftRadius:
-          (props as any).style.borderBottomLeftRadius ??
+          restImageProps.style.borderBottomLeftRadius ??
           borderRadiiStyles.style.borderBottomLeftRadius,
         borderBottomRightRadius:
-          (props as any).style.borderBottomRightRadius ??
+          restImageProps.style.borderBottomRightRadius ??
           borderRadiiStyles.style.borderBottomRightRadius,
         borderTopLeftRadius:
-          (props as any).style.borderTopLeftRadius ??
+          restImageProps.style.borderTopLeftRadius ??
           borderRadiiStyles.style.borderTopLeftRadius,
         borderTopRightRadius:
-          (props as any).style.borderTopRightRadius ??
+          restImageProps.style.borderTopRightRadius ??
           borderRadiiStyles.style.borderTopRightRadius,
       },
     };
@@ -236,10 +234,10 @@ const CustomImage = React.forwardRef(
     };
 
     const renderPreview = () => {
-      if (!!atoms.image.previewSource) {
+      if (!!restImageProps.previewSource) {
         return (
           <RNImage
-            source={atoms.image.previewSource}
+            source={restImageProps.previewSource}
             blurRadius={
               Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
             }
@@ -256,13 +254,13 @@ const CustomImage = React.forwardRef(
     };
 
     const renderImageLoader = () => {
-      if (atoms.image.loaderType === "progressive") {
-        if (!!atoms.image.previewSource) {
+      if (restImageProps.loaderType === "progressive") {
+        if (!!restImageProps.previewSource) {
           // Render a blur overlay over the preview image
           if (Platform.OS === "ios") {
             return (
               <AnimatedBlurView
-                tint={atoms.image.tint}
+                tint={restImageProps.tint}
                 style={{
                   ...(StyleSheet.absoluteFill as any),
                   alignItems: "center",
@@ -286,7 +284,7 @@ const CustomImage = React.forwardRef(
                 style={{
                   ...(StyleSheet.absoluteFill as any),
                   backgroundColor:
-                    atoms.image.tint === "dark" ? "black" : "white",
+                    restImageProps.tint === "dark" ? "black" : "white",
                   alignItems: "center",
                   justifyContent: "center",
                   opacity: previewSourceOverlayOpacity,
@@ -302,13 +300,13 @@ const CustomImage = React.forwardRef(
           }
         }
 
-        if (!!atoms.image.previewColor) {
+        if (!!restImageProps.previewColor) {
           return (
             <Animated.View
               style={[
                 StyleSheet.absoluteFill,
                 {
-                  backgroundColor: atoms.image.previewColor,
+                  backgroundColor: restImageProps.previewColor,
                   alignItems: "center",
                   justifyContent: "center",
                   opacity: previewColorOverlayOpacity,
@@ -325,7 +323,7 @@ const CustomImage = React.forwardRef(
         }
       }
 
-      if (atoms.image.loaderType === "spinner" && !error && !uri) {
+      if (restImageProps.loaderType === "spinner" && !error && !uri) {
         // Load the spinner component
         return (
           <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
@@ -340,13 +338,13 @@ const CustomImage = React.forwardRef(
       if (isRemoteImage) {
         loadRemoteImage(
           (source as ImageURISource).uri as string,
-          atoms.image.imageDownloadOptions
+          restImageProps.imageDownloadOptions
         );
 
         // Start animating the overlay opacity as soon as the URI becomes available
         if (uri && !previousUri) {
           Animated.timing(intensity, {
-            duration: atoms.image.transitionDuration,
+            duration: restImageProps.transitionDuration,
             toValue: 0,
             useNativeDriver: Platform.OS === "android",
           }).start();

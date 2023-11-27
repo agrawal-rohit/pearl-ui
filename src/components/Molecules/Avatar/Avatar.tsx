@@ -46,10 +46,15 @@ export type BaseAvatarProps = Omit<
  */
 const CustomAvatar = React.forwardRef(
   (
-    { children, ...props }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
+    {
+      children,
+      atoms,
+      ...props
+    }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
     ref: any
   ) => {
-    const { name, src, getInitials, atoms, fallbackComponent } = props;
+    const { name, src, getInitials, fallbackComponent, ...otherBoxProps } =
+      atoms.box;
 
     // Function to pick a random color from the namedColors object
     const pickRandomColor = () => {
@@ -66,9 +71,9 @@ const CustomAvatar = React.forwardRef(
     const randomColor = useRef(pickRandomColor()).current;
     // Determine the text color based on the background color to ensure accessibility
     const accessibleTextColor = useAccessibleColor(
-      atoms.box.backgroundColor ??
-        atoms.box.bgColor ??
-        atoms.box.style.backgroundColor ??
+      otherBoxProps.backgroundColor ??
+        otherBoxProps.bgColor ??
+        otherBoxProps.style.backgroundColor ??
         randomColor,
       {
         light: "neutral.50",
@@ -101,15 +106,15 @@ const CustomAvatar = React.forwardRef(
 
     // If a source is provided, render the image
     if (finalSource) {
-      return <Image ref={ref} source={finalSource} {...atoms.box} />;
+      return <Image ref={ref} source={finalSource} {...otherBoxProps} />;
     }
 
     // If no source is provided, render the fallback
     return (
       <Box
-        {...atoms.box}
+        {...otherBoxProps}
         backgroundColor={
-          atoms.box.backgroundColor ?? atoms.box.bgColor ?? randomColor
+          otherBoxProps.backgroundColor ?? otherBoxProps.bgColor ?? randomColor
         }
         justifyContent="center"
         alignItems="center"

@@ -7,7 +7,11 @@ import {
 } from "../theme/src/types";
 import { getKeys } from "../theme/utils/type-helpers";
 import { useTheme } from "./useTheme";
-import { checkKeyAvailability, composeStyleProps } from "./utils/utils";
+import {
+  MOTI_PROPS,
+  checkKeyAvailability,
+  composeStyleProps,
+} from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
 import { useStyleProps } from "./useStyleProps";
@@ -58,30 +62,9 @@ export const useMolecularComponentConfig = (
     receivedProps,
     buildStyleProperties.properties
   );
-  const overridenAnimationProps = _.pick(receivedProps, [
-    "animate",
-    "from",
-    "transition",
-    "delay",
-    "state",
-    "stylePriority",
-    "onDidAnimate",
-    "exit",
-    "exitTransition",
-    "animateInitialState",
-  ]);
+  const overridenAnimationProps = _.pick(receivedProps, MOTI_PROPS);
   const overridenNativeProps = _.omit(receivedProps, [
-    "atoms",
-    "animate",
-    "from",
-    "transition",
-    "delay",
-    "state",
-    "stylePriority",
-    "onDidAnimate",
-    "exit",
-    "exitTransition",
-    "animateInitialState",
+    ...MOTI_PROPS,
     "style",
     ...buildStyleProperties.properties,
   ]);
@@ -104,16 +87,18 @@ export const useMolecularComponentConfig = (
     "defaults"
   ] as NonNullable<MolecularComponentConfig["defaults"]>;
 
-  if (defaultComponentConfig.hasOwnProperty("size")) {
-    activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
-      ? sizeForCurrentScreenSize
-      : defaultComponentConfig.size;
-  }
+  if (defaultComponentConfig) {
+    if (defaultComponentConfig.hasOwnProperty("size")) {
+      activeSizeAndVariantConfig.size = sizeForCurrentScreenSize
+        ? sizeForCurrentScreenSize
+        : defaultComponentConfig.size;
+    }
 
-  if (defaultComponentConfig.hasOwnProperty("variant")) {
-    activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
-      ? variantForCurrentScreenSize
-      : defaultComponentConfig.variant;
+    if (defaultComponentConfig.hasOwnProperty("variant")) {
+      activeSizeAndVariantConfig.variant = variantForCurrentScreenSize
+        ? variantForCurrentScreenSize
+        : defaultComponentConfig.variant;
+    }
   }
 
   if (!componentStyleConfig.hasOwnProperty("parts")) {

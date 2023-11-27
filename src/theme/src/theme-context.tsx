@@ -5,22 +5,22 @@ import { FinalPearlTheme } from "./types";
 import { DimensionsProvider } from "./dimensions-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-type ColorModes = "light" | "dark";
+export type ColorMode = "light" | "dark";
 
 export interface IThemeContext {
   /** Theme configuration object for the active color mode */
   theme: FinalPearlTheme;
   /** Active color mode */
-  colorMode: ColorModes;
+  colorMode: ColorMode;
   /** Function to toggle the active color mode */
   toggleColorMode(): void;
   /** Function to switch the active color mode to a specific mode */
-  switchColorMode(colorMode: ColorModes | "system"): void;
+  switchColorMode(colorMode: ColorMode | "system"): void;
 }
 
 interface ThemeProviderProps {
   /** Initial color mode for the theme (light, dark, system) */
-  initialColorMode?: ColorModes | "system";
+  initialColorMode?: ColorMode | "system";
   /** The theme configuration object */
   theme?: FinalPearlTheme;
   /** A flag that describes the loading status of the custom fonts */
@@ -40,12 +40,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   haveFontsLoaded = true,
   children,
 }) => {
-  const systemThemeStyle = useColorScheme() as ColorModes;
-  const [colorMode, setColorMode] = useState<ColorModes>(
+  const systemThemeStyle = useColorScheme() as ColorMode;
+  const [colorMode, setColorMode] = useState<ColorMode>(
     initialColorMode === "system" ? systemThemeStyle : initialColorMode
   );
 
-  const switchColorMode = (colorMode: ColorModes | "system") => {
+  const switchColorMode = (colorMode: ColorMode | "system") => {
     if (colorMode === "dark") {
       setColorMode("dark");
     } else if (colorMode == "light") {

@@ -12,13 +12,13 @@ import {
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Stack from "../../atoms/stack/stack";
-import Box from "../../atoms/box/box";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { useRadioGroup } from "./radio-group";
 import { useCheckedState } from "../../../hooks/state/useCheckedState";
 import { useInvalidState } from "../../../hooks/state/useInvalidState";
-import { useDisabledState } from "../../../hooks/state/useDisabledState";
+import Center from "../../atoms/center/center";
 import _ from "lodash";
+import Box from "../../atoms/box/box";
 
 export type RadioProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
@@ -69,8 +69,9 @@ const Radio = React.forwardRef(
 
     const isRadioInGroup = setRadioGroupValue !== undefined;
     const isRadioChecked = isRadioInGroup
-      ? rest.value === radioGroupValue && rest.value !== undefined
+      ? radioGroupValue === rest.value && rest.value !== undefined
       : rest.isChecked;
+
     let molecularProps = useMolecularComponentConfig(
       "Radio",
       rest,
@@ -81,21 +82,21 @@ const Radio = React.forwardRef(
       rest.colorScheme,
       boxStyleFunctions,
       "container",
-      "outerBox",
+      "container",
       "container"
     );
-
     const { atoms } = molecularProps;
 
     // Use state for dynamic style
-    const { propsWithCheckedStyles } = useCheckedState(
-      atoms.outerBox,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      rest.isChecked
-    );
-    atoms.outerBox = propsWithCheckedStyles;
+    const { propsWithCheckedStyles: propsWithCheckedStylesForOuterBox } =
+      useCheckedState(
+        atoms.outerBox,
+        boxStyleFunctions,
+        "molecule",
+        true,
+        isRadioChecked
+      );
+    atoms.outerBox = propsWithCheckedStylesForOuterBox;
     const { propsWithInvalidStyles } = useInvalidState(
       atoms.outerBox,
       boxStyleFunctions,
@@ -104,14 +105,15 @@ const Radio = React.forwardRef(
       rest.isInvalid
     );
     atoms.outerBox = propsWithInvalidStyles;
-    const { propsWithDisabledStyles } = useDisabledState(
-      atoms.outerBox,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      rest.isDisabled
-    );
-    atoms.outerBox = propsWithDisabledStyles;
+    const { propsWithCheckedStyles: propsWithCheckedStylesForInnerBox } =
+      useCheckedState(
+        atoms.innerBox,
+        boxStyleFunctions,
+        "molecule",
+        true,
+        isRadioChecked
+      );
+    atoms.innerBox = propsWithCheckedStylesForInnerBox;
 
     // OTHER METHODS
     const radioPressHandler = () => {
@@ -122,42 +124,35 @@ const Radio = React.forwardRef(
       if (onPress) onPress();
     };
 
+    // RENDER METHODS
     return (
-      <Stack
+      <Pressable
         {...atoms.container}
+        ref={radioRef}
+        onPress={radioPressHandler}
         accessible={true}
         accessibilityRole="radio"
+        isDisabled={rest.isDisabled}
         accessibilityLabel={
-          rest.accessibilityLabel
-            ? rest.accessibilityLabel
-            : (children as string)
+          rest.accessibilityLabel ? rest.accessibilityLabel : children
         }
         accessibilityState={{
           disabled: rest.isDisabled,
           checked: isRadioChecked,
         }}
         accessibilityHint={rest.accessibilityHint}
-        opacity={rest.isDisabled ? 0.5 : 1}
-        direction="horizontal"
       >
-        <Pressable
-          {...atoms.outerBox}
-          ref={radioRef}
-          onPress={radioPressHandler}
-          alignSelf="center"
-          alignItems="center"
-          justifyContent="center"
-          isDisabled={rest.isDisabled}
+        <Stack
+          spacing={rest.spacing || atoms.container.spacing}
+          direction="horizontal"
         >
-          <Box {...atoms.innerBox} width="100%" height="100%" />
-        </Pressable>
+          <Center {...atoms.outerBox}>
+            <Box {...atoms.innerBox} />
+          </Center>
 
-        {children && (
-          <Text {...atoms.text} alignSelf="center">
-            {children}
-          </Text>
-        )}
-      </Stack>
+          {!!children && <Text {...atoms.text}>{children}</Text>}
+        </Stack>
+      </Pressable>
     );
   }
 );

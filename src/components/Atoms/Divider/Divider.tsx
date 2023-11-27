@@ -1,7 +1,8 @@
 import React from "react";
-import Box, { BoxProps } from "../box/box";
+import { BoxProps } from "../box/box";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { pearlify } from "../../../pearlify";
+import { View } from "react-native";
 
 /**
  * BaseDividerProps is a type that extends BoxProps and adds properties specific to the Divider component.
@@ -27,8 +28,9 @@ const CustomDivider = React.forwardRef(
   ) => {
     // Styles are applied based on the orientation of the divider
     return (
-      <Box
+      <View
         ref={ref}
+        {...props}
         style={{
           ...(props.style as any),
           height:
@@ -38,7 +40,7 @@ const CustomDivider = React.forwardRef(
         }}
       >
         {children}
-      </Box>
+      </View>
     );
   }
 );

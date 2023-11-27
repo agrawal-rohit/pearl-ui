@@ -18,6 +18,7 @@ import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { useInvalidState } from "../../../hooks/state/useInvalidState";
 import { useCheckedState } from "../../../hooks/state/useCheckedState";
 import { useDisabledState } from "../../../hooks";
+import Center from "../../atoms/center/center";
 import _ from "lodash";
 
 export type CheckBoxProps = PressableProps &
@@ -138,7 +139,7 @@ const CheckBox = React.forwardRef(
       boxStyleFunctions,
       "molecule",
       true,
-      rest.isChecked
+      isCheckBoxChecked
     );
     atoms.box = propsWithCheckedStyles;
     const { propsWithInvalidStyles } = useInvalidState(
@@ -150,13 +151,13 @@ const CheckBox = React.forwardRef(
     );
     atoms.box = propsWithInvalidStyles;
     const { propsWithDisabledStyles } = useDisabledState(
-      atoms.box,
+      atoms.container,
       boxStyleFunctions,
       "molecule",
       true,
       rest.isDisabled
     );
-    atoms.box = propsWithDisabledStyles;
+    atoms.container = propsWithDisabledStyles;
 
     // OTHER METHODS
     const checkboxPressHandler = () => {
@@ -172,10 +173,13 @@ const CheckBox = React.forwardRef(
 
     // RENDER METHODS
     return (
-      <Stack
+      <Pressable
         {...atoms.container}
+        ref={checkboxRef}
+        onPress={checkboxPressHandler}
         accessible={true}
         accessibilityRole="checkbox"
+        isDisabled={rest.isDisabled}
         accessibilityLabel={
           rest.accessibilityLabel ? rest.accessibilityLabel : children
         }
@@ -184,43 +188,42 @@ const CheckBox = React.forwardRef(
           checked: isCheckBoxChecked,
         }}
         accessibilityHint={rest.accessibilityHint}
-        direction="horizontal"
       >
-        <Pressable
-          {...atoms.box}
-          ref={checkboxRef}
-          onPress={checkboxPressHandler}
-          alignSelf="center"
-          alignItems="center"
-          justifyContent="center"
-          isDisabled={rest.isDisabled}
-          borderRadius={
-            atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
-          }
+        <Stack
+          spacing={rest.spacing || atoms.container.spacing}
+          direction="horizontal"
         >
-          <Icon
-            {...atoms.icon}
-            iconFamily={
-              rest.isIndeterminate
-                ? rest.indeterminateIconFamily ??
-                  atoms.icon.indeterminateIconFamily
-                : rest.checkedIconFamily ?? atoms.icon.checkedIconFamily
+          <Center
+            borderRadius={
+              atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
             }
-            iconName={
-              rest.isIndeterminate
-                ? rest.indeterminateIconName ?? atoms.icon.indeterminateIconName
-                : rest.checkedIconName ?? atoms.icon.checkedIconName
-            }
-            color={isCheckBoxChecked ? atoms.icon.color : "transparent"}
-          />
-        </Pressable>
+            {...atoms.box}
+          >
+            <Icon
+              {...atoms.icon}
+              iconFamily={
+                rest.isIndeterminate
+                  ? rest.indeterminateIconFamily ??
+                    atoms.icon.indeterminateIconFamily
+                  : rest.checkedIconFamily ?? atoms.icon.checkedIconFamily
+              }
+              iconName={
+                rest.isIndeterminate
+                  ? rest.indeterminateIconName ??
+                    atoms.icon.indeterminateIconName
+                  : rest.checkedIconName ?? atoms.icon.checkedIconName
+              }
+              color={isCheckBoxChecked ? atoms.icon.color : "transparent"}
+            />
+          </Center>
 
-        {children && (
-          <Text {...atoms.text} alignSelf="center">
-            {children}
-          </Text>
-        )}
-      </Stack>
+          {!!children && (
+            <Text {...atoms.text} alignSelf="center">
+              {children}
+            </Text>
+          )}
+        </Stack>
+      </Pressable>
     );
   }
 );

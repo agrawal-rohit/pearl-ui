@@ -27,3 +27,15 @@ export type AccessibilityRoles =
   | "timer"
   | "togglebutton"
   | "toolbar";
+
+export type MotiProps =
+  | "animate"
+  | "from"
+  | "transition"
+  | "delay"
+  | "state"
+  | "stylePriority"
+  | "onDidAnimate"
+  | "exit"
+  | "exitTransition"
+  | "animateInitialState";

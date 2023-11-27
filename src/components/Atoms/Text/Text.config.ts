@@ -20,25 +20,25 @@ export default {
       fontSize: "5xl",
       lineHeight: "8xl",
     },
-    t1: {
+    h3: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "2xl",
       lineHeight: "7xl",
     },
-    t2: {
+    h4: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "l",
       lineHeight: "3xl",
     },
-    st1: {
+    h5: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "m",
       lineHeight: "2xl",
     },
-    st2: {
+    h6: {
       fontFamily: "heading",
       fontWeight: "semibold",
       fontSize: "s",
@@ -47,47 +47,29 @@ export default {
     p1: {
       fontFamily: "body",
       fontWeight: "normal",
-      fontSize: "m",
-      lineHeight: "xl",
+      fontSize: "l",
+      lineHeight: "2xl",
     },
     p2: {
       fontFamily: "body",
       fontWeight: "normal",
-      fontSize: "s",
-      lineHeight: "l",
-    },
-    btn1: {
-      fontFamily: "body",
-      fontWeight: "medium",
       fontSize: "m",
-      lineHeight: "2xl",
+      lineHeight: "xl",
     },
-    btn2: {
+    p3: {
       fontFamily: "body",
-      fontWeight: "medium",
+      fontWeight: "normal",
       fontSize: "s",
       lineHeight: "l",
     },
-    btn3: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "xs",
-      lineHeight: "m",
-    },
-    btn4: {
-      fontFamily: "body",
-      fontWeight: "medium",
-      fontSize: "2xs",
-      lineHeight: "xs",
-    },
-    caption: {
+    p4: {
       fontFamily: "body",
       fontWeight: "normal",
       fontSize: "xs",
-      lineHeight: "m",
+      lineHeight: "l",
     },
   },
   defaults: {
-    variant: "p1",
+    variant: "p2",
   },
 };

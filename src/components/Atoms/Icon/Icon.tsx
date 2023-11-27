@@ -114,15 +114,15 @@ const CustomIcon = React.forwardRef(
 
     return (
       <IconToUse
-        ref={ref}
         accessible={true}
         accessibilityLabel={
           accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
         }
         name={iconName}
         {...props}
+        ref={ref}
         size={responsiveSize(rawSize)}
-      ></IconToUse>
+      />
     );
   }
 );

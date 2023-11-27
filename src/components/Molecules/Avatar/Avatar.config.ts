@@ -11,44 +11,44 @@ export default {
     },
   },
   sizes: {
-    s: {
+    xs: {
       box: {
         width: 40,
         height: 40,
       },
       text: {
-        variant: "caption",
+        variant: "p4",
       },
     },
-    m: {
+    s: {
       box: {
         width: 55,
         height: 55,
       },
       text: {
-        variant: "p1",
+        variant: "p2",
+        fontSize: "m",
+        lineHeight: "3xl",
+      },
+    },
+    m: {
+      box: {
+        width: 70,
+        height: 70,
+      },
+      text: {
+        variant: "p2",
         fontSize: "m",
         lineHeight: "3xl",
       },
     },
     l: {
       box: {
-        width: 70,
-        height: 70,
-      },
-      text: {
-        variant: "p1",
-        fontSize: "m",
-        lineHeight: "3xl",
-      },
-    },
-    xl: {
-      box: {
         width: 85,
         height: 85,
       },
       text: {
-        variant: "p1",
+        variant: "p2",
         fontSize: "4xl",
         lineHeight: "8xl",
       },
