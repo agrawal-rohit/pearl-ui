@@ -15,5 +15,7 @@ const Box = pearl<ViewProps>(View, {
 // The props that the Box component accepts.
 export type BoxProps = React.ComponentProps<typeof Box>;
 
+Box.displayName = "Box";
+
 // Export the Box component as the default export.
 export default Box;

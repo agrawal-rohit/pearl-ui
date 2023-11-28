@@ -120,4 +120,6 @@ const Text = pearl<BaseTextProps, "atom", TextStyleProps>(
 
 export type TextProps = React.ComponentProps<typeof Text>;
 
+Text.displayName = "Text";
+
 export default Text;

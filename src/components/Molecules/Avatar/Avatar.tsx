@@ -168,4 +168,6 @@ const Avatar = React.forwardRef(
 
 export type AvatarProps = React.ComponentProps<typeof Avatar>;
 
+Avatar.displayName = "Avatar";
+
 export default Avatar;

@@ -155,6 +155,6 @@ const Button = React.forwardRef(
   }
 );
 
-Button.displayName = "PearlButton";
+Button.displayName = "Button";
 
 export default Button;

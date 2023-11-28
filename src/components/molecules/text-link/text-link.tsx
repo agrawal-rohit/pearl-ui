@@ -46,4 +46,6 @@ const TextLink = pearl<BaseTextLinkProps, "molecule">(CustomTextLink, {
 
 export type TextLinkProps = React.ComponentProps<typeof TextLink>;
 
+TextLink.displayName = "TextLink";
+
 export default TextLink;

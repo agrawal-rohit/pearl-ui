@@ -151,4 +151,9 @@ export const ZStack: React.FC<ZStackProps> = ({
   );
 };
 
+Stack.displayName = "Stack";
+HStack.displayName = "HStack";
+VStack.displayName = "VStack";
+ZStack.displayName = "ZStack";
+
 export default Stack;

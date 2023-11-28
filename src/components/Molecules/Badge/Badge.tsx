@@ -70,4 +70,6 @@ const Badge = pearl<BaseBadgeProps, "molecule">(
 
 export type BadgeProps = React.ComponentProps<typeof Badge>;
 
+Badge.displayName = "Badge";
+
 export default Badge;

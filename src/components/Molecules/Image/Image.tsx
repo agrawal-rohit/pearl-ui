@@ -395,4 +395,6 @@ const Image = pearl<BaseImageProps, "molecule">(
 
 export type ImageProps = React.ComponentProps<typeof Image>;
 
+Image.displayName = "Image";
+
 export default Image;

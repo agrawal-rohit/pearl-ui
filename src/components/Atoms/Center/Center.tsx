@@ -12,4 +12,6 @@ const Center = React.forwardRef(({ children, ...rest }: BoxProps, ref: any) => {
   );
 });
 
+Center.displayName = "Center";
+
 export default Center;

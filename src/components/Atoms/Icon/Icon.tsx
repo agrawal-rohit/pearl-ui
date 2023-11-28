@@ -136,4 +136,6 @@ const Icon = pearl<BaseIconProps, "atom", IconStyleProps>(
 
 export type IconProps = React.ComponentProps<typeof Icon>;
 
+Icon.displayName = "Icon";
+
 export default Icon;

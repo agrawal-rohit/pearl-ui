@@ -11,4 +11,7 @@ const Spacer: React.FC<BoxProps> = ({ children, ...rest }) => {
     </Box>
   );
 };
+
+Spacer.displayName = "Spacer";
+
 export default Spacer;

@@ -103,4 +103,6 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   );
 };
 
+CheckBoxGroup.displayName = "CheckBoxGroup";
+
 export default CheckBoxGroup;

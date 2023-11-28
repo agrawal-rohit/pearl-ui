@@ -113,4 +113,6 @@ const Pressable = React.forwardRef(
   }
 );
 
+Pressable.displayName = "Pressable";
+
 export default Pressable;

@@ -169,4 +169,6 @@ const Screen = pearl<BaseScreenProps, "atom">(CustomScreen, {
 
 export type ScreenProps = React.ComponentProps<typeof Screen>;
 
+Screen.displayName = "Screen";
+
 export default Screen;

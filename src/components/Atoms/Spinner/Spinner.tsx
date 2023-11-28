@@ -126,4 +126,6 @@ const Spinner: React.FC<
 
 export type SpinnerProps = React.ComponentProps<typeof Spinner>;
 
+Spinner.displayName = "Spinner";
+
 export default Spinner;

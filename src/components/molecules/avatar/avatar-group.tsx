@@ -102,4 +102,6 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
   );
 };
 
+AvatarGroup.displayName = "AvatarGroup";
+
 export default AvatarGroup;

@@ -57,4 +57,6 @@ const Divider = pearl<BaseDividerProps, "atom">(CustomDivider, {
 /** DividerProps is a type that represents the props of the Divider component */
 export type DividerProps = React.ComponentProps<typeof Divider>;
 
+Divider.displayName = "Divider";
+
 export default Divider;
