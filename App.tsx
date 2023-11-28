@@ -31,8 +31,8 @@ import CheckBoxGroup from "./src/components/molecules/checkbox/checkbox-group";
 import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
 import Stack from "./src/components/atoms/stack/stack";
-import { HStack } from "./src/components/atoms/stack/stack";
-import Center from "./src/components/atoms/center/center";
+import Button from "./src/components/molecules/button/button";
+import ButtonGroup from "./src/components/molecules/button/button-group";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -67,12 +67,12 @@ const Index = () => {
   const [radioGroupValue, setRadioGroupValue] = React.useState("B");
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
-  const [text, settext] = React.useState("");
+  const [text, setText] = React.useState("");
 
   return (
     <Screen>
-      <Stack direction="vertical" spacing="8">
-        {/* <Stack direction="vertical">
+      <Stack direction="vertical" spacing="4">
+        <Stack direction="vertical">
           <Radio isChecked={checked} onPress={() => setChecked(true)}>
             Default Radio
           </Radio>
@@ -84,6 +84,8 @@ const Index = () => {
         <Stack direction="vertical">
           <Text variant="h4">Controlled Radio group</Text>
           <RadioGroup
+            size="s"
+            spacing="1"
             value={radioGroupValue}
             onChange={(newVal) => setRadioGroupValue(newVal)}
           >
@@ -103,19 +105,34 @@ const Index = () => {
             <CheckBox value="B">B</CheckBox>
             <CheckBox value="C">C</CheckBox>
           </CheckBoxGroup>
-        </Stack> */}
+        </Stack>
+
+        <ButtonGroup variant="outline" isAttached>
+          <Button colorScheme="primary">Save</Button>
+          <Button
+            colorScheme="danger"
+            rightIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+          >
+            Lock
+          </Button>
+        </ButtonGroup>
+
+        <Button size="xs">Save</Button>
+        <Button size="s">Save</Button>
+        <Button size="m">Save</Button>
+        <Button size="l">Save</Button>
 
         <Textarea
           value={text}
           placeholder="Default Textrea"
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input
           value={text}
           variant="filled"
           placeholder="Default Filled Input"
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input
@@ -125,7 +142,7 @@ const Index = () => {
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           hasClearButton
           value={text}
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input
@@ -135,7 +152,7 @@ const Index = () => {
           // leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           hasClearButton
           value={text}
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input
@@ -145,7 +162,7 @@ const Index = () => {
           leftIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           hasClearButton
           value={text}
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input
@@ -155,7 +172,7 @@ const Index = () => {
           rightIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
           hasClearButton
           value={text}
-          onChangeText={(val) => settext(val)}
+          onChangeText={(val) => setText(val)}
         />
 
         <Input isFullWidth placeholder="Focused Input" autoFocus />

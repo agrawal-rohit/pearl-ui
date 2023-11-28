@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Extensibility
 ---
 
-Pearl UI is designed with extensibility in mind. It allows developers to easily integrate third-party components into the Pearl UI ecosystem. This is achieved through the 'pearlify' function, a powerful utility that transforms a third-party component into a Pearl UI-compatible component.
+Pearl UI is designed with extensibility in mind. It allows developers to easily integrate third-party components into the Pearl UI ecosystem. This is achieved through the 'pearl' function, a powerful utility that transforms a third-party component into a Pearl UI-compatible component.
 
 The benefits of this extensibility are numerous:
 
@@ -16,37 +16,42 @@ The benefits of this extensibility are numerous:
 
 ### Converting a Basic React Native Component
 
-Pearl UI's `pearlify` function can be used to convert a basic React Native component into a Pearl UI-compatible component. This allows the component to leverage Pearl UI's theming and style props. Here's an example of how you can convert a basic `View` component:
+Pearl UI's `pearl` function can be used to convert a basic React Native component into a Pearl UI-compatible component. This allows the component to leverage Pearl UI's theming and style props. Here's an example of how you can convert a basic `View` component:
 
 ```tsx
-import { View } from 'react-native';
-import { pearlify } from 'pearl-ui';
+import { View } from "react-native";
+import { pearl } from "pearl-ui";
 
-const PearlView = pearlify(View, {
-  componentName: 'MyView',
-  type: 'basic',
+const PearlView = pearl(View, {
+  componentName: "MyView",
+  type: "basic",
   animatable: true,
 });
 ```
+
 In this example, `View` is the base component that we are converting into a Pearl UI-compatible component. The `componentName` is set to 'MyView', which is a unique identifier for the component within the theme. The `type` is set to 'basic', indicating that this is a standalone component. The `animatable` flag is set to true, indicating that this component can support animations.
 
 ### Converting a Third-Party Component
 
-Pearl UI's `pearlify` function can also be used to convert a third-party component into a Pearl UI-compatible component. This allows the component to leverage Pearl UI's theming and style props. Here's an example of how you can convert the `ActionButton` component from the `react-native-action-button` library:
+Pearl UI's `pearl` function can also be used to convert a third-party component into a Pearl UI-compatible component. This allows the component to leverage Pearl UI's theming and style props. Here's an example of how you can convert the `ActionButton` component from the `react-native-action-button` library:
 
 ```tsx
-import ActionButton from 'react-native-action-button';
-import { pearlify, MoleculeComponentProps, MolecularComponentConfig } from 'pearl-ui';
+import ActionButton from "react-native-action-button";
+import {
+  pearl,
+  MoleculeComponentProps,
+  MolecularComponentConfig,
+} from "pearl-ui";
 
 const CustomActionButton = (props) => {
   return <ActionButton buttonColor={props.style.backgroundColor} {...props} />;
 };
 
 const molecularConfig: MolecularComponentConfig = {
-  parts: ['button'],
+  parts: ["button"],
   baseStyle: {
     button: {
-      bgColor: 'blue',
+      bgColor: "blue",
     },
   },
   sizes: {
@@ -69,29 +74,29 @@ const molecularConfig: MolecularComponentConfig = {
   variants: {
     primary: {
       button: {
-        bgColor: 'blue',
+        bgColor: "blue",
       },
     },
     secondary: {
       button: {
-        bgColor: 'green',
+        bgColor: "green",
       },
     },
   },
   defaults: {
-    size: 'md',
-    variant: 'primary',
+    size: "md",
+    variant: "primary",
   },
 };
 
 // Add the molecular configuration to the theme
 theme.components.MyActionButton = molecularConfig;
 
-const PearlActionButton = pearlify<BaseActionButtonProps, 'molecule'>(
+const PearlActionButton = pearl<BaseActionButtonProps, "molecule">(
   CustomActionButton,
   {
-    componentName: 'MyActionButton',
-    type: 'molecule',
+    componentName: "MyActionButton",
+    type: "molecule",
     animatable: true,
   }
 );
@@ -107,5 +112,4 @@ In this example, `ActionButton` is the base component that we are converting int
 For more information on how to use Pearl UI's extensibility features, you may find the following sections of the documentation helpful:
 
 1. **[Design Principles](./design-principles)**: This section provides an overview of the design principles that Pearl UI adheres to, including the Atomic Design methodology. Understanding these principles can help you make the most of Pearl UI's extensibility features.
-2. **[pearlify](../hooks/pearlify)**: This section provides a detailed explanation of the `pearlify` function, including its parameters and how it works. This is a key function for extending Pearl UI with third-party components.
-
+2. **[pearl](../hooks/pearl)**: This section provides a detailed explanation of the `pearl` function, including its parameters and how it works. This is a key function for extending Pearl UI with third-party components.

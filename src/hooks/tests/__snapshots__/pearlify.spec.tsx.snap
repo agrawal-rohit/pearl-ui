@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pearlify/atoms passes the snapshot test for a <Text> component 1`] = `
+exports[`pearl/atoms passes the snapshot test for a <Text> component 1`] = `
 <View
   style={
     Object {
@@ -23,7 +23,7 @@ exports[`pearlify/atoms passes the snapshot test for a <Text> component 1`] = `
 </View>
 `;
 
-exports[`pearlify/atoms passes the snapshot test for a <View> component 1`] = `
+exports[`pearl/atoms passes the snapshot test for a <View> component 1`] = `
 <View
   style={
     Object {
@@ -68,7 +68,7 @@ exports[`pearlify/atoms passes the snapshot test for a <View> component 1`] = `
 </View>
 `;
 
-exports[`pearlify/basic passes the snapshot test for a <Text> component 1`] = `
+exports[`pearl/basic passes the snapshot test for a <Text> component 1`] = `
 <View
   style={
     Object {
@@ -88,7 +88,7 @@ exports[`pearlify/basic passes the snapshot test for a <Text> component 1`] = `
 </View>
 `;
 
-exports[`pearlify/basic passes the snapshot test for a <View> component 1`] = `
+exports[`pearl/basic passes the snapshot test for a <View> component 1`] = `
 <View
   style={
     Object {
@@ -106,7 +106,7 @@ exports[`pearlify/basic passes the snapshot test for a <View> component 1`] = `
 </View>
 `;
 
-exports[`pearlify/molecules passes the snapshot test for a <View> component 1`] = `
+exports[`pearl/molecules passes the snapshot test for a <View> component 1`] = `
 <View
   style={
     Object {

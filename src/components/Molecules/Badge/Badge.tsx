@@ -2,7 +2,7 @@ import React from "react";
 import Text from "../../atoms/text/text";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 
 export type BaseBadgeProps = PressableProps;
 
@@ -53,7 +53,7 @@ const CustomBadge = React.forwardRef(
 );
 
 /** A Badge is a small component typically used to communicate a numerical value or indicate the status of an item to the user. */
-const Badge = pearlify<BaseBadgeProps, "molecule">(
+const Badge = pearl<BaseBadgeProps, "molecule">(
   CustomBadge,
   {
     componentName: "Badge",

@@ -1,7 +1,7 @@
 import React from "react";
 import { BoxProps } from "../box/box";
 import { AtomComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 import { View } from "react-native";
 
 /**
@@ -48,7 +48,7 @@ const CustomDivider = React.forwardRef(
 /**
  * Divider is a component used to visually separate content in a list or group.
  */
-const Divider = pearlify<BaseDividerProps, "atom">(CustomDivider, {
+const Divider = pearl<BaseDividerProps, "atom">(CustomDivider, {
   componentName: "Divider",
   type: "atom",
   animatable: true,

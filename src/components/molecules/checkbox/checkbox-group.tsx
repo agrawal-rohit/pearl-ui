@@ -3,9 +3,11 @@ import {
   ColorScheme,
   ComponentSizes,
   ComponentVariants,
+  FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
 import Box, { BoxProps } from "../../atoms/box/box";
+import Stack from "../../atoms/stack/stack";
 
 interface ICheckBoxGroupContext {
   /** Size of all the checkbox children in the group. */
@@ -43,6 +45,8 @@ export type CheckBoxGroupProps = BoxProps & {
   isDisabled?: boolean;
   /** Active color palette of all the children checkbox in the group. */
   colorScheme?: ColorScheme;
+  /** The spacing between the elements */
+  spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** Shape of all the children checkbox in the group. */
   shape?: "square" | "circle";
   /** Default active value of the checkbox group */
@@ -62,6 +66,10 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   shape = "square",
   value = undefined,
   defaultValue = [],
+  spacing = "2",
+  size = "m",
+  variant = "filled",
+  colorScheme = "primary",
   onChange = () => {},
   ...rest
 }) => {
@@ -76,22 +84,22 @@ const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   };
 
   return (
-    <Box {...rest}>
-      <checkboxGroupContext.Provider
-        value={{
-          size: rest.size,
-          variant: rest.variant,
-          isDisabled,
-          colorScheme: rest.colorScheme,
-          shape,
-          checkboxGroupValue: currentValue,
-          addCheckBoxGroupValue,
-          deleteCheckBoxGroupValue,
-        }}
-      >
+    <checkboxGroupContext.Provider
+      value={{
+        size: size,
+        shape: shape,
+        variant: variant,
+        isDisabled: isDisabled,
+        colorScheme: colorScheme,
+        checkboxGroupValue: currentValue,
+        addCheckBoxGroupValue: addCheckBoxGroupValue,
+        deleteCheckBoxGroupValue: deleteCheckBoxGroupValue,
+      }}
+    >
+      <Stack direction="vertical" spacing={spacing} {...rest}>
         {children}
-      </checkboxGroupContext.Provider>
-    </Box>
+      </Stack>
+    </checkboxGroupContext.Provider>
   );
 };
 

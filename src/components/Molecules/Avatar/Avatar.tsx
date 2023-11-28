@@ -9,7 +9,7 @@ import namedColors from "../../../theme/utils/named-colors.json";
 import { getKeys } from "../../../theme/utils/type-helpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 import { useAvatarGroup } from "./useAvatarGroup";
 
 /**
@@ -125,7 +125,7 @@ const CustomAvatar = React.forwardRef(
   }
 );
 
-const StyledAvatar = pearlify<BaseAvatarProps, "molecule">(
+const StyledAvatar = pearl<BaseAvatarProps, "molecule">(
   CustomAvatar,
   {
     componentName: "Avatar",

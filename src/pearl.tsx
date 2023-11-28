@@ -17,7 +17,7 @@ import { useMotiWithStyleProps } from "./hooks/useMotiWithStyleProps";
 /**
  * Configuration object that adds metadata to a component that's required by Pearl UI
  */
-interface PearlifyConfig {
+interface pearlConfig {
   /**
    * The name of the component in the FinalPearlTheme
    */
@@ -40,14 +40,14 @@ interface PearlifyConfig {
  * @param moleculeConfigOptions The options for configuring the molecular component
  * @returns
  */
-export function pearlify<
+export function pearl<
   ComponentProps,
   ComponentType extends ComponentTypes = "basic",
   StyleProps = BoxStyleProps,
   Animateable extends boolean = true,
 >(
   Component: any,
-  config: PearlifyConfig = {
+  config: pearlConfig = {
     componentName: "None",
     type: "basic",
     animatable: true,
@@ -68,7 +68,9 @@ export function pearlify<
      * Class component that wraps the base component and adds animation functionality
      */
     class ConvertedClassComponent extends React.Component<any, any> {
-      static displayName = `PearlMoti${Component.name ?? `NoName`}`;
+      static displayName = `Pearl${
+        Component.name ?? Component.displayName ?? `NoName`
+      }`;
 
       render() {
         const { children, ...props } = this.props;

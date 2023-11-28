@@ -19,7 +19,7 @@ import { BlurView } from "expo-blur";
 import Spinner from "../../atoms/spinner/spinner";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -378,7 +378,7 @@ const CustomImage = React.forwardRef(
 );
 
 /** The Image component is used to display images. */
-const Image = pearlify<BaseImageProps, "molecule">(
+const Image = pearl<BaseImageProps, "molecule">(
   CustomImage,
   {
     componentName: "Image",

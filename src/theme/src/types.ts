@@ -1,9 +1,10 @@
 import { ViewStyle, TextStyle, ImageStyle, ColorValue } from "react-native";
 import {
-  MotiTransitionProp,
   StyleValueWithReplacedTransforms,
   StyleValueWithSequenceArrays,
   UseAnimationState,
+  View as MotiView,
+  MotiTransitionProp,
 } from "moti";
 import { SharedValue } from "react-native-reanimated";
 import { BoxStyleProps } from "./style-functions";
@@ -321,7 +322,10 @@ export type StateProps<
 type OrSharedValue<T> = T | SharedValue<T>;
 
 export type MotiWithPearlStyleProps<NativeComponentStyle, ComponentStyleProps> =
-  {
+  Pick<
+    React.ComponentProps<typeof MotiView>,
+    "delay" | "stylePriority" | "onDidAnimate" | "animateInitialState"
+  > & {
     from?:
       | (Omit<
           StyleValueWithSequenceArrays<

@@ -12,8 +12,12 @@ The following are the [Moti](https://moti.fyi/) props that `useMotiWithStyleProp
 - `from`: This prop is used to set the initial state of the animation.
 - `to`: This prop is used to set the final state of the animation.
 - `transition`: This prop allows you to specify the type of transition for the animation.
-- `exitTransition`: This prop lets you define the type of transition that occurs when the component unmounts.
+- `exitTransition`: This prop lets you define the type of transition that occurs when the component unmounts. By default, `exit` uses `transition` to configure its animations, so this prop is not required. However, if you pass `exitTransition`, it will override `transition` for exit animations.
 - `state`: This prop is used to define the state of the animation, which includes the `from` and `to` states.
+- `delay`: This prop is used to manage the delay for the `animate` field. (Use the `transition` prop for more granular control).
+- `onDidAnimate`: This prop is used to define a callback function called after finishing an animation.
+- `stylePriority`: This prop is used to control which animation style takes precedent.
+- `animateInitialState`: This prop is used to set the `from` prop to animate.
 
 ## Import
 

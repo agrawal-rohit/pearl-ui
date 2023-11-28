@@ -4,9 +4,11 @@ import Box from "../../atoms/box/box";
 import Text from "../../atoms/text/text";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../pearlify";
+import { useButtonGroup } from "./button-group";
+import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
+import { boxStyleFunctions } from "../../../theme/src/style-functions";
 
-export type BaseButtonProps = PressableProps & {
+export type ButtonProps = PressableProps & {
   /** Whether the button is in a loading state.  */
   isLoading?: boolean;
   /** Whether the button should span the entire width of the parent container */
@@ -22,30 +24,48 @@ export type BaseButtonProps = PressableProps & {
   children?: string;
 };
 
-/**
- * CustomButton is a forwardRef component that accepts children and props.
- * It destructures the props to get the atoms and rootProps.
- * It also destructures the rootProps to get the necessary properties.
- * It then renders the button based on the loading status and the presence of left and right icons.
- */
-const CustomButton = React.forwardRef(
+/** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
+const Button = React.forwardRef(
   (
-    { children, atoms }: MoleculeComponentProps<"Button", BaseButtonProps>,
-    ref: any
-  ) => {
-    // Destructure the rootProps to get the necessary properties
-    const {
-      loadingText = null,
+    {
+      children,
+      loadingText = undefined,
       spinnerPlacement = "start",
       isLoading = false,
       isFullWidth = false,
-      isDisabled = false,
-      leftIcon = null,
-      rightIcon = null,
-    } = atoms.box;
+      leftIcon = undefined,
+      rightIcon = undefined,
+      ...rest
+    }: Omit<MoleculeComponentProps<"Button", ButtonProps>, "atoms"> & {
+      atoms?: Record<string, any>;
+    },
+    ref: any
+  ) => {
+    const { size, variant, isDisabled, colorScheme } = useButtonGroup();
+
+    // Overwrite props from checkbox group
+    rest.size = rest.size ?? size;
+    rest.variant = rest.variant ?? variant;
+    rest.isDisabled = rest.isDisabled ?? isDisabled;
+    rest.colorScheme = rest.colorScheme ?? colorScheme;
+
+    const molecularProps = useMolecularComponentConfig(
+      "Button",
+      rest,
+      {
+        size: rest.size,
+        variant: rest.variant,
+      },
+      rest.colorScheme,
+      boxStyleFunctions,
+      "box",
+      "box",
+      "box"
+    );
+    const { atoms } = molecularProps;
 
     // Determine if the button is disabled
-    const disabled = isDisabled ? true : isLoading;
+    const disabled = rest.isDisabled ? true : isLoading;
 
     // Function to render the loading status of the button
     const renderLoadingStatus = () => {
@@ -113,7 +133,6 @@ const CustomButton = React.forwardRef(
       }
     };
 
-    // Return the Pressable component with the appropriate props and children
     return (
       <Pressable
         {...atoms.box}
@@ -136,22 +155,6 @@ const CustomButton = React.forwardRef(
   }
 );
 
-/** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
-const Button = pearlify<BaseButtonProps, "molecule">(
-  CustomButton,
-  {
-    componentName: "Button",
-    type: "molecule",
-    animatable: true,
-  },
-  undefined,
-  {
-    partForOverridenStyleProps: "box",
-    partForOverridenNativeProps: "box",
-    partForOverridenAnimationProps: "box",
-  }
-);
-
-export type ButtonProps = React.ComponentProps<typeof Button>;
+Button.displayName = "PearlButton";
 
 export default Button;

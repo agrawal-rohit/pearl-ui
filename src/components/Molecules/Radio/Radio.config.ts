@@ -2,7 +2,7 @@ export default {
   parts: ["container", "outerBox", "innerBox", "text"],
   baseStyle: {
     container: {
-      my: "1.5",
+      my: "1",
       spacing: "2.5",
       _disabled: {
         opacity: 0.5,
@@ -48,7 +48,7 @@ export default {
         h: 24,
       },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
     },
     l: {

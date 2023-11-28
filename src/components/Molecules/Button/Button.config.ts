@@ -5,23 +5,26 @@ export default {
       my: "1",
       justifyContent: "center",
       alignItems: "center",
-      _pressed: {
-        opacity: 0.8,
+      transition: {
+        duration: 100,
       },
     },
     icon: {
       alignSelf: "center",
     },
+    text: {
+      fontWeight: 500,
+    },
   },
   sizes: {
     xs: {
       box: {
-        py: "1",
-        px: "1.5",
+        py: "0.5",
+        px: "2",
         borderRadius: "s",
       },
       text: {
-        variant: "p4",
+        fontSize: "2xs",
       },
       spinner: {
         my: "1",
@@ -34,11 +37,11 @@ export default {
     s: {
       box: {
         py: "1.5",
-        px: "1.5",
-        borderRadius: "s",
+        px: "2.5",
+        borderRadius: "m",
       },
       text: {
-        variant: "p3",
+        variant: "p4",
       },
       spinner: {
         size: "m",
@@ -49,12 +52,12 @@ export default {
     },
     m: {
       box: {
-        py: "2",
-        px: "2",
+        py: "2.5",
+        px: "3",
         borderRadius: "m",
       },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
       spinner: {
         size: "m",
@@ -65,12 +68,12 @@ export default {
     },
     l: {
       box: {
-        py: "2.5",
-        px: "2.5",
+        py: "3",
+        px: "4",
         borderRadius: "m",
       },
       text: {
-        variant: "p1",
+        variant: "p2",
       },
       spinner: {
         size: "l",
@@ -83,7 +86,12 @@ export default {
   variants: {
     filled: {
       box: {
-        backgroundColor: "primary.500",
+        animate: {
+          backgroundColor: "primary.500",
+        },
+        _pressed: {
+          bgColor: "primary.400",
+        },
       },
       text: { color: "neutral.50" },
       spinner: {
@@ -95,12 +103,17 @@ export default {
     },
     outline: {
       box: {
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        animate: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
+          borderWidth: 1,
+          borderColor: "primary.500",
         },
-        borderWidth: 1,
-        borderColor: "primary.500",
+        _pressed: {
+          bgColor: "primary.50",
+        },
       },
       text: { color: "primary.500" },
       spinner: {
@@ -112,9 +125,14 @@ export default {
     },
     ghost: {
       box: {
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        animate: {
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
+        },
+        _pressed: {
+          bgColor: "primary.50",
         },
       },
       text: { color: "primary.500" },

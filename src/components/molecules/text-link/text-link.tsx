@@ -2,7 +2,7 @@ import React from "react";
 import Text from "../../atoms/text/text";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { MoleculeComponentProps } from "../../../theme/src/types";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 
 export type BaseTextLinkProps = PressableProps & {
   children?: string;
@@ -38,7 +38,7 @@ const CustomTextLink = React.forwardRef(
 );
 
 /** TextLink wraps a Text component with a Pressable component that can be used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
-const TextLink = pearlify<BaseTextLinkProps, "molecule">(CustomTextLink, {
+const TextLink = pearl<BaseTextLinkProps, "molecule">(CustomTextLink, {
   componentName: "TextLink",
   type: "molecule",
   animatable: true,

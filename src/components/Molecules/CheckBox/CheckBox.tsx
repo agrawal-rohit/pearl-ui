@@ -94,7 +94,7 @@ const CheckBox = React.forwardRef(
     },
     checkboxRef: any
   ) => {
-    let {
+    const {
       size,
       variant,
       isDisabled,
@@ -106,11 +106,11 @@ const CheckBox = React.forwardRef(
     } = useCheckBoxGroup();
 
     // Overwrite props from checkbox group
-    rest.size = size ?? rest.size;
-    rest.variant = variant ?? rest.variant;
-    rest.isDisabled = isDisabled ?? rest.isDisabled ?? false;
-    rest.colorScheme = colorScheme ?? rest.colorScheme ?? "primary";
-    rest.shape = shape ?? rest.shape ?? "square";
+    rest.size = rest.size ?? size;
+    rest.variant = rest.variant ?? variant;
+    rest.isDisabled = rest.isDisabled ?? isDisabled;
+    rest.colorScheme = rest.colorScheme ?? colorScheme;
+    rest.shape = rest.shape ?? shape;
 
     const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
     const isCheckBoxChecked = isCheckBoxInGroup
@@ -118,7 +118,7 @@ const CheckBox = React.forwardRef(
         rest.value !== undefined
       : rest.isChecked;
 
-    let molecularProps = useMolecularComponentConfig(
+    const molecularProps = useMolecularComponentConfig(
       "CheckBox",
       rest,
       {

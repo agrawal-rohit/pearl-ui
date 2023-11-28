@@ -3,9 +3,11 @@ import {
   ColorScheme,
   ComponentSizes,
   ComponentVariants,
+  FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
 import Box, { BoxProps } from "../../atoms/box/box";
+import Stack from "../../atoms/stack/stack";
 
 interface IRadioGroupContext {
   /** Size of all the children radio in the group. */
@@ -39,6 +41,8 @@ export type RadioGroupProps = BoxProps & {
   isDisabled?: boolean;
   /** Active color palette of all the children radio in the group. */
   colorScheme?: ColorScheme;
+  /** The spacing between the elements */
+  spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** Default active value of the radio group */
   defaultValue?: string | number | undefined;
   /** Active value of the radio group */
@@ -55,7 +59,11 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   isDisabled = false,
   value = undefined,
   defaultValue = undefined,
+  spacing = "2",
   onChange = () => {},
+  size = "m",
+  variant = "filled",
+  colorScheme = "primary",
   ...rest
 }) => {
   const currentValue = value ?? defaultValue;
@@ -64,20 +72,25 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   };
 
   return (
-    <Box {...rest} accessibilityRole="radiogroup">
-      <radioGroupContext.Provider
-        value={{
-          size: rest.size,
-          variant: rest.variant,
-          isDisabled,
-          colorScheme: rest.colorScheme,
-          radioGroupValue: currentValue,
-          setRadioGroupValue,
-        }}
+    <radioGroupContext.Provider
+      value={{
+        size: size,
+        variant: variant,
+        isDisabled: isDisabled,
+        colorScheme: colorScheme,
+        radioGroupValue: currentValue,
+        setRadioGroupValue: setRadioGroupValue,
+      }}
+    >
+      <Stack
+        direction="vertical"
+        spacing={spacing}
+        {...rest}
+        accessibilityRole="radiogroup"
       >
         {children}
-      </radioGroupContext.Provider>
-    </Box>
+      </Stack>
+    </radioGroupContext.Provider>
   );
 };
 

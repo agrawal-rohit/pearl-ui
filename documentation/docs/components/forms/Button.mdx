@@ -21,8 +21,13 @@ The `Button` component in Pearl UI is a versatile and customizable element used 
 
 ## Import
 
+Pearl UI provides two button-related components for different use cases:
+
+1. `Button`: This is a single button that can be clicked to trigger an action or event.
+2. `ButtonGroup`: This is a container for multiple `Button` components. It manages the state of its child buttons and allows you to apply shared styles to them.
+
 ```jsx
-import { Button } from "pearl-ui";
+import { Button, ButtonGroup } from "pearl-ui";
 ```
 
 ## Usage
@@ -110,6 +115,35 @@ The `colorScheme` prop allows you to change the color palette of the button. Thi
 <Button colorScheme="secondary">Secondary Button</Button>
 ```
 
+### Grouping Buttons
+
+You can use the [Stack](../layout/Stack) or `ButtonGroup` component to group multiple buttons. When you use the `ButtonGroup` component, it allows you to:
+
+- Set the `size`, `variant`, and `colorScheme` of all buttons within it.
+- Add `spacing` between the buttons.
+- Flush the buttons together by removing the border radius of their children as needed.
+
+```jsx
+<ButtonGroup variant="outline" spacing="6">
+  <Button>Save</Button>
+  <Button colorScheme="danger">Cancel</Button>
+</ButtonGroup>
+```
+
+To flush the buttons, pass the `isAttached` prop.
+
+```jsx
+<ButtonGroup size="sm" isAttached variant="outline">
+  <Button>Save</Button>
+  <Button
+    colorScheme="danger"
+    rightIcon={<Icon iconFamily="Ionicons" iconName="md-lock-closed" />}
+  >
+    Lock
+  </Button>
+</ButtonGroup>
+```
+
 ### Android Ripple Effect
 
 To maintain the native ripple effect on Android devices, `Button` provides a default ripple effect that should work for most scenarios. By default, the ripple color is the `200` palette value of the active color scheme.
@@ -137,7 +171,7 @@ import Snack from "../../../src/components/ExpoSnack";
 - When the `Button` is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
 - Similar to [Pressable](./Pressable), Button expects an `actionDescription` prop to specify the intented outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
 
-## Component Properties
+## Button Component Properties
 
 ### Supported Style Properties
 
@@ -156,3 +190,22 @@ The `Button` component is a composition of the [Pressable](./Pressable) componen
 | `spinnerPlacement` | No       | <t>"start" \| "end"</t>                         | `"start"`   | Specifies the position of the loading spinner relative to the `loadingText`.                                                                 |
 | `leftIcon`         | No       | <t>React.ReactElement</t>                       | `null`      | Defines the icon to display on the left side of the main text.                                                                               |
 | `rightIcon`        | No       | <t>React.ReactElement</t>                       | `null`      | Defines the icon to display on the right side of the main text.                                                                              |
+
+## ButtonGroup Component Properties
+
+### Supported Style Properties
+
+The `ButtonGroup` component is composed of the [Stack](../layout/Stack) component, which means you can pass all [Stack](../layout/Stack) properties to it.
+
+### Additional Properties
+
+Here is a list of additional properties that the `ButtonGroup` component supports:
+
+| Name          | Required | Type                                            | Default     | Description                                                             |
+| ------------- | -------- | ----------------------------------------------- | ----------- | ----------------------------------------------------------------------- |
+| `size`        | No       | <t>PearlTheme.components.Button["sizes"]</t>    | `"m"`       | Determines the size of all the children buttons in the group.           |
+| `variant`     | No       | <t>PearlTheme.components.Button["variants"]</t> | `"filled"`  | Determines the variant of all the children buttons in the group.        |
+| `spacing`     | No       | <t>PearlTheme["spacing"]</t>                    | `2`         | Sets the spacing between the children buttons in the group.             |
+| `isDisabled`  | No       | <t>boolean</t>                                  | `false`     | If true, the button group is disabled.                                  |
+| `isAttached`  | No       | <t>boolean</t>                                  | `false`     | If true, the children buttons are flushed together.                     |
+| `colorScheme` | No       | <t>PearlTheme.palette</t>                       | `"primary"` | Sets the active color palette of all the children buttons in the group. |

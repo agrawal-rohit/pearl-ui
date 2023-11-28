@@ -52,7 +52,7 @@ const Radio = React.forwardRef(
     },
     radioRef: any
   ) => {
-    let {
+    const {
       size,
       variant,
       isDisabled,
@@ -62,17 +62,17 @@ const Radio = React.forwardRef(
     } = useRadioGroup();
 
     // Overwrite props from radio group
-    rest.size = size ?? rest.size;
-    rest.variant = variant ?? rest.variant;
-    rest.isDisabled = isDisabled ?? rest.isDisabled ?? false;
-    rest.colorScheme = colorScheme ?? rest.colorScheme ?? "primary";
+    rest.size = rest.size ?? size;
+    rest.variant = rest.variant ?? variant;
+    rest.isDisabled = rest.isDisabled ?? isDisabled;
+    rest.colorScheme = rest.colorScheme ?? colorScheme;
 
     const isRadioInGroup = setRadioGroupValue !== undefined;
     const isRadioChecked = isRadioInGroup
       ? radioGroupValue === rest.value && rest.value !== undefined
       : rest.isChecked;
 
-    let molecularProps = useMolecularComponentConfig(
+    const molecularProps = useMolecularComponentConfig(
       "Radio",
       rest,
       {

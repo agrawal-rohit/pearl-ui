@@ -13,7 +13,7 @@ import {
   ResponsiveValue,
 } from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 
 type BaseTextProps = React.ComponentProps<typeof RNText> & {
   /** The size of the text */
@@ -108,7 +108,7 @@ const CustomText = React.forwardRef(
 /**
  * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
  */
-const Text = pearlify<BaseTextProps, "atom", TextStyleProps>(
+const Text = pearl<BaseTextProps, "atom", TextStyleProps>(
   CustomText,
   {
     componentName: "Text",

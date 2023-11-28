@@ -35,7 +35,7 @@ import {
 } from "@expo/vector-icons";
 import responsiveSize from "../../../utils/responsive-size";
 import { View } from "react-native";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 
 export const iconStyleFunctions = [
   colorStyleFunction,
@@ -128,7 +128,7 @@ const CustomIcon = React.forwardRef(
 );
 
 /** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
-const Icon = pearlify<BaseIconProps, "atom", IconStyleProps>(
+const Icon = pearl<BaseIconProps, "atom", IconStyleProps>(
   CustomIcon,
   { componentName: "Icon", type: "atom", animatable: true },
   iconStyleFunctions

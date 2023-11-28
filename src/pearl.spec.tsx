@@ -1,19 +1,19 @@
 import React, { PropsWithChildren } from "react";
 import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "./theme/src/theme-context";
-import { pearlify } from "./pearlify";
+import { pearl } from "./pearl";
 import { Text, View } from "react-native";
 import { extendTheme } from "./theme/src/base/index";
 import Box, { BoxProps } from "./components/atoms/box/box";
 
 jest.useFakeTimers();
 
-describe("pearlify/basic", () => {
-  const PearlifyViewComponent: React.FC<PropsWithChildren> = ({
+describe("pearl/basic", () => {
+  const PearlViewComponent: React.FC<PropsWithChildren> = ({
     children,
     ...props
   }) => {
-    const PearlView = pearlify(View, {
+    const PearlView = pearl(View, {
       componentName: "TestView",
       type: "basic",
     });
@@ -21,11 +21,11 @@ describe("pearlify/basic", () => {
     return <PearlView {...props}>{children}</PearlView>;
   };
 
-  const PearlifyTextComponent: React.FC<PropsWithChildren> = ({
+  const PearlTextComponent: React.FC<PropsWithChildren> = ({
     children,
     ...props
   }) => {
-    const PearlText = pearlify(Text, {
+    const PearlText = pearl(Text, {
       componentName: "TestText",
       type: "basic",
     });
@@ -36,7 +36,7 @@ describe("pearlify/basic", () => {
   it("passes the snapshot test for a <View> component", () => {
     const tree = render(
       <ThemeProvider>
-        <PearlifyViewComponent></PearlifyViewComponent>
+        <PearlViewComponent></PearlViewComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -45,14 +45,14 @@ describe("pearlify/basic", () => {
   it("passes the snapshot test for a <Text> component", () => {
     const tree = render(
       <ThemeProvider>
-        <PearlifyTextComponent>asdasd</PearlifyTextComponent>
+        <PearlTextComponent>asdasd</PearlTextComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
 
-describe("pearlify/atoms", () => {
+describe("pearl/atoms", () => {
   const newTheme = extendTheme({
     components: {
       TestView: {
@@ -73,11 +73,11 @@ describe("pearlify/atoms", () => {
     },
   });
 
-  const PearlifyViewComponent: React.FC<PropsWithChildren> = ({
+  const PearlViewComponent: React.FC<PropsWithChildren> = ({
     children,
     ...props
   }) => {
-    const PearlView = pearlify(View, {
+    const PearlView = pearl(View, {
       componentName: "TestView",
       type: "atom",
     });
@@ -85,11 +85,11 @@ describe("pearlify/atoms", () => {
     return <PearlView {...props}>{children}</PearlView>;
   };
 
-  const PearlifyTextComponent: React.FC<PropsWithChildren> = ({
+  const PearlTextComponent: React.FC<PropsWithChildren> = ({
     children,
     ...props
   }) => {
-    const PearlText = pearlify(Text, {
+    const PearlText = pearl(Text, {
       componentName: "TestText",
       type: "atom",
     });
@@ -100,7 +100,7 @@ describe("pearlify/atoms", () => {
   it("passes the snapshot test for a <View> component", () => {
     const tree = render(
       <ThemeProvider theme={newTheme}>
-        <PearlifyViewComponent></PearlifyViewComponent>
+        <PearlViewComponent></PearlViewComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -109,14 +109,14 @@ describe("pearlify/atoms", () => {
   it("passes the snapshot test for a <Text> component", () => {
     const tree = render(
       <ThemeProvider theme={newTheme}>
-        <PearlifyTextComponent>asdasd</PearlifyTextComponent>
+        <PearlTextComponent>asdasd</PearlTextComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
 
-describe("pearlify/molecules", () => {
+describe("pearl/molecules", () => {
   const newTheme = extendTheme({
     components: {
       TestView: {
@@ -139,10 +139,7 @@ describe("pearlify/molecules", () => {
     },
   });
 
-  const PearlifyViewComponent: React.FC<BoxProps> = ({
-    children,
-    ...props
-  }) => {
+  const PearlViewComponent: React.FC<BoxProps> = ({ children, ...props }) => {
     const MoleculeRender = (props: any) => {
       return (
         <Box {...props.root}>
@@ -152,7 +149,7 @@ describe("pearlify/molecules", () => {
       );
     };
 
-    const PearlView = pearlify(MoleculeRender, {
+    const PearlView = pearl(MoleculeRender, {
       componentName: "TestView",
       type: "molecule",
     });
@@ -163,7 +160,7 @@ describe("pearlify/molecules", () => {
   it("passes the snapshot test for a <View> component", () => {
     const tree = render(
       <ThemeProvider theme={newTheme}>
-        <PearlifyViewComponent></PearlifyViewComponent>
+        <PearlViewComponent></PearlViewComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

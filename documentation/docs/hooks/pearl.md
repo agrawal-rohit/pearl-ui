@@ -1,19 +1,19 @@
 ---
 sidebar_position: 10
-title: pearlify
+title: pearl
 ---
 
-The `pearlify` hook is a powerful utility in Pearl UI that allows you to convert a third-party component into a Pearl UI-compatible component. This hook is particularly useful when you want to use a component that is not originally part of Pearl UI, but you want to leverage the power of Pearl UI's theming and style props.
+The `pearl` hook is a powerful utility in Pearl UI that allows you to convert a third-party component into a Pearl UI-compatible component. This hook is particularly useful when you want to use a component that is not originally part of Pearl UI, but you want to leverage the power of Pearl UI's theming and style props.
 
 ## Import
 
 ```js
-import { pearlify } from "pearl-ui";
+import { pearl } from "pearl-ui";
 ```
 
 ## Return value
 
-The `pearlify` hook returns a Pearl UI-compatible component that can be configured using style props, an atomic component configuration, or a molecular component configuration.
+The `pearl` hook returns a Pearl UI-compatible component that can be configured using style props, an atomic component configuration, or a molecular component configuration.
 
 ## Usage
 
@@ -23,7 +23,7 @@ A Basic Pearl Component is a standalone component that doesn't contain any child
 
 ```tsx
 import React from "react";
-import { Box, Text, BoxProps, pearlify, AtomComponentProps } from "pearl-ui";
+import { Box, Text, BoxProps, pearl, AtomComponentProps } from "pearl-ui";
 
 export type BaseCustomComponentProps = BoxProps & {
   label: string;
@@ -45,7 +45,7 @@ const CustomComponent = React.forwardRef(
   }
 );
 
-const BasicPearlComponent = pearlify<BaseCustomComponentProps, "basic">(
+const BasicPearlComponent = pearl<BaseCustomComponentProps, "basic">(
   CustomComponent,
   {
     componentName: "MyBasicComponent",
@@ -62,11 +62,11 @@ In this example, `CustomComponent` is the base component that we are converting 
 
 ### Creating an Atom Component
 
-An Atom Component is a core element in Pearl UI. It can function independently or be integrated into more complex components. Here's a detailed example of creating an Atom Component using the `pearlify` function and an atomic configuration:
+An Atom Component is a core element in Pearl UI. It can function independently or be integrated into more complex components. Here's a detailed example of creating an Atom Component using the `pearl` function and an atomic configuration:
 
 ```tsx
 import React from "react";
-import { Box, Text, BoxProps, pearlify, AtomicCompo AtomComponentProps, AtomicComponentConfig } from "pearl-ui";
+import { Box, Text, BoxProps, pearl, AtomicCompo AtomComponentProps, AtomicComponentConfig } from "pearl-ui";
 
 export type BaseCustomComponentProps = BoxProps & {
   label: string;
@@ -127,7 +127,7 @@ const atomicConfig: AtomicComponentConfig = {
 // Add the atomic configuration to the theme
 theme.components.CustomComponent = atomicConfig;
 
-const PearlAtomComponent = pearlify<BaseCustomComponentProps, "atom">(
+const PearlAtomComponent = pearl<BaseCustomComponentProps, "atom">(
   CustomComponent,
   {
     componentName: "CustomComponent",
@@ -144,7 +144,7 @@ In this example, `CustomComponent` is the base component that we are converting 
 
 ### Creating a Molecule Component
 
-A Molecule Component is a more complex component that can contain multiple Atom Components or other Molecule Components. Here's a detailed example of creating a Molecule Component using the `pearlify` function and a molecular configuration:
+A Molecule Component is a more complex component that can contain multiple Atom Components or other Molecule Components. Here's a detailed example of creating a Molecule Component using the `pearl` function and a molecular configuration:
 
 ```tsx
 import React from "react";
@@ -153,7 +153,7 @@ import {
   Text,
   VStack,
   BoxProps,
-  pearlify,
+  pearl,
   MoleculeComponentProps,
   MolecularComponentConfig,
 } from "pearl-ui";
@@ -256,7 +256,7 @@ const molecularConfig: MolecularComponentConfig = {
 // Add the molecular configuration to the theme
 theme.components.CustomComponent = molecularConfig;
 
-const PearlMoleculeComponent = pearlify<BaseCustomComponentProps, "molecule">(
+const PearlMoleculeComponent = pearl<BaseCustomComponentProps, "molecule">(
   CustomComponent,
   {
     componentName: "CustomComponent",
@@ -273,11 +273,11 @@ In this example, `CustomComponent` is the foundational component that we are tra
 
 ## Parameters
 
-| Name             | Required | Type                                                                                       | Default                                                            | Description                                                                                                                                                                                                                                 |
-| ---------------- | -------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Component`      | Yes      | <t>React.Component</t>                                                                     |                                                                    | The base component that will be transformed into a Pearl UI-compatible component.                                                                                                                                                           |
-| `config`         | Yes      | <t>{componentName: string, type: "basic" \| "atom" \| "molecule", animatable: boolean}</t> |                                                                    | An object that provides necessary metadata for the Pearl UI component. The `config` object includes:                                                                                                                                        |
-|                  |          |                                                                                            |                                                                    | - `componentName`: The name of the component in the theme _(Note: This name is crucial when the desired component should be an atom or a molecule, as pearlify will search for the component configuration in the theme using this label)_. |
-|                  |          |                                                                                            |                                                                    | - `type`: Defines the type of the component.                                                                                                                                                                                                |
-|                  |          |                                                                                            |                                                                    | - `animatable`: A flag that indicates whether the component supports animations or not.                                                                                                                                                     |
-| `styleFunctions` | No       | <t>Array of [Style Functions](../others/style-functions)</t>                               | [boxStyleFunctions](../others/style-functions#box-style-functions) | An array of [style functions](../others/style-functions) that are used to compute the received style props.                                                                                                                                 |
+| Name             | Required | Type                                                                                       | Default                                                            | Description                                                                                                                                                                                                                              |
+| ---------------- | -------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Component`      | Yes      | <t>React.Component</t>                                                                     |                                                                    | The base component that will be transformed into a Pearl UI-compatible component.                                                                                                                                                        |
+| `config`         | Yes      | <t>{componentName: string, type: "basic" \| "atom" \| "molecule", animatable: boolean}</t> |                                                                    | An object that provides necessary metadata for the Pearl UI component. The `config` object includes:                                                                                                                                     |
+|                  |          |                                                                                            |                                                                    | - `componentName`: The name of the component in the theme _(Note: This name is crucial when the desired component should be an atom or a molecule, as pearl will search for the component configuration in the theme using this label)_. |
+|                  |          |                                                                                            |                                                                    | - `type`: Defines the type of the component.                                                                                                                                                                                             |
+|                  |          |                                                                                            |                                                                    | - `animatable`: A flag that indicates whether the component supports animations or not.                                                                                                                                                  |
+| `styleFunctions` | No       | <t>Array of [Style Functions](../others/style-functions)</t>                               | [boxStyleFunctions](../others/style-functions#box-style-functions) | An array of [style functions](../others/style-functions) that are used to compute the received style props.                                                                                                                              |

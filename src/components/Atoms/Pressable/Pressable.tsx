@@ -1,9 +1,6 @@
 import React from "react";
 import { BoxProps } from "../box/box";
-import {
-  boxStyleFunctions,
-  BoxStyleProps,
-} from "../../../theme/src/style-functions";
+import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { BasicComponentProps, StateProps } from "../../../theme/src/types";
 import {
   MotiPressable,
@@ -13,10 +10,11 @@ import {
 import _ from "lodash";
 import { usePressedState } from "../../../hooks/state/usePressedState";
 import { useDisabledState } from "../../../hooks/state/useDisabledState";
-import { pearlify } from "../../../pearlify";
+import { useStyleProps } from "../../../hooks/useStyleProps";
+import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 
 // Define the properties for the BasePressable component
-export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
+export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> &
   StateProps<"_pressed" | "_disabled"> & {
     /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
@@ -39,7 +37,7 @@ export type BasePressableProps = Omit<BoxProps, keyof MotiPressableProps> &
  * @param onLongPress A function to be called when the pressable component is pressed and held down for a long time.
  * @returns A MotiPressable component with updated props and styles.
  */
-const CustomPressable = React.forwardRef(
+const Pressable = React.forwardRef(
   (
     {
       children,
@@ -52,9 +50,12 @@ const CustomPressable = React.forwardRef(
       onPressOut = undefined,
       onLongPress = undefined,
       ...props
-    }: BasicComponentProps<BasePressableProps>,
+    }: BasicComponentProps<PressableProps>,
     ref: any
   ) => {
+    props = useStyleProps(props, boxStyleFunctions);
+    props = useMotiWithStyleProps(props, boxStyleFunctions);
+
     // Use State for dynamic styles
     const { setPressed, propsWithPressedStyles } = usePressedState(
       props,
@@ -85,7 +86,6 @@ const CustomPressable = React.forwardRef(
       if (onPressOut) onPressOut();
     };
 
-    // Return the MotiPressable component with the updated props
     return (
       <MotiPressable
         ref={ref}
@@ -112,17 +112,5 @@ const CustomPressable = React.forwardRef(
     );
   }
 );
-
-/** A component which allows you to capture pressed events */
-const Pressable = pearlify<BasePressableProps, "basic", BoxStyleProps, false>(
-  CustomPressable,
-  {
-    componentName: "None",
-    type: "basic",
-    animatable: true,
-  }
-);
-
-export type PressableProps = React.ComponentProps<typeof Pressable>;
 
 export default Pressable;

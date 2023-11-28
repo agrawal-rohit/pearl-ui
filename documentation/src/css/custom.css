@@ -205,7 +205,8 @@ html[data-theme="dark"] .header-twitter-link:before {
 /*
   Mark pages as "updated" using href attribute:
 */
-.menu__link[href*="pearlify"]:before,
+.menu__link[href*="pearl"]:before,
+.menu__link[href*="Button"]:before,
 .menu__link[href*="extensibility"]:before {
   content: "Updated";
   display: inline-block;

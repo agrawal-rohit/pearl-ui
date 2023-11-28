@@ -6,7 +6,7 @@ import {
   KeyboardAwareScrollViewProps,
 } from "react-native-keyboard-aware-scroll-view";
 import { useTheme } from "../../../hooks/useTheme";
-import { pearlify } from "../../../pearlify";
+import { pearl } from "../../../pearl";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { SafeAreaView, View as MotiView } from "moti";
 import { MOTI_PROPS } from "../../../hooks/utils/utils";
@@ -115,13 +115,13 @@ const CustomScreen = React.forwardRef(
     return (
       <>
         <StatusBar
-          backgroundColor={(props.style as any).backgroundColor}
+          backgroundColor={((props.style as any) ?? {}).backgroundColor}
           barStyle={colorMode === "light" ? "dark-content" : "light-content"}
         />
         <SafeAreaView
           style={{
             flex: 1,
-            backgroundColor: (props.style as any).backgroundColor,
+            backgroundColor: ((props.style as any) ?? {}).backgroundColor,
             paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
           }}
         >
@@ -161,7 +161,7 @@ const CustomScreen = React.forwardRef(
 );
 
 /** A layout component that you can use to wrap all the views in your app. */
-const Screen = pearlify<BaseScreenProps, "atom">(CustomScreen, {
+const Screen = pearl<BaseScreenProps, "atom">(CustomScreen, {
   componentName: "Screen",
   type: "atom",
   animatable: true,

@@ -193,7 +193,7 @@ Here is a list of additional properties that can be used with the `Radio` compon
 
 ### Supported Style Properties
 
-The `RadioGroup` component is composed from the [Box](../layout/Box) component, which means all [Box](../layout/Box) properties can be passed to it.
+The `RadioGroup` component is composed from the [Stack](../layout/Stack) component, which means all [Stack](../layout/Stack) properties can be passed to it.
 
 ### Additional Properties
 
@@ -201,8 +201,9 @@ Here is a list of additional properties that can be used with the `RadioGroup` c
 
 | Name           | Required | Type                                           | Default     | Description                                                                     |
 | -------------- | -------- | ---------------------------------------------- | ----------- | ------------------------------------------------------------------------------- |
-| `size`         | No       | <t>PearlTheme.components.Radio["sizes"]</t>    | `"m"`       | Defines the size of all the children radio in the group.                        |
-| `variant`      | No       | <t>PearlTheme.components.Radio["variants"]</t> | `"filled"`  | Defines the variant of all the children radio in the group.                     |
+| `size`         | No       | <t>PearlTheme.components.Radio["sizes"]</t>    | `"m"`       | Defines the size of all the children radios in the group.                       |
+| `variant`      | No       | <t>PearlTheme.components.Radio["variants"]</t> | `"filled"`  | Defines the variant of all the children radios in the group.                    |
+| `spacing`      | No       | <t>PearlTheme["spacing"]</t>                   | `2`         | Sets the spacing between the children radios in the group.                      |
 | `value`        | No       | <t>string \| number</t>                        |             | Defines the active value of the radio group.                                    |
 | `defaultValue` | No       | <t>string \| number</t>                        |             | Defines the default active value of the radio group.                            |
 | `onChange`     | No       | <t>(value: string \| number) =&gt; void</t>    |             | Defines the method that gets invoked when the value of the radio group changes. |

@@ -13,5 +13,5 @@ export * from "./theme/index";
 // Utils
 export * from "./utils/index";
 
-// Pearlify
-export * from "./pearlify";
+// pearl
+export * from "./pearl";
