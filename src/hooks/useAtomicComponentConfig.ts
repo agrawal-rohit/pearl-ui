@@ -12,6 +12,7 @@ import { checkKeyAvailability } from "./utils/utils";
 import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
 import { boxStyleFunctions } from "../theme/src/style-functions";
+import { removeUndefined } from "../theme/utils/utils";
 
 /**
  * Hook to convert an atomic component style config to the appropriate React Native styles
@@ -117,7 +118,7 @@ export const useAtomicComponentConfig = (
         if (style) {
           return {
             ...style,
-            ...activeSizeAndVariantStyles,
+            ...removeUndefined(activeSizeAndVariantStyles),
           };
         }
 
@@ -129,7 +130,7 @@ export const useAtomicComponentConfig = (
     // Merge the component base style with the component type styles
     finalComponentProps = {
       ...componentStyleConfig["baseStyle"],
-      ...componentTypeStyles,
+      ...removeUndefined(componentTypeStyles),
     };
   } else {
     finalComponentProps = componentStyleConfig["baseStyle"];
@@ -141,10 +142,10 @@ export const useAtomicComponentConfig = (
   // Merge the user override props with the final component props
   finalComponentProps = {
     ...finalComponentProps,
-    ...receivedProps,
+    ...removeUndefined(receivedProps),
     style: {
       ...finalComponentProps.style,
-      ...receivedProps.style,
+      ...removeUndefined(receivedProps.style),
     },
   };
 

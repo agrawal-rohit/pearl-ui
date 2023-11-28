@@ -43,27 +43,63 @@ export type InputProps = Omit<
 > &
   BoxProps &
   StateProps<"_focused" | "_disabled" | "_invalid"> & {
-    /** Size of the input field. */
+    /**
+     * Size of the input field.
+     *
+     * @default "m"
+     */
     size?: ResponsiveValue<ComponentSizes<"Input">>;
-    /** Variant of the input field. */
+    /**
+     * Variant of the input field.
+     *
+     * @default "filled"
+     */
     variant?: ResponsiveValue<ComponentVariants<"Input">>;
-    /** Whether the input field is disabled.  */
+    /**
+     * Whether the input field is disabled.
+     *
+     * @default false
+     */
     isDisabled?: boolean;
-    /** Whether the input field should span the entire width of the parent container */
+    /**
+     * Whether the input field should span the entire width of the parent container.
+     *
+     * @default false
+     */
     isFullWidth?: boolean;
-    /** Whether there the input field is in an error state */
+    /**
+     * Whether there the input field is in an invalid state.
+     *
+     * @default false
+     */
     isInvalid?: boolean;
-    /** Whether the input field should display a clear button */
+    /**
+     * Whether the input field should display a clear button.
+     *
+     * @default false
+     */
     hasClearButton?: boolean;
     /** Icon to display on the left side of the text input */
     leftIcon?: React.ReactElement;
     /** Icon to display on the right side of the text input */
     rightIcon?: React.ReactElement;
-    /** Active color palette of the input field */
+    /**
+     * Active color palette of the input field.
+     *
+     * @default "primary"
+     */
     colorScheme?: ColorScheme;
-    /** Custom color of the placeholder text string */
+    /**
+     * Custom color of the placeholder text string.
+     *
+     * @default "neutral.500"
+     */
     placeholderTextColor?: ResponsiveValue<PaletteColors>;
-    /** Custom color of the highlight and cursor color */
+    /**
+     * Custom color of the highlight and cursor color.
+     *
+     * @default "primary.500"
+     */
     selectionColor?: ResponsiveValue<PaletteColors>;
   };
 

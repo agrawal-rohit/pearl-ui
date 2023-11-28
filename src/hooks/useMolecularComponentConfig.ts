@@ -17,6 +17,7 @@ import { useResponsiveProp } from "./useResponsiveProp";
 import { useStyleProps } from "./useStyleProps";
 import { boxStyleFunctions } from "../theme/src/style-functions";
 import _ from "lodash";
+import { removeUndefined } from "../theme/utils/utils";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles.
@@ -113,7 +114,7 @@ export const useMolecularComponentConfig = (
   if (!partForOverridenStyleProps) {
     finalComponentProps = {
       ...finalComponentProps,
-      ...overridenStyleProps,
+      ...removeUndefined(overridenStyleProps),
       style: receivedProps.style,
     };
   }
@@ -122,7 +123,7 @@ export const useMolecularComponentConfig = (
   if (!partForOverridenNativeProps) {
     finalComponentProps = {
       ...finalComponentProps,
-      ...overridenNativeProps,
+      ...removeUndefined(overridenNativeProps),
     };
   }
 
@@ -130,7 +131,7 @@ export const useMolecularComponentConfig = (
   if (!partForOverridenAnimationProps) {
     finalComponentProps = {
       ...finalComponentProps,
-      ...overridenAnimationProps,
+      ...removeUndefined(overridenAnimationProps),
     };
   }
 
@@ -179,7 +180,7 @@ export const useMolecularComponentConfig = (
         if (style) {
           return {
             ...style,
-            ...activeSizeAndVariantStyles,
+            ...removeUndefined(activeSizeAndVariantStyles),
           };
         }
 
@@ -190,7 +191,7 @@ export const useMolecularComponentConfig = (
 
     let currentComponentPartProps = {
       ...componentStyleConfig["baseStyle"][part],
-      ...componentTypeStyles,
+      ...removeUndefined(componentTypeStyles),
     };
 
     if (partForOverridenStyleProps && part === partForOverridenStyleProps) {
@@ -198,7 +199,7 @@ export const useMolecularComponentConfig = (
         ...currentComponentPartProps,
         style: {
           ...currentComponentPartProps.style,
-          ...overridenProps.style,
+          ...removeUndefined(overridenProps.style),
         },
       };
     }
@@ -206,7 +207,7 @@ export const useMolecularComponentConfig = (
     if (partForOverridenNativeProps && part === partForOverridenNativeProps) {
       currentComponentPartProps = {
         ...currentComponentPartProps,
-        ...overridenNativeProps,
+        ...removeUndefined(overridenNativeProps),
       };
     }
 
@@ -216,7 +217,7 @@ export const useMolecularComponentConfig = (
     ) {
       currentComponentPartProps = {
         ...currentComponentPartProps,
-        ...overridenAnimationProps,
+        ...removeUndefined(overridenAnimationProps),
       };
     }
 
@@ -224,7 +225,7 @@ export const useMolecularComponentConfig = (
     if (overridenProps.atoms && overridenProps.atoms[part])
       currentComponentPartProps = {
         ...currentComponentPartProps,
-        ...overridenProps.atoms[part],
+        ...removeUndefined(overridenProps.atoms[part]),
       };
 
     finalComponentProps = {

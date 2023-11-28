@@ -2,6 +2,7 @@ import { boxStyleFunctions } from "../../theme/src/style-functions";
 import { ComponentTypes, StyleFunctionContainer } from "../../theme/src/types";
 import defaultRNStyles from "../../theme/utils/default-rn-styles";
 import { getKeys } from "../../theme/utils/type-helpers";
+import { removeUndefined } from "../../theme/utils/utils";
 import { useStateWithStyleProps } from "../useStateWithStyleProps";
 
 /**
@@ -38,7 +39,7 @@ export const useDynamicStateStyle = (
       if (getKeys(defaultRNStyles).includes(key)) {
         return {
           [key]: (defaultRNStyles as any)[key],
-          ...final,
+          ...removeUndefined(final),
         };
       }
 
@@ -49,7 +50,7 @@ export const useDynamicStateStyle = (
     if (currentState) {
       finalProps.animate = {
         ...finalProps.animate,
-        ...stateStyles,
+        ...removeUndefined(stateStyles),
       };
     }
   } else {
@@ -58,12 +59,12 @@ export const useDynamicStateStyle = (
       if (activeComponentType !== "molecule") {
         finalProps.style = {
           ...finalProps.style,
-          ...stateStyles,
+          ...removeUndefined(stateStyles),
         };
       } else {
         finalProps = {
           ...finalProps,
-          ...stateStyles,
+          ...removeUndefined(stateStyles),
         };
       }
     }

@@ -6,23 +6,40 @@ import Box, { BoxProps } from "../box/box";
 import { positionStyleFunction } from "../../../theme/src/style-functions";
 
 export type StackProps = BoxProps & {
-  /** The direction to stack the items */
-  direction: "horizontal" | "vertical";
-  /** The spacing between the elements */
+  /**
+   * The direction to stack the items
+   *
+   * @default "vertical"
+   */
+  direction?: "horizontal" | "vertical";
+  /**
+   * The spacing between the elements
+   *
+   * @default 2
+   */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** If specified, each stack item will show the provided divider */
   divider?: React.ReactElement;
 };
 
 export type ZStackProps = BoxProps & {
-  /** Specifies the stacking order of the provided elements */
+  /**
+   * Specifies the stacking order of the provided elements
+   *
+   * @default false
+   */
   reversed?: boolean;
 };
 
 /**
  * Stack is a layout component that makes it easy to stack elements together and apply a space between them.
  */
-const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
+const Stack: React.FC<StackProps> = ({
+  children,
+  direction = "vertical",
+  spacing = "2",
+  ...rest
+}) => {
   const arrayChildren = React.Children.toArray(children);
 
   /**
@@ -36,17 +53,17 @@ const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
 
       return (
         <Box
-          flexDirection={rest.direction === "horizontal" ? "row" : "column"}
+          flexDirection={direction === "horizontal" ? "row" : "column"}
           mr={
             !isLast
-              ? rest.direction === "horizontal"
+              ? direction === "horizontal"
                 ? spacing
                 : undefined
               : undefined
           }
           mb={
             !isLast
-              ? rest.direction === "vertical"
+              ? direction === "vertical"
                 ? spacing
                 : undefined
               : undefined
@@ -57,9 +74,9 @@ const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
             !isLast &&
             React.cloneElement(rest.divider, {
               orientation:
-                rest.direction === "horizontal" ? "vertical" : "horizontal",
-              ml: rest.direction === "horizontal" ? spacing : undefined,
-              mt: rest.direction === "vertical" ? spacing : undefined,
+                direction === "horizontal" ? "vertical" : "horizontal",
+              ml: direction === "horizontal" ? spacing : undefined,
+              mt: direction === "vertical" ? spacing : undefined,
             })}
         </Box>
       );
@@ -69,8 +86,8 @@ const Stack: React.FC<StackProps> = ({ children, spacing = "2", ...rest }) => {
   return (
     <Box
       {...rest}
-      flexDirection={rest.direction === "horizontal" ? "row" : "column"}
-      flexWrap={rest.direction === "horizontal" ? "wrap" : "nowrap"}
+      flexDirection={direction === "horizontal" ? "row" : "column"}
+      flexWrap={direction === "horizontal" ? "wrap" : "nowrap"}
     >
       {renderChildren()}
     </Box>

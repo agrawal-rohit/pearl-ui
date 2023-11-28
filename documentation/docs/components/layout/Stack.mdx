@@ -141,11 +141,11 @@ The `Stack` component composes the [Box](./Box) component, so you can pass all [
 
 ### Additional Properties
 
-| Name        | Required | Type                              | Default | Description                                                   |
-| ----------- | -------- | --------------------------------- | ------- | ------------------------------------------------------------- |
-| `direction` | true     | <t>"horizontal" \| "vertical"</t> |         | The direction to stack the items.                             |
-| `spacing`   | false    | <t>PearlTheme["spacing"]</t>      |         | The spacing between the elements.                             |
-| `divider`   | false    | <t>React.ReactElement</t>         |         | If specified, each stack item will show the provided divider. |
+| Name        | Required | Type                              | Default      | Description                                                   |
+| ----------- | -------- | --------------------------------- | ------------ | ------------------------------------------------------------- |
+| `direction` | No       | <t>"horizontal" \| "vertical"</t> | `"vertical"` | The direction to stack the items.                             |
+| `spacing`   | No       | <t>PearlTheme["spacing"]</t>      | `2`          | The spacing between the elements.                             |
+| `divider`   | No       | <t>React.ReactElement</t>         |              | If specified, each stack item will show the provided divider. |
 
 ## HStack Component Properties
 
@@ -157,8 +157,8 @@ The `HStack` component composes the [Box](./Box) component, so you can pass all 
 
 | Name      | Required | Type                         | Default | Description                                                   |
 | --------- | -------- | ---------------------------- | ------- | ------------------------------------------------------------- |
-| `spacing` | false    | <t>PearlTheme["spacing"]</t> |         | The spacing between the elements.                             |
-| `divider` | false    | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
+| `spacing` | No       | <t>PearlTheme["spacing"]</t> | `2`     | The spacing between the elements.                             |
+| `divider` | No       | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
 
 ## VStack Component Properties
 
@@ -170,8 +170,8 @@ The `VStack` component composes the [Box](./Box) component, so you can pass all 
 
 | Name      | Required | Type                         | Default | Description                                                   |
 | --------- | -------- | ---------------------------- | ------- | ------------------------------------------------------------- |
-| `spacing` | false    | <t>PearlTheme["spacing"]</t> |         | The spacing between the elements.                             |
-| `divider` | false    | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
+| `spacing` | No       | <t>PearlTheme["spacing"]</t> | `2`     | The spacing between the elements.                             |
+| `divider` | No       | <t>React.ReactElement</t>    |         | If specified, each stack item will show the provided divider. |
 
 ## ZStack Component Properties
 
@@ -183,4 +183,4 @@ The `ZStack` component composes the [Box](./Box) component, so you can pass all 
 
 | Name       | Required | Type           | Default | Description                                            |
 | ---------- | -------- | -------------- | ------- | ------------------------------------------------------ |
-| `reversed` | false    | <t>boolean</t> | `false` | Specifies the stacking order of the provided elements. |
+| `reversed` | No       | <t>boolean</t> | `false` | Specifies the stacking order of the provided elements. |

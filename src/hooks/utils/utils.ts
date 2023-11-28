@@ -1,3 +1,4 @@
+import { removeUndefined } from "./../../theme/utils/utils";
 import _ from "lodash";
 import { AllProps } from "../../theme/src/style-functions";
 import {
@@ -137,7 +138,10 @@ export const buildFinalStyleProps = (
     buildStyleProperties.properties
   );
 
-  cleanStyleProps.style = { ...coreVisualStyle, ...props.style };
+  cleanStyleProps.style = {
+    ...coreVisualStyle,
+    ...removeUndefined(props.style),
+  };
   return cleanStyleProps;
 };
 
@@ -163,7 +167,10 @@ export const composeCleanStyleProps = (
     colorMode,
     dimensions,
   });
-  motiStyleProps = { ...motiStyleProps, ...motiStyleProps.style };
+  motiStyleProps = {
+    ...motiStyleProps,
+    ...removeUndefined(motiStyleProps.style),
+  };
   motiStyleProps = _.omit(motiStyleProps, ["style", "display", "shadowOffset"]);
   return motiStyleProps;
 };

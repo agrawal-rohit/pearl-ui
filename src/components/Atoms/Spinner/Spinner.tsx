@@ -36,11 +36,23 @@ const indicatorStyleFunctions = [
 ] as StyleFunctionContainer[];
 
 type BaseSpinnerProps = React.ComponentProps<typeof View> & {
-  /** The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM. */
+  /**
+   * The loading status of the `Spinner`. If `false`, the `Spinner` component is removed from the DOM.
+   *
+   * @default true
+   */
   isLoading?: boolean;
-  /** Whether the Spinner spans the parent container and centers the spinner within. */
+  /**
+   * Whether the Spinner spans the parent container and centers the spinner within.
+   *
+   * @default false
+   */
   isExpanded?: boolean;
-  /** Animation duration in ms.  */
+  /**
+   * Animation duration (in milliseconds)
+   *
+   * @default 1200
+   */
   animationDuration?: number;
 };
 

@@ -70,3 +70,16 @@ export const generatePalette = (
 
   return shades;
 };
+
+/**
+ * Removes undefined values from an object.
+ * @param obj The object to remove undefined values from.
+ * @returns The object without undefined values.
+ */
+export const removeUndefined = <T extends Record<string, any>>(
+  obj: T
+): Partial<T> => {
+  const filteredObj: any = {};
+  for (const k in obj) if (obj[k] !== undefined) filteredObj[k] = obj[k];
+  return filteredObj;
+};

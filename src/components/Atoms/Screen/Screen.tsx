@@ -23,9 +23,17 @@ export type BaseScreenProps = Omit<
     | "showsHorizontalScrollIndicator"
     | "showsVerticalScrollIndicator"
   > & {
-    /** Whether the screen is scrollable */
+    /**
+     * Whether the screen is scrollable
+     *
+     * @default true
+     */
     scrollable?: boolean;
-    /** Whether to show the vertical scrollbar if the Screen is scrollable */
+    /**
+     * Whether to show the vertical scrollbar if the Screen is scrollable
+     *
+     * @default false
+     */
     showScrollBar?: boolean;
     /** Method to execute when a pull-to-refresh action is performed */
     onPullToRefresh?: Function;

@@ -19,11 +19,19 @@ export interface IThemeContext {
 }
 
 interface ThemeProviderProps {
-  /** Initial color mode for the theme (light, dark, system) */
+  /**
+   * Initial color mode for the theme (light, dark, system)
+   *
+   * @default "light"
+   */
   initialColorMode?: ColorMode | "system";
   /** The theme configuration object */
   theme?: FinalPearlTheme;
-  /** A flag that describes the loading status of the custom fonts */
+  /**
+   * A flag that describes the loading status of the custom fonts.
+   *
+   * @default true
+   */
   haveFontsLoaded?: boolean;
   /**React children */
   children?: React.ReactNode;

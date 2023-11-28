@@ -9,11 +9,23 @@ import { View } from "react-native";
  * It includes properties for length, thickness, and orientation of the divider.
  */
 type BaseDividerProps = BoxProps & {
-  /** The length of the divider, can be a number or a string */
+  /**
+   * The length of the divider, can be a number or a string
+   *
+   * @default "100%"
+   */
   length?: number | string;
-  /** The thickness of the divider, represented as a number */
+  /**
+   * The thickness of the divider, represented as a number
+   *
+   * @default 1
+   */
   thickness?: number;
-  /** The direction of the divider, can be either "horizontal" or "vertical" */
+  /**
+   * The direction of the divider, can be either "horizontal" or "vertical"
+   *
+   * @default "horizontal"
+   */
   orientation?: "horizontal" | "vertical";
 };
 
@@ -23,7 +35,13 @@ type BaseDividerProps = BoxProps & {
  */
 const CustomDivider = React.forwardRef(
   (
-    { children, ...props }: AtomComponentProps<"Divider", BaseDividerProps>,
+    {
+      children,
+      length = "100%",
+      thickness = 1,
+      orientation = "horizontal",
+      ...props
+    }: AtomComponentProps<"Divider", BaseDividerProps>,
     ref: any
   ) => {
     // Styles are applied based on the orientation of the divider
@@ -33,10 +51,8 @@ const CustomDivider = React.forwardRef(
         {...props}
         style={{
           ...(props.style as any),
-          height:
-            props.orientation === "horizontal" ? props.thickness : props.length,
-          width:
-            props.orientation === "vertical" ? props.thickness : props.length,
+          height: orientation === "horizontal" ? thickness : length,
+          width: orientation === "vertical" ? thickness : length,
         }}
       >
         {children}

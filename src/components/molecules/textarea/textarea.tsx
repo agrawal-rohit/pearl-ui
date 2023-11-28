@@ -7,7 +7,11 @@ export type TextareaProps = Omit<
   InputProps,
   "inputMode" | "leftIcon" | "rightIcon" | "hasClearButton"
 > & {
-  /** Number of rows in the text area. */
+  /**
+   * Number of rows in the text area.
+   *
+   * @default 4
+   */
   rows?: number;
 };
 

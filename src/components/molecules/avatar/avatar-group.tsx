@@ -14,17 +14,29 @@ import { avatarGroupContext } from "./useAvatarGroup";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 
 export type AvatarGroupProps = BoxProps & {
-  /** Size of all the children avatars in the group. */
+  /**
+   * Size of all the children avatars in the group.
+   *
+   * @default "m"
+   */
   size?: ResponsiveValue<ComponentSizes<"Avatar">>;
   /** Variant of all the children avatars in the group. */
   variant?: ResponsiveValue<ComponentVariants<"Avatar">>;
-  /** The spacing between the avatars */
+  /**
+   * The spacing between the avatars
+   *
+   * @default 2
+   */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** The background color of the circle which shows the "+X" label of remaining avatars */
   truncatedBackgroundColor?: ResponsiveValue<PaletteColors>;
   /** A custom component to show in place of the truncated avatars  */
   customTruncatedComponent?: React.ReactElement;
-  /** Maximum number of avatars to show. It'll truncate the avatars and show a "+X" label (where X is the remaining avatars) */
+  /**
+   * Maximum number of avatars to show. It'll truncate the avatars and show a "+X" label (where X is the remaining avatars)
+   *
+   * @default 3
+   */
   max?: number;
 };
 
@@ -33,11 +45,12 @@ export type AvatarGroupProps = BoxProps & {
  */
 const AvatarGroup: React.FC<AvatarGroupProps> = ({
   children,
+  spacing = "2",
   max = 3,
   ...rest
 }) => {
   // Convert the spacing to a style object
-  const convertedElementSpacing = useStyleProps({ marginLeft: rest.spacing }, [
+  const convertedElementSpacing = useStyleProps({ marginLeft: spacing }, [
     ...spacingStyleFunction,
   ]);
 
@@ -82,7 +95,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
             style={{
               marginLeft: index * convertedElementSpacing.style.marginLeft,
             }}
-          ></Avatar>
+          />
         );
       }
     });

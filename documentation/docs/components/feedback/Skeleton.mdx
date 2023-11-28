@@ -1,0 +1,161 @@
+---
+sidebar_position: 2
+title: Skeleton
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/skeleton/skeleton.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/skeleton/skeleton.config.ts"
+  />
+</div>
+
+The `Skeleton` component in Pearl UI is a versatile tool used to create a visual placeholder for content that is loading or will be loaded. It can be customized in terms of start color, end color, animation speed, fade duration, and more.
+
+## Import
+
+```jsx
+import { Skeleton, SkeletonCircle, SkeletonText } from "pearl-ui";
+```
+
+## Usage
+
+The `Skeleton` component can be used in a variety of ways to represent loading states in your application. Here are a few examples:
+
+```jsx
+// Basic usage of Skeleton
+<Skeleton />
+
+// Customizing Skeleton with startColor and endColor
+<Skeleton startColor="neutral.100" endColor="neutral.200" />
+
+// Using Skeleton to conditionally show children using the `isLoaded` prop
+// When `isLoaded` is `true`, the children of the Skeleton component will be rendered
+<Skeleton isLoaded={dataIsLoaded}>
+  <Text>Your content here</Text>
+</Skeleton>
+```
+
+### Circle and Text Skeleton
+
+The `SkeletonCircle` and `SkeletonText` components are specialized versions of the `Skeleton` component. They are used to create placeholders for circular and textual content respectively. Here is an example of how to use them:
+
+```jsx
+<Box padding="6" boxShadow="l" bgColor="white">
+  <SkeletonCircle boxSize={50} />
+  <SkeletonText mt="4" noOfLines={4} spacing="4" skeletonHeight={20} />
+</Box>
+```
+
+### Conditionally Rendering Content with Skeleton
+
+The `Skeleton` component can be used to conditionally render its children. This is done using the `isLoaded` prop. When `isLoaded` is `true`, the children of the `Skeleton` component will be rendered with a smooth fade transition. This feature is particularly useful when you want to display a loading state while fetching data. Here is an example:
+
+```jsx
+// Assume `dataIsLoaded` is a state variable that tracks if the data is loaded
+<Skeleton isLoaded={dataIsLoaded}>
+  <Text>Your content here</Text>
+</Skeleton>
+```
+
+In the above example, the text "Your content here" will only be rendered when `dataIsLoaded` is `true`. Until then, the `Skeleton` component will be displayed, providing a seamless loading experience for your users.
+
+### Changing Skeleton Colors
+
+The `Skeleton`'s start and end colors can be changed using the `startColor` and `endColor` props. This allows you to set the color of the skeleton at the start and end of the animation.
+
+```jsx
+<Skeleton startColor="neutral.100" endColor="neutral.200" />
+```
+
+### Overriding Default Styles
+
+The `Skeleton` component supports a variety of style props which can be used to override the pre-defined styles in the theme. Any manual style props passed into the component will take precedence over the default component configuration.
+
+```jsx
+// Example: Overriding the default start and end colors
+<Skeleton startColor="neutral.100" endColor="neutral.200" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/skeleton-light" />
+
+## Skeleton Component Properties
+
+### Supported Style Properties
+
+The `Skeleton` component supports the following style props:
+
+- [backgroundColor](../../core-features/style-props#color-and-background-color) (Only `backgroundColor` props are supported, not the `color` prop)
+- [layout](../../core-features/style-props#layout)
+- [position](../../core-features/style-props#position)
+- [opacity and visiblity](../../core-features/style-props#opacity-and-visibility)
+- [margin and padding](../../core-features/style-props#margin-and-padding)
+
+### Animation Properties
+
+The `Skeleton` component inherits animation properties from the `Box` component, which are managed by the [Moti](https://moti.fyi/) library. This allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
+
+| Property              | Type                        | Default     | Description                                                                                                                                                                                                                                                                 |
+| --------------------- | --------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `from`                | <t>object</t>               |             | Defines the starting state of the animation.                                                                                                                                                                                                                                |
+| `to`                  | <t>object</t>               |             | Defines the ending state of the animation.                                                                                                                                                                                                                                  |
+| `transition`          | <t>object</t>               |             | Specifies the type of transition that the animation will use.                                                                                                                                                                                                               |
+| `exitTransition`      | <t>object</t>               |             | Determines the transition type that will be used when the component is unmounted. By default, `exit` uses `transition` to configure its animations, so this prop is not required. However, if you pass `exitTransition`, it will override `transition` for exit animations. |
+| `state`               | <t>object</t>               |             | Manages the overall state of the animation, including the `from` and `to` states.                                                                                                                                                                                           |
+| `delay`               | <t>number</t>               |             | Manage the delay for the `animate` field. (Use the `transition` prop for more granular control)                                                                                                                                                                             |
+| `onDidAnimate`        | <t>() =&gt; void</t>        |             | Callback function called after finishing an animation.                                                                                                                                                                                                                      |
+| `stylePriority`       | <t>"state" \| "animate"</t> | `"animate"` | This is not a prop you will likely find yourself using. If set to <t>"animate"</t>, then styles passed from the `animate` prop will take precedent. Otherwise, if set to <t>"state"</t>, then the `state` prop will take precedent for matching styles.                     |
+| `animateInitialState` | <t>boolean</t>              | `false`     | If `true`, the `from` prop will be set to animate. This will be noticeable for some spring animations, and might make them jumpy on mount.                                                                                                                                  |
+
+### Additional Properties
+
+The `Skeleton` component also accepts the following additional props:
+
+| Name           | Required | Type                         | Default | Description                                                                                                |
+| -------------- | -------- | ---------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| `startColor`   | false    | <t>PearlTheme["palette"]</t> |         | The color at the animation start                                                                           |
+| `endColor`     | false    | <t>PearlTheme["palette"]</t> |         | The color at the animation end                                                                             |
+| `isLoaded`     | false    | <t>boolean</t>               | `false` | If `true`, it'll render its children with a fade transition                                                |
+| `speed`        | false    | <t>number</t>                | `800`   | The animation speed in milliseconds                                                                        |
+| `fadeDuration` | false    | <t>number</t>                | `200`   | The fadeIn duration in milliseconds. Requires `isLoaded` toggled to `true` in order to see the transition. |
+
+## SkeletonCircle Component Properties
+
+### Supported Style Properties
+
+The `SkeletonCircle` component is composed of the `Skeleton` component, which means you can pass all `Skeleton` properties to it.
+
+### Additional Properties
+
+Here is a list of additional properties that the `SkeletonCircle` component supports:
+
+| Name      | Required | Type          | Default | Description                 |
+| --------- | -------- | ------------- | ------- | --------------------------- |
+| `boxSize` | No       | <t>number</t> | `20`    | Size of the skeleton circle |
+
+## SkeletonText Component Properties
+
+### Supported Style Properties
+
+The `SkeletonText` component is composed of the `Skeleton` component, which means you can pass all `Skeleton` properties to it.
+
+### Additional Properties
+
+Here is a list of additional properties that the `SkeletonText` component supports:
+
+| Name             | Required | Type                    | Default | Description                                  |
+| ---------------- | -------- | ----------------------- | ------- | -------------------------------------------- |
+| `spacing`        | No       | <t>string \| number</t> | `3`     | Spacing between the individual skeleton text |
+| `noOfLines`      | No       | <t>number</t>           | `3`     | Number of lines in the skeleton text         |
+| `skeletonHeight` | No       | <t>number</t>           | `20`    | Height of the each individual skeleton text  |

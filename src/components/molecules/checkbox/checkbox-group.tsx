@@ -37,17 +37,41 @@ export const useCheckBoxGroup = () =>
   useContext(checkboxGroupContext) as ICheckBoxGroupContext;
 
 export type CheckBoxGroupProps = BoxProps & {
-  /** Size of all the children checkbox in the group. */
+  /**
+   * Size of all the children checkbox in the group.
+   *
+   * @default "m"
+   */
   size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
-  /** Variant of all the children checkbox in the group. */
+  /**
+   * Variant of all the children checkbox in the group.
+   *
+   * @default "filled"
+   */
   variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
-  /** Whether the checkbox group is disabled.  */
+  /**
+   * Whether the checkbox group is disabled.
+   *
+   * @default false
+   */
   isDisabled?: boolean;
-  /** Active color palette of all the children checkbox in the group. */
+  /**
+   * Active color palette of all the children checkbox in the group.
+   *
+   * @default "primary"
+   */
   colorScheme?: ColorScheme;
-  /** The spacing between the elements */
+  /**
+   * The spacing between the elements.
+   *
+   * @default 2
+   */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
-  /** Shape of all the children checkbox in the group. */
+  /**
+   * Shape of all the children checkbox in the group.
+   *
+   * @default "square"
+   */
   shape?: "square" | "circle";
   /** Default active value of the checkbox group */
   defaultValue?: Array<string | number>;

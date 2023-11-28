@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { ImageProps } from "../image/image";
 import Image from "../image/image";
 import { ImageSourcePropType } from "react-native";
@@ -45,14 +44,7 @@ export type BaseAvatarProps = Omit<
  * If no fallbackComponent is provided, it will render nothing.
  */
 const CustomAvatar = React.forwardRef(
-  (
-    {
-      children,
-      atoms,
-      ...props
-    }: MoleculeComponentProps<"Avatar", BaseAvatarProps>,
-    ref: any
-  ) => {
+  ({ atoms }: MoleculeComponentProps<"Avatar", BaseAvatarProps>, ref: any) => {
     const { name, src, getInitials, fallbackComponent, ...otherBoxProps } =
       atoms.box;
 

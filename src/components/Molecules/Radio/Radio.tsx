@@ -22,21 +22,49 @@ import Box from "../../atoms/box/box";
 
 export type RadioProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
-    /** Size of the radio. */
+    /**
+     * Size of the radio.
+     *
+     * @default "m"
+     */
     size?: ResponsiveValue<ComponentSizes<"Radio">>;
-    /** Variant of the radio. */
+    /**
+     * Variant of the radio.
+     *
+     * @default "filled"
+     */
     variant?: ResponsiveValue<ComponentVariants<"Radio">>;
     /** Value of the radio if it is part of a group. */
     value?: string | number | undefined;
-    /** Whether the radio is disabled.  */
+    /**
+     * Whether the radio is disabled.
+     *
+     * @default false
+     */
     isDisabled?: boolean;
-    /** Whether the radio is in a checked state.  */
+    /**
+     * Whether the radio is in a checked state.
+     *
+     * @default false
+     */
     isChecked?: boolean;
-    /** Whether the radio is in an error state.  */
+    /**
+     * Whether the radio is in an error state.
+     *
+     * @default false
+     */
     isInvalid?: boolean;
-    /** Active color palette of the radio */
+    /**
+     * Active color palette of the radio.
+     *
+     * @default "primary"
+     */
     colorScheme?: ColorScheme;
-    /** The spacing between the radio and the label text */
+    /**
+     * The spacing between the radio and the label text.
+     *
+     * @default 2
+     */
     spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   };
 

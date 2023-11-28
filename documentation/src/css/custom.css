@@ -115,6 +115,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Center"]:after,
 .menu__link[href*="Screen"]:after,
 .menu__link[href*="Stack"]:after,
+.menu__link[href*="Skeleton"]:after,
 .menu__link[href*="Divider"]:after,
 .menu__link[href*="Spacer"]:after,
 .menu__link[href*="Text"]:not([href*="Text Link"]):not(
@@ -131,10 +132,9 @@ html[data-theme="dark"] .header-twitter-link:before {
   margin-right: auto;
   margin-left: 10px;
   padding: 3px 6px;
-  border: 1px solid #ffecf8;
   border-radius: 10px;
   color: #ff6ac6;
-  background-color: #ffecf8;
+  background-color: #fff5fb;
   text-transform: uppercase;
   font-size: 8px;
   line-height: 10px;
@@ -158,10 +158,9 @@ html[data-theme="dark"] .header-twitter-link:before {
   margin-right: auto;
   margin-left: 10px;
   padding: 3px 6px;
-  border: 1px solid #d6f3ff;
   border-radius: 10px;
   color: #2ea6d4;
-  background-color: #d6f3ff;
+  background-color: #ecf9ff;
   text-transform: uppercase;
   font-size: 8px;
   line-height: 10px;
@@ -174,6 +173,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 */
 .menu__link[href*="Badge"]:before,
 .menu__link[href*="Textarea"]:before,
+.menu__link[href*="Skeleton"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="animation-support"]:before,
 .menu__link[href*="useDimensions"]:before,
@@ -305,9 +305,13 @@ t {
   margin-bottom: 30px;
 }
 
+a.menu__link {
+  font-size: 15px;
+}
+
 a.menu__link:not([href]) {
   margin: 10px 0px;
-  font-size: small;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: bolder;
   color: var(--sidebar-title-color);

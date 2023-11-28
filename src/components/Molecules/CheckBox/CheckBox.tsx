@@ -23,27 +23,67 @@ import _ from "lodash";
 
 export type CheckBoxProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
-    /** Size of the checkbox. */
+    /**
+     * Size of the checkbox.
+     *
+     * @default "m"
+     */
     size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
-    /** Variant of the checkbox. */
+    /**
+     * Variant of the checkbox.
+     *
+     * @default "filled"
+     */
     variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
     /** Value of the checkbox if it is part of a group. */
     value?: string | number | undefined;
-    /** Whether the checkbox is disabled.  */
+    /**
+     * Whether the checkbox is disabled.
+     *
+     * @default false
+     */
     isDisabled?: boolean;
-    /** Whether the checkbox is in a checked state.  */
+    /**
+     * Whether the checkbox is in a checked state.
+     *
+     * @default false
+     */
     isChecked?: boolean;
-    /** Whether the checkbox is in an indeterminate state.  */
+    /**
+     * Whether the checkbox is in an indeterminate state.
+     *
+     * @default false
+     */
     isIndeterminate?: boolean;
-    /** Whether the checkbox is in an error state.  */
+    /**
+     * Whether the checkbox is in an invalid state.
+     *
+     * @default false
+     */
     isInvalid?: boolean;
-    /** Active color palette of the checkbox */
+    /**
+     * Active color palette of the checkbox
+     *
+     * @default "primary"
+     */
     colorScheme?: ColorScheme;
-    /** The spacing between the checkbox and the label text */
+    /**
+     * The spacing between the checkbox and the label text.
+     *
+     * @default 2.5
+     */
     spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
-    /** Shape of the checkbox */
+    /**
+     * Shape of the checkbox.
+     *
+     * @default "square"
+     */
     shape?: "square" | "circle";
-    /** Family of the icon when the checkbox is in checked state */
+    /**
+     * Family of the icon when the checkbox is in checked state.
+     *
+     * @default "Ionicons"
+     */
     checkedIconFamily?:
       | "AntDesign"
       | "Entypo"
@@ -59,9 +99,17 @@ export type CheckBoxProps = PressableProps &
       | "Octicons"
       | "SimpleLineIcons"
       | "Zocial";
-    /** Name of the icon when the checkbox is in checked state */
+    /**
+     * Name of the icon when the checkbox is in checked state.
+     *
+     * @default "checkmark"
+     */
     checkedIconName?: string;
-    /** Family of the icon when the checkbox is in indeterminate state */
+    /**
+     * Family of the icon when the checkbox is in indeterminate state.
+     *
+     * @default "Ionicons"
+     */
     indeterminateIconFamily?:
       | "AntDesign"
       | "Entypo"
@@ -77,7 +125,11 @@ export type CheckBoxProps = PressableProps &
       | "Octicons"
       | "SimpleLineIcons"
       | "Zocial";
-    /** Name of the icon when the checkbox is in indeterminate state */
+    /**
+     * Name of the icon when the checkbox is in indeterminate state.
+     *
+     * @default "remove-outline"
+     */
     indeterminateIconName?: string;
     children?: string;
   };

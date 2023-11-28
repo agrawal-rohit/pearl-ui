@@ -9,18 +9,29 @@ import {
   AtomComponentProps,
   ComponentSizes,
   ComponentVariants,
-  PearlComponent,
   ResponsiveValue,
 } from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
 import { pearl } from "../../../pearl";
 
 type BaseTextProps = React.ComponentProps<typeof RNText> & {
-  /** The size of the text */
+  /**
+   * The size of the text
+   *
+   * @default undefined
+   */
   size?: ResponsiveValue<ComponentSizes<"Text">>;
-  /** The variant of the text */
+  /**
+   * The variant of the text
+   *
+   * @default "p2"
+   */
   variant?: ResponsiveValue<ComponentVariants<"Text">>;
-  /** Whether to slightly scale the font size based on the screen dimensions */
+  /**
+   * Whether to slightly scale the font size based on the screen dimensions
+   *
+   * @default true
+   */
   scaleFontSize?: boolean;
 };
 

@@ -33,15 +33,35 @@ export const useRadioGroup = () =>
   useContext(radioGroupContext) as IRadioGroupContext;
 
 export type RadioGroupProps = BoxProps & {
-  /** Size of all the children radio in the group. */
+  /**
+   * Size of all the children radio in the group.
+   *
+   * @default "m"
+   */
   size?: ResponsiveValue<ComponentSizes<"Radio">>;
-  /** Variant of all the children radio in the group. */
+  /**
+   * Variant of all the children radio in the group.
+   *
+   * @default "filled"
+   */
   variant?: ResponsiveValue<ComponentVariants<"Radio">>;
-  /** Whether the radio group is disabled.  */
+  /**
+   * Whether the radio group is disabled.
+   *
+   * @default false
+   */
   isDisabled?: boolean;
-  /** Active color palette of all the children radio in the group. */
+  /**
+   * Active color palette of all the children radio in the group.
+   *
+   * @default "primary"
+   */
   colorScheme?: ColorScheme;
-  /** The spacing between the elements */
+  /**
+   * The spacing between the elements.
+   *
+   * @default "2"
+   */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
   /** Default active value of the radio group */
   defaultValue?: string | number | undefined;

@@ -17,9 +17,17 @@ import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   Omit<MotiPressableProps, "unstable_pressDelay" | "disabled"> &
   StateProps<"_pressed" | "_disabled"> & {
-    /** Duration (in milliseconds) to wait after press down before calling onPressIn. */
+    /**
+     * Duration (in milliseconds) to wait after press down before calling onPressIn.
+     *
+     * @default 100
+     */
     onPressInDelay?: number;
-    /** Whether the press behavior is disabled. */
+    /**
+     * Whether the press behavior is disabled.
+     *
+     * @default false
+     */
     isDisabled?: boolean;
   };
 

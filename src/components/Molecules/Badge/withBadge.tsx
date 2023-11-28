@@ -4,11 +4,23 @@ import Box from "../../atoms/box/box";
 import Badge, { BadgeProps } from "./badge";
 
 interface BadgeOptions {
-  /** The position of the badge with respect to the provided base component */
+  /**
+   * The position of the badge with respect to the provided base component
+   *
+   * @default "topRight"
+   */
   placement?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
-  /** Amount of extra spacing to add between the badge and the base component */
+  /**
+   * Amount of extra spacing to add between the badge and the base component
+   *
+   * @default 5
+   */
   offset?: number;
-  /** Whether the badge is visible or not */
+  /**
+   * Whether the badge is visible or not
+   *
+   * @default false
+   */
   hidden?: boolean;
 }
 

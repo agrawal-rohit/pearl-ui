@@ -9,13 +9,25 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 
 export type ButtonProps = PressableProps & {
-  /** Whether the button is in a loading state.  */
+  /**
+   * Whether the button is in a loading state.
+   *
+   * @default false
+   */
   isLoading?: boolean;
-  /** Whether the button should span the entire width of the parent container */
+  /**
+   * Whether the button should span the entire width of the parent container.
+   *
+   * @default false
+   */
   isFullWidth?: boolean;
   /** The text value to display when the button is in a loading state */
   loadingText?: string;
-  /** The position of the loading spinner with respect to the loadingText */
+  /**
+   * The position of the loading spinner with respect to the loadingText.
+   *
+   * @default "start"
+   */
   spinnerPlacement?: "start" | "end";
   /** Icon to display on the left side of the main text */
   leftIcon?: React.ReactElement;

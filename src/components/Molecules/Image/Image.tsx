@@ -43,7 +43,11 @@ export type BaseImageProps = BoxProps &
     | "borderTopLeftRadius"
     | "borderTopRightRadius"
   > & {
-    /** Whether a remote image should be cached */
+    /**
+     * Whether a remote image should be cached.
+     *
+     * @default true
+     */
     isCached?: boolean;
     /** Source of the image to show while the remote image is being fetched */
     previewSource?: ImageSourcePropType;
@@ -51,11 +55,23 @@ export type BaseImageProps = BoxProps &
     previewColor?: ColorValue;
     /** Download configuration when fetching the remote image */
     imageDownloadOptions?: DownloadOptions;
-    /** Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded */
+    /**
+     * Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded.
+     *
+     * @default 600
+     */
     transitionDuration?: number;
-    /** Tint of the progressive loading overlay */
+    /**
+     * Tint of the progressive loading overlay.
+     *
+     * @default "dark"
+     */
     tint?: "dark" | "light" | "default";
-    /** The type of loading to use until the image has loaded */
+    /**
+     * The type of loading to use until the image has loaded.
+     *
+     * @default "spinner"
+     */
     loaderType?: "progressive" | "spinner";
     /** A custom component to show if an error occurs while loading the image */
     fallbackComponent?: React.ReactElement;

@@ -1,6 +1,7 @@
 import DividerConfig from "../../../components/atoms/divider/divider.config";
 import IconConfig from "../../../components/atoms/icon/icon.config";
 import ScreenConfig from "../../../components/atoms/screen/screen.config";
+import SkeletonConfig from "../../../components/atoms/skeleton/skeleton.config";
 import SpinnerConfig from "../../../components/atoms/spinner/spinner.config";
 import TextConfig from "../../../components/atoms/text/text.config";
 import AvatarConfig from "../../../components/molecules/avatar/avatar.config";
@@ -16,6 +17,7 @@ export default {
   None: { baseStyle: {} },
   Icon: IconConfig,
   Text: TextConfig,
+  Skeleton: SkeletonConfig,
   Screen: ScreenConfig,
   Spinner: SpinnerConfig,
   Button: ButtonConfig,

@@ -9,6 +9,7 @@ import {
   spacingPropertiesShorthand,
 } from "../theme/src/style-properties";
 import _ from "lodash";
+import { removeUndefined } from "../theme/utils/utils";
 
 const shorthandPropMapper = {
   ...layoutPropertiesShorthand,
@@ -64,7 +65,7 @@ export const useMotiWithStyleProps = (
     // Merge componentStyles and animate
     props.animate = {
       ...componentStyles,
-      ...props.animate,
+      ...removeUndefined(props.animate),
     };
   }
 
@@ -84,7 +85,7 @@ export const useMotiWithStyleProps = (
         [key]: null,
       };
     }, {});
-    props.transition = { ...props.transition, ...nullObject };
+    props.transition = { ...props.transition, ...removeUndefined(nullObject) };
 
     // Convert style props
     props.transition = composeCleanStyleProps(
@@ -136,7 +137,10 @@ export const useMotiWithStyleProps = (
         [key]: null,
       };
     }, {});
-    props.exitTransition = { ...props.exitTransition, ...nullObject };
+    props.exitTransition = {
+      ...props.exitTransition,
+      ...removeUndefined(nullObject),
+    };
 
     // Convert style props
     props.exitTransition = composeCleanStyleProps(

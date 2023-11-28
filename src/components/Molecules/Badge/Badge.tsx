@@ -16,11 +16,7 @@ export type BaseBadgeProps = PressableProps;
  */
 const CustomBadge = React.forwardRef(
   (
-    {
-      children,
-      atoms,
-      ...props
-    }: MoleculeComponentProps<"Badge", BaseBadgeProps>,
+    { children, atoms }: MoleculeComponentProps<"Badge", BaseBadgeProps>,
     ref: any
   ) => {
     // Function to render the value of the badge

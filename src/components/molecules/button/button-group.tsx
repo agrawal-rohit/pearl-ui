@@ -37,17 +37,41 @@ export const useButtonGroup = () =>
  * This interface defines the properties for the ButtonGroup component
  */
 export type ButtonGroupProps = BoxProps & {
-  /** Size of all the buttons in the group. */
+  /**
+   * Size of all the buttons in the group.
+   *
+   * @default "m"
+   */
   size?: ResponsiveValue<ComponentSizes<"Button">>;
-  /** Variant of all the buttons in the group. */
+  /**
+   * Variant of all the buttons in the group.
+   *
+   * @default "filled"
+   */
   variant?: ResponsiveValue<ComponentVariants<"Button">>;
-  /** Whether the button group is disabled.  */
+  /**
+   * Whether the button group is disabled.
+   *
+   * @default false
+   */
   isDisabled?: boolean;
-  /** Whether the buttons in the group are attached to each other.  */
+  /**
+   * Whether the buttons in the group are attached to each other.
+   *
+   * @default false
+   */
   isAttached?: boolean;
-  /** Active color palette of all the buttons in the group. */
+  /**
+   * Active color palette of all the buttons in the group.
+   *
+   * @default "primary"
+   */
   colorScheme?: ColorScheme;
-  /** The spacing between the elements */
+  /**
+   * The spacing between the elements.
+   *
+   * @default 2
+   */
   spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
 };
 

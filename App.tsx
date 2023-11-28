@@ -32,7 +32,11 @@ import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
 import Stack from "./src/components/atoms/stack/stack";
 import Button from "./src/components/molecules/button/button";
+import Skeleton from "./src/components/atoms/skeleton/skeleton";
+import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
 import ButtonGroup from "./src/components/molecules/button/button-group";
+import Box from "./src/components/atoms/box/box";
+import SkeletonText from "./src/components/atoms/skeleton/skeleton-text";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -67,12 +71,31 @@ const Index = () => {
   const [radioGroupValue, setRadioGroupValue] = React.useState("B");
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
+  const [isLoaded, setIsLoaded] = React.useState(false);
   const [text, setText] = React.useState("");
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Screen>
       <Stack direction="vertical" spacing="4">
-        <Stack direction="vertical">
+        <Skeleton isLoaded={isLoaded}>
+          <Stack direction="vertical">
+            <Radio isChecked={checked} onPress={() => setChecked(true)}>
+              Default Radio
+            </Radio>
+            <Radio isDisabled>Disabled Radio</Radio>
+            <Radio isChecked>Checked Radio</Radio>
+            <Radio isInvalid>Error Radio</Radio>
+          </Stack>
+        </Skeleton>
+
+        {/* <Stack direction="vertical">
           <Radio isChecked={checked} onPress={() => setChecked(true)}>
             Default Radio
           </Radio>
@@ -177,7 +200,7 @@ const Index = () => {
 
         <Input isFullWidth placeholder="Focused Input" autoFocus />
         <Input isFullWidth isDisabled placeholder="Disabled Input" />
-        <Input isFullWidth placeholder="Error Input" isInvalid />
+        <Input isFullWidth placeholder="Error Input" isInvalid /> */}
       </Stack>
     </Screen>
   );
