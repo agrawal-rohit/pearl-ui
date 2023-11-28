@@ -12,11 +12,11 @@ const CustomTextLink = React.forwardRef(
   (
     {
       children,
+      atoms,
       ...rest
     }: MoleculeComponentProps<"TextLink", BaseTextLinkProps>,
     ref: any
   ) => {
-    const { atoms } = rest;
     const isDisabled = atoms.container.isDisabled ?? false;
 
     return (

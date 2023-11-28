@@ -20,10 +20,10 @@ describe("Molecules/CheckBox", () => {
   it("passes the snapshot test for different sizes", async () => {
     const tree = await render(
       <ThemeProvider>
-        <CheckBox size="s">Small Checkbox</CheckBox>
-        <CheckBox size="m">Regular Checkbox</CheckBox>
-        <CheckBox size="l">Large Checkbox</CheckBox>
-        <CheckBox size="xl">Extra Large Checkbox</CheckBox>
+        <CheckBox size="xs">Small Checkbox</CheckBox>
+        <CheckBox size="s">Regular Checkbox</CheckBox>
+        <CheckBox size="m">Large Checkbox</CheckBox>
+        <CheckBox size="l">Extra Large Checkbox</CheckBox>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

@@ -3,7 +3,6 @@ import Text from "../../atoms/text/text";
 import {
   FinalPearlTheme,
   ResponsiveValue,
-  ColorScheme,
   ComponentSizes,
   ComponentVariants,
   MoleculeComponentProps,
@@ -54,12 +53,6 @@ export type RadioProps = PressableProps &
      * @default false
      */
     isInvalid?: boolean;
-    /**
-     * Active color palette of the radio.
-     *
-     * @default "primary"
-     */
-    colorScheme?: ColorScheme;
     /**
      * The spacing between the radio and the label text.
      *

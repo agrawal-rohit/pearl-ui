@@ -94,9 +94,16 @@ export const useAtomicComponentConfig = (
             `theme.components['${String(themeComponentKey)}']['sizes']`
           );
 
-          activeSizeAndVariantStyles = (componentStyleConfig as any)!.sizes![
-            activeSizeAndVariantConfig[currProp] as string
-          ];
+          let partConfig =
+            componentStyleConfig!.sizes![
+              activeSizeAndVariantConfig[currProp] as string
+            ];
+          if (typeof partConfig === "function")
+            partConfig = partConfig(
+              activeSizeAndVariantConfig.variant,
+              colorScheme
+            );
+          activeSizeAndVariantStyles = partConfig;
         } else {
           checkKeyAvailability(
             "variants",
@@ -110,9 +117,16 @@ export const useAtomicComponentConfig = (
             `theme.components['${String(themeComponentKey)}']['variants']`
           );
 
-          activeSizeAndVariantStyles = (componentStyleConfig as any)!.variants![
-            activeSizeAndVariantConfig[currProp] as string
-          ];
+          let partConfig =
+            componentStyleConfig!.variants![
+              activeSizeAndVariantConfig[currProp] as string
+            ];
+          if (typeof partConfig === "function")
+            partConfig = partConfig(
+              activeSizeAndVariantConfig.size,
+              colorScheme
+            );
+          activeSizeAndVariantStyles = partConfig;
         }
 
         if (style) {

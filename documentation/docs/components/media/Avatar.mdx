@@ -44,9 +44,14 @@ The `Avatar` component can display a local user image or a user image from a rem
 
 ### Avatar Sizes
 
-The `size` prop can be used to adjust the size of the avatar. The available sizes are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/avatar/avatar.config.ts).
+The `size` prop can be used to adjust the size of the avatar. The available sizes are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/avatar/avatar.config.ts).
 
 ```jsx
+<Avatar
+  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+  size="xs"
+/>
+
 <Avatar
   src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
   size="s"
@@ -60,11 +65,6 @@ The `size` prop can be used to adjust the size of the avatar. The available size
 <Avatar
   src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
   size="l"
-/>
-
-<Avatar
-  src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-  size="xl"
 />
 ```
 

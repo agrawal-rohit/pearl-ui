@@ -18,7 +18,7 @@ export default {
         borderColor: "danger.500",
       },
       transition: {
-        duration: 100,
+        duration: 50,
       },
     },
     innerBox: {
@@ -26,12 +26,12 @@ export default {
       h: "100%",
       borderRadius: "full",
       transition: {
-        duration: 100,
+        duration: 50,
       },
     },
   },
   sizes: {
-    s: {
+    xs: {
       outerBox: {
         p: 0.5,
         w: 18,
@@ -41,7 +41,7 @@ export default {
         variant: "p3",
       },
     },
-    m: {
+    s: {
       outerBox: {
         p: 1,
         w: 24,
@@ -51,7 +51,7 @@ export default {
         variant: "p3",
       },
     },
-    l: {
+    m: {
       outerBox: {
         p: 1.5,
         w: 30,
@@ -61,7 +61,7 @@ export default {
         variant: "p2",
       },
     },
-    xl: {
+    l: {
       outerBox: {
         p: 2,
         w: 36,

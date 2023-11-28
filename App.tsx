@@ -32,6 +32,7 @@ import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
 import Stack from "./src/components/atoms/stack/stack";
 import Button from "./src/components/molecules/button/button";
+import Progress from "./src/components/molecules/progress/progress";
 import Skeleton from "./src/components/atoms/skeleton/skeleton";
 import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
 import ButtonGroup from "./src/components/molecules/button/button-group";
@@ -72,6 +73,7 @@ const Index = () => {
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
+  const [progress, setProgress] = React.useState(0);
   const [text, setText] = React.useState("");
 
   React.useEffect(() => {
@@ -80,6 +82,13 @@ const Index = () => {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
+
+  React.useEffect(() => {
+    const progressTimer = setInterval(() => {
+      if (progress < 100) setProgress(progress + 10);
+    }, 500);
+    return () => clearInterval(progressTimer);
+  }, [progress]);
 
   return (
     <Screen>
@@ -95,7 +104,9 @@ const Index = () => {
           </Stack>
         </Skeleton>
 
-        {/* <Stack direction="vertical">
+        <Progress variant="filled" value={progress} />
+
+        <Stack direction="vertical">
           <Radio isChecked={checked} onPress={() => setChecked(true)}>
             Default Radio
           </Radio>
@@ -200,7 +211,7 @@ const Index = () => {
 
         <Input isFullWidth placeholder="Focused Input" autoFocus />
         <Input isFullWidth isDisabled placeholder="Disabled Input" />
-        <Input isFullWidth placeholder="Error Input" isInvalid /> */}
+        <Input isFullWidth placeholder="Error Input" isInvalid />
       </Stack>
     </Screen>
   );

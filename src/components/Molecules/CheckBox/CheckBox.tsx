@@ -62,12 +62,6 @@ export type CheckBoxProps = PressableProps &
      */
     isInvalid?: boolean;
     /**
-     * Active color palette of the checkbox
-     *
-     * @default "primary"
-     */
-    colorScheme?: ColorScheme;
-    /**
      * The spacing between the checkbox and the label text.
      *
      * @default 2.5

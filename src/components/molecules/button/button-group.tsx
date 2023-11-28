@@ -62,12 +62,6 @@ export type ButtonGroupProps = BoxProps & {
    */
   isAttached?: boolean;
   /**
-   * Active color palette of all the buttons in the group.
-   *
-   * @default "primary"
-   */
-  colorScheme?: ColorScheme;
-  /**
    * The spacing between the elements.
    *
    * @default 2

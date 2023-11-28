@@ -14,7 +14,7 @@ export default {
       borderWidth: 2,
       borderColor: "neutral.300",
       transition: {
-        duration: 100,
+        duration: 50,
       },
       _invalid: {
         borderColor: "danger.500",
@@ -29,6 +29,17 @@ export default {
     },
   },
   sizes: {
+    xs: {
+      box: {
+        borderRadius: "s",
+      },
+      icon: {
+        size: "xs",
+      },
+      text: {
+        variant: "p4",
+      },
+    },
     s: {
       box: {
         borderRadius: "s",
@@ -37,18 +48,18 @@ export default {
         size: "s",
       },
       text: {
-        variant: "p4",
+        variant: "p3",
       },
     },
     m: {
       box: {
-        borderRadius: "s",
+        borderRadius: "m",
       },
       icon: {
         size: "m",
       },
       text: {
-        variant: "p3",
+        variant: "p2",
       },
     },
     l: {
@@ -57,17 +68,6 @@ export default {
       },
       icon: {
         size: "l",
-      },
-      text: {
-        variant: "p2",
-      },
-    },
-    xl: {
-      box: {
-        borderRadius: "m",
-      },
-      icon: {
-        size: "xl",
       },
       text: {
         variant: "p1",

@@ -11,10 +11,10 @@ describe("Molecules/Badge", () => {
   it("passes the snapshot test for different sizes", () => {
     const tree = render(
       <ThemeProvider>
+        <Badge size="xs">2</Badge>
         <Badge size="s">2</Badge>
         <Badge size="m">2</Badge>
         <Badge size="l">2</Badge>
-        <Badge size="xl">2</Badge>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -102,14 +102,14 @@ describe("Molecules/Badge", () => {
           <BadgedIcon
             iconFamily="FontAwesome"
             iconName="inbox"
-            size="xl"
+            size="m"
             mb="l"
           ></BadgedIcon>
 
           <BadgedIconTwo
             iconFamily="FontAwesome"
             iconName="inbox"
-            size="xl"
+            size="m"
           ></BadgedIconTwo>
         </>
       );

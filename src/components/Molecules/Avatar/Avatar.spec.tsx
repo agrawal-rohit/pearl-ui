@@ -17,6 +17,10 @@ describe("Molecules/Avatar", () => {
           <Stack direction="horizontal" spacing="s">
             <Avatar
               src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
+              size="xs"
+            />
+            <Avatar
+              src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
               size="s"
             />
             <Avatar
@@ -27,17 +31,13 @@ describe("Molecules/Avatar", () => {
               src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
               size="l"
             />
-            <Avatar
-              src="https://pbs.twimg.com/profile_images/1419369145058041856/eshLFaDy_400x400.jpg"
-              size="xl"
-            />
           </Stack>
 
           <Stack direction="horizontal" spacing="s" mt="s">
-            <Avatar backgroundColor="red" name="Rohit Agrawal" size="s" />
-            <Avatar backgroundColor="red" name="John" size="m" />
-            <Avatar backgroundColor="red" name="Some guy" size="l" />
-            <Avatar backgroundColor="red" name="YOYO" size="xl" />
+            <Avatar backgroundColor="red" name="Rohit Agrawal" size="xs" />
+            <Avatar backgroundColor="red" name="John" size="s" />
+            <Avatar backgroundColor="red" name="Some guy" size="m" />
+            <Avatar backgroundColor="red" name="YOYO" size="l" />
           </Stack>
         </>
       </ThemeProvider>

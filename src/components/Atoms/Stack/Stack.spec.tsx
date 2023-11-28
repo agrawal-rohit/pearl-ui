@@ -79,13 +79,13 @@ describe("Atoms/ZStack", () => {
           <Box w={20} h={20} backgroundColor="danger.500" />
         </ZStack>
 
-        <ZStack mt="xl" reversed>
+        <ZStack mt="8" reversed>
           <Box w={100} h={100} backgroundColor="primary.500" />
           <Box w={50} h={50} backgroundColor="neutral.500" />
           <Box w={20} h={20} backgroundColor="danger.500" />
         </ZStack>
 
-        <ZStack mt="xl">
+        <ZStack mt="8">
           <Box w={100} h={100} backgroundColor="primary.500" />
           <Box w={50} h={50} zIndex="docked" backgroundColor="neutral.500" />
           <Box w={20} h={20} backgroundColor="danger.500" />

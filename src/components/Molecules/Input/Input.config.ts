@@ -52,7 +52,7 @@ export default {
         lineHeight: "m",
       },
       icon: {
-        size: "s",
+        size: "xs",
         mx: "0.5",
       },
     },
@@ -68,7 +68,7 @@ export default {
         lineHeight: "m",
       },
       icon: {
-        size: "s",
+        size: "xs",
         mx: "1",
       },
     },
@@ -84,7 +84,7 @@ export default {
         lineHeight: "xl",
       },
       icon: {
-        size: "m",
+        size: "s",
         mx: "1.5",
       },
     },
@@ -100,7 +100,7 @@ export default {
         lineHeight: "2xl",
       },
       icon: {
-        size: "m",
+        size: "s",
         mx: "1.5",
       },
     },

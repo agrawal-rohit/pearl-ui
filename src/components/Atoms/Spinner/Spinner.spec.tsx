@@ -12,10 +12,10 @@ describe("Atoms/Spinner", () => {
   it("passes the snapshot test for different sizes", () => {
     const tree = render(
       <ThemeProvider>
+        <Spinner size="xs" />
         <Spinner size="s" />
         <Spinner size="m" />
         <Spinner size="l" />
-        <Spinner size="xl" />
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();

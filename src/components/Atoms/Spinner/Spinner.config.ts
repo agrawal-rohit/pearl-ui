@@ -5,16 +5,16 @@ export default {
     animating: true,
   },
   sizes: {
-    s: {
+    xs: {
       spinnerSize: 10,
     },
-    m: {
+    s: {
       spinnerSize: 15,
     },
-    l: {
+    m: {
       spinnerSize: 20,
     },
-    xl: {
+    l: {
       spinnerSize: 30,
     },
   },

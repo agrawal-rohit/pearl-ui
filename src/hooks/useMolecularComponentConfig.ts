@@ -154,10 +154,16 @@ export const useMolecularComponentConfig = (
             `theme.components['${String(componentName)}']['sizes']`
           );
 
-          activeSizeAndVariantStyles =
+          let partConfig =
             componentStyleConfig!.sizes![
               activeSizeAndVariantConfig[currProp] as string
             ][part];
+          if (typeof partConfig === "function")
+            partConfig = partConfig(
+              activeSizeAndVariantConfig.variant,
+              colorScheme
+            );
+          activeSizeAndVariantStyles = partConfig;
         } else {
           checkKeyAvailability(
             "variants",
@@ -171,10 +177,16 @@ export const useMolecularComponentConfig = (
             `theme.components['${String(componentName)}']['variants']`
           );
 
-          activeSizeAndVariantStyles =
+          let partConfig =
             componentStyleConfig!.variants![
               activeSizeAndVariantConfig[currProp] as string
             ][part];
+          if (typeof partConfig === "function")
+            partConfig = partConfig(
+              activeSizeAndVariantConfig.size,
+              colorScheme
+            );
+          activeSizeAndVariantStyles = partConfig;
         }
 
         if (style) {

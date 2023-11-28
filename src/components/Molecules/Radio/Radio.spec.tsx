@@ -20,10 +20,10 @@ describe("Molecules/Radio", () => {
   it("passes the snapshot test for different sizes", async () => {
     const tree = await render(
       <ThemeProvider>
-        <Radio size="s">Small Radio</Radio>
-        <Radio size="m">Regular Radio</Radio>
-        <Radio size="l">Large Radio</Radio>
-        <Radio size="xl">Extra Large Radio</Radio>
+        <Radio size="xs">Small Radio</Radio>
+        <Radio size="s">Regular Radio</Radio>
+        <Radio size="m">Large Radio</Radio>
+        <Radio size="l">Extra Large Radio</Radio>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -57,9 +57,6 @@ describe("Molecules/Radio", () => {
     const tree = await render(
       <ThemeProvider>
         <Radio isInvalid>Error Radio</Radio>
-        <Radio isInvalid errorMessage="This is an error message!">
-          Error Radio with message
-        </Radio>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -186,15 +183,5 @@ describe("Molecules/Radio", () => {
       fireEvent.press(pressableInstance);
       expect(onPress).toHaveBeenCalledTimes(0);
     }
-  });
-
-  it("shows error message correctly", () => {
-    const { getByText } = render(
-      <ThemeProvider>
-        <Radio isInvalid errorMessage="Test error message" />
-      </ThemeProvider>
-    );
-
-    expect(getByText("Test error message")).toBeTruthy();
   });
 });

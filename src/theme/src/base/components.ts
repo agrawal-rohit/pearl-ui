@@ -10,6 +10,7 @@ import ButtonConfig from "../../../components/molecules/button/button.config";
 import CheckBoxConfig from "../../../components/molecules/checkbox/checkbox.config";
 import ImageConfig from "../../../components/molecules/image/image.config";
 import InputConfig from "../../../components/molecules/input/input.config";
+import ProgressConfig from "../../../components/molecules/progress/progress.config";
 import RadioConfig from "../../../components/molecules/radio/radio.config";
 import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
 
@@ -29,4 +30,5 @@ export default {
   Divider: DividerConfig,
   Image: ImageConfig,
   Avatar: AvatarConfig,
+  Progress: ProgressConfig,
 };

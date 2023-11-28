@@ -145,6 +145,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Image"]:after,
 .menu__link[href*="Avatar"]:after,
 .menu__link[href*="Button"]:after,
+.menu__link[href*="Progress"]:after,
 .menu__link[href*="Input"]:after,
 .menu__link[href*="Textarea"]:after,
 .menu__link[href*="Text Link"]:after,
@@ -171,9 +172,9 @@ html[data-theme="dark"] .header-twitter-link:before {
 /*
   Mark pages as "new" using href attribute:
 */
-.menu__link[href*="Badge"]:before,
 .menu__link[href*="Textarea"]:before,
 .menu__link[href*="Skeleton"]:before,
+.menu__link[href*="Progress"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="animation-support"]:before,
 .menu__link[href*="useDimensions"]:before,

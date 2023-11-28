@@ -6,7 +6,7 @@ import {
   FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
-import Box, { BoxProps } from "../../atoms/box/box";
+import { BoxProps } from "../../atoms/box/box";
 import Stack from "../../atoms/stack/stack";
 
 interface ICheckBoxGroupContext {
@@ -55,12 +55,6 @@ export type CheckBoxGroupProps = BoxProps & {
    * @default false
    */
   isDisabled?: boolean;
-  /**
-   * Active color palette of all the children checkbox in the group.
-   *
-   * @default "primary"
-   */
-  colorScheme?: ColorScheme;
   /**
    * The spacing between the elements.
    *

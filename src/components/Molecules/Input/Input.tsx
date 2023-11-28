@@ -15,7 +15,6 @@ import {
 import {
   StyleFunctionContainer,
   ResponsiveValue,
-  ColorScheme,
   PaletteColors,
   ComponentSizes,
   ComponentVariants,
@@ -83,12 +82,6 @@ export type InputProps = Omit<
     leftIcon?: React.ReactElement;
     /** Icon to display on the right side of the text input */
     rightIcon?: React.ReactElement;
-    /**
-     * Active color palette of the input field.
-     *
-     * @default "primary"
-     */
-    colorScheme?: ColorScheme;
     /**
      * Custom color of the placeholder text string.
      *

@@ -1,0 +1,96 @@
+---
+sidebar_position: 4
+title: Progress
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/progress/progress.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/progress/progress.config.ts"
+  />
+</div>
+
+The `Progress` component in Pearl UI is used to display the progress status for a task that takes a long time or consists of several steps. It is a visual indicator of completion percentage.
+
+## Import
+
+```jsx
+import { Progress } from "@pearl-ui";
+```
+
+## Usage
+
+```jsx
+// Basic usage of Progress
+<Progress />
+
+// Customizing Progress with value prop
+<Progress value={50} />
+```
+
+### Progress Sizes
+
+The `size` prop allows you to adjust the size of the progress bar. You can set the value to the keys available in <t>PearlTheme.components.Progress["sizes"]</t>, which are <t>"sm"</t>, <t>"md"</t>, and <t>"lg"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/progress/progress.config.ts).
+
+```jsx
+<Progress size="xs" />
+<Progress size="s" />
+<Progress size="m" />
+<Progress size="l" />
+```
+
+### Progress Variants
+
+The `variant` prop allows you to change the appearance of the progress bar. You can set the value to the keys available in <t>PearlTheme.components.Progress["variants"]</t>, which are <t>"determinate"</t> and <t>"indeterminate"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/progress/progress.config.ts).
+
+```jsx
+<Progress variant="filled" value={50} />
+<Progress variant="outline" />
+```
+
+### Progress color scheme
+
+You can add `colorScheme` prop to any progress bar to apply any color that exists in the `theme`.
+
+```jsx
+// Using Progress with different color schemes
+<Progress colorScheme="success" />
+<Progress colorScheme="secondary" />
+```
+
+## Accessibility
+
+`Progress` has a `role` set to `progressbar` to denote that it is a progress.
+
+```jsx
+// Example: Progress with 50% completion
+<Progress value={50} />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/progress" />
+
+## Progress Component Properties
+
+### Supported Styling Properties
+
+The `Progress` component is built upon the [Box](../layout/Box) component, hence all properties of [Box](../layout/Box) can be applied to it.
+
+### Additional Properties
+
+| Name          | Required | Type                                              | Default     | Description                                        |
+| ------------- | -------- | ------------------------------------------------- | ----------- | -------------------------------------------------- |
+| `value`       | No       | <t>number</t>                                     | `0`         | Value of the current progress (Between 0 and 100). |
+| `size`        | No       | <t>PearlTheme.components.Progress["sizes"]</t>    | `"m"`       | Defines the size of the progress bar.              |
+| `variant`     | No       | <t>PearlTheme.components.Progress["variants"]</t> | `"filled"`  | Specifies the variant of the progress bar.         |
+| `colorScheme` | No       | <t>string</t>                                     | `"primary"` | Specifies the color scheme of the progress bar.    |

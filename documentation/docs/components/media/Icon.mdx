@@ -33,16 +33,16 @@ import { Icon } from "pearl-ui";
 
 ### Icon sizes
 
-The `size` prop allows you to adjust the size of the icon. You can use the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"s"</t>, <t>"m"</t>, <t>"l"</t>, and <t>"xl"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
+The `size` prop allows you to adjust the size of the icon. You can use the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
 
 ```jsx
+<Icon iconFamily="AntDesign" iconName="stepforward" size="xs" />
+
 <Icon iconFamily="AntDesign" iconName="stepforward" size="s" />
 
 <Icon iconFamily="AntDesign" iconName="stepforward" size="m" />
 
 <Icon iconFamily="AntDesign" iconName="stepforward" size="l" />
-
-<Icon iconFamily="AntDesign" iconName="stepforward" size="xl" />
 ```
 
 For more precise control over the size of a single `Icon` instance, you can use the `rawSize` prop.

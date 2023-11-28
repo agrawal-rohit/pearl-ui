@@ -28,10 +28,10 @@ export default {
       },
       spinner: {
         my: "1",
-        size: "s",
+        size: "xs",
       },
       icon: {
-        size: "s",
+        size: "xs",
       },
     },
     s: {
@@ -44,10 +44,10 @@ export default {
         variant: "p4",
       },
       spinner: {
-        size: "m",
+        size: "s",
       },
       icon: {
-        size: "s",
+        size: "xs",
       },
     },
     m: {
@@ -60,10 +60,10 @@ export default {
         variant: "p3",
       },
       spinner: {
-        size: "m",
+        size: "s",
       },
       icon: {
-        size: "m",
+        size: "s",
       },
     },
     l: {
@@ -76,10 +76,10 @@ export default {
         variant: "p2",
       },
       spinner: {
-        size: "l",
+        size: "m",
       },
       icon: {
-        size: "m",
+        size: "s",
       },
     },
   },

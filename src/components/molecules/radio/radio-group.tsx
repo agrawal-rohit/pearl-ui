@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 import {
   ColorScheme,
   ComponentSizes,
@@ -6,7 +6,7 @@ import {
   FinalPearlTheme,
   ResponsiveValue,
 } from "../../../theme/src/types";
-import Box, { BoxProps } from "../../atoms/box/box";
+import { BoxProps } from "../../atoms/box/box";
 import Stack from "../../atoms/stack/stack";
 
 interface IRadioGroupContext {
@@ -51,12 +51,6 @@ export type RadioGroupProps = BoxProps & {
    * @default false
    */
   isDisabled?: boolean;
-  /**
-   * Active color palette of all the children radio in the group.
-   *
-   * @default "primary"
-   */
-  colorScheme?: ColorScheme;
   /**
    * The spacing between the elements.
    *

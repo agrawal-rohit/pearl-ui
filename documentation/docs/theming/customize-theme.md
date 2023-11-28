@@ -197,9 +197,8 @@ Now, when you use the Icon component, these updates will be automatically applie
 
 ```jsx
 <Box flexDirection="row" justifyContent="space-between">
-  <Icon iconFamily="Entypo" iconName="cup" size="s" variant="neutral" />
-  <Icon iconFamily="Entypo" iconName="cup" size="m" variant="primary" />
-  <Icon iconFamily="Entypo" iconName="cup" size="xl" variant="secondary" />
+  <Icon iconFamily="Entypo" iconName="cup" size="s" variant="primary" />
+  <Icon iconFamily="Entypo" iconName="cup" size="m" variant="secondary" />
 </Box>
 ```
 
