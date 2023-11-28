@@ -267,7 +267,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -450,7 +450,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -644,7 +644,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -827,7 +827,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1010,7 +1010,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1193,7 +1193,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1387,7 +1387,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1570,7 +1570,7 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1764,7 +1764,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -1947,7 +1947,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -2130,7 +2130,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -2313,7 +2313,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -2507,7 +2507,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -2690,7 +2690,7 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"
@@ -2918,7 +2918,7 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
                 }
               }
               checkedIconFamily="Ionicons"
-              checkedIconName="checkmark"
+              checkedIconName="checkmark-sharp"
               collapsable={false}
               indeterminateIconFamily="Ionicons"
               indeterminateIconName="remove-outline"

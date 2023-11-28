@@ -22,7 +22,7 @@ export default {
     },
     icon: {
       checkedIconFamily: "Ionicons",
-      checkedIconName: "checkmark",
+      checkedIconName: "checkmark-sharp",
       indeterminateIconFamily: "Ionicons",
       indeterminateIconName: "remove-outline",
       color: "neutral.50",

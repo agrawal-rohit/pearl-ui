@@ -96,7 +96,7 @@ export type CheckBoxProps = PressableProps &
     /**
      * Name of the icon when the checkbox is in checked state.
      *
-     * @default "checkmark"
+     * @default "checkmark-sharp"
      */
     checkedIconName?: string;
     /**
