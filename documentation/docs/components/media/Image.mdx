@@ -17,7 +17,7 @@ import SourceButton from "../../../src/components/SourceButton/SourceButton";
   />
 </div>
 
-The `Image` component is a versatile tool for displaying images in your application. It supports both local and remote images, and includes built-in features for image fallback, caching, and progressive loading.
+The `Image` component is a versatile tool for displaying images in your application. It supports both local and remote images, and includes built-in features for image fallback, caching, and progressive loading. The `Image` component is built on top of the [React Native Image](https://reactnative.dev/docs/image) component.
 
 ## Import
 
@@ -98,9 +98,23 @@ While a remote image is being downloaded, a temporary placeholder can be display
 
 #### Progressive image loading
 
-![Progressive Loading Medium](https://miro.medium.com/max/2000/1*JIph8aM2PyQb-o_RJhnmnQ.png)
+<div
+  style={{
+    width: "100%",
+    height: "350px",
+    display: "block",
+    margin: "auto",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url("https://res.cloudinary.com/practicaldev/image/fetch/s--9hG4KZCR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://cdn-images-1.medium.com/max/1742/1%2A34x4V0cDOF2Wk3Mma-CrYA.gif")`,
+  }}
+></div>
+
+<br />
 
 Progressive image loading displays a blurred low-quality image that gradually improves in resolution as the image is downloaded. This method is used in popular apps like [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/).
+
+![Progressive Loading Medium](https://miro.medium.com/max/2000/1*JIph8aM2PyQb-o_RJhnmnQ.png)
 
 The `loaderType` and `previewSource` props can be used to enable progressive loading. The `previewSource` should be a low-resolution version of the source image.
 
@@ -228,18 +242,18 @@ The `Image` component is built upon the [Box](../layout/Box) component, hence al
 
 ### Additional Properties
 
-Apart from the properties listed below, the `Image` component also inherits all properties of the [Image](https://reactnative.dev/docs/image) component from React Native.
+Apart from the properties listed below, the `Image` component also inherits all properties of the [React Native Image](https://reactnative.dev/docs/image) component from React Native.
 
-| Name                   | Required | Type                                                                                        | Default     | Description                                                                                       |
-| ---------------------- | -------- | ------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
-| `size`                 | No       | <t>PearlTheme.components.Image["sizes"]</t>                                                 |             | Defines the size of the image.                                                                    |
-| `variant`              | No       | <t>PearlTheme.components.Image["variants"]</t>                                              |             | Specifies the variant of the image.                                                               |
-| `isCached`             | No       | <t>boolean</t>                                                                              | `true`      | Determines if a remote image should be cached.                                                    |
-| `loaderType`           | No       | <t>"progressive" \| "spinner"</t>                                                           | `"spinner"` | Specifies the type of loader to display until the image is fully loaded.                          |
-| `previewSource`        | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the placeholder image while the remote image is loading.                  |
-| `previewColor`         | No       | <t>string</t>                                                                               |             | Defines the color of the image container while the remote image is loading.                       |
-| `transitionDuration`   | No       | <t>number</t>                                                                               | `300`       | Specifies the duration (in ms) for the progressive loading overlay to fade after the image loads. |
-| `imageDownloadOptions` | No       | <t>[DownloadOptions](https://docs.expo.dev/versions/latest/sdk/filesystem/#arguments-8)</t> | {}          | Configures the download options when fetching the remote image.                                   |
-| `tint`                 | No       | <t>"dark" \| "light" \| "default"</t>                                                       | `"dark"`    | Specifies the tint of the progressive loading overlay.                                            |
-| `fallbackComponent`    | No       | <t>React.ReactElement</t>                                                                   |             | Specifies a custom component to display if an error occurs while loading the image.               |
-| `fallbackSource`       | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the fallback image to display if an error occurs while loading the image. |
+| Name                        | Required | Type                                                                                        | Default     | Description                                                                                       |
+| --------------------------- | -------- | ------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| `size`                      | No       | <t>PearlTheme.components.Image["sizes"]</t>                                                 |             | Defines the size of the image.                                                                    |
+| `variant`                   | No       | <t>PearlTheme.components.Image["variants"]</t>                                              |             | Specifies the variant of the image.                                                               |
+| `isCached`                  | No       | <t>boolean</t>                                                                              | `true`      | Determines if a remote image should be cached.                                                    |
+| `loaderType`                | No       | <t>"progressive" \| "spinner"</t>                                                           | `"spinner"` | Specifies the type of loader to display until the image is fully loaded.                          |
+| `previewSource`             | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the placeholder image while the remote image is loading.                  |
+| `previewColor`              | No       | <t>string</t>                                                                               |             | Defines the color of the image container while the remote image is loading.                       |
+| `overlayTransitionDuration` | No       | <t>number</t>                                                                               | `300`       | Specifies the duration (in ms) for the progressive loading overlay to fade after the image loads. |
+| `imageDownloadOptions`      | No       | <t>[DownloadOptions](https://docs.expo.dev/versions/latest/sdk/filesystem/#arguments-8)</t> | {}          | Configures the download options when fetching the remote image.                                   |
+| `tint`                      | No       | <t>"dark" \| "light" \| "default"</t>                                                       | `"dark"`    | Specifies the tint of the progressive loading overlay.                                            |
+| `fallbackComponent`         | No       | <t>React.ReactElement</t>                                                                   |             | Specifies a custom component to display if an error occurs while loading the image.               |
+| `fallbackSource`            | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t>                        |             | Specifies the source of the fallback image to display if an error occurs while loading the image. |

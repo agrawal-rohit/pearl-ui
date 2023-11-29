@@ -13,6 +13,7 @@ import InputConfig from "../../../components/molecules/input/input.config";
 import ProgressConfig from "../../../components/molecules/progress/progress.config";
 import RadioConfig from "../../../components/molecules/radio/radio.config";
 import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
+import VideoConfig from "../../../components/molecules/video/video.config";
 
 export default {
   None: { baseStyle: {} },
@@ -29,6 +30,7 @@ export default {
   Badge: BadgeConfig,
   Divider: DividerConfig,
   Image: ImageConfig,
+  Video: VideoConfig,
   Avatar: AvatarConfig,
   Progress: ProgressConfig,
 };

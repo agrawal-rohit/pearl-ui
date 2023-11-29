@@ -1,0 +1,228 @@
+---
+sidebar_position: 4
+title: Video
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/video/video.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/video/video.config.ts"
+  />
+</div>
+
+The `Video` component is a versatile tool for displaying videos in your application. It supports both local and remote videos, and includes built-in features for video fallback and progressive loading. The `Video` component is built on top of the [Expo Video](https://docs.expo.dev/versions/latest/sdk/video/) component.
+
+## Import
+
+```jsx
+import { Video } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+// Displaying a local video
+<Video
+  width={200}
+  height={200}
+  source={require("<path-to-local-video>.mp4")}
+/>
+
+// Displaying a video from a remote source
+<Video
+  width={200}
+  height={200}
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>
+```
+
+### Aspect Ratio
+
+The `aspectRatio` style prop can be used to maintain the aspect ratio of a video and prevent it from being cropped.
+
+```jsx
+// Maintains aspect ratio for a video having fixed width
+<Video
+  width={200}
+  aspectRatio={4/3}
+  source={require("<path-to-local-video>.mp4")}
+/>
+
+// Maintains aspect ratio for a video having relative width
+<Video
+  width="70%"
+  aspectRatio={16/9}
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>
+```
+
+### Video loading indicators
+
+While a remote video is being downloaded, a temporary placeholder can be displayed as a loading indicator. This can significantly improve the user experience of your application. The `Video` component supports two types of loading indicators: progressive video loading and spinner loading.
+
+#### Progressive video loading
+
+<div
+  style={{
+    width: "100%",
+    height: "350px",
+    display: "block",
+    margin: "auto",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url("https://miro.medium.com/v2/resize:fit:1400/1*BLP_322HptiztLklUo9sfQ.gif")`,
+  }}
+></div>
+
+<br />
+
+Progressive video loading displays a blurred low-quality image that gradually improves in resolution as the video is downloaded.
+
+The `loaderType` and `previewSource` props can be used to enable progressive loading. The `previewSource` should be a low-resolution version of the source video.
+
+```jsx
+// The loaderType prop specifies that this video needs to be loaded progressively
+<Video
+  width={100}
+  height={100}
+  loaderType="progressive"
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+  previewSource={{
+    uri: "<url-of-the-preview-image>",
+  }}
+/>
+```
+
+If you do not have a preview source image, you can use the `previewColor` prop to emulate the progressive video loading behavior.
+
+```jsx
+// The loaderType prop specifies that this video needs to be loaded progressively
+<Video
+  width={100}
+  height={100}
+  loaderType="progressive"
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+  previewColor="#934a9a"
+/>
+```
+
+If both `previewSource` and `previewColor` props are specified, `previewSource` has a higher precedence.
+
+#### Spinner loading
+
+You can also display a [Spinner](../feedback/Spinner) while the video is loading by setting the `loaderType` prop to <t>"spinner"</t>. The appearance of the spinner can be customized using the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/video/video.config.ts).
+
+```jsx
+// The loaderType prop specifies that a spinner should be displayed while this video is being loaded
+<Video
+  width={100}
+  height={100}
+  loaderType="spinner"
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>
+```
+
+### Video Fallback
+
+If a video cannot be displayed due to network issues or because it does not exist, a fallback image or component can be displayed instead. This can be achieved using the `fallbackSource` and `fallbackComponent` props.
+
+```jsx
+// Displays an image saying 'No Video Available' if the source video doesn't exist
+<Video
+  width={100}
+  height={100}
+  fallbackSource={{
+    uri: "https://cdn.segmentnext.com/wp-content/themes/segmentnext/images/no-image-available.jpg",
+  }}
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>;
+
+// Displays a custom component with an error icon if the source video doesn't exist
+import { Icon } from "pearl-ui";
+
+<Video
+  width={100}
+  height={100}
+  fallbackComponent={
+    <Icon
+      iconFamily="MaterialIcons"
+      iconName="error-outline"
+      size="l"
+      color="neutral.50"
+    />
+  }
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>;
+```
+
+If both `fallbackComponent` and `fallbackSource` props are specified, `fallbackComponent` has a higher precedence.
+
+### Override Styles
+
+The `Video` component supports a variety of style props that can be used to override the default component style. Any style props passed to the component will take precedence over the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/video/video.config.ts).
+
+```jsx
+<Video
+  mt="5"
+  boxShadow="xl"
+  borderRadius="m"
+  width="50%"
+  height={200}
+  source={{
+    uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+  }}
+/>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/video-light" />
+
+## Accessibility
+
+- `Video` has the `role` of `video`.
+
+## Component Properties
+
+### Supported Styling Properties
+
+The `Video` component is built upon the [Box](../layout/Box) component, hence all properties of [Box](../layout/Box) can be applied to it.
+
+### Additional Properties
+
+Apart from the properties listed below, the `Video` component also inherits all properties of the [Expo Video](https://docs.expo.dev/versions/latest/sdk/video/) component from Expo.
+
+| Name                        | Required | Type                                                                 | Default     | Description                                                                                       |
+| --------------------------- | -------- | -------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| `size`                      | No       | <t>PearlTheme.components.Video["sizes"]</t>                          |             | Defines the size of the video.                                                                    |
+| `variant`                   | No       | <t>PearlTheme.components.Video["variants"]</t>                       |             | Specifies the variant of the video.                                                               |
+| `loaderType`                | No       | <t>"progressive" \| "spinner"</t>                                    | `"spinner"` | Specifies the type of loader to display until the video is fully loaded.                          |
+| `previewSource`             | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t> |             | Specifies the source of the placeholder image while the remote video is loading.                  |
+| `previewColor`              | No       | <t>string</t>                                                        |             | Defines the color of the video container while the remote video is loading.                       |
+| `overlayTransitionDuration` | No       | <t>number</t>                                                        | `300`       | Specifies the duration (in ms) for the progressive loading overlay to fade after the video loads. |
+| `tint`                      | No       | <t>"dark" \| "light" \| "default"</t>                                | `"dark"`    | Specifies the tint of the progressive loading overlay.                                            |
+| `fallbackComponent`         | No       | <t>React.ReactElement</t>                                            |             | Specifies a custom component to display if an error occurs while loading the video.               |
+| `fallbackSource`            | No       | <t>[ImageSource](https://reactnative.dev/docs/image#imagesource)</t> |             | Specifies the source of the fallback image to display if an error occurs while loading the video. |

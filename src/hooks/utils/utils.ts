@@ -138,10 +138,14 @@ export const buildFinalStyleProps = (
     buildStyleProperties.properties
   );
 
-  cleanStyleProps.style = {
-    ...coreVisualStyle,
-    ...removeUndefined(props.style),
-  };
+  if (Array.isArray(props.style)) {
+    cleanStyleProps.style = [coreVisualStyle, ...props.style];
+  } else {
+    cleanStyleProps.style = {
+      ...coreVisualStyle,
+      ...removeUndefined(props.style),
+    };
+  }
   return cleanStyleProps;
 };
 

@@ -1,13 +1,12 @@
 export default {
-  parts: ["container", "image", "previewImage", "fallbackImage", "spinner"],
+  parts: ["container", "video", "previewImage", "fallbackImage", "spinner"],
   baseStyle: {
     container: {
       backgroundColor: "neutral.100",
       borderRadius: "l",
     },
-    image: {
+    video: {
       loaderType: "spinner",
-      isCached: true,
       overlayTransitionDuration: 300,
       tint: "dark",
     },

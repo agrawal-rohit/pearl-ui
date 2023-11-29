@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   Animated,
   ImageErrorEventData,
+  Image as RNImage,
   ImageProps as RNImageProps,
   ImageSourcePropType,
   NativeSyntheticEvent,
-  Image as RNImage,
   Platform,
   StyleSheet,
   ImageURISource,
@@ -21,7 +21,6 @@ import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearl } from "../../../pearl";
 import Center from "../../atoms/center/center";
 
-// custom hook for getting previous value
 function usePrevious(value: any) {
   const ref = useRef();
   useEffect(() => {
@@ -85,9 +84,9 @@ export type BaseImageProps = BoxProps &
     /**
      * Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded.
      *
-     * @default 600
+     * @default 300
      */
-    transitionDuration?: number;
+    overlayTransitionDuration?: number;
     /**
      * Tint of the progressive loading overlay.
      *
@@ -108,8 +107,21 @@ export type BaseImageProps = BoxProps &
 
 const CustomImage = React.forwardRef(
   ({ atoms }: MoleculeComponentProps<"Image", BaseImageProps>, ref: any) => {
-    const { source, onError, isCached, fallbackComponent, ...restImageProps } =
-      atoms.image;
+    const {
+      source,
+      onError,
+      testID,
+      fallbackSource,
+      fallbackComponent,
+      previewSource,
+      previewColor,
+      imageDownloadOptions,
+      isCached = true,
+      loaderType = "spinner",
+      tint = "dark",
+      overlayTransitionDuration = 300,
+      ...restImageProps
+    } = atoms.image;
 
     const isMounted = useRef(true);
     const isRemoteImage = typeof source === "object";
@@ -121,7 +133,7 @@ const CustomImage = React.forwardRef(
     // The image should be ready by default if it's a local image
     const isImageReady = isRemoteImage ? !!uri : true;
 
-    const finalSource = isRemoteImage
+    const finalSource: ImageSourcePropType = isRemoteImage
       ? { ...(source as object), uri: uri }
       : source;
 
@@ -138,43 +150,6 @@ const CustomImage = React.forwardRef(
       inputRange: [0, 100],
       outputRange: [0, 1],
     });
-
-    // A handler function for catching errors while loading the image
-    const errorHandler = (error: NativeSyntheticEvent<ImageErrorEventData>) => {
-      setError(true);
-
-      if (onError) onError(error);
-    };
-
-    // Fetches and caches the remote image
-    const loadRemoteImage = async (
-      uri: string,
-      options = {}
-    ): Promise<void> => {
-      // Use CacheManager if the image is supposed to be cached
-      if (shouldCache && Platform.OS !== "web") {
-        try {
-          const path = await CacheManager.get(uri, options).getPath();
-          if (isMounted.current) {
-            if (path) {
-              setUri(path);
-            } else {
-              errorHandler({
-                nativeEvent: { error: new Error("Could not load image") },
-              } as NativeSyntheticEvent<ImageErrorEventData>);
-            }
-          }
-        } catch (error) {
-          errorHandler({
-            nativeEvent: { error },
-          } as NativeSyntheticEvent<ImageErrorEventData>);
-        }
-      }
-      // Else load the remote image directly
-      else {
-        setUri(uri);
-      }
-    };
 
     // Separate out border radius properties
     const {
@@ -193,6 +168,45 @@ const CustomImage = React.forwardRef(
       borderTopRightRadius,
     };
 
+    // A handler function for catching errors while loading the image
+    const onErrorHandler = (
+      error: NativeSyntheticEvent<ImageErrorEventData>
+    ) => {
+      setError(true);
+
+      if (onError) onError(error);
+    };
+
+    // Fetches and caches the remote image
+    const loadRemoteImage = async (
+      uri: string,
+      options = {}
+    ): Promise<void> => {
+      // Use CacheManager if the image is supposed to be cached
+      if (shouldCache && Platform.OS !== "web") {
+        try {
+          const path = await CacheManager.get(uri, options).getPath();
+          if (isMounted.current) {
+            if (path) {
+              setUri(path);
+            } else {
+              onErrorHandler({
+                nativeEvent: { error: new Error("Could not load image") },
+              } as NativeSyntheticEvent<ImageErrorEventData>);
+            }
+          }
+        } catch (error) {
+          onErrorHandler({
+            nativeEvent: { error },
+          } as NativeSyntheticEvent<ImageErrorEventData>);
+        }
+      }
+      // Else load the remote image directly
+      else {
+        setUri(uri);
+      }
+    };
+
     const renderFallback = () => {
       if (error) {
         if (!!fallbackComponent) {
@@ -203,20 +217,16 @@ const CustomImage = React.forwardRef(
           );
         }
 
-        if (!!atoms.image.fallbackSource) {
+        if (!!fallbackSource) {
           return (
             <PearlRNImage
               {...atoms.fallbackImage}
               {...borderRadiiStyles}
-              source={atoms.image.fallbackSource}
-              style={[
-                StyleSheet.absoluteFill,
-                {
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 3,
-                },
-              ]}
+              zIndex={3}
+              width="100%"
+              height="100%"
+              source={fallbackSource}
+              style={StyleSheet.absoluteFill}
             />
           );
         }
@@ -228,67 +238,60 @@ const CustomImage = React.forwardRef(
     };
 
     const renderFinalImage = () => {
-      if (isImageReady && !error) {
+      if (isImageReady) {
         return (
           <PearlRNImage
-            {...atoms.image}
+            {...restImageProps}
             {...borderRadiiStyles}
-            onError={errorHandler}
-            testID={atoms.image.testID}
-            source={finalSource as ImageSourcePropType}
-            style={{
-              ...(StyleSheet.absoluteFill as any),
-              width: "100%",
-              height: "100%",
-              zIndex: 2,
-            }}
+            ref={ref}
+            onError={onErrorHandler}
+            testID={testID}
+            source={finalSource}
+            zIndex={3}
+            width="100%"
+            height="100%"
+            style={StyleSheet.absoluteFill}
           />
         );
       }
-
-      if (error) return renderFallback();
 
       return null;
     };
 
     const renderPreview = () => {
-      if (!!restImageProps.previewSource) {
+      if (!!previewSource) {
         return (
           <PearlRNImage
             {...atoms.previewImage}
             {...borderRadiiStyles}
-            source={restImageProps.previewSource}
+            source={previewSource}
+            zIndex={1}
+            width="100%"
+            height="100%"
+            style={StyleSheet.absoluteFill}
             blurRadius={
               Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
             }
-            style={{
-              ...(StyleSheet.absoluteFill as any),
-              width: "100%",
-              height: "100%",
-              zIndex: 1,
-            }}
           />
         );
       }
     };
 
     const renderImageLoader = () => {
-      if (restImageProps.loaderType === "progressive") {
-        if (!!restImageProps.previewSource) {
+      if (loaderType === "progressive") {
+        if (!!previewSource) {
           // Render a blur overlay over the preview image
           if (Platform.OS === "ios") {
             return (
               <PearlAnimatedBlurView
-                tint={restImageProps.tint}
+                tint={tint}
                 {...borderRadiiStyles}
-                style={{
-                  ...(StyleSheet.absoluteFill as any),
-                  alignItems: "center",
-                  justifyContent: "center",
-                  zIndex: 3,
-                  overflow: "hidden",
-                }}
+                zIndex={3}
+                overflow="hidden"
+                alignItems="center"
+                justifyContent="center"
                 intensity={blurIntensity}
+                style={StyleSheet.absoluteFill}
               >
                 {renderFallback()}
               </PearlAnimatedBlurView>
@@ -302,11 +305,11 @@ const CustomImage = React.forwardRef(
                 {...borderRadiiStyles}
                 w="100%"
                 h="100%"
-                bgColor={restImageProps.tint === "dark" ? "black" : "white"}
+                zIndex={3}
+                overflow="hidden"
                 alignItems="center"
                 justifyContent="center"
-                overflow="hidden"
-                zIndex={3}
+                bgColor={tint === "dark" ? "black" : "white"}
                 style={{
                   opacity: previewSourceOverlayOpacity,
                 }}
@@ -317,17 +320,17 @@ const CustomImage = React.forwardRef(
           }
         }
 
-        if (!!restImageProps.previewColor) {
+        if (!!previewColor) {
           return (
             <PearlAnimatedView
               {...borderRadiiStyles}
               w="100%"
               h="100%"
-              bgColor={restImageProps.previewColor}
+              zIndex={3}
+              overflow="hidden"
               alignItems="center"
               justifyContent="center"
-              overflow="hidden"
-              zIndex={3}
+              bgColor={previewColor}
               style={{
                 opacity: previewColorOverlayOpacity,
               }}
@@ -338,9 +341,9 @@ const CustomImage = React.forwardRef(
         }
       }
 
-      if (restImageProps.loaderType === "spinner" && !error) {
+      if (loaderType === "spinner" && !error) {
         return (
-          <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
+          <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
             <Spinner {...atoms.spinner} isExpanded />
           </Box>
         );
@@ -352,14 +355,14 @@ const CustomImage = React.forwardRef(
       if (isRemoteImage) {
         loadRemoteImage(
           (source as ImageURISource).uri as string,
-          restImageProps.imageDownloadOptions
+          imageDownloadOptions
         );
 
         // Start animating the overlay opacity as soon as the URI becomes available
         if (uri && !previousUri) {
           Animated.timing(intensity, {
-            duration: restImageProps.transitionDuration,
             toValue: 0,
+            duration: overlayTransitionDuration,
             useNativeDriver: Platform.OS === "android",
           }).start();
         }
@@ -374,7 +377,6 @@ const CustomImage = React.forwardRef(
       <Center
         {...finalContainerProps}
         {...borderRadiiStyles}
-        ref={ref}
         accessible={true}
         accessibilityRole="image"
       >

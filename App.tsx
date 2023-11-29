@@ -104,6 +104,28 @@ const Index = () => {
   return (
     <Screen>
       <Stack direction="vertical" spacing="6">
+        <Video
+          w="100%"
+          aspectRatio={16 / 9}
+          loaderType="progressive"
+          source={{
+            uri: "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+          }}
+          useNativeControls
+          resizeMode={ResizeMode.CONTAIN}
+          fallbackComponent={
+            <Icon
+              iconFamily="MaterialIcons"
+              iconName="error-outline"
+              size="l"
+              color="neutral.50"
+            />
+          }
+          previewSource={{
+            uri: "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
+          }}
+        />
+
         <Box>
           <Text variant="h4">Image with preview color loading</Text>
           <Image
