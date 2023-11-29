@@ -126,7 +126,7 @@ const Spinner: React.FC<
         : "Loading indicator",
       accessibilityRole: "progressbar" as AccessibilityRoles,
       style: [
-        isExpanded && StyleSheet.absoluteFill,
+        isExpanded ? StyleSheet.absoluteFill : { alignSelf: "flex-start" },
         {
           flex: 0,
           ...props.style,

@@ -80,7 +80,7 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -362,7 +362,7 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -644,7 +644,7 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -925,7 +925,7 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -1645,7 +1645,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -2002,7 +2002,7 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -2266,7 +2266,7 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
           }
         }
         tint="dark"
-        transitionDuration={600}
+        overlayTransitionDuration={600}
       >
         <View
           animatedStyle={
@@ -2656,7 +2656,7 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             }
           }
           tint="dark"
-          transitionDuration={600}
+          overlayTransitionDuration={600}
         >
           <View
             animatedStyle={

@@ -83,7 +83,7 @@ export default {
             dark: "neutral.900",
           },
           borderColor: {
-            light: "neutral.200",
+            light: "neutral.300",
             dark: "neutral.600",
           },
         },

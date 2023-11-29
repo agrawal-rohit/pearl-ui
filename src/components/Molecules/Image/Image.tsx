@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { borderStyleFunction } from "../../../theme/src/style-functions";
 import {
   Animated,
   ImageErrorEventData,
@@ -11,15 +10,16 @@ import {
   StyleSheet,
   ImageURISource,
   ColorValue,
+  View,
 } from "react-native";
 import { DownloadOptions } from "expo-file-system";
 import CacheManager from "./cache-manager";
 import Box, { BoxProps } from "../../atoms/box/box";
 import { BlurView } from "expo-blur";
 import Spinner from "../../atoms/spinner/spinner";
-import { useStyleProps } from "../../../hooks/useStyleProps";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearl } from "../../../pearl";
+import Center from "../../atoms/center/center";
 
 // custom hook for getting previous value
 function usePrevious(value: any) {
@@ -29,6 +29,33 @@ function usePrevious(value: any) {
   });
   return ref.current;
 }
+
+const PearlRNImage = pearl<RNImageProps, "basic">(RNImage, {
+  componentName: "",
+  type: "basic",
+  animatable: true,
+});
+
+const AnimatedView = Animated.createAnimatedComponent(View);
+const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
+
+const PearlAnimatedBlurView = pearl<
+  React.ComponentProps<typeof AnimatedBlurView>,
+  "basic"
+>(AnimatedBlurView, {
+  componentName: "",
+  type: "basic",
+  animatable: true,
+});
+
+const PearlAnimatedView = pearl<
+  React.ComponentProps<typeof AnimatedView>,
+  "basic"
+>(AnimatedView, {
+  componentName: "",
+  type: "basic",
+  animatable: true,
+});
 
 export type BaseImageProps = BoxProps &
   Omit<
@@ -79,8 +106,6 @@ export type BaseImageProps = BoxProps &
     fallbackSource?: ImageSourcePropType;
   };
 
-const AnimatedBlurView = Animated.createAnimatedComponent(BlurView);
-
 const CustomImage = React.forwardRef(
   ({ atoms }: MoleculeComponentProps<"Image", BaseImageProps>, ref: any) => {
     const { source, onError, isCached, fallbackComponent, ...restImageProps } =
@@ -103,7 +128,11 @@ const CustomImage = React.forwardRef(
     const intensity = useRef(new Animated.Value(100)).current;
     const previewSourceOverlayOpacity = intensity.interpolate({
       inputRange: [0, 100],
-      outputRange: [0, 0.5],
+      outputRange: [0, 1],
+    });
+    const blurIntensity = intensity.interpolate({
+      inputRange: [0, 100],
+      outputRange: [0, 50],
     });
     const previewColorOverlayOpacity = intensity.interpolate({
       inputRange: [0, 100],
@@ -154,50 +183,21 @@ const CustomImage = React.forwardRef(
       borderBottomRightRadius,
       borderTopLeftRadius,
       borderTopRightRadius,
-      testID,
-      ...finalRootProps
-    } = restImageProps;
-
-    // Compute border props so that they can be used by the native Image element
-    let borderRadiiStyles = useStyleProps(
-      {
-        borderRadius,
-        borderBottomLeftRadius,
-        borderBottomRightRadius,
-        borderTopLeftRadius,
-        borderTopRightRadius,
-      },
-      borderStyleFunction
-    );
-
-    borderRadiiStyles = {
-      style: {
-        borderRadius:
-          restImageProps.style.borderRadius ??
-          borderRadiiStyles.style.borderRadius,
-        borderBottomLeftRadius:
-          restImageProps.style.borderBottomLeftRadius ??
-          borderRadiiStyles.style.borderBottomLeftRadius,
-        borderBottomRightRadius:
-          restImageProps.style.borderBottomRightRadius ??
-          borderRadiiStyles.style.borderBottomRightRadius,
-        borderTopLeftRadius:
-          restImageProps.style.borderTopLeftRadius ??
-          borderRadiiStyles.style.borderTopLeftRadius,
-        borderTopRightRadius:
-          restImageProps.style.borderTopRightRadius ??
-          borderRadiiStyles.style.borderTopRightRadius,
-      },
+      ...finalContainerProps
+    } = atoms.container;
+    const borderRadiiStyles = {
+      borderRadius,
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
+      borderTopLeftRadius,
+      borderTopRightRadius,
     };
 
     const renderFallback = () => {
       if (error) {
         if (!!fallbackComponent) {
           return (
-            <Box
-              overflow="hidden"
-              style={{ ...borderRadiiStyles.style, zIndex: 4 }}
-            >
+            <Box overflow="hidden" {...borderRadiiStyles} style={{ zIndex: 4 }}>
               {React.cloneElement(fallbackComponent)}
             </Box>
           );
@@ -205,14 +205,15 @@ const CustomImage = React.forwardRef(
 
         if (!!atoms.image.fallbackSource) {
           return (
-            <RNImage
+            <PearlRNImage
+              {...atoms.fallbackImage}
+              {...borderRadiiStyles}
               source={atoms.image.fallbackSource}
               style={[
                 StyleSheet.absoluteFill,
                 {
                   width: "100%",
                   height: "100%",
-                  ...borderRadiiStyles.style,
                   zIndex: 3,
                 },
               ]}
@@ -229,15 +230,16 @@ const CustomImage = React.forwardRef(
     const renderFinalImage = () => {
       if (isImageReady && !error) {
         return (
-          <RNImage
+          <PearlRNImage
+            {...atoms.image}
+            {...borderRadiiStyles}
             onError={errorHandler}
-            testID={testID}
+            testID={atoms.image.testID}
             source={finalSource as ImageSourcePropType}
             style={{
               ...(StyleSheet.absoluteFill as any),
               width: "100%",
               height: "100%",
-              ...borderRadiiStyles.style,
               zIndex: 2,
             }}
           />
@@ -252,7 +254,9 @@ const CustomImage = React.forwardRef(
     const renderPreview = () => {
       if (!!restImageProps.previewSource) {
         return (
-          <RNImage
+          <PearlRNImage
+            {...atoms.previewImage}
+            {...borderRadiiStyles}
             source={restImageProps.previewSource}
             blurRadius={
               Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
@@ -261,7 +265,6 @@ const CustomImage = React.forwardRef(
               ...(StyleSheet.absoluteFill as any),
               width: "100%",
               height: "100%",
-              ...borderRadiiStyles.style,
               zIndex: 1,
             }}
           />
@@ -275,72 +278,67 @@ const CustomImage = React.forwardRef(
           // Render a blur overlay over the preview image
           if (Platform.OS === "ios") {
             return (
-              <AnimatedBlurView
+              <PearlAnimatedBlurView
                 tint={restImageProps.tint}
+                {...borderRadiiStyles}
                 style={{
                   ...(StyleSheet.absoluteFill as any),
                   alignItems: "center",
                   justifyContent: "center",
-                  ...borderRadiiStyles.style,
                   zIndex: 3,
                   overflow: "hidden",
                 }}
-                intensity={intensity}
+                intensity={blurIntensity}
               >
-                {/* Render the fallbackComponent inside the overlay if an error is encountered */}
                 {renderFallback()}
-              </AnimatedBlurView>
+              </PearlAnimatedBlurView>
             );
           }
 
           // Render a static overlay over the preview image
           if (Platform.OS === "android" || Platform.OS === "web") {
             return (
-              <Animated.View
+              <PearlAnimatedView
+                {...borderRadiiStyles}
+                w="100%"
+                h="100%"
+                bgColor={restImageProps.tint === "dark" ? "black" : "white"}
+                alignItems="center"
+                justifyContent="center"
+                overflow="hidden"
+                zIndex={3}
                 style={{
-                  ...(StyleSheet.absoluteFill as any),
-                  backgroundColor:
-                    restImageProps.tint === "dark" ? "black" : "white",
-                  alignItems: "center",
-                  justifyContent: "center",
                   opacity: previewSourceOverlayOpacity,
-                  ...borderRadiiStyles.style,
-                  zIndex: 3,
-                  overflow: "hidden",
                 }}
               >
-                {/* Render the fallbackComponent inside the overlay if an error is encountered */}
                 {renderFallback()}
-              </Animated.View>
+              </PearlAnimatedView>
             );
           }
         }
 
         if (!!restImageProps.previewColor) {
           return (
-            <Animated.View
-              style={[
-                StyleSheet.absoluteFill,
-                {
-                  backgroundColor: restImageProps.previewColor,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  opacity: previewColorOverlayOpacity,
-                  ...borderRadiiStyles.style,
-                  zIndex: 3,
-                  overflow: "hidden",
-                },
-              ]}
+            <PearlAnimatedView
+              {...borderRadiiStyles}
+              w="100%"
+              h="100%"
+              bgColor={restImageProps.previewColor}
+              alignItems="center"
+              justifyContent="center"
+              overflow="hidden"
+              zIndex={3}
+              style={{
+                opacity: previewColorOverlayOpacity,
+              }}
             >
-              {/* Render the fallbackComponent inside the overlay if an error is encountered */}
               {renderFallback()}
-            </Animated.View>
+            </PearlAnimatedView>
           );
         }
       }
 
-      if (restImageProps.loaderType === "spinner" && !error && !uri) {
-        // Load the spinner component
+      if (restImageProps.loaderType === "spinner" && !error) {
         return (
           <Box style={StyleSheet.absoluteFill} width="100%" height="100%">
             <Spinner {...atoms.spinner} isExpanded />
@@ -373,22 +371,17 @@ const CustomImage = React.forwardRef(
     }, [uri]);
 
     return (
-      <Box
-        {...finalRootProps}
+      <Center
+        {...finalContainerProps}
+        {...borderRadiiStyles}
         ref={ref}
-        style={{
-          alignItems: "center",
-          justifyContent: "center",
-          ...borderRadiiStyles.style,
-          ...(finalRootProps as any).style,
-        }}
         accessible={true}
         accessibilityRole="image"
       >
         {renderFinalImage()}
         {renderPreview()}
         {renderImageLoader()}
-      </Box>
+      </Center>
     );
   }
 );
@@ -403,9 +396,9 @@ const Image = pearl<BaseImageProps, "molecule">(
   },
   undefined,
   {
-    partForOverridenStyleProps: "image",
+    partForOverridenStyleProps: "container",
     partForOverridenNativeProps: "image",
-    partForOverridenAnimationProps: "image",
+    partForOverridenAnimationProps: "container",
   }
 );
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BoxProps } from "../box/box";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { BasicComponentProps, StateProps } from "../../../theme/src/types";
@@ -114,6 +114,7 @@ const Pressable = React.forwardRef(
           // Merge the interaction and animate props
           return mergeAnimateProp(interaction, props.animate);
         }}
+        containerStyle={{ alignSelf: "flex-start" }}
       >
         {children}
       </MotiPressable>

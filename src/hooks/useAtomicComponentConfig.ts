@@ -143,11 +143,11 @@ export const useAtomicComponentConfig = (
 
     // Merge the component base style with the component type styles
     finalComponentProps = {
-      ...componentStyleConfig["baseStyle"],
+      ...(componentStyleConfig["baseStyle"] || {}),
       ...removeUndefined(componentTypeStyles),
     };
   } else {
-    finalComponentProps = componentStyleConfig["baseStyle"];
+    finalComponentProps = componentStyleConfig["baseStyle"] || {};
   }
 
   // Apply the active color scheme to the final component props

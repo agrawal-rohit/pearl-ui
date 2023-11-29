@@ -82,7 +82,7 @@ export default {
           },
         },
         borderColor: {
-          light: "neutral.200",
+          light: "neutral.300",
           dark: "neutral.600",
         },
         _checked: {

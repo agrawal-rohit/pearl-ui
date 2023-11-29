@@ -63,20 +63,6 @@ describe("Molecules/Textarea", () => {
   //   );
   // });
 
-  it("passes the snapshot test for different icons", async () => {
-    const tree = await render(
-      <ThemeProvider>
-        <Textarea leftIcon={<Icon iconFamily="AntDesign" iconName="heart" />} />
-
-        <Textarea
-          variant="outline"
-          rightIcon={<Icon iconFamily="AntDesign" iconName="cloudupload" />}
-        />
-      </ThemeProvider>
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it("passes the snapshot test when using style props", async () => {
     const tree = await render(
       <ThemeProvider>

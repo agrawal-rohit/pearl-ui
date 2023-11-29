@@ -24,13 +24,16 @@ import { ThemeProvider } from "./src/theme/src/theme-context";
 import Screen from "./src/components/atoms/screen/screen";
 import Text from "./src/components/atoms/text/text";
 import Icon from "./src/components/atoms/icon/icon";
+import Spinner from "./src/components/atoms/spinner/spinner";
+import Video from "./src/components/molecules/video/video";
+import Image from "./src/components/molecules/image/image";
 import Radio from "./src/components/molecules/radio/radio";
 import RadioGroup from "./src/components/molecules/radio/radio-group";
 import CheckBox from "./src/components/molecules/checkbox/checkbox";
 import CheckBoxGroup from "./src/components/molecules/checkbox/checkbox-group";
 import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
-import Stack from "./src/components/atoms/stack/stack";
+import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import Button from "./src/components/molecules/button/button";
 import Progress from "./src/components/molecules/progress/progress";
 import Skeleton from "./src/components/atoms/skeleton/skeleton";
@@ -38,6 +41,14 @@ import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
 import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
 import SkeletonText from "./src/components/atoms/skeleton/skeleton-text";
+import { MotiPressable } from "moti/interactions";
+import { Pressable } from "react-native";
+import { ResizeMode } from "expo-av";
+import { NativeModules } from "react-native";
+
+if (__DEV__) {
+  NativeModules.DevSettings.setIsDebuggingRemotely(true);
+}
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -92,8 +103,84 @@ const Index = () => {
 
   return (
     <Screen>
+      <Stack direction="vertical" spacing="6">
+        <Box>
+          <Text variant="h4">Image with preview color loading</Text>
+          <Image
+            mt="4"
+            width="30%"
+            height={100}
+            loaderType="progressive"
+            previewColor="blue"
+            isCached={false}
+            source={{
+              uri: "https://wallpaperaccess.com/full/1713248.jpg",
+            }}
+            previewSource={{
+              uri: "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="h4">Image with progressive loading</Text>
+          <Image
+            mt="4"
+            width="100%"
+            height={100}
+            loaderType="progressive"
+            isCached={false}
+            source={{
+              uri: "https://wallpaperaccess.com/full/1713248.jpg",
+            }}
+            previewSource={{
+              uri: "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="h4">Image with spinner loading</Text>
+          <Image
+            mt="4"
+            width={100}
+            height={200}
+            boxShadow="2xl"
+            loaderType="spinner"
+            isCached={false}
+            source={{
+              uri: "https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Text variant="h4">Image with error fallback</Text>
+          <Image
+            mt="4"
+            width={100}
+            height={100}
+            loaderType="progressive"
+            fallbackComponent={
+              <Icon
+                iconFamily="MaterialIcons"
+                iconName="error-outline"
+                size="l"
+                color="neutral.50"
+              />
+            }
+            source={{
+              uri: "https://4kwallpapers.com/imas/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2560x1440-1455.jpg",
+            }}
+            previewSource={{
+              uri: "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
+            }}
+          />
+        </Box>
+      </Stack>
+
       <Stack direction="vertical" spacing="4">
-        <Skeleton isLoaded={isLoaded}>
+        {/* <Skeleton isLoaded={isLoaded}>
           <Stack direction="vertical">
             <Radio isChecked={checked} onPress={() => setChecked(true)}>
               Default Radio
@@ -139,9 +226,9 @@ const Index = () => {
             <CheckBox value="B">B</CheckBox>
             <CheckBox value="C">C</CheckBox>
           </CheckBoxGroup>
-        </Stack>
+        </Stack> */}
 
-        <ButtonGroup variant="outline" isAttached>
+        {/* <ButtonGroup variant="outline" isAttached>
           <Button colorScheme="primary">Save</Button>
           <Button
             colorScheme="danger"
@@ -150,6 +237,17 @@ const Index = () => {
             Lock
           </Button>
         </ButtonGroup>
+
+        <Video
+          w="100%"
+          aspectRatio={16 / 9}
+          borderRadius="m"
+          source={{
+            uri: "https://static.videezy.com/system/resources/previews/000/000/080/original/CoffeeCup.mp4",
+          }}
+          useNativeControls
+          resizeMode={ResizeMode.CONTAIN}
+        />
 
         <Button size="xs">Save</Button>
         <Button size="s">Save</Button>
@@ -211,7 +309,7 @@ const Index = () => {
 
         <Input isFullWidth placeholder="Focused Input" autoFocus />
         <Input isFullWidth isDisabled placeholder="Disabled Input" />
-        <Input isFullWidth placeholder="Error Input" isInvalid />
+        <Input isFullWidth placeholder="Error Input" isInvalid /> */}
       </Stack>
     </Screen>
   );

@@ -1,12 +1,14 @@
 export default {
-  parts: ["image", "spinner"],
+  parts: ["container", "image", "previewImage", "fallbackImage", "spinner"],
   baseStyle: {
+    container: {
+      backgroundColor: "neutral.100",
+      borderRadius: "l",
+    },
     image: {
       loaderType: "spinner",
-      backgroundColor: "neutral.100",
       isCached: true,
-      borderRadius: "l",
-      transitionDuration: 600,
+      transitionDuration: 300,
       tint: "dark",
     },
     spinner: {

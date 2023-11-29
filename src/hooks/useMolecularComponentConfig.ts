@@ -202,7 +202,7 @@ export const useMolecularComponentConfig = (
     );
 
     let currentComponentPartProps = {
-      ...componentStyleConfig["baseStyle"][part],
+      ...((componentStyleConfig["baseStyle"] || {})[part] || {}),
       ...removeUndefined(componentTypeStyles),
     };
 
