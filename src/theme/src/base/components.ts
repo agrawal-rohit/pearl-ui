@@ -8,6 +8,7 @@ import AvatarConfig from "../../../components/molecules/avatar/avatar.config";
 import BadgeConfig from "../../../components/molecules/badge/badge.config";
 import ButtonConfig from "../../../components/molecules/button/button.config";
 import CheckBoxConfig from "../../../components/molecules/checkbox/checkbox.config";
+import IconButtonConfig from "../../../components/molecules/icon-button/icon-button.config";
 import ImageConfig from "../../../components/molecules/image/image.config";
 import InputConfig from "../../../components/molecules/input/input.config";
 import ProgressConfig from "../../../components/molecules/progress/progress.config";
@@ -23,6 +24,7 @@ export default {
   Screen: ScreenConfig,
   Spinner: SpinnerConfig,
   Button: ButtonConfig,
+  IconButton: IconButtonConfig,
   TextLink: TextLinkConfig,
   Input: InputConfig,
   CheckBox: CheckBoxConfig,

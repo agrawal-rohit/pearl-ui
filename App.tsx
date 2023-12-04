@@ -35,6 +35,7 @@ import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
 import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import Button from "./src/components/molecules/button/button";
+import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Progress from "./src/components/molecules/progress/progress";
 import Skeleton from "./src/components/atoms/skeleton/skeleton";
 import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
@@ -103,7 +104,7 @@ const Index = () => {
 
   return (
     <Screen>
-      <Stack direction="vertical" spacing="6">
+      {/* <Stack direction="vertical" spacing="6">
         <Video
           w="100%"
           aspectRatio={16 / 9}
@@ -127,7 +128,7 @@ const Index = () => {
         />
 
         <Box>
-          <Text variant="h4">Image with preview color loading</Text>
+          <Text variant="h5">Image with preview color loading</Text>
           <Image
             mt="4"
             width="30%"
@@ -145,7 +146,7 @@ const Index = () => {
         </Box>
 
         <Box>
-          <Text variant="h4">Image with progressive loading</Text>
+          <Text variant="h5">Image with progressive loading</Text>
           <Image
             mt="4"
             width="100%"
@@ -162,7 +163,7 @@ const Index = () => {
         </Box>
 
         <Box>
-          <Text variant="h4">Image with spinner loading</Text>
+          <Text variant="h5">Image with spinner loading</Text>
           <Image
             mt="4"
             width={100}
@@ -177,7 +178,7 @@ const Index = () => {
         </Box>
 
         <Box>
-          <Text variant="h4">Image with error fallback</Text>
+          <Text variant="h5">Image with error fallback</Text>
           <Image
             mt="4"
             width={100}
@@ -199,7 +200,7 @@ const Index = () => {
             }}
           />
         </Box>
-      </Stack>
+      </Stack> */}
 
       <Stack direction="vertical" spacing="4">
         {/* <Skeleton isLoaded={isLoaded}>
@@ -225,7 +226,7 @@ const Index = () => {
         </Stack>
 
         <Stack direction="vertical">
-          <Text variant="h4">Controlled Radio group</Text>
+          <Text variant="h5">Controlled Radio group</Text>
           <RadioGroup
             size="s"
             spacing="1"
@@ -239,7 +240,7 @@ const Index = () => {
         </Stack>
 
         <Stack direction="vertical">
-          <Text variant="h4">Controlled Checkbox group</Text>
+          <Text variant="h5">Controlled Checkbox group</Text>
           <CheckBoxGroup
             value={checkboxGroupValue}
             onChange={(newVal) => setCheckboxGroupValue(newVal)}
@@ -274,9 +275,46 @@ const Index = () => {
         <Button size="xs">Save</Button>
         <Button size="s">Save</Button>
         <Button size="m">Save</Button>
-        <Button size="l">Save</Button>
+        <Button size="l">Save</Button> */}
 
-        <Textarea
+        <ButtonGroup variant="outline" isAttached>
+          <IconButton
+            icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+            colorScheme="primary"
+          />
+          <IconButton
+            colorScheme="danger"
+            icon={<Icon iconFamily="AntDesign" iconName="pause" />}
+          />
+        </ButtonGroup>
+
+        <IconButton
+          icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+          size="xs"
+        >
+          Save
+        </IconButton>
+        <IconButton
+          icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+          size="s"
+        >
+          Save
+        </IconButton>
+        <IconButton
+          icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+          size="m"
+        >
+          Save
+        </IconButton>
+        <IconButton
+          isLoading
+          icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+          size="l"
+        >
+          Save
+        </IconButton>
+
+        {/* <Textarea
           value={text}
           placeholder="Default Textrea"
           onChangeText={(val) => setText(val)}

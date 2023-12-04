@@ -77,7 +77,7 @@ const Button = React.forwardRef(
     const { atoms } = molecularProps;
 
     // Determine if the button is disabled
-    const disabled = rest.isDisabled ? true : isLoading;
+    const isButtonDisabled = rest.isDisabled ? true : isLoading;
 
     // Function to render the loading status of the button
     const renderLoadingStatus = () => {
@@ -149,8 +149,7 @@ const Button = React.forwardRef(
       <Pressable
         {...atoms.box}
         ref={ref}
-        isDisabled={disabled}
-        onPress={atoms.box.onPress}
+        isDisabled={isButtonDisabled}
         alignSelf={isFullWidth ? "stretch" : "flex-start"}
         accessibilityLabel={
           !isLoading
@@ -159,7 +158,7 @@ const Button = React.forwardRef(
               : children
             : "Loading"
         }
-        accessibilityState={{ disabled: isDisabled, busy: isLoading }}
+        accessibilityState={{ disabled: isButtonDisabled, busy: isLoading }}
       >
         {isLoading ? renderLoadingStatus() : renderMainContent()}
       </Pressable>

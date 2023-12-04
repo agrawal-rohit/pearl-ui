@@ -144,7 +144,8 @@ html[data-theme="dark"] .header-twitter-link:before {
 
 .menu__link[href*="Image"]:after,
 .menu__link[href*="Avatar"]:after,
-.menu__link[href*="Button"]:after,
+.menu__link[href*="/Button"]:after,
+.menu__link[href*="/Icon Button"]:after,
 .menu__link[href*="Progress"]:after,
 .menu__link[href*="Video"]:after,
 .menu__link[href*="Input"]:after,
@@ -186,6 +187,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="usePressedState"]:before,
 .menu__link[href*="useDisabledState"]:before,
 .menu__link[href*="useCheckedState"]:before,
+.menu__link[href*="/Icon Button"]:before,
 .menu__link[href*="useInvalidState"]:before,
 .menu__link[href*="useAnimationState"]:before {
   content: "New";
@@ -209,7 +211,7 @@ html[data-theme="dark"] .header-twitter-link:before {
   Mark pages as "updated" using href attribute:
 */
 .menu__link[href*="pearl"]:before,
-.menu__link[href*="Button"]:before,
+.menu__link[href*="/Button"]:before,
 .menu__link[href*="extensibility"]:before {
   content: "Updated";
   display: inline-block;

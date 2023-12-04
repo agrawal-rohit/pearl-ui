@@ -1,0 +1,160 @@
+---
+sidebar_position: 2
+title: Icon Button
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/icon-button/icon-button.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/icon-button/icon-button.config.ts"
+  />
+</div>
+
+The `IconButton` component in Pearl UI is a specialized button that renders an icon within. It is used to trigger various actions or events within your application. These actions could range from submitting a form, opening a dialog, canceling an action, or performing a delete operation. By default, the `IconButton` component renders the [Pressable](./Pressable) component.
+
+## Import
+
+```jsx
+import { IconButton } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<IconButton icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+```
+
+### IconButton sizes
+
+The `size` prop allows you to adjust the size of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.IconButton["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/icon-button/icon-button.config.ts).
+
+```jsx
+<IconButton size="xs" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton size="s" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton size="m" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton size="l" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+```
+
+### IconButton variants
+
+The `variant` prop allows you to change the visual style of the button. The value for this prop should be one of the keys available in <t>PearlTheme.components.IconButton["variants"]</t>, which are <t>"solid"</t>, <t>"outline"</t>, and <t>"ghost"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/icon-button/icon-button.config.ts).
+
+```jsx
+<IconButton variant="solid" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton variant="outline" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton variant="ghost" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+```
+
+### Loading State of IconButton
+
+The `isLoading` prop can be used to display a loading state on the button. By default, `IconButton` will show a spinner and maintain the button's width.
+
+```jsx
+<IconButton
+  isLoading
+  icon={<Icon iconFamily="MaterialIcons" iconName="add" />}
+/>
+```
+
+### Customizing the Color Scheme
+
+The `colorScheme` prop allows you to change the color palette of the button. This is a powerful feature as it changes all the use color values in a palette through a single prop. The value for this prop should be one of the keys available in <t>PearlTheme.palette</t> that contain a palette of colors represented as an object, which are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<IconButton colorScheme="primary" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+
+<IconButton colorScheme="secondary" icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+```
+
+### Grouping Buttons
+
+You can use the [Stack](../layout/Stack) or [ButtonGroup](./Button) component to group multiple buttons. When you use the `ButtonGroup` component, it allows you to:
+
+- Set the `size`, `variant`, and `colorScheme` of all buttons within it.
+- Add `spacing` between the buttons.
+- Flush the buttons together by removing the border radius of their children as needed.
+
+```jsx
+import { ButtonGroup } from "pearl-ui";
+
+<ButtonGroup variant="outline" spacing="6">
+  <IconButton icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+  <IconButton
+    colorScheme="danger"
+    icon={<Icon iconFamily="MaterialIcons" iconName="remove" />}
+  />
+</ButtonGroup>;
+```
+
+To flush the buttons, pass the `isAttached` prop.
+
+```jsx
+<ButtonGroup size="sm" isAttached variant="outline">
+  <IconButton icon={<Icon iconFamily="MaterialIcons" iconName="add" />} />
+  <IconButton
+    colorScheme="danger"
+    icon={<Icon iconFamily="MaterialIcons" iconName="remove" />}
+  ></IconButton>
+</ButtonGroup>
+```
+
+### Android Ripple Effect
+
+To maintain the native ripple effect on Android devices, `IconButton` provides a default ripple effect that should work for most scenarios. By default, the ripple color is the `200` palette value of the active color scheme.
+
+### Overriding Styles
+
+The `IconButton` component supports a [variety of style props](#supported-style-props) which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/icon-button/icon-button.config.ts).
+
+```jsx
+// passing style prop m="8" overrides the default component config value of m="1"
+// passing style prop boxShadow="xl" adds a box shadow to the button
+<IconButton
+  m="8"
+  boxShadow="3xl"
+  variant="outline"
+  icon={<Icon iconFamily="MaterialIcons" iconName="add" />}
+/>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/icon-button" />
+
+## Accessibility
+
+- `IconButton` has the `role` of `button`.
+- `IconButton` has the default accessibility label set as the text value passed into it. When the button is in a loading state, the accessibility label is set as <t>"Loading"</t>. A custom label can be specified using the `accessibilityLabel` prop.
+- When the `IconButton` is disabled or loading, it is reflected as `disabled` and `busy` respectively in screen readers.
+- Similar to [Pressable](./Pressable), IconButton expects an `actionDescription` prop to specify the intended outcome of interacting with the component eg. 'Closes modal', 'Go to the homepage', etc.
+
+## IconButton Component Properties
+
+### Supported Style Properties
+
+The `IconButton` component is a composition of the [Pressable](./Pressable) component. Therefore, all properties related to the [Pressable](./Pressable) component can be passed to the `IconButton` component, in addition to the properties listed below.
+
+### Additional Properties
+
+| Property Name | Required | Data Type                                           | Default     | Description                                                                                                                                  |
+| ------------- | -------- | --------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `icon`        | Yes      | <t>React.ReactElement</t>                           |             | Defines the icon to display within the button.                                                                                               |
+| `size`        | No       | <t>PearlTheme.components.IconButton["sizes"]</t>    | `"m"`       | Defines the size of the button.                                                                                                              |
+| `variant`     | No       | <t>PearlTheme.components.IconButton["variants"]</t> | `"filled"`  | Specifies the variant of the button.                                                                                                         |
+| `isLoading`   | No       | <t>boolean</t>                                      | `false`     | Indicates whether the button is in a loading state.                                                                                          |
+| `isFullWidth` | No       | <t>boolean</t>                                      | `false`     | Determines whether the button should span the entire width of the parent container.                                                          |
+| `colorScheme` | No       | <t>PearlTheme["palette"]</t>                        | `"primary"` | Defines the active color palette of the button. The expected value is the key of a palette object eg `primary`, `secondary`, `neutral`, etc. |

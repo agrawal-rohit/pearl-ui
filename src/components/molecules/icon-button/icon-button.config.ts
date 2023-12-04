@@ -1,5 +1,5 @@
 export default {
-  parts: ["box", "text", "spinner", "icon"],
+  parts: ["box", "spinner", "icon"],
   baseStyle: {
     box: {
       my: "1",
@@ -15,19 +15,12 @@ export default {
     icon: {
       alignSelf: "center",
     },
-    text: {
-      fontWeight: 500,
-    },
   },
   sizes: {
     xs: {
       box: {
-        py: "0.5",
-        px: "2",
+        p: "1.5",
         borderRadius: "s",
-      },
-      text: {
-        fontSize: "2xs",
       },
       spinner: {
         my: "1",
@@ -39,12 +32,8 @@ export default {
     },
     s: {
       box: {
-        py: "1.5",
-        px: "2.5",
+        p: "2",
         borderRadius: "m",
-      },
-      text: {
-        variant: "p4",
       },
       spinner: {
         size: "s",
@@ -55,12 +44,8 @@ export default {
     },
     m: {
       box: {
-        py: "2.5",
-        px: "3",
+        p: "3",
         borderRadius: "m",
-      },
-      text: {
-        variant: "p3",
       },
       spinner: {
         size: "s",
@@ -71,12 +56,8 @@ export default {
     },
     l: {
       box: {
-        py: "3",
-        px: "4",
+        p: "4",
         borderRadius: "m",
-      },
-      text: {
-        variant: "p2",
       },
       spinner: {
         size: "m",
@@ -96,7 +77,6 @@ export default {
           bgColor: "primary.400",
         },
       },
-      text: { color: "neutral.50" },
       spinner: {
         color: "neutral.50",
       },
@@ -118,7 +98,6 @@ export default {
           bgColor: "primary.50",
         },
       },
-      text: { color: "primary.500" },
       spinner: {
         color: "primary.500",
       },
@@ -138,7 +117,6 @@ export default {
           bgColor: "primary.50",
         },
       },
-      text: { color: "primary.500" },
       spinner: {
         color: "primary.500",
       },
