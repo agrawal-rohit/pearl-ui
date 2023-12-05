@@ -124,26 +124,29 @@ The `hasClearButton` prop allows you to add a clear button to the `Input` compon
 
 ### Input Focus State
 
-The `Input` component supports a `focus` state, which is activated when the text inside the field can be edited. You can customize the visual style of the input field when it is focused using the `focusBackgroundColor` and `focusBorderColor` props.
+The `Input` component supports a `focus` state, which is activated when the text inside the field can be edited. You can customize the visual style of the input field when it is focused using the `_focus` prop.
 
 ```jsx
 <Input
-  focusBackgroundColor="cyan"
-  focusBorderColor="violet"
+  _focus={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
   onFocus={() => console.log("Field was focused!")}
 />
 ```
 
 ### Input Error State
 
-The `Input` component supports an `error` state, which can be activated based on your validation criteria. You can customize the visual style of the input field when it is in an error state using the `errorBackgroundColor` and `errorBorderColor` props. The `isInvalid` prop is used to define whether the input field has an error or not. You can also pass the `errorMessage` prop to add a helper text describing the error below the input field.
+The `Input` component supports an `error` state, which can be activated based on your validation criteria. You can customize the visual style of the input field when it is in an error state using the `_invalid` prop. The `isInvalid` prop is used to define whether the input field has an error or not.
 
 ```jsx
 <Input
   isInvalid={true}
-  errorMessage="An error occurred!"
-  errorBackgroundColor="pink"
-  errorBorderColor="red"
+  _invalid_={{
+    bgColor: "pink",
+    borderColor: "red",
+  }}
 />
 ```
 

@@ -51,6 +51,7 @@ export const useMotiWithStyleProps = (
   }
 
   // Convert 'animate' prop
+  // props.animate = props.animate === undefined ? {} : props.animate;
   if (props.animate) {
     props.animate = composeCleanStyleProps(
       props.animate,

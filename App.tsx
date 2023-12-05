@@ -40,6 +40,7 @@ import Textarea from "./src/components/molecules/textarea/textarea";
 import Input from "./src/components/molecules/input/input";
 import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import Button from "./src/components/molecules/button/button";
+import Switch from "./src/components/molecules/switch/switch";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Progress from "./src/components/molecules/progress/progress";
 import Skeleton from "./src/components/atoms/skeleton/skeleton";
@@ -111,7 +112,31 @@ const Index = () => {
   return (
     <Screen>
       <Stack>
-        <IconButton
+        <Switch
+          size="xs"
+          isChecked={checked}
+          onPress={() => setChecked(!checked)}
+        />
+
+        <Switch
+          size="s"
+          isChecked={checked}
+          onPress={() => setChecked(!checked)}
+        />
+
+        <Switch
+          size="m"
+          isChecked={checked}
+          onPress={() => setChecked(!checked)}
+        />
+
+        <Switch
+          size="l"
+          isChecked={checked}
+          onPress={() => setChecked(!checked)}
+        />
+
+        {/* <IconButton
           size="xs"
           icon={<Icon iconFamily="AntDesign" iconName="heart" />}
           onPress={() => setIsOpen(!isOpen)}
@@ -123,7 +148,7 @@ const Index = () => {
           <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
             <Text color="white">alskdnalskndalknsdad</Text>
           </Box>
-        </Slide>
+        </Slide> */}
       </Stack>
 
       {/* <Stack direction="vertical" spacing="6">
@@ -299,7 +324,7 @@ const Index = () => {
         <Button size="m">Save</Button>
         <Button size="l">Save</Button> */}
 
-        <ButtonGroup variant="outline" isAttached>
+        {/* <ButtonGroup variant="outline" isAttached>
           <IconButton
             icon={<Icon iconFamily="AntDesign" iconName="heart" />}
             colorScheme="primary"
@@ -334,7 +359,7 @@ const Index = () => {
           size="l"
         >
           Save
-        </IconButton>
+        </IconButton> */}
 
         {/* <Textarea
           value={text}

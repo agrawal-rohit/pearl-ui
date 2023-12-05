@@ -89,26 +89,29 @@ The `colorScheme` prop allows you to change the color palette of the textarea fi
 
 ### Textarea Focus State
 
-The `Textarea` component supports a `focus` state, which is activated when the text inside the field can be edited. You can customize the visual style of the textarea field when it is focused using the `focusBackgroundColor` and `focusBorderColor` props.
+The `Textarea` component supports a `focus` state, which is activated when the text inside the field can be edited. You can customize the visual style of the textarea field when it is focused using the `_focus` prop.
 
 ```jsx
 <Textarea
-  focusBackgroundColor="cyan"
-  focusBorderColor="violet"
+  _focus={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
   onFocus={() => console.log("Field was focused!")}
 />
 ```
 
-### Textarea Error State
+### Textarea Invalid State
 
-The `Textarea` component supports an `error` state, which can be activated based on your validation criteria. You can customize the visual style of the textarea field when it is in an error state using the `errorBackgroundColor` and `errorBorderColor` props. The `isInvalid` prop is used to define whether the textarea field has an error or not. You can also pass the `errorMessage` prop to add a helper text describing the error below the textarea field.
+The `Textarea` component supports an `error` state, which can be activated based on your validation criteria. You can customize the visual style of the textarea field when it is in an error state using the `_invalid` prop. The `isInvalid` prop is used to define whether the textarea field has an error or not.
 
 ```jsx
 <Textarea
   isInvalid={true}
-  errorMessage="An error occurred!"
-  errorBackgroundColor="pink"
-  errorBorderColor="red"
+  _invalid_={{
+    bgColor: "pink",
+    borderColor: "red",
+  }}
 />
 ```
 

@@ -1,3 +1,5 @@
+import { Easing } from "react-native-reanimated";
+
 export default {
   parts: ["container", "bar"],
   baseStyle: {
@@ -10,8 +12,9 @@ export default {
       h: "100%",
       transition: {
         type: "spring",
-        damping: 15,
+        dampingRatio: 1,
         duration: 200,
+        easing: Easing.inOut,
       },
     },
   },
@@ -120,6 +123,5 @@ export default {
   defaults: {
     size: "m",
     variant: "filled",
-    colorScheme: "pink",
   },
 };

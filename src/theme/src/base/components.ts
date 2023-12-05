@@ -13,6 +13,7 @@ import ImageConfig from "../../../components/molecules/image/image.config";
 import InputConfig from "../../../components/molecules/input/input.config";
 import ProgressConfig from "../../../components/molecules/progress/progress.config";
 import RadioConfig from "../../../components/molecules/radio/radio.config";
+import SwitchConfig from "../../../components/molecules/switch/switch.config";
 import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
 import VideoConfig from "../../../components/molecules/video/video.config";
 
@@ -31,6 +32,7 @@ export default {
   Radio: RadioConfig,
   Badge: BadgeConfig,
   Divider: DividerConfig,
+  Switch: SwitchConfig,
   Image: ImageConfig,
   Video: VideoConfig,
   Avatar: AvatarConfig,

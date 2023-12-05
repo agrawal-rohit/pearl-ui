@@ -1,0 +1,127 @@
+---
+sidebar_position: 4
+title: Switch
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/switch/switch.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/switch/switch.config.ts"
+  />
+</div>
+
+The `Switch` component in Pearl UI is a versatile and customizable element used to gather user input in a binary choice field.
+
+## Import
+
+```jsx
+import { Switch } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Switch isChecked={false} onPress={(newValue) => console.log(newValue)} />
+```
+
+### Switch sizes
+
+Use the `size` prop to change the size of the switch field. You can set the value to the keys available in <t>PearlTheme.components.Switch["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/switch/switch.config.ts).
+
+```jsx
+<Switch
+  size="xs"
+  isChecked={false}
+/>
+
+<Switch
+  size="s"
+  isChecked={false}
+/>
+
+<Switch
+  size="m"
+  isChecked={false}
+/>
+
+<Switch
+  size="l"
+  isChecked={false}
+/>
+```
+
+### Switch Color Schemes
+
+The `colorScheme` prop allows you to change the color palette of the switch field. The available color schemes are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc as defined in the [default Pearl theme](../../theming/default-theme#color-palette).
+
+```jsx
+<Switch
+  colorScheme="primary"
+  isChecked={false}
+/>
+
+<Switch
+  colorScheme="secondary"
+  isChecked={false}
+/>
+```
+
+### Switch Checked State
+
+The `Switch` component supports a `checked` state, which is activated when the switch is turned on. You can customize the visual style of the switch field when it is checked using the `_checked` prop.
+
+```jsx
+<Switch
+  _checked={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
+  isChecked={true}
+/>
+```
+
+### Overriding Styles
+
+The `Switch` component supports a variety of style props which can be used to override the pre-defined variant style in the theme.
+
+```jsx
+// The backgroundColor prop overrides the default component config value of backgroundColor="neutral.200"
+<Switch backgroundColor="green" isChecked={false} />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/switch" />
+
+## Accessibility
+
+- `Switch` has the `role` of `switch`.
+- When `Switch` is disabled or checked, it is reflected as `disabled` and `checked` respectively in screen readers.
+- `Switch` has the default accessibility label set as the label text passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Switch` component is a composition of the [Pressable](../layout/Pressable) component, which means all [Pressable](../layout/Pressable) props can be passed to it.
+
+### Additional Properties
+
+| Name          | Required | Type                                            | Default     | Description                                                                  |
+| ------------- | -------- | ----------------------------------------------- | ----------- | ---------------------------------------------------------------------------- |
+| `size`        | No       | <t>PearlTheme.components.Switch["sizes"]</t>    | `"m"`       | Determines the size of the switch.                                           |
+| `variant`     | No       | <t>PearlTheme.components.Switch["variants"]</t> |             | Determines the variant of the switch.                                        |
+| `isChecked`   | No       | <t>boolean</t>                                  | `false`     | Whether the switch is in a checked state.                                    |
+| `isDisabled`  | No       | <t>boolean</t>                                  | `false`     | Whether the switch is disabled.                                              |
+| `colorScheme` | No       | <t>PearlTheme["palette"]</t>                    | `"primary"` | Determines the active color palette of the switch.                           |
+| `_focused`    | No       | <t>object</t>                                   | `{}`        | Style properties that are applied when the component is in a focused state.  |
+| `_disabled`   | No       | <t>object</t>                                   | `{}`        | Style properties that are applied when the component is in a disabled state. |

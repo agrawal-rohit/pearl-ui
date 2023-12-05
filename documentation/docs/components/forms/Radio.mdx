@@ -99,33 +99,32 @@ The `colorScheme` prop can be used to change the color palette of the radio butt
 The `isChecked` prop is used to control whether the radio button is in a checked state. You can also customize the appearance of the radio button when it is checked:
 
 ```jsx
-<Radio isChecked checkedBackgroundColor="cyan" checkedBorderColor="violet">
+<Radio
+  isChecked
+  _checked={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
+>
   I am checked!
 </Radio>
 ```
 
 ### Radio error state
 
-Similar to the checked state, you can add an error state to the radio based on any validation criteria you use along with special visual styles to go along with it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isInvalid` prop is used to define whether the radio has an error.
+Similar to the checked state, you can add an error state to the radio based on any validation criteria you use along with special visual styles to go along with it by using the `_invalid` prop.
 
-The `isInvalid` prop is used to indicate whether the radio button is in an error state. You can also customize the appearance of the radio button when it is in an error state and provide an error message:
+The `isInvalid` prop is used to indicate whether the radio button is in an error state.
 
 ```jsx
 <Radio
   isInvalid
-  errorBackgroundColor="pink"
-  errorBorderColor="red"
+  _invalid={{
+    bgColor: "pink",
+    borderColor: "red",
+  }}
 >
   Error Radio
-</Radio>
-
-<Radio
-  isInvalid
-  errorBackgroundColor="cyan"
-  errorBorderColor="violet"
-  errorMessage="This is an error message!"
->
-  Error Radio with message
 </Radio>
 ```
 

@@ -111,10 +111,16 @@ The `shape` prop allows you to change the shape of the checkbox to <t>"square"</
 
 The checkbox is in a `checked` state when it is pressed once and the checkmark icon becomes visible. The `isChecked` prop is used to define whether the checkbox is in a checked state.
 
-`Checkbox` also allows you to update the visual style of the checkbox when it is checked using some [special props](#supported-style-props) prefixed with the word <t>checked</t>.
+`Checkbox` also allows you to update the visual style of the checkbox when it is checked using `_checked` prop.
 
 ```jsx
-<CheckBox isChecked checkedBackgroundColor="cyan" checkedBorderColor="violet">
+<CheckBox
+  isChecked
+  _checked={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
+>
   I am checked!
 </CheckBox>
 ```
@@ -127,8 +133,10 @@ In some cases, you might need to display a partial checked state (also called an
 <CheckBox
   isChecked
   isIndeterminate
-  checkedBackgroundColor="cyan"
-  checkedBorderColor="violet"
+  _checked={{
+    bgColor: "cyan",
+    borderColor: "violet",
+  }}
 >
   I am not completely checked!
 </CheckBox>
@@ -136,26 +144,17 @@ In some cases, you might need to display a partial checked state (also called an
 
 ### Checkbox error state
 
-You can add an error state to the checkbox based on any validation criteria you use. You can also apply special visual styles to it by using some [special props](#supported-style-props) prefixed with the word <t>error</t>. The `isInvalid` prop is used to define whether the checkbox has an error.
-
-You can also pass the `errorMessage` prop to add a helper text describing the error below the checkbox.
+You can add an error state to the checkbox based on any validation criteria you use. You can also apply special visual styles to it by using the `_invalid` prop. The `isInvalid` prop is used to define whether the checkbox has an error.
 
 ```jsx
 <CheckBox
   isInvalid
-  errorBackgroundColor="pink"
-  errorBorderColor="red"
+  _invalid={{
+    bgColor: "pink",
+    borderColor: "red",
+  }}
 >
   Error Checkbox
-</CheckBox>
-
-<CheckBox
-  isInvalid
-  errorBackgroundColor="cyan"
-  errorBorderColor="violet"
-  errorMessage="This is an error message!"
->
-  Error Checkbox with message
 </CheckBox>
 ```
 
