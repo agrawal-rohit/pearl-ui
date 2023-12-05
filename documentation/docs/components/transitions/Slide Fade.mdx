@@ -1,0 +1,85 @@
+---
+sidebar_position: 4
+title: Slide Fade
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/slide-fade/slide-fade.tsx"
+  />
+</div>
+
+The `SlideFade` component is a utility in the Pearl UI library that provides a view with a sliding fade transition. It can be used to hide and show content based on a boolean prop `show`.
+
+## Import
+
+```jsx
+import { SlideFade } from "pearl-ui";
+```
+
+## Usage
+
+The `SlideFade` component can be used to hide and show content based on a boolean prop `show`. Here is a basic usage example:
+
+```jsx
+<SlideFade show={isOpen}>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</SlideFade>
+```
+
+### Changing the offsets
+
+The `SlideFade` component allows you to change the offset of the slide transition by using the `offsetX` and `offsetY` props.
+
+```jsx
+<SlideFade show={isOpen} offsetX={10} offsetY={20}>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</SlideFade>
+```
+
+### Changing transitions manually
+
+You can manually change the transitions of the `SlideFade` component by using the `transition` and `exitTransition` props. These props accept an object that defines the type, duration, and easing of the transition.
+
+```jsx
+<SlideFade
+  show={isOpen}
+  offsetX={10}
+  offsetY={20}
+  transition={{ duration: 200 }}
+  exitTransition={{ duration: 0 }}
+>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</SlideFade>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/slide-fade" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `SlideFade` component composes the [Box](../layout/Box) component, so you can pass all [Box](../layout/Box) related props to it.
+
+### Additional Properties
+
+The `SlideFade` component also accepts the following additional props:
+
+| Name      | Required | Type           | Default | Description                             |
+| --------- | -------- | -------------- | ------- | --------------------------------------- |
+| `show`    | Yes      | <t>boolean</t> |         | If `true`, the content will be visible. |
+| `offsetX` | No       | <t>number</t>  | `0`     | The offset on the horizontal axis.      |
+| `offsetY` | No       | <t>number</t>  | `10`    | The offset on the vertical axis.        |

@@ -1,0 +1,83 @@
+---
+sidebar_position: 3
+title: Slide
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/slide/slide.tsx"
+  />
+</div>
+
+The `Slide` component is a utility in the Pearl UI library that provides a view with a sliding transition. It can be used to hide and show content based on a boolean prop `show`.
+
+## Import
+
+```jsx
+import { Slide } from "pearl-ui";
+```
+
+## Usage
+
+The `Slide` component can be used to hide and show content based on a boolean prop `show`. Here is a basic usage example:
+
+```jsx
+<Slide show={isOpen}>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Slide>
+```
+
+### Changing the direction
+
+The `Slide` component allows you to change the direction of the slide transition by using the `direction` prop. The `direction` prop accepts one of the following values: "top", "bottom", "left", "right".
+
+```jsx
+<Slide show={isOpen} direction="left">
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Slide>
+```
+
+### Changing transitions manually
+
+You can manually change the transitions of the `Slide` component by using the `transition` and `exitTransition` props. These props accept an object that defines the type, duration, and easing of the transition.
+
+```jsx
+<Slide
+  show={isOpen}
+  direction="left"
+  transition={{ duration: 200 }}
+  exitTransition={{ duration: 0 }}
+>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Slide>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/slide" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Slide` component composes the [Box](../layout/Box) component, so you can pass all [Box](../layout/Box) related props to it.
+
+### Additional Properties
+
+The `Slide` component also accepts the following additional props:
+
+| Name        | Required | Type                                          | Default   | Description                             |
+| ----------- | -------- | --------------------------------------------- | --------- | --------------------------------------- |
+| `show`      | Yes      | <t>boolean</t>                                |           | If `true`, the content will be visible. |
+| `direction` | No       | <t>"top" \| "right" \| "bottom" \| "left"</t> | `"right"` | The direction of the slide transition.  |

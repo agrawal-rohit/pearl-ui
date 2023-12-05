@@ -1,0 +1,84 @@
+---
+sidebar_position: 5
+title: Collapse
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/collapse/collapse.tsx"
+  />
+</div>
+
+The `Collapse` component is a utility in the Pearl UI library that provides an expandable view. It can be used to hide and show content based on a boolean prop `show`.
+
+## Import
+
+```jsx
+import { Collapse } from "pearl-ui";
+```
+
+## Usage
+
+The `Collapse` component can be used to hide and show content based on a boolean prop `show`. Here is a basic usage example:
+
+```jsx
+<Collapse show={isOpen}>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Collapse>
+```
+
+### Changing the starting height
+
+You can change the height of the content in its collapsed state by using the `startingHeight` prop. This can be a number or a string.
+
+```jsx
+<Collapse show={isOpen} startingHeight={50}>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Collapse>
+```
+
+### Changing transitions manually
+
+You can manually change the transitions of the `Collapse` component by using the `transition` and `exitTransition` props. These props accept an object that defines the type, duration, and easing of the transition.
+
+```jsx
+<Collapse
+  show={isOpen}
+  transition={{ duration: 200 }}
+  exitTransition={{ duration: 0 }}
+>
+  <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+    <Text color="white">This is the content</Text>
+  </Box>
+</Collapse>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/collapse" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Collapse` component composes the [Box](../layout/Box) component, so you can pass all [Box](../layout/Box) related props to it.
+
+### Additional Properties
+
+The `Collapse` component also accepts the following additional props:
+
+| Name             | Required | Type                    | Default  | Description                                             |
+| ---------------- | -------- | ----------------------- | -------- | ------------------------------------------------------- |
+| `show`           | Yes      | <t>boolean</t>          |          | If `true`, the content will be visible.                 |
+| `animateOpacity` | No       | <t>boolean</t>          | `true`   | If `true`, the opacity of the content will be animated. |
+| `startingHeight` | No       | <t>number \| string</t> | `0`      | The height of the content in its collapsed state.       |
+| `endingHeight`   | No       | <t>number \| string</t> | `"auto"` | The height of the content in its expanded state.        |

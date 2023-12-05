@@ -97,28 +97,3 @@ export const useSlideFade = () => {
   // Return the slide and fade animation state.
   return slideFadeAnimationState;
 };
-
-/**
- * Custom hook for creating a collapse animation state.
- * This hook uses the useAnimationState hook to create an animation state that transitions from a scaleY of 1 to a scaleY of 0.
- * This creates a collapse effect.
- *
- * @returns An animation state that creates a collapse effect.
- */
-export const useCollapse = () => {
-  // Define the initial and final states for the collapse animation.
-  // The animation will start with a scaleY of 1 (original size) and end with a scaleY of 0 (collapsed).
-  const collapseAnimationState = useAnimationState({
-    from: {
-      opacity: 0,
-      height: 0,
-    },
-    to: {
-      opacity: 1,
-      height: 100,
-    },
-  });
-
-  // Return the collapse animation state.
-  return collapseAnimationState;
-};

@@ -24,6 +24,11 @@ import { ThemeProvider } from "./src/theme/src/theme-context";
 import Screen from "./src/components/atoms/screen/screen";
 import Text from "./src/components/atoms/text/text";
 import Icon from "./src/components/atoms/icon/icon";
+import Fade from "./src/components/atoms/fade/fade";
+import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
+import Slide from "./src/components/atoms/slide/slide";
+import SlideFade from "./src/components/atoms/slide-fade/slide-fade";
+import Collapse from "./src/components/atoms/collapse/collapse";
 import Spinner from "./src/components/atoms/spinner/spinner";
 import Video from "./src/components/molecules/video/video";
 import Image from "./src/components/molecules/image/image";
@@ -87,6 +92,7 @@ const Index = () => {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const [text, setText] = React.useState("");
+  const [isOpen, setIsOpen] = React.useState(false);
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -104,6 +110,22 @@ const Index = () => {
 
   return (
     <Screen>
+      <Stack>
+        <IconButton
+          size="xs"
+          icon={<Icon iconFamily="AntDesign" iconName="heart" />}
+          onPress={() => setIsOpen(!isOpen)}
+        >
+          Save
+        </IconButton>
+
+        <Slide show={isOpen}>
+          <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
+            <Text color="white">alskdnalskndalknsdad</Text>
+          </Box>
+        </Slide>
+      </Stack>
+
       {/* <Stack direction="vertical" spacing="6">
         <Video
           w="100%"
