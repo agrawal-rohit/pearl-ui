@@ -136,7 +136,7 @@ const Index = () => {
           onPress={() => setChecked(!checked)}
         />
 
-        {/* <IconButton
+        <IconButton
           size="xs"
           icon={<Icon iconFamily="AntDesign" iconName="heart" />}
           onPress={() => setIsOpen(!isOpen)}
@@ -148,10 +148,10 @@ const Index = () => {
           <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
             <Text color="white">alskdnalskndalknsdad</Text>
           </Box>
-        </Slide> */}
+        </Slide>
       </Stack>
 
-      {/* <Stack direction="vertical" spacing="6">
+      <Stack direction="vertical" spacing="6">
         <Video
           w="100%"
           aspectRatio={16 / 9}
@@ -247,10 +247,10 @@ const Index = () => {
             }}
           />
         </Box>
-      </Stack> */}
+      </Stack>
 
       <Stack direction="vertical" spacing="4">
-        {/* <Skeleton isLoaded={isLoaded}>
+        <Skeleton isLoaded={isLoaded}>
           <Stack direction="vertical">
             <Radio isChecked={checked} onPress={() => setChecked(true)}>
               Default Radio
@@ -296,9 +296,9 @@ const Index = () => {
             <CheckBox value="B">B</CheckBox>
             <CheckBox value="C">C</CheckBox>
           </CheckBoxGroup>
-        </Stack> */}
+        </Stack>
 
-        {/* <ButtonGroup variant="outline" isAttached>
+        <ButtonGroup variant="outline" isAttached>
           <Button colorScheme="primary">Save</Button>
           <Button
             colorScheme="danger"
@@ -322,9 +322,9 @@ const Index = () => {
         <Button size="xs">Save</Button>
         <Button size="s">Save</Button>
         <Button size="m">Save</Button>
-        <Button size="l">Save</Button> */}
+        <Button size="l">Save</Button>
 
-        {/* <ButtonGroup variant="outline" isAttached>
+        <ButtonGroup variant="outline" isAttached>
           <IconButton
             icon={<Icon iconFamily="AntDesign" iconName="heart" />}
             colorScheme="primary"
@@ -359,9 +359,9 @@ const Index = () => {
           size="l"
         >
           Save
-        </IconButton> */}
+        </IconButton>
 
-        {/* <Textarea
+        <Textarea
           value={text}
           placeholder="Default Textrea"
           onChangeText={(val) => setText(val)}
@@ -416,7 +416,7 @@ const Index = () => {
 
         <Input isFullWidth placeholder="Focused Input" autoFocus />
         <Input isFullWidth isDisabled placeholder="Disabled Input" />
-        <Input isFullWidth placeholder="Error Input" isInvalid /> */}
+        <Input isFullWidth placeholder="Error Input" isInvalid />
       </Stack>
     </Screen>
   );
