@@ -11,12 +11,15 @@ const BASE_DIR = `${FileSystem.cacheDirectory}`;
 
 export class CacheEntry {
   uri: string;
-
   options: DownloadOptions;
+  path: string | undefined;
+  isPathResolved: boolean;
 
   constructor(uri: string, options: DownloadOptions) {
     this.uri = uri;
     this.options = options;
+    this.path = undefined;
+    this.isPathResolved = false;
   }
 
   /**
@@ -25,26 +28,28 @@ export class CacheEntry {
    * @returns {Promise<string | undefined>} The path of the cached image, or undefined if the download failed.
    */
   async getPath(): Promise<string | undefined> {
-    // Get the URI and options of the cache entry
-    const { uri, options } = this;
-    // Get the paths of the cached image and its temporary download location
-    const { path, exists, tmpPath } = await getCacheEntry(uri);
-    // If the image is already cached, return its path
-    if (exists) {
-      return path;
+    if (!this.isPathResolved) {
+      const { uri, options } = this;
+      const { path, exists, tmpPath } = await getCacheEntry(uri);
+
+      if (exists) {
+        this.path = path;
+      } else {
+        const result = await FileSystem.createDownloadResumable(
+          uri,
+          tmpPath,
+          options
+        ).downloadAsync();
+
+        if (result && result.status === 200) {
+          await FileSystem.moveAsync({ from: tmpPath, to: path });
+          this.path = path;
+        }
+      }
+
+      this.isPathResolved = true;
     }
-    // Download the image and cache it
-    const result = await FileSystem.createDownloadResumable(
-      uri,
-      tmpPath,
-      options
-    ).downloadAsync();
-    // If the image download failed, we don't cache anything
-    if (result && result.status !== 200) {
-      return undefined;
-    }
-    await FileSystem.moveAsync({ from: tmpPath, to: path });
-    return path;
+    return this.path;
   }
 }
 
@@ -52,7 +57,7 @@ export class CacheEntry {
  * CacheManager is a class that manages the caching of images.
  */
 export default class CacheManager {
-  static entries: { [uri: string]: CacheEntry } = {};
+  static entries: Map<string, CacheEntry> = new Map();
 
   /**
    * Returns a CacheEntry object for the given uri and options.
@@ -62,10 +67,10 @@ export default class CacheManager {
    * @returns {CacheEntry} The CacheEntry object for the given uri and options.
    */
   static get(uri: string, options: DownloadOptions): CacheEntry {
-    if (!CacheManager.entries[uri]) {
-      CacheManager.entries[uri] = new CacheEntry(uri, options);
+    if (!CacheManager.entries.has(uri)) {
+      CacheManager.entries.set(uri, new CacheEntry(uri, options));
     }
-    return CacheManager.entries[uri];
+    return CacheManager.entries.get(uri) as CacheEntry;
   }
 
   /**
@@ -75,6 +80,7 @@ export default class CacheManager {
   static async clearCache(): Promise<void> {
     await FileSystem.deleteAsync(BASE_DIR, { idempotent: true });
     await FileSystem.makeDirectoryAsync(BASE_DIR);
+    CacheManager.entries.clear();
   }
 
   /**

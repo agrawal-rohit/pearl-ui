@@ -43,77 +43,76 @@ export type AvatarGroupProps = BoxProps & {
 /**
  * AvatarGroup is a component that groups multiple Avatar components together. It can truncate the avatars and show a "+X" label (where X is the remaining avatars).
  */
-const AvatarGroup: React.FC<AvatarGroupProps> = ({
-  children,
-  spacing = "2",
-  max = 3,
-  ...rest
-}) => {
-  // Convert the spacing to a style object
-  const convertedElementSpacing = useStyleProps({ marginLeft: spacing }, [
-    ...spacingStyleFunction,
-  ]);
+const AvatarGroup = React.memo(
+  React.forwardRef<HTMLElement, AvatarGroupProps>(
+    ({ children, spacing = "2", max = 3, ...rest }, ref) => {
+      // Convert the spacing to a style object
+      const convertedElementSpacing = useStyleProps({ marginLeft: spacing }, [
+        ...spacingStyleFunction,
+      ]);
 
-  // Convert the children to an array
-  const avatarChildren = React.Children.toArray(children);
+      // Convert the children to an array
+      const avatarChildren = React.Children.toArray(children);
 
-  /**
-   * Render the avatars.
-   * @returns An array of Avatar components.
-   */
-  const renderAvatars = () => {
-    return React.Children.map(avatarChildren, (child, index) => {
-      const shouldBreakLoop = index > max;
-      const shouldRenderAvatar = index + 1 <= max;
+      /**
+       * Render the avatars.
+       * @returns An array of Avatar components.
+       */
+      const renderAvatars = () => {
+        return React.Children.map(avatarChildren, (child, index) => {
+          const shouldBreakLoop = index > max;
+          const shouldRenderAvatar = index + 1 <= max;
 
-      if (shouldBreakLoop) return;
+          if (shouldBreakLoop) return;
 
-      if (shouldRenderAvatar)
-        return React.cloneElement(child as ReactElement, {
-          ...(child as ReactElement).props,
-          style: {
-            ...(child as ReactElement).props.style,
-            marginLeft: index * convertedElementSpacing.style.marginLeft,
-          },
+          if (shouldRenderAvatar)
+            return React.cloneElement(child as ReactElement, {
+              ...(child as ReactElement).props,
+              style: {
+                ...(child as ReactElement).props.style,
+                marginLeft: index * convertedElementSpacing.style.marginLeft,
+              },
+            });
+          else {
+            if (rest.customTruncatedComponent)
+              return React.cloneElement(rest.customTruncatedComponent, {
+                ...rest.customTruncatedComponent.props,
+                remainingAvatars: avatarChildren.length - max,
+                style: {
+                  ...rest.customTruncatedComponent.props.style,
+                  marginLeft: index * convertedElementSpacing.style.marginLeft,
+                },
+              });
+
+            return (
+              <Avatar
+                name={`+${avatarChildren.length - max}`}
+                getInitials={(name: string) => name}
+                backgroundColor={rest.truncatedBackgroundColor}
+                style={{
+                  marginLeft: index * convertedElementSpacing.style.marginLeft,
+                }}
+              />
+            );
+          }
         });
-      else {
-        if (rest.customTruncatedComponent)
-          return React.cloneElement(rest.customTruncatedComponent, {
-            ...rest.customTruncatedComponent.props,
-            remainingAvatars: avatarChildren.length - max,
-            style: {
-              ...rest.customTruncatedComponent.props.style,
-              marginLeft: index * convertedElementSpacing.style.marginLeft,
-            },
-          });
+      };
 
-        return (
-          <Avatar
-            name={`+${avatarChildren.length - max}`}
-            getInitials={(name: string) => name}
-            backgroundColor={rest.truncatedBackgroundColor}
-            style={{
-              marginLeft: index * convertedElementSpacing.style.marginLeft,
+      return (
+        <Box {...rest}>
+          <avatarGroupContext.Provider
+            value={{
+              size: rest.size,
+              variant: rest.variant,
             }}
-          />
-        );
-      }
-    });
-  };
-
-  return (
-    <Box {...rest}>
-      <avatarGroupContext.Provider
-        value={{
-          size: rest.size,
-          variant: rest.variant,
-        }}
-      >
-        <ZStack reversed>{renderAvatars()}</ZStack>
-      </avatarGroupContext.Provider>
-    </Box>
-  );
-};
+          >
+            <ZStack reversed>{renderAvatars()}</ZStack>
+          </avatarGroupContext.Provider>
+        </Box>
+      );
+    }
+  )
+);
 
 AvatarGroup.displayName = "AvatarGroup";
 

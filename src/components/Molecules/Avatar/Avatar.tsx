@@ -1,15 +1,19 @@
 import React, { useRef } from "react";
 import { ImageProps } from "../image/image";
 import Image from "../image/image";
-import { ImageSourcePropType } from "react-native";
+import { ImageSourcePropType, ViewStyle } from "react-native";
 import Box from "../../atoms/box/box";
 import Text from "../../atoms/text/text";
 import namedColors from "../../../theme/utils/named-colors.json";
 import { getKeys } from "../../../theme/utils/type-helpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
-import { MoleculeComponentProps } from "../../../theme/src/types";
+import {
+  MoleculeComponentProps,
+  PaletteColors,
+} from "../../../theme/src/types";
 import { pearl } from "../../../pearl";
 import { useAvatarGroup } from "./useAvatarGroup";
+import { AvatarAtoms } from "./avatar.config";
 
 /**
  * A function that generates initials from a name
@@ -43,78 +47,90 @@ export type BaseAvatarProps = Omit<
  * If neither image source nor name is provided, it will render the fallbackComponent.
  * If no fallbackComponent is provided, it will render nothing.
  */
-const CustomAvatar = React.forwardRef(
-  ({ atoms }: MoleculeComponentProps<"Avatar", BaseAvatarProps>, ref: any) => {
-    const { name, src, getInitials, fallbackComponent, ...otherBoxProps } =
-      atoms.box;
+const CustomAvatar = React.memo(
+  React.forwardRef(
+    (
+      { atoms }: MoleculeComponentProps<"Avatar", BaseAvatarProps, AvatarAtoms>,
+      ref: any
+    ) => {
+      const { name, src, getInitials, fallbackComponent, ...otherBoxProps } =
+        atoms.box;
 
-    // Function to pick a random color from the namedColors object
-    const pickRandomColor = () => {
-      const namedColorKeys = getKeys(namedColors).filter(
-        (color) => color !== "transparent"
-      );
-      const randomColorKey =
-        namedColorKeys[Math.floor(Math.random() * namedColorKeys.length)];
-
-      return randomColorKey;
-    };
-
-    // Store the random color in a ref to prevent it from changing on re-renders
-    const randomColor = useRef(pickRandomColor()).current;
-    // Determine the text color based on the background color to ensure accessibility
-    const accessibleTextColor = useAccessibleColor(
-      otherBoxProps.backgroundColor ??
-        otherBoxProps.bgColor ??
-        otherBoxProps.style.backgroundColor ??
-        randomColor,
-      {
-        light: "neutral.50",
-        dark: "neutral.900",
-      }
-    );
-
-    // Function to render the fallback component (initials or fallbackComponent prop)
-    const renderFallBack = () => {
-      if (name) {
-        const initialComputeFunction = getInitials ?? defaultGetInitials;
-        const nameInitials = initialComputeFunction(name);
-        return (
-          <Text color={accessibleTextColor} {...atoms.text}>
-            {nameInitials}
-          </Text>
+      // Function to pick a random color from the namedColors object
+      const pickRandomColor = () => {
+        const namedColorKeys = getKeys(namedColors).filter(
+          (color) => color !== "transparent"
         );
+        const randomColorKey =
+          namedColorKeys[Math.floor(Math.random() * namedColorKeys.length)];
+
+        return randomColorKey;
+      };
+
+      // Store the random color in a ref to prevent it from changing on re-renders
+      const randomColor = useRef(pickRandomColor()).current;
+      // Determine the text color based on the background color to ensure accessibility
+      const accessibleTextColor = useAccessibleColor(
+        typeof otherBoxProps.backgroundColor === "string"
+          ? (otherBoxProps.backgroundColor as PaletteColors)
+          : typeof otherBoxProps.bgColor === "string"
+          ? (otherBoxProps.bgColor as PaletteColors)
+          : typeof (otherBoxProps.style as ViewStyle)?.backgroundColor ===
+            "string"
+          ? ((otherBoxProps.style as ViewStyle)
+              ?.backgroundColor as PaletteColors)
+          : randomColor,
+        {
+          light: "neutral.50",
+          dark: "neutral.900",
+        }
+      );
+
+      // Function to render the fallback component (initials or fallbackComponent prop)
+      const renderFallBack = () => {
+        if (name) {
+          const initialComputeFunction = getInitials ?? defaultGetInitials;
+          const nameInitials = initialComputeFunction(name);
+          return (
+            <Text color={accessibleTextColor} {...atoms.text}>
+              {nameInitials}
+            </Text>
+          );
+        }
+
+        if (fallbackComponent) return React.cloneElement(fallbackComponent);
+
+        return null;
+      };
+
+      // Determine the final source of the image
+      const finalSource =
+        src && typeof src === "string"
+          ? ({ uri: src } as ImageSourcePropType)
+          : (src as ImageSourcePropType);
+
+      // If a source is provided, render the image
+      if (finalSource) {
+        return <Image ref={ref} source={finalSource} {...otherBoxProps} />;
       }
 
-      if (fallbackComponent) return React.cloneElement(fallbackComponent);
-
-      return null;
-    };
-
-    // Determine the final source of the image
-    const finalSource =
-      src && typeof src === "string"
-        ? ({ uri: src } as ImageSourcePropType)
-        : (src as ImageSourcePropType);
-
-    // If a source is provided, render the image
-    if (finalSource) {
-      return <Image ref={ref} source={finalSource} {...otherBoxProps} />;
+      // If no source is provided, render the fallback
+      return (
+        <Box
+          {...otherBoxProps}
+          backgroundColor={
+            otherBoxProps.backgroundColor ??
+            otherBoxProps.bgColor ??
+            randomColor
+          }
+          justifyContent="center"
+          alignItems="center"
+        >
+          {renderFallBack()}
+        </Box>
+      );
     }
-
-    // If no source is provided, render the fallback
-    return (
-      <Box
-        {...otherBoxProps}
-        backgroundColor={
-          otherBoxProps.backgroundColor ?? otherBoxProps.bgColor ?? randomColor
-        }
-        justifyContent="center"
-        alignItems="center"
-      >
-        {renderFallBack()}
-      </Box>
-    );
-  }
+  )
 );
 
 const StyledAvatar = pearl<BaseAvatarProps, "molecule">(

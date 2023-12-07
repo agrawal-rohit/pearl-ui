@@ -54,7 +54,7 @@ type IconStyleProps = ColorProps &
   VisibleProps;
 
 // BaseIconProps defines the basic properties for the Icon component
-type BaseIconProps = React.ComponentProps<typeof View> & {
+export type BaseIconProps = React.ComponentProps<typeof View> & {
   /** Icon family that contains the icon you want to use  */
   iconFamily:
     | "AntDesign"
@@ -98,33 +98,35 @@ const iconFamilyMapping = {
 };
 
 // CustomIcon is a wrapper around the icon components that allows for additional customization
-const CustomIcon = React.forwardRef(
-  (
-    {
-      iconFamily,
-      iconName,
-      accessibilityLabel = undefined,
-      rawSize = undefined,
-      ...props
-    }: AtomComponentProps<"Icon", BaseIconProps, IconStyleProps>,
-    ref: any
-  ) => {
-    // Select the appropriate icon component based on the iconFamily prop
-    const IconToUse = iconFamilyMapping[iconFamily];
+const CustomIcon = React.memo(
+  React.forwardRef(
+    (
+      {
+        iconFamily,
+        iconName,
+        accessibilityLabel = undefined,
+        rawSize = undefined,
+        ...props
+      }: AtomComponentProps<"Icon", BaseIconProps, IconStyleProps>,
+      ref: any
+    ) => {
+      // Select the appropriate icon component based on the iconFamily prop
+      const IconToUse = iconFamilyMapping[iconFamily];
 
-    return (
-      <IconToUse
-        accessible={true}
-        accessibilityLabel={
-          accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
-        }
-        name={iconName}
-        {...props}
-        ref={ref}
-        size={responsiveSize(rawSize)}
-      />
-    );
-  }
+      return (
+        <IconToUse
+          accessible={true}
+          accessibilityLabel={
+            accessibilityLabel ? accessibilityLabel : `${iconName} Icon`
+          }
+          name={iconName}
+          {...props}
+          ref={ref}
+          size={responsiveSize(rawSize)}
+        />
+      );
+    }
+  )
 );
 
 /** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */

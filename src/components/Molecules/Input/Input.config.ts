@@ -1,4 +1,17 @@
-export default {
+import { MolecularComponentConfig, StateProps } from "../../../theme/src/types";
+import { BoxProps } from "../../atoms/box/box";
+import { IconProps } from "../../atoms/icon/icon";
+import { TextProps } from "../../atoms/text/text";
+import { InputProps } from "./input";
+
+export type InputAtoms = {
+  container: BoxProps & StateProps<"_focused" | "_disabled" | "_invalid">;
+  input: InputProps;
+  text: TextProps;
+  icon: IconProps;
+};
+
+const InputConfig: MolecularComponentConfig<InputAtoms> = {
   parts: ["container", "input", "text", "icon"],
   baseStyle: {
     container: {
@@ -108,16 +121,14 @@ export default {
   variants: {
     filled: {
       container: {
-        animate: {
-          borderWidth: 1,
-          backgroundColor: {
-            light: "neutral.200",
-            dark: "neutral.900",
-          },
-          borderColor: {
-            light: "neutral.200",
-            dark: "neutral.900",
-          },
+        borderWidth: 1,
+        backgroundColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        borderColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
         },
         _focused: {
           borderColor: "primary.500",
@@ -126,16 +137,14 @@ export default {
     },
     outline: {
       container: {
-        animate: {
-          borderWidth: 1,
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
-          borderColor: {
-            light: "neutral.400",
-            dark: "neutral.500",
-          },
+        borderWidth: 1,
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        borderColor: {
+          light: "neutral.400",
+          dark: "neutral.500",
         },
         _focused: {
           borderColor: "primary.500",
@@ -160,3 +169,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default InputConfig;

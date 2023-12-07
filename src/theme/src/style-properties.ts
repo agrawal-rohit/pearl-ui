@@ -71,6 +71,16 @@ export const layoutProperties = {
   flexWrap: true,
 };
 
+export const transformProperties = {
+  transform: true,
+  transformMatrix: true,
+  rotation: true,
+  scaleX: true,
+  scaleY: true,
+  translateX: true,
+  translateY: true,
+};
+
 export const layoutPropertiesShorthand = {
   w: "width",
   h: "height",

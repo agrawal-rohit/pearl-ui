@@ -3,8 +3,6 @@ import Text from "../../atoms/text/text";
 import {
   FinalPearlTheme,
   ResponsiveValue,
-  ComponentSizes,
-  ComponentVariants,
   MoleculeComponentProps,
   StateProps,
 } from "../../../theme/src/types";
@@ -16,23 +14,12 @@ import { useRadioGroup } from "./radio-group";
 import { useCheckedState } from "../../../hooks/state/useCheckedState";
 import { useInvalidState } from "../../../hooks/state/useInvalidState";
 import Center from "../../atoms/center/center";
-import _ from "lodash";
 import Box from "../../atoms/box/box";
+import _ from "lodash";
+import { RadioAtoms } from "./radio.config";
 
 export type RadioProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
-    /**
-     * Size of the radio.
-     *
-     * @default "m"
-     */
-    size?: ResponsiveValue<ComponentSizes<"Radio">>;
-    /**
-     * Variant of the radio.
-     *
-     * @default "filled"
-     */
-    variant?: ResponsiveValue<ComponentVariants<"Radio">>;
     /** Value of the radio if it is part of a group. */
     value?: string | number | undefined;
     /**
@@ -59,123 +46,128 @@ export type RadioProps = PressableProps &
      * @default 2
      */
     spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
+    children?: string;
   };
 
 /** The Radio component is used when only one choice may be selected in a series of options. **/
-const Radio = React.forwardRef(
-  (
-    {
-      children,
-      onPress = () => {},
-      ...rest
-    }: Omit<MoleculeComponentProps<"Radio", RadioProps>, "atoms"> & {
-      atoms?: Record<string, any>;
-    },
-    radioRef: any
-  ) => {
-    const {
-      size,
-      variant,
-      isDisabled,
-      colorScheme,
-      radioGroupValue,
-      setRadioGroupValue,
-    } = useRadioGroup();
-
-    // Overwrite props from radio group
-    rest.size = rest.size ?? size;
-    rest.variant = rest.variant ?? variant;
-    rest.isDisabled = rest.isDisabled ?? isDisabled;
-    rest.colorScheme = rest.colorScheme ?? colorScheme;
-
-    const isRadioInGroup = setRadioGroupValue !== undefined;
-    const isRadioChecked = isRadioInGroup
-      ? radioGroupValue === rest.value && rest.value !== undefined
-      : rest.isChecked;
-
-    const molecularProps = useMolecularComponentConfig(
-      "Radio",
-      rest,
+const Radio = React.memo(
+  React.forwardRef(
+    (
       {
-        size: rest.size,
-        variant: rest.variant,
+        children,
+        onPress = () => {},
+        ...rest
+      }: Omit<
+        MoleculeComponentProps<"Radio", RadioProps, RadioAtoms>,
+        "atoms"
+      > & {
+        atoms?: RadioAtoms;
       },
-      rest.colorScheme,
-      boxStyleFunctions,
-      "container",
-      "container",
-      "container"
-    );
-    const { atoms } = molecularProps;
+      radioRef: any
+    ) => {
+      const {
+        size,
+        variant,
+        isDisabled,
+        colorScheme,
+        radioGroupValue,
+        setRadioGroupValue,
+      } = useRadioGroup();
 
-    // Use state for dynamic style
-    const { propsWithCheckedStyles: propsWithCheckedStylesForOuterBox } =
-      useCheckedState(
+      // Overwrite props from radio group
+      rest.size = rest.size ?? size;
+      rest.variant = rest.variant ?? variant;
+      rest.isDisabled = rest.isDisabled ?? isDisabled;
+      rest.colorScheme = rest.colorScheme ?? colorScheme;
+
+      const isRadioInGroup = setRadioGroupValue !== undefined;
+      const isRadioChecked = isRadioInGroup
+        ? radioGroupValue === rest.value && rest.value !== undefined
+        : rest.isChecked;
+
+      const molecularProps = useMolecularComponentConfig<RadioAtoms>(
+        "Radio",
+        rest,
+        {
+          size: rest.size,
+          variant: rest.variant,
+        },
+        rest.colorScheme,
+        boxStyleFunctions,
+        "container",
+        "container",
+        "container"
+      );
+      const { atoms } = molecularProps;
+
+      // Use state for dynamic style
+      const { propsWithCheckedStyles: propsWithCheckedStylesForOuterBox } =
+        useCheckedState(
+          atoms.outerBox,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isRadioChecked
+        );
+      atoms.outerBox = propsWithCheckedStylesForOuterBox;
+      const { propsWithInvalidStyles } = useInvalidState(
         atoms.outerBox,
         boxStyleFunctions,
         "molecule",
         true,
-        isRadioChecked
+        rest.isInvalid
       );
-    atoms.outerBox = propsWithCheckedStylesForOuterBox;
-    const { propsWithInvalidStyles } = useInvalidState(
-      atoms.outerBox,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      rest.isInvalid
-    );
-    atoms.outerBox = propsWithInvalidStyles;
-    const { propsWithCheckedStyles: propsWithCheckedStylesForInnerBox } =
-      useCheckedState(
-        atoms.innerBox,
-        boxStyleFunctions,
-        "molecule",
-        true,
-        isRadioChecked
-      );
-    atoms.innerBox = propsWithCheckedStylesForInnerBox;
+      atoms.outerBox = propsWithInvalidStyles;
+      const { propsWithCheckedStyles: propsWithCheckedStylesForInnerBox } =
+        useCheckedState(
+          atoms.innerBox,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isRadioChecked
+        );
+      atoms.innerBox = propsWithCheckedStylesForInnerBox;
 
-    // OTHER METHODS
-    const radioPressHandler = () => {
-      if (isRadioInGroup) {
-        setRadioGroupValue(rest.value);
-        if (onPress) onPress();
-      }
-      if (onPress) onPress();
-    };
-
-    // RENDER METHODS
-    return (
-      <Pressable
-        {...atoms.container}
-        ref={radioRef}
-        onPress={radioPressHandler}
-        accessible={true}
-        accessibilityRole="radio"
-        isDisabled={rest.isDisabled}
-        accessibilityLabel={
-          rest.accessibilityLabel ? rest.accessibilityLabel : children
+      // OTHER METHODS
+      const radioPressHandler = () => {
+        if (isRadioInGroup) {
+          setRadioGroupValue(rest.value);
+          if (onPress) onPress();
         }
-        accessibilityState={{
-          disabled: rest.isDisabled,
-          checked: isRadioChecked,
-        }}
-        accessibilityHint={rest.accessibilityHint}
-      >
-        <Stack
-          spacing={rest.spacing || atoms.container.spacing}
-          direction="horizontal"
-        >
-          <Center {...atoms.outerBox}>
-            <Box {...atoms.innerBox} />
-          </Center>
+        if (onPress) onPress();
+      };
 
-          {!!children && <Text {...atoms.text}>{children}</Text>}
-        </Stack>
-      </Pressable>
-    );
-  }
+      // RENDER METHODS
+      return (
+        <Pressable
+          {...atoms.container}
+          ref={radioRef}
+          onPress={radioPressHandler}
+          accessible={true}
+          accessibilityRole="radio"
+          isDisabled={rest.isDisabled}
+          accessibilityLabel={
+            rest.accessibilityLabel ? rest.accessibilityLabel : children
+          }
+          accessibilityState={{
+            disabled: rest.isDisabled,
+            checked: isRadioChecked,
+          }}
+          accessibilityHint={rest.accessibilityHint}
+        >
+          <Stack
+            spacing={rest.spacing || atoms.container.spacing}
+            direction="horizontal"
+          >
+            <Center {...atoms.outerBox}>
+              <Box {...atoms.innerBox} />
+            </Center>
+            {!!children && <Text {...atoms.text}>{children}</Text>}
+          </Stack>
+        </Pressable>
+      );
+    }
+  )
 );
 
 Radio.displayName = "Radio";

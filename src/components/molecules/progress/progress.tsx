@@ -2,6 +2,8 @@ import React, { useMemo } from "react";
 import Box, { BoxProps } from "../../atoms/box/box";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import { pearl } from "../../../pearl";
+import { ProgressAtoms } from "./progress.config";
+import { DimensionValue } from "react-native";
 
 export type BaseProgressProps = BoxProps & {
   /**
@@ -12,38 +14,39 @@ export type BaseProgressProps = BoxProps & {
   value?: number;
 };
 
-const BaseProgress = React.forwardRef(
-  (
-    {
-      children,
-      atoms,
-      ...rest
-    }: MoleculeComponentProps<"Progress", BaseProgressProps>,
-    ref: any
-  ) => {
-    const { value, ...otherContainerProps } = atoms.container;
-    const calculatedWidth = useMemo(() => `${value}%`, [value]);
+const BaseProgress = React.memo(
+  React.forwardRef(
+    (
+      {
+        atoms,
+      }: MoleculeComponentProps<"Progress", BaseProgressProps, ProgressAtoms>,
+      ref: any
+    ) => {
+      const { value, ...otherContainerProps } = atoms.container;
+      const calculatedWidth = useMemo<DimensionValue>(
+        () => `${value || 0}%`,
+        [value]
+      );
 
-    return (
-      <Box
-        {...otherContainerProps}
-        ref={ref}
-        accessible={true}
-        accessibilityRole="progress"
-        accessibilityLabel={
-          rest.accessibilityLabel ? rest.accessibilityLabel : children
-        }
-      >
+      return (
         <Box
-          {...atoms.bar}
-          animate={{ w: calculatedWidth }}
-          borderRadius={
-            value === 100 ? atoms.bar.borderTopLeftRadius : undefined
-          }
-        />
-      </Box>
-    );
-  }
+          {...otherContainerProps}
+          ref={ref}
+          accessible={true}
+          accessibilityRole="progressbar"
+          accessibilityLabel={otherContainerProps.accessibilityLabel}
+        >
+          <Box
+            {...atoms.bar}
+            animate={{ w: calculatedWidth }}
+            borderRadius={
+              value === 100 ? atoms.bar.borderTopLeftRadius : undefined
+            }
+          />
+        </Box>
+      );
+    }
+  )
 );
 
 /** The Progress component is a visual indicator of completion percentage. */

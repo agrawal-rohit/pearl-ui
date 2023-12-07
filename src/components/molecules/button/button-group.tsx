@@ -72,58 +72,66 @@ export type ButtonGroupProps = BoxProps & {
 /**
  * ButtonGroup is a layout component that makes it easy to stack buttons together and apply a space between them.
  */
-const ButtonGroup: React.FC<ButtonGroupProps> = ({
-  children,
-  isDisabled = false,
-  isAttached = false,
-  spacing = "2",
-  size = "m",
-  variant = "filled",
-  colorScheme = "primary",
-  ...rest
-}) => {
-  const arrayChildren = React.Children.toArray(children);
+const ButtonGroup = React.memo(
+  React.forwardRef<HTMLDivElement, any>(
+    (
+      {
+        children,
+        isDisabled = false,
+        isAttached = false,
+        spacing = "2",
+        size = "m",
+        variant = "filled",
+        colorScheme = "primary",
+        ...rest
+      },
+      ref
+    ) => {
+      const arrayChildren = React.Children.toArray(children);
 
-  /**
-   * Renders the children of the ButtonGroup.
-   *
-   * @returns The rendered children.
-   */
-  const renderChildren = () => {
-    return React.Children.map(arrayChildren, (child, index) => {
-      const isFirst = index === 0;
-      const isLast = index === arrayChildren.length - 1;
+      /**
+       * Renders the children of the ButtonGroup.
+       *
+       * @returns The rendered children.
+       */
+      const renderChildren = React.useCallback(() => {
+        return arrayChildren.map((child, index) => {
+          const isFirst = index === 0;
+          const isLast = index === arrayChildren.length - 1;
 
-      return React.cloneElement(child as ReactElement, {
-        borderRadius: isAttached && !isFirst && !isLast ? 0 : undefined,
-        borderTopRightRadius: isAttached && isFirst ? 0 : undefined,
-        borderBottomRightRadius: isAttached && isFirst ? 0 : undefined,
-        borderTopLeftRadius: isAttached && isLast ? 0 : undefined,
-        borderBottomLeftRadius: isAttached && isLast ? 0 : undefined,
-        borderRightWidth: isAttached && !isLast ? 0 : undefined,
-      });
-    });
-  };
+          return React.cloneElement(child as ReactElement, {
+            borderRadius: isAttached && !isFirst && !isLast ? 0 : undefined,
+            borderTopRightRadius: isAttached && isFirst ? 0 : undefined,
+            borderBottomRightRadius: isAttached && isFirst ? 0 : undefined,
+            borderTopLeftRadius: isAttached && isLast ? 0 : undefined,
+            borderBottomLeftRadius: isAttached && isLast ? 0 : undefined,
+            borderRightWidth: isAttached && !isLast ? 0 : undefined,
+          });
+        });
+      }, [arrayChildren, isAttached]);
 
-  return (
-    <buttonGroupContext.Provider
-      value={{
-        size: size,
-        variant: variant,
-        isDisabled: isDisabled,
-        colorScheme: colorScheme,
-      }}
-    >
-      <Stack
-        direction="horizontal"
-        spacing={isAttached ? 0 : spacing}
-        {...rest}
-      >
-        {renderChildren()}
-      </Stack>
-    </buttonGroupContext.Provider>
-  );
-};
+      return (
+        <buttonGroupContext.Provider
+          value={{
+            size: size,
+            variant: variant,
+            isDisabled: isDisabled,
+            colorScheme: colorScheme,
+          }}
+        >
+          <Stack
+            direction="horizontal"
+            spacing={isAttached ? 0 : spacing}
+            ref={ref}
+            {...rest}
+          >
+            {renderChildren()}
+          </Stack>
+        </buttonGroupContext.Provider>
+      );
+    }
+  )
+);
 
 ButtonGroup.displayName = "ButtonGroup";
 

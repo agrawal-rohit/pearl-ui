@@ -54,15 +54,15 @@ export interface ColorPalette {
   [key: number]: string;
 }
 
-export interface AtomicComponentConfig {
-  baseStyle: {
-    [key: string]: any;
-  };
+export interface AtomicComponentConfig<
+  T extends Record<string, any> = Record<string, any>,
+> {
+  baseStyle: Partial<T>;
   sizes?: {
-    [key: string]: any;
+    [key: string]: Partial<T>;
   };
   variants?: {
-    [key: string]: any;
+    [key: string]: Partial<T>;
   };
   defaults?: {
     size?: string;
@@ -70,16 +70,26 @@ export interface AtomicComponentConfig {
   };
 }
 
-export interface MolecularComponentConfig {
-  parts: string[];
+export interface MolecularComponentConfig<
+  T extends Record<string, any> = Record<string, any>,
+> {
+  parts: (keyof T[])[] | string[];
   baseStyle: {
-    [key: string]: any;
+    [P in keyof Partial<T>]: Partial<T[P]>;
   };
   sizes?: {
-    [key: string]: any;
+    [key: string]: {
+      [P in keyof Partial<T>]:
+        | Partial<T[P]>
+        | ((variant?: string, colorScheme?: string) => Partial<T[P]>);
+    };
   };
   variants?: {
-    [key: string]: any;
+    [key: string]: {
+      [P in keyof Partial<T>]:
+        | Partial<T[P]>
+        | ((size?: string, colorScheme?: string) => Partial<T[P]>);
+    };
   };
   defaults?: {
     size?: string;
@@ -236,11 +246,12 @@ export type AtomComponent<
 export type MoleculeComponent<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentType extends ComponentTypes = "molecule",
+  ComponentAtoms extends Record<string, any> = Record<string, any>,
 > = ComponentType extends "molecule"
   ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
-      atoms?: Record<string, any>;
+      atoms?: ComponentAtoms;
     }
   : {};
 
@@ -282,14 +293,13 @@ export type AtomComponentProps<
 export type MoleculeComponentProps<
   ComponentName extends keyof FinalPearlTheme["components"],
   ComponentProps,
+  ComponentAtoms extends Record<string, any> = Record<string, any>,
   StyleProps = BoxStyleProps,
   Animateable = true,
 > = PearlComponent<ComponentProps, StyleProps, Animateable> & {
-  /** Size of the component. */
   size?: ResponsiveValue<ComponentSizes<ComponentName>>;
-  /** Variant of the component. */
   variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
-  atoms: Record<string, any>;
+  atoms: ComponentAtoms;
 };
 
 type AnimateableProps<

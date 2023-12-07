@@ -1,6 +1,13 @@
-import { Easing } from "react-native-reanimated";
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { BoxProps } from "../../atoms/box/box";
+import { BaseProgressProps } from "./progress";
 
-export default {
+export type ProgressAtoms = {
+  container: BaseProgressProps;
+  bar: BoxProps;
+};
+
+const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
   parts: ["container", "bar"],
   baseStyle: {
     container: {
@@ -14,13 +21,12 @@ export default {
         type: "spring",
         dampingRatio: 1,
         duration: 200,
-        easing: Easing.inOut,
       },
     },
   },
   sizes: {
     xs: {
-      container: (variant: string) => {
+      container: (variant) => {
         const baseStyle = {
           height: 10,
           borderRadius: "s",
@@ -40,7 +46,7 @@ export default {
       },
     },
     s: {
-      container: (variant: string) => {
+      container: (variant) => {
         const baseStyle = {
           height: 15,
           borderRadius: "m",
@@ -60,7 +66,7 @@ export default {
       },
     },
     m: {
-      container: (variant: string) => {
+      container: (variant) => {
         const baseStyle = {
           height: 20,
           borderRadius: "m",
@@ -80,7 +86,7 @@ export default {
       },
     },
     l: {
-      container: (variant: string) => {
+      container: (variant) => {
         const baseStyle = {
           height: 25,
           borderRadius: "m",
@@ -125,3 +131,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default ProgressConfig;

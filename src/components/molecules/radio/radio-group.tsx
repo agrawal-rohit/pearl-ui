@@ -68,45 +68,53 @@ export type RadioGroupProps = BoxProps & {
 /**
  * RadioGroup is a component that groups together multiple Radio components.
  */
-const RadioGroup: React.FC<RadioGroupProps> = ({
-  children,
-  isDisabled = false,
-  value = undefined,
-  defaultValue = undefined,
-  spacing = "2",
-  onChange = () => {},
-  size = "m",
-  variant = "filled",
-  colorScheme = "primary",
-  ...rest
-}) => {
-  const currentValue = value ?? defaultValue;
-  const setRadioGroupValue = (value: string | number) => {
-    onChange(value);
-  };
+const RadioGroup = React.memo(
+  React.forwardRef<RadioGroupProps, any>(
+    (
+      {
+        children,
+        isDisabled = false,
+        value = undefined,
+        defaultValue = undefined,
+        spacing = "2",
+        onChange = () => {},
+        size = "m",
+        variant = "filled",
+        colorScheme = "primary",
+        ...rest
+      },
+      ref
+    ) => {
+      const currentValue = value ?? defaultValue;
+      const setRadioGroupValue = (value: string | number) => {
+        onChange(value);
+      };
 
-  return (
-    <radioGroupContext.Provider
-      value={{
-        size: size,
-        variant: variant,
-        isDisabled: isDisabled,
-        colorScheme: colorScheme,
-        radioGroupValue: currentValue,
-        setRadioGroupValue: setRadioGroupValue,
-      }}
-    >
-      <Stack
-        direction="vertical"
-        spacing={spacing}
-        {...rest}
-        accessibilityRole="radiogroup"
-      >
-        {children}
-      </Stack>
-    </radioGroupContext.Provider>
-  );
-};
+      return (
+        <radioGroupContext.Provider
+          value={{
+            size: size,
+            variant: variant,
+            isDisabled: isDisabled,
+            colorScheme: colorScheme,
+            radioGroupValue: currentValue,
+            setRadioGroupValue: setRadioGroupValue,
+          }}
+        >
+          <Stack
+            direction="vertical"
+            spacing={spacing}
+            {...rest}
+            accessibilityRole="radiogroup"
+            ref={ref}
+          >
+            {children}
+          </Stack>
+        </radioGroupContext.Provider>
+      );
+    }
+  )
+);
 
 RadioGroup.displayName = "RadioGroup";
 

@@ -1,4 +1,17 @@
-export default {
+import { MolecularComponentConfig, StateProps } from "../../../theme/src/types";
+import { BoxProps } from "../../atoms/box/box";
+import { PressableProps } from "../../atoms/pressable/pressable";
+import { TextProps } from "../../atoms/text/text";
+import { RadioProps } from "./radio";
+
+export type RadioAtoms = {
+  container: Omit<PressableProps, keyof RadioProps> & RadioProps;
+  outerBox: BoxProps & StateProps<"_checked" | "_invalid">;
+  innerBox: BoxProps & StateProps<"_checked">;
+  text: TextProps;
+};
+
+const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
   parts: ["container", "outerBox", "innerBox", "text"],
   baseStyle: {
     container: {
@@ -10,7 +23,6 @@ export default {
     },
     outerBox: {
       p: "0.5",
-      shape: "square",
       borderWidth: 2,
       borderRadius: "full",
       borderColor: "neutral.300",
@@ -28,6 +40,9 @@ export default {
       transition: {
         duration: 50,
       },
+    },
+    text: {
+      alignSelf: "center",
     },
   },
   sizes: {
@@ -139,3 +154,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default RadioConfig;

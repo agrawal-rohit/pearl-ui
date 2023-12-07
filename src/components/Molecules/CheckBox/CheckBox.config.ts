@@ -1,4 +1,19 @@
-export default {
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { BoxProps } from "../../atoms/box/box";
+import { IconProps } from "../../atoms/icon/icon";
+import { PressableProps } from "../../atoms/pressable/pressable";
+import { StackProps } from "../../atoms/stack/stack";
+import { TextProps } from "../../atoms/text/text";
+import { CheckBoxProps } from "./checkbox";
+
+export type CheckboxAtoms = {
+  container: PressableProps & StackProps;
+  box: Omit<BoxProps, keyof CheckBoxProps> & CheckBoxProps;
+  text: TextProps;
+  icon: IconProps;
+};
+
+const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
   parts: ["container", "box", "icon", "text"],
   baseStyle: {
     container: {
@@ -14,18 +29,19 @@ export default {
       borderWidth: 2,
       borderColor: "neutral.300",
       transition: {
+        type: "timing",
         duration: 50,
       },
-      _invalid: {
-        borderColor: "danger.500",
-      },
-    },
-    icon: {
       checkedIconFamily: "Ionicons",
       checkedIconName: "checkmark-sharp",
       indeterminateIconFamily: "Ionicons",
       indeterminateIconName: "remove-outline",
-      color: "neutral.50",
+      _invalid: {
+        borderColor: "danger.500",
+      },
+    },
+    text: {
+      alignSelf: "center",
     },
   },
   sizes: {
@@ -77,38 +93,46 @@ export default {
   variants: {
     filled: {
       box: {
-        animate: {
-          backgroundColor: {
-            light: "neutral.200",
-            dark: "neutral.900",
-          },
-          borderColor: {
-            light: "neutral.300",
-            dark: "neutral.600",
-          },
+        backgroundColor: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+        borderColor: {
+          light: "neutral.300",
+          dark: "neutral.600",
         },
         _checked: {
           bgColor: "primary.500",
           borderColor: "primary.500",
         },
       },
+      icon: {
+        color: {
+          light: "neutral.200",
+          dark: "neutral.900",
+        },
+      },
     },
     outline: {
       box: {
         borderWidth: 2,
-        animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
-          borderColor: {
-            light: "neutral.400",
-            dark: "neutral.500",
-          },
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
+        },
+        borderColor: {
+          light: "neutral.400",
+          dark: "neutral.500",
         },
         _checked: {
           bgColor: "primary.500",
           borderColor: "primary.500",
+        },
+      },
+      icon: {
+        color: {
+          light: "neutral.50",
+          dark: "neutral.800",
         },
       },
     },
@@ -118,3 +142,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default CheckboxConfig;

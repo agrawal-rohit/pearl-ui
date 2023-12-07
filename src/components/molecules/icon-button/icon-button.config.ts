@@ -1,4 +1,15 @@
-export default {
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { IconProps } from "../../atoms/icon/icon";
+import { SpinnerProps } from "../../atoms/spinner/spinner";
+import { IconButtonProps } from "./icon-button";
+
+export type IconButtonAtoms = {
+  box: IconButtonProps;
+  spinner: SpinnerProps;
+  icon: IconProps;
+};
+
+const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
   parts: ["box", "spinner", "icon"],
   baseStyle: {
     box: {
@@ -70,9 +81,7 @@ export default {
   variants: {
     filled: {
       box: {
-        animate: {
-          backgroundColor: "primary.500",
-        },
+        backgroundColor: "primary.500",
         _pressed: {
           bgColor: "primary.400",
         },
@@ -86,14 +95,12 @@ export default {
     },
     outline: {
       box: {
-        animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
-          borderWidth: 1,
-          borderColor: "primary.500",
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
         },
+        borderWidth: 1,
+        borderColor: "primary.500",
         _pressed: {
           bgColor: "primary.50",
         },
@@ -107,14 +114,15 @@ export default {
     },
     ghost: {
       box: {
-        animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
         },
         _pressed: {
-          bgColor: "primary.50",
+          bgColor: {
+            light: "primary.50",
+            dark: "neutral.900",
+          },
         },
       },
       spinner: {
@@ -130,3 +138,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default IconButtonConfig;

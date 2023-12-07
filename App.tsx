@@ -1,3 +1,4 @@
+import "./wdyr";
 import React from "react";
 import {
   useFonts,
@@ -22,6 +23,8 @@ import {
 } from "@expo-google-fonts/poppins";
 import { ThemeProvider } from "./src/theme/src/theme-context";
 import Screen from "./src/components/atoms/screen/screen";
+import Pressable from "./src/components/atoms/pressable/pressable";
+import ComponentCard from "./demo/components/component-card";
 import Text from "./src/components/atoms/text/text";
 import Icon from "./src/components/atoms/icon/icon";
 import Fade from "./src/components/atoms/fade/fade";
@@ -49,9 +52,16 @@ import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
 import SkeletonText from "./src/components/atoms/skeleton/skeleton-text";
 import { MotiPressable } from "moti/interactions";
-import { Pressable } from "react-native";
-import { ResizeMode } from "expo-av";
+import {
+  FlatList,
+  LogBox,
+  SafeAreaView,
+  View,
+  Pressable as RNPressable,
+  Text as RNText,
+} from "react-native";
 import { NativeModules } from "react-native";
+import { useTheme } from "./src";
 
 if (__DEV__) {
   NativeModules.DevSettings.setIsDebuggingRemotely(true);
@@ -86,7 +96,111 @@ const App = () => {
   );
 };
 
+const componentList = [
+  {
+    label: "Box",
+    imageSrc: require("./demo/assets/box.png"),
+  },
+  {
+    label: "Center",
+    imageSrc: require("./demo/assets/center.png"),
+  },
+  {
+    label: "Screen",
+    imageSrc: require("./demo/assets/screen.png"),
+  },
+  {
+    label: "Spacer",
+    imageSrc: require("./demo/assets/spacer.png"),
+  },
+  {
+    label: "Stack",
+    imageSrc: require("./demo/assets/stack.png"),
+  },
+  {
+    label: "Divider",
+    imageSrc: require("./demo/assets/divider.png"),
+  },
+  {
+    label: "Text",
+    imageSrc: require("./demo/assets/text.png"),
+  },
+  {
+    label: "Icon",
+    imageSrc: require("./demo/assets/icon.png"),
+  },
+  {
+    label: "Image",
+    imageSrc: require("./demo/assets/image.png"),
+  },
+  {
+    label: "Avatar",
+    imageSrc: require("./demo/assets/avatar.png"),
+  },
+  {
+    label: "Video",
+    imageSrc: require("./demo/assets/video.png"),
+  },
+  {
+    label: "Pressable",
+    imageSrc: require("./demo/assets/pressable.png"),
+  },
+  {
+    label: "Button",
+    imageSrc: require("./demo/assets/button.png"),
+  },
+  {
+    label: "Icon Button",
+    imageSrc: require("./demo/assets/icon-button.png"),
+  },
+  {
+    label: "Text Link",
+    imageSrc: require("./demo/assets/text-link.png"),
+  },
+  {
+    label: "Input",
+    imageSrc: require("./demo/assets/input.png"),
+  },
+  {
+    label: "Switch",
+    imageSrc: require("./demo/assets/switch.png"),
+  },
+  {
+    label: "Textarea",
+    imageSrc: require("./demo/assets/textarea.png"),
+  },
+  {
+    label: "Checkbox",
+    imageSrc: require("./demo/assets/checkbox.png"),
+  },
+  {
+    label: "Radio",
+    imageSrc: require("./demo/assets/radio.png"),
+  },
+  {
+    label: "Spinner",
+    imageSrc: require("./demo/assets/spinner.png"),
+  },
+  {
+    label: "Skeleton",
+    imageSrc: require("./demo/assets/skeleton.png"),
+  },
+  {
+    label: "Badge",
+    imageSrc: require("./demo/assets/badge.png"),
+  },
+  {
+    label: "Progress",
+    imageSrc: require("./demo/assets/progress.png"),
+  },
+  {
+    label: "Transitions",
+    imageSrc: require("./demo/assets/transitions.png"),
+  },
+];
+
 const Index = () => {
+  const { colorMode, toggleColorMode } = useTheme();
   const [radioGroupValue, setRadioGroupValue] = React.useState("B");
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
@@ -110,31 +224,75 @@ const Index = () => {
   }, [progress]);
 
   return (
+    <Screen p="0" scrollable={false}>
+      <Stack direction="vertical" flex={1} spacing="0">
+        <Box
+          py="1.5"
+          flexDirection="row"
+          borderBottomWidth={1}
+          borderColor={{ light: "neutral.300", dark: "neutral.600" }}
+          justifyContent="space-between"
+          alignItems="center"
+          style={{
+            paddingHorizontal: 20,
+          }}
+        >
+          <Text fontWeight="semibold">Pearl UI - Showcase</Text>
+          <IconButton
+            size="s"
+            variant="ghost"
+            onPress={toggleColorMode}
+            icon={
+              <Icon
+                rawSize={15}
+                iconFamily="Feather"
+                iconName={colorMode === "light" ? "sun" : "moon"}
+              />
+            }
+          />
+        </Box>
+
+        <FlatList
+          data={componentList}
+          horizontal={false}
+          numColumns={2}
+          renderItem={({ item, index }) => (
+            <ComponentCard
+              label={item.label}
+              imageSrc={item.imageSrc}
+              transition={{
+                type: "timing",
+                duration: 50,
+                opacity: {
+                  type: "timing",
+                  duration: 200,
+                  delay: index * 100,
+                },
+                translateY: {
+                  type: "timing",
+                  duration: 200,
+                  delay: index * 100,
+                },
+              }}
+            />
+          )}
+          keyExtractor={(item) => item.label}
+          style={{ padding: 10 }}
+        />
+      </Stack>
+    </Screen>
+  );
+
+  return (
     <Screen>
+      {/* <Button>Save</Button>
       <Stack>
-        <Switch
-          size="xs"
-          isChecked={checked}
-          onPress={() => setChecked(!checked)}
-        />
+        <Spinner size="xs" />
+        <Spinner size="s" />
+        <Spinner size="m" />
+        <Spinner size="l" />
 
-        <Switch
-          size="s"
-          isChecked={checked}
-          onPress={() => setChecked(!checked)}
-        />
-
-        <Switch
-          size="m"
-          isChecked={checked}
-          onPress={() => setChecked(!checked)}
-        />
-
-        <Switch
-          size="l"
-          isChecked={checked}
-          onPress={() => setChecked(!checked)}
-        />
+        <Switch isChecked={checked} onPress={() => setChecked(!checked)} />
 
         <IconButton
           size="xs"
@@ -144,14 +302,28 @@ const Index = () => {
           Save
         </IconButton>
 
-        <Slide show={isOpen}>
+        <SlideFade show={isOpen}>
           <Box mb="4" p="4" bgColor="teal" borderRadius="m" boxShadow="l">
-            <Text color="white">alskdnalskndalknsdad</Text>
+            <Text color="white" fontWeight="500">
+              alskdnalskndalknsdad
+            </Text>
           </Box>
-        </Slide>
-      </Stack>
+        </SlideFade>
 
-      <Stack direction="vertical" spacing="6">
+        <Stack direction="vertical">
+          <Text variant="h5">Controlled Checkbox group</Text>
+          <CheckBoxGroup
+            value={checkboxGroupValue}
+            onChange={(newVal) => setCheckboxGroupValue(newVal)}
+          >
+            <CheckBox value="A">A</CheckBox>
+            <CheckBox value="B">B</CheckBox>
+            <CheckBox value="C">C</CheckBox>
+          </CheckBoxGroup>
+        </Stack>
+      </Stack> */}
+
+      {/* <Stack direction="vertical" spacing="6">
         <Video
           w="100%"
           aspectRatio={16 / 9}
@@ -417,7 +589,7 @@ const Index = () => {
         <Input isFullWidth placeholder="Focused Input" autoFocus />
         <Input isFullWidth isDisabled placeholder="Disabled Input" />
         <Input isFullWidth placeholder="Error Input" isInvalid />
-      </Stack>
+      </Stack> */}
     </Screen>
   );
 };

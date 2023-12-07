@@ -1,7 +1,20 @@
-export default {
-  parts: ["box", "text", "spinner", "icon"],
+import { MolecularComponentConfig } from "../../../theme";
+import { TextProps } from "../../atoms/text/text";
+import { SpinnerProps } from "../../atoms/spinner/spinner";
+import { IconProps } from "../../atoms/icon/icon";
+import { ButtonProps } from "./button";
+
+export type ButtonAtoms = {
+  pressable: ButtonProps;
+  text: TextProps;
+  spinner: SpinnerProps;
+  icon: IconProps;
+};
+
+const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
+  parts: ["pressable", "text", "spinner", "icon"],
   baseStyle: {
-    box: {
+    pressable: {
       my: "1",
       justifyContent: "center",
       alignItems: "center",
@@ -16,12 +29,12 @@ export default {
       alignSelf: "center",
     },
     text: {
-      fontWeight: 500,
+      fontWeight: "500",
     },
   },
   sizes: {
     xs: {
-      box: {
+      pressable: {
         py: "0.5",
         px: "2",
         borderRadius: "s",
@@ -38,7 +51,7 @@ export default {
       },
     },
     s: {
-      box: {
+      pressable: {
         py: "1.5",
         px: "2.5",
         borderRadius: "m",
@@ -54,7 +67,7 @@ export default {
       },
     },
     m: {
-      box: {
+      pressable: {
         py: "2.5",
         px: "3",
         borderRadius: "m",
@@ -70,7 +83,7 @@ export default {
       },
     },
     l: {
-      box: {
+      pressable: {
         py: "3",
         px: "4",
         borderRadius: "m",
@@ -88,10 +101,8 @@ export default {
   },
   variants: {
     filled: {
-      box: {
-        animate: {
-          backgroundColor: "primary.500",
-        },
+      pressable: {
+        backgroundColor: "primary.500",
         _pressed: {
           bgColor: "primary.400",
         },
@@ -105,15 +116,13 @@ export default {
       },
     },
     outline: {
-      box: {
-        animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
-          borderWidth: 1,
-          borderColor: "primary.500",
+      pressable: {
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
         },
+        borderWidth: 1,
+        borderColor: "primary.500",
         _pressed: {
           bgColor: "primary.50",
         },
@@ -127,12 +136,10 @@ export default {
       },
     },
     ghost: {
-      box: {
-        animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
-          },
+      pressable: {
+        backgroundColor: {
+          light: "neutral.50",
+          dark: "neutral.800",
         },
         _pressed: {
           bgColor: "primary.50",
@@ -152,3 +159,5 @@ export default {
     variant: "filled",
   },
 };
+
+export default ButtonConfig;

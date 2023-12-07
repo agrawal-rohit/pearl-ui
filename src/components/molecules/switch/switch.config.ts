@@ -1,6 +1,13 @@
-import { Easing } from "react-native-reanimated";
+import { BaseSwitchProps } from "./switch";
+import { BoxProps } from "../../atoms/box/box";
+import { MolecularComponentConfig, StateProps } from "../../../theme/src/types";
 
-export default {
+export type SwitchAtoms = {
+  track: BaseSwitchProps;
+  knob: BoxProps & StateProps<"_checked">;
+};
+
+const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
   parts: ["track", "knob"],
   baseStyle: {
     track: {
@@ -8,12 +15,10 @@ export default {
       p: "0.5",
       borderRadius: "full",
       bgColor: "neutral.300",
-      animate: {},
       transition: {
         type: "spring",
         dampingRatio: 1,
         duration: 50,
-        easing: Easing.inOut,
       },
       _checked: {
         bgColor: "primary.500",
@@ -34,7 +39,6 @@ export default {
         type: "spring",
         dampingRatio: 1,
         duration: 50,
-        easing: Easing.inOut,
       },
     },
   },
@@ -88,3 +92,5 @@ export default {
     size: "m",
   },
 };
+
+export default SwitchConfig;

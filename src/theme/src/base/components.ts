@@ -17,6 +17,28 @@ import SwitchConfig from "../../../components/molecules/switch/switch.config";
 import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
 import VideoConfig from "../../../components/molecules/video/video.config";
 
+interface Config {
+  None: { baseStyle: {} };
+  Icon: typeof IconConfig;
+  Text: typeof TextConfig;
+  Skeleton: typeof SkeletonConfig;
+  Screen: typeof ScreenConfig;
+  Spinner: typeof SpinnerConfig;
+  Button: typeof ButtonConfig;
+  IconButton: typeof IconButtonConfig;
+  TextLink: typeof TextLinkConfig;
+  Input: typeof InputConfig;
+  CheckBox: typeof CheckBoxConfig;
+  Radio: typeof RadioConfig;
+  Badge: typeof BadgeConfig;
+  Divider: typeof DividerConfig;
+  Switch: typeof SwitchConfig;
+  Image: typeof ImageConfig;
+  Video: typeof VideoConfig;
+  Avatar: typeof AvatarConfig;
+  Progress: typeof ProgressConfig;
+}
+
 export default {
   None: { baseStyle: {} },
   Icon: IconConfig,
@@ -37,4 +59,4 @@ export default {
   Video: VideoConfig,
   Avatar: AvatarConfig,
   Progress: ProgressConfig,
-};
+} as Config;

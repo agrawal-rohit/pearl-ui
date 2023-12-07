@@ -5,6 +5,7 @@ import {
   getValueForScreenSize,
   isResponsiveObjectValue,
 } from "../theme/src/responsive-helpers";
+import { useMemo } from "react";
 
 /**
  * Hook to get the appropriate value from a responsive style object based on the current screen size.
@@ -16,15 +17,18 @@ export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
   const dimensions = useDimensions();
 
   // If the propValue is a responsive object value, get the appropriate value for the current screen size
-  if (isResponsiveObjectValue(propValue, theme)) {
-    const valueForScreenSize = getValueForScreenSize({
-      responsiveValue: propValue,
-      breakpoints: theme.breakpoints,
-      dimensions,
-    });
-    return valueForScreenSize;
-  }
+  // Use useMemo to avoid unnecessary calculations on every render
+  return useMemo(() => {
+    if (isResponsiveObjectValue(propValue, theme)) {
+      const valueForScreenSize = getValueForScreenSize({
+        responsiveValue: propValue,
+        breakpoints: theme.breakpoints,
+        dimensions,
+      });
+      return valueForScreenSize;
+    }
 
-  // If the propValue is not a responsive object value, return the propValue as is
-  return propValue;
+    // If the propValue is not a responsive object value, return the propValue as is
+    return propValue;
+  }, [propValue, theme, dimensions]);
 };

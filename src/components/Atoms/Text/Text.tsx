@@ -1,32 +1,15 @@
 import React from "react";
-import { Text as RNText } from "react-native";
+import { Text as RNText, TextStyle } from "react-native";
 import responsiveSize from "../../../utils/responsive-size";
 import {
   textStyleFunctions,
   TextStyleProps,
 } from "../../../theme/src/style-functions";
-import {
-  AtomComponentProps,
-  ComponentSizes,
-  ComponentVariants,
-  ResponsiveValue,
-} from "../../../theme/src/types";
+import { AtomComponentProps, FinalPearlTheme } from "../../../theme/src/types";
 import { useTheme } from "../../../hooks/useTheme";
 import { pearl } from "../../../pearl";
 
 type BaseTextProps = React.ComponentProps<typeof RNText> & {
-  /**
-   * The size of the text
-   *
-   * @default undefined
-   */
-  size?: ResponsiveValue<ComponentSizes<"Text">>;
-  /**
-   * The variant of the text
-   *
-   * @default "p2"
-   */
-  variant?: ResponsiveValue<ComponentVariants<"Text">>;
   /**
    * Whether to slightly scale the font size based on the screen dimensions
    *
@@ -43,10 +26,14 @@ type BaseTextProps = React.ComponentProps<typeof RNText> & {
  * @returns A font configuration object.
  */
 export const buildFontConfig = (
-  textStyle: any,
-  allowFontScaling: boolean
+  textStyle: TextStyle,
+  allowFontScaling: boolean,
+  theme: FinalPearlTheme
 ): object => {
-  const fontWeight = textStyle.fontWeight;
+  let fontWeight: string | number = textStyle.fontWeight ?? "400";
+  if (!!theme.fontWeights[fontWeight])
+    fontWeight = theme.fontWeights[fontWeight];
+
   const fontStyle = textStyle.fontStyle ?? "normal";
 
   let fontSize = textStyle.fontSize;
@@ -58,7 +45,12 @@ export const buildFontConfig = (
   }
 
   const initialFontFamily = textStyle.fontFamily;
-  const { theme } = useTheme();
+
+  if (!initialFontFamily || !theme.fontConfig[initialFontFamily]) {
+    throw new Error(
+      `Font family "${initialFontFamily}" does not exist in the theme.fontConfig`
+    );
+  }
 
   const finalFontFamily =
     theme.fontConfig[initialFontFamily][fontWeight][fontStyle];
@@ -87,27 +79,23 @@ const CustomText = React.forwardRef(
     }: AtomComponentProps<"Text", BaseTextProps, TextStyleProps>,
     ref: any
   ) => {
-    /**
-     * Memoized function that builds the font configuration object.
-     */
-    const memoizedBuildFontConfig = React.useCallback(
-      () => buildFontConfig(props.style, scaleFontSize),
-      [props.style, scaleFontSize]
-    );
+    const { theme } = useTheme();
 
     // Apply the font configuration to the provided text style.
-    props.style = {
-      includeFontPadding: false,
-      ...(props.style as any),
-      ...memoizedBuildFontConfig(),
-    };
+    props.style = React.useMemo(() => {
+      return {
+        includeFontPadding: false,
+        ...(props.style as any),
+        ...buildFontConfig(props.style as TextStyle, scaleFontSize, theme),
+      };
+    }, [props.style, scaleFontSize, theme]);
 
     return (
       <RNText
         ref={ref}
         accessible={true}
         accessibilityRole="text"
-        allowFontScaling
+        allowFontScaling={scaleFontSize}
         {...props}
       >
         {props.children}

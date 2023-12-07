@@ -34,57 +34,55 @@ type BaseSkeletonProps = BoxProps & {
   fadeDuration?: number;
 };
 
-const BaseSkeleton = React.forwardRef(
-  (
-    {
-      startColor,
-      endColor,
-      isLoaded = false,
-      speed = 800,
-      fadeDuration = 200,
-      ...rest
-    }: BaseSkeletonProps,
-    ref: any
-  ) => {
-    const [key, setKey] = React.useState(Math.random());
+const BaseSkeleton = React.memo(
+  React.forwardRef(
+    (
+      {
+        startColor,
+        endColor,
+        isLoaded = false,
+        speed = 800,
+        fadeDuration = 200,
+        ...rest
+      }: BaseSkeletonProps,
+      ref: any
+    ) => {
+      const key = React.useMemo(() => Math.random(), [isLoaded]);
 
-    React.useEffect(() => {
-      setKey(Math.random());
-    }, [isLoaded]);
+      if (isLoaded) {
+        return (
+          <Box
+            key={key}
+            ref={ref}
+            from={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: fadeDuration,
+            }}
+          >
+            {rest.children}
+          </Box>
+        );
+      }
 
-    if (isLoaded) {
+      rest.children = <View style={{ opacity: 0 }}>{rest.children}</View>;
+
       return (
         <Box
+          {...rest}
           key={key}
           ref={ref}
-          from={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          from={{ bgColor: startColor }}
+          animate={{ bgColor: endColor }}
           transition={{
-            duration: fadeDuration,
+            loop: true,
+            repeatReverse: true,
+            duration: speed,
           }}
-        >
-          {rest.children}
-        </Box>
+        />
       );
     }
-
-    rest.children = <View style={{ opacity: 0 }}>{rest.children}</View>;
-
-    return (
-      <Box
-        {...rest}
-        key={key}
-        ref={ref}
-        from={{ bgColor: startColor }}
-        animate={{ bgColor: endColor }}
-        transition={{
-          loop: true,
-          repeatReverse: true,
-          duration: speed,
-        }}
-      />
-    );
-  }
+  )
 );
 
 /**

@@ -4,6 +4,7 @@ import { useMotiWithStyleProps } from "../hooks";
 import { MotiWithPearlStyleProps } from "../theme/src/types";
 import { ViewStyle } from "react-native";
 import { BoxStyleProps } from "../theme/src/style-functions";
+import { useMemo } from "react";
 
 /**
  * This function is a custom hook that creates an animation state using the provided props and style functions.
@@ -19,9 +20,18 @@ export const useAnimationState = (
   },
   styleFunctions: StyleFunctionContainer[] = boxStyleFunctions
 ) => {
-  // Convert the provided props using the specified style functions. This step is necessary because the props provided may not be in a format that can be used to create an animation state directly.
-  const convertedProps = useMotiWithStyleProps(props, styleFunctions);
+  // Use the useMemo hook to memoize the converted props. This will prevent unnecessary computations if the props and style functions have not changed.
+  const convertedProps = useMemo(
+    () => useMotiWithStyleProps(props, styleFunctions),
+    [props, styleFunctions]
+  );
 
-  // Use the converted props to create an animation state. The useAnimationState function from the "moti" library is used to create the animation state.
-  return useMotiAnimationState(convertedProps);
+  // Use the useMemo hook to memoize the animation state. This will prevent unnecessary computations if the converted props have not changed.
+  const animationState = useMemo(
+    () => useMotiAnimationState(convertedProps),
+    [convertedProps]
+  );
+
+  // Return the memoized animation state.
+  return animationState;
 };

@@ -16,8 +16,10 @@ import { useColorScheme } from "./useColorScheme";
 import { useResponsiveProp } from "./useResponsiveProp";
 import { useStyleProps } from "./useStyleProps";
 import { boxStyleFunctions } from "../theme/src/style-functions";
-import _ from "lodash";
 import { removeUndefined } from "../theme/utils/utils";
+import { StyleSheetProperties } from "react-native";
+import { useMemo } from "react";
+import _ from "lodash";
 
 /**
  * useMolecularComponentConfig is a custom hook used to convert a molecular component style config to the appropriate React Native styles.
@@ -33,7 +35,9 @@ import { removeUndefined } from "../theme/utils/utils";
  * @param partForOverridenAnimationProps The part where animation props passed to the component instance should be reflected. If undefined, the animation props are passed to the first part as specified in the config
  * @returns
  */
-export const useMolecularComponentConfig = (
+export const useMolecularComponentConfig = <
+  ComponentAtoms extends Record<string, any> = Record<string, any>,
+>(
   componentName: keyof FinalPearlTheme["components"],
   receivedProps: Record<string, any>,
   sizeAndVariantProps: {
@@ -48,7 +52,10 @@ export const useMolecularComponentConfig = (
   partForOverridenStyleProps: string | undefined = undefined,
   partForOverridenNativeProps: string | undefined = undefined,
   partForOverridenAnimationProps: string | undefined = undefined
-) => {
+): {
+  atoms: ComponentAtoms;
+  style?: StyleSheetProperties;
+} => {
   const { theme } = useTheme();
 
   checkKeyAvailability(
@@ -58,17 +65,27 @@ export const useMolecularComponentConfig = (
   );
 
   // User overriden props
-  const buildStyleProperties = composeStyleProps(styleFunctions);
-  const overridenStyleProps = _.pick(
-    receivedProps,
-    buildStyleProperties.properties
+  const buildStyleProperties = useMemo(
+    () => composeStyleProps(styleFunctions),
+    [styleFunctions]
   );
-  const overridenAnimationProps = _.pick(receivedProps, MOTI_PROPS);
-  const overridenNativeProps = _.omit(receivedProps, [
-    ...MOTI_PROPS,
-    "style",
-    ...buildStyleProperties.properties,
-  ]);
+  const overridenStyleProps = useMemo(
+    () => _.pick(receivedProps, buildStyleProperties.properties),
+    [receivedProps, buildStyleProperties]
+  );
+  const overridenAnimationProps = useMemo(
+    () => _.pick(receivedProps, MOTI_PROPS),
+    [receivedProps]
+  );
+  const overridenNativeProps = useMemo(
+    () =>
+      _.omit(receivedProps, [
+        ...MOTI_PROPS,
+        "style",
+        ...buildStyleProperties.properties,
+      ]),
+    [receivedProps, buildStyleProperties]
+  );
   const overridenProps = useStyleProps(receivedProps, styleFunctions);
 
   // Responsive Size and Variant
@@ -79,14 +96,19 @@ export const useMolecularComponentConfig = (
     sizeAndVariantProps.variant
   ) as string;
 
-  const componentStyleConfig = theme.components[
-    componentName
-  ] as MolecularComponentConfig;
+  const componentStyleConfig = useMemo(
+    () => theme.components[componentName] as MolecularComponentConfig,
+    [theme, componentName]
+  );
   const activeSizeAndVariantConfig: MolecularComponentConfig["defaults"] = {};
 
-  const defaultComponentConfig = componentStyleConfig[
-    "defaults"
-  ] as NonNullable<MolecularComponentConfig["defaults"]>;
+  const defaultComponentConfig = useMemo(
+    () =>
+      componentStyleConfig["defaults"] as NonNullable<
+        MolecularComponentConfig["defaults"]
+      >,
+    [componentStyleConfig]
+  );
 
   if (defaultComponentConfig) {
     if (defaultComponentConfig.hasOwnProperty("size")) {
@@ -135,7 +157,7 @@ export const useMolecularComponentConfig = (
     };
   }
 
-  componentStyleConfig.parts.forEach((part) => {
+  (componentStyleConfig.parts as string[]).forEach((part) => {
     const componentTypeStyles: Record<string, any> = getKeys(
       activeSizeAndVariantConfig
     ).reduce(
@@ -209,6 +231,7 @@ export const useMolecularComponentConfig = (
     if (partForOverridenStyleProps && part === partForOverridenStyleProps) {
       currentComponentPartProps = {
         ...currentComponentPartProps,
+        ...removeUndefined(overridenStyleProps),
         style: {
           ...currentComponentPartProps.style,
           ...removeUndefined(overridenProps.style),
@@ -250,5 +273,8 @@ export const useMolecularComponentConfig = (
   });
 
   finalComponentProps = useColorScheme(colorScheme, finalComponentProps);
-  return finalComponentProps;
+  return finalComponentProps as {
+    atoms: ComponentAtoms;
+    style?: StyleSheetProperties;
+  };
 };

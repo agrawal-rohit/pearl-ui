@@ -41,131 +41,63 @@ export const useMotiWithStyleProps = (
     "textShadowOffset",
   ]);
 
-  // Convert 'from' prop
-  if (props.from) {
-    props.from = composeCleanStyleProps(props.from, buildStyleProperties, {
-      theme,
-      colorMode,
-      dimensions,
-    });
-  }
+  // Convert 'from', 'animate', 'transition', 'exit', 'exitTransition' props
+  ["from", "animate", "transition", "exit", "exitTransition"].forEach(
+    (prop) => {
+      if (prop === "animate" && props[prop] === undefined) props[prop] = {};
 
-  // Convert 'animate' prop
-  if (props.animate) {
-    props.animate = composeCleanStyleProps(
-      props.animate,
-      buildStyleProperties,
-      {
-        theme,
-        colorMode,
-        dimensions,
+      if (props[prop]) {
+        props[prop] = composeCleanStyleProps(
+          props[prop],
+          buildStyleProperties,
+          {
+            theme,
+            colorMode,
+            dimensions,
+          }
+        );
+
+        if (prop === "animate") {
+          // Merge componentStyles and animate
+          props.animate = {
+            ...componentStyles,
+            ...removeUndefined(props.animate),
+          };
+        }
+
+        if (["transition", "exitTransition"].includes(prop)) {
+          // Filter object values from 'transition' or 'exitTransition'
+          const keysWithObjectValues = getKeys(props[prop]).filter(
+            (key) => typeof props[prop][key] === "object"
+          );
+          const propsWithObjectValues = _.pick(
+            props[prop],
+            keysWithObjectValues
+          );
+          const nullObject = keysWithObjectValues.reduce((obj, key) => {
+            return {
+              ...obj,
+              [key]: null,
+            };
+          }, {});
+          props[prop] = { ...props[prop], ...removeUndefined(nullObject) };
+
+          // Add the filtered values back into 'transition' or 'exitTransition'
+          props[prop] = keysWithObjectValues.reduce((obj, key: any) => {
+            let finalKey = key;
+            if (getKeys(shorthandPropMapper).includes(key)) {
+              finalKey = (shorthandPropMapper as any)[key];
+            }
+
+            return {
+              ...obj,
+              [finalKey]: propsWithObjectValues[key],
+            };
+          }, props[prop]);
+        }
       }
-    );
-
-    // Merge componentStyles and animate
-    props.animate = {
-      ...componentStyles,
-      ...removeUndefined(props.animate),
-    };
-  }
-
-  // Convert 'transition' prop
-  if (props.transition) {
-    // Filter object values from 'transition'
-    const keysWithObjectValues = getKeys(props.transition).filter(
-      (key) => typeof props.transition[key] === "object"
-    );
-    const propsWithObjectValues = _.pick(
-      props.transition,
-      keysWithObjectValues
-    );
-    const nullObject = keysWithObjectValues.reduce((obj, key) => {
-      return {
-        ...obj,
-        [key]: null,
-      };
-    }, {});
-    props.transition = { ...props.transition, ...removeUndefined(nullObject) };
-
-    // Convert style props
-    props.transition = composeCleanStyleProps(
-      props.transition,
-      buildStyleProperties,
-      {
-        theme,
-        colorMode,
-        dimensions,
-      }
-    );
-
-    // Add the filtered values back into 'transition'
-    props.transition = keysWithObjectValues.reduce((obj, key: any) => {
-      let finalKey = key;
-      if (getKeys(shorthandPropMapper).includes(key)) {
-        finalKey = (shorthandPropMapper as any)[key];
-      }
-
-      return {
-        ...obj,
-        [finalKey]: propsWithObjectValues[key],
-      };
-    }, props.transition);
-  }
-
-  // Convert 'exit' prop
-  if (props.exit) {
-    props.exit = composeCleanStyleProps(props.exit, buildStyleProperties, {
-      theme,
-      colorMode,
-      dimensions,
-    });
-  }
-
-  // Convert 'exitTransition' prop
-  if (props.exitTransition) {
-    // Filter object values from 'exitTransition'
-    const keysWithObjectValues = getKeys(props.exitTransition).filter(
-      (key) => typeof props.exitTransition[key] === "object"
-    );
-    const propsWithObjectValues = _.pick(
-      props.exitTransition,
-      keysWithObjectValues
-    );
-    const nullObject = keysWithObjectValues.reduce((obj, key) => {
-      return {
-        ...obj,
-        [key]: null,
-      };
-    }, {});
-    props.exitTransition = {
-      ...props.exitTransition,
-      ...removeUndefined(nullObject),
-    };
-
-    // Convert style props
-    props.exitTransition = composeCleanStyleProps(
-      props.exitTransition,
-      buildStyleProperties,
-      {
-        theme,
-        colorMode,
-        dimensions,
-      }
-    );
-
-    // Add the filtered values back into 'exitTransition'
-    props.exitTransition = keysWithObjectValues.reduce((obj, key: any) => {
-      let finalKey = key;
-      if (getKeys(shorthandPropMapper).includes(key)) {
-        finalKey = (shorthandPropMapper as any)[key];
-      }
-
-      return {
-        ...obj,
-        [finalKey]: propsWithObjectValues[key],
-      };
-    }, props.exitTransition);
-  }
+    }
+  );
 
   return props;
 };

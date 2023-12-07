@@ -54,6 +54,18 @@ type BaseSpinnerProps = React.ComponentProps<typeof View> & {
    * @default 1200
    */
   animationDuration?: number;
+  /**
+   * The raw size of the spinner.
+   *
+   * @default 20
+   */
+  rawSize?: number;
+  /**
+   * The size multiplier of the spinner.
+   *
+   * @default 1
+   */
+  sizeMultiplier?: number;
 };
 
 type SpinnerStyleProps = ColorProps &
@@ -76,65 +88,74 @@ const IndicatorTypeToComponentMap = {
 /**
  * A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result.
  */
-const Spinner: React.FC<
-  AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>
-> = ({
-  isLoading = true,
-  isExpanded = false,
-  animationDuration = 1200,
-  colorScheme = "primary",
-  ...rest
-}) => {
-  // If isLoading is false, return null
-  if (!isLoading) return null;
+const Spinner = React.memo(
+  React.forwardRef<
+    AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>,
+    any
+  >(
+    (
+      {
+        isLoading = true,
+        isExpanded = false,
+        animationDuration = 1200,
+        colorScheme = "primary",
+        ...rest
+      },
+      ref
+    ) => {
+      // Set default variant to "spinner"
+      rest.variant = rest.variant ?? "spinner";
 
-  // Set default variant to "spinner"
-  rest.variant = rest.variant ?? "spinner";
-
-  // Get props for the Spinner
-  let props = useAtomicComponentConfig(
-    "Spinner",
-    rest,
-    {
-      size: rest.size,
-      variant: rest.variant,
-    },
-    colorScheme,
-    indicatorStyleFunctions
-  );
-
-  // Add style props to props using useMotiWithStyleProps
-  props = useMotiWithStyleProps(props, indicatorStyleFunctions);
-
-  // Get variant for current screen size
-  const variantForCurrentScreenSize = useResponsiveProp(rest.variant);
-
-  // Create and return the Spinner component
-  return React.createElement(
-    IndicatorTypeToComponentMap[
-      variantForCurrentScreenSize as keyof typeof IndicatorTypeToComponentMap
-    ],
-    {
-      ...props,
-      color: props.style.color ? props.style.color : props.style.color,
-      size: props.sizeMultiplier
-        ? props.sizeMultiplier * props.spinnerSize
-        : props.spinnerSize,
-      accessible: true,
-      accessibilityLabel: rest.accessibilityLabel
-        ? rest.accessibilityLabel
-        : "Loading indicator",
-      accessibilityRole: "progressbar" as AccessibilityRoles,
-      style: [
-        isExpanded ? StyleSheet.absoluteFill : { alignSelf: "flex-start" },
+      // Get props for the Spinner
+      let props = useAtomicComponentConfig(
+        "Spinner",
+        rest,
         {
-          flex: 0,
-          ...props.style,
+          size: rest.size,
+          variant: rest.variant,
         },
-      ],
+        colorScheme,
+        indicatorStyleFunctions
+      );
+
+      // Add style props to props using useMotiWithStyleProps
+      props = useMotiWithStyleProps(props, indicatorStyleFunctions);
+
+      // Get variant for current screen size
+      const variantForCurrentScreenSize = useResponsiveProp(rest.variant);
+
+      // If isLoading is false, return null
+      if (!isLoading) return null;
+
+      // Create and return the Spinner component
+      return React.createElement(
+        IndicatorTypeToComponentMap[
+          variantForCurrentScreenSize as keyof typeof IndicatorTypeToComponentMap
+        ],
+        {
+          ...props,
+          color: props.style.color,
+          size: props.sizeMultiplier
+            ? props.sizeMultiplier * props.rawSize
+            : props.rawSize,
+          accessible: true,
+          accessibilityLabel: rest.accessibilityLabel
+            ? rest.accessibilityLabel
+            : "Loading indicator",
+          accessibilityRole: "progressbar" as AccessibilityRoles,
+          style: [
+            isExpanded ? StyleSheet.absoluteFill : { alignSelf: "flex-start" },
+            {
+              flex: 0,
+              ...props.style,
+            },
+          ],
+          ref: ref,
+        }
+      );
     }
-  );
-};
+  )
+);
 
 export type SpinnerProps = React.ComponentProps<typeof Spinner>;
 

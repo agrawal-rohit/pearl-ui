@@ -7,6 +7,7 @@ import { MoleculeComponentProps } from "../../../theme/src/types";
 import { useButtonGroup } from "./button-group";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
+import { ButtonAtoms } from "./button.config";
 
 export type ButtonProps = PressableProps & {
   /**
@@ -37,133 +38,140 @@ export type ButtonProps = PressableProps & {
 };
 
 /** Button is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation */
-const Button = React.forwardRef(
-  (
-    {
-      children,
-      loadingText = undefined,
-      spinnerPlacement = "start",
-      isLoading = false,
-      isFullWidth = false,
-      leftIcon = undefined,
-      rightIcon = undefined,
-      ...rest
-    }: Omit<MoleculeComponentProps<"Button", ButtonProps>, "atoms"> & {
-      atoms?: Record<string, any>;
-    },
-    ref: any
-  ) => {
-    const { size, variant, isDisabled, colorScheme } = useButtonGroup();
-
-    // Overwrite props from checkbox group
-    rest.size = rest.size ?? size;
-    rest.variant = rest.variant ?? variant;
-    rest.isDisabled = rest.isDisabled ?? isDisabled;
-    rest.colorScheme = rest.colorScheme ?? colorScheme;
-
-    const molecularProps = useMolecularComponentConfig(
-      "Button",
-      rest,
+const Button = React.memo(
+  React.forwardRef(
+    (
       {
-        size: rest.size,
-        variant: rest.variant,
+        children,
+        loadingText = undefined,
+        spinnerPlacement = "start",
+        isLoading = false,
+        isFullWidth = false,
+        leftIcon = undefined,
+        rightIcon = undefined,
+        ...rest
+      }: Omit<
+        MoleculeComponentProps<"Button", ButtonProps, ButtonAtoms>,
+        "atoms"
+      > & {
+        atoms?: ButtonAtoms;
       },
-      rest.colorScheme,
-      boxStyleFunctions,
-      "box",
-      "box",
-      "box"
-    );
-    const { atoms } = molecularProps;
+      ref: any
+    ) => {
+      const { size, variant, isDisabled, colorScheme } = useButtonGroup();
 
-    // Determine if the button is disabled
-    const isButtonDisabled = rest.isDisabled ? true : isLoading;
+      // Overwrite props from checkbox group
+      rest.size = rest.size ?? size;
+      rest.variant = rest.variant ?? variant;
+      rest.isDisabled = rest.isDisabled ?? isDisabled;
+      rest.colorScheme = rest.colorScheme ?? colorScheme;
 
-    // Function to render the loading status of the button
-    const renderLoadingStatus = () => {
-      // If there is loading text, render the spinner and the loading text
-      if (loadingText) {
-        return (
-          <Box alignItems="center" flexDirection="row">
-            {spinnerPlacement === "start" ? (
-              <>
-                <Spinner {...atoms.spinner} />
-                <Text marginLeft={atoms.box.py} {...atoms.text}>
-                  {loadingText}
-                </Text>
-              </>
-            ) : (
-              <>
-                <Text marginRight={atoms.box.py} {...atoms.text}>
-                  {loadingText}
-                </Text>
+      const molecularProps = useMolecularComponentConfig<ButtonAtoms>(
+        "Button",
+        rest,
+        {
+          size: rest.size,
+          variant: rest.variant,
+        },
+        rest.colorScheme,
+        boxStyleFunctions,
+        "pressable",
+        "pressable",
+        "pressable"
+      );
+      const { atoms } = molecularProps;
 
-                <Spinner {...atoms.spinner} />
-              </>
-            )}
-          </Box>
-        );
-      } else {
-        // If there is no loading text, render the spinner and the children with transparent color
-        return (
-          <>
-            <Spinner isExpanded {...atoms.spinner} />
-            <Text {...atoms.text} color="transparent">
-              {children}
-            </Text>
-          </>
-        );
-      }
-    };
+      // Determine if the button is disabled
+      const isButtonDisabled = rest.isDisabled ? true : isLoading;
 
-    // Function to render the main content of the button
-    const renderMainContent = () => {
-      // If there are left or right icons, render them along with the children
-      if (leftIcon || rightIcon) {
-        return (
-          <Box flexDirection="row">
-            {leftIcon
-              ? React.cloneElement(leftIcon, {
-                  ...atoms.icon,
-                  marginRight: atoms.box.py ?? atoms.box.paddingVertical,
-                  ...leftIcon.props,
-                })
-              : null}
-            <Text {...atoms.text}>{children}</Text>
-            {rightIcon
-              ? React.cloneElement(rightIcon, {
-                  ...atoms.icon,
-                  marginLeft: atoms.box.py ?? atoms.box.paddingVertical,
-                  ...rightIcon.props,
-                })
-              : null}
-          </Box>
-        );
-      } else {
-        // If there are no icons, render only the children
-        return <Text {...atoms.text}>{children}</Text>;
-      }
-    };
+      // Function to render the loading status of the button
+      const renderLoadingStatus = () => {
+        // If there is loading text, render the spinner and the loading text
+        if (loadingText) {
+          return (
+            <Box alignItems="center" flexDirection="row">
+              {spinnerPlacement === "start" ? (
+                <>
+                  <Spinner {...atoms.spinner} />
+                  <Text marginLeft={atoms.pressable.py} {...atoms.text}>
+                    {loadingText}
+                  </Text>
+                </>
+              ) : (
+                <>
+                  <Text marginRight={atoms.pressable.py} {...atoms.text}>
+                    {loadingText}
+                  </Text>
 
-    return (
-      <Pressable
-        {...atoms.box}
-        ref={ref}
-        isDisabled={isButtonDisabled}
-        alignSelf={isFullWidth ? "stretch" : "flex-start"}
-        accessibilityLabel={
-          !isLoading
-            ? atoms.box.accessibilityLabel
-              ? atoms.box.accessibilityLabel
-              : children
-            : "Loading"
+                  <Spinner {...atoms.spinner} />
+                </>
+              )}
+            </Box>
+          );
+        } else {
+          // If there is no loading text, render the spinner and the children with transparent color
+          return (
+            <>
+              <Spinner isExpanded {...atoms.spinner} />
+              <Text {...atoms.text} color="transparent">
+                {children}
+              </Text>
+            </>
+          );
         }
-        accessibilityState={{ disabled: isButtonDisabled, busy: isLoading }}
-      >
-        {isLoading ? renderLoadingStatus() : renderMainContent()}
-      </Pressable>
-    );
-  }
+      };
+
+      // Function to render the main content of the button
+      const renderMainContent = () => {
+        // If there are left or right icons, render them along with the children
+        if (leftIcon || rightIcon) {
+          return (
+            <Box flexDirection="row">
+              {leftIcon
+                ? React.cloneElement(leftIcon, {
+                    ...atoms.icon,
+                    marginRight:
+                      atoms.pressable.py ?? atoms.pressable.paddingVertical,
+                    ...leftIcon.props,
+                  })
+                : null}
+              <Text {...atoms.text}>{children}</Text>
+              {rightIcon
+                ? React.cloneElement(rightIcon, {
+                    ...atoms.icon,
+                    marginLeft:
+                      atoms.pressable.py ?? atoms.pressable.paddingVertical,
+                    ...rightIcon.props,
+                  })
+                : null}
+            </Box>
+          );
+        } else {
+          // If there are no icons, render only the children
+          return <Text {...atoms.text}>{children}</Text>;
+        }
+      };
+
+      return (
+        <Pressable
+          {...atoms.pressable}
+          ref={ref}
+          isDisabled={isButtonDisabled}
+          alignSelf={isFullWidth ? "stretch" : "flex-start"}
+          accessibilityLabel={
+            !isLoading
+              ? atoms.pressable.accessibilityLabel
+                ? atoms.pressable.accessibilityLabel
+                : children
+              : "Loading"
+          }
+          accessibilityState={{ disabled: isButtonDisabled, busy: isLoading }}
+        >
+          {isLoading ? renderLoadingStatus() : renderMainContent()}
+        </Pressable>
+      );
+    }
+  )
 );
 
 Button.displayName = "Button";

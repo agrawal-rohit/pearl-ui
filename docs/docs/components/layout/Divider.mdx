@@ -1,0 +1,111 @@
+---
+sidebar_position: 5
+title: Divider
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/divider/divider.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/divider/divider.config.ts"
+  />
+</div>
+
+The `Divider` component in Pearl UI is a versatile tool used to create a visual separation between different sections of content in a list or group. It can be customized in terms of orientation, color, size, and more.
+
+## Import
+
+```jsx
+import { Divider } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+// Basic usage of Divider
+<Divider />
+
+// Customizing Divider with orientation and color
+<Divider orientation="horizontal" bgColor="red" />
+
+// Using Divider in a list
+<View>
+  <Text>Item 1</Text>
+  <Divider orientation="horizontal" />
+  <Text>Item 2</Text>
+  <Divider orientation="horizontal" />
+  <Text>Item 3</Text>
+</View>
+```
+
+### Changing Divider Orientation
+
+The `Divider`'s orientation can be changed using the `orientation` prop. This allows you to set the direction of the divider as either horizontal or vertical.
+
+```jsx
+<Divider orientation="horizontal" />
+
+<Divider orientation="vertical" />
+```
+
+### Overriding Default Styles
+
+The `Divider` component supports a variety of style props which can be used to override the pre-defined styles in the theme. Any manual style props passed into the component will take precedence over the default component configuration.
+
+```jsx
+// Example: Overriding the default background color
+<Divider bgColor="red" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/divider-light" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Divider` component supports the following style props:
+
+- [backgroundColor](../../core-features/style-props#color-and-background-color) (Only `backgroundColor` props are supported, not the `color` prop)
+- [layout](../../core-features/style-props#layout)
+- [transform](../../core-features/style-props#transform)
+- [position](../../core-features/style-props#position)
+- [opacity and visiblity](../../core-features/style-props#opacity-and-visibility)
+- [margin and padding](../../core-features/style-props#margin-and-padding)
+
+### Animation Properties
+
+The `Divider` component inherits animation properties from the `Box` component, which are managed by the [Moti](https://moti.fyi/) library. This allows for the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is utilized to manage these animation properties.
+
+| Property              | Type                        | Default     | Description                                                                                                                                                                                                                                                                 |
+| --------------------- | --------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `from`                | <t>object</t>               |             | Defines the starting state of the animation.                                                                                                                                                                                                                                |
+| `to`                  | <t>object</t>               |             | Defines the ending state of the animation.                                                                                                                                                                                                                                  |
+| `transition`          | <t>object</t>               |             | Specifies the type of transition that the animation will use.                                                                                                                                                                                                               |
+| `exitTransition`      | <t>object</t>               |             | Determines the transition type that will be used when the component is unmounted. By default, `exit` uses `transition` to configure its animations, so this prop is not required. However, if you pass `exitTransition`, it will override `transition` for exit animations. |
+| `state`               | <t>object</t>               |             | Manages the overall state of the animation, including the `from` and `to` states.                                                                                                                                                                                           |
+| `delay`               | <t>number</t>               |             | Manage the delay for the `animate` field. (Use the `transition` prop for more granular control)                                                                                                                                                                             |
+| `onDidAnimate`        | <t>() =&gt; void</t>        |             | Callback function called after finishing an animation.                                                                                                                                                                                                                      |
+| `stylePriority`       | <t>"state" \| "animate"</t> | `"animate"` | This is not a prop you will likely find yourself using. If set to <t>"animate"</t>, then styles passed from the `animate` prop will take precedent. Otherwise, if set to <t>"state"</t>, then the `state` prop will take precedent for matching styles.                     |
+| `animateInitialState` | <t>boolean</t>              | `false`     | If `true`, the `from` prop will be set to animate. This will be noticeable for some spring animations, and might make them jumpy on mount.                                                                                                                                  |
+
+### Additional Properties
+
+The `Divider` component also accepts the following additional props:
+
+| Name          | Required | Type                                             | Default        | Description                  |
+| ------------- | -------- | ------------------------------------------------ | -------------- | ---------------------------- |
+| `size`        | false    | <t>PearlTheme.components.Divider["sizes"]</t>    |                | The size of the divider      |
+| `variant`     | false    | <t>PearlTheme.components.Divider["variants"]</t> |                | The variant of the divider   |
+| `thickness`   | false    | <t>number</t>                                    | `1`            | The thickness of the divider |
+| `length`      | false    | <t>number \| string</t>                          | `"100%"`       | The length of the divider    |
+| `orientation` | false    | <t>"horizontal" \| "vertical"</t>                | `"horizontal"` | The direction of the divider |

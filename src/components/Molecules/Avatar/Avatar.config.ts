@@ -1,4 +1,13 @@
-export default {
+import { MolecularComponentConfig } from "../../../theme";
+import { TextProps } from "../../atoms/text/text";
+import { AvatarProps } from "./avatar";
+
+export type AvatarAtoms = {
+  box: AvatarProps;
+  text: TextProps;
+};
+
+const AvatarConfig: MolecularComponentConfig<AvatarAtoms> = {
   parts: ["box", "text"],
   baseStyle: {
     box: {
@@ -58,3 +67,5 @@ export default {
     size: "m",
   },
 };
+
+export default AvatarConfig;

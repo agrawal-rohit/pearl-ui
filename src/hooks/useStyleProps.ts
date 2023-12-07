@@ -2,6 +2,7 @@ import { useTheme } from "./useTheme";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useDimensions } from "./useDimensions";
 import { buildFinalStyleProps, composeStyleProps } from "./utils/utils";
+import { useMemo } from "react";
 import _ from "lodash";
 
 /**
@@ -17,18 +18,25 @@ export const useStyleProps = (
   const { theme, colorMode } = useTheme();
   const dimensions = useDimensions();
 
-  // Compose the style functions
-  const buildStyleProperties = composeStyleProps(styleFunctions);
-
   // If no props are passed, return an empty style object
-  if (!props) {
+  if (_.isEmpty(props)) {
     return { style: {} };
   }
 
+  // Compose the style functions
+  const buildStyleProperties = useMemo(
+    () => composeStyleProps(styleFunctions),
+    [styleFunctions]
+  );
+
   // Build the final style properties
-  return buildFinalStyleProps(props, buildStyleProperties, {
-    theme,
-    colorMode,
-    dimensions,
-  });
+  return useMemo(
+    () =>
+      buildFinalStyleProps(props, buildStyleProperties, {
+        theme,
+        colorMode,
+        dimensions,
+      }),
+    [props, buildStyleProperties, theme, colorMode, dimensions]
+  );
 };

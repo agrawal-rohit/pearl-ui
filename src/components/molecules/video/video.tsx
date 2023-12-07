@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Video as ExpoVideo, VideoProps as ExpoVideoProps } from "expo-av";
 import { pearl } from "../../../pearl";
 import {
@@ -79,180 +85,234 @@ export type BaseVideoProps = BoxProps &
     fallbackSource?: ImageSourcePropType;
   };
 
-const BaseVideo = React.forwardRef(
-  ({ atoms }: MoleculeComponentProps<"Video", BaseVideoProps>, ref: any) => {
-    const {
-      source,
-      onError,
-      testID,
-      previewSource,
-      fallbackSource,
-      fallbackComponent,
-      previewColor,
-      tint = "dark",
-      loaderType = "spinner",
-      overlayTransitionDuration = 300,
-      onLoad,
-      onLoadStart,
-      ...restVideoProps
-    } = atoms.video;
+const BaseVideo = React.memo(
+  React.forwardRef(
+    ({ atoms }: MoleculeComponentProps<"Video", BaseVideoProps>, ref: any) => {
+      const {
+        source,
+        onError,
+        testID,
+        previewSource,
+        fallbackSource,
+        fallbackComponent,
+        previewColor,
+        tint = "dark",
+        loaderType = "spinner",
+        overlayTransitionDuration = 300,
+        onLoad,
+        onLoadStart,
+        ...restVideoProps
+      } = atoms.video;
 
-    const isRemoteVideo = typeof source === "object";
-    const [error, setError] = useState(false);
-    const [hasVideoLoaded, setHasVideoLoaded] = useState(false);
-    const intensity = useRef(new Animated.Value(100)).current;
+      const isRemoteVideo = typeof source === "object";
+      const [error, setError] = useState(false);
+      const [hasVideoLoaded, setHasVideoLoaded] = useState(false);
+      const intensity = useRef(new Animated.Value(100)).current;
 
-    const previewSourceOverlayOpacity = intensity.interpolate({
-      inputRange: [0, 100],
-      outputRange: [0, 1],
-    });
-    const blurIntensity = intensity.interpolate({
-      inputRange: [0, 100],
-      outputRange: [0, 50],
-    });
-    const previewColorOverlayOpacity = intensity.interpolate({
-      inputRange: [0, 100],
-      outputRange: [0, 1],
-    });
+      const previewSourceOverlayOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [0, 1],
+      });
+      const blurIntensity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [0, 50],
+      });
+      const previewColorOverlayOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [0, 1],
+      });
 
-    // Separate out border radius properties
-    const {
-      borderRadius,
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-      borderTopLeftRadius,
-      borderTopRightRadius,
-      ...finalContainerProps
-    } = atoms.container;
-    const borderRadiiStyles = {
-      borderRadius,
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-      borderTopLeftRadius,
-      borderTopRightRadius,
-    };
-
-    // A handler function for catching errors while loading the video
-    const onErrorHandler = (error: string) => {
-      setError(true);
-      if (onError) onError(error);
-    };
-
-    const renderFallback = () => {
-      if (error) {
-        if (!!fallbackComponent) {
-          return (
-            <Box overflow="hidden" {...borderRadiiStyles} style={{ zIndex: 4 }}>
-              {React.cloneElement(fallbackComponent)}
-            </Box>
-          );
-        }
-
-        if (!!fallbackSource) {
-          return (
-            <PearlRNImage
-              {...atoms.fallbackImage}
-              {...borderRadiiStyles}
-              zIndex={3}
-              width="100%"
-              height="100%"
-              source={fallbackSource}
-              style={StyleSheet.absoluteFill}
-            />
-          );
-        }
-      }
-
-      return null;
-    };
-
-    const renderVideo = () => {
-      return (
-        <PearlExpoVideo
-          {...restVideoProps}
-          {...borderRadiiStyles}
-          ref={ref}
-          visible={hasVideoLoaded}
-          onLoad={(status) => {
-            if (onLoad) onLoad(status);
-
-            if (isRemoteVideo && status.isLoaded) {
-              // Start animating the overlay opacity as soon as the URI becomes available
-              Animated.timing(intensity, {
-                toValue: 0,
-                duration: overlayTransitionDuration,
-                useNativeDriver: Platform.OS === "android",
-              }).start();
-            }
-            setHasVideoLoaded(true);
-          }}
-          onLoadStart={() => {
-            if (Platform.OS === "ios") {
-              setTimeout(() => {
-                if (!hasVideoLoaded) {
-                  setError(true);
-                }
-              }, 1000);
-            }
-            if (onLoadStart) onLoadStart();
-          }}
-          onError={onErrorHandler}
-          testID={testID}
-          source={source}
-          zIndex={3}
-          width="100%"
-          height="100%"
-          style={StyleSheet.absoluteFill}
-        />
+      // Separate out border radius properties
+      const {
+        borderRadius,
+        borderBottomLeftRadius,
+        borderBottomRightRadius,
+        borderTopLeftRadius,
+        borderTopRightRadius,
+        ...finalContainerProps
+      } = atoms.container;
+      const borderRadiiStyles = useMemo(
+        () => ({
+          borderRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+          borderTopLeftRadius,
+          borderTopRightRadius,
+        }),
+        [
+          borderRadius,
+          borderBottomLeftRadius,
+          borderBottomRightRadius,
+          borderTopLeftRadius,
+          borderTopRightRadius,
+        ]
       );
-    };
 
-    const renderPreview = () => {
-      if ((intensity as any)._value === 0) return null;
+      // A handler function for catching errors while loading the video
+      const onErrorHandler = (error: string) => {
+        setError(true);
+        if (onError) onError(error);
+      };
 
-      if (!!previewSource) {
-        return (
-          <PearlRNImage
-            {...atoms.previewImage}
-            {...borderRadiiStyles}
-            source={previewSource}
-            zIndex={1}
-            width="100%"
-            height="100%"
-            style={StyleSheet.absoluteFill}
-            blurRadius={
-              Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
-            }
-          />
-        );
-      }
-    };
-
-    const renderImageLoader = () => {
-      if ((intensity as any)._value === 0) return null;
-
-      if (loaderType === "progressive") {
-        if (!!previewSource) {
-          // Render a blur overlay over the preview image
-          if (Platform.OS === "ios") {
+      const renderFallback = useCallback(() => {
+        if (error) {
+          if (!!fallbackComponent) {
             return (
-              <PearlAnimatedBlurView
-                tint={tint}
-                {...borderRadiiStyles}
-                zIndex={3}
+              <Box
                 overflow="hidden"
-                alignItems="center"
-                justifyContent="center"
-                intensity={blurIntensity}
-                style={StyleSheet.absoluteFill}
+                {...borderRadiiStyles}
+                style={{ zIndex: 4 }}
               >
-                {renderFallback()}
-              </PearlAnimatedBlurView>
+                {React.cloneElement(fallbackComponent)}
+              </Box>
             );
           }
 
-          // Render a static overlay over the preview image
-          if (Platform.OS === "android" || Platform.OS === "web") {
+          if (!!fallbackSource) {
+            return (
+              <PearlRNImage
+                {...atoms.fallbackImage}
+                {...borderRadiiStyles}
+                zIndex={3}
+                width="100%"
+                height="100%"
+                source={fallbackSource}
+                style={StyleSheet.absoluteFill}
+              />
+            );
+          }
+        }
+
+        return null;
+      }, [
+        error,
+        fallbackComponent,
+        fallbackSource,
+        borderRadiiStyles,
+        atoms.fallbackImage,
+      ]);
+
+      const renderVideo = useCallback(() => {
+        return (
+          <PearlExpoVideo
+            {...restVideoProps}
+            {...borderRadiiStyles}
+            ref={ref}
+            visible={hasVideoLoaded}
+            onLoad={(status) => {
+              if (onLoad) onLoad(status);
+
+              if (isRemoteVideo && status.isLoaded) {
+                // Start animating the overlay opacity as soon as the URI becomes available
+                Animated.timing(intensity, {
+                  toValue: 0,
+                  duration: overlayTransitionDuration,
+                  useNativeDriver: Platform.OS === "android",
+                }).start();
+              }
+              setHasVideoLoaded(true);
+            }}
+            onLoadStart={() => {
+              if (Platform.OS === "ios") {
+                setTimeout(() => {
+                  if (!hasVideoLoaded) {
+                    setError(true);
+                  }
+                }, 1000);
+              }
+              if (onLoadStart) onLoadStart();
+            }}
+            onError={onErrorHandler}
+            testID={testID}
+            source={source}
+            zIndex={3}
+            width="100%"
+            height="100%"
+            style={StyleSheet.absoluteFill}
+          />
+        );
+      }, [
+        restVideoProps,
+        borderRadiiStyles,
+        ref,
+        hasVideoLoaded,
+        onLoad,
+        isRemoteVideo,
+        intensity,
+        overlayTransitionDuration,
+        onLoadStart,
+        onErrorHandler,
+        testID,
+        source,
+      ]);
+
+      const renderPreview = useCallback(() => {
+        if ((intensity as any)._value === 0) return null;
+
+        if (!!previewSource) {
+          return (
+            <PearlRNImage
+              {...atoms.previewImage}
+              {...borderRadiiStyles}
+              source={previewSource}
+              zIndex={1}
+              width="100%"
+              height="100%"
+              style={StyleSheet.absoluteFill}
+              blurRadius={
+                Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
+              }
+            />
+          );
+        }
+      }, [intensity, previewSource, borderRadiiStyles, atoms.previewImage]);
+
+      const renderImageLoader = useCallback(() => {
+        if ((intensity as any)._value === 0) return null;
+
+        if (loaderType === "progressive") {
+          if (!!previewSource) {
+            // Render a blur overlay over the preview image
+            if (Platform.OS === "ios") {
+              return (
+                <PearlAnimatedBlurView
+                  tint={tint}
+                  {...borderRadiiStyles}
+                  zIndex={3}
+                  overflow="hidden"
+                  alignItems="center"
+                  justifyContent="center"
+                  intensity={blurIntensity}
+                  style={StyleSheet.absoluteFill}
+                >
+                  {renderFallback()}
+                </PearlAnimatedBlurView>
+              );
+            }
+
+            // Render a static overlay over the preview image
+            if (Platform.OS === "android" || Platform.OS === "web") {
+              return (
+                <PearlAnimatedView
+                  {...borderRadiiStyles}
+                  w="100%"
+                  h="100%"
+                  zIndex={3}
+                  overflow="hidden"
+                  alignItems="center"
+                  justifyContent="center"
+                  bgColor={tint === "dark" ? "black" : "white"}
+                  style={{
+                    opacity: previewSourceOverlayOpacity,
+                  }}
+                >
+                  {renderFallback()}
+                </PearlAnimatedView>
+              );
+            }
+          }
+
+          if (!!previewColor) {
             return (
               <PearlAnimatedView
                 {...borderRadiiStyles}
@@ -262,9 +322,9 @@ const BaseVideo = React.forwardRef(
                 overflow="hidden"
                 alignItems="center"
                 justifyContent="center"
-                bgColor={tint === "dark" ? "black" : "white"}
+                bgColor={previewColor}
                 style={{
-                  opacity: previewSourceOverlayOpacity,
+                  opacity: previewColorOverlayOpacity,
                 }}
               >
                 {renderFallback()}
@@ -273,54 +333,47 @@ const BaseVideo = React.forwardRef(
           }
         }
 
-        if (!!previewColor) {
+        if (loaderType === "spinner" && !error) {
           return (
-            <PearlAnimatedView
-              {...borderRadiiStyles}
-              w="100%"
-              h="100%"
-              zIndex={3}
-              overflow="hidden"
-              alignItems="center"
-              justifyContent="center"
-              bgColor={previewColor}
-              style={{
-                opacity: previewColorOverlayOpacity,
-              }}
-            >
-              {renderFallback()}
-            </PearlAnimatedView>
+            <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
+              <Spinner {...atoms.spinner} isExpanded />
+            </Box>
           );
         }
-      }
+      }, [
+        intensity,
+        loaderType,
+        previewSource,
+        borderRadiiStyles,
+        tint,
+        blurIntensity,
+        previewSourceOverlayOpacity,
+        renderFallback,
+        previewColor,
+        previewColorOverlayOpacity,
+        error,
+        atoms.spinner,
+      ]);
 
-      if (loaderType === "spinner" && !error) {
-        return (
-          <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
-            <Spinner {...atoms.spinner} isExpanded />
-          </Box>
-        );
-      }
-    };
+      useEffect(() => {
+        setHasVideoLoaded(false);
+        intensity.setValue(100);
+      }, [JSON.stringify(source)]);
 
-    useEffect(() => {
-      setHasVideoLoaded(false);
-      intensity.setValue(100);
-    }, [JSON.stringify(source)]);
-
-    return (
-      <Center
-        {...finalContainerProps}
-        {...borderRadiiStyles}
-        accessible={true}
-        accessibilityRole="image"
-      >
-        {renderVideo()}
-        {renderPreview()}
-        {renderImageLoader()}
-      </Center>
-    );
-  }
+      return (
+        <Center
+          {...finalContainerProps}
+          {...borderRadiiStyles}
+          accessible={true}
+          accessibilityRole="image"
+        >
+          {renderVideo()}
+          {renderPreview()}
+          {renderImageLoader()}
+        </Center>
+      );
+    }
+  )
 );
 
 /**

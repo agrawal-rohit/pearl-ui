@@ -1,31 +1,14 @@
 import React from "react";
 import Box from "../../atoms/box/box";
-import {
-  ComponentSizes,
-  ComponentVariants,
-  MoleculeComponentProps,
-  ResponsiveValue,
-  StateProps,
-} from "../../../theme/src/types";
+import { MoleculeComponentProps, StateProps } from "../../../theme/src/types";
 import { pearl } from "../../../pearl";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { useCheckedState } from "../../../hooks";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
+import { SwitchAtoms } from "./switch.config";
 
 export type BaseSwitchProps = PressableProps &
   StateProps<"_checked" | "_disabled"> & {
-    /**
-     * Size of the switch.
-     *
-     * @default "m"
-     */
-    size?: ResponsiveValue<ComponentSizes<"Switch">>;
-    /**
-     * Variant of the switch.
-     *
-     * @default "filled"
-     */
-    variant?: ResponsiveValue<ComponentVariants<"Switch">>;
     /**
      * Whether the switch is in a checked state.
      *
@@ -40,55 +23,55 @@ export type BaseSwitchProps = PressableProps &
     isDisabled?: boolean;
   };
 
-const BaseSwitch = React.forwardRef(
-  (
-    {
-      children,
-      atoms,
-      ...rest
-    }: MoleculeComponentProps<"Switch", BaseSwitchProps>,
-    ref: any
-  ) => {
-    let { isChecked, isDisabled, ...otherTrackProps } = atoms.track;
-    const { propsWithCheckedStyles: propsWithCheckedStylesForTrack } =
-      useCheckedState(
-        otherTrackProps,
-        boxStyleFunctions,
-        "molecule",
-        true,
-        isChecked
-      );
-    otherTrackProps = propsWithCheckedStylesForTrack;
-    const { propsWithCheckedStyles: propsWithCheckedStylesForKnob } =
-      useCheckedState(
-        atoms.knob,
-        boxStyleFunctions,
-        "molecule",
-        true,
-        isChecked
-      );
-    atoms.knob = propsWithCheckedStylesForKnob;
+const BaseSwitch = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        atoms,
+        ...rest
+      }: MoleculeComponentProps<"Switch", BaseSwitchProps, SwitchAtoms>,
+      ref: any
+    ) => {
+      let { isChecked, isDisabled, ...otherTrackProps } = atoms.track;
+      const { propsWithCheckedStyles: propsWithCheckedStylesForTrack } =
+        useCheckedState(
+          otherTrackProps,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isChecked
+        );
+      otherTrackProps = propsWithCheckedStylesForTrack;
+      const { propsWithCheckedStyles: propsWithCheckedStylesForKnob } =
+        useCheckedState(
+          atoms.knob,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isChecked
+        );
+      atoms.knob = propsWithCheckedStylesForKnob;
 
-    return (
-      <Pressable
-        {...otherTrackProps}
-        ref={ref}
-        accessible={true}
-        accessibilityRole="switch"
-        isDisabled={isDisabled}
-        accessibilityLabel={
-          rest.accessibilityLabel ? rest.accessibilityLabel : children
-        }
-        accessibilityState={{
-          disabled: isDisabled,
-          checked: isChecked,
-        }}
-        accessibilityHint={rest.accessibilityHint}
-      >
-        <Box {...atoms.knob} />
-      </Pressable>
-    );
-  }
+      return (
+        <Pressable
+          {...(otherTrackProps as any)}
+          ref={ref}
+          accessible={true}
+          accessibilityRole="switch"
+          isDisabled={isDisabled}
+          accessibilityLabel={atoms.track.accessibilityLabel}
+          accessibilityState={{
+            disabled: isDisabled,
+            checked: isChecked,
+          }}
+          accessibilityHint={rest.accessibilityHint}
+        >
+          <Box {...atoms.knob} />
+        </Pressable>
+      );
+    }
+  )
 );
 
 /** The Progress component is a visual indicator of completion percentage. */

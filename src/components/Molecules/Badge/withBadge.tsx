@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { LayoutChangeEvent, Platform } from "react-native";
 import Box from "../../atoms/box/box";
 import Badge, { BadgeProps } from "./badge";
@@ -50,7 +50,7 @@ const withBadge =
     const [badgeWidth, setBadgeWidth] = useState(0);
 
     // Function to compute the position of the badge based on the placement option
-    const computePositionForBadge = () => {
+    const computePositionForBadge = useCallback(() => {
       const positionValue = -1 * offset;
 
       if (placement === "topLeft")
@@ -64,7 +64,7 @@ const withBadge =
 
       // Return bottom right position by default
       return { bottom: positionValue, right: positionValue };
-    };
+    }, [placement, offset]);
 
     // Function to update the width of the badge when its layout changes
     const onBadgeLayoutChange = (event: LayoutChangeEvent) => {
@@ -79,7 +79,7 @@ const withBadge =
     };
 
     // Function to compute the position of the badge with margins for web platform
-    const computePositionWithWebMarginsForBadge = () => {
+    const computedPositionWithWebMarginsForBadge = useMemo(() => {
       const position = computePositionForBadge();
 
       if (Platform.OS === "web") {
@@ -95,7 +95,7 @@ const withBadge =
       }
 
       return position;
-    };
+    }, [computePositionForBadge, baseComponentWidth, badgeWidth]);
 
     // Render the wrapped component with the badge
     return (
@@ -110,7 +110,7 @@ const withBadge =
             onLayout={onBadgeLayoutChange}
             position="absolute"
             zIndex="overlay"
-            style={computePositionWithWebMarginsForBadge()}
+            style={computedPositionWithWebMarginsForBadge}
           >
             {badgeValue}
           </Badge>

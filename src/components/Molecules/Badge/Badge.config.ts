@@ -1,4 +1,13 @@
-export default {
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { TextProps } from "../../atoms/text/text";
+import { BadgeProps } from "./badge";
+
+export type BadgeAtoms = {
+  box: BadgeProps;
+  text: TextProps;
+};
+
+const BadgeConfig: MolecularComponentConfig<BadgeAtoms> = {
   parts: ["box", "text"],
   baseStyle: {
     box: {
@@ -70,3 +79,5 @@ export default {
     variant: "rounded",
   },
 };
+
+export default BadgeConfig;

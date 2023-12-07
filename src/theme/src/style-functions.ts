@@ -1,4 +1,10 @@
-import { ColorValue, FlexStyle, TextStyle, ViewStyle } from "react-native";
+import {
+  ColorValue,
+  FlexStyle,
+  TextStyle,
+  TransformsStyle,
+  ViewStyle,
+} from "react-native";
 import { getKeys, getNestedObject, isThemeKey } from "../utils/type-helpers";
 import {
   borderColorProperties,
@@ -11,6 +17,7 @@ import {
   spacingProperties,
   spacingPropertiesShorthand,
   textShadowProperties,
+  transformProperties,
   typographyProperties,
 } from "./style-properties";
 import {
@@ -72,9 +79,7 @@ export const createStyleFunction = ({
       : props[property];
 
     // Transform the value if transformation function exists
-    if (transform) {
-      value = transform(value, colorMode);
-    }
+    if (transform) value = transform(value, colorMode);
 
     // Check if this value refers to a key in the theme config
     if (isThemeKey(theme, themeKey)) {
@@ -82,12 +87,14 @@ export const createStyleFunction = ({
         let themeTokenValue = theme[themeKey][value];
 
         // For color palettes with multiple shades
-        if (typeof value === "string" && value.match(/^[a-z]+\.\d+$/)) {
-          themeTokenValue = getNestedObject(theme, [
-            themeKey,
-            value.split(".")[0],
-            value.split(".")[1],
-          ]);
+        if (themeKey === "palette") {
+          if (typeof value === "string" && value.match(/^[a-z]+\.\d+$/)) {
+            themeTokenValue = getNestedObject(theme, [
+              themeKey,
+              value.split(".")[0],
+              value.split(".")[1],
+            ]);
+          }
         }
 
         // Apply the value
@@ -206,6 +213,14 @@ export const layoutStyleFunction = [
   }),
 ];
 
+export const transformStyleFunction = getKeys(transformProperties).map(
+  (property) => {
+    return createStyleFunction({
+      property,
+    });
+  }
+);
+
 export const spacingStyleFunction = [
   ...getKeys(spacingProperties).map((property) => {
     return createStyleFunction({
@@ -295,6 +310,7 @@ export const allStyleFunctions = [
   ...spacingStyleFunction,
   ...typographyStyleFunction,
   ...layoutStyleFunction,
+  ...transformStyleFunction,
   ...positionStyleFunction,
   ...borderStyleFunction,
   ...shadowStyleFunction,
@@ -307,6 +323,7 @@ export const boxStyleFunctions = [
   visibleStyleFunction,
   ...backgroundColorStyleFunction,
   ...layoutStyleFunction,
+  ...transformStyleFunction,
   ...spacingStyleFunction,
   ...borderStyleFunction,
   ...shadowStyleFunction,
@@ -314,15 +331,16 @@ export const boxStyleFunctions = [
 ] as StyleFunctionContainer[];
 
 export const textStyleFunctions = [
-  colorStyleFunction,
-  backgroundColorStyleFunction,
   opacityStyleFunction,
   visibleStyleFunction,
-  layoutStyleFunction,
-  typographyStyleFunction,
-  spacingStyleFunction,
-  textShadowStyleFunction,
-  positionStyleFunction,
+  colorStyleFunction,
+  ...backgroundColorStyleFunction,
+  ...layoutStyleFunction,
+  ...transformStyleFunction,
+  ...typographyStyleFunction,
+  ...spacingStyleFunction,
+  ...textShadowStyleFunction,
+  ...positionStyleFunction,
 ] as StyleFunctionContainer[];
 
 // PropTypes
@@ -356,13 +374,18 @@ type SpacingShorthandProps = {
 
 export type SpacingProps = SpacingPropsBase & SpacingShorthandProps;
 
-export type TypographyProps = {
-  [Key in keyof typeof typographyProperties]?: TextStyle[Key];
-} & {
+export type TypographyProps = Omit<
+  {
+    [Key in keyof typeof typographyProperties]?: TextStyle[Key];
+  },
+  "fontWeight" | "letterSpacing" | "fontSize" | "lineHeight" | "fontFamily"
+> & {
   letterSpacing?: ResponsiveValue<keyof FinalPearlTheme["letterSpacings"]>;
   fontSize?: ResponsiveValue<keyof FinalPearlTheme["fontSizes"]>;
   lineHeight?: ResponsiveValue<keyof FinalPearlTheme["lineHeights"]>;
-  fontWeight?: ResponsiveValue<keyof FinalPearlTheme["fontWeights"]>;
+  fontWeight?: ResponsiveValue<
+    keyof FinalPearlTheme["fontWeights"] | string | number
+  >;
   fontFamily?: ResponsiveValue<keyof FinalPearlTheme["fonts"]>;
 };
 
@@ -377,6 +400,12 @@ type LayoutShorthandProps = {
 };
 
 export type LayoutProps = LayoutPropsBase & LayoutShorthandProps;
+
+export type TransformProps = {
+  [Key in keyof typeof transformProperties]?: ResponsiveValue<
+    TransformsStyle[Key]
+  >;
+};
 
 export type PositionProps = {
   [Key in keyof typeof positionProperties]?: ResponsiveValue<FlexStyle[Key]>;
@@ -413,6 +442,7 @@ export type AllProps = BackgroundColorProps &
   SpacingProps &
   TypographyProps &
   LayoutProps &
+  TransformProps &
   PositionProps &
   BorderProps &
   ShadowProps &
@@ -423,6 +453,7 @@ export type BoxStyleProps = BackgroundColorProps &
   OpacityProps &
   VisibleProps &
   LayoutProps &
+  TransformProps &
   SpacingProps &
   BorderProps &
   ShadowProps &
@@ -433,6 +464,7 @@ export type TextStyleProps = ColorProps &
   OpacityProps &
   VisibleProps &
   LayoutProps &
+  TransformProps &
   TypographyProps &
   SpacingProps &
   TextShadowProps;

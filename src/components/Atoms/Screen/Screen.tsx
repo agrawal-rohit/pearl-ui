@@ -5,12 +5,12 @@ import {
   KeyboardAwareScrollView,
   KeyboardAwareScrollViewProps,
 } from "react-native-keyboard-aware-scroll-view";
-import { useTheme } from "../../../hooks/useTheme";
 import { pearl } from "../../../pearl";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { SafeAreaView, View as MotiView } from "moti";
 import { MOTI_PROPS } from "../../../hooks/utils/utils";
 import _ from "lodash";
+import { useTheme } from "../../../hooks/useTheme";
 
 export type BaseScreenProps = Omit<
   BoxProps,
@@ -35,7 +35,7 @@ export type BaseScreenProps = Omit<
      * @default false
      */
     showScrollBar?: boolean;
-    /** Method to execute when a pull-to-refresh action is performed */
+    /** Method to execute when a pull-to-refresh action is performed. Note: `scrollable` should be set as `true` to support pull-to-refresh. */
     onPullToRefresh?: Function;
     /** The colors (at least one) that will be used to draw the refresh indicator (Android only) */
     refreshIndicatorColors?: string[];
@@ -72,100 +72,106 @@ export type BaseScreenProps = Omit<
  * @param refreshTitleColor The color of the refresh indicator title (iOS only)
  * @returns A SafeAreaView component with a KeyboardAwareScrollView component inside
  */
-const CustomScreen = React.forwardRef(
-  (
-    {
-      children,
-      size,
-      variant,
-      scrollable,
-      showScrollBar,
-      onPullToRefresh,
-      refreshIndicatorColors,
-      refreshProgressBackgroundColor,
-      refreshProgressViewOffset,
-      refreshIndicatorSize,
-      refreshTintColor,
-      refreshTitle,
-      refreshTitleColor,
-      ...props
-    }: AtomComponentProps<"Screen", BaseScreenProps>,
-    ref: any
-  ) => {
-    const { colorMode } = useTheme();
-    const [refreshing, setRefreshing] = useState(false);
-    const animationProps = _.pick(props, MOTI_PROPS);
-    const nativeProps = _.omit(props, [...MOTI_PROPS, "style"]);
+const CustomScreen = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        size,
+        variant,
+        scrollable,
+        showScrollBar,
+        onPullToRefresh,
+        refreshIndicatorColors,
+        refreshProgressBackgroundColor,
+        refreshProgressViewOffset,
+        refreshIndicatorSize,
+        refreshTintColor,
+        refreshTitle,
+        refreshTitleColor,
+        ...props
+      }: AtomComponentProps<"Screen", BaseScreenProps>,
+      ref: any
+    ) => {
+      const { colorMode } = useTheme();
+      const [refreshing, setRefreshing] = useState(false);
+      const animationProps = _.pick(props, MOTI_PROPS);
+      const nativeProps = _.omit(props, [...MOTI_PROPS, "style"]);
 
-    /**
-     * Function to execute when a pull-to-refresh action is performed
-     */
-    const onRefresh = React.useCallback(async () => {
-      if (onPullToRefresh) {
-        setRefreshing(true);
-        const functionValue = await onPullToRefresh();
-        let isPromise = functionValue instanceof Promise;
-        if (isPromise)
-          Promise.resolve(functionValue)
-            .then(() => {
-              setRefreshing(false);
-            })
-            .catch((error) => {
-              console.error(error);
-              setRefreshing(false);
-            });
-        else {
-          setRefreshing(false);
+      /**
+       * Function to execute when a pull-to-refresh action is performed
+       */
+      const onRefresh = React.useCallback(async () => {
+        if (onPullToRefresh) {
+          setRefreshing(true);
+          try {
+            await onPullToRefresh();
+          } catch (error) {
+            console.error(error);
+          } finally {
+            setRefreshing(false);
+          }
         }
-      }
-    }, [onPullToRefresh]);
+      }, [onPullToRefresh]);
 
-    return (
-      <>
-        <StatusBar
-          backgroundColor={((props.style as any) ?? {}).backgroundColor}
-          barStyle={colorMode === "light" ? "dark-content" : "light-content"}
-        />
-        <SafeAreaView
-          style={{
-            flex: 1,
-            backgroundColor: ((props.style as any) ?? {}).backgroundColor,
-            paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-          }}
+      const mainView = scrollable ? (
+        <KeyboardAwareScrollView
+          {...nativeProps}
+          enableOnAndroid
+          ref={ref}
+          bounces={true}
+          extraHeight={100}
+          showsVerticalScrollIndicator={showScrollBar}
+          contentContainerStyle={{ flexGrow: 1 }}
+          refreshControl={
+            onPullToRefresh ? (
+              <RefreshControl
+                colors={refreshIndicatorColors}
+                progressBackgroundColor={refreshProgressBackgroundColor}
+                progressViewOffset={refreshProgressViewOffset}
+                size={refreshIndicatorSize === "large" ? 0 : 1}
+                tintColor={refreshTintColor}
+                title={refreshTitle}
+                titleColor={refreshTitleColor}
+                refreshing={refreshing}
+                onRefresh={onRefresh}
+              />
+            ) : undefined
+          }
         >
-          <KeyboardAwareScrollView
-            {...nativeProps}
-            enableOnAndroid
-            ref={ref}
-            bounces={true}
-            extraHeight={100}
-            scrollEnabled={scrollable}
-            showsVerticalScrollIndicator={showScrollBar}
-            contentContainerStyle={{ flexGrow: 1 }}
-            refreshControl={
-              onPullToRefresh ? (
-                <RefreshControl
-                  colors={refreshIndicatorColors}
-                  progressBackgroundColor={refreshProgressBackgroundColor}
-                  progressViewOffset={refreshProgressViewOffset}
-                  size={refreshIndicatorSize === "large" ? 0 : 1}
-                  tintColor={refreshTintColor}
-                  title={refreshTitle}
-                  titleColor={refreshTitleColor}
-                  refreshing={refreshing}
-                  onRefresh={onRefresh}
-                />
-              ) : undefined
-            }
+          <MotiView {...(animationProps as any)} style={props.style}>
+            {children}
+          </MotiView>
+        </KeyboardAwareScrollView>
+      ) : (
+        <MotiView
+          {...(animationProps as any)}
+          style={[{ flex: 1 }, props.style]}
+        >
+          {children}
+        </MotiView>
+      );
+
+      return (
+        <>
+          <StatusBar
+            backgroundColor={((props.style as any) ?? {}).backgroundColor}
+            barStyle={colorMode === "light" ? "dark-content" : "light-content"}
+          />
+          <SafeAreaView
+            style={{
+              flex: 1,
+              backgroundColor: ((props.style as any) ?? {}).backgroundColor,
+              paddingTop:
+                Platform.OS === "android" ? StatusBar.currentHeight : 0,
+            }}
           >
-            <MotiView {...(animationProps as any)} style={props.style}>
-              {children}
-            </MotiView>
-          </KeyboardAwareScrollView>
-        </SafeAreaView>
-      </>
-    );
-  }
+            {mainView}
+          </SafeAreaView>
+        </>
+      );
+    }
+  )
 );
 
 /** A layout component that you can use to wrap all the views in your app. */

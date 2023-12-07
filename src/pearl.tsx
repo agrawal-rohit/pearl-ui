@@ -59,99 +59,93 @@ export function pearl<
     partForOverridenAnimationProps?: string | undefined;
   } = {}
 ) {
-  /**
-   * The final component that will be returned
-   */
   let FinalComponent: any | undefined;
-  if (config.animatable && config.type !== "molecule") {
-    /**
-     * Class component that wraps the base component and adds animation functionality
-     */
-    class ConvertedClassComponent extends React.Component<any, any> {
+  const isAnimatable = config.animatable && config.type !== "molecule";
+
+  if (isAnimatable) {
+    const ConvertedClassComponent = class extends React.Component<any, any> {
       static displayName = `Pearl${
         Component.name ?? Component.displayName ?? `NoName`
       }`;
 
       render() {
         const { children, ...props } = this.props;
-
         return (
           <Component ref={(props as any).forwardedRef} {...props}>
             {children}
           </Component>
         );
       }
-    }
+    };
 
     FinalComponent = motify(ConvertedClassComponent)();
   } else {
     FinalComponent = Component;
   }
 
-  /**
-   * The final component that will be returned
-   */
-  return React.forwardRef(
-    (
-      {
-        children,
-        ...rest
-      }: PearlComponent<ComponentProps, StyleProps, Animateable> &
-        AtomComponent<(typeof config)["componentName"], ComponentType> &
-        MoleculeComponent<(typeof config)["componentName"], ComponentType> & {
-          children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
-        },
-      ref: any
-    ) => {
-      /**
-       * The converted props that will be passed to the final component
-       */
-      let convertedProps;
-      if (config.type === "atom") {
-        convertedProps = useAtomicComponentConfig(
-          config["componentName"],
-          rest,
-          {
-            size: (rest as any).size,
-            variant: (rest as any).variant,
+  return React.memo(
+    React.forwardRef(
+      (
+        {
+          children,
+          ...rest
+        }: PearlComponent<ComponentProps, StyleProps, Animateable> &
+          AtomComponent<(typeof config)["componentName"], ComponentType> &
+          MoleculeComponent<(typeof config)["componentName"], ComponentType> & {
+            children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
           },
-          rest.colorScheme,
-          styleFunctions
-        );
-        if (config.animatable)
-          convertedProps = useMotiWithStyleProps(
-            convertedProps,
+        ref: any
+      ) => {
+        /**
+         * The converted props that will be passed to the final component
+         */
+        let convertedProps;
+        if (config.type === "atom") {
+          convertedProps = useAtomicComponentConfig(
+            config["componentName"],
+            rest,
+            {
+              size: (rest as any).size,
+              variant: (rest as any).variant,
+            },
+            rest.colorScheme,
             styleFunctions
           );
-      } else if (config.type === "molecule") {
-        convertedProps = useMolecularComponentConfig(
-          config["componentName"],
-          rest,
-          {
-            size: (rest as any).size,
-            variant: (rest as any).variant,
-          },
-          rest.colorScheme,
-          styleFunctions,
-          moleculeConfigOptions.partForOverridenStyleProps,
-          moleculeConfigOptions.partForOverridenNativeProps,
-          moleculeConfigOptions.partForOverridenAnimationProps
-        );
-      } else {
-        convertedProps = useStyleProps(rest, styleFunctions);
-        if (config.animatable) {
-          convertedProps = useMotiWithStyleProps(
-            convertedProps,
-            styleFunctions
+          if (config.animatable)
+            convertedProps = useMotiWithStyleProps(
+              convertedProps,
+              styleFunctions
+            );
+        } else if (config.type === "molecule") {
+          convertedProps = useMolecularComponentConfig(
+            config["componentName"],
+            rest,
+            {
+              size: (rest as any).size,
+              variant: (rest as any).variant,
+            },
+            rest.colorScheme,
+            styleFunctions,
+            moleculeConfigOptions.partForOverridenStyleProps,
+            moleculeConfigOptions.partForOverridenNativeProps,
+            moleculeConfigOptions.partForOverridenAnimationProps
           );
+        } else {
+          convertedProps = useStyleProps(rest, styleFunctions);
+          if (config.animatable) {
+            convertedProps = useMotiWithStyleProps(
+              convertedProps,
+              styleFunctions
+            );
+          }
         }
-      }
 
-      return (
-        <FinalComponent {...convertedProps} ref={ref}>
-          {children}
-        </FinalComponent>
-      );
-    }
+        return (
+          <FinalComponent {...convertedProps} ref={ref}>
+            {children}
+          </FinalComponent>
+        );
+      }
+    )
   );
 }

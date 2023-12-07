@@ -33,32 +33,35 @@ type BaseDividerProps = BoxProps & {
  * CustomDivider is a functional component that returns a Box component with specific styles based on the props.
  * It uses the forwardRef function from React to pass the ref to the Box component.
  */
-const CustomDivider = React.forwardRef(
-  (
-    {
-      children,
-      length = "100%",
-      thickness = 1,
-      orientation = "horizontal",
-      ...props
-    }: AtomComponentProps<"Divider", BaseDividerProps>,
-    ref: any
-  ) => {
-    // Styles are applied based on the orientation of the divider
-    return (
-      <View
-        ref={ref}
-        {...props}
-        style={{
+const CustomDivider = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        length = "100%",
+        thickness = 1,
+        orientation = "horizontal",
+        ...props
+      }: AtomComponentProps<"Divider", BaseDividerProps>,
+      ref: any
+    ) => {
+      // Styles are applied based on the orientation of the divider
+      const style = React.useMemo(
+        () => ({
           ...(props.style as any),
           height: orientation === "horizontal" ? thickness : length,
           width: orientation === "vertical" ? thickness : length,
-        }}
-      >
-        {children}
-      </View>
-    );
-  }
+        }),
+        [props.style, orientation, thickness, length]
+      );
+
+      return (
+        <View ref={ref} {...props} style={style}>
+          {children}
+        </View>
+      );
+    }
+  )
 );
 
 /**

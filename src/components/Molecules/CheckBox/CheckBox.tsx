@@ -3,13 +3,10 @@ import Text from "../../atoms/text/text";
 import {
   FinalPearlTheme,
   ResponsiveValue,
-  ColorScheme,
-  ComponentSizes,
-  ComponentVariants,
   MoleculeComponentProps,
   StateProps,
 } from "../../../theme/src/types";
-import Icon from "../../atoms/icon/icon";
+import Icon, { IconProps } from "../../atoms/icon/icon";
 import Pressable, { PressableProps } from "../../atoms/pressable/pressable";
 import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponentConfig";
 import Stack from "../../atoms/stack/stack";
@@ -19,22 +16,11 @@ import { useInvalidState } from "../../../hooks/state/useInvalidState";
 import { useCheckedState } from "../../../hooks/state/useCheckedState";
 import { useDisabledState } from "../../../hooks";
 import Center from "../../atoms/center/center";
+import { CheckboxAtoms } from "./checkbox.config";
 import _ from "lodash";
 
 export type CheckBoxProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
-    /**
-     * Size of the checkbox.
-     *
-     * @default "m"
-     */
-    size?: ResponsiveValue<ComponentSizes<"CheckBox">>;
-    /**
-     * Variant of the checkbox.
-     *
-     * @default "filled"
-     */
-    variant?: ResponsiveValue<ComponentVariants<"CheckBox">>;
     /** Value of the checkbox if it is part of a group. */
     value?: string | number | undefined;
     /**
@@ -78,200 +64,177 @@ export type CheckBoxProps = PressableProps &
      *
      * @default "Ionicons"
      */
-    checkedIconFamily?:
-      | "AntDesign"
-      | "Entypo"
-      | "EvilIcons"
-      | "Feather"
-      | "FontAwesome"
-      | "FontAwesome5"
-      | "Fontisto"
-      | "Foundation"
-      | "Ionicons"
-      | "MaterialCommunityIcons"
-      | "MaterialIcons"
-      | "Octicons"
-      | "SimpleLineIcons"
-      | "Zocial";
+    checkedIconFamily?: IconProps["iconFamily"];
     /**
      * Name of the icon when the checkbox is in checked state.
      *
      * @default "checkmark-sharp"
      */
-    checkedIconName?: string;
+    checkedIconName?: IconProps["iconName"];
     /**
      * Family of the icon when the checkbox is in indeterminate state.
      *
      * @default "Ionicons"
      */
-    indeterminateIconFamily?:
-      | "AntDesign"
-      | "Entypo"
-      | "EvilIcons"
-      | "Feather"
-      | "FontAwesome"
-      | "FontAwesome5"
-      | "Fontisto"
-      | "Foundation"
-      | "Ionicons"
-      | "MaterialCommunityIcons"
-      | "MaterialIcons"
-      | "Octicons"
-      | "SimpleLineIcons"
-      | "Zocial";
+    indeterminateIconFamily?: IconProps["iconFamily"];
     /**
      * Name of the icon when the checkbox is in indeterminate state.
      *
      * @default "remove-outline"
      */
-    indeterminateIconName?: string;
+    indeterminateIconName?: IconProps["iconName"];
     children?: string;
   };
 
 /** The Checkbox component is used in forms when a user needs to select multiple values from several options. **/
-const CheckBox = React.forwardRef(
-  (
-    {
-      children,
-      onPress = () => {},
-      ...rest
-    }: Omit<MoleculeComponentProps<"CheckBox", CheckBoxProps>, "atoms"> & {
-      atoms?: Record<string, any>;
-    },
-    checkboxRef: any
-  ) => {
-    const {
-      size,
-      variant,
-      isDisabled,
-      colorScheme,
-      shape,
-      checkboxGroupValue,
-      addCheckBoxGroupValue,
-      deleteCheckBoxGroupValue,
-    } = useCheckBoxGroup();
-
-    // Overwrite props from checkbox group
-    rest.size = rest.size ?? size;
-    rest.variant = rest.variant ?? variant;
-    rest.isDisabled = rest.isDisabled ?? isDisabled;
-    rest.colorScheme = rest.colorScheme ?? colorScheme;
-    rest.shape = rest.shape ?? shape;
-
-    const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
-    const isCheckBoxChecked = isCheckBoxInGroup
-      ? checkboxGroupValue?.includes(rest.value as string | number) &&
-        rest.value !== undefined
-      : rest.isChecked;
-
-    const molecularProps = useMolecularComponentConfig(
-      "CheckBox",
-      rest,
+const CheckBox = React.memo(
+  React.forwardRef(
+    (
       {
-        size: rest.size,
-        variant: rest.variant,
+        children,
+        onPress = () => {},
+        ...rest
+      }: Omit<
+        MoleculeComponentProps<"CheckBox", CheckBoxProps, CheckboxAtoms>,
+        "atoms"
+      > & {
+        atoms?: CheckboxAtoms;
       },
-      rest.colorScheme,
-      boxStyleFunctions,
-      "container",
-      "box",
-      "container"
-    );
-    const { atoms } = molecularProps;
+      checkboxRef: any
+    ) => {
+      const {
+        size,
+        variant,
+        isDisabled,
+        colorScheme,
+        shape,
+        checkboxGroupValue,
+        addCheckBoxGroupValue,
+        deleteCheckBoxGroupValue,
+      } = useCheckBoxGroup();
 
-    // Use state for dynamic style
-    const { propsWithCheckedStyles } = useCheckedState(
-      atoms.box,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      isCheckBoxChecked
-    );
-    atoms.box = propsWithCheckedStyles;
-    const { propsWithInvalidStyles } = useInvalidState(
-      atoms.box,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      rest.isInvalid
-    );
-    atoms.box = propsWithInvalidStyles;
-    const { propsWithDisabledStyles } = useDisabledState(
-      atoms.container,
-      boxStyleFunctions,
-      "molecule",
-      true,
-      rest.isDisabled
-    );
-    atoms.container = propsWithDisabledStyles;
+      // Overwrite props from checkbox group
+      rest.size = rest.size ?? size;
+      rest.variant = rest.variant ?? variant;
+      rest.isDisabled = rest.isDisabled ?? isDisabled;
+      rest.colorScheme = rest.colorScheme ?? colorScheme;
+      rest.shape = rest.shape ?? shape;
 
-    // OTHER METHODS
-    const checkboxPressHandler = () => {
-      if (isCheckBoxInGroup) {
-        // Add the value to the group if the checkbox is currently unchecked
-        if (!isCheckBoxChecked) addCheckBoxGroupValue(rest.value);
-        else deleteCheckBoxGroupValue(rest.value);
+      const isCheckBoxInGroup = addCheckBoxGroupValue !== undefined;
+      const isCheckBoxChecked = isCheckBoxInGroup
+        ? checkboxGroupValue?.includes(rest.value as string | number) &&
+          rest.value !== undefined
+        : rest.isChecked;
 
-        if (onPress) onPress();
-      }
-      if (onPress) onPress();
-    };
+      const molecularProps = useMolecularComponentConfig<CheckboxAtoms>(
+        "CheckBox",
+        rest,
+        {
+          size: rest.size,
+          variant: rest.variant,
+        },
+        rest.colorScheme,
+        boxStyleFunctions,
+        "container",
+        "box",
+        "container"
+      );
+      const { atoms } = molecularProps;
 
-    // RENDER METHODS
-    return (
-      <Pressable
-        {...atoms.container}
-        ref={checkboxRef}
-        onPress={checkboxPressHandler}
-        accessible={true}
-        accessibilityRole="checkbox"
-        isDisabled={rest.isDisabled}
-        accessibilityLabel={
-          rest.accessibilityLabel ? rest.accessibilityLabel : children
+      // Use state for dynamic style
+      const { propsWithCheckedStyles } = useCheckedState(
+        atoms.box,
+        boxStyleFunctions,
+        "molecule",
+        true,
+        isCheckBoxChecked
+      );
+      atoms.box = propsWithCheckedStyles;
+      const { propsWithInvalidStyles } = useInvalidState(
+        atoms.box,
+        boxStyleFunctions,
+        "molecule",
+        true,
+        rest.isInvalid
+      );
+      atoms.box = propsWithInvalidStyles;
+      const { propsWithDisabledStyles } = useDisabledState(
+        atoms.container,
+        boxStyleFunctions,
+        "molecule",
+        true,
+        rest.isDisabled
+      );
+      atoms.container = propsWithDisabledStyles;
+
+      // OTHER METHODS
+      const checkboxPressHandler = () => {
+        if (isCheckBoxInGroup) {
+          // Add the value to the group if the checkbox is currently unchecked
+          if (!isCheckBoxChecked) addCheckBoxGroupValue(rest.value);
+          else deleteCheckBoxGroupValue(rest.value);
+
+          if (onPress) onPress();
         }
-        accessibilityState={{
-          disabled: rest.isDisabled,
-          checked: isCheckBoxChecked,
-        }}
-        accessibilityHint={rest.accessibilityHint}
-      >
-        <Stack
-          spacing={rest.spacing || atoms.container.spacing}
-          direction="horizontal"
-        >
-          <Center
-            borderRadius={
-              atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
-            }
-            {...atoms.box}
-          >
-            <Icon
-              {...atoms.icon}
-              iconFamily={
-                rest.isIndeterminate
-                  ? rest.indeterminateIconFamily ??
-                    atoms.icon.indeterminateIconFamily
-                  : rest.checkedIconFamily ?? atoms.icon.checkedIconFamily
-              }
-              iconName={
-                rest.isIndeterminate
-                  ? rest.indeterminateIconName ??
-                    atoms.icon.indeterminateIconName
-                  : rest.checkedIconName ?? atoms.icon.checkedIconName
-              }
-              color={isCheckBoxChecked ? atoms.icon.color : "transparent"}
-            />
-          </Center>
+        if (onPress) onPress();
+      };
 
-          {!!children && (
-            <Text {...atoms.text} alignSelf="center">
-              {children}
-            </Text>
-          )}
-        </Stack>
-      </Pressable>
-    );
-  }
+      return (
+        <Pressable
+          {...atoms.container}
+          ref={checkboxRef}
+          onPress={checkboxPressHandler}
+          accessible={true}
+          accessibilityRole="checkbox"
+          isDisabled={rest.isDisabled}
+          accessibilityLabel={
+            rest.accessibilityLabel ? rest.accessibilityLabel : children
+          }
+          accessibilityState={{
+            disabled: rest.isDisabled,
+            checked: isCheckBoxChecked,
+          }}
+          accessibilityHint={rest.accessibilityHint}
+        >
+          <Stack
+            spacing={rest.spacing || atoms.container.spacing}
+            direction="horizontal"
+          >
+            <Center
+              borderRadius={
+                atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
+              }
+              {...atoms.box}
+            >
+              <Icon
+                {...atoms.icon}
+                iconFamily={
+                  rest.isIndeterminate
+                    ? rest.indeterminateIconFamily ??
+                      atoms.box.indeterminateIconFamily ??
+                      "Ionicons"
+                    : rest.checkedIconFamily ??
+                      atoms.box.checkedIconFamily ??
+                      "Ionicons"
+                }
+                iconName={
+                  rest.isIndeterminate
+                    ? rest.indeterminateIconName ??
+                      atoms.box.indeterminateIconName ??
+                      "remove-outline"
+                    : rest.checkedIconName ??
+                      atoms.box.checkedIconName ??
+                      "checkmark-sharp"
+                }
+              />
+            </Center>
+
+            {!!children && <Text {...atoms.text}>{children}</Text>}
+          </Stack>
+        </Pressable>
+      );
+    }
+  )
 );
 
 CheckBox.displayName = "CheckBox";

@@ -78,48 +78,55 @@ export type CheckBoxGroupProps = BoxProps & {
 /**
  * CheckBoxGroup is a component that groups together multiple CheckBox components.
  */
-const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
-  children,
-  isDisabled = false,
-  shape = "square",
-  value = undefined,
-  defaultValue = [],
-  spacing = "2",
-  size = "m",
-  variant = "filled",
-  colorScheme = "primary",
-  onChange = () => {},
-  ...rest
-}) => {
-  const currentValue = value ?? defaultValue ?? [];
+const CheckBoxGroup = React.memo(
+  React.forwardRef<any, CheckBoxGroupProps>(
+    (
+      {
+        children,
+        isDisabled = false,
+        shape = "square",
+        value = undefined,
+        defaultValue = [],
+        spacing = "2",
+        size = "m",
+        variant = "filled",
+        colorScheme = "primary",
+        onChange = () => {},
+        ...rest
+      },
+      ref
+    ) => {
+      const currentValue = value ?? defaultValue ?? [];
 
-  const addCheckBoxGroupValue = (valueToAdd: string | number) => {
-    onChange([...currentValue, valueToAdd]);
-  };
+      const addCheckBoxGroupValue = (valueToAdd: string | number) => {
+        onChange([...currentValue, valueToAdd]);
+      };
 
-  const deleteCheckBoxGroupValue = (valueToDelete: string | number) => {
-    onChange(currentValue.filter((value) => value !== valueToDelete));
-  };
+      const deleteCheckBoxGroupValue = (valueToDelete: string | number) => {
+        onChange(currentValue.filter((value) => value !== valueToDelete));
+      };
 
-  return (
-    <checkboxGroupContext.Provider
-      value={{
-        size: size,
-        shape: shape,
-        variant: variant,
-        isDisabled: isDisabled,
-        colorScheme: colorScheme,
-        checkboxGroupValue: currentValue,
-        addCheckBoxGroupValue: addCheckBoxGroupValue,
-        deleteCheckBoxGroupValue: deleteCheckBoxGroupValue,
-      }}
-    >
-      <Stack direction="vertical" spacing={spacing} {...rest}>
-        {children}
-      </Stack>
-    </checkboxGroupContext.Provider>
-  );
-};
+      return (
+        <checkboxGroupContext.Provider
+          value={{
+            size: size,
+            shape: shape,
+            variant: variant,
+            isDisabled: isDisabled,
+            colorScheme: colorScheme,
+            checkboxGroupValue: currentValue,
+            addCheckBoxGroupValue: addCheckBoxGroupValue,
+            deleteCheckBoxGroupValue: deleteCheckBoxGroupValue,
+          }}
+        >
+          <Stack direction="vertical" spacing={spacing} {...rest} ref={ref}>
+            {children}
+          </Stack>
+        </checkboxGroupContext.Provider>
+      );
+    }
+  )
+);
 
 CheckBoxGroup.displayName = "CheckBoxGroup";
 

@@ -20,67 +20,66 @@ type ScaleFadeProps = BoxProps & {
 /**
  * ScaleFade is a component that provides an view with a scaling fade transition.
  */
-const ScaleFade = React.forwardRef(
-  (
-    {
-      children,
-      show,
-      initialScale = 0.9,
-      transition = {},
-      exitTransition = {},
-      ...rest
-    }: ScaleFadeProps,
-    ref: any
-  ) => {
-    return (
-      <AnimatePresence>
-        {show && (
-          <Box
-            ref={ref}
-            {...rest}
-            from={{
-              scale: initialScale,
-              opacity: 0,
-            }}
-            animate={{
-              scale: 1,
-              opacity: 1,
-            }}
-            exit={{
-              scale: initialScale,
-              opacity: 0,
-            }}
-            transition={
-              {
-                dampingRatio: 1,
-                duration: 100,
-                easing: Easing.inOut,
-                ...transition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["transition"]
-            }
-            exitTransition={
-              {
-                dampingRatio: 1,
-                duration: 100,
-                easing: Easing.inOut,
-                ...exitTransition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["exitTransition"]
-            }
-          >
-            {children}
-          </Box>
-        )}
-      </AnimatePresence>
-    );
-  }
+const ScaleFade = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        show,
+        initialScale = 0.9,
+        transition = {},
+        exitTransition = {},
+        ...rest
+      }: ScaleFadeProps,
+      ref: any
+    ) => {
+      const fromStyle = React.useMemo(
+        () => ({ scale: initialScale, opacity: 0 }),
+        [initialScale]
+      );
+      const animateStyle = React.useMemo(() => ({ scale: 1, opacity: 1 }), []);
+      const exitStyle = React.useMemo(
+        () => ({ scale: initialScale, opacity: 0 }),
+        [initialScale]
+      );
+      const transitionProps = React.useMemo(
+        () => ({
+          dampingRatio: 1,
+          duration: 100,
+          type: "spring",
+          ...(transition as any),
+        }),
+        [transition]
+      );
+      const exitTransitionProps = React.useMemo(
+        () => ({
+          dampingRatio: 1,
+          duration: 100,
+          type: "spring",
+          ...(exitTransition as any),
+        }),
+        [exitTransition]
+      );
+
+      return (
+        <AnimatePresence>
+          {show && (
+            <Box
+              ref={ref}
+              {...rest}
+              from={fromStyle}
+              animate={animateStyle}
+              exit={exitStyle}
+              transition={transitionProps}
+              exitTransition={exitTransitionProps}
+            >
+              {children}
+            </Box>
+          )}
+        </AnimatePresence>
+      );
+    }
+  )
 );
 
 ScaleFade.displayName = "ScaleFade";

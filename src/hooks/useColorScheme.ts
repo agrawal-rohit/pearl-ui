@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { ColorScheme } from "../theme/src/types";
 import { getKeys } from "../theme/utils/type-helpers";
 import { useTheme } from "./useTheme";
@@ -13,18 +14,19 @@ const replaceColorValuesInObject = (
   newValue: string,
   obj: Record<string, any>
 ): Record<string, any> => {
-  const updatedObj: Record<string, any> = {};
-
-  for (const [key, value] of Object.entries(obj)) {
-    if (typeof value === "object" && !getKeys(obj).includes("$$typeof")) {
-      updatedObj[key] = replaceColorValuesInObject(newValue, value);
-    } else if (typeof value === "string" && value.includes("primary")) {
-      updatedObj[key] = value.replace("primary", newValue);
-    } else {
-      updatedObj[key] = value;
-    }
-  }
-  return updatedObj;
+  return Object.entries(obj).reduce(
+    (updatedObj: Record<string, any>, [key, value]) => {
+      if (typeof value === "object" && !getKeys(obj).includes("$$typeof")) {
+        updatedObj[key] = replaceColorValuesInObject(newValue, value);
+      } else if (typeof value === "string" && value.includes("primary")) {
+        updatedObj[key] = value.replace("primary", newValue);
+      } else {
+        updatedObj[key] = value;
+      }
+      return updatedObj;
+    },
+    {}
+  );
 };
 
 /**
@@ -47,5 +49,11 @@ export const useColorScheme = (
   checkKeyAvailability(targetColorScheme, theme.palette, "theme.palette");
 
   // Replace the color values in the props object with the new target color scheme.
-  return replaceColorValuesInObject(targetColorScheme, props);
+  // Use a memoized version of replaceColorValuesInObject to avoid unnecessary computations.
+  const memoizedReplaceColorValuesInObject = useMemo(
+    () => replaceColorValuesInObject(targetColorScheme, props),
+    [targetColorScheme, props]
+  );
+
+  return memoizedReplaceColorValuesInObject;
 };

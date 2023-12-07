@@ -16,8 +16,8 @@ export type TextareaProps = Omit<
 };
 
 /** The Textarea component is a component that is used to add multiline support for text inputs. **/
-const Textarea = React.forwardRef(
-  ({ rows = 4, ...rest }: TextareaProps, textareaRef: any) => {
+const Textarea = React.memo(
+  React.forwardRef(({ rows = 4, ...rest }: TextareaProps, textareaRef: any) => {
     return (
       <Input
         multiline
@@ -29,7 +29,7 @@ const Textarea = React.forwardRef(
         {...rest}
       />
     );
-  }
+  })
 );
 
 Textarea.displayName = "Textarea";

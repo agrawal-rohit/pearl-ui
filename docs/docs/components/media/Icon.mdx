@@ -1,0 +1,119 @@
+---
+sidebar_position: 1
+title: Icon
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts"
+  />
+</div>
+
+The `Icon` component is a versatile tool for adding [Expo Icons](https://icons.expo.fyi/) to your application. It offers customization options through the use of [style props](../../core-features/style-props).
+
+## Import
+
+```jsx
+import { Icon } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Icon iconFamily="AntDesign" iconName="stepforward" />
+```
+
+### Icon sizes
+
+The `size` prop allows you to adjust the size of the icon. You can use the keys available in <t>theme.components.Icon["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
+
+```jsx
+<Icon iconFamily="AntDesign" iconName="stepforward" size="xs" />
+
+<Icon iconFamily="AntDesign" iconName="stepforward" size="s" />
+
+<Icon iconFamily="AntDesign" iconName="stepforward" size="m" />
+
+<Icon iconFamily="AntDesign" iconName="stepforward" size="l" />
+```
+
+For more precise control over the size of a single `Icon` instance, you can use the `rawSize` prop.
+
+```jsx
+<Icon iconFamily="AntDesign" iconName="stepforward" rawSize={43} />
+```
+
+### Overriding Styles
+
+The `Icon` component supports a variety of style props which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/icon/icon.config.ts).
+
+```jsx
+// passing style prop color="primary.500" overrides the default component config value of color="neutral.900"
+<Icon
+  iconFamily="AntDesign"
+  iconName="stepforward"
+  size="l"
+  color="primary.500"
+  margin="4"
+/>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/icon-light" />
+
+## Accessibility
+
+- `Icon` has the `role` of `text`.
+- `Icon` has the default label set as `{iconName} Icon`. A custom label can be specified using the `accessibilityLabel` prop.
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Icon` component supports the following style props:
+
+- [color and backgroundColor](../../core-features/style-props#color-and-background-color)
+- [margin and padding](../../core-features/style-props#margin-and-padding)
+- [layout](../../core-features/style-props#layout)
+- [transform](../../core-features/style-props#transform)
+- [opacity and visibility](../../core-features/style-props#opacity-and-visibility)
+
+### Animation Properties
+
+The `Icon` component supports animation properties from the [Moti](https://moti.fyi/) library, enabling the creation of dynamic and interactive UI elements. The [useMotiWithStyleProps](../../hooks/useMotiWithStyleProps) hook from the Moti library is used to manage these animation properties.
+
+| Property              | Type                        | Default     | Description                                                                                                                                                                                                                                                                 |
+| --------------------- | --------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `from`                | <t>object</t>               |             | Defines the starting state of the animation.                                                                                                                                                                                                                                |
+| `to`                  | <t>object</t>               |             | Defines the ending state of the animation.                                                                                                                                                                                                                                  |
+| `transition`          | <t>object</t>               |             | Specifies the type of transition that the animation will use.                                                                                                                                                                                                               |
+| `exitTransition`      | <t>object</t>               |             | Determines the transition type that will be used when the component is unmounted. By default, `exit` uses `transition` to configure its animations, so this prop is not required. However, if you pass `exitTransition`, it will override `transition` for exit animations. |
+| `state`               | <t>object</t>               |             | Manages the overall state of the animation, including the `from` and `to` states.                                                                                                                                                                                           |
+| `delay`               | <t>number</t>               |             | Manage the delay for the `animate` field. (Use the `transition` prop for more granular control)                                                                                                                                                                             |
+| `onDidAnimate`        | <t>() =&gt; void</t>        |             | Callback function called after finishing an animation.                                                                                                                                                                                                                      |
+| `stylePriority`       | <t>"state" \| "animate"</t> | `"animate"` | This is not a prop you will likely find yourself using. If set to <t>"animate"</t>, then styles passed from the `animate` prop will take precedent. Otherwise, if set to <t>"state"</t>, then the `state` prop will take precedent for matching styles.                     |
+| `animateInitialState` | <t>boolean</t>              | `false`     | If `true`, the `from` prop will be set to animate. This will be noticeable for some spring animations, and might make them jumpy on mount.                                                                                                                                  |
+
+### Additional Properties
+
+The `Icon` component also supports the following additional properties:
+
+| Name                 | Required | Type                                                                                                                                                                                                                                     | Default | Description                                              |
+| -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- |
+| `size`               | No       | <t>PearlTheme.components.Icon["sizes"]</t>                                                                                                                                                                                               | `"m"`   | Specifies the size of the icon                           |
+| `variant`            | No       | <t>PearlTheme.components.Icon["variants"]</t>                                                                                                                                                                                            |         | Defines the variant of the icon                          |
+| `rawSize`            | No       | <t>number</t>                                                                                                                                                                                                                            |         | Sets the raw size of the icon                            |
+| `iconFamily`         | Yes      | <t> "AntDesign" \| "Entypo" \| "EvilIcons" \| "Feather" \| "FontAwesome" \| "FontAwesome5" \| "Fontisto" \| "Foundation" \| "Ionicons" \| "MaterialCommunityIcons" \| "MaterialIcons" \| "Octicons" \| "SimpleLineIcons" \| "Zocial"</t> |         | Specifies the icon family that contains the desired icon |
+| `iconName`           | Yes      | <t>string</t>                                                                                                                                                                                                                            |         | Specifies the name of the icon within its icon family    |
+| `accessibilityLabel` | No       | <t>string</t>                                                                                                                                                                                                                            |         | Sets the accessibility label of the icon                 |

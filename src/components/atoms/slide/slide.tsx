@@ -1,10 +1,6 @@
 import React from "react";
-import { ViewStyle } from "react-native";
 import Box, { BoxProps } from "../box/box";
 import { AnimatePresence } from "moti";
-import { MotiWithPearlStyleProps } from "../../../theme/src/types";
-import { BoxStyleProps } from "../../../theme/src/style-functions";
-import { Easing } from "react-native-reanimated";
 
 type SlideProps = BoxProps & {
   /** Whether to show the component */
@@ -20,86 +16,94 @@ type SlideProps = BoxProps & {
 /**
  * Slide is a component that provides an view with a sliding transition.
  */
-const Slide = React.forwardRef(
-  (
-    {
-      children,
-      show,
-      direction = "right",
-      transition = {},
-      exitTransition = {},
-      ...rest
-    }: SlideProps,
-    ref: any
-  ) => {
-    const getAnimationProps = () => {
-      let from = {};
-      let animate = {};
-      let exit = {};
-      switch (direction) {
-        case "bottom":
-          from = { translateY: -10000 };
-          animate = { translateY: 0 };
-          exit = { translateY: -10000 };
-          break;
-        case "top":
-          from = { translateY: 10000 };
-          animate = { translateY: 0 };
-          exit = { translateY: 10000 };
-          break;
-        case "right":
-          from = { translateX: -10000 };
-          animate = { translateX: 0 };
-          exit = { translateX: -10000 };
-          break;
-        case "left":
-          from = { translateX: 10000 };
-          animate = { translateX: 0 };
-          exit = { translateX: 10000 };
-          break;
-      }
+const Slide = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        show,
+        direction = "right",
+        transition = {},
+        exitTransition = {},
+        ...rest
+      }: SlideProps,
+      ref: any
+    ) => {
+      const from = React.useMemo(() => {
+        switch (direction) {
+          case "bottom":
+            return { translateY: -10000 };
+          case "top":
+            return { translateY: 10000 };
+          case "right":
+            return { translateX: -10000 };
+          case "left":
+            return { translateX: 10000 };
+          default:
+            return {};
+        }
+      }, [direction]);
 
-      return { from, animate, exit };
-    };
+      const animate = React.useMemo(() => {
+        switch (direction) {
+          case "bottom":
+          case "top":
+          case "right":
+          case "left":
+            return { translateX: 0, translateY: 0 };
+          default:
+            return {};
+        }
+      }, [direction]);
 
-    return (
-      <AnimatePresence>
-        {show && (
-          <Box
-            ref={ref}
-            {...rest}
-            {...getAnimationProps()}
-            transition={
-              {
-                dampingRatio: 1,
-                duration: 200,
-                easing: Easing.inOut,
-                ...transition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["transition"]
-            }
-            exitTransition={
-              {
-                dampingRatio: 1,
-                duration: 200,
-                easing: Easing.inOut,
-                ...exitTransition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["exitTransition"]
-            }
-          >
-            {children}
-          </Box>
-        )}
-      </AnimatePresence>
-    );
-  }
+      const exit = React.useMemo(() => {
+        switch (direction) {
+          case "bottom":
+            return { translateY: -10000 };
+          case "top":
+            return { translateY: 10000 };
+          case "right":
+            return { translateX: -10000 };
+          case "left":
+            return { translateX: 10000 };
+          default:
+            return {};
+        }
+      }, [direction]);
+
+      return (
+        <AnimatePresence>
+          {show && (
+            <Box
+              ref={ref}
+              {...rest}
+              from={from}
+              animate={animate}
+              exit={exit}
+              transition={
+                {
+                  dampingRatio: 1,
+                  duration: 200,
+                  type: "spring",
+                  ...transition,
+                } as any
+              }
+              exitTransition={
+                {
+                  dampingRatio: 1,
+                  duration: 200,
+                  type: "spring",
+                  ...exitTransition,
+                } as any
+              }
+            >
+              {children}
+            </Box>
+          )}
+        </AnimatePresence>
+      );
+    }
+  )
 );
 
 Slide.displayName = "Slide";

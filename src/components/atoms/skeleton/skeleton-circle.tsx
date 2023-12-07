@@ -13,18 +13,20 @@ type SkeletonCircleProps = SkeletonProps & {
 /**
  * `SkeletonCircle` is a layout component that displays a circular skeleton placeholder.
  */
-const SkeletonCircle = React.forwardRef(
-  ({ boxSize = 20, ...rest }: SkeletonCircleProps, ref: any) => {
-    return (
-      <Skeleton
-        borderRadius="full"
-        w={boxSize}
-        h={boxSize}
-        {...rest}
-        ref={ref}
-      />
-    );
-  }
+const SkeletonCircle = React.memo(
+  React.forwardRef(
+    ({ boxSize = 20, ...rest }: SkeletonCircleProps, ref: any) => {
+      return (
+        <Skeleton
+          borderRadius="full"
+          w={boxSize}
+          h={boxSize}
+          {...rest}
+          ref={ref}
+        />
+      );
+    }
+  )
 );
 
 SkeletonCircle.displayName = "SkeletonCircle";

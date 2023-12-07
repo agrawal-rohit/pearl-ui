@@ -1,4 +1,14 @@
 export const elevation = {
+  none: {
+    shadowColor: "#1A2138",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0,
+    shadowRadius: 0,
+    elevation: 0,
+  },
   xs: {
     shadowColor: "#1A2138",
     shadowOffset: {

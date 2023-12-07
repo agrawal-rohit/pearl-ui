@@ -14,63 +14,61 @@ type FadeProps = BoxProps & {
 /**
  * Fade is a component that provides an view with a fade transition.
  */
-const Fade = React.forwardRef(
-  (
-    {
-      children,
-      show,
-      transition = {},
-      exitTransition = {},
-      ...rest
-    }: FadeProps,
-    ref: any
-  ) => {
-    return (
-      <AnimatePresence>
-        {show && (
-          <Box
-            ref={ref}
-            {...rest}
-            from={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            exit={{
-              opacity: 0,
-            }}
-            transition={
-              {
-                dampingRatio: 1,
-                duration: 100,
-                easing: Easing.inOut,
-                ...transition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["transition"]
-            }
-            exitTransition={
-              {
-                dampingRatio: 1,
-                duration: 100,
-                easing: Easing.inOut,
-                ...exitTransition,
-                type: "spring",
-              } as MotiWithPearlStyleProps<
-                ViewStyle,
-                BoxStyleProps
-              >["exitTransition"]
-            }
-          >
-            {children}
-          </Box>
-        )}
-      </AnimatePresence>
-    );
-  }
+const Fade = React.memo(
+  React.forwardRef(
+    (
+      {
+        children,
+        show,
+        transition = {},
+        exitTransition = {},
+        ...rest
+      }: FadeProps,
+      ref: any
+    ) => {
+      const fromStyle = React.useMemo(() => ({ opacity: 0 }), []);
+      const animateStyle = React.useMemo(() => ({ opacity: 1 }), []);
+      const exitStyle = React.useMemo(() => ({ opacity: 0 }), []);
+      const transitionStyle = React.useMemo(
+        () => ({
+          dampingRatio: 1,
+          duration: 100,
+          easing: Easing.inOut,
+          type: "spring",
+          ...(transition as any),
+        }),
+        [transition]
+      );
+      const exitTransitionStyle = React.useMemo(
+        () => ({
+          dampingRatio: 1,
+          duration: 100,
+          easing: Easing.inOut,
+          type: "spring",
+          ...(exitTransition as any),
+        }),
+        [exitTransition]
+      );
+
+      return (
+        <AnimatePresence>
+          {show && (
+            <Box
+              ref={ref}
+              {...rest}
+              from={fromStyle}
+              animate={animateStyle}
+              exit={exitStyle}
+              transition={transitionStyle}
+              exitTransition={exitTransitionStyle}
+            >
+              {children}
+            </Box>
+          )}
+        </AnimatePresence>
+      );
+    }
+  )
 );
 
 Fade.displayName = "Fade";

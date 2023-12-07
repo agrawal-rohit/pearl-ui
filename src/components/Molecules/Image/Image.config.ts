@@ -1,4 +1,17 @@
-export default {
+import { MolecularComponentConfig } from "../../../theme/src/types";
+import { BoxProps } from "../../atoms/box/box";
+import { SpinnerProps } from "../../atoms/spinner/spinner";
+import { ImageProps } from "./image";
+
+export type ImageAtoms = {
+  container: BoxProps;
+  image: ImageProps;
+  previewImage: ImageProps;
+  fallbackImage: ImageProps;
+  spinner: SpinnerProps;
+};
+
+const ImageConfig: MolecularComponentConfig<ImageAtoms> = {
   parts: ["container", "image", "previewImage", "fallbackImage", "spinner"],
   baseStyle: {
     container: {
@@ -16,3 +29,5 @@ export default {
     },
   },
 };
+
+export default ImageConfig;

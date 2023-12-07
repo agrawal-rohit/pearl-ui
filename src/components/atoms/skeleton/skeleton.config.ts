@@ -1,4 +1,7 @@
-export default {
+import { AtomicComponentConfig } from "../../../theme/src/types";
+import { SkeletonProps } from "./skeleton";
+
+const SkeletonConfig: AtomicComponentConfig<SkeletonProps> = {
   baseStyle: {
     borderRadius: "m",
     startColor: {
@@ -11,3 +14,5 @@ export default {
     },
   },
 };
+
+export default SkeletonConfig;

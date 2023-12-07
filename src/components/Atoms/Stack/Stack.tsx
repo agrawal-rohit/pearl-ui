@@ -34,139 +34,145 @@ export type ZStackProps = BoxProps & {
 /**
  * Stack is a layout component that makes it easy to stack elements together and apply a space between them.
  */
-const Stack: React.FC<StackProps> = ({
-  children,
-  direction = "vertical",
-  spacing = "2",
-  ...rest
-}) => {
-  const arrayChildren = React.Children.toArray(children);
+const Stack = React.memo(
+  React.forwardRef(
+    (
+      { children, direction = "vertical", spacing = "2", ...rest }: StackProps,
+      ref: any
+    ) => {
+      const arrayChildren = React.Children.toArray(children);
 
-  /**
-   * Renders the children of the stack.
-   *
-   * @returns The rendered children.
-   */
-  const renderChildren = () => {
-    return React.Children.map(arrayChildren, (child, index) => {
-      const isLast = index === arrayChildren.length - 1;
+      /**
+       * Renders the children of the stack.
+       *
+       * @returns The rendered children.
+       */
+      const renderChildren = React.useMemo(() => {
+        return arrayChildren.map((child, index) => {
+          const isLast = index === arrayChildren.length - 1;
+
+          return (
+            <Box
+              key={index}
+              flexDirection={direction === "horizontal" ? "row" : "column"}
+              mr={
+                !isLast
+                  ? direction === "horizontal"
+                    ? spacing
+                    : undefined
+                  : undefined
+              }
+              mb={
+                !isLast
+                  ? direction === "vertical"
+                    ? spacing
+                    : undefined
+                  : undefined
+              }
+            >
+              {React.cloneElement(child as ReactElement)}
+              {rest.divider &&
+                !isLast &&
+                React.cloneElement(rest.divider, {
+                  orientation:
+                    direction === "horizontal" ? "vertical" : "horizontal",
+                  ml: direction === "horizontal" ? spacing : undefined,
+                  mt: direction === "vertical" ? spacing : undefined,
+                })}
+            </Box>
+          );
+        });
+      }, [arrayChildren, direction, spacing, rest.divider]);
 
       return (
         <Box
+          {...rest}
           flexDirection={direction === "horizontal" ? "row" : "column"}
-          mr={
-            !isLast
-              ? direction === "horizontal"
-                ? spacing
-                : undefined
-              : undefined
-          }
-          mb={
-            !isLast
-              ? direction === "vertical"
-                ? spacing
-                : undefined
-              : undefined
-          }
+          flexWrap={direction === "horizontal" ? "wrap" : "nowrap"}
+          ref={ref}
         >
-          {React.cloneElement(child as ReactElement)}
-          {rest.divider &&
-            !isLast &&
-            React.cloneElement(rest.divider, {
-              orientation:
-                direction === "horizontal" ? "vertical" : "horizontal",
-              ml: direction === "horizontal" ? spacing : undefined,
-              mt: direction === "vertical" ? spacing : undefined,
-            })}
+          {renderChildren}
         </Box>
       );
-    });
-  };
-
-  return (
-    <Box
-      {...rest}
-      flexDirection={direction === "horizontal" ? "row" : "column"}
-      flexWrap={direction === "horizontal" ? "wrap" : "nowrap"}
-    >
-      {renderChildren()}
-    </Box>
-  );
-};
+    }
+  )
+);
 
 /**
  * HStack is a layout component that stacks elements horizontally and apply a space between them.
  */
-export const HStack: React.FC<Omit<StackProps, "direction">> = ({
-  children,
-  ...rest
-}) => {
-  return (
-    <Stack {...rest} direction="horizontal">
-      {children}
-    </Stack>
-  );
-};
+export const HStack = React.memo(
+  React.forwardRef<Omit<StackProps, "direction">, any>(
+    ({ children, ...rest }, ref) => {
+      return (
+        <Stack {...rest} direction="horizontal" ref={ref}>
+          {children}
+        </Stack>
+      );
+    }
+  )
+);
 
 /**
  * VStack is a layout component that stacks elements vertically and apply a space between them.
  */
-export const VStack: React.FC<Omit<StackProps, "direction">> = ({
-  children,
-  ...rest
-}) => {
-  return (
-    <Stack {...rest} direction="vertical">
-      {children}
-    </Stack>
-  );
-};
+export const VStack = React.memo(
+  React.forwardRef<Omit<StackProps, "direction">, any>(
+    ({ children, ...rest }, ref) => {
+      return (
+        <Stack {...rest} direction="vertical" ref={ref}>
+          {children}
+        </Stack>
+      );
+    }
+  )
+);
 
 /**
  * ZStack is a layout component that stacks elements on top of each other.
  */
-export const ZStack: React.FC<ZStackProps> = ({
-  children,
-  reversed = false,
-  ...rest
-}) => {
-  const arrayChildren = React.Children.toArray(children);
+export const ZStack = React.memo(
+  React.forwardRef<Omit<ZStackProps, "direction">, any>(
+    ({ children, reversed = false, ...rest }, ref) => {
+      const arrayChildren = React.Children.toArray(children);
 
-  /**
-   * Renders the children of the stack.
-   *
-   * @returns The rendered children.
-   */
-  const renderChildren = () => {
-    return React.Children.map(arrayChildren, (child, index) => {
-      const isOverridenZIndexProvided =
-        (child as ReactElement).props &&
-        getKeys((child as ReactElement).props).includes("zIndex");
-      const computedZIndex = useStyleProps((child as ReactElement).props, [
-        ...positionStyleFunction,
-      ]);
+      /**
+       * Renders the children of the stack.
+       *
+       * @returns The rendered children.
+       */
+      const renderChildren = React.useMemo(() => {
+        return arrayChildren.map((child, index) => {
+          const isOverridenZIndexProvided =
+            (child as ReactElement).props &&
+            getKeys((child as ReactElement).props).includes("zIndex");
+          const computedZIndex = useStyleProps((child as ReactElement).props, [
+            ...positionStyleFunction,
+          ]);
 
-      return React.cloneElement(child as ReactElement, {
-        ...(child as ReactElement).props,
-        style: {
-          position: index === 0 ? "relative" : "absolute",
-          zIndex: isOverridenZIndexProvided
-            ? computedZIndex.style.zIndex
-            : reversed
-            ? arrayChildren.length - index
-            : index,
-          ...(child as ReactElement).props.style,
-        },
-      });
-    });
-  };
+          return React.cloneElement(child as ReactElement, {
+            ...(child as ReactElement).props,
+            style: {
+              position: index === 0 ? "relative" : "absolute",
+              zIndex: isOverridenZIndexProvided
+                ? computedZIndex.style.zIndex
+                : reversed
+                ? arrayChildren.length - index
+                : index,
+              ...(child as ReactElement).props.style,
+            },
+          });
+        });
+      }, [arrayChildren, reversed]);
 
-  return (
-    <Box alignSelf="flex-start" {...rest}>
-      {renderChildren()}
-    </Box>
-  );
-};
+      return (
+        <Box alignSelf="flex-start" {...rest} ref={ref}>
+          {renderChildren}
+        </Box>
+      );
+    }
+  )
+);
 
 Stack.displayName = "Stack";
 HStack.displayName = "HStack";
