@@ -194,8 +194,24 @@ const componentList = [
     imageSrc: require("./demo/assets/progress.png"),
   },
   {
-    label: "Transitions",
-    imageSrc: require("./demo/assets/transitions.png"),
+    label: "Fade",
+    imageSrc: require("./demo/assets/fade.png"),
+  },
+  {
+    label: "Scale Fade",
+    imageSrc: require("./demo/assets/scale-fade.png"),
+  },
+  {
+    label: "Slide",
+    imageSrc: require("./demo/assets/slide.png"),
+  },
+  {
+    label: "Slide Fade",
+    imageSrc: require("./demo/assets/slide-fade.png"),
+  },
+  {
+    label: "Collapse",
+    imageSrc: require("./demo/assets/collapse.png"),
   },
 ];
 
@@ -225,7 +241,7 @@ const Index = () => {
 
   return (
     <Screen p="0" scrollable={false}>
-      <Stack direction="vertical" flex={1} spacing="0">
+      <Stack direction="vertical" flex={1} spacing="0" pb="20">
         <Box
           py="1.5"
           flexDirection="row"

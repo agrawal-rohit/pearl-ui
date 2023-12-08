@@ -9,7 +9,7 @@ The theme object is a powerful tool in Pearl UI. It allows you to define your ap
 
 One of the key aspects of the theme object is the `theme.palette` object. This object provides the colors for your project. These colors can be referenced by the `color`, `borderColor`, `backgroundColor`, `shadowColor`, and `textShadowColor` style properties.
 
-We recommend creating a palette that ranges from `100` to `900`. There are several tools available to help you generate these palettes, such as [Themera](https://themera.vercel.app/), [Smart Swatch](https://smart-swatch.netlify.app/), [Coolors](https://coolors.co/faa275-ff8c61-ce6a85-985277-5c374c), [Eva Color Generator](https://colors.eva.design/) or [Palx](https://palx.jxnblk.com/). Alternatively, you can use the [generatePalette function](../others/generatePalette) included in the Pearl UI library.
+We recommend creating a palette that ranges from `100` to `900`. There are several tools available to help you generate these palettes, such as [Themera](https://themera.vercel.app/), [Smart Swatch](https://smart-swatch.netlify.app/), [Coolors](https://coolors.co/faa275-ff8c61-ce6a85-985277-5c374c), [Eva Color Generator](https://colors.eva.design/) or [Palx](https://palx.jxnblk.com/). Alternatively, you can use the [generatePalette function](../../utils/others/generatePalette) included in the Pearl UI library.
 
 Here's an example of how you can define your color palette in the theme object:
 
@@ -49,7 +49,7 @@ export default {
 
 While Pearl UI provides a sensible default theme, it's designed to be fully customizable to fit your design needs.
 
-import PaletteColor from "../../src/components/PaletteColor/PaletteColor";
+import PaletteColor from "../../../src/components/PaletteColor/PaletteColor";
 
 ### Primary
 
@@ -437,9 +437,9 @@ export const fontWeights = {
 };
 ```
 
-This typography system is then used by the Component Style Config of [Text](../components/typography/Text) to create the variants below:
+This typography system is then used by the Component Style Config of [Text](../../components/typography/Text) to create the variants below:
 
-import TypographyVariant from "../../src/components/TypographyVariant/TypographyVariant";
+import TypographyVariant from "../../../src/components/TypographyVariant/TypographyVariant";
 
 ### Headers
 
@@ -602,7 +602,7 @@ export default {
 };
 ```
 
-import SpacingBox from "../../src/components/SpacingBox/SpacingBox";
+import SpacingBox from "../../../src/components/SpacingBox/SpacingBox";
 
 | Name   | Space |                            |
 | ------ | ----- | -------------------------- |
@@ -662,7 +662,7 @@ export default {
 };
 ```
 
-import BorderRadiiBox from "../../src/components/BorderRadiiBox/BorderRadiiBox";
+import BorderRadiiBox from "../../../src/components/BorderRadiiBox/BorderRadiiBox";
 
 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
   <BorderRadiiBox keyName="none" radius={0} />
@@ -778,7 +778,7 @@ export default {
 };
 ```
 
-import ElevationBox from "../../src/components/ElevationBox/ElevationBox";
+import ElevationBox from "../../../src/components/ElevationBox/ElevationBox";
 
 <div
   style={{

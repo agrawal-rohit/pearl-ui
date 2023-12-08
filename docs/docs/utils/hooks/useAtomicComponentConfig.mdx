@@ -3,11 +3,11 @@ sidebar_position: 3
 title: useAtomicComponentConfig
 ---
 
-The `useAtomicComponentConfig` hook is a powerful tool that transforms an [atomic component style config](../theming/customize-theme#component-style-config) into a format that React Native can understand and apply.
+The `useAtomicComponentConfig` hook is a powerful tool that transforms an [atomic component style config](../../overview/theming/customize-theme#component-style-config) into a format that React Native can understand and apply.
 
 This hook takes in the default component config, the desired size/variant configuration, and any custom style props passed into a component. It then combines these inputs into a final styles object, prioritizing them in the following order:
 
-1. [Custom style props](../core-features/style-props) (Highest priority)
+1. [Custom style props](../../overview/core-features/style-props) (Highest priority)
 2. `size`/`variant` styles from the component style config (Medium priority)
 3. `baseStyle` from the component style config (Lowest priority)
 
@@ -21,7 +21,7 @@ import { useAtomicComponentConfig } from "pearl-ui";
 
 The `useAtomicComponentConfig` hook returns an object that merges custom props with React Native styles computed using style props.
 
-For instance, consider the output value for the wave variant of the [Spinner](../components/feedback/Spinner) component:
+For instance, consider the output value for the wave variant of the [Spinner](../../components/feedback/Spinner) component:
 
 ```json
 {

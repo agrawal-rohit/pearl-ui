@@ -3,7 +3,7 @@ sidebar_position: 4
 title: useMolecularComponentConfig
 ---
 
-The `useMolecularComponentConfig` is a custom hook that transforms a [molecular component style config](../theming/customize-theme#component-style-config) into corresponding React Native styles.
+The `useMolecularComponentConfig` is a custom hook that transforms a [molecular component style config](../../overview/theming/customize-theme#component-style-config) into corresponding React Native styles.
 
 This hook extends the functionality of the [useAtomicComponentConfig](./useAtomicComponentConfig) hook, enabling the creation of intricate components by merging various atomic components. It also simplifies the styling process through a component style config.
 
@@ -17,7 +17,7 @@ import { useMolecularComponentConfig } from "pearl-ui";
 
 The `useMolecularComponentConfig` hook yields an object that includes the style props, which are grouped according to their respective parts.
 
-For instance, the output value for the [Button](../components/forms/Button) component would look like this:
+For instance, the output value for the [Button](../../components/forms/Button) component would look like this:
 
 ```json
 {
@@ -55,12 +55,19 @@ As demonstrated, the hook segregates the appropriate props into their respective
 To demonstrate the application of `useMolecularComponentConfig`, we'll modify the `ColorView` example from the [useAtomicComponentConfig](./useAtomicComponentConfig#usage) section. We'll convert it into a molecular component that merges two atomic components:
 
 1. [View](https://reactnative.dev/docs/view)
-2. [Text](../components/typography/Text)
+2. [Text](../../components/typography/Text)
 
 ```js
-import { extendTheme } from "pearl-ui";
+import { extendTheme,  } from "pearl-ui";
+import { ViewProps, TextProps } from "react-native";
 
-const colorViewConfig = {
+type ColorViewAtoms = {
+  view: ViewProps;
+  text: TextProps;
+};
+
+
+const colorViewConfig: MolecularComponentConfig<ColorViewAtoms> = {
   parts: ["view", "text"],
   baseStyle: {
     view: {
@@ -178,15 +185,16 @@ import { useStyleProps, backgroundColor, border } from "pearl-ui";
 const colorViewStyleFunctions = [border, backgroundColor];
 
 const ColorView = (props) => {
-  const componentConfig = useMolecularComponentConfig(
-    "ColorView",
+  const componentConfig =
+    useMolecularComponentConfig <
+    ColorViewAtoms >
+    ("ColorView",
     props,
     { variant: props.variant },
     props.colorScheme,
     colorViewStyleFunctions,
     "view",
-    "text"
-  );
+    "text");
 
   return (
     <View {...componentConfig.view}>

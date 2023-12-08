@@ -82,10 +82,25 @@
           },
           items: [
             {
-              to: "/docs/getting-started/introduction",
-              label: "Docs",
+              to: "/docs/overview/getting-started/introduction",
+              label: "Overview",
               position: "left",
-              activeBasePath: "docs",
+              className: "nav-overview-link",
+              activeBasePath: "docs/overview",
+            },
+            {
+              to: "/docs/components/components",
+              label: "Components",
+              position: "left",
+              className: "nav-components-link",
+              activeBasePath: "docs/components",
+            },
+            {
+              to: "/docs/utils/hooks/useTheme",
+              label: "Utils",
+              position: "left",
+              className: "nav-utils-link",
+              activeBasePath: "docs/utils",
             },
             {
               href: "https://github.com/agrawal-rohit/pearl-ui",

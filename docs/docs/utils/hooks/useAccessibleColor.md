@@ -3,7 +3,7 @@ sidebar_position: 8
 title: useAccessibleColor
 ---
 
-The `useAccessibleColor` hook is a powerful utility in Pearl UI that allows you to determine the most accessible foreground color based on a given background color. This hook is particularly useful in components like the [Avatar](../components/media/Avatar) where a name fallback is displayed against a variable background color.
+The `useAccessibleColor` hook is a powerful utility in Pearl UI that allows you to determine the most accessible foreground color based on a given background color. This hook is particularly useful in components like the [Avatar](../../components/media/Avatar) where a name fallback is displayed against a variable background color.
 
 ## Import
 

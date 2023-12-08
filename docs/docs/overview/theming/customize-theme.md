@@ -120,7 +120,7 @@ By using the Component Style Config API, you can ensure consistency in your comp
 
 #### Configuring Atomic Components
 
-Atomic components are the basic building blocks of your application's UI, as per the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology. Examples of atomic components in Pearl UI include Text, Spinner, Icon, etc. These components use the [useAtomicComponentConfig](../hooks/useAtomicComponentConfig) hook to apply their respective **component style configurations**.
+Atomic components are the basic building blocks of your application's UI, as per the [Atomic Design](../getting-started/design-principles) methodology. Examples of atomic components in Pearl UI include Text, Spinner, Icon, etc. These components use the [useAtomicComponentConfig](../../utils/hooks/useAtomicComponentConfig) hook to apply their respective **component style configurations**.
 
 The configuration format for an atomic component is as follows:
 
@@ -137,7 +137,7 @@ export default {
 };
 ```
 
-Here's an example of how the atomic component configuration is applied to the [Icon](../components/media/Icon) component:
+Here's an example of how the atomic component configuration is applied to the [Icon](../../components/media/Icon) component:
 
 ```js
 const newIconConfig = {
@@ -228,7 +228,7 @@ Now, when you use the Icon component, these updates will be automatically applie
 
 #### Configuring Molecular Components
 
-Molecular components, analogous to **Molecules** in the [Atomic Design](../getting-started/introduction#atoms-and-molecules) methodology, are more complex components used in an actual app, such as Button, Datepicker, Modal, etc. These components use the [useMolecularComponentConfig](../hooks/useMolecularComponentConfig) hook to enable their respective **component style configuration**.
+Molecular components, analogous to **Molecules** in the [Atomic Design](../getting-started/design-principles) methodology, are more complex components used in an actual app, such as Button, Datepicker, Modal, etc. These components use the [useMolecularComponentConfig](../../utils/hooks/useMolecularComponentConfig) hook to enable their respective **component style configuration**.
 
 The component config format for a molecular component is as follows:
 
@@ -247,17 +247,19 @@ export default {
 };
 ```
 
-Here's an example of a molecular component config applied to the [Button](../components/forms/Button) component:
+Here's an example of a molecular component config applied to the [Button](../../components/forms/Button) component:
 
 ```js
-const newButtonConfig = {
+import {MolecularComponentConfig, ButtonAtoms} from 'pearl-ui'
+
+const newButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
   // Define the parts you want to use
-  parts: ["root", "text", "spinner", "icon"],
+  parts: ["pressable", "text", "spinner", "icon"],
   // The baseStyle config for all parts
   baseStyle: {
     // The styles all root parts would have in common
-    root: {
-      margin: "2xs",
+    pressable: {
+      margin: "1",
       justifyContent: "center",
       alignItems: "center",
     },
@@ -266,13 +268,13 @@ const newButtonConfig = {
   sizes: {
     // Styles for all parts when the molecular component has size 's'
     s: {
-      root: {
-        py: "xs",
-        px: "xs",
+      pressable: {
+        py: "1.5",
+        px: "1.5",
         borderRadius: "s",
       },
       text: {
-        variant: "btn3",
+        variant: "h4",
       },
       spinner: {
         size: "m",
@@ -283,13 +285,13 @@ const newButtonConfig = {
     },
     // Styles for all parts when the molecular component has size 'm'
     m: {
-      root: {
-        py: "s",
-        px: "s",
+      pressable: {
+        py: "2",
+        px: "2",
         borderRadius: "m",
       },
       text: {
-        variant: "btn2",
+        variant: "h3",
       },
       spinner: {
         size: "m",
@@ -303,7 +305,7 @@ const newButtonConfig = {
   variants: {
     // Styles for all parts when the molecular component has variant 'filled'
     opaque: {
-      root: {
+      pressable: {
         backgroundColor: "primary.500",
       },
       text: { color: "neutral.100" },
@@ -316,7 +318,7 @@ const newButtonConfig = {
     },
     // Styles for all parts when the molecular component has variant 'outline'
     hollow: {
-      root: {
+      pressable: {
         backgroundColor: {
           light: "neutral.100",
           dark: "neutral.800",

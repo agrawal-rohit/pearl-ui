@@ -163,6 +163,11 @@ export type BaseCustomComponentProps = BoxProps & {
   secondLabel: string;
 };
 
+type ComponentAtoms = {
+  first: BoxProps;
+  second: BoxProps;
+};
+
 const CustomComponent = React.forwardRef(
   (
     {
@@ -170,7 +175,16 @@ const CustomComponent = React.forwardRef(
       secondLabel,
       atoms,
       ...props
-    }: MoleculeComponentProps<"CustomComponent", BaseCustomComponentProps>,
+    }: Omit<
+      MoleculeComponentProps<
+        "CustomComponent",
+        BaseCustomComponentProps,
+        ComponentAtoms
+      >,
+      "atoms"
+    > & {
+      atoms?: ComponentAtoms;
+    },
     ref: any
   ) => {
     return (
@@ -187,7 +201,7 @@ const CustomComponent = React.forwardRef(
   }
 );
 
-const molecularConfig: MolecularComponentConfig = {
+const molecularConfig: MolecularComponentConfig<ComponentAtoms> = {
   parts: ["first", "second"],
   baseStyle: {
     first: {

@@ -27,7 +27,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "4.0.2",
     "@react-native-async-storage/async-storage": "1.19.3",
-    "crypto-js": "^4.1.1",
+    "crypto-js": "^4.2.0",
     "expo": "49.0.13",
     "expo-app-loading": "2.1.1",
     "expo-av": "^13.6.0",

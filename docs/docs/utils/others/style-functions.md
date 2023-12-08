@@ -13,7 +13,7 @@ Pearl UI offers a collection of commonly used style functions.
 
 ### Box Style Functions
 
-These are the style functions used to construct the [Box](../components/layout/Box) component. The collection includes the following style functions:
+These are the style functions used to construct the [Box](../../components/layout/Box) component. The collection includes the following style functions:
 
 - [Background Color](#background-color)
 - [Opacity](#opacity)
@@ -31,7 +31,7 @@ import { boxStyleFunctions } from "pearl-ui";
 
 ### Text Style Functions
 
-These are the style functions used to construct the [Text](../components/typography/Text) component. The collection includes the following style functions:
+These are the style functions used to construct the [Text](../../components/typography/Text) component. The collection includes the following style functions:
 
 - [Color](#color)
 - [Background Color](#background-color)
@@ -62,7 +62,7 @@ Each style function in Pearl UI is designed to convert specific style props to R
 
 ### Background Color
 
-The **backgroundColorStyleFunction** converts all the [backgroundColor style props](../core-features/style-props#color-and-background-color) to React Native styles.
+The **backgroundColorStyleFunction** converts all the [backgroundColor style props](../../overview/core-features/style-props#color-and-background-color) to React Native styles.
 
 ```js
 import { backgroundColorStyleFunction } from "pearl-ui";
@@ -70,7 +70,7 @@ import { backgroundColorStyleFunction } from "pearl-ui";
 
 ### Color
 
-The **colorStyleFunction** converts all the [color style props](../core-features/style-props#color-and-background-color) to React Native styles.
+The **colorStyleFunction** converts all the [color style props](../../overview/core-features/style-props#color-and-background-color) to React Native styles.
 
 ```js
 import { colorStyleFunction } from "pearl-ui";
@@ -78,7 +78,7 @@ import { colorStyleFunction } from "pearl-ui";
 
 ### Opacity
 
-The **opacityStyleFunction** converts all the [opacity style props](../core-features/style-props#opacity-and-visibility) to React Native styles.
+The **opacityStyleFunction** converts all the [opacity style props](../../overview/core-features/style-props#opacity-and-visibility) to React Native styles.
 
 ```js
 import { opacityStyleFunction } from "pearl-ui";
@@ -86,7 +86,7 @@ import { opacityStyleFunction } from "pearl-ui";
 
 ### Visibility
 
-The **visibleStyleFunction** converts all the [visible style props](../core-features/style-props#opacity-and-visibility) to React Native styles.
+The **visibleStyleFunction** converts all the [visible style props](../../overview/core-features/style-props#opacity-and-visibility) to React Native styles.
 
 ```js
 import { visibleStyleFunction } from "pearl-ui";
@@ -94,7 +94,7 @@ import { visibleStyleFunction } from "pearl-ui";
 
 ### Spacing
 
-The **spacingStyleFunction** converts all the [spacing style props](../core-features/style-props#margin-and-padding) to React Native styles.
+The **spacingStyleFunction** converts all the [spacing style props](../../overview/core-features/style-props#margin-and-padding) to React Native styles.
 
 ```js
 import { spacingStyleFunction } from "pearl-ui";
@@ -102,7 +102,7 @@ import { spacingStyleFunction } from "pearl-ui";
 
 ### Typography
 
-The **typographyStyleFunction** converts all the [typography style props](../core-features/style-props#typography) to React Native styles.
+The **typographyStyleFunction** converts all the [typography style props](../../overview/core-features/style-props#typography) to React Native styles.
 
 ```js
 import { typographyStyleFunction } from "pearl-ui";
@@ -110,7 +110,7 @@ import { typographyStyleFunction } from "pearl-ui";
 
 ### Layout
 
-The **layoutStyleFunction** converts all the [layout style props](../core-features/style-props#layout) to React Native styles.
+The **layoutStyleFunction** converts all the [layout style props](../../overview/core-features/style-props#layout) to React Native styles.
 
 ```js
 import { layoutStyleFunction } from "pearl-ui";
@@ -118,7 +118,7 @@ import { layoutStyleFunction } from "pearl-ui";
 
 ### Transform
 
-The **transformStyleFunction** converts all the [transform style props](../core-features/style-props#transform) to React Native styles.
+The **transformStyleFunction** converts all the [transform style props](../../overview/core-features/style-props#transform) to React Native styles.
 
 ```js
 import { transformStyleFunction } from "pearl-ui";
@@ -126,7 +126,7 @@ import { transformStyleFunction } from "pearl-ui";
 
 ### Position
 
-The **positionStyleFunction** converts all the [position style props](../core-features/style-props#position) to React Native styles.
+The **positionStyleFunction** converts all the [position style props](../../overview/core-features/style-props#position) to React Native styles.
 
 ```js
 import { positionStyleFunction } from "pearl-ui";
@@ -134,7 +134,7 @@ import { positionStyleFunction } from "pearl-ui";
 
 ### Border
 
-The **borderStyleFunction** converts all the [border style props](../core-features/style-props#border) to React Native styles.
+The **borderStyleFunction** converts all the [border style props](../../overview/core-features/style-props#border) to React Native styles.
 
 ```js
 import { borderStyleFunction } from "pearl-ui";
@@ -142,7 +142,7 @@ import { borderStyleFunction } from "pearl-ui";
 
 ### Shadow
 
-The **shadowStyleFunction** converts all the [shadow style props](../core-features/style-props#shadow) to React Native styles.
+The **shadowStyleFunction** converts all the [shadow style props](../../overview/core-features/style-props#shadow) to React Native styles.
 
 ```js
 import { shadowStyleFunction } from "pearl-ui";
@@ -150,7 +150,7 @@ import { shadowStyleFunction } from "pearl-ui";
 
 ### Text Shadow
 
-The **textShadowStyleFunction** converts all the [textShadow style props](../core-features/style-props#textShadow) to React Native styles.
+The **textShadowStyleFunction** converts all the [textShadow style props](../../overview/core-features/style-props#textShadow) to React Native styles.
 
 ```js
 import { textShadowStyleFunction } from "pearl-ui";

@@ -80,7 +80,7 @@ const App = () => {
 
 ## Custom Prop Responsivity
 
-Pearl UI extends its responsivity features beyond the built-in [style props](./style-props). You can add responsive behavior to any custom prop using the [useResponsiveProp](../hooks/useResponsiveProp) hook. This powerful feature allows for greater flexibility and control over your component's behavior across different screen sizes.
+Pearl UI extends its responsivity features beyond the built-in [style props](./style-props). You can add responsive behavior to any custom prop using the [useResponsiveProp](../../utils/hooks/useResponsiveProp) hook. This powerful feature allows for greater flexibility and control over your component's behavior across different screen sizes.
 
 ```jsx
 const CustomComponent = styled.View`

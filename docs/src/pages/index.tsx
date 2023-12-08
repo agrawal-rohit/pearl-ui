@@ -33,7 +33,7 @@ function HomepageHeader() {
             "button button--primary button--lg",
             styles.heroButton
           )}
-          to="/docs/getting-started/introduction"
+          to="/docs/overview/getting-started/introduction"
           style={{ marginRight: 10 }}
         >
           Get Started

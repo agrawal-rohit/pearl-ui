@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-title: Color Mode (Dark Mode)
+title: Dark Mode Support
 ---
 
 Pearl UI is equipped with a built-in feature for managing the active color mode in your applications. By default, the majority of the included components are compatible with dark mode.
 
 ## Setting the initial color mode
 
-You can specify the color mode of your application upon its first load using the [ThemeProvider](../getting-started/setup#setting-up-the-theme-provider). This component expects an `initialColorMode` prop which can accept the following values:
+You can specify the color mode of your application upon its first load using the [ThemeProvider](../../getting-started/setup#setting-up-the-theme-provider). This component expects an `initialColorMode` prop which can accept the following values:
 
 1. **light**: The application will always start in _light_ mode
 2. **dark**: The application will always start in _dark_ mode
@@ -33,15 +33,15 @@ const App = () => {
 
 ## Retrieving the active color mode
 
-You can access the active color mode using the [useTheme](../hooks/useTheme) hook.
+You can access the active color mode using the [useTheme](../../utils/hooks/useTheme) hook.
 
-import Snack from "../../src/components/ExpoSnack";
+import Snack from "../../../src/components/ExpoSnack";
 
 <Snack snackId="@agrawal-rohit/color-mode-access" />
 
 ## Modifying the color mode
 
-The [useTheme](../hooks/useTheme) hook provides the following functions to change the active color mode.
+The [useTheme](../../utils/hooks/useTheme) hook provides the following functions to change the active color mode.
 
 ### Toggling the active mode
 
@@ -74,9 +74,9 @@ type ColorModeColor = {
 
 ### useColorModeValue
 
-Pearl UI also offers the [useColorModeValue](../hooks/useColorModeValue) hook that achieves the same result as [the object syntax](#object-syntax).
+Pearl UI also offers the [useColorModeValue](../../utils/hooks/useColorModeValue) hook that achieves the same result as [the object syntax](#object-syntax).
 
-Here's how you can re-write the example above using the [useColorModeValue](../hooks/useColorModeValue) hook:
+Here's how you can re-write the example above using the [useColorModeValue](../../utils/hooks/useColorModeValue) hook:
 
 #### Example
 

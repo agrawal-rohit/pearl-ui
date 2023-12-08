@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SourceButton.module.css";
 import { FaGithub } from "react-icons/fa";
+import useThemeContext from "@theme/hooks/useThemeContext";
 
 interface SourceButtonProps {
   href?: string;
@@ -12,10 +13,45 @@ const SourceButton: React.FC<SourceButtonProps> = ({
   href,
   ...props
 }) => {
+  const { isDarkTheme } = useThemeContext();
+
   return (
-    <a href={href} target="_blank" className={styles.button} {...props}>
-      <FaGithub className={styles.icon} />
-      <p className={styles.label}>{label}</p>
+    <a
+      href={href}
+      target="_blank"
+      className={styles.button}
+      style={
+        isDarkTheme
+          ? {
+              backgroundColor: "#2E3A59",
+              borderColor: "#58617A",
+            }
+          : undefined
+      }
+      {...props}
+    >
+      <FaGithub
+        className={styles.icon}
+        style={
+          isDarkTheme
+            ? {
+                color: "white",
+              }
+            : undefined
+        }
+      />
+      <p
+        className={styles.label}
+        style={
+          isDarkTheme
+            ? {
+                color: "white",
+              }
+            : undefined
+        }
+      >
+        {label}
+      </p>
     </a>
   );
 };
