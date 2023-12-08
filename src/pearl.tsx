@@ -141,7 +141,17 @@ export function pearl<
         }
 
         return (
-          <FinalComponent {...convertedProps} ref={ref}>
+          <FinalComponent
+            {...convertedProps}
+            transition={
+              convertedProps.transition ?? {
+                type: "spring",
+                dampingRatio: 1,
+                duration: 200,
+              }
+            }
+            ref={ref}
+          >
             {children}
           </FinalComponent>
         );

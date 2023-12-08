@@ -28,6 +28,7 @@ import ComponentCard from "./demo/components/component-card";
 import Text from "./src/components/atoms/text/text";
 import Icon from "./src/components/atoms/icon/icon";
 import Fade from "./src/components/atoms/fade/fade";
+import Grid from "./src/components/atoms/grid/grid";
 import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
 import Slide from "./src/components/atoms/slide/slide";
 import SlideFade from "./src/components/atoms/slide-fade/slide-fade";
@@ -106,16 +107,20 @@ const componentList = [
     imageSrc: require("./demo/assets/center.png"),
   },
   {
+    label: "Stack",
+    imageSrc: require("./demo/assets/stack.png"),
+  },
+  {
+    label: "Grid",
+    imageSrc: require("./demo/assets/grid.png"),
+  },
+  {
     label: "Screen",
     imageSrc: require("./demo/assets/screen.png"),
   },
   {
     label: "Spacer",
     imageSrc: require("./demo/assets/spacer.png"),
-  },
-  {
-    label: "Stack",
-    imageSrc: require("./demo/assets/stack.png"),
   },
   {
     label: "Divider",
@@ -238,6 +243,18 @@ const Index = () => {
     }, 500);
     return () => clearInterval(progressTimer);
   }, [progress]);
+
+  // return (
+  //   <Screen p="0" scrollable={false}>
+  //     <Grid numCols={3}>
+  //       <Box w="100%" h={200} bgColor="pink"></Box>
+  //       <Box w="100%" h={200} bgColor="blue"></Box>
+  //       <Box w="100%" h={200} bgColor="cyan"></Box>
+  //       <Box w="100%" h={200} bgColor="orange"></Box>
+  //       <Box w="100%" h={200} bgColor="red"></Box>
+  //     </Grid>
+  //   </Screen>
+  // );
 
   return (
     <Screen p="0" scrollable={false}>

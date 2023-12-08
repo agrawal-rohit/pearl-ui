@@ -49,10 +49,11 @@ module.exports = {
       items: [
         "components/layout/Box",
         "components/layout/Center",
-        "components/layout/Divider",
         "components/layout/Stack",
+        "components/layout/Grid",
         "components/layout/Screen",
         "components/layout/Spacer",
+        "components/layout/Divider",
       ],
     },
     {

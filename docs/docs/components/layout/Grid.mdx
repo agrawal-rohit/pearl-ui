@@ -1,0 +1,70 @@
+---
+sidebar_position: 4
+title: Grid
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/grid/grid.tsx"
+  />
+</div>
+
+The `Grid` component is a layout utility in the Pearl UI library. It arranges its children into rows and columns, giving each child an equal amount of space. By default, it renders a [Box](./box) element, which is a fundamental building block in Pearl UI.
+
+:::info
+For rendering a large number of items in a grid, it's better to use a virtualized component like a [FlatList](https://reactnative.dev/docs/flatlist) instead of the `Grid` component. Virtualized components only render items that are currently visible on the screen, which can significantly improve performance for large lists.
+:::
+
+## Import
+
+```jsx
+import { Grid } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Grid numCols={3} spacing="4">
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+  <Box>Item 3</Box>
+</Grid>
+```
+
+### Changing the spacing for columns and rows
+
+You can change the spacing between columns and rows using the `spacingX` and `spacingY` props respectively. Here is an example:
+
+```jsx
+<Grid numCols={3} spacingX="2" spacingY="4">
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+  <Box>Item 3</Box>
+</Grid>
+```
+
+This will create a grid with 3 columns, 2 units of spacing between columns, and 4 units of spacing between rows.
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/grid" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `Grid` component is built upon the [Box](./Box) component, and as such, it inherits all the properties related to [Box](./Box).
+
+### Additional Properties
+
+| Name       | Required | Type                         | Default | Description                                   |
+| ---------- | -------- | ---------------------------- | ------- | --------------------------------------------- |
+| `numCols`  | No       | <t>number</t>                | `1`     | Number of columns in the grid.                |
+| `spacing`  | No       | <t>PearlTheme["spacing"]</t> | `"3"`   | The spacing between the grid elements.        |
+| `spacingX` | No       | <t>PearlTheme["spacing"]</t> |         | The column spacing between the grid elements. |
+| `spacingY` | No       | <t>PearlTheme["spacing"]</t> |         | The row spacing between the grid elements.    |
