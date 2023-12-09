@@ -11,7 +11,7 @@ export type SkypeIndicatorProps = IndicatorProps & {
 };
 
 const SkypeIndicator = React.memo(
-  React.forwardRef<SkypeIndicatorProps, any>(
+  React.forwardRef(
     (
       {
         size = 30,
@@ -21,7 +21,7 @@ const SkypeIndicator = React.memo(
         minScale = 0.2,
         maxScale = 1.0,
         ...rest
-      },
+      }: SkypeIndicatorProps,
       ref: any
     ): JSX.Element => {
       const _renderComponent = React.useCallback(

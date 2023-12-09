@@ -13,7 +13,7 @@ export type WaveIndicatorProps = IndicatorProps & {
 const floatEpsilon = Math.pow(2, -23);
 
 const WaveIndicator = React.memo(
-  React.forwardRef<WaveIndicatorProps, any>(
+  React.forwardRef(
     (
       {
         size = 30,
@@ -24,8 +24,8 @@ const WaveIndicator = React.memo(
         waveFactor = 0.54,
         waveMode = "fill",
         ...rest
-      },
-      ref
+      }: WaveIndicatorProps,
+      ref: any
     ): JSX.Element => {
       const _renderComponent = React.useCallback(
         ({

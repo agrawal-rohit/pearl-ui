@@ -9,7 +9,11 @@ const ScreenConfig: AtomicComponentConfig<ScreenProps> = {
       light: "neutral.50",
       dark: "neutral.800",
     },
-    transition: { duration: 100 },
+    transition: {
+      type: "spring",
+      dampingRatio: 1,
+      duration: 100,
+    },
     padding: "4",
   },
 };

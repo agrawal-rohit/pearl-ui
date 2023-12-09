@@ -9,9 +9,14 @@ export type ActivityIndicatorProps = IndicatorProps & {
 };
 
 const ActivityIndicator = React.memo(
-  React.forwardRef<ActivityIndicatorProps, any>(
+  React.forwardRef(
     (
-      { size = 30, count = 12, color = "rgb(0, 0, 0)", ...rest },
+      {
+        size = 30,
+        count = 12,
+        color = "rgb(0, 0, 0)",
+        ...rest
+      }: ActivityIndicatorProps,
       ref: any
     ): JSX.Element => {
       const _renderComponent = React.useCallback(

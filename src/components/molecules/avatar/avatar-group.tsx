@@ -44,13 +44,11 @@ export type AvatarGroupProps = BoxProps & {
  * AvatarGroup is a component that groups multiple Avatar components together. It can truncate the avatars and show a "+X" label (where X is the remaining avatars).
  */
 const AvatarGroup = React.memo(
-  React.forwardRef<HTMLElement, AvatarGroupProps>(
-    ({ children, spacing = "2", max = 3, ...rest }, ref) => {
-      // Convert the spacing to a style object
-      const convertedElementSpacing = useStyleProps({ marginLeft: spacing }, [
-        ...spacingStyleFunction,
-      ]);
-
+  React.forwardRef(
+    (
+      { children, spacing = "2", max = 3, ...rest }: AvatarGroupProps,
+      ref: any
+    ) => {
       // Convert the children to an array
       const avatarChildren = React.Children.toArray(children);
 
@@ -66,22 +64,12 @@ const AvatarGroup = React.memo(
           if (shouldBreakLoop) return;
 
           if (shouldRenderAvatar)
-            return React.cloneElement(child as ReactElement, {
-              ...(child as ReactElement).props,
-              style: {
-                ...(child as ReactElement).props.style,
-                marginLeft: index * convertedElementSpacing.style.marginLeft,
-              },
-            });
+            return React.cloneElement(child as ReactElement);
           else {
             if (rest.customTruncatedComponent)
               return React.cloneElement(rest.customTruncatedComponent, {
                 ...rest.customTruncatedComponent.props,
                 remainingAvatars: avatarChildren.length - max,
-                style: {
-                  ...rest.customTruncatedComponent.props.style,
-                  marginLeft: index * convertedElementSpacing.style.marginLeft,
-                },
               });
 
             return (
@@ -89,9 +77,6 @@ const AvatarGroup = React.memo(
                 name={`+${avatarChildren.length - max}`}
                 getInitials={(name: string) => name}
                 backgroundColor={rest.truncatedBackgroundColor}
-                style={{
-                  marginLeft: index * convertedElementSpacing.style.marginLeft,
-                }}
               />
             );
           }
@@ -99,14 +84,16 @@ const AvatarGroup = React.memo(
       };
 
       return (
-        <Box {...rest}>
+        <Box {...rest} ref={ref}>
           <avatarGroupContext.Provider
             value={{
               size: rest.size,
               variant: rest.variant,
             }}
           >
-            <ZStack reversed>{renderAvatars()}</ZStack>
+            <ZStack reversed spacing={spacing}>
+              {renderAvatars()}
+            </ZStack>
           </avatarGroupContext.Provider>
         </Box>
       );

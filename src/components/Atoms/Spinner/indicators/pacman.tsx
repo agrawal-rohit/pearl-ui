@@ -9,8 +9,11 @@ export type PacmanIndicatorProps = IndicatorProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const PacmanIndicator = React.memo(
-  React.forwardRef<IndicatorProps, any>(
-    ({ size = 30, color = "rgb(0, 0, 0)", ...rest }, ref: any): JSX.Element => {
+  React.forwardRef(
+    (
+      { size = 30, color = "rgb(0, 0, 0)", ...rest }: PacmanIndicatorProps,
+      ref: any
+    ): JSX.Element => {
       const _renderBlock = React.useCallback(
         ({
           index,

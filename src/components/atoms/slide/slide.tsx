@@ -2,7 +2,7 @@ import React from "react";
 import Box, { BoxProps } from "../box/box";
 import { AnimatePresence } from "moti";
 
-type SlideProps = BoxProps & {
+export type SlideProps = BoxProps & {
   /** Whether to show the component */
   show: boolean;
   /**

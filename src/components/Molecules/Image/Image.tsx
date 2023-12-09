@@ -300,10 +300,10 @@ const CustomImage = React.memo(
 
         return null;
       }, [
+        ref,
         isImageReady,
         restImageProps,
         borderRadiiStyles,
-        ref,
         onErrorHandler,
         testID,
         finalSource,

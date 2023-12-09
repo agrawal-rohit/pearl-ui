@@ -3,7 +3,7 @@ import { LayoutChangeEvent, Platform } from "react-native";
 import Box from "../../atoms/box/box";
 import Badge, { BadgeProps } from "./badge";
 
-interface BadgeOptions {
+export interface WithBadgeOptions {
   /**
    * The position of the badge with respect to the provided base component
    *
@@ -33,7 +33,7 @@ interface BadgeOptions {
 const withBadge =
   <P extends {}>(
     badgeValue: string | number | React.ReactElement | undefined,
-    options: BadgeOptions & BadgeProps = {}
+    options: WithBadgeOptions & BadgeProps = {}
   ) =>
   (WrappedComponent: React.FC<P>) =>
   (props: P) => {

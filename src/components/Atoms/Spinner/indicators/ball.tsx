@@ -10,9 +10,14 @@ export type BallIndicatorProps = IndicatorProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const BallIndicator = React.memo(
-  React.forwardRef<BallIndicatorProps, any>(
+  React.forwardRef(
     (
-      { count = 8, size = 30, color = "rgb(0, 0, 0)", ...rest },
+      {
+        count = 8,
+        size = 30,
+        color = "rgb(0, 0, 0)",
+        ...rest
+      }: BallIndicatorProps,
       ref: any
     ): JSX.Element => {
       const _renderComponent = React.useCallback(

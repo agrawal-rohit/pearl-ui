@@ -89,10 +89,7 @@ const IndicatorTypeToComponentMap = {
  * A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result.
  */
 const Spinner = React.memo(
-  React.forwardRef<
-    AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>,
-    any
-  >(
+  React.forwardRef(
     (
       {
         isLoading = true,
@@ -100,8 +97,8 @@ const Spinner = React.memo(
         animationDuration = 1200,
         colorScheme = "primary",
         ...rest
-      },
-      ref
+      }: AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>,
+      ref: any
     ) => {
       // Set default variant to "spinner"
       rest.variant = rest.variant ?? "spinner";

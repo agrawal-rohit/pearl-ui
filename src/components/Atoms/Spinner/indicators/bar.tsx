@@ -11,9 +11,14 @@ export type BarIndicatorProps = IndicatorProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const BarIndicator = React.memo(
-  React.forwardRef<BarIndicatorProps, any>(
+  React.forwardRef(
     (
-      { count = 3, size = 30, color = "rgb(0, 0, 0)", ...rest },
+      {
+        count = 3,
+        size = 30,
+        color = "rgb(0, 0, 0)",
+        ...rest
+      }: BarIndicatorProps,
       ref: any
     ): JSX.Element => {
       const outputRange = React.useCallback(

@@ -1,6 +1,12 @@
 import React from "react";
 import Box, { BoxProps } from "../box/box";
-import { FinalPearlTheme, ResponsiveValue } from "../../../theme";
+import {
+  FinalPearlTheme,
+  ResponsiveValue,
+  boxStyleFunctions,
+  spacingStyleFunction,
+} from "../../../theme";
+import { useStyleProps } from "../../../hooks";
 
 export type GridProps = BoxProps & {
   /**
@@ -38,6 +44,14 @@ const Grid = React.memo(
       }: GridProps,
       ref: any
     ) => {
+      const computedSpacingStyle = useStyleProps(
+        {
+          paddingHorizontal: spacingX ?? spacing,
+          paddingVertical: spacingY ?? spacing,
+        },
+        spacingStyleFunction
+      );
+
       const renderRows = () => {
         const rows: React.ReactElement[][] = [];
 
@@ -50,10 +64,21 @@ const Grid = React.memo(
             <Box
               key={index}
               width={`${100 / numCols}%`}
-              paddingRight={
-                index % numCols !== numCols - 1 ? spacingX ?? spacing : 0
-              }
-              paddingBottom={spacingY ?? spacing}
+              style={{
+                paddingLeft:
+                  index % numCols !== 0
+                    ? computedSpacingStyle.style.paddingHorizontal / 2
+                    : 0,
+                paddingRight:
+                  index % numCols !== numCols - 1
+                    ? computedSpacingStyle.style.paddingHorizontal / 2
+                    : 0,
+                paddingTop:
+                  rowIndex !== 0
+                    ? computedSpacingStyle.style.paddingVertical / 2
+                    : 0,
+                paddingBottom: computedSpacingStyle.style.paddingVertical / 2,
+              }}
             >
               {child}
             </Box>

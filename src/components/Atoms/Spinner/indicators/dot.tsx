@@ -9,7 +9,7 @@ export type DotIndicatorProps = IndicatorProps & {
 };
 
 const DotIndicator = React.memo(
-  React.forwardRef<IndicatorProps, any>(
+  React.forwardRef(
     (
       {
         count = 4,
@@ -17,7 +17,7 @@ const DotIndicator = React.memo(
         color = "rgb(0, 0, 0)",
         animationEasing = Easing.inOut(Easing.ease),
         ...rest
-      },
+      }: DotIndicatorProps,
       ref: any
     ) => {
       const _renderComponent = React.useCallback(

@@ -69,7 +69,7 @@ export type RadioGroupProps = BoxProps & {
  * RadioGroup is a component that groups together multiple Radio components.
  */
 const RadioGroup = React.memo(
-  React.forwardRef<RadioGroupProps, any>(
+  React.forwardRef(
     (
       {
         children,
@@ -82,8 +82,8 @@ const RadioGroup = React.memo(
         variant = "filled",
         colorScheme = "primary",
         ...rest
-      },
-      ref
+      }: RadioGroupProps,
+      ref: any
     ) => {
       const currentValue = value ?? defaultValue;
       const setRadioGroupValue = (value: string | number) => {

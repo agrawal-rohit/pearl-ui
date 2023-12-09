@@ -79,7 +79,7 @@ export type CheckBoxGroupProps = BoxProps & {
  * CheckBoxGroup is a component that groups together multiple CheckBox components.
  */
 const CheckBoxGroup = React.memo(
-  React.forwardRef<any, CheckBoxGroupProps>(
+  React.forwardRef(
     (
       {
         children,
@@ -93,8 +93,8 @@ const CheckBoxGroup = React.memo(
         colorScheme = "primary",
         onChange = () => {},
         ...rest
-      },
-      ref
+      }: CheckBoxGroupProps,
+      ref: any
     ) => {
       const currentValue = value ?? defaultValue ?? [];
 

@@ -6,7 +6,7 @@ import { MotiWithPearlStyleProps } from "../../../theme/src/types";
 import { BoxStyleProps } from "../../../theme/src/style-functions";
 import { Easing } from "react-native-reanimated";
 
-type CollapseProps = BoxProps & {
+export type CollapseProps = BoxProps & {
   /** Whether to show the component */
   show: boolean;
   /**

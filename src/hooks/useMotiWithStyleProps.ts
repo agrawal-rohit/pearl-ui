@@ -35,11 +35,27 @@ export const useMotiWithStyleProps = (
     [styleFunctions]
   );
 
-  // Remove shadowOffset and textShadowOffset from componentStyles
-  const componentStyles = _.omit(props.style, [
+  const nonAnimateableStyleProps = [
+    "flex",
+    "flexShrink",
+    "flexGrow",
+    "flexBasis",
+    "flexDirection",
+    "flexWrap",
     "shadowOffset",
     "textShadowOffset",
-  ]);
+    "fontFamily",
+    "fontWeight",
+    "fontSize",
+    "lineHeight",
+    "fontStyle",
+    "textAlign",
+    "letterSpacing",
+    "textDecorationLine",
+    "textDecorationStyle",
+    "textTransform",
+  ];
+  const animateableStyles = _.omit(props.style, nonAnimateableStyleProps);
 
   // Convert 'from', 'animate', 'transition', 'exit', 'exitTransition' props
   ["from", "animate", "transition", "exit", "exitTransition"].forEach(
@@ -58,9 +74,9 @@ export const useMotiWithStyleProps = (
         );
 
         if (prop === "animate") {
-          // Merge componentStyles and animate
+          // Merge animateableStyles and animate
           props.animate = {
-            ...componentStyles,
+            ...animateableStyles,
             ...removeUndefined(props.animate),
           };
         }
@@ -99,5 +115,6 @@ export const useMotiWithStyleProps = (
     }
   );
 
+  // props.style = _.pick(props.style, nonAnimateableStyleProps);
   return props;
 };

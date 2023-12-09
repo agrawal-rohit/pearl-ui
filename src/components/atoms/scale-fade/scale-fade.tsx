@@ -1,12 +1,8 @@
 import React from "react";
-import { ViewStyle } from "react-native";
 import Box, { BoxProps } from "../box/box";
 import { AnimatePresence } from "moti";
-import { MotiWithPearlStyleProps } from "../../../theme/src/types";
-import { BoxStyleProps } from "../../../theme/src/style-functions";
-import { Easing } from "react-native-reanimated";
 
-type ScaleFadeProps = BoxProps & {
+export type ScaleFadeProps = BoxProps & {
   /** Whether to show the component */
   show: boolean;
   /**

@@ -24,6 +24,12 @@ export type StackProps = BoxProps & {
 
 export type ZStackProps = BoxProps & {
   /**
+   * The spacing between the elements
+   *
+   * @default 2
+   */
+  spacing?: ResponsiveValue<keyof FinalPearlTheme["spacing"]>;
+  /**
    * Specifies the stacking order of the provided elements
    *
    * @default false
@@ -102,8 +108,8 @@ const Stack = React.memo(
  * HStack is a layout component that stacks elements horizontally and apply a space between them.
  */
 export const HStack = React.memo(
-  React.forwardRef<Omit<StackProps, "direction">, any>(
-    ({ children, ...rest }, ref) => {
+  React.forwardRef(
+    ({ children, ...rest }: Omit<StackProps, "direction">, ref) => {
       return (
         <Stack {...rest} direction="horizontal" ref={ref}>
           {children}
@@ -117,8 +123,8 @@ export const HStack = React.memo(
  * VStack is a layout component that stacks elements vertically and apply a space between them.
  */
 export const VStack = React.memo(
-  React.forwardRef<Omit<StackProps, "direction">, any>(
-    ({ children, ...rest }, ref) => {
+  React.forwardRef(
+    ({ children, ...rest }: Omit<StackProps, "direction">, ref) => {
       return (
         <Stack {...rest} direction="vertical" ref={ref}>
           {children}
@@ -132,8 +138,16 @@ export const VStack = React.memo(
  * ZStack is a layout component that stacks elements on top of each other.
  */
 export const ZStack = React.memo(
-  React.forwardRef<Omit<ZStackProps, "direction">, any>(
-    ({ children, reversed = false, ...rest }, ref) => {
+  React.forwardRef(
+    (
+      {
+        children,
+        reversed = false,
+        spacing = "2",
+        ...rest
+      }: Omit<ZStackProps, "direction">,
+      ref: any
+    ) => {
       const arrayChildren = React.Children.toArray(children);
 
       /**
@@ -141,29 +155,28 @@ export const ZStack = React.memo(
        *
        * @returns The rendered children.
        */
-      const renderChildren = React.useMemo(() => {
-        return arrayChildren.map((child, index) => {
-          const isOverridenZIndexProvided =
-            (child as ReactElement).props &&
-            getKeys((child as ReactElement).props).includes("zIndex");
-          const computedZIndex = useStyleProps((child as ReactElement).props, [
-            ...positionStyleFunction,
-          ]);
+      const renderChildren = arrayChildren.map((child, index) => {
+        const isOverridenZIndexProvided =
+          (child as ReactElement).props &&
+          getKeys((child as ReactElement).props).includes("zIndex");
+        const computedZIndex = useStyleProps((child as ReactElement).props, [
+          ...positionStyleFunction,
+        ]);
 
-          return React.cloneElement(child as ReactElement, {
-            ...(child as ReactElement).props,
-            style: {
-              position: index === 0 ? "relative" : "absolute",
-              zIndex: isOverridenZIndexProvided
-                ? computedZIndex.style.zIndex
-                : reversed
-                ? arrayChildren.length - index
-                : index,
-              ...(child as ReactElement).props.style,
-            },
-          });
+        return React.cloneElement(child as ReactElement, {
+          ...(child as ReactElement).props,
+          style: {
+            position: index === 0 ? "relative" : "absolute",
+            marginLeft: index * Number(spacing),
+            zIndex: isOverridenZIndexProvided
+              ? computedZIndex.style.zIndex
+              : reversed
+              ? arrayChildren.length - index
+              : index,
+            ...(child as ReactElement).props.style,
+          },
         });
-      }, [arrayChildren, reversed]);
+      });
 
       return (
         <Box alignSelf="flex-start" {...rest} ref={ref}>

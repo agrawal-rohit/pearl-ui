@@ -38,7 +38,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
           source={imageSrc}
         />
         <Box py="1.5" px="3">
-          <Text variant="h5" fontWeight="medium">
+          <Text fontSize="s" lineHeight="2xl" fontWeight="medium">
             {label}
           </Text>
         </Box>

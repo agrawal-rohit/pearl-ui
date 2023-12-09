@@ -9,8 +9,11 @@ export type PulseIndicatorProps = IndicatorProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const PulseIndicator = React.memo(
-  React.forwardRef<PulseIndicatorProps, any>(
-    ({ size = 30, color = "rgb(0, 0, 0)", ...rest }, ref: any): JSX.Element => {
+  React.forwardRef(
+    (
+      { size = 30, color = "rgb(0, 0, 0)", ...rest }: PulseIndicatorProps,
+      ref: any
+    ): JSX.Element => {
       const _renderComponent = React.useCallback(
         ({
           index,

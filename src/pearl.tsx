@@ -147,7 +147,7 @@ export function pearl<
               convertedProps.transition ?? {
                 type: "spring",
                 dampingRatio: 1,
-                duration: 200,
+                duration: 100,
               }
             }
             ref={ref}

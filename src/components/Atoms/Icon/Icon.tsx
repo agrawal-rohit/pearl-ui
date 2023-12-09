@@ -37,7 +37,7 @@ import responsiveSize from "../../../utils/responsive-size";
 import { View } from "react-native";
 import { pearl } from "../../../pearl";
 
-export const iconStyleFunctions = [
+const iconStyleFunctions = [
   colorStyleFunction,
   backgroundColorStyleFunction,
   spacingStyleFunction,

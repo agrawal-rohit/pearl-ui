@@ -10,7 +10,7 @@ export type MaterialIndicatorProps = IndicatorProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const MaterialIndicator = React.memo(
-  React.forwardRef<MaterialIndicatorProps, any>(
+  React.forwardRef(
     (
       {
         count = 2,
@@ -18,7 +18,7 @@ const MaterialIndicator = React.memo(
         color = "rgb(0, 0, 0)",
         animationDuration = 3600,
         ...rest
-      },
+      }: MaterialIndicatorProps,
       ref: any
     ): JSX.Element => {
       const _renderComponent = React.useCallback(

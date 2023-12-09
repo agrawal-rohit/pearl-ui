@@ -1,7 +1,7 @@
 import React from "react";
 import Skeleton, { SkeletonProps } from "./skeleton";
 
-type SkeletonCircleProps = SkeletonProps & {
+export type SkeletonCircleProps = SkeletonProps & {
   /**
    * Size of the skeleton circle.
    *

@@ -12,16 +12,18 @@ export type IndicatorProps = ViewProps & {
 
 /** A component used to provide a visual cue that an action is either processing, awaiting a course of change or a result. */
 const Indicator = React.memo(
-  React.forwardRef<IndicatorProps, any>(
+  React.forwardRef(
     (
       {
         animationEasing = Easing.linear,
         animationDuration = 1200,
-        renderComponent = () => {},
+        renderComponent = () => {
+          return <></>;
+        },
         count = 1,
         ...rest
-      },
-      ref
+      }: IndicatorProps,
+      ref: any
     ) => {
       const progress = useRef(new Animated.Value(0)).current;
 

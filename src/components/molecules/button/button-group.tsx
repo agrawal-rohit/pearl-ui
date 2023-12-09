@@ -73,7 +73,7 @@ export type ButtonGroupProps = BoxProps & {
  * ButtonGroup is a layout component that makes it easy to stack buttons together and apply a space between them.
  */
 const ButtonGroup = React.memo(
-  React.forwardRef<HTMLDivElement, any>(
+  React.forwardRef(
     (
       {
         children,
@@ -84,8 +84,8 @@ const ButtonGroup = React.memo(
         variant = "filled",
         colorScheme = "primary",
         ...rest
-      },
-      ref
+      }: ButtonGroupProps,
+      ref: any
     ) => {
       const arrayChildren = React.Children.toArray(children);
 

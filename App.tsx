@@ -1,5 +1,5 @@
 import "./wdyr";
-import React from "react";
+import React, { useState } from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -27,6 +27,10 @@ import Pressable from "./src/components/atoms/pressable/pressable";
 import ComponentCard from "./demo/components/component-card";
 import Text from "./src/components/atoms/text/text";
 import Icon from "./src/components/atoms/icon/icon";
+import BoxDemo from "./demo/components/box-demo";
+import CenterDemo from "./demo/components/center-demo";
+import StackDemo from "./demo/components/stack-demo";
+import GridDemo from "./demo/components/grid-demo";
 import Fade from "./src/components/atoms/fade/fade";
 import Grid from "./src/components/atoms/grid/grid";
 import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
@@ -51,16 +55,7 @@ import Skeleton from "./src/components/atoms/skeleton/skeleton";
 import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
 import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
-import SkeletonText from "./src/components/atoms/skeleton/skeleton-text";
-import { MotiPressable } from "moti/interactions";
-import {
-  FlatList,
-  LogBox,
-  SafeAreaView,
-  View,
-  Pressable as RNPressable,
-  Text as RNText,
-} from "react-native";
+import { FlatList, ScrollView } from "react-native";
 import { NativeModules } from "react-native";
 import { useTheme } from "./src";
 
@@ -101,18 +96,22 @@ const componentList = [
   {
     label: "Box",
     imageSrc: require("./demo/assets/box.png"),
+    component: <BoxDemo />,
   },
   {
     label: "Center",
     imageSrc: require("./demo/assets/center.png"),
+    component: <CenterDemo />,
   },
   {
     label: "Stack",
     imageSrc: require("./demo/assets/stack.png"),
+    component: <StackDemo />,
   },
   {
     label: "Grid",
     imageSrc: require("./demo/assets/grid.png"),
+    component: <GridDemo />,
   },
   {
     label: "Screen",
@@ -222,6 +221,9 @@ const componentList = [
 
 const Index = () => {
   const { colorMode, toggleColorMode } = useTheme();
+  const [activeComponent, setActiveComponent] = useState<string | undefined>(
+    undefined
+  );
   const [radioGroupValue, setRadioGroupValue] = React.useState("B");
   const [checkboxGroupValue, setCheckboxGroupValue] = React.useState(["B"]);
   const [checked, setChecked] = React.useState(false);
@@ -244,47 +246,9 @@ const Index = () => {
     return () => clearInterval(progressTimer);
   }, [progress]);
 
-  // return (
-  //   <Screen p="0" scrollable={false}>
-  //     <Grid numCols={3}>
-  //       <Box w="100%" h={200} bgColor="pink"></Box>
-  //       <Box w="100%" h={200} bgColor="blue"></Box>
-  //       <Box w="100%" h={200} bgColor="cyan"></Box>
-  //       <Box w="100%" h={200} bgColor="orange"></Box>
-  //       <Box w="100%" h={200} bgColor="red"></Box>
-  //     </Grid>
-  //   </Screen>
-  // );
-
-  return (
-    <Screen p="0" scrollable={false}>
-      <Stack direction="vertical" flex={1} spacing="0" pb="20">
-        <Box
-          py="1.5"
-          flexDirection="row"
-          borderBottomWidth={1}
-          borderColor={{ light: "neutral.300", dark: "neutral.600" }}
-          justifyContent="space-between"
-          alignItems="center"
-          style={{
-            paddingHorizontal: 20,
-          }}
-        >
-          <Text fontWeight="semibold">Pearl UI - Showcase</Text>
-          <IconButton
-            size="s"
-            variant="ghost"
-            onPress={toggleColorMode}
-            icon={
-              <Icon
-                rawSize={15}
-                iconFamily="Feather"
-                iconName={colorMode === "light" ? "sun" : "moon"}
-              />
-            }
-          />
-        </Box>
-
+  const renderMainComponent = () => {
+    if (!activeComponent)
+      return (
         <FlatList
           data={componentList}
           horizontal={false}
@@ -293,6 +257,9 @@ const Index = () => {
             <ComponentCard
               label={item.label}
               imageSrc={item.imageSrc}
+              onPress={() => {
+                if (!!item.component) setActiveComponent(item.label);
+              }}
               transition={{
                 type: "timing",
                 duration: 50,
@@ -312,6 +279,77 @@ const Index = () => {
           keyExtractor={(item) => item.label}
           style={{ padding: 10 }}
         />
+      );
+
+    const foundComponent = componentList.find(
+      (comp) => comp.label === activeComponent
+    );
+    if (foundComponent && foundComponent.component)
+      return (
+        <ScrollView style={{ height: "100%" }}>
+          <Box
+            p="5"
+            w="100%"
+            h="100%"
+            from={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ type: "timing", duration: 150 }}
+          >
+            {foundComponent.component}
+          </Box>
+        </ScrollView>
+      );
+
+    return null;
+  };
+
+  return (
+    <Screen p="0" scrollable={false}>
+      <Stack direction="vertical" flex={1} spacing="0" pb="20">
+        <Box
+          py="1.5"
+          flexDirection="row"
+          borderBottomWidth={1}
+          borderColor={{ light: "neutral.300", dark: "neutral.600" }}
+          justifyContent="space-between"
+          alignItems="center"
+          style={{
+            paddingHorizontal: 20,
+          }}
+        >
+          <HStack alignItems="center">
+            {!!activeComponent && (
+              <Pressable onPress={() => setActiveComponent(undefined)}>
+                <Icon
+                  rawSize={15}
+                  color={{
+                    light: "neutral.900",
+                    dark: "neutral.50",
+                  }}
+                  iconFamily="Feather"
+                  iconName="chevron-left"
+                />
+              </Pressable>
+            )}
+            <Text fontWeight="semibold">
+              {!!activeComponent ? activeComponent : "Pearl UI - Showcase"}
+            </Text>
+          </HStack>
+          <IconButton
+            size="s"
+            variant="ghost"
+            onPress={toggleColorMode}
+            icon={
+              <Icon
+                rawSize={15}
+                iconFamily="Feather"
+                iconName={colorMode === "light" ? "sun" : "moon"}
+              />
+            }
+          />
+        </Box>
+
+        {renderMainComponent()}
       </Stack>
     </Screen>
   );

@@ -3,7 +3,7 @@ import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import Skeleton, { SkeletonProps } from "./skeleton";
 import Stack from "../stack/stack";
 
-type SkeletonTextProps = SkeletonProps & {
+export type SkeletonTextProps = SkeletonProps & {
   /**
    * The spacing between the individual skeletons
    *
