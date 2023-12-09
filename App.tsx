@@ -260,17 +260,19 @@ const Index = () => {
               onPress={() => {
                 if (!!item.component) setActiveComponent(item.label);
               }}
+              from={{ opacity: 0, translateY: 10 }}
+              animate={{ opacity: 1, translateY: 0 }}
               transition={{
                 type: "timing",
                 duration: 50,
                 opacity: {
                   type: "timing",
-                  duration: 200,
+                  duration: 150,
                   delay: index * 100,
                 },
                 translateY: {
                   type: "timing",
-                  duration: 200,
+                  duration: 150,
                   delay: index * 100,
                 },
               }}

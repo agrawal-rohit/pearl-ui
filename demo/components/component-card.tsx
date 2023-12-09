@@ -20,8 +20,6 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
       borderColor={{ light: "neutral.300", dark: "neutral.600" }}
       bgColor={{ light: "white", dark: "neutral.700" }}
       boxShadow="none"
-      from={{ opacity: 0, translateY: 10 }}
-      animate={{ opacity: 1, translateY: 0 }}
       _pressed={{
         borderColor: "primary.500",
         boxShadow: "s",
