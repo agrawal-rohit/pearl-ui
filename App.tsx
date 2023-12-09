@@ -1,4 +1,4 @@
-import "./wdyr";
+// import "./wdyr";
 import React, { useState } from "react";
 import {
   useFonts,
@@ -31,6 +31,11 @@ import BoxDemo from "./demo/components/box-demo";
 import CenterDemo from "./demo/components/center-demo";
 import StackDemo from "./demo/components/stack-demo";
 import GridDemo from "./demo/components/grid-demo";
+import ScreenDemo from "./demo/components/screen-demo";
+import SpacerDemo from "./demo/components/spacer-demo";
+import DividerDemo from "./demo/components/divider-demo";
+import TextDemo from "./demo/components/text-demo";
+import IconDemo from "./demo/components/icon-demo";
 import Fade from "./src/components/atoms/fade/fade";
 import Grid from "./src/components/atoms/grid/grid";
 import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
@@ -57,7 +62,7 @@ import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
 import { NativeModules } from "react-native";
-import { useTheme } from "./src";
+import { Divider, useTheme } from "./src";
 
 if (__DEV__) {
   NativeModules.DevSettings.setIsDebuggingRemotely(true);
@@ -92,7 +97,12 @@ const App = () => {
   );
 };
 
-const componentList = [
+const componentList: {
+  label: string;
+  imageSrc: any;
+  component?: React.ReactNode;
+  scrollable?: boolean;
+}[] = [
   {
     label: "Box",
     imageSrc: require("./demo/assets/box.png"),
@@ -116,22 +126,28 @@ const componentList = [
   {
     label: "Screen",
     imageSrc: require("./demo/assets/screen.png"),
+    component: <ScreenDemo />,
+    scrollable: false,
   },
   {
     label: "Spacer",
     imageSrc: require("./demo/assets/spacer.png"),
+    component: <SpacerDemo />,
   },
   {
     label: "Divider",
     imageSrc: require("./demo/assets/divider.png"),
+    component: <DividerDemo />,
   },
   {
     label: "Text",
     imageSrc: require("./demo/assets/text.png"),
+    component: <TextDemo />,
   },
   {
     label: "Icon",
     imageSrc: require("./demo/assets/icon.png"),
+    component: <IconDemo />,
   },
   {
     label: "Image",
@@ -286,21 +302,24 @@ const Index = () => {
     const foundComponent = componentList.find(
       (comp) => comp.label === activeComponent
     );
-    if (foundComponent && foundComponent.component)
-      return (
-        <ScrollView style={{ height: "100%" }}>
-          <Box
-            p="5"
-            w="100%"
-            h="100%"
-            from={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ type: "timing", duration: 150 }}
-          >
-            {foundComponent.component}
-          </Box>
-        </ScrollView>
+    if (foundComponent && foundComponent.component) {
+      const mainElm = (
+        <Box
+          p="5"
+          w="100%"
+          h="100%"
+          from={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "timing", duration: 150 }}
+        >
+          {foundComponent.component}
+        </Box>
       );
+
+      if (foundComponent.scrollable === false) return mainElm;
+
+      return <ScrollView style={{ height: "100%" }}>{mainElm}</ScrollView>;
+    }
 
     return null;
   };

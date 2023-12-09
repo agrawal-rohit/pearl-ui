@@ -10,16 +10,16 @@ const IconConfig: AtomicComponentConfig<IconProps> = {
   },
   sizes: {
     xs: {
-      rawSize: 8,
-    },
-    s: {
       rawSize: 12,
     },
+    s: {
+      rawSize: 17,
+    },
     m: {
-      rawSize: 16,
+      rawSize: 22,
     },
     l: {
-      rawSize: 20,
+      rawSize: 27,
     },
   },
   defaults: {

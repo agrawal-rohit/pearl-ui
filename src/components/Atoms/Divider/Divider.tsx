@@ -48,9 +48,9 @@ const CustomDivider = React.memo(
       // Styles are applied based on the orientation of the divider
       const style = React.useMemo(
         () => ({
-          ...(props.style as any),
           height: orientation === "horizontal" ? thickness : length,
           width: orientation === "vertical" ? thickness : length,
+          ...(props.style as any),
         }),
         [props.style, orientation, thickness, length]
       );

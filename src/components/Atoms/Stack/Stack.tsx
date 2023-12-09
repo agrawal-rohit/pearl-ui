@@ -60,6 +60,7 @@ const Stack = React.memo(
           return (
             <Box
               key={index}
+              h={direction === "horizontal" ? "100%" : undefined}
               flexDirection={direction === "horizontal" ? "row" : "column"}
               mr={
                 !isLast
