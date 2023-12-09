@@ -3,9 +3,9 @@
 (
   module.exports = {
     title:
-      "Pearl UI - Build accessible mobile apps with a design-first approach",
+      "Pearl UI - Build consistent cross-platform mobile apps at lightning speed",
     tagline:
-      "Pearl UI is a powerful UI toolkit that helps you build beautiful production-ready mobile apps right out of the box. Skip the designer, write cleaner code, and get your product to market faster!",
+      "Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development.",
     url: "https://docs.pearl-ui.dev/",
     baseUrl: "/",
     onBrokenLinks: "throw",
@@ -58,7 +58,7 @@
           {
             name: "og:description",
             content:
-              "Pearl UI is a powerful UI toolkit for building beautiful, production-ready mobile apps. It offers a design-first approach, ready-to-use components, and accelerates your time to market.",
+              "Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development.",
           },
           { name: "og:image", content: "img/logo.png" },
           { name: "og:url", content: "https://www.pearl-ui.dev" },
@@ -68,7 +68,7 @@
           {
             name: "twitter:description",
             content:
-              "Pearl UI is a powerful UI toolkit for building beautiful, production-ready mobile apps. It offers a design-first approach, ready-to-use components, and accelerates your time to market.",
+              "Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development.",
           },
           { name: "twitter:image", content: "img/logo.png" },
           { name: "twitter:site", content: "https://pearl-ui.vercel.app" },

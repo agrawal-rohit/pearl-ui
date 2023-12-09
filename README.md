@@ -4,15 +4,15 @@
   </a>
 </h1>
 
-<h4 align="center">Build accessible mobile apps with a <span style="color: #6356e5">design-first</span> approach.</h4>
+<h4 align="center">Build consistent cross-platform mobile apps at <span style="color: #6356e5">lightning speed</span></h4>
 
-<p align="center" style="width: 70%; margin: auto">
-Pearl UI is a powerful UI toolkit for building beautiful, production-ready mobile apps. It offers a design-first approach, ready-to-use components, and accelerates your time to market.
+<p align="center">
+Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development.
 </p>
 
 <br />
 
-<p align="center" style="width: 70%; margin: auto">
+<p align="center" style="width: 80%; margin: auto">
 
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/agrawal-rohit/pearl-ui/Publish">
 <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/d0c9aeda98434aa4adfa8446823aead4">
