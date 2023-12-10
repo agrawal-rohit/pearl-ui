@@ -28,7 +28,7 @@
     "@ctrl/tinycolor": "4.0.2",
     "@react-native-async-storage/async-storage": "1.18.2",
     "crypto-js": "^4.2.0",
-    "expo": "49.0.13",
+    "expo": "49.0.21",
     "expo-app-loading": "2.1.1",
     "expo-av": "~13.4.1",
     "expo-blur": "~12.4.1",
