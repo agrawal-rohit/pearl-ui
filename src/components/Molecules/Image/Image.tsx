@@ -103,11 +103,17 @@ export type BaseImageProps = BoxProps &
      */
     overlayTransitionDuration?: number;
     /**
+     * Delay (in ms) before the source image starts loading. This can be useful when you want to display a placeholder for a certain amount of time before starting to load the image.
+     *
+     * @default 0
+     */
+    sourceDelay?: number;
+    /**
      * Tint of the progressive loading overlay.
      *
      * @default "dark"
      */
-    tint?: "dark" | "light" | "default";
+    tint?: "dark" | "light" | "default" | "none";
     /**
      * The type of loading to use until the image has loaded.
      *
@@ -144,16 +150,15 @@ const CustomImage = React.memo(
         isCached = true,
         loaderType = "spinner",
         tint = "dark",
+        sourceDelay = 0,
         overlayTransitionDuration = 300,
         ...restImageProps
       } = atoms.image;
 
+      const isRemoteImage = typeof source === "object";
+      const shouldCache = isRemoteImage && isCached;
+
       const isMounted = useRef(true);
-      const isRemoteImage = useMemo(() => typeof source === "object", [source]);
-      const shouldCache = useMemo(
-        () => isRemoteImage && isCached,
-        [isRemoteImage, isCached]
-      );
       const [uri, setUri] = useState<string | undefined>(undefined);
       const [error, setError] = useState(false);
       const previousUri = usePrevious(uri);
@@ -181,6 +186,14 @@ const CustomImage = React.memo(
       const blurIntensity = intensity.interpolate({
         inputRange: [0, 100],
         outputRange: [0, 50],
+      });
+      const finalImageOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [1, 0.75],
+      });
+      const backwardCompatibleTintOverlayOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [0, 0.5],
       });
       const previewColorOverlayOpacity = intensity.interpolate({
         inputRange: [0, 100],
@@ -224,6 +237,8 @@ const CustomImage = React.memo(
         uri: string,
         options = {}
       ): Promise<void> => {
+        await new Promise((resolve) => setTimeout(resolve, sourceDelay));
+
         if (shouldCache && Platform.OS !== "web") {
           try {
             const path = await CacheManager.get(uri, options).getPath();
@@ -283,18 +298,28 @@ const CustomImage = React.memo(
       const renderFinalImage = useCallback(() => {
         if (isImageReady) {
           return (
-            <PearlRNImage
-              {...restImageProps}
-              {...borderRadiiStyles}
-              ref={ref}
-              onError={onErrorHandler}
-              testID={testID}
-              source={finalSource}
-              zIndex={3}
-              width="100%"
-              height="100%"
-              style={StyleSheet.absoluteFill}
-            />
+            <AnimatedView
+              style={[
+                StyleSheet.absoluteFill,
+                {
+                  zIndex: 3,
+                  width: "100%",
+                  height: "100%",
+                  opacity: finalImageOpacity,
+                },
+              ]}
+            >
+              <PearlRNImage
+                {...restImageProps}
+                {...borderRadiiStyles}
+                ref={ref}
+                onError={onErrorHandler}
+                testID={testID}
+                source={finalSource}
+                width="100%"
+                height="100%"
+              />
+            </AnimatedView>
           );
         }
 
@@ -312,28 +337,36 @@ const CustomImage = React.memo(
       const renderPreview = useCallback(() => {
         if (!!previewSource) {
           return (
-            <PearlRNImage
-              {...atoms.previewImage}
-              {...borderRadiiStyles}
-              source={previewSource}
-              zIndex={1}
-              width="100%"
-              height="100%"
-              style={StyleSheet.absoluteFill}
-              blurRadius={
-                Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
-              }
-            />
+            <AnimatedView
+              style={{
+                width: "100%",
+                height: "100%",
+                opacity: previewSourceOverlayOpacity,
+              }}
+            >
+              <PearlRNImage
+                {...atoms.previewImage}
+                {...borderRadiiStyles}
+                source={previewSource}
+                zIndex={1}
+                width="100%"
+                height="100%"
+                style={StyleSheet.absoluteFill}
+                blurRadius={
+                  Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
+                }
+              />
+            </AnimatedView>
           );
         }
       }, [previewSource, borderRadiiStyles]);
 
-      const renderImageLoader = useCallback(() => {
+      const renderImageLoader = () => {
         if (typeof finalSource === "number") return null;
 
         if (loaderType === "progressive") {
           if (!!previewSource) {
-            if (Platform.OS === "ios") {
+            if (Platform.OS === "ios" && tint !== "none") {
               return (
                 <PearlAnimatedBlurView
                   tint={tint}
@@ -343,91 +376,101 @@ const CustomImage = React.memo(
                   alignItems="center"
                   justifyContent="center"
                   intensity={blurIntensity}
-                  style={StyleSheet.absoluteFill}
+                  style={[StyleSheet.absoluteFill]}
                 >
                   {renderFallback()}
                 </PearlAnimatedBlurView>
               );
-            }
-
-            if (Platform.OS === "android" || Platform.OS === "web") {
+            } else {
               return (
-                <PearlAnimatedView
-                  {...borderRadiiStyles}
-                  w="100%"
-                  h="100%"
-                  zIndex={3}
-                  overflow="hidden"
-                  alignItems="center"
-                  justifyContent="center"
-                  bgColor={tint === "dark" ? "black" : "white"}
-                  style={{
-                    opacity: previewSourceOverlayOpacity,
-                  }}
+                <AnimatedView
+                  style={[
+                    StyleSheet.absoluteFill,
+                    {
+                      zIndex: 3,
+                      width: "100%",
+                      height: "100%",
+                      opacity: backwardCompatibleTintOverlayOpacity,
+                    },
+                  ]}
                 >
-                  {renderFallback()}
-                </PearlAnimatedView>
+                  <Box
+                    {...borderRadiiStyles}
+                    w="100%"
+                    h="100%"
+                    overflow="hidden"
+                    alignItems="center"
+                    justifyContent="center"
+                    bgColor={
+                      tint === "none"
+                        ? undefined
+                        : tint === "light"
+                        ? "white"
+                        : "black"
+                    }
+                  >
+                    {renderFallback()}
+                  </Box>
+                </AnimatedView>
               );
             }
           }
 
           if (!!previewColor) {
             return (
-              <PearlAnimatedView
-                {...borderRadiiStyles}
-                w="100%"
-                h="100%"
-                zIndex={3}
-                overflow="hidden"
-                alignItems="center"
-                justifyContent="center"
-                bgColor={previewColor}
+              <AnimatedView
                 style={{
+                  zIndex: 3,
+                  width: "100%",
+                  height: "100%",
                   opacity: previewColorOverlayOpacity,
                 }}
               >
-                {renderFallback()}
-              </PearlAnimatedView>
+                <Box
+                  {...borderRadiiStyles}
+                  w="100%"
+                  h="100%"
+                  overflow="hidden"
+                  alignItems="center"
+                  justifyContent="center"
+                  bgColor={previewColor}
+                >
+                  {renderFallback()}
+                </Box>
+              </AnimatedView>
             );
           }
         }
 
-        if (loaderType === "spinner" && !error) {
-          return (
-            <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
-              <Spinner {...atoms.spinner} isExpanded />
-            </Box>
-          );
+        if (loaderType === "spinner") {
+          if (!error)
+            return (
+              <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
+                <Spinner {...atoms.spinner} isExpanded />
+              </Box>
+            );
+
+          return renderFallback();
         }
-      }, [
-        loaderType,
-        previewSource,
-        tint,
-        finalSource,
-        borderRadiiStyles,
-        blurIntensity,
-        renderFallback,
-        previewColor,
-        previewColorOverlayOpacity,
-        error,
-        atoms.spinner,
-      ]);
+      };
 
       useEffect(() => {
+        let reduceIntensity = false;
         if (isRemoteImage) {
           loadRemoteImage(
             (source as ImageURISource).uri as string,
             imageDownloadOptions
           );
 
-          if (uri && !previousUri) {
-            Animated.timing(intensity, {
-              toValue: 0,
-              duration: overlayTransitionDuration,
-              useNativeDriver: Platform.OS === "android",
-            }).start();
-          }
-        }
+          if (uri && !previousUri) reduceIntensity = true;
+        } else reduceIntensity = true;
+
+        if (reduceIntensity)
+          Animated.timing(intensity, {
+            toValue: 0,
+            duration: overlayTransitionDuration,
+            useNativeDriver: Platform.OS === "android",
+          }).start();
 
         return () => {
           isMounted.current = false;

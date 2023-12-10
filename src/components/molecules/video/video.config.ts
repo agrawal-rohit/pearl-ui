@@ -7,6 +7,7 @@ export default {
     },
     video: {
       loaderType: "spinner",
+      sourceDelay: 0,
       overlayTransitionDuration: 300,
       tint: "dark",
     },

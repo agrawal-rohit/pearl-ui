@@ -58,6 +58,16 @@ export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     isDisabled?: boolean;
   };
 
+const STYLE_PROPS_FOR_CONTAINER = [
+  "flex",
+  "alignSelf",
+  "position",
+  "top",
+  "right",
+  "bottom",
+  "left",
+];
+
 /**
  * Pressable is a functional component use to make interactive elements such as buttons, links, and more.
  * @returns A MotiPressable component with updated props and styles.
@@ -101,6 +111,12 @@ const Pressable = React.memo(
       // Update props with disabled styles
       props = propsWithDisabledStyles;
 
+      const containerStyles = {
+        alignSelf: "flex-start",
+        ..._.pick(props.style, STYLE_PROPS_FOR_CONTAINER),
+      };
+      const childStyles = _.omit(props.style || {}, STYLE_PROPS_FOR_CONTAINER);
+
       // Methods to handle local pressable state
       const onPressInHandler = () => {
         setPressed(true);
@@ -125,16 +141,14 @@ const Pressable = React.memo(
             duration: 50,
           }}
           {...(props as any)}
+          styles={childStyles}
+          containerStyle={containerStyles}
           accessibilityRole="button"
           animate={(interaction) => {
             "worklet";
 
             // Merge the interaction and animate props
             return mergeAnimateProp(interaction, props.animate as any);
-          }}
-          containerStyle={{
-            alignSelf: "flex-start",
-            ..._.pick(props.style, ["flex", "alignSelf"]),
           }}
         >
           {children}

@@ -32,7 +32,7 @@ export interface WithBadgeOptions {
  */
 const withBadge =
   <P extends {}>(
-    badgeValue: string | number | React.ReactElement | undefined,
+    badgeValue: string | number | React.ReactElement | undefined = undefined,
     options: WithBadgeOptions & BadgeProps = {}
   ) =>
   (WrappedComponent: React.FC<P>) =>
@@ -81,7 +81,6 @@ const withBadge =
     // Function to compute the position of the badge with margins for web platform
     const computedPositionWithWebMarginsForBadge = useMemo(() => {
       const position = computePositionForBadge();
-
       if (Platform.OS === "web") {
         return {
           ...position,
@@ -104,6 +103,7 @@ const withBadge =
           {...(props as P)}
           onLayout={onBaseComponentLayoutChange}
         />
+
         {!hidden && (
           <Badge
             {...badgeProps}

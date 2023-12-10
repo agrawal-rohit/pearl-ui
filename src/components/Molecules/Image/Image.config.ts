@@ -15,12 +15,13 @@ const ImageConfig: MolecularComponentConfig<ImageAtoms> = {
   parts: ["container", "image", "previewImage", "fallbackImage", "spinner"],
   baseStyle: {
     container: {
+      borderRadius: "m",
       backgroundColor: "neutral.100",
-      borderRadius: "l",
     },
     image: {
-      loaderType: "spinner",
       isCached: true,
+      loaderType: "spinner",
+      sourceDelay: 0,
       overlayTransitionDuration: 300,
       tint: "dark",
     },

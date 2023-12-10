@@ -38,14 +38,12 @@ const CustomBadge = React.memo(
         else return React.cloneElement(children as React.ReactElement);
       }, [children, atoms]);
 
-      // Return a Pressable component with the value rendered inside it
       return (
         <Pressable
           {...atoms.box}
           ref={ref}
           alignItems="center"
           justifyContent="center"
-          alignSelf="flex-start"
         >
           {renderValue}
         </Pressable>

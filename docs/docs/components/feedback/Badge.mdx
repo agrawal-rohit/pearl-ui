@@ -129,12 +129,21 @@ Here are some additional properties that the `Badge` component supports:
 | `variant`     | No       | <t>PearlTheme.components.Badge["variants"]</t> | `"rounded"` | Variant of the badge.              |
 | `colorScheme` | No       | <t>PearlTheme["palette"]</t>                   | `"primary"` | Active color palette of the badge. |
 
-## withBadge Properties
+## withBadge Function Properties
 
-Here are the properties that the `withBadge` function supports:
+The `withBadge` function accepts the following parameters:
 
-| Name         | Required | Type                                                                                                                       | Default | Description                                             |
-| ------------ | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------- |
-| `badgeValue` | No       | <t>string \| number \| React.ReactElement</t>                                                                              |         | The value to be displayed inside the badge.             |
-| `hidden`     | No       | <t>boolean</t>                                                                                                             |         | Whether the badge is visible or not.                    |
-| `options`    | No       | <t>BadgeProps</t> \| { placement: <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t>, offset: <t>number</t> } |         | A set of options for customizing the look of the badge. |
+| Name         | Required | Type                                                       | Default | Description                                             |
+| ------------ | -------- | ---------------------------------------------------------- | ------- | ------------------------------------------------------- |
+| `badgeValue` | No       | <t>string \| number \| React.ReactElement \| undefined</t> |         | The value to be displayed inside the badge.             |
+| `options`    | No       | <t>WithBadgeOptions & BadgeProps</t>                       |         | An object containing options for customizing the badge. |
+
+### Options
+
+The `options` parameter is an object that accepts all [Badge properties](#badge-component-properties) along with the following additional properties:
+
+| Name        | Required | Type                                                            | Default      | Description                                                              |
+| ----------- | -------- | --------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------ |
+| `placement` | No       | <t>"topLeft" \| "topRight" \| "bottomLeft" \| "bottomRight"</t> | `"topRight"` | The position of the badge with respect to the base component.            |
+| `offset`    | No       | <t>number</t>                                                   | `5`          | Amount of extra spacing to add between the badge and the base component. |
+| `hidden`    | No       | <t>boolean</t>                                                  | `false`      | Whether the badge is visible or not.                                     |

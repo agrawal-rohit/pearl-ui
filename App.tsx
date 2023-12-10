@@ -36,6 +36,9 @@ import SpacerDemo from "./demo/components/spacer-demo";
 import DividerDemo from "./demo/components/divider-demo";
 import TextDemo from "./demo/components/text-demo";
 import IconDemo from "./demo/components/icon-demo";
+import ImageDemo from "./demo/components/image-demo";
+import AvatarDemo from "./demo/components/avatar-demo";
+import VideoDemo from "./demo/components/video-demo";
 import Fade from "./src/components/atoms/fade/fade";
 import Grid from "./src/components/atoms/grid/grid";
 import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
@@ -62,7 +65,7 @@ import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
 import { NativeModules } from "react-native";
-import { Divider, useTheme } from "./src";
+import { Avatar, Divider, useTheme } from "./src";
 
 if (__DEV__) {
   NativeModules.DevSettings.setIsDebuggingRemotely(true);
@@ -152,14 +155,17 @@ const componentList: {
   {
     label: "Image",
     imageSrc: require("./demo/assets/image.png"),
+    component: <ImageDemo />,
   },
   {
     label: "Avatar",
     imageSrc: require("./demo/assets/avatar.png"),
+    component: <AvatarDemo />,
   },
   {
     label: "Video",
     imageSrc: require("./demo/assets/video.png"),
+    component: <VideoDemo />,
   },
   {
     label: "Pressable",

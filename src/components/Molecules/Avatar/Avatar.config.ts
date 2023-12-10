@@ -47,8 +47,8 @@ const AvatarConfig: MolecularComponentConfig<AvatarAtoms> = {
       },
       text: {
         variant: "p2",
-        fontSize: "m",
-        lineHeight: "3xl",
+        fontSize: "xl",
+        lineHeight: "5xl",
       },
     },
     l: {
@@ -59,7 +59,7 @@ const AvatarConfig: MolecularComponentConfig<AvatarAtoms> = {
       text: {
         variant: "p2",
         fontSize: "4xl",
-        lineHeight: "8xl",
+        lineHeight: "9xl",
       },
     },
   },

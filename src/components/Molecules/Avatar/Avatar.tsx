@@ -4,8 +4,6 @@ import Image from "../image/image";
 import { ImageSourcePropType, ViewStyle } from "react-native";
 import Box from "../../atoms/box/box";
 import Text from "../../atoms/text/text";
-import namedColors from "../../../theme/utils/named-colors.json";
-import { getKeys } from "../../../theme/utils/type-helpers";
 import { useAccessibleColor } from "../../../hooks/useAccessibleColor";
 import {
   MoleculeComponentProps,
@@ -27,6 +25,27 @@ const defaultGetInitials = (name: string) =>
     .join("")
     .toUpperCase();
 
+const DEFAULT_AVATAR_BACKGROUND = [
+  "#c8e6d0ff",
+  "#e0ecbaff",
+  "#fbb991ff",
+  "#f27e81ff",
+  "#8bc7d3ff",
+  "#bcdfd8ff",
+  "#fae3d9ff",
+  "#f8b4b9ff",
+  "#c2b0d7ff",
+  "#eeef99ff",
+  "#a5d7c4ff",
+  "#fef5aeff",
+  "#f7bdd6ff",
+  "#d6a5cbff",
+  "#c38788ff",
+  "#FA8072",
+  "#FFD700",
+  "#FFA500",
+];
+
 export type BaseAvatarProps = Omit<
   ImageProps,
   "source" | "size" | "variant"
@@ -37,6 +56,31 @@ export type BaseAvatarProps = Omit<
   src?: string | number;
   /** A method to specify how initials are generated from a user's name */
   getInitials?(name: string): string;
+  /** A custom list of background colors to choose the avatar background from.
+   * 
+   * @default
+   * [
+      "#c8e6d0ff",
+      "#e0ecbaff",
+      "#fbb991ff",
+      "#f27e81ff",
+      "#8bc7d3ff",
+      "#bcdfd8ff",
+      "#fae3d9ff",
+      "#f8b4b9ff",
+      "#c2b0d7ff",
+      "#eeef99ff",
+      "#a5d7c4ff",
+      "#fef5aeff",
+      "#f7bdd6ff",
+      "#d6a5cbff",
+      "#c38788ff",
+      "#FA8072",
+      "#FFD700",
+      "#FFA500",
+    ]
+   */
+  customBackgroundColors?: string[];
 };
 
 /**
@@ -57,15 +101,10 @@ const CustomAvatar = React.memo(
         atoms.box;
 
       // Function to pick a random color from the namedColors object
-      const pickRandomColor = () => {
-        const namedColorKeys = getKeys(namedColors).filter(
-          (color) => color !== "transparent"
-        );
-        const randomColorKey =
-          namedColorKeys[Math.floor(Math.random() * namedColorKeys.length)];
-
-        return randomColorKey;
-      };
+      const pickRandomColor = () =>
+        DEFAULT_AVATAR_BACKGROUND[
+          Math.floor(Math.random() * DEFAULT_AVATAR_BACKGROUND.length)
+        ];
 
       // Store the random color in a ref to prevent it from changing on re-renders
       const randomColor = useRef(pickRandomColor()).current;

@@ -57,31 +57,38 @@ const PearlAnimatedView = pearl<
 
 export type BaseVideoProps = BoxProps &
   ExpoVideoProps & {
-    /** Source of the image to show while the remote image is being fetched */
+    /** Source of the image to show while the remote video is being fetched */
     previewSource?: ImageSourcePropType;
-    /** Color of the image container while the remote image is being fetched */
+    /** Color of the image container while the remote video is being fetched */
     previewColor?: ColorValue;
     /**
-     * Duration (in ms) it takes for progressive loading overlay to fade away after the image has loaded.
+     * Duration (in ms) it takes for progressive loading overlay to fade away after the video has loaded.
      *
      * @default 300
      */
     overlayTransitionDuration?: number;
     /**
+     * Delay (in ms) before the source video starts loading. This can be useful when you want to display a placeholder for a certain amount of time before starting to load the video.
+     *
+     * @default 0
+     */
+    sourceDelay?: number;
+    /**
      * Tint of the progressive loading overlay.
      *
      * @default "dark"
      */
-    tint?: "dark" | "light" | "default";
+
+    tint?: "dark" | "light" | "default" | "none";
     /**
-     * The type of loading to use until the image has loaded.
+     * The type of loading to use until the video has loaded.
      *
      * @default "spinner"
      */
     loaderType?: "progressive" | "spinner";
-    /** A custom component to show if an error occurs while loading the image */
+    /** A custom component to show if an error occurs while loading the video */
     fallbackComponent?: React.ReactElement;
-    /** Source of the image to show if an error occurs while loading the image */
+    /** Source of the image to show if an error occurs while loading the video */
     fallbackSource?: ImageSourcePropType;
   };
 
@@ -98,6 +105,7 @@ const BaseVideo = React.memo(
         previewColor,
         tint = "dark",
         loaderType = "spinner",
+        sourceDelay = 0,
         overlayTransitionDuration = 300,
         onLoad,
         onLoadStart,
@@ -116,6 +124,14 @@ const BaseVideo = React.memo(
       const blurIntensity = intensity.interpolate({
         inputRange: [0, 100],
         outputRange: [0, 50],
+      });
+      const finalImageOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [1, 0.75],
+      });
+      const backwardCompatibleTintOverlayOpacity = intensity.interpolate({
+        inputRange: [0, 100],
+        outputRange: [0, 0.5],
       });
       const previewColorOverlayOpacity = intensity.interpolate({
         inputRange: [0, 100],
@@ -194,42 +210,55 @@ const BaseVideo = React.memo(
 
       const renderVideo = useCallback(() => {
         return (
-          <PearlExpoVideo
-            {...restVideoProps}
-            {...borderRadiiStyles}
-            ref={ref}
-            visible={hasVideoLoaded}
-            onLoad={(status) => {
-              if (onLoad) onLoad(status);
+          <AnimatedView
+            style={[
+              StyleSheet.absoluteFill,
+              {
+                zIndex: 3,
+                width: "100%",
+                height: "100%",
+                opacity: finalImageOpacity,
+              },
+            ]}
+          >
+            <PearlExpoVideo
+              {...restVideoProps}
+              {...borderRadiiStyles}
+              ref={ref}
+              visible={hasVideoLoaded}
+              onLoad={async (status) => {
+                await new Promise((resolve) =>
+                  setTimeout(resolve, sourceDelay)
+                );
 
-              if (isRemoteVideo && status.isLoaded) {
-                // Start animating the overlay opacity as soon as the URI becomes available
-                Animated.timing(intensity, {
-                  toValue: 0,
-                  duration: overlayTransitionDuration,
-                  useNativeDriver: Platform.OS === "android",
-                }).start();
-              }
-              setHasVideoLoaded(true);
-            }}
-            onLoadStart={() => {
-              if (Platform.OS === "ios") {
-                setTimeout(() => {
-                  if (!hasVideoLoaded) {
-                    setError(true);
-                  }
-                }, 1000);
-              }
-              if (onLoadStart) onLoadStart();
-            }}
-            onError={onErrorHandler}
-            testID={testID}
-            source={source}
-            zIndex={3}
-            width="100%"
-            height="100%"
-            style={StyleSheet.absoluteFill}
-          />
+                if (onLoad) onLoad(status);
+
+                if (status.isLoaded)
+                  Animated.timing(intensity, {
+                    toValue: 0,
+                    duration: overlayTransitionDuration,
+                    useNativeDriver: Platform.OS === "android",
+                  }).start();
+
+                setHasVideoLoaded(true);
+              }}
+              onLoadStart={() => {
+                if (Platform.OS === "ios") {
+                  setTimeout(() => {
+                    if (!hasVideoLoaded) {
+                      setError(true);
+                    }
+                  }, 1000);
+                }
+                if (onLoadStart) onLoadStart();
+              }}
+              onError={onErrorHandler}
+              testID={testID}
+              source={source}
+              width="100%"
+              height="100%"
+            />
+          </AnimatedView>
         );
       }, [
         restVideoProps,
@@ -251,18 +280,26 @@ const BaseVideo = React.memo(
 
         if (!!previewSource) {
           return (
-            <PearlRNImage
-              {...atoms.previewImage}
-              {...borderRadiiStyles}
-              source={previewSource}
-              zIndex={1}
-              width="100%"
-              height="100%"
-              style={StyleSheet.absoluteFill}
-              blurRadius={
-                Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
-              }
-            />
+            <AnimatedView
+              style={{
+                width: "100%",
+                height: "100%",
+                opacity: previewSourceOverlayOpacity,
+              }}
+            >
+              <PearlRNImage
+                {...atoms.previewImage}
+                {...borderRadiiStyles}
+                source={previewSource}
+                zIndex={1}
+                width="100%"
+                height="100%"
+                style={StyleSheet.absoluteFill}
+                blurRadius={
+                  Platform.OS === "android" || Platform.OS === "web" ? 0.5 : 0
+                }
+              />
+            </AnimatedView>
           );
         }
       }, [intensity, previewSource, borderRadiiStyles, atoms.previewImage]);
@@ -272,8 +309,7 @@ const BaseVideo = React.memo(
 
         if (loaderType === "progressive") {
           if (!!previewSource) {
-            // Render a blur overlay over the preview image
-            if (Platform.OS === "ios") {
+            if (Platform.OS === "ios" && tint !== "none") {
               return (
                 <PearlAnimatedBlurView
                   tint={tint}
@@ -283,62 +319,81 @@ const BaseVideo = React.memo(
                   alignItems="center"
                   justifyContent="center"
                   intensity={blurIntensity}
-                  style={StyleSheet.absoluteFill}
+                  style={[StyleSheet.absoluteFill]}
                 >
                   {renderFallback()}
                 </PearlAnimatedBlurView>
               );
-            }
-
-            // Render a static overlay over the preview image
-            if (Platform.OS === "android" || Platform.OS === "web") {
+            } else {
               return (
-                <PearlAnimatedView
-                  {...borderRadiiStyles}
-                  w="100%"
-                  h="100%"
-                  zIndex={3}
-                  overflow="hidden"
-                  alignItems="center"
-                  justifyContent="center"
-                  bgColor={tint === "dark" ? "black" : "white"}
-                  style={{
-                    opacity: previewSourceOverlayOpacity,
-                  }}
+                <AnimatedView
+                  style={[
+                    StyleSheet.absoluteFill,
+                    {
+                      zIndex: 3,
+                      width: "100%",
+                      height: "100%",
+                      opacity: backwardCompatibleTintOverlayOpacity,
+                    },
+                  ]}
                 >
-                  {renderFallback()}
-                </PearlAnimatedView>
+                  <Box
+                    {...borderRadiiStyles}
+                    w="100%"
+                    h="100%"
+                    overflow="hidden"
+                    alignItems="center"
+                    justifyContent="center"
+                    bgColor={
+                      tint === "none"
+                        ? undefined
+                        : tint === "light"
+                        ? "white"
+                        : "black"
+                    }
+                  >
+                    {renderFallback()}
+                  </Box>
+                </AnimatedView>
               );
             }
           }
 
           if (!!previewColor) {
             return (
-              <PearlAnimatedView
-                {...borderRadiiStyles}
-                w="100%"
-                h="100%"
-                zIndex={3}
-                overflow="hidden"
-                alignItems="center"
-                justifyContent="center"
-                bgColor={previewColor}
+              <AnimatedView
                 style={{
+                  zIndex: 3,
+                  width: "100%",
+                  height: "100%",
                   opacity: previewColorOverlayOpacity,
                 }}
               >
-                {renderFallback()}
-              </PearlAnimatedView>
+                <Box
+                  {...borderRadiiStyles}
+                  w="100%"
+                  h="100%"
+                  overflow="hidden"
+                  alignItems="center"
+                  justifyContent="center"
+                  bgColor={previewColor}
+                >
+                  {renderFallback()}
+                </Box>
+              </AnimatedView>
             );
           }
         }
 
-        if (loaderType === "spinner" && !error) {
-          return (
-            <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
-              <Spinner {...atoms.spinner} isExpanded />
-            </Box>
-          );
+        if (loaderType === "spinner") {
+          if (!error)
+            return (
+              <Box width="100%" height="100%" style={StyleSheet.absoluteFill}>
+                <Spinner {...atoms.spinner} isExpanded />
+              </Box>
+            );
+
+          return renderFallback();
         }
       }, [
         intensity,
