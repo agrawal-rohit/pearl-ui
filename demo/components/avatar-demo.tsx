@@ -6,6 +6,7 @@ import {
   Icon,
   withBadge,
   AvatarProps,
+  Center,
 } from "../../src";
 import DemoSection from "./demo-section";
 
@@ -116,13 +117,16 @@ const AvatarDemo = () => {
           </Text>
           <Avatar
             backgroundColor="neutral.200"
+            bgColor={{ light: "neutral.100", dark: "neutral.800" }}
             fallbackComponent={
-              <Icon
-                iconFamily="FontAwesome"
-                iconName="user-circle"
-                color="neutral.600"
-                rawSize={55}
-              />
+              <Center w="100%" h="100%">
+                <Icon
+                  size="m"
+                  iconFamily="MaterialIcons"
+                  iconName="error-outline"
+                  color="neutral.400"
+                />
+              </Center>
             }
           />
         </VStack>
@@ -152,14 +156,16 @@ const AvatarDemo = () => {
           </Text>
           <AvatarWithEdit
             isCached={false}
-            backgroundColor="neutral.200"
+            bgColor={{ light: "neutral.100", dark: "neutral.800" }}
             fallbackComponent={
-              <Icon
-                iconFamily="FontAwesome"
-                iconName="user-circle"
-                color="neutral.600"
-                rawSize={55}
-              />
+              <Center w="100%" h="100%">
+                <Icon
+                  size="m"
+                  iconFamily="MaterialIcons"
+                  iconName="error-outline"
+                  color="neutral.400"
+                />
+              </Center>
             }
           />
         </VStack>
