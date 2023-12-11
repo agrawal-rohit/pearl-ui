@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BoxProps } from "../box/box";
-import { StatusBar, RefreshControl, Platform } from "react-native";
+import { StatusBar, RefreshControl, RefreshControlProps } from "react-native";
 import {
   KeyboardAwareScrollView,
   KeyboardAwareScrollViewProps,
@@ -44,7 +44,7 @@ export type BaseScreenProps = Omit<
     /** The background color of the refresh indicator */
     refreshProgressViewOffset?: number;
     /** Size of the refresh indicator (Android only) */
-    refreshIndicatorSize?: "default" | "large";
+    refreshIndicatorSize?: RefreshControlProps["size"];
     /** The color of the refresh indicator (iOS only) */
     refreshTintColor?: string;
     /** The title displayed under the refresh indicator (iOS only) */
@@ -129,7 +129,7 @@ const CustomScreen = React.memo(
                 colors={refreshIndicatorColors}
                 progressBackgroundColor={refreshProgressBackgroundColor}
                 progressViewOffset={refreshProgressViewOffset}
-                size={refreshIndicatorSize === "large" ? 0 : 1}
+                size={refreshIndicatorSize}
                 tintColor={refreshTintColor}
                 title={refreshTitle}
                 titleColor={refreshTitleColor}
@@ -155,15 +155,15 @@ const CustomScreen = React.memo(
       return (
         <>
           <StatusBar
-            backgroundColor={((props.style as any) ?? {}).backgroundColor}
+            backgroundColor={
+              ((animationProps.animate as any) ?? {}).backgroundColor ??
+              ((props.style as any) ?? {}).backgroundColor
+            }
             barStyle={colorMode === "light" ? "dark-content" : "light-content"}
           />
           <SafeAreaView
             style={{
               flex: 1,
-              backgroundColor: ((props.style as any) ?? {}).backgroundColor,
-              paddingTop:
-                Platform.OS === "android" ? StatusBar.currentHeight : 0,
             }}
           >
             {mainView}

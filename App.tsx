@@ -1,4 +1,3 @@
-// import "./wdyr";
 import React, { useState } from "react";
 import {
   useFonts,
@@ -39,37 +38,15 @@ import IconDemo from "./demo/components/icon-demo";
 import ImageDemo from "./demo/components/image-demo";
 import AvatarDemo from "./demo/components/avatar-demo";
 import VideoDemo from "./demo/components/video-demo";
-import Fade from "./src/components/atoms/fade/fade";
-import Grid from "./src/components/atoms/grid/grid";
-import ScaleFade from "./src/components/atoms/scale-fade/scale-fade";
-import Slide from "./src/components/atoms/slide/slide";
-import SlideFade from "./src/components/atoms/slide-fade/slide-fade";
-import Collapse from "./src/components/atoms/collapse/collapse";
-import Spinner from "./src/components/atoms/spinner/spinner";
-import Video from "./src/components/molecules/video/video";
-import Image from "./src/components/molecules/image/image";
-import Radio from "./src/components/molecules/radio/radio";
-import RadioGroup from "./src/components/molecules/radio/radio-group";
-import CheckBox from "./src/components/molecules/checkbox/checkbox";
-import CheckBoxGroup from "./src/components/molecules/checkbox/checkbox-group";
-import Textarea from "./src/components/molecules/textarea/textarea";
-import Input from "./src/components/molecules/input/input";
 import Stack, { HStack } from "./src/components/atoms/stack/stack";
-import Button from "./src/components/molecules/button/button";
-import Switch from "./src/components/molecules/switch/switch";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
-import Progress from "./src/components/molecules/progress/progress";
-import Skeleton from "./src/components/atoms/skeleton/skeleton";
-import SkeletonCircle from "./src/components/atoms/skeleton/skeleton-circle";
-import ButtonGroup from "./src/components/molecules/button/button-group";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { NativeModules } from "react-native";
-import { Avatar, Divider, useTheme } from "./src";
+import { useTheme } from "./src";
 
-if (__DEV__) {
-  NativeModules.DevSettings.setIsDebuggingRemotely(true);
-}
+// if (__DEV__) {
+//   NativeModules.DevSettings.setIsDebuggingRemotely(true);
+// }
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
