@@ -36,7 +36,7 @@ import { useTheme } from "../../../hooks";
 import { InputAtoms } from "./input.config";
 import _ from "lodash";
 
-export type InputProps = Omit<
+export type BaseInputProps = Omit<
   TextInputProps,
   "placeholderTextColor" | "selectionColor"
 > &
@@ -84,6 +84,13 @@ export type InputProps = Omit<
     selectionColor?: ResponsiveValue<PaletteColors>;
   };
 
+export type InputProps = Omit<
+  MoleculeComponentProps<"Input", BaseInputProps, InputAtoms>,
+  "atoms"
+> & {
+  atoms?: InputAtoms;
+};
+
 // Additional style Functions used for this component
 const placeholderTextColorStyleFunction = createStyleFunction({
   property: "placeholderTextColor",
@@ -129,12 +136,7 @@ const Input = React.memo(
         onChangeText = () => {},
         onChange = () => {},
         ...rest
-      }: Omit<
-        MoleculeComponentProps<"Input", InputProps, InputAtoms>,
-        "atoms"
-      > & {
-        atoms?: InputAtoms;
-      },
+      }: InputProps,
       textInputRef: any
     ) => {
       const { theme } = useTheme();

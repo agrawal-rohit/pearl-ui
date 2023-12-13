@@ -13,8 +13,10 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
     track: {
       my: "1",
       p: "0.5",
+      borderWidth: 1,
       borderRadius: "full",
-      bgColor: "neutral.300",
+      borderColor: { light: "neutral.300", dark: "neutral.700" },
+      bgColor: { light: "neutral.300", dark: "neutral.800" },
       transition: {
         type: "spring",
         dampingRatio: 1,
@@ -22,6 +24,7 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
       },
       _checked: {
         bgColor: "primary.500",
+        borderColor: "primary.500",
       },
       _disabled: {
         opacity: 0.5,

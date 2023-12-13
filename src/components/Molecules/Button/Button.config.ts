@@ -28,6 +28,9 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
     icon: {
       alignSelf: "center",
     },
+    spinner: {
+      alignSelf: "center",
+    },
     text: {
       fontWeight: "500",
     },
@@ -47,7 +50,8 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         size: "xs",
       },
       icon: {
-        size: "xs",
+        rawSize: 9,
+        mx: 1,
       },
     },
     s: {
@@ -63,7 +67,8 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         size: "s",
       },
       icon: {
-        size: "xs",
+        rawSize: 11,
+        mx: 1.5,
       },
     },
     m: {
@@ -79,7 +84,8 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         size: "s",
       },
       icon: {
-        size: "s",
+        rawSize: 13,
+        mx: 1.5,
       },
     },
     l: {
@@ -95,13 +101,16 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         size: "m",
       },
       icon: {
-        size: "s",
+        rawSize: 15,
+        mx: 2,
       },
     },
   },
   variants: {
     filled: {
       pressable: {
+        borderWidth: 1,
+        borderColor: "primary.500",
         backgroundColor: "primary.500",
         _pressed: {
           bgColor: "primary.400",
@@ -124,7 +133,10 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         borderWidth: 1,
         borderColor: "primary.500",
         _pressed: {
-          bgColor: "primary.50",
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
         },
       },
       text: { color: "primary.500" },
@@ -137,15 +149,30 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
     },
     ghost: {
       pressable: {
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
+        backgroundColor: "transparent",
         _pressed: {
-          bgColor: "primary.50",
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
         },
       },
       text: { color: "primary.500" },
+      spinner: {
+        color: "primary.500",
+      },
+      icon: {
+        color: "primary.500",
+      },
+    },
+    link: {
+      pressable: {
+        px: "0",
+        py: "0",
+        backgroundColor: "transparent",
+        _pressed: { opacity: 0.7 },
+      },
+      text: { color: "primary.500", textDecorationLine: "underline" },
       spinner: {
         color: "primary.500",
       },

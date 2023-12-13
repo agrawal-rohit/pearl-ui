@@ -18,26 +18,22 @@ export const useStateWithStyleProps = (
   const { theme, colorMode } = useTheme();
   const dimensions = useDimensions();
 
-  // If props is falsy, return an empty object.
-  if (_.isEmpty(props)) {
-    return {};
-  }
-
   // Compose the style functions
   const buildStyleProperties = useMemo(
     () => composeStyleProps(styleFunctions),
     [styleFunctions]
   );
 
+  // If props is falsy, return an empty object.
+  if (_.isEmpty(props)) {
+    return {};
+  }
+
   // Compose clean style properties from props, buildStyleProperties, theme, and dimensions.
   // Use memoization to avoid unnecessary computations.
-  return useMemo(
-    () =>
-      composeCleanStyleProps(props, buildStyleProperties, {
-        theme,
-        colorMode,
-        dimensions,
-      }),
-    [props, buildStyleProperties, theme, colorMode, dimensions]
-  );
+  return composeCleanStyleProps(props, buildStyleProperties, {
+    theme,
+    colorMode,
+    dimensions,
+  });
 };

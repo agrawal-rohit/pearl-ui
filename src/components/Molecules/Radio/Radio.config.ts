@@ -25,6 +25,7 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
       p: "0.5",
       borderWidth: 2,
       borderRadius: "full",
+      alignSelf: "center",
       borderColor: "neutral.300",
       _invalid: {
         borderColor: "danger.500",
@@ -49,18 +50,18 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
     xs: {
       outerBox: {
         p: 0.5,
-        w: 18,
-        h: 18,
+        w: 17,
+        h: 17,
       },
       text: {
-        variant: "p3",
+        variant: "p4",
       },
     },
     s: {
       outerBox: {
         p: 1,
-        w: 24,
-        h: 24,
+        w: 21,
+        h: 21,
       },
       text: {
         variant: "p3",
@@ -68,22 +69,22 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
     },
     m: {
       outerBox: {
-        p: 1.5,
-        w: 30,
-        h: 30,
+        p: 1,
+        w: 25,
+        h: 25,
       },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
     },
     l: {
       outerBox: {
-        p: 2,
-        w: 36,
-        h: 36,
+        p: 1.5,
+        w: 29,
+        h: 29,
       },
       text: {
-        variant: "p1",
+        variant: "p2",
       },
     },
   },
@@ -122,15 +123,12 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
     },
     outline: {
       outerBox: {
+        backgroundColor: "transparent",
         animate: {
-          backgroundColor: {
-            light: "neutral.50",
-            dark: "neutral.800",
+          borderColor: {
+            light: "neutral.400",
+            dark: "neutral.500",
           },
-        },
-        borderColor: {
-          light: "neutral.400",
-          dark: "neutral.500",
         },
         _checked: {
           borderColor: "primary.500",

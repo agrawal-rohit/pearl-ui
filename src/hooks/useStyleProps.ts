@@ -18,25 +18,21 @@ export const useStyleProps = (
   const { theme, colorMode } = useTheme();
   const dimensions = useDimensions();
 
-  // If no props are passed, return an empty style object
-  if (_.isEmpty(props)) {
-    return { style: {} };
-  }
-
   // Compose the style functions
   const buildStyleProperties = useMemo(
     () => composeStyleProps(styleFunctions),
     [styleFunctions]
   );
 
+  // If no props are passed, return an empty style object
+  if (_.isEmpty(props)) {
+    return { style: {} };
+  }
+
   // Build the final style properties
-  return useMemo(
-    () =>
-      buildFinalStyleProps(props, buildStyleProperties, {
-        theme,
-        colorMode,
-        dimensions,
-      }),
-    [props, buildStyleProperties, theme, colorMode, dimensions]
-  );
+  return buildFinalStyleProps(props, buildStyleProperties, {
+    theme,
+    colorMode,
+    dimensions,
+  });
 };

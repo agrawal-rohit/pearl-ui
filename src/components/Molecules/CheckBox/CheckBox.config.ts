@@ -1,4 +1,4 @@
-import { MolecularComponentConfig } from "../../../theme/src/types";
+import { MolecularComponentConfig, StateProps } from "../../../theme/src/types";
 import { BoxProps } from "../../atoms/box/box";
 import { IconProps } from "../../atoms/icon/icon";
 import { PressableProps } from "../../atoms/pressable/pressable";
@@ -9,8 +9,8 @@ import { CheckBoxProps } from "./checkbox";
 export type CheckboxAtoms = {
   container: PressableProps & StackProps;
   box: Omit<BoxProps, keyof CheckBoxProps> & CheckBoxProps;
+  icon: IconProps & StateProps<"_checked", Partial<IconProps>>;
   text: TextProps;
-  icon: IconProps;
 };
 
 const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
@@ -24,9 +24,9 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
       },
     },
     box: {
-      p: "0.5",
-      shape: "square",
       borderWidth: 2,
+      shape: "square",
+      alignSelf: "center",
       borderColor: "neutral.300",
       transition: {
         type: "timing",
@@ -47,46 +47,39 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
   sizes: {
     xs: {
       box: {
+        p: "0.25",
         borderRadius: "s",
       },
-      icon: {
-        size: "xs",
-      },
+      icon: { rawSize: 9 },
       text: {
         variant: "p4",
       },
     },
     s: {
-      box: {
-        borderRadius: "s",
-      },
-      icon: {
-        size: "s",
-      },
+      box: { p: "0.5", borderRadius: "s" },
+      icon: { rawSize: 11 },
       text: {
         variant: "p3",
       },
     },
     m: {
       box: {
+        p: "0.75",
         borderRadius: "m",
       },
-      icon: {
-        size: "m",
-      },
+      icon: { rawSize: 13 },
       text: {
-        variant: "p2",
+        variant: "p3",
       },
     },
     l: {
       box: {
+        p: "1",
         borderRadius: "m",
       },
-      icon: {
-        size: "l",
-      },
+      icon: { rawSize: 15 },
       text: {
-        variant: "p1",
+        variant: "p2",
       },
     },
   },
@@ -107,32 +100,33 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
         },
       },
       icon: {
-        color: {
-          light: "neutral.200",
-          dark: "neutral.900",
+        animate: {
+          opacity: 0,
+          color: "neutral.50",
+        },
+        _checked: {
+          opacity: 1,
         },
       },
     },
     outline: {
       box: {
-        borderWidth: 2,
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
+        backgroundColor: "transparent",
         borderColor: {
           light: "neutral.400",
           dark: "neutral.500",
         },
         _checked: {
-          bgColor: "primary.500",
           borderColor: "primary.500",
         },
       },
       icon: {
-        color: {
-          light: "neutral.50",
-          dark: "neutral.800",
+        animate: {
+          opacity: 0,
+        },
+        _checked: {
+          opacity: 1,
+          color: "primary.500",
         },
       },
     },

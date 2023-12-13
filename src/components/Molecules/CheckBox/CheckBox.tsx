@@ -142,14 +142,24 @@ const CheckBox = React.memo(
       const { atoms } = molecularProps;
 
       // Use state for dynamic style
-      const { propsWithCheckedStyles } = useCheckedState(
-        atoms.box,
-        boxStyleFunctions,
-        "molecule",
-        true,
-        isCheckBoxChecked
-      );
-      atoms.box = propsWithCheckedStyles;
+      const { propsWithCheckedStyles: propsWithCheckedStylesForBox } =
+        useCheckedState(
+          atoms.box,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isCheckBoxChecked
+        );
+      atoms.box = propsWithCheckedStylesForBox;
+      const { propsWithCheckedStyles: propsWithCheckedStylesForIcon } =
+        useCheckedState(
+          atoms.icon,
+          boxStyleFunctions,
+          "molecule",
+          true,
+          isCheckBoxChecked
+        );
+      atoms.icon = propsWithCheckedStylesForIcon as IconProps;
       const { propsWithInvalidStyles } = useInvalidState(
         atoms.box,
         boxStyleFunctions,
@@ -201,10 +211,10 @@ const CheckBox = React.memo(
             direction="horizontal"
           >
             <Center
-              borderRadius={
-                atoms.box.shape === "square" ? atoms.box.borderRadius : "full"
-              }
               {...atoms.box}
+              borderRadius={
+                atoms.box.shape === "circle" ? "full" : atoms.box.borderRadius
+              }
             >
               <Icon
                 {...atoms.icon}

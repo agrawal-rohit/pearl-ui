@@ -130,8 +130,14 @@ const Button = React.memo(
               {leftIcon
                 ? React.cloneElement(leftIcon, {
                     ...atoms.icon,
+                    marginLeft: 0,
                     marginRight:
-                      atoms.pressable.py ?? atoms.pressable.paddingVertical,
+                      atoms.icon.mr ??
+                      atoms.icon.marginRight ??
+                      atoms.icon.mx ??
+                      atoms.icon.marginHorizontal ??
+                      atoms.icon.m ??
+                      atoms.icon.margin,
                     ...leftIcon.props,
                   })
                 : null}
@@ -139,8 +145,14 @@ const Button = React.memo(
               {rightIcon
                 ? React.cloneElement(rightIcon, {
                     ...atoms.icon,
+                    marginRight: 0,
                     marginLeft:
-                      atoms.pressable.py ?? atoms.pressable.paddingVertical,
+                      atoms.icon.ml ??
+                      atoms.icon.marginLeft ??
+                      atoms.icon.mx ??
+                      atoms.icon.marginHorizontal ??
+                      atoms.icon.m ??
+                      atoms.icon.margin,
                     ...rightIcon.props,
                   })
                 : null}
@@ -157,6 +169,7 @@ const Button = React.memo(
           {...atoms.pressable}
           ref={ref}
           isDisabled={isButtonDisabled}
+          width={isFullWidth ? "100%" : undefined}
           alignSelf={isFullWidth ? "stretch" : "flex-start"}
           accessibilityLabel={
             !isLoading

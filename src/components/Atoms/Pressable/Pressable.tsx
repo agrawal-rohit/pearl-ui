@@ -59,6 +59,8 @@ export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
   };
 
 const STYLE_PROPS_FOR_CONTAINER = [
+  "width",
+  "height",
   "flex",
   "alignSelf",
   "position",

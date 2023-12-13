@@ -14,7 +14,6 @@ import InputConfig from "../../../components/molecules/input/input.config";
 import ProgressConfig from "../../../components/molecules/progress/progress.config";
 import RadioConfig from "../../../components/molecules/radio/radio.config";
 import SwitchConfig from "../../../components/molecules/switch/switch.config";
-import TextLinkConfig from "../../../components/molecules/text-link/text-link.config";
 import VideoConfig from "../../../components/molecules/video/video.config";
 
 interface Config {
@@ -26,7 +25,6 @@ interface Config {
   Spinner: typeof SpinnerConfig;
   Button: typeof ButtonConfig;
   IconButton: typeof IconButtonConfig;
-  TextLink: typeof TextLinkConfig;
   Input: typeof InputConfig;
   CheckBox: typeof CheckBoxConfig;
   Radio: typeof RadioConfig;
@@ -48,7 +46,6 @@ export default {
   Spinner: SpinnerConfig,
   Button: ButtonConfig,
   IconButton: IconButtonConfig,
-  TextLink: TextLinkConfig,
   Input: InputConfig,
   CheckBox: CheckBoxConfig,
   Radio: RadioConfig,

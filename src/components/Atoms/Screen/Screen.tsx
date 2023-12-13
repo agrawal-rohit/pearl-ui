@@ -9,8 +9,8 @@ import { pearl } from "../../../pearl";
 import { AtomComponentProps } from "../../../theme/src/types";
 import { SafeAreaView, View as MotiView } from "moti";
 import { MOTI_PROPS } from "../../../hooks/utils/utils";
-import _ from "lodash";
 import { useTheme } from "../../../hooks/useTheme";
+import _ from "lodash";
 
 export type BaseScreenProps = Omit<
   BoxProps,

@@ -38,15 +38,19 @@ import IconDemo from "./demo/components/icon-demo";
 import ImageDemo from "./demo/components/image-demo";
 import AvatarDemo from "./demo/components/avatar-demo";
 import VideoDemo from "./demo/components/video-demo";
-import Stack, { HStack } from "./src/components/atoms/stack/stack";
+import PressableDemo from "./demo/components/pressable-demo";
+import ButtonDemo from "./demo/components/button-demo";
+import IconButtonDemo from "./demo/components/icon-button-demo";
+import InputDemo from "./demo/components/input-demo";
+import SwitchDemo from "./demo/components/switch-demo";
+import TextareaDemo from "./demo/components/textarea-demo";
+import CheckboxDemo from "./demo/components/checkbox-demo";
+import RadioDemo from "./demo/components/radio-demo";
+import Stack, { HStack, VStack } from "./src/components/atoms/stack/stack";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { useTheme } from "./src";
-
-// if (__DEV__) {
-//   NativeModules.DevSettings.setIsDebuggingRemotely(true);
-// }
+import { CheckBox, Radio, useTheme } from "./src";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -147,38 +151,42 @@ const componentList: {
   {
     label: "Pressable",
     imageSrc: require("./demo/assets/pressable.png"),
+    component: <PressableDemo />,
   },
   {
     label: "Button",
     imageSrc: require("./demo/assets/button.png"),
+    component: <ButtonDemo />,
   },
   {
     label: "Icon Button",
     imageSrc: require("./demo/assets/icon-button.png"),
-  },
-  {
-    label: "Text Link",
-    imageSrc: require("./demo/assets/text-link.png"),
+    component: <IconButtonDemo />,
   },
   {
     label: "Input",
     imageSrc: require("./demo/assets/input.png"),
+    component: <InputDemo />,
   },
   {
     label: "Switch",
     imageSrc: require("./demo/assets/switch.png"),
+    component: <SwitchDemo />,
   },
   {
     label: "Textarea",
     imageSrc: require("./demo/assets/textarea.png"),
+    component: <TextareaDemo />,
   },
   {
     label: "Checkbox",
     imageSrc: require("./demo/assets/checkbox.png"),
+    component: <CheckboxDemo />,
   },
   {
     label: "Radio",
     imageSrc: require("./demo/assets/radio.png"),
+    component: <RadioDemo />,
   },
   {
     label: "Spinner",

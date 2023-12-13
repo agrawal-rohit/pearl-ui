@@ -39,7 +39,7 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
     icon: {
       alignSelf: "center",
       color: {
-        light: "neutral.400",
+        light: "neutral.500",
         dark: "neutral.600",
       },
     },
@@ -65,7 +65,7 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
         lineHeight: "m",
       },
       icon: {
-        size: "xs",
+        rawSize: 9,
         mx: "0.5",
       },
     },
@@ -80,10 +80,7 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
         fontSize: "xs",
         lineHeight: "m",
       },
-      icon: {
-        size: "xs",
-        mx: "1",
-      },
+      icon: { rawSize: 11, mx: "1" },
     },
     m: {
       container: {
@@ -97,7 +94,7 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
         lineHeight: "xl",
       },
       icon: {
-        size: "s",
+        rawSize: 13,
         mx: "1.5",
       },
     },
@@ -113,7 +110,7 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
         lineHeight: "2xl",
       },
       icon: {
-        size: "s",
+        rawSize: 15,
         mx: "1.5",
       },
     },
@@ -121,30 +118,38 @@ const InputConfig: MolecularComponentConfig<InputAtoms> = {
   variants: {
     filled: {
       container: {
-        borderWidth: 1,
-        backgroundColor: {
-          light: "neutral.200",
-          dark: "neutral.900",
-        },
-        borderColor: {
-          light: "neutral.200",
-          dark: "neutral.900",
+        animate: {
+          borderWidth: 1,
+          backgroundColor: {
+            light: "neutral.200",
+            dark: "neutral.800",
+          },
+          borderColor: {
+            light: "neutral.300",
+            dark: "neutral.700",
+          },
         },
         _focused: {
           borderColor: "primary.500",
+          backgroundColor: {
+            light: "white",
+            dark: "neutral.900",
+          },
         },
       },
     },
     outline: {
       container: {
-        borderWidth: 1,
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
-        borderColor: {
-          light: "neutral.400",
-          dark: "neutral.500",
+        animate: {
+          borderWidth: 1,
+          backgroundColor: {
+            light: "neutral.50",
+            dark: "neutral.800",
+          },
+          borderColor: {
+            light: "neutral.400",
+            dark: "neutral.500",
+          },
         },
         _focused: {
           borderColor: "primary.500",

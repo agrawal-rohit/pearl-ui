@@ -81,10 +81,6 @@ export {
 } from "./molecules/radio/radio-group";
 export { default as Switch, SwitchProps } from "./molecules/switch/switch";
 export {
-  default as TextLink,
-  TextLinkProps,
-} from "./molecules/text-link/text-link";
-export {
   default as Textarea,
   TextareaProps,
 } from "./molecules/textarea/textarea";

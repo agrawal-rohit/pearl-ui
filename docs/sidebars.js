@@ -73,7 +73,6 @@ module.exports = {
         "components/forms/CheckBox",
         "components/forms/Radio",
         "components/forms/Switch",
-        "components/forms/Text Link",
       ],
     },
     {

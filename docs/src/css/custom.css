@@ -199,9 +199,7 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Slide"]:after,
 .menu__link[href*="Slide Fade"]:after,
 .menu__link[href*="Spacer"]:after,
-.menu__link[href*="Text"]:not([href*="Text Link"]):not(
-    [href*="Textarea"]
-  ):after,
+.menu__link[href*="Text"]:not([href*="Textarea"]):after,
 .menu__link[href*="Screen"]:after,
 .menu__link[href*="Icon"]:after,
 .menu__link[href*="Pressable"]:after,
@@ -235,10 +233,7 @@ html[data-theme="dark"] .menu__link[href*="Scale Fade"]:after,
 html[data-theme="dark"] .menu__link[href*="Slide"]:after,
 html[data-theme="dark"] .menu__link[href*="Slide Fade"]:after,
 html[data-theme="dark"] .menu__link[href*="Spacer"]:after,
-html[data-theme="dark"]
-  .menu__link[href*="Text"]:not([href*="Text Link"]):not(
-    [href*="Textarea"]
-  ):after,
+html[data-theme="dark"] .menu__link[href*="Text"]:not([href*="Textarea"]):after,
 html[data-theme="dark"] .menu__link[href*="Screen"]:after,
 html[data-theme="dark"] .menu__link[href*="Icon"]:after,
 html[data-theme="dark"] .menu__link[href*="Pressable"]:after,
@@ -255,7 +250,6 @@ html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
 .menu__link[href*="Input"]:after,
 .menu__link[href*="Switch"]:after,
 .menu__link[href*="Textarea"]:after,
-.menu__link[href*="Text Link"]:after,
 .menu__link[href*="CheckBox"]:after,
 .menu__link[href*="Radio"]:after,
 .menu__link[href*="Badge"]:after {
@@ -284,7 +278,6 @@ html[data-theme="dark"] .menu__link[href*="Video"]:after,
 html[data-theme="dark"] .menu__link[href*="Input"]:after,
 html[data-theme="dark"] .menu__link[href*="Switch"]:after,
 html[data-theme="dark"] .menu__link[href*="Textarea"]:after,
-html[data-theme="dark"] .menu__link[href*="Text Link"]:after,
 html[data-theme="dark"] .menu__link[href*="CheckBox"]:after,
 html[data-theme="dark"] .menu__link[href*="Radio"]:after,
 html[data-theme="dark"] .menu__link[href*="Badge"]:after {

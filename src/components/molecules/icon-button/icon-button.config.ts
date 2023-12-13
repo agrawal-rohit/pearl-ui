@@ -4,15 +4,15 @@ import { SpinnerProps } from "../../atoms/spinner/spinner";
 import { IconButtonProps } from "./icon-button";
 
 export type IconButtonAtoms = {
-  box: IconButtonProps;
+  pressable: IconButtonProps;
   spinner: SpinnerProps;
   icon: IconProps;
 };
 
 const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
-  parts: ["box", "spinner", "icon"],
+  parts: ["pressable", "spinner", "icon"],
   baseStyle: {
-    box: {
+    pressable: {
       my: "1",
       justifyContent: "center",
       alignItems: "center",
@@ -29,7 +29,7 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
   },
   sizes: {
     xs: {
-      box: {
+      pressable: {
         p: "1.5",
         borderRadius: "s",
       },
@@ -38,11 +38,11 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         size: "xs",
       },
       icon: {
-        size: "xs",
+        rawSize: 9,
       },
     },
     s: {
-      box: {
+      pressable: {
         p: "2",
         borderRadius: "m",
       },
@@ -50,11 +50,11 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         size: "s",
       },
       icon: {
-        size: "xs",
+        rawSize: 11,
       },
     },
     m: {
-      box: {
+      pressable: {
         p: "3",
         borderRadius: "m",
       },
@@ -62,11 +62,11 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         size: "s",
       },
       icon: {
-        size: "s",
+        rawSize: 13,
       },
     },
     l: {
-      box: {
+      pressable: {
         p: "4",
         borderRadius: "m",
       },
@@ -74,13 +74,15 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         size: "m",
       },
       icon: {
-        size: "s",
+        rawSize: 15,
       },
     },
   },
   variants: {
     filled: {
-      box: {
+      pressable: {
+        borderWidth: 1,
+        borderColor: "primary.500",
         backgroundColor: "primary.500",
         _pressed: {
           bgColor: "primary.400",
@@ -94,7 +96,7 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
       },
     },
     outline: {
-      box: {
+      pressable: {
         backgroundColor: {
           light: "neutral.50",
           dark: "neutral.800",
@@ -102,7 +104,10 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         borderWidth: 1,
         borderColor: "primary.500",
         _pressed: {
-          bgColor: "primary.50",
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
         },
       },
       spinner: {
@@ -113,15 +118,12 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
       },
     },
     ghost: {
-      box: {
-        backgroundColor: {
-          light: "neutral.50",
-          dark: "neutral.800",
-        },
+      pressable: {
+        backgroundColor: "transparent",
         _pressed: {
           bgColor: {
             light: "primary.50",
-            dark: "neutral.900",
+            dark: "primary.900",
           },
         },
       },

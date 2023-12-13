@@ -1,9 +1,9 @@
 import { useAnimationState as useMotiAnimationState } from "moti";
 import { StyleFunctionContainer, boxStyleFunctions } from "../theme";
-import { useMotiWithStyleProps } from "../hooks";
 import { MotiWithPearlStyleProps } from "../theme/src/types";
 import { ViewStyle } from "react-native";
 import { BoxStyleProps } from "../theme/src/style-functions";
+import { useMotiWithStyleProps } from "./useMotiWithStyleProps";
 import { useMemo } from "react";
 
 /**

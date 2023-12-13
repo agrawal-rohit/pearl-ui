@@ -43,7 +43,7 @@ const IconButton = React.memo(
     ) => {
       const { size, variant, isDisabled, colorScheme } = useButtonGroup();
 
-      // Overwrite props from checkbox group
+      // Overwrite props from button group
       rest.size = rest.size ?? size;
       rest.variant = rest.variant ?? variant;
       rest.isDisabled = rest.isDisabled ?? isDisabled;
@@ -58,9 +58,9 @@ const IconButton = React.memo(
         },
         rest.colorScheme,
         boxStyleFunctions,
-        "box",
-        "box",
-        "box"
+        "pressable",
+        "pressable",
+        "pressable"
       );
       const { atoms } = molecularProps;
 
@@ -69,12 +69,12 @@ const IconButton = React.memo(
 
       return (
         <Pressable
-          {...atoms.box}
+          {...atoms.pressable}
           ref={ref}
           isDisabled={isButtonDisabled}
           alignSelf={isFullWidth ? "stretch" : "flex-start"}
           accessibilityLabel={
-            !isLoading ? atoms.box.accessibilityLabel : "Loading"
+            !isLoading ? atoms.pressable.accessibilityLabel : "Loading"
           }
           accessibilityState={{ disabled: isButtonDisabled, busy: isLoading }}
         >
