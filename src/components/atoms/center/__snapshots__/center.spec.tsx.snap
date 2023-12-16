@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Center passes the snapshot test 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    This is centered
+  </View>
+</View>
+`;

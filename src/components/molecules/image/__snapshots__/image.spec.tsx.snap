@@ -1,0 +1,3028 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Image loads uses the filesystem url for remote images with caching 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            },
+          }
+        }
+        blurRadius={0}
+        collapsable={false}
+        source={
+          {
+            "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+          }
+        }
+        style={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#C5CEE0",
+            }
+          }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image loads uses the local url for local images 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "opacity": 0.75,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 3,
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "height": "100%",
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        onError={[Function]}
+        source={1}
+        style={
+          {
+            "borderRadius": 8,
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image loads uses the target url for remote images without caching 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#C5CEE0",
+            }
+          }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image passes the snapshot test for basic setup 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "opacity": 0.75,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+          "zIndex": 3,
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "height": "100%",
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        onError={[Function]}
+        source={1}
+        style={
+          {
+            "borderRadius": 8,
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            },
+          }
+        }
+        blurRadius={0}
+        collapsable={false}
+        source={
+          {
+            "uri": "https://www.logolynx.com/images/logolynx/43/430c07f27af3fda19373042528edbe3d.jpeg",
+          }
+        }
+        style={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#C5CEE0",
+            }
+          }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image passes the snapshot test for the fallback methods if there is an error while fetching the image 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            },
+          }
+        }
+        blurRadius={0}
+        collapsable={false}
+        source={
+          {
+            "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
+          }
+        }
+        style={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "0": {
+            "alignItems": "center",
+            "borderRadius": 8,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "zIndex": 3,
+          },
+          "1": {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+          },
+          {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+            "alignItems": "center",
+            "borderRadius": 8,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 3,
+          },
+        ]
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoBlurView
+        blurReductionFactor={4}
+        intensity={50}
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        tint="dark"
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            },
+          }
+        }
+        blurRadius={0}
+        collapsable={false}
+        source={
+          {
+            "uri": "https://www.wpbeginner.com/wp-content/uploads/2020/03/ultimate-small-business-resource-coronavirus.png",
+          }
+        }
+        style={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "0": {
+            "alignItems": "center",
+            "borderRadius": 8,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "zIndex": 3,
+          },
+          "1": {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+          },
+          {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+            "alignItems": "center",
+            "borderRadius": 8,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 3,
+          },
+        ]
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoBlurView
+        blurReductionFactor={4}
+        intensity={50}
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        tint="dark"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image passes the snapshot test for the various progressive loading indicators 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+          "zIndex": 3,
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#934a9a",
+            "borderRadius": 8,
+            "height": "100%",
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignItems": "center",
+              "backgroundColor": "#934a9a",
+              "borderRadius": 8,
+              "height": "100%",
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#934a9a",
+            "borderRadius": 8,
+            "height": "100%",
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "height": "100%",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        animate={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "borderRadius": 8,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+              "zIndex": 1,
+            },
+          }
+        }
+        blurRadius={0}
+        collapsable={false}
+        source={1}
+        style={
+          {
+            "borderRadius": 8,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+            "zIndex": 1,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "0": {
+            "alignItems": "center",
+            "borderRadius": 8,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "zIndex": 3,
+          },
+          "1": {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+          },
+          {
+            "0": {
+              "alignItems": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "borderRadius": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "justifyContent": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "overflow": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+              "zIndex": {
+                "alignItems": "center",
+                "borderRadius": 8,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "zIndex": 3,
+              },
+            },
+            "1": {
+              "bottom": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "left": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "position": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "right": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              "top": {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            },
+            "alignItems": "center",
+            "borderRadius": 8,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 3,
+          },
+        ]
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <ViewManagerAdapter_ExpoBlurView
+        blurReductionFactor={4}
+        intensity={50}
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        tint="dark"
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 100,
+          "justifyContent": "center",
+          "width": 100,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#C5CEE0",
+            }
+          }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Image triggers onError to be triggered and final image to be hidden in when an error occurs while fetching a remote image 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="image"
+    accessible={true}
+    animate={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#C5CEE0",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#C5CEE0",
+            }
+          }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 10,
+                        "overflow": "hidden",
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#C5CEE0",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
+                          "width": 20,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

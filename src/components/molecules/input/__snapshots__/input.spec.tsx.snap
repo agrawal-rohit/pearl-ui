@@ -1,0 +1,1249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityLabel="This is a placeholder"
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="This is a placeholder"
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <Text />
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#C5CEE0",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+      variant="outline"
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "flexDirection": "row",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 4,
+        "paddingVertical": 4,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 4,
+          "paddingVertical": 4,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 4,
+        "paddingVertical": 4,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 20,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 4,
+        "paddingVertical": 6,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 4,
+          "paddingVertical": 6,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 4,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 4,
+        "paddingVertical": 6,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 20,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 10,
+        "paddingVertical": 12,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 10,
+          "paddingVertical": 12,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 10,
+        "paddingVertical": 12,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 6,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 26,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+      variant="filled"
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#C5CEE0",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#C5CEE0",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+      variant="outline"
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+        "width": "100%",
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "opacity": 1,
+          "paddingHorizontal": 6,
+          "paddingVertical": 8,
+          "width": "100%",
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#EDF1F7",
+        "borderColor": "#E4E9F2",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 6,
+        "paddingVertical": 8,
+        "width": "100%",
+      }
+    }
+    transition={
+      {
+        "duration": 100,
+      }
+    }
+  >
+    <TextInput
+      accessibilityState={
+        {
+          "disabled": false,
+          "selected": false,
+        }
+      }
+      allowFontScaling={true}
+      editable={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#8F9BB3"
+      selectionColor="#6A7BFF"
+      style={
+        [
+          {
+            "marginHorizontal": 4,
+          },
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "letterSpacing": 0,
+            "lineHeight": 24,
+          },
+          {},
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "center",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Text passes the snapshot test 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    accessibilityRole="text"
+    accessible={true}
+    allowFontScaling={true}
+    animate={
+      {
+        "color": "#1A2138",
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "color": "#1A2138",
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "color": "#1A2138",
+        "fontFamily": "Poppins-Regular",
+        "fontSize": 16.099999999999998,
+        "fontStyle": "normal",
+        "fontWeight": "400",
+        "includeFontPadding": false,
+        "letterSpacing": 0,
+        "lineHeight": 22,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    Hi I am a text
+  </Text>
+</View>
+`;
