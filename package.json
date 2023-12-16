@@ -45,7 +45,7 @@
     "react-native-web": "0.19.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.23.6",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@expo-google-fonts/poppins": "^0.2.3",
