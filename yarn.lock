@@ -1377,9 +1377,9 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@ctrl/tinycolor@4.0.2":
+"@ctrl/tinycolor@4.0.2 ":
   version "4.0.2"
-  resolved "https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-4.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.0.2.tgz#7665b09c0163722ffc20ee885eb9a8ff80d9ebde"
   integrity sha512-fKQinXE9pJ83J1n+C3rDl2xNLJwfoYNvXLRy5cYZA9hBJJw2q+sbb/AOSNKmLxnTWyNTmy4994dueSwP4opi5g==
 
 "@egjs/hammerjs@^2.0.17":
@@ -1416,10 +1416,10 @@
     mv "~2"
     safe-json-stringify "~1"
 
-"@expo/cli@0.10.13":
-  version "0.10.13"
-  resolved "https://registry.npmjs.org/@expo/cli/-/cli-0.10.13.tgz"
-  integrity sha512-8ciyz+yIDih6zCNMWK0IyEv411W7vej/TaWIFGarogPVbFokXrUKr0aKoQG1RU1SLlY4eUpHakbIzqog+rhJdQ==
+"@expo/cli@0.10.16":
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-0.10.16.tgz#42f9aaf08884f70f3a671b7d6b4f138ad39192d7"
+  integrity sha512-EwgnRN5AMElg0JJjFLJTPk5hYkVXxnNMLIvZBiTfGoCq+rDw6u7Mg5l2Bbm/geSHOoplaHyPZ/Wr23FAuZWehA==
   dependencies:
     "@babel/runtime" "^7.20.0"
     "@expo/code-signing-certificates" "0.0.5"
@@ -5223,9 +5223,9 @@ expect@^29.0.0, expect@^29.7.0:
     jest-message-util "^29.7.0"
     jest-util "^29.7.0"
 
-expo-app-loading@2.1.1:
+expo-app-loading@^2.1.1:
   version "2.1.1"
-  resolved "https://registry.npmjs.org/expo-app-loading/-/expo-app-loading-2.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/expo-app-loading/-/expo-app-loading-2.1.1.tgz#5abde2e219ed4a6dcf8a9858a7317792fd9a18d2"
   integrity sha512-b3VNkPuFaI9J847HSpjI4uiuyE4+IWyAIPT9uzbkS7QFknL99DMoihtgzeWzKaJKSAmbYc3ph2Vl9skJAkVYUg==
   dependencies:
     expo-splash-screen "~0.17.0"
@@ -5266,7 +5266,7 @@ expo-constants@~14.4.2:
     "@expo/config" "~8.1.0"
     uuid "^3.3.2"
 
-expo-file-system@~15.4.0, expo-file-system@~15.4.4:
+expo-file-system@~15.4.0:
   version "15.4.4"
   resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-15.4.4.tgz"
   integrity sha512-F0xS88D85F7qVQ61r0qBnzh6VW/s6iIl+VaQEEi2nAIOQHw1JIEj4yCXPLTtbyn5VmArbe2dSL3KYz1V+BLkKA==
@@ -5304,10 +5304,10 @@ expo-modules-autolinking@1.5.1:
     find-up "^5.0.0"
     fs-extra "^9.1.0"
 
-expo-modules-core@1.5.11:
-  version "1.5.11"
-  resolved "https://registry.npmjs.org/expo-modules-core/-/expo-modules-core-1.5.11.tgz"
-  integrity sha512-1Dj2t74nVjxq6xEQf2b9WFfAMhPzVnR0thY0PfRFgob4STyj3sq1U4PIHVWvKQBtDKIa227DrNRb+Hu+LqKWQg==
+expo-modules-core@1.5.12:
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/expo-modules-core/-/expo-modules-core-1.5.12.tgz#07eb4de4bf25a3ec3e1924403e73d13c656613fd"
+  integrity sha512-mY4wTDU458dhwk7IVxLNkePlYXjs9BTgk4NQHBUXf0LapXsvr+i711qPZaFNO4egf5qq6fQV+Yfd/KUguHstnQ==
   dependencies:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
@@ -5325,13 +5325,13 @@ expo-status-bar@~1.6.0:
   resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.6.0.tgz#e79ffdb9a84d2e0ec9a0dc7392d9ab364fefa9cf"
   integrity sha512-e//Oi2WPdomMlMDD3skE4+1ZarKCJ/suvcB4Jo/nO427niKug5oppcPNYO+csR6y3ZglGuypS+3pp/hJ+Xp6fQ==
 
-expo@49.0.13:
-  version "49.0.13"
-  resolved "https://registry.npmjs.org/expo/-/expo-49.0.13.tgz"
-  integrity sha512-k2QFmT5XN490ksjKJgogfS5SFj6ZKCu1GwWz4VUV4S9gkPjzr8zQAZoVPKaWxUYRb6xDpTJXdhLt7gSnV3bJvw==
+expo@^49.0.13:
+  version "49.0.21"
+  resolved "https://registry.yarnpkg.com/expo/-/expo-49.0.21.tgz#32a66b32d0a233879ec3afdec35fb63d2cc8a4c3"
+  integrity sha512-JpHL6V0yt8/fzsmkAdPdtsah+lU6Si4ac7MDklLYvzEil7HAFEsN/pf06wQ21ax4C+BL27hI6JJoD34tzXUCJA==
   dependencies:
     "@babel/runtime" "^7.20.0"
-    "@expo/cli" "0.10.13"
+    "@expo/cli" "0.10.16"
     "@expo/config" "8.1.2"
     "@expo/config-plugins" "7.2.5"
     "@expo/vector-icons" "^13.0.0"
@@ -5339,11 +5339,11 @@ expo@49.0.13:
     expo-application "~5.3.0"
     expo-asset "~8.10.1"
     expo-constants "~14.4.2"
-    expo-file-system "~15.4.4"
+    expo-file-system "~15.4.5"
     expo-font "~11.4.0"
     expo-keep-awake "~12.3.0"
     expo-modules-autolinking "1.5.1"
-    expo-modules-core "1.5.11"
+    expo-modules-core "1.5.12"
     fbemitter "^3.0.0"
     invariant "^2.2.4"
     md5-file "^3.2.3"
