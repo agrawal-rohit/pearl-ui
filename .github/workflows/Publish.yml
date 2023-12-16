@@ -65,10 +65,10 @@ jobs:
       #----------------------------------------------
       # Setup Node Environment
       #----------------------------------------------
-      - name: Use NodeJs 14.x
+      - name: Use NodeJs 18.x
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: 18.x
 
       #----------------------------------------------
       # Cache modules
