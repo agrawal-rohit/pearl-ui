@@ -31,7 +31,7 @@
     "expo": "^49.0.13",
     "expo-app-loading": "^2.1.1",
     "expo-av": "~13.4.1",
-    "expo-blur": "~12.4.1",
+    "expo-blur": "~12.6.0",
     "expo-file-system": "~15.4.5",
     "expo-status-bar": "~1.6.0",
     "lodash": "^4.17.21",
