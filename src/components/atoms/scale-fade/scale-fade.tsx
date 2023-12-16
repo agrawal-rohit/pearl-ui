@@ -8,7 +8,7 @@ export type ScaleFadeProps = BoxProps & {
   /**
    * The initial scale of the element.
    *
-   * @default 0.9
+   * @default 0.7
    */
   initialScale?: number;
 };
@@ -22,7 +22,7 @@ const ScaleFade = React.memo(
       {
         children,
         show,
-        initialScale = 0.9,
+        initialScale = 0.7,
         transition = {},
         exitTransition = {},
         ...rest

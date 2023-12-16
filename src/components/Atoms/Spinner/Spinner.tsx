@@ -16,15 +16,19 @@ import {
 } from "../../../theme/src/types";
 import { AccessibilityRoles } from "../../../hooks/utils/types";
 import { StyleSheet, View } from "react-native";
-import BallIndicator from "./indicators/ball";
-import BarIndicator from "./indicators/bar";
-import DotIndicator from "./indicators/dot";
-import MaterialIndicator from "./indicators/material";
-import PacmanIndicator from "./indicators/pacman";
-import PulseIndicator from "./indicators/pulse";
-import SkypeIndicator from "./indicators/skype";
-import ActivityIndicator from "./indicators/activity";
-import WaveIndicator from "./indicators/wave";
+import BallIndicator, { BallIndicatorProps } from "./indicators/ball";
+import BarIndicator, { BarIndicatorProps } from "./indicators/bar";
+import DotIndicator, { DotIndicatorProps } from "./indicators/dot";
+import MaterialIndicator, {
+  MaterialIndicatorProps,
+} from "./indicators/material";
+import PacmanIndicator, { PacmanIndicatorProps } from "./indicators/pacman";
+import PulseIndicator, { PulseIndicatorProps } from "./indicators/pulse";
+import SkypeIndicator, { SkypeIndicatorProps } from "./indicators/skype";
+import ActivityIndicator, {
+  ActivityIndicatorProps,
+} from "./indicators/activity";
+import WaveIndicator, { WaveIndicatorProps } from "./indicators/wave";
 import { useResponsiveProp } from "../../../hooks/useResponsiveProp";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 
@@ -97,7 +101,16 @@ const Spinner = React.memo(
         animationDuration = 1200,
         colorScheme = "primary",
         ...rest
-      }: AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps>,
+      }: AtomComponentProps<"Spinner", BaseSpinnerProps, SpinnerStyleProps> &
+        Omit<BallIndicatorProps, "size" | "color"> &
+        Omit<BarIndicatorProps, "size" | "color"> &
+        Omit<DotIndicatorProps, "size" | "color"> &
+        Omit<MaterialIndicatorProps, "size" | "color"> &
+        Omit<PacmanIndicatorProps, "size" | "color"> &
+        Omit<PulseIndicatorProps, "size" | "color"> &
+        Omit<SkypeIndicatorProps, "size" | "color"> &
+        Omit<ActivityIndicatorProps, "size" | "color"> &
+        Omit<WaveIndicatorProps, "size" | "color">,
       ref: any
     ) => {
       // Set default variant to "spinner"

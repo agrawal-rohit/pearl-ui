@@ -30,7 +30,6 @@ const Fade = React.memo(
         () => ({
           dampingRatio: 1,
           duration: 100,
-          easing: Easing.inOut,
           type: "spring",
           ...(transition as any),
         }),
@@ -40,7 +39,6 @@ const Fade = React.memo(
         () => ({
           dampingRatio: 1,
           duration: 100,
-          easing: Easing.inOut,
           type: "spring",
           ...(exitTransition as any),
         }),

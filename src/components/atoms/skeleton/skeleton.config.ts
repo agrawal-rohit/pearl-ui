@@ -5,7 +5,7 @@ const SkeletonConfig: AtomicComponentConfig<SkeletonProps> = {
   baseStyle: {
     borderRadius: "m",
     startColor: {
-      light: "neutral.200",
+      light: "neutral.100",
       dark: "neutral.700",
     },
     endColor: {

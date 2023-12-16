@@ -2,6 +2,7 @@ import React from "react";
 import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import Skeleton, { SkeletonProps } from "./skeleton";
 import Stack from "../stack/stack";
+import { useTheme } from "../../../hooks/useTheme";
 
 export type SkeletonTextProps = SkeletonProps & {
   /**
@@ -13,7 +14,7 @@ export type SkeletonTextProps = SkeletonProps & {
   /**
    * The height of each individual skeleton
    *
-   * @default 20
+   * @default 15
    */
   skeletonHeight?: number;
   /**
@@ -48,12 +49,30 @@ const SkeletonText = React.memo(
         spacing = "3",
         noOfLines = 3,
         isLoaded = false,
-        skeletonHeight = 20,
+        skeletonHeight = 15,
         ...rest
       }: SkeletonTextProps,
       ref: any
     ) => {
+      const { colorMode } = useTheme();
       const numbers = React.useMemo(() => range(noOfLines), [noOfLines]);
+
+      const keyPrefix = React.useMemo(
+        () => `${colorMode}-${Math.random()}`,
+        [
+          isLoaded,
+          colorMode,
+          startColor,
+          endColor,
+          speed,
+          fadeDuration,
+          speed,
+          colorScheme,
+          skeletonHeight,
+          spacing,
+          rest,
+        ]
+      );
 
       const getWidth = React.useCallback(
         (index: number): any => {
@@ -80,7 +99,7 @@ const SkeletonText = React.memo(
 
             return (
               <Skeleton
-                key={numbers.length.toString() + number}
+                key={`${keyPrefix}-${number}`}
                 startColor={startColor}
                 endColor={endColor}
                 isLoaded={isLoaded}

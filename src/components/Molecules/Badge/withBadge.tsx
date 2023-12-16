@@ -98,7 +98,7 @@ const withBadge =
 
     // Render the wrapped component with the badge
     return (
-      <Box alignSelf="flex-start">
+      <Box>
         <WrappedComponent
           {...(props as P)}
           onLayout={onBaseComponentLayoutChange}

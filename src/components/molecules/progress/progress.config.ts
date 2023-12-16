@@ -28,14 +28,14 @@ const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
     xs: {
       container: (variant) => {
         const baseStyle = {
-          height: 10,
+          height: 5,
           borderRadius: "s",
         };
 
         if (variant === "outline")
           return {
             ...baseStyle,
-            p: "0.5",
+            p: "0.25",
           };
 
         return baseStyle;
@@ -48,7 +48,7 @@ const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
     s: {
       container: (variant) => {
         const baseStyle = {
-          height: 15,
+          height: 8,
           borderRadius: "m",
         };
 
@@ -68,14 +68,14 @@ const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
     m: {
       container: (variant) => {
         const baseStyle = {
-          height: 20,
+          height: 12,
           borderRadius: "m",
         };
 
         if (variant === "outline")
           return {
             ...baseStyle,
-            p: "1",
+            p: "0.75",
           };
 
         return baseStyle;
@@ -88,7 +88,7 @@ const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
     l: {
       container: (variant) => {
         const baseStyle = {
-          height: 25,
+          height: 15,
           borderRadius: "m",
         };
 

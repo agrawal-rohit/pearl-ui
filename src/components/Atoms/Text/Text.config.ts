@@ -73,7 +73,7 @@ const TextConfig: AtomicComponentConfig<TextProps> = {
     },
   },
   defaults: {
-    variant: "p2",
+    variant: "p3",
   },
 };
 

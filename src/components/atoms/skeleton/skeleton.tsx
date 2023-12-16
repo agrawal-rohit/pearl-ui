@@ -4,6 +4,7 @@ import { ResponsiveValue, PaletteColors } from "../../../theme";
 import { pearl } from "../../../pearl";
 import { BoxStyleProps } from "../../../theme/src/style-functions";
 import { View } from "react-native";
+import { useTheme } from "../../../hooks";
 
 type BaseSkeletonProps = BoxProps & {
   /**
@@ -47,7 +48,12 @@ const BaseSkeleton = React.memo(
       }: BaseSkeletonProps,
       ref: any
     ) => {
-      const key = React.useMemo(() => Math.random(), [isLoaded]);
+      const { colorMode } = useTheme();
+
+      const key = React.useMemo(
+        () => `${colorMode}-${Math.random()}`,
+        [isLoaded, colorMode, startColor, endColor, speed, fadeDuration, rest]
+      );
 
       if (isLoaded) {
         return (
@@ -69,8 +75,8 @@ const BaseSkeleton = React.memo(
 
       return (
         <Box
-          {...rest}
           key={key}
+          {...rest}
           ref={ref}
           from={{ bgColor: startColor }}
           animate={{ bgColor: endColor }}

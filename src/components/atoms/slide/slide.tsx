@@ -32,13 +32,13 @@ const Slide = React.memo(
       const from = React.useMemo(() => {
         switch (direction) {
           case "bottom":
-            return { translateY: -10000 };
+            return { translateY: -500 };
           case "top":
-            return { translateY: 10000 };
+            return { translateY: 500 };
           case "right":
-            return { translateX: -10000 };
+            return { translateX: -500 };
           case "left":
-            return { translateX: 10000 };
+            return { translateX: 500 };
           default:
             return {};
         }
@@ -48,9 +48,10 @@ const Slide = React.memo(
         switch (direction) {
           case "bottom":
           case "top":
+            return { translateY: 0 };
           case "right":
           case "left":
-            return { translateX: 0, translateY: 0 };
+            return { translateX: 0 };
           default:
             return {};
         }
@@ -59,13 +60,13 @@ const Slide = React.memo(
       const exit = React.useMemo(() => {
         switch (direction) {
           case "bottom":
-            return { translateY: -10000 };
+            return { translateY: -500 };
           case "top":
-            return { translateY: 10000 };
+            return { translateY: 500 };
           case "right":
-            return { translateX: -10000 };
+            return { translateX: -500 };
           case "left":
-            return { translateX: 10000 };
+            return { translateX: 500 };
           default:
             return {};
         }
