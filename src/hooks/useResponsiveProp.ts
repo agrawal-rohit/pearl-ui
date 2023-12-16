@@ -1,11 +1,11 @@
 import { useTheme } from "./useTheme";
-import { useDimensions } from "./useDimensions";
 import { PropValue, ResponsiveValue } from "../theme/src/types";
 import {
   getValueForScreenSize,
   isResponsiveObjectValue,
 } from "../theme/src/responsive-helpers";
 import { useMemo } from "react";
+import { useWindowDimensions } from "react-native";
 
 /**
  * Hook to get the appropriate value from a responsive style object based on the current screen size.
@@ -14,7 +14,7 @@ import { useMemo } from "react";
  */
 export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
   const { theme } = useTheme();
-  const dimensions = useDimensions();
+  const dimensions = useWindowDimensions();
 
   // If the propValue is a responsive object value, get the appropriate value for the current screen size
   // Use useMemo to avoid unnecessary calculations on every render

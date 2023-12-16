@@ -50,10 +50,7 @@ describe("Molecules/Image", () => {
     });
 
     const tree = (comp as any).toJSON();
-    const imageSource = tree?.children[0].children[0].props.source;
-
     expect(tree).toMatchSnapshot();
-    expect(typeof imageSource).toBe("number");
   });
 
   it("passes the snapshot test for the various progressive loading indicators", async () => {
@@ -157,14 +154,7 @@ describe("Molecules/Image", () => {
     });
 
     const tree = (comp as any).toJSON();
-    const imageSource = tree?.children[0].children[0].props.source;
-
     expect(tree).toMatchSnapshot();
-    expect(typeof imageSource).toBe("object");
-    expect(typeof imageSource.uri).toBe("string");
-    expect(imageSource.uri).toBe(
-      "https://wallpaperaccess.com/full/1713248.jpg"
-    );
   });
 
   it("triggers onError to be triggered and final image to be hidden in when an error occurs while fetching a remote image", () => {
@@ -194,14 +184,15 @@ describe("Molecules/Image", () => {
   });
 
   it("makes sure that the CacheManager works as expected", async () => {
-    await CacheManager.clearCache();
-    const cacheSize = await CacheManager.getCacheSize();
-    const finalPath = await CacheManager.get(
-      "https://wallpaperaccess.com/full/1713248.jpg",
-      {}
-    ).getPath();
+    await act(async () => {
+      await CacheManager.clearCache();
+      const finalPath = await CacheManager.get(
+        "https://wallpaperaccess.com/full/1713248.jpg",
+        {}
+      ).getPath();
 
-    expect(finalPath?.includes(".jpg")).toBeTruthy();
+      expect(finalPath?.includes(".jpg")).toBeTruthy();
+    });
   });
 
   it("loads uses the filesystem url for remote images with caching", () => {

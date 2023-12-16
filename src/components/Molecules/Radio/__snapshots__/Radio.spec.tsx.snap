@@ -3,177 +3,293 @@
 exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Check me!"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Check me!
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Check me!
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -182,345 +298,577 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
 exports[`Molecules/Radio passes the snapshot test for different color schemes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Primary Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Primary Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Primary Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Secondary Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Secondary Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Secondary Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -529,681 +877,1145 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
 exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Small Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 17,
+                "justifyContent": "center",
+                "padding": 2,
+                "width": 17,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 17,
+                  "justifyContent": "center",
+                  "padding": 2,
+                  "width": 17,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 18,
+                "height": 17,
                 "justifyContent": "center",
-                "padding": 3,
-                "transform": Array [],
-                "width": 18,
+                "padding": 2,
+                "width": 17,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Small Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 13.799999999999999,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p4"
+          >
+            Small Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Regular Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 21,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 21,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 21,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 21,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 21,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 21,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Regular Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Regular Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Large Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 30,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 7,
-                "transform": Array [],
-                "width": 30,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p1"
-      >
-        Large Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Large Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Extra Large Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 29,
+                "justifyContent": "center",
+                "padding": 6,
+                "width": 29,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 29,
+                  "justifyContent": "center",
+                  "padding": 6,
+                  "width": 29,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 36,
+                "height": 29,
                 "justifyContent": "center",
-                "padding": 9,
-                "transform": Array [],
-                "width": 36,
+                "padding": 6,
+                "width": 29,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p1"
-      >
-        Extra Large Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 18.4,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 24,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p2"
+          >
+            Extra Large Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -1212,345 +2024,577 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
 exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Filled Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Filled Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Filled Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Outline Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#C5CEE0",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#C5CEE0",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "transparent",
                 "borderColor": "#C5CEE0",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="primary.500"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#FFFFFF",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Outline Radio
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Outline Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -1559,345 +2603,577 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
 exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Checked Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
-        "checked": true,
+      {
+        "busy": undefined,
+        "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              Object {
+            animate={
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#6A7BFF",
                 "borderColor": "#6A7BFF",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
               }
             }
-          >
-            <View
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedBackgroundColor="neutral.50"
-              collapsable={false}
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": "100%",
-                  "transform": Array [],
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
-        </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Checked Radio
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Checked Radio"
-    accessibilityRole="radio"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
-        }
-      }
-    >
-      <RNGestureHandlerButton
-        collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
-      >
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
-        >
-          <View
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#6A7BFF",
                 "borderColor": "#6A7BFF",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="primary.500"
               collapsable={false}
               style={
-                Object {
-                  "backgroundColor": "#6A7BFF",
+                {
+                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Checked Radio
+          </Text>
+        </View>
+      </View>
     </View>
+  </View>
+  <View
+    accessibilityLabel="Checked Radio"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
+      <View
+        animate={{}}
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+          {
+            "value": {},
           }
         }
         collapsable={false}
         style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
           }
         }
-        variant="p2"
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
-        Checked Radio
-      </Text>
+        <View
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+              }
+            }
+          >
+            <View
+              animate={
+                {
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "backgroundColor": "#6A7BFF",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                }
+              }
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Checked Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -1906,558 +3182,600 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
 exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Error Radio"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              Object {
+            animate={
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
                 "borderColor": "#FF4B42",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
               }
             }
-          >
-            <View
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedBackgroundColor="neutral.50"
-              collapsable={false}
-              style={
-                Object {
-                  "backgroundColor": "#EDF1F7",
-                  "borderRadius": 1000,
-                  "display": "flex",
-                  "height": "100%",
-                  "transform": Array [],
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
-        </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Error Radio
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Error Radio with message"
-    accessibilityRole="radio"
-    accessibilityState={
-      Object {
-        "checked": undefined,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
-        }
-      }
-    >
-      <RNGestureHandlerButton
-        collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
-      >
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
-        >
-          <View
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#FF4B42",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
                 "borderColor": "#FF4B42",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Error Radio with message
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Error Radio
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
-  <Text
-    accessibilityRole="text"
-    accessible={true}
-    allowFontScaling={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    style={
-      Object {
-        "color": "#FF4B42",
-        "display": "flex",
-        "fontFamily": "Poppins-Regular",
-        "fontSize": 13.799999999999999,
-        "fontStyle": "normal",
-        "fontWeight": "400",
-        "includeFontPadding": false,
-        "letterSpacing": 0,
-        "lineHeight": 20,
-        "marginBottom": 4,
-        "transform": Array [],
-      }
-    }
-    variant="caption"
-  >
-    This is an error message!
-  </Text>
 </View>
 `;
 
 exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Button press"
-    accessibilityRole="radio"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="1.5"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderColor": "#C5CEE0",
-        "borderWidth": 2,
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#C5CEE0",
+            "borderWidth": 2,
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#C5CEE0",
+          "borderWidth": 2,
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 25,
+                "justifyContent": "center",
+                "padding": 4,
+                "width": 25,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "padding": 4,
+                  "width": 25,
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
                 "borderRadius": 1000,
                 "borderWidth": 2,
-                "display": "flex",
-                "height": 24,
+                "height": 25,
                 "justifyContent": "center",
-                "padding": 5,
-                "transform": Array [],
-                "width": 24,
+                "padding": 4,
+                "width": 25,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
               }
             }
           >
             <View
+              animate={
+                {
+                  "backgroundColor": "#EDF1F7",
+                  "borderRadius": 1000,
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "backgroundColor": "#EDF1F7",
+                    "borderRadius": 1000,
+                    "height": "100%",
+                    "width": "100%",
                   },
                 }
               }
-              checkedBackgroundColor="neutral.50"
               collapsable={false}
               style={
-                Object {
+                {
                   "backgroundColor": "#EDF1F7",
                   "borderRadius": 1000,
-                  "display": "flex",
                   "height": "100%",
-                  "transform": Array [],
                   "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "duration": 50,
                 }
               }
             />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Button press
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Button press
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>

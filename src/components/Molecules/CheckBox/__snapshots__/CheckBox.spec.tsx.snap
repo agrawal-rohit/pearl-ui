@@ -3,155 +3,260 @@
 exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Check me!"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              Object {
+            animate={
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
                 "borderWidth": 2,
-                "display": "flex",
                 "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "padding": 3,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
               }
             }
           >
             <Text />
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
           }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
           }
-        }
-        variant="p2"
-      >
-        Check me!
-      </Text>
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Check me!
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -160,375 +265,607 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
 exports[`Molecules/CheckBox passes the snapshot test for different color schemes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Primary CheckBox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            colorScheme="primary"
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Primary CheckBox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Primary CheckBox
-      </Text>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Secondary CheckBox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            colorScheme="secondary"
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Secondary CheckBox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Secondary CheckBox
-      </Text>
+      </View>
     </View>
   </View>
 </View>
@@ -537,741 +874,1205 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
 exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Small Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 1,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 4,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 1,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            size="xs"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 1,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 10.35,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 13.799999999999999,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p4"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 11.5,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Small Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Small Checkbox
-      </Text>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Regular Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 2,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 4,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 2,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            size="s"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 2,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 12.649999999999999,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Regular Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Regular Checkbox
-      </Text>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Large Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            size="m"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 23,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Large Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
-          }
-        }
-        variant="p1"
-      >
-        Large Checkbox
-      </Text>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Extra Large Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 4,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 4,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            size="l"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 4,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 17.25,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 18.4,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 24,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p2"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 34.5,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Extra Large Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
-          }
-        }
-        variant="p1"
-      >
-        Extra Large Checkbox
-      </Text>
+      </View>
     </View>
   </View>
 </View>
@@ -1280,375 +2081,607 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
 exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Filled Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="filled"
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Filled Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Filled Checkbox
-      </Text>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Outline Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#C5CEE0",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#C5CEE0",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#C5CEE0",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="outline"
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#1A2138",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#1A2138",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#1A2138",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#FFFFFF",
-                "borderColor": "#C5CEE0",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Outline Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Outline Checkbox
-      </Text>
+      </View>
     </View>
   </View>
 </View>
@@ -1657,741 +2690,1211 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
 exports[`Molecules/CheckBox passes the snapshot test when in a checked/indeterminate state 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Indeterminate Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
-        "checked": true,
+      {
+        "busy": undefined,
+        "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              Object {
+            animate={
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
                 "backgroundColor": "#6A7BFF",
                 "borderColor": "#6A7BFF",
-                "borderRadius": 4,
+                "borderRadius": 8,
                 "borderWidth": 2,
-                "display": "flex",
                 "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "padding": 3,
               }
             }
+            animatedStyle={
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            isChecked={true}
+            isIndeterminate={true}
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="filled"
           >
             <Text
               accessibilityLabel="remove-outline Icon"
               accessible={true}
               allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 1,
                   },
                 }
               }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
               collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
+              selectable={false}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": undefined,
-                    "fontSize": 17.25,
+                    "fontSize": 14.95,
                   },
-                  Object {
+                  {
                     "color": "#FFFFFF",
-                    "display": "flex",
-                    "transform": Array [],
+                    "opacity": 1,
                   },
-                  Object {
+                  {
                     "fontFamily": "ionicons",
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
-                  Object {},
+                  {},
                 ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
               }
             >
               
             </Text>
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Indeterminate Checkbox
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Checked Checkbox"
-    accessibilityRole="checkbox"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
-        }
-      }
-    >
-      <RNGestureHandlerButton
-        collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
-      >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
-          <View
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "#FFFFFF",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Indeterminate Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
+      </View>
     </View>
+  </View>
+  <View
+    accessibilityLabel="Checked Checkbox"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
+      <View
+        animate={{}}
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+          {
+            "value": {},
           }
         }
         collapsable={false}
         style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
           }
         }
-        variant="p2"
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
-        Checked Checkbox
-      </Text>
+        <View
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            isChecked={true}
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="filled"
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 1,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 1,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Checked Checkbox
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
   <View
     accessibilityLabel="Indeterminate Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
-        "checked": true,
+      {
+        "busy": undefined,
+        "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
                 },
               }
             }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
             collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            isChecked={true}
+            isIndeterminate={true}
+            shape="square"
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
+                "backgroundColor": "transparent",
                 "borderColor": "#6A7BFF",
-                "borderRadius": 4,
+                "borderRadius": 8,
                 "borderWidth": 2,
-                "display": "flex",
                 "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "padding": 3,
               }
             }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="outline"
           >
             <Text
               accessibilityLabel="remove-outline Icon"
               accessible={true}
               allowFontScaling={false}
+              animate={
+                {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                }
+              }
               animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
+                {
+                  "value": {
+                    "color": "#6A7BFF",
+                    "opacity": 1,
                   },
                 }
               }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
               collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
+              selectable={false}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": undefined,
-                    "fontSize": 17.25,
+                    "fontSize": 14.95,
                   },
-                  Object {
-                    "color": "#FFFFFF",
-                    "display": "flex",
-                    "transform": Array [],
+                  {
+                    "color": "#6A7BFF",
+                    "opacity": 1,
                   },
-                  Object {
+                  {
                     "fontFamily": "ionicons",
                     "fontStyle": "normal",
                     "fontWeight": "normal",
                   },
-                  Object {},
+                  {},
                 ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
               }
             >
               
             </Text>
           </View>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Indeterminate Checkbox
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Checked Checkbox"
-    accessibilityRole="checkbox"
-    accessibilityState={
-      Object {
-        "checked": true,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
-        }
-      }
-    >
-      <RNGestureHandlerButton
-        collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
-      >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
-          <View
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "#FFFFFF",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Indeterminate Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
+      </View>
     </View>
+  </View>
+  <View
+    accessibilityLabel="Checked Checkbox"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
+      <View
+        animate={{}}
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
+          {
+            "value": {},
           }
         }
         collapsable={false}
         style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
           }
         }
-        variant="p2"
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
-        Checked Checkbox
-      </Text>
+        <View
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#6A7BFF",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            isChecked={true}
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+            variant="outline"
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#6A7BFF",
+                    "opacity": 1,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#6A7BFF",
+                    "opacity": 1,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
+          >
+            Checked Checkbox
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
@@ -2400,603 +3903,629 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
 exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Error Checkbox"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#FF4B42",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#FF4B42",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            isInvalid={true}
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#FF4B42",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#FF4B42",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Error Checkbox
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Error Checkbox
-      </Text>
+      </View>
     </View>
   </View>
-  <View
-    accessibilityLabel="Error Checkbox with message"
-    accessibilityRole="checkbox"
-    accessibilityState={
-      Object {
-        "checked": undefined,
-        "disabled": false,
-      }
-    }
-    accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    direction="horizontal"
-    spacing="xs"
-    style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
-        }
-      }
-    >
-      <RNGestureHandlerButton
-        collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
-      >
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
-        >
-          <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#FF4B42",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Error Checkbox with message
-      </Text>
-    </View>
-  </View>
-  <Text
-    accessibilityRole="text"
-    accessible={true}
-    allowFontScaling={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
-    collapsable={false}
-    style={
-      Object {
-        "color": "#FF4B42",
-        "display": "flex",
-        "fontFamily": "Poppins-Regular",
-        "fontSize": 13.799999999999999,
-        "fontStyle": "normal",
-        "fontWeight": "400",
-        "includeFontPadding": false,
-        "letterSpacing": 0,
-        "lineHeight": 20,
-        "marginBottom": 4,
-        "transform": Array [],
-      }
-    }
-    variant="caption"
-  >
-    This is an error message!
-  </Text>
 </View>
 `;
 
 exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     accessibilityLabel="Button press"
-    accessibilityRole="checkbox"
+    accessibilityRole="button"
     accessibilityState={
-      Object {
+      {
+        "busy": undefined,
         "checked": undefined,
         "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
     }
     accessible={true}
-    animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
-      }
-    }
     collapsable={false}
-    direction="horizontal"
-    spacing="xs"
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignSelf": "flex-start",
-        "backgroundColor": "#6A7BFF",
-        "borderColor": "#C5CEE0",
-        "borderWidth": 2,
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "marginVertical": 4,
-        "opacity": 1,
-        "transform": Array [],
       }
     }
   >
     <View
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#C5CEE0",
+            "borderWidth": 2,
+            "marginVertical": 4,
+            "opacity": 1,
           },
         }
       }
       collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+              "marginVertical": 4,
+              "opacity": 1,
+            },
+          },
+        }
+      }
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginRight": 8,
-          "transform": Array [],
+        {
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#C5CEE0",
+          "borderWidth": 2,
+          "marginVertical": 4,
+          "opacity": 1,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
         }
       }
     >
-      <RNGestureHandlerButton
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
         collapsable={false}
-        exclusive={true}
-        onGestureEvent={[Function]}
-        onGestureHandlerEvent={[Function]}
-        onGestureHandlerStateChange={[Function]}
-        onHandlerStateChange={[Function]}
-        rippleColor={0}
+        style={
+          {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
       >
         <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessible={true}
-          style={Object {}}
+          animate={
+            {
+              "marginRight": 10,
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "marginRight": 10,
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+              "marginRight": 10,
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
             animatedStyle={
-              Object {
-                "value": Object {
-                  "transform": Array [],
+              {
+                "value": {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#EDF1F7",
+                  "borderColor": "#E4E9F2",
+                  "borderRadius": 8,
+                  "borderWidth": 2,
+                  "justifyContent": "center",
+                  "padding": 3,
+                },
+              }
+            }
+            checkedIconFamily="Ionicons"
+            checkedIconName="checkmark-sharp"
+            collapsable={false}
+            indeterminateIconFamily="Ionicons"
+            indeterminateIconName="remove-outline"
+            shape="square"
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "padding": 3,
+              }
+            }
+            transition={
+              {
+                "duration": 50,
+                "type": "timing",
+              }
+            }
+          >
+            <Text
+              accessibilityLabel="checkmark-sharp Icon"
+              accessible={true}
+              allowFontScaling={false}
+              animate={
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                }
+              }
+              collapsable={false}
+              selectable={false}
+              style={
+                [
+                  {
+                    "color": undefined,
+                    "fontSize": 14.95,
+                  },
+                  {
+                    "color": "#FFFFFF",
+                    "opacity": 0,
+                  },
+                  {
+                    "fontFamily": "ionicons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  {},
+                ]
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "flexDirection": "row",
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "alignSelf": "center",
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "alignSelf": "center",
+                  "color": "#1A2138",
                 },
               }
             }
             collapsable={false}
             style={
-              Object {
-                "alignItems": "center",
+              {
                 "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#EDF1F7",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "display": "flex",
-                "justifyContent": "center",
-                "padding": 2,
-                "transform": Array [],
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
               }
             }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p3"
           >
-            <Text
-              accessibilityLabel="checkmark Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animatedStyle={
-                Object {
-                  "value": Object {
-                    "transform": Array [],
-                  },
-                }
-              }
-              checkedIconFamily="Ionicons"
-              checkedIconName="checkmark-sharp"
-              collapsable={false}
-              indeterminateIconFamily="Ionicons"
-              indeterminateIconName="remove-outline"
-              style={
-                Array [
-                  Object {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  Object {
-                    "color": "transparent",
-                    "display": "flex",
-                    "transform": Array [],
-                  },
-                  Object {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
-                ]
-              }
-            >
-              
-            </Text>
-          </View>
+            Button press
+          </Text>
         </View>
-      </RNGestureHandlerButton>
-    </View>
-    <View
-      animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
-          "flexDirection": "row",
-          "transform": Array [],
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "alignSelf": "center",
-            "color": "#1A2138",
-            "display": "flex",
-            "fontFamily": "Poppins-Regular",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "transform": Array [],
-          }
-        }
-        variant="p2"
-      >
-        Button press
-      </Text>
+      </View>
     </View>
   </View>
 </View>

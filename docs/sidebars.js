@@ -115,7 +115,6 @@ module.exports = {
         "utils/hooks/useTheme",
         "utils/hooks/useStyleProps",
         "utils/hooks/useMotiWithStyleProps",
-        "utils/hooks/useDimensions",
         "utils/hooks/useColorScheme",
         "utils/hooks/useColorModeValue",
         "utils/hooks/useResponsiveProp",

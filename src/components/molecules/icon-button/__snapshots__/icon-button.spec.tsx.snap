@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Molecules/Badge passes the snapshot test for different color schemes 1`] = `
+exports[`Molecules/IconButton passes the snapshot test for basic setup 1`] = `
 <View
   style={
     {
@@ -43,7 +43,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
     style={
       {
         "alignSelf": "flex-start",
-        "height": 30,
       }
     }
   >
@@ -52,12 +51,15 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
         {
           "value": {
             "alignItems": "center",
+            "alignSelf": "flex-start",
             "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
             "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
           },
         }
       }
@@ -68,24 +70,30 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "_isReanimatedSharedValue": true,
             "_value": {
               "alignItems": "center",
+              "alignSelf": "flex-start",
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "alignItems": "center",
+              "alignSelf": "flex-start",
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
           },
         }
@@ -93,1691 +101,20 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       style={
         {
           "alignItems": "center",
+          "alignSelf": "flex-start",
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
           "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
         }
       }
       transition={
         {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#38A169",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#38A169",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#38A169",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#38A169",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#FFB407",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#FFB407",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#FFB407",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#FFB407",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#3FB5FF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#3FB5FF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#3FB5FF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#3FB5FF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#FF4B42",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#FF4B42",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#FF4B42",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#FF4B42",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
-<View
-  style={
-    {
-      "flex": 1,
-    }
-  }
->
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 20,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 20,
-            "justifyContent": "center",
-            "minWidth": 20,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 20,
-              "justifyContent": "center",
-              "minWidth": 20,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 20,
-              "justifyContent": "center",
-              "minWidth": 20,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 20,
-          "justifyContent": "center",
-          "minWidth": 20,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 6,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 6,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 11.5,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 20,
-            "paddingHorizontal": 6,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 25,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 25,
-            "justifyContent": "center",
-            "minWidth": 25,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 25,
-              "justifyContent": "center",
-              "minWidth": 25,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 25,
-              "justifyContent": "center",
-              "minWidth": 25,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 25,
-          "justifyContent": "center",
-          "minWidth": 25,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 8,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 8,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 8,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 35,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 35,
-            "justifyContent": "center",
-            "minWidth": 35,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 35,
-              "justifyContent": "center",
-              "minWidth": 35,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 35,
-              "justifyContent": "center",
-              "minWidth": 35,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 35,
-          "justifyContent": "center",
-          "minWidth": 35,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 12,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 12,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 16.099999999999998,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 12,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p3"
-      >
-        2
-      </Text>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Molecules/Badge passes the snapshot test for different values types 1`] = `
-<View
-  style={
-    {
-      "flex": 1,
-    }
-  }
->
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    />
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        23
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
-        }
-      }
-    >
-      <Text
-        accessibilityRole="text"
-        accessible={true}
-        allowFontScaling={true}
-        animate={
-          {
-            "color": "#FFFFFF",
-            "paddingHorizontal": 10,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 10,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-        variant="p4"
-      >
-        2+
-      </Text>
-    </View>
-  </View>
-  <View
-    accessibilityLabel="Press me!"
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": false,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "alignSelf": "flex-start",
-        "height": 30,
-      }
-    }
-  >
-    <View
-      animatedStyle={
-        {
-          "value": {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-          },
-        }
-      }
-      collapsable={false}
-      state={
-        {
-          "__state": {
-            "_isReanimatedSharedValue": true,
-            "_value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-            "addListener": [Function],
-            "modify": [Function],
-            "removeListener": [Function],
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-            },
-          },
-        }
-      }
-      style={
-        {
-          "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
-          "justifyContent": "center",
-          "minWidth": 30,
-        }
-      }
-      transition={
-        {
-          "duration": 50,
+          "duration": 100,
         }
       }
     >
@@ -1787,7 +124,7 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
 </View>
 `;
 
-exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
+exports[`Molecules/IconButton passes the snapshot test for different color schemes 1`] = `
 <View
   style={
     {
@@ -1830,7 +167,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
     style={
       {
         "alignSelf": "flex-start",
-        "height": 30,
       }
     }
   >
@@ -1839,12 +175,15 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
         {
           "value": {
             "alignItems": "center",
+            "alignSelf": "flex-start",
             "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 30,
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
             "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
           },
         }
       }
@@ -1855,24 +194,30 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "alignItems": "center",
+              "alignSelf": "flex-start",
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "alignItems": "center",
+              "alignSelf": "flex-start",
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 30,
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
           },
         }
@@ -1880,51 +225,60 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
       style={
         {
           "alignItems": "center",
+          "alignSelf": "flex-start",
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1000,
-          "height": 30,
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
           "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
         }
       }
       transition={
         {
-          "duration": 50,
+          "duration": 100,
         }
       }
     >
       <Text
-        accessibilityRole="text"
+        accessibilityLabel="heart Icon"
         accessible={true}
-        allowFontScaling={true}
+        allowFontScaling={false}
         animate={
           {
+            "alignSelf": "center",
             "color": "#FFFFFF",
-            "paddingHorizontal": 10,
           }
         }
         animatedStyle={
           {
             "value": {
+              "alignSelf": "center",
               "color": "#FFFFFF",
-              "paddingHorizontal": 10,
             },
           }
         }
         collapsable={false}
+        selectable={false}
         style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
         }
         transition={
           {
@@ -1933,9 +287,8 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "type": "spring",
           }
         }
-        variant="p4"
       >
-        2
+        
       </Text>
     </View>
   </View>
@@ -1974,7 +327,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
     style={
       {
         "alignSelf": "flex-start",
-        "height": 30,
       }
     }
   >
@@ -1983,12 +335,15 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
         {
           "value": {
             "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FF6AC6",
+            "borderColor": "#FF6AC6",
             "borderRadius": 8,
-            "height": 30,
+            "borderWidth": 1,
             "justifyContent": "center",
-            "marginBottom": "s",
-            "minWidth": 30,
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
           },
         }
       }
@@ -1999,24 +354,30 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FF6AC6",
+              "borderColor": "#FF6AC6",
               "borderRadius": 8,
-              "height": 30,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FF6AC6",
+              "borderColor": "#FF6AC6",
               "borderRadius": 8,
-              "height": 30,
+              "borderWidth": 1,
               "justifyContent": "center",
-              "marginBottom": "s",
-              "minWidth": 30,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
             },
           },
         }
@@ -2024,51 +385,60 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
       style={
         {
           "alignItems": "center",
-          "backgroundColor": "#6A7BFF",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FF6AC6",
+          "borderColor": "#FF6AC6",
           "borderRadius": 8,
-          "height": 30,
+          "borderWidth": 1,
           "justifyContent": "center",
-          "marginBottom": "s",
-          "minWidth": 30,
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
         }
       }
       transition={
         {
-          "duration": 50,
+          "duration": 100,
         }
       }
     >
       <Text
-        accessibilityRole="text"
+        accessibilityLabel="heart Icon"
         accessible={true}
-        allowFontScaling={true}
+        allowFontScaling={false}
         animate={
           {
+            "alignSelf": "center",
             "color": "#FFFFFF",
-            "paddingHorizontal": 10,
           }
         }
         animatedStyle={
           {
             "value": {
+              "alignSelf": "center",
               "color": "#FFFFFF",
-              "paddingHorizontal": 10,
             },
           }
         }
         collapsable={false}
+        selectable={false}
         style={
-          {
-            "color": "#FFFFFF",
-            "fontFamily": "Poppins-Medium",
-            "fontSize": 13.799999999999999,
-            "fontStyle": "normal",
-            "fontWeight": "500",
-            "includeFontPadding": false,
-            "letterSpacing": 0,
-            "lineHeight": 22,
-            "paddingHorizontal": 10,
-          }
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
         }
         transition={
           {
@@ -2077,16 +447,15 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "type": "spring",
           }
         }
-        variant="p4"
       >
-        NEW
+        
       </Text>
     </View>
   </View>
 </View>
 `;
 
-exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
+exports[`Molecules/IconButton passes the snapshot test for different icons 1`] = `
 <View
   style={
     {
@@ -2095,319 +464,1963 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
   }
 >
   <View
-    animate={{}}
-    animatedStyle={
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
       {
-        "value": {},
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
       }
     }
-    collapsable={false}
-    style={{}}
-    transition={
+    accessibilityValue={
       {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
       }
     }
   >
-    <Text />
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animatedStyle={
         {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
         }
       }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
       collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
       style={
         {
+          "alignItems": "center",
           "alignSelf": "flex-start",
-          "height": 25,
-          "position": "absolute",
-          "right": -5,
-          "top": -5,
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
         }
       }
     >
-      <View
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "height": 25,
-              "justifyContent": "center",
-              "minWidth": 25,
-              "position": "absolute",
-              "right": -5,
-              "top": -5,
-              "zIndex": 1300,
+              "alignSelf": "center",
+              "color": "#FFFFFF",
             },
           }
         }
         collapsable={false}
-        onLayout={[Function]}
-        state={
-          {
-            "__state": {
-              "_isReanimatedSharedValue": true,
-              "_value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "height": 25,
-                "justifyContent": "center",
-                "minWidth": 25,
-                "position": "absolute",
-                "right": -5,
-                "top": -5,
-                "zIndex": 1300,
-              },
-              "addListener": [Function],
-              "modify": [Function],
-              "removeListener": [Function],
-              "value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "height": 25,
-                "justifyContent": "center",
-                "minWidth": 25,
-                "position": "absolute",
-                "right": -5,
-                "top": -5,
-                "zIndex": 1300,
-              },
-            },
-          }
-        }
+        selectable={false}
         style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 25,
-            "justifyContent": "center",
-            "minWidth": 25,
-            "position": "absolute",
-            "right": -5,
-            "top": -5,
-            "zIndex": 1300,
-          }
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
         }
         transition={
           {
-            "duration": 50,
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 8,
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-                "paddingHorizontal": 8,
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Medium",
-              "fontSize": 13.799999999999999,
-              "fontStyle": "normal",
-              "fontWeight": "500",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 22,
-              "paddingHorizontal": 8,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p4"
-        >
-          28
-        </Text>
-      </View>
+        
+      </Text>
     </View>
   </View>
   <View
-    animate={{}}
-    animatedStyle={
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
       {
-        "value": {},
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
       }
     }
-    collapsable={false}
-    style={{}}
-    transition={
+    accessibilityValue={
       {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
       }
     }
   >
-    <Text />
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animatedStyle={
         {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
         }
       }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
       collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
       style={
         {
+          "alignItems": "center",
           "alignSelf": "flex-start",
-          "bottom": -5,
-          "height": 30,
-          "position": "absolute",
-          "right": -5,
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
         }
       }
     >
-      <View
+      <Text
+        accessibilityLabel="cloudupload Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#6A7BFF",
+          }
+        }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "bottom": -5,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-              "position": "absolute",
-              "right": -5,
-              "zIndex": 1300,
+              "alignSelf": "center",
+              "color": "#6A7BFF",
             },
           }
         }
         collapsable={false}
-        onLayout={[Function]}
-        state={
-          {
-            "__state": {
-              "_isReanimatedSharedValue": true,
-              "_value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "bottom": -5,
-                "height": 30,
-                "justifyContent": "center",
-                "minWidth": 30,
-                "position": "absolute",
-                "right": -5,
-                "zIndex": 1300,
-              },
-              "addListener": [Function],
-              "modify": [Function],
-              "removeListener": [Function],
-              "value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "bottom": -5,
-                "height": 30,
-                "justifyContent": "center",
-                "minWidth": 30,
-                "position": "absolute",
-                "right": -5,
-                "zIndex": 1300,
-              },
-            },
-          }
-        }
+        selectable={false}
         style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "bottom": -5,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-            "position": "absolute",
-            "right": -5,
-            "zIndex": 1300,
-          }
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#6A7BFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
         }
         transition={
           {
-            "duration": 50,
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >
-        <Text />
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 4,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 6,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 6,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 6,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 6,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 10.35,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 8,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 8,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 8,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 8,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 12.649999999999999,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 16,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 16,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 16,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 16,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 17.25,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/IconButton passes the snapshot test for different variants 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#6A7BFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#6A7BFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#6A7BFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "transparent",
+            "borderRadius": 8,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderRadius": 8,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderRadius": 8,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "transparent",
+          "borderRadius": 8,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#6A7BFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#6A7BFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#6A7BFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/IconButton passes the snapshot test for loading state 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Loading"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 0.5,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 0.5,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 0.5,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 0.5,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "alignSelf": "flex-start",
+              },
+              {
+                "color": "#FFFFFF",
+                "flex": 0,
+              },
+            ],
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#FFFFFF",
+            }
+          }
+          collapsable={false}
+          rawSize={15}
+          style={
+            {
+              "height": 15,
+              "width": 15,
+            }
+          }
+          variant="spinner"
+        >
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 15,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 15,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "height": 15,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 7.5,
+                    "overflow": "hidden",
+                    "top": 7.5,
+                    "width": 15,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 15,
+                      "transform": [
+                        {
+                          "translateY": -7.5,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
+                      "width": 15,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 7.5,
+                        "overflow": "hidden",
+                        "width": 15,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "borderColor": "#FFFFFF",
+                          "borderRadius": 7.5,
+                          "borderWidth": 1.5,
+                          "height": 15,
+                          "width": 15,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
       </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/IconButton passes the snapshot test when using style props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#C5CEE0",
+            "borderRadius": 8,
+            "borderWidth": 2,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 12,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 12,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#C5CEE0",
+          "borderRadius": 8,
+          "borderWidth": 2,
+          "justifyContent": "center",
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 12,
+        }
+      }
+      transition={
+        {
+          "duration": 100,
+        }
+      }
+    >
+      <Text
+        accessibilityLabel="heart Icon"
+        accessible={true}
+        allowFontScaling={false}
+        animate={
+          {
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 14.95,
+            },
+            {
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+            },
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        
+      </Text>
     </View>
   </View>
 </View>

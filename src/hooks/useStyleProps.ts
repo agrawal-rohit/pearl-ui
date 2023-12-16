@@ -1,9 +1,9 @@
 import { useTheme } from "./useTheme";
 import { StyleFunctionContainer } from "../theme/src/types";
-import { useDimensions } from "./useDimensions";
 import { buildFinalStyleProps, composeStyleProps } from "./utils/utils";
 import { useMemo } from "react";
 import _ from "lodash";
+import { useWindowDimensions } from "react-native";
 
 /**
  * Hook to convert the received style props to appropriate React Native styles
@@ -16,7 +16,7 @@ export const useStyleProps = (
   styleFunctions: StyleFunctionContainer[]
 ) => {
   const { theme, colorMode } = useTheme();
-  const dimensions = useDimensions();
+  const dimensions = useWindowDimensions();
 
   // Compose the style functions
   const buildStyleProperties = useMemo(

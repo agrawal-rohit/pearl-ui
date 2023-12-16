@@ -2,16 +2,14 @@ import React from "react";
 import { BoxProps } from "../box/box";
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { BasicComponentProps, StateProps } from "../../../theme/src/types";
-import {
-  MotiPressable,
-  MotiPressableProps,
-  mergeAnimateProp,
-} from "moti/interactions";
-import _ from "lodash";
+import { MotiPressableProps, mergeAnimateProp } from "moti/interactions";
+import { PressableProps as RNPressableProps } from "react-native";
 import { usePressedState } from "../../../hooks/state/usePressedState";
 import { useDisabledState } from "../../../hooks/state/useDisabledState";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
+import { MotiPressable } from "./moti-pressable";
+import _ from "lodash";
 
 // Define the properties for the BasePressable component
 export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
@@ -42,8 +40,9 @@ export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     | "exit"
     | "exitTransition"
     | "animateInitialState"
-  > &
-  StateProps<"_pressed" | "_disabled"> & {
+  > & { testID?: RNPressableProps["testID"] } & StateProps<
+    "_pressed" | "_disabled"
+  > & {
     /**
      * Duration (in milliseconds) to wait after press down before calling onPressIn.
      *

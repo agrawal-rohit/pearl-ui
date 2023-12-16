@@ -300,7 +300,6 @@ html[data-theme="dark"] .menu__link[href*="Badge"]:after {
 .menu__link[href*="Switch"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="animation-support"]:before,
-.menu__link[href*="useDimensions"]:before,
 .menu__link[href*="useMotiWithStyleProps"]:before,
 .menu__link[href*="useDynamicStateStyle"]:before,
 .menu__link[href*="useFocusedState"]:before,

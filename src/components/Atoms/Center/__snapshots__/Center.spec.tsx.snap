@@ -3,26 +3,38 @@
 exports[`Atoms/Center passes the snapshot test 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
+      {
+        "value": {
+          "alignItems": "center",
+          "justifyContent": "center",
         },
       }
     }
     collapsable={false}
     style={
-      Object {
+      {
         "alignItems": "center",
-        "display": "flex",
         "justifyContent": "center",
-        "transform": Array [],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >

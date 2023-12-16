@@ -3,7 +3,7 @@
 exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -12,32 +12,43 @@ exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
     accessibilityLabel="stepforward Icon"
     accessible={true}
     allowFontScaling={false}
+    animate={
+      {
+        "color": "#1A2138",
+      }
+    }
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
+      {
+        "value": {
+          "color": "#1A2138",
         },
       }
     }
     collapsable={false}
+    selectable={false}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": undefined,
-          "fontSize": 17.25,
+          "fontSize": 25.299999999999997,
         },
-        Object {
+        {
           "color": "#1A2138",
-          "display": "flex",
-          "transform": Array [],
         },
-        Object {
+        {
           "fontFamily": "anticon",
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Object {},
+        {},
       ]
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
     }
   >
     
@@ -48,7 +59,7 @@ exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
 exports[`Atoms/Icon passes the snapshot test in light mode 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -60,7 +71,7 @@ exports[`Atoms/Icon passes the snapshot test in light mode 1`] = `
 exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -69,32 +80,43 @@ exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
     accessibilityLabel="stepforward Icon"
     accessible={true}
     allowFontScaling={false}
+    animate={
+      {
+        "color": "#6A7BFF",
+      }
+    }
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
+      {
+        "value": {
+          "color": "#6A7BFF",
         },
       }
     }
     collapsable={false}
+    selectable={false}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": undefined,
-          "fontSize": 17.25,
+          "fontSize": 25.299999999999997,
         },
-        Object {
+        {
           "color": "#6A7BFF",
-          "display": "flex",
-          "transform": Array [],
         },
-        Object {
+        {
           "fontFamily": "anticon",
           "fontStyle": "normal",
           "fontWeight": "normal",
         },
-        Object {},
+        {},
       ]
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
     }
   >
     

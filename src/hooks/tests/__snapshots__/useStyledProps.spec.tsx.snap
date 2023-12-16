@@ -3,26 +3,38 @@
 exports[`useStyleProps return correct style object for props 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={
+      {
+        "backgroundColor": "#ffc0cb",
+        "padding": 3,
+      }
+    }
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
+      {
+        "value": {
+          "backgroundColor": "#ffc0cb",
+          "padding": 3,
         },
       }
     }
     collapsable={false}
     style={
-      Object {
+      {
         "backgroundColor": "#ffc0cb",
-        "display": "flex",
-        "padding": 12,
-        "transform": Array [],
+        "padding": 3,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
@@ -30,30 +42,40 @@ exports[`useStyleProps return correct style object for props 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
+      animate={
+        {
+          "color": "#1A2138",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "color": "#1A2138",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
+        {
           "color": "#1A2138",
-          "display": "flex",
           "fontFamily": "Poppins-Regular",
-          "fontSize": 18.4,
+          "fontSize": 16.099999999999998,
           "fontStyle": "normal",
           "fontWeight": "400",
           "includeFontPadding": false,
           "letterSpacing": 0,
-          "lineHeight": 24,
-          "transform": Array [],
+          "lineHeight": 22,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
-      3
+      2
     </Text>
   </View>
 </View>
@@ -62,24 +84,25 @@ exports[`useStyleProps return correct style object for props 1`] = `
 exports[`useStyleProps return empty style object for missing props 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "display": "flex",
-        "transform": Array [],
+    style={{}}
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
@@ -87,26 +110,36 @@ exports[`useStyleProps return empty style object for missing props 1`] = `
       accessibilityRole="text"
       accessible={true}
       allowFontScaling={true}
+      animate={
+        {
+          "color": "#1A2138",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "color": "#1A2138",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
+        {
           "color": "#1A2138",
-          "display": "flex",
           "fontFamily": "Poppins-Regular",
-          "fontSize": 18.4,
+          "fontSize": 16.099999999999998,
           "fontStyle": "normal",
           "fontWeight": "400",
           "includeFontPadding": false,
           "letterSpacing": 0,
-          "lineHeight": 24,
-          "transform": Array [],
+          "lineHeight": 22,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >

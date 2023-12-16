@@ -3,94 +3,173 @@
 exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
-  <RNGestureHandlerButton
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
     collapsable={false}
-    exclusive={true}
-    onGestureEvent={[Function]}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
-    onHandlerStateChange={[Function]}
-    rippleColor={0}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
   >
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessible={true}
-      style={Object {}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {},
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {},
+          },
+        }
+      }
+      style={{}}
+      transition={
+        {
+          "duration": 50,
+        }
+      }
     >
-      <View
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
-            "display": "flex",
-            "transform": Array [],
-          }
-        }
-      >
-        Button press
-      </View>
+      Button press
     </View>
-  </RNGestureHandlerButton>
+  </View>
 </View>
 `;
 
 exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
-  <RNGestureHandlerButton
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
     collapsable={false}
-    exclusive={true}
-    onGestureEvent={[Function]}
-    onGestureHandlerEvent={[Function]}
-    onGestureHandlerStateChange={[Function]}
-    onHandlerStateChange={[Function]}
-    rippleColor={0}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
   >
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessible={true}
-      style={Object {}}
-    >
-      <View
-        animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          Object {
+      animatedStyle={
+        {
+          "value": {
             "backgroundColor": "#6A7BFF",
             "borderColor": "#C5CEE0",
             "borderWidth": 2,
-            "display": "flex",
-            "transform": Array [],
-          }
+          },
         }
-      >
-        Button press
-      </View>
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#C5CEE0",
+              "borderWidth": 2,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#C5CEE0",
+          "borderWidth": 2,
+        }
+      }
+      transition={
+        {
+          "duration": 50,
+        }
+      }
+    >
+      Button press
     </View>
-  </RNGestureHandlerButton>
+  </View>
 </View>
 `;

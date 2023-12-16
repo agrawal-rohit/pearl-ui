@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { getKeys } from "../theme/utils/type-helpers";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useTheme } from "./useTheme";
-import { useDimensions } from "./useDimensions";
 import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
 import {
   layoutPropertiesShorthand,
@@ -10,6 +9,7 @@ import {
 } from "../theme/src/style-properties";
 import _ from "lodash";
 import { removeUndefined } from "../theme/utils/utils";
+import { useWindowDimensions } from "react-native";
 
 const shorthandPropMapper = {
   ...layoutPropertiesShorthand,
@@ -27,7 +27,7 @@ export const useMotiWithStyleProps = (
   styleFunctions: StyleFunctionContainer[]
 ) => {
   const { theme, colorMode } = useTheme();
-  const dimensions = useDimensions();
+  const dimensions = useWindowDimensions();
 
   // Compose style properties
   const buildStyleProperties = useMemo(

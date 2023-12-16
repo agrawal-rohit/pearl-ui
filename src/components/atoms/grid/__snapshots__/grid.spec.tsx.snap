@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Box passes the basic snapshot test 1`] = `
+exports[`Atoms/Grid passes the snapshot test 1`] = `
 <View
   style={
     {
@@ -24,8 +24,6 @@ exports[`Atoms/Box passes the basic snapshot test 1`] = `
         "type": "spring",
       }
     }
-  >
-    asdasd
-  </View>
+  />
 </View>
 `;

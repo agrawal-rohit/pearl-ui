@@ -2,7 +2,6 @@ import React, { useEffect, useState, createContext } from "react";
 import { useColorScheme } from "react-native";
 import { baseTheme } from "./base/index";
 import { FinalPearlTheme } from "./types";
-import { DimensionsProvider } from "./dimensions-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export type ColorMode = "light" | "dark";
@@ -89,11 +88,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
           } as IThemeContext
         }
       >
-        <DimensionsProvider>
-          <GestureHandlerRootView style={{ flex: 1 }}>
-            {children}
-          </GestureHandlerRootView>
-        </DimensionsProvider>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          {children}
+        </GestureHandlerRootView>
       </themeContext.Provider>
     );
   }

@@ -3,43 +3,59 @@
 exports[`Atoms/Spacer passes the snapshot test 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
     style={
-      Object {
-        "display": "flex",
+      {
         "flexDirection": "row",
-        "transform": Array [],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
     <View
+      animate={
+        {
+          "backgroundColor": "#FF8371",
+          "padding": "l",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "backgroundColor": "#FF8371",
+            "padding": "l",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#FF8371",
-          "display": "flex",
-          "padding": 24,
-          "transform": Array [],
+          "padding": "l",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -47,26 +63,36 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
+          {
+            "value": {
+              "color": "#1A2138",
             },
           }
         }
         collapsable={false}
         style={
-          Object {
+          {
             "color": "#1A2138",
-            "display": "flex",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
+            "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
             "includeFontPadding": false,
             "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
+            "lineHeight": 22,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >
@@ -74,38 +100,60 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
       </Text>
     </View>
     <View
+      animate={
+        {
+          "alignSelf": "stretch",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "alignSelf": "stretch",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
+        {
           "alignSelf": "stretch",
-          "display": "flex",
           "flex": 1,
-          "transform": Array [],
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     />
     <View
+      animate={
+        {
+          "backgroundColor": "#48BB78",
+          "padding": "l",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "backgroundColor": "#48BB78",
+            "padding": "l",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
-          "backgroundColor": "#C0E640",
-          "display": "flex",
-          "padding": 24,
-          "transform": Array [],
+        {
+          "backgroundColor": "#48BB78",
+          "padding": "l",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -113,26 +161,36 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
         accessibilityRole="text"
         accessible={true}
         allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
+          {
+            "value": {
+              "color": "#1A2138",
             },
           }
         }
         collapsable={false}
         style={
-          Object {
+          {
             "color": "#1A2138",
-            "display": "flex",
             "fontFamily": "Poppins-Regular",
-            "fontSize": 18.4,
+            "fontSize": 16.099999999999998,
             "fontStyle": "normal",
             "fontWeight": "400",
             "includeFontPadding": false,
             "letterSpacing": 0,
-            "lineHeight": 24,
-            "transform": Array [],
+            "lineHeight": 22,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >

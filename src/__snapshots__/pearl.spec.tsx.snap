@@ -3,7 +3,7 @@
 exports[`pearl/atoms passes the snapshot test for a <Text> component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -12,9 +12,12 @@ exports[`pearl/atoms passes the snapshot test for a <Text> component 1`] = `
     color="success.400"
     fontFamily="body"
     fontWeight="hairline"
-    style={
-      Object {
-        "display": "flex",
+    style={{}}
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
@@ -26,21 +29,21 @@ exports[`pearl/atoms passes the snapshot test for a <Text> component 1`] = `
 exports[`pearl/atoms passes the snapshot test for a <View> component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     box1={
-      Object {
+      {
         "backgroundColor": "success.500",
         "height": 50,
         "width": 50,
       }
     }
     root={
-      Object {
+      {
         "backgroundColor": "danger.400",
         "boxShadow": "4xl",
         "height": 200,
@@ -49,19 +52,25 @@ exports[`pearl/atoms passes the snapshot test for a <View> component 1`] = `
       }
     }
     style={
-      Object {
+      {
         "backgroundColor": "#FF8371",
-        "display": "flex",
         "elevation": 28,
         "height": 200,
         "shadowColor": "#1A2138",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 28,
           "width": 0,
         },
         "shadowOpacity": 0.16,
         "shadowRadius": 28,
         "width": 200,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   />
@@ -71,15 +80,18 @@ exports[`pearl/atoms passes the snapshot test for a <View> component 1`] = `
 exports[`pearl/basic passes the snapshot test for a <Text> component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <Text
-    style={
-      Object {
-        "display": "flex",
+    style={{}}
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
@@ -91,15 +103,18 @@ exports[`pearl/basic passes the snapshot test for a <Text> component 1`] = `
 exports[`pearl/basic passes the snapshot test for a <View> component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
-    style={
-      Object {
-        "display": "flex",
+    style={{}}
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   />
@@ -109,56 +124,59 @@ exports[`pearl/basic passes the snapshot test for a <View> component 1`] = `
 exports[`pearl/molecules passes the snapshot test for a <View> component 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "display": "flex",
-        "transform": Array [],
+    style={{}}
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
     <View
+      animate={{}}
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
+        {
+          "value": {},
         }
       }
       collapsable={false}
-      style={
-        Object {
-          "display": "flex",
-          "transform": Array [],
+      style={{}}
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     />
     <View
+      animate={{}}
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
+        {
+          "value": {},
         }
       }
       collapsable={false}
-      style={
-        Object {
-          "display": "flex",
-          "transform": Array [],
+      style={{}}
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     />

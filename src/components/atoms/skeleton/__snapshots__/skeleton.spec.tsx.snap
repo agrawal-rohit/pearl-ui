@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Skeleton passes the snapshot test 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "backgroundColor": "#E4E9F2",
+        "borderRadius": 8,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#F7F9FC",
+        },
+      }
+    }
+    collapsable={false}
+    from={
+      {
+        "backgroundColor": "#F7F9FC",
+      }
+    }
+    style={
+      {
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 8,
+      }
+    }
+    transition={
+      {
+        "duration": 800,
+        "loop": true,
+        "repeatReverse": true,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "opacity": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

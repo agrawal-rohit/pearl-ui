@@ -2,21 +2,14 @@ import responsiveSize from "../../responsive-size";
 
 jest.useFakeTimers();
 
-jest.mock("react-native/Libraries/Utilities/PixelRatio", () => {
-  return {
-    get: jest.fn(() => {
-      return 1;
-    }),
-  };
-});
-
-jest.mock("react-native/Libraries/Utilities/Dimensions", () => {
-  return {
-    get: jest.fn(() => {
-      return { width: 400, height: 600 };
-    }),
-  };
-});
+jest.mock("react-native", () => ({
+  PixelRatio: {
+    get: jest.fn(() => 1),
+  },
+  Dimensions: {
+    get: jest.fn(() => ({ width: 400, height: 600, scale: 1, fontScale: 1 })),
+  },
+}));
 
 describe("responsiveSize", () => {
   beforeAll(() => {
@@ -25,12 +18,12 @@ describe("responsiveSize", () => {
 
   it("returns 0 for empty size", () => {
     const scaledSize = responsiveSize();
-    expect(scaledSize).toEqual(0);
+    expect(scaledSize).toBe(0);
   });
 
   it("returns the size itself by default", () => {
     const initialSize = 10;
     const scaledSize = responsiveSize(initialSize);
-    expect(scaledSize).toEqual(initialSize);
+    expect(scaledSize).toBe(initialSize);
   });
 });

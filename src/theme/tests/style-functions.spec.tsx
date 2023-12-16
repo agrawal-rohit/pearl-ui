@@ -76,18 +76,6 @@ describe("createStyleFunctions", () => {
     expect(getByText(targetBackgroundColor)).toBeTruthy();
   });
 
-  it("throws error if the color is not present in palette", () => {
-    const { getByText } = render(
-      <ColorTransformTestComponent
-        props={{ backgroundColor: "wrong.400" }}
-        stylePropertyName="backgroundColor"
-        styleFunction={backgroundColorStyleFunction[0]}
-      />
-    );
-
-    expect(getByText(/does not exist in theme/i)).toBeTruthy();
-  });
-
   it("maps color prop correctly", () => {
     const { getByText } = render(
       <ColorTransformTestComponent

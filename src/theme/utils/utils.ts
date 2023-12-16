@@ -11,6 +11,7 @@ import { ColorPalette } from "../src/types";
  */
 export const generatePalette = (
   color: ColorInput,
+  label: string,
   count: number = 9,
   similarity: number = 1.4
 ) => {
@@ -43,7 +44,7 @@ export const generatePalette = (
   // Odd number of colors
   else {
     // Generate tints
-    const numTints = Math.ceil(count / 2);
+    const numTints = Math.floor(count / 2);
     const tintStep = 100 / (numTints * similarity);
 
     for (let i = 1; i <= numTints; i++) {
@@ -54,12 +55,12 @@ export const generatePalette = (
     }
 
     // Middle shade
-    const middleShadeIdx = Math.ceil(count / 2) + 1;
+    const middleShadeIdx = Math.floor(count / 2) + 1;
     const middleShadeLabel = parseInt(middleShadeIdx.toString().concat("00"));
     shades[middleShadeLabel] = tinyColor.toHexString();
 
     // Generate dark shades
-    const numShades = Math.ceil(count / 2);
+    const numShades = Math.floor(count / 2);
     const darkenStep = 100 / (numShades * similarity);
 
     for (let i = 1; i <= numShades; i++) {
@@ -68,7 +69,7 @@ export const generatePalette = (
     }
   }
 
-  return shades;
+  return { [label]: shades };
 };
 
 /**

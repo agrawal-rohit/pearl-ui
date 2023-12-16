@@ -3,22 +3,24 @@
 exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -30,19 +32,25 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -54,65 +62,68 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -122,8 +133,9 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -135,66 +147,69 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -207,16 +222,18 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
-            "color": "#A2D608",
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
+            "color": "#38A169",
             "flex": 0,
           },
         ],
@@ -227,19 +244,25 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#38A169",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -251,65 +274,68 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#A2D608",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#38A169",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -319,8 +345,9 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -332,66 +359,69 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#A2D608",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#38A169",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -404,16 +434,18 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
-            "color": "#FFBF35",
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
+            "color": "#FFB407",
             "flex": 0,
           },
         ],
@@ -424,19 +456,25 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#FFB407",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -448,65 +486,68 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#FFBF35",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#FFB407",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -516,8 +557,9 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -529,66 +571,69 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#FFBF35",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#FFB407",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -601,16 +646,18 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
-            "color": "#40D2F7",
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
+            "color": "#3FB5FF",
             "flex": 0,
           },
         ],
@@ -621,19 +668,25 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#3FB5FF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -645,65 +698,68 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#40D2F7",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#3FB5FF",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -713,8 +769,9 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -726,66 +783,69 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
-                      "borderColor": "#40D2F7",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                    {
+                      "borderColor": "#3FB5FF",
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -798,15 +858,17 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#FF4B42",
             "flex": 0,
           },
@@ -818,19 +880,25 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#FF4B42",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -842,65 +910,68 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#FF4B42",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -910,8 +981,9 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -923,66 +995,69 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#FF4B42",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -999,22 +1074,24 @@ exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] 
 exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -1026,10 +1103,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={10}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={10}
       style={
-        Object {
+        {
           "height": 10,
           "width": 10,
         }
@@ -1037,8 +1119,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1050,14 +1133,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 10,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1068,7 +1152,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 5,
                 "overflow": "hidden",
                 "width": 10,
@@ -1076,14 +1160,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 10,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
@@ -1094,7 +1179,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 5,
                     "overflow": "hidden",
                     "width": 10,
@@ -1102,8 +1187,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 5,
                       "borderWidth": 1,
@@ -1118,8 +1204,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1131,14 +1218,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 10,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1149,7 +1237,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 5,
                 "overflow": "hidden",
                 "top": 5,
@@ -1158,14 +1246,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 10,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": -5,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
@@ -1176,7 +1265,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 5,
                     "overflow": "hidden",
                     "width": 10,
@@ -1184,8 +1273,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 5,
                       "borderWidth": 1,
@@ -1203,15 +1293,17 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -1223,10 +1315,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={15}
       style={
-        Object {
+        {
           "height": 15,
           "width": 15,
         }
@@ -1234,8 +1331,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1247,14 +1345,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 15,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1265,7 +1364,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 7.5,
                 "overflow": "hidden",
                 "width": 15,
@@ -1273,14 +1372,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 15,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
@@ -1291,7 +1391,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 7.5,
                     "overflow": "hidden",
                     "width": 15,
@@ -1299,8 +1399,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 7.5,
                       "borderWidth": 1.5,
@@ -1315,8 +1416,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1328,14 +1430,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 15,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1346,7 +1449,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 7.5,
                 "overflow": "hidden",
                 "top": 7.5,
@@ -1355,14 +1458,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 15,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": -7.5,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
@@ -1373,7 +1477,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 7.5,
                     "overflow": "hidden",
                     "width": 15,
@@ -1381,8 +1485,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 7.5,
                       "borderWidth": 1.5,
@@ -1400,15 +1505,17 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -1420,10 +1527,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={20}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
+        {
           "height": 20,
           "width": 20,
         }
@@ -1431,8 +1543,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1444,14 +1557,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 20,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1462,7 +1576,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 10,
                 "overflow": "hidden",
                 "width": 20,
@@ -1470,14 +1584,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 20,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
@@ -1488,7 +1603,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 10,
                     "overflow": "hidden",
                     "width": 20,
@@ -1496,8 +1611,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 10,
                       "borderWidth": 2,
@@ -1512,8 +1628,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1525,14 +1642,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 20,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1543,7 +1661,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 10,
                 "overflow": "hidden",
                 "top": 10,
@@ -1552,14 +1670,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 20,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
@@ -1570,7 +1689,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 10,
                     "overflow": "hidden",
                     "width": 20,
@@ -1578,8 +1697,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 10,
                       "borderWidth": 2,
@@ -1597,15 +1717,17 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -1617,10 +1739,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={30}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={30}
       style={
-        Object {
+        {
           "height": 30,
           "width": 30,
         }
@@ -1628,8 +1755,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1641,14 +1769,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 30,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1659,7 +1788,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 15,
                 "overflow": "hidden",
                 "width": 30,
@@ -1667,14 +1796,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 30,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
@@ -1685,7 +1815,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 15,
                     "overflow": "hidden",
                     "width": 30,
@@ -1693,8 +1823,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 15,
                       "borderWidth": 3,
@@ -1709,8 +1840,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -1722,14 +1854,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "height": 30,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
@@ -1740,7 +1873,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "height": 15,
                 "overflow": "hidden",
                 "top": 15,
@@ -1749,14 +1882,15 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "height": 30,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateY": -15,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
@@ -1767,7 +1901,7 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
               <View
                 collapsable={false}
                 style={
-                  Object {
+                  {
                     "height": 15,
                     "overflow": "hidden",
                     "width": 30,
@@ -1775,8 +1909,9 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
                       "borderRadius": 15,
                       "borderWidth": 3,
@@ -1798,22 +1933,24 @@ exports[`Atoms/Spinner passes the snapshot test for different sizes 1`] = `
 exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -1825,19 +1962,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="activity"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1845,8 +1988,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -1854,20 +1997,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1875,8 +2020,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "30deg",
               },
             ],
@@ -1884,20 +2029,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.09090909090909083,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1905,8 +2052,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "60deg",
               },
             ],
@@ -1914,20 +2061,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.18181818181818177,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1935,8 +2084,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "90deg",
               },
             ],
@@ -1944,20 +2093,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.2727272727272727,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1965,8 +2116,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "120deg",
               },
             ],
@@ -1974,20 +2125,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.36363636363636365,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -1995,8 +2148,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "150deg",
               },
             ],
@@ -2004,20 +2157,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.4545454545454546,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2025,8 +2180,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "180deg",
               },
             ],
@@ -2034,20 +2189,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.5454545454545454,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2055,8 +2212,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "210deg",
               },
             ],
@@ -2064,20 +2221,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.6363636363636364,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2085,8 +2244,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "240deg",
               },
             ],
@@ -2094,20 +2253,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.7272727272727273,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2115,8 +2276,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "270deg",
               },
             ],
@@ -2124,20 +2285,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.8181818181818181,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2145,8 +2308,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "300deg",
               },
             ],
@@ -2154,20 +2317,22 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 0.9090909090909091,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2175,8 +2340,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "330deg",
               },
             ],
@@ -2184,13 +2349,14 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 0.75,
-              "height": 3.75,
+              "borderRadius": 1,
+              "height": 5,
               "opacity": 1,
-              "width": 1.5,
+              "width": 2,
             }
           }
         />
@@ -2199,16 +2365,18 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -2220,19 +2388,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="ball"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2240,8 +2414,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -2249,25 +2423,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 0.7,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2275,8 +2451,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "45deg",
               },
             ],
@@ -2284,25 +2460,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 0.7714285714285714,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2310,8 +2488,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "90deg",
               },
             ],
@@ -2319,25 +2497,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 0.8428571428571427,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2345,8 +2525,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "135deg",
               },
             ],
@@ -2354,25 +2534,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 0.9142857142857143,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2380,8 +2562,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "180deg",
               },
             ],
@@ -2389,25 +2571,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 0.9857142857142857,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2415,8 +2599,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "225deg",
               },
             ],
@@ -2424,25 +2608,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 1.0571428571428572,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2450,8 +2636,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "270deg",
               },
             ],
@@ -2459,25 +2645,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 1.1285714285714286,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -2485,8 +2673,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "315deg",
               },
             ],
@@ -2494,18 +2682,19 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "margin": 0.75,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "margin": 1,
+              "transform": [
+                {
                   "scale": 1.2,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
@@ -2516,11 +2705,17 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
     accessibilityLabel="Loading indicator"
     accessibilityRole="progressbar"
     accessible={true}
-    animating={true}
-    spinnerSize={15}
+    animate={
+      {
+        "color": "#6A7BFF",
+      }
+    }
+    collapsable={false}
+    rawSize={20}
     style={
-      Object {
+      {
         "alignItems": "center",
+        "alignSelf": "flex-start",
         "color": "#6A7BFF",
         "flex": 0,
         "flexDirection": "row",
@@ -2530,157 +2725,205 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
     variant="bar"
   >
     <View
+      animate={
+        {
+          "height": 20,
+          "marginHorizontal": 2,
+          "width": 4,
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "height": 20,
+            "marginHorizontal": 2,
+            "width": 4,
           },
         }
       }
       collapsable={false}
       style={
-        Object {
-          "display": "flex",
-          "height": 15,
+        {
+          "height": 20,
           "marginHorizontal": 2,
-          "transform": Array [],
-          "width": 3,
+          "width": 4,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderTopLeftRadius": 2,
             "borderTopRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": 2.5,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": 4,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderBottomLeftRadius": 2,
             "borderBottomRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": -2.5,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": -4,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
     </View>
     <View
+      animate={
+        {
+          "height": 20,
+          "marginHorizontal": 2,
+          "width": 4,
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "height": 20,
+            "marginHorizontal": 2,
+            "width": 4,
           },
         }
       }
       collapsable={false}
       style={
-        Object {
-          "display": "flex",
-          "height": 15,
+        {
+          "height": 20,
           "marginHorizontal": 2,
-          "transform": Array [],
-          "width": 3,
+          "width": 4,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderTopLeftRadius": 2,
             "borderTopRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": 1.2179321099019917,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": 1.948691375843187,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderBottomLeftRadius": 2,
             "borderBottomRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": -1.2179321099019917,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": -1.948691375843187,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
     </View>
     <View
+      animate={
+        {
+          "height": 20,
+          "marginHorizontal": 2,
+          "width": 4,
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "height": 20,
+            "marginHorizontal": 2,
+            "width": 4,
           },
         }
       }
       collapsable={false}
       style={
-        Object {
-          "display": "flex",
-          "height": 15,
+        {
+          "height": 20,
           "marginHorizontal": 2,
-          "transform": Array [],
-          "width": 3,
+          "width": 4,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderTopLeftRadius": 2,
             "borderTopRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": 1.313313100535747,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": 2.1013009608571953,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
             "borderBottomLeftRadius": 2,
             "borderBottomRightRadius": 2,
-            "height": 7,
-            "transform": Array [
-              Object {
-                "translateY": -1.313313100535747,
+            "height": 10,
+            "transform": [
+              {
+                "translateY": -2.1013009608571953,
               },
             ],
-            "width": 3,
+            "width": 4,
           }
         }
       />
@@ -2690,12 +2933,18 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
     accessibilityLabel="Loading indicator"
     accessibilityRole="progressbar"
     accessible={true}
-    animating={true}
+    animate={
+      {
+        "color": "#6A7BFF",
+      }
+    }
+    collapsable={false}
+    rawSize={20}
     sizeMultiplier={0.2}
-    spinnerSize={15}
     style={
-      Object {
+      {
         "alignItems": "center",
+        "alignSelf": "flex-start",
         "color": "#6A7BFF",
         "flex": 0,
         "flexDirection": "row",
@@ -2705,81 +2954,87 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
     variant="dot"
   >
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1.5,
-          "height": 3,
-          "margin": 1.5,
-          "transform": Array [
-            Object {
+          "borderRadius": 2,
+          "height": 4,
+          "margin": 2,
+          "transform": [
+            {
               "scale": 1,
             },
           ],
-          "width": 3,
+          "width": 4,
         }
       }
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1.5,
-          "height": 3,
-          "margin": 1.5,
-          "transform": Array [
-            Object {
+          "borderRadius": 2,
+          "height": 4,
+          "margin": 2,
+          "transform": [
+            {
               "scale": 1,
             },
           ],
-          "width": 3,
+          "width": 4,
         }
       }
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1.5,
-          "height": 3,
-          "margin": 1.5,
-          "transform": Array [
-            Object {
+          "borderRadius": 2,
+          "height": 4,
+          "margin": 2,
+          "transform": [
+            {
               "scale": 1,
             },
           ],
-          "width": 3,
+          "width": 4,
         }
       }
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#6A7BFF",
-          "borderRadius": 1.5,
-          "height": 3,
-          "margin": 1.5,
-          "transform": Array [
-            Object {
+          "borderRadius": 2,
+          "height": 4,
+          "margin": 2,
+          "transform": [
+            {
               "scale": 1,
             },
           ],
-          "width": 3,
+          "width": 4,
         }
       }
     />
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -2791,130 +3046,142 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 18.75,
+        {
+          "height": 20,
+          "width": 25,
         }
       }
       variant="pacman"
     >
       <View
+        collapsable={false}
         style={
-          Object {
-            "height": 7.5,
+          {
+            "height": 10,
             "left": 0,
             "position": "absolute",
-            "top": 3.75,
-            "transform": Array [
-              Object {
+            "top": 5,
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
-            "width": 7.5,
+            "width": 10,
           }
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderTopLeftRadius": 3.75,
-              "borderTopRightRadius": 3.75,
-              "height": 3.75,
+              "borderTopLeftRadius": 5,
+              "borderTopRightRadius": 5,
+              "height": 5,
               "overflow": "hidden",
-              "width": 7.5,
+              "width": 10,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
-            "height": 7.5,
+          {
+            "height": 10,
             "left": 0,
             "position": "absolute",
-            "top": 3.75,
-            "transform": Array [
-              Object {
+            "top": 5,
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
-            "width": 7.5,
+            "width": 10,
           }
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderBottomLeftRadius": 3.75,
-              "borderBottomRightRadius": 3.75,
-              "height": 3.75,
+              "borderBottomLeftRadius": 5,
+              "borderBottomRightRadius": 5,
+              "height": 5,
               "overflow": "hidden",
-              "top": 3.75,
-              "width": 7.5,
+              "top": 5,
+              "width": 10,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
-            "borderRadius": 0.9375,
-            "height": 1.875,
-            "left": 8.4375,
+            "borderRadius": 1.25,
+            "height": 2.5,
+            "left": 11.25,
             "position": "absolute",
-            "top": 6.5625,
-            "transform": Array [
-              Object {
+            "top": 8.75,
+            "transform": [
+              {
                 "translateX": 0,
               },
             ],
-            "width": 1.875,
+            "width": 2.5,
           }
         }
       />
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
-            "borderRadius": 0.9375,
-            "height": 1.875,
-            "left": 12.1875,
+            "borderRadius": 1.25,
+            "height": 2.5,
+            "left": 16.25,
             "position": "absolute",
-            "top": 6.5625,
-            "transform": Array [
-              Object {
+            "top": 8.75,
+            "transform": [
+              {
                 "translateX": 0,
               },
             ],
-            "width": 1.875,
+            "width": 2.5,
           }
         }
       />
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#6A7BFF",
-            "borderRadius": 0.9375,
-            "height": 1.875,
-            "left": 15.9375,
+            "borderRadius": 1.25,
+            "height": 2.5,
+            "left": 21.25,
             "opacity": 0,
             "position": "absolute",
-            "top": 6.5625,
-            "transform": Array [
-              Object {
+            "top": 8.75,
+            "transform": [
+              {
                 "translateX": 0,
               },
-              Object {
+              {
                 "scale": 0,
               },
             ],
-            "width": 1.875,
+            "width": 2.5,
           }
         }
       />
@@ -2922,15 +3189,17 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -2942,19 +3211,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="pulse"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -2966,25 +3241,27 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
-              "height": 15,
+              "borderRadius": 10,
+              "height": 20,
               "opacity": 0.5,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0.4,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -2996,18 +3273,19 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
-              "height": 15,
+              "borderRadius": 10,
+              "height": 20,
               "opacity": 1,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0.4,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
@@ -3016,15 +3294,17 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -3036,19 +3316,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="skype"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -3056,8 +3342,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -3065,24 +3351,26 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "transform": [
+                {
                   "scale": 1,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -3090,8 +3378,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -3099,24 +3387,26 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "transform": [
+                {
                   "scale": 0.8,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -3124,8 +3414,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -3133,24 +3423,26 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "transform": [
+                {
                   "scale": 0.6,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -3158,8 +3450,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -3167,24 +3459,26 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "transform": [
+                {
                   "scale": 0.3999999999999999,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "flex-start",
@@ -3192,8 +3486,8 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "rotate": "0deg",
               },
             ],
@@ -3201,17 +3495,18 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 1.5,
-              "height": 3,
-              "transform": Array [
-                Object {
+              "borderRadius": 2,
+              "height": 4,
+              "transform": [
+                {
                   "scale": 0.19999999999999996,
                 },
               ],
-              "width": 3,
+              "width": 4,
             }
           }
         />
@@ -3220,15 +3515,17 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -3240,19 +3537,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="spinner"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3264,65 +3567,68 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "width": 15,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
+                {
+                  "height": 20,
+                  "transform": [
+                    {
                       "translateY": 0,
                     },
-                    Object {
+                    {
                       "rotate": "-172.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -3332,8 +3638,9 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3345,66 +3652,69 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
-              "height": 15,
-              "transform": Array [
-                Object {
+            {
+              "height": 20,
+              "transform": [
+                {
                   "rotate": "82.5deg",
                 },
-                Object {
+                {
                   "rotate": "0deg",
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         >
           <View
             collapsable={false}
             style={
-              Object {
-                "height": 7.5,
+              {
+                "height": 10,
                 "overflow": "hidden",
-                "top": 7.5,
-                "width": 15,
+                "top": 10,
+                "width": 20,
               }
             }
           >
             <View
+              collapsable={false}
               style={
-                Object {
-                  "height": 15,
-                  "transform": Array [
-                    Object {
-                      "translateY": -7.5,
+                {
+                  "height": 20,
+                  "transform": [
+                    {
+                      "translateY": -10,
                     },
-                    Object {
+                    {
                       "rotate": "352.5deg",
                     },
                   ],
-                  "width": 15,
+                  "width": 20,
                 }
               }
             >
               <View
                 collapsable={false}
                 style={
-                  Object {
-                    "height": 7.5,
+                  {
+                    "height": 10,
                     "overflow": "hidden",
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
+                  collapsable={false}
                   style={
-                    Object {
+                    {
                       "borderColor": "#6A7BFF",
-                      "borderRadius": 7.5,
-                      "borderWidth": 1.5,
-                      "height": 15,
-                      "width": 15,
+                      "borderRadius": 10,
+                      "borderWidth": 2,
+                      "height": 20,
+                      "width": 20,
                     }
                   }
                 />
@@ -3417,15 +3727,17 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "flex": 1,
           "justifyContent": "center",
         },
-        Array [
-          false,
-          Object {
+        [
+          {
+            "alignSelf": "flex-start",
+          },
+          {
             "color": "#6A7BFF",
             "flex": 0,
           },
@@ -3437,19 +3749,25 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
       accessibilityLabel="Loading indicator"
       accessibilityRole="progressbar"
       accessible={true}
-      animating={true}
-      spinnerSize={15}
+      animate={
+        {
+          "color": "#6A7BFF",
+        }
+      }
+      collapsable={false}
+      rawSize={20}
       style={
-        Object {
-          "height": 15,
-          "width": 15,
+        {
+          "height": 20,
+          "width": 20,
         }
       }
       variant="wave"
     >
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3461,26 +3779,28 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
+              "borderRadius": 10,
               "borderWidth": 0,
-              "height": 15,
+              "height": 20,
               "opacity": 0,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3492,26 +3812,28 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
+              "borderRadius": 10,
               "borderWidth": 0,
-              "height": 15,
+              "height": 20,
               "opacity": 0,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3523,26 +3845,28 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
+              "borderRadius": 10,
               "borderWidth": 0,
-              "height": 15,
+              "height": 20,
               "opacity": 0,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
       </View>
       <View
+        collapsable={false}
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -3554,19 +3878,20 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#6A7BFF",
-              "borderRadius": 7.5,
+              "borderRadius": 10,
               "borderWidth": 0,
-              "height": 15,
+              "height": 20,
               "opacity": 0,
-              "transform": Array [
-                Object {
+              "transform": [
+                {
                   "scale": 0,
                 },
               ],
-              "width": 15,
+              "width": 20,
             }
           }
         />
@@ -3579,81 +3904,107 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
 exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or not 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    direction="vertical"
-    spacing="l"
     style={
-      Object {
-        "alignSelf": "flex-start",
-        "display": "flex",
+      {
         "flexDirection": "column",
         "flexWrap": "nowrap",
-        "transform": Array [],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
       }
     }
   >
     <View
+      animate={
+        {
+          "marginBottom": "l",
+        }
+      }
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "marginBottom": "l",
           },
         }
       }
       collapsable={false}
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
+        {
           "flexDirection": "column",
-          "marginBottom": 24,
-          "transform": Array [],
+          "marginBottom": "l",
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
       <View
+        animate={
+          {
+            "backgroundColor": "#EDF1F7",
+            "height": 100,
+            "width": 200,
+          }
+        }
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
+          {
+            "value": {
+              "backgroundColor": "#EDF1F7",
+              "height": 100,
+              "width": 200,
             },
           }
         }
         collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#EDF1F7",
-            "display": "flex",
             "height": 100,
-            "transform": Array [],
             "width": 200,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "flex": 1,
                 "justifyContent": "center",
               },
-              Array [
-                false,
-                Object {
+              [
+                {
+                  "alignSelf": "flex-start",
+                },
+                {
                   "color": "#6A7BFF",
                   "flex": 0,
                 },
@@ -3665,19 +4016,25 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
             accessibilityLabel="Loading indicator"
             accessibilityRole="progressbar"
             accessible={true}
-            animating={true}
-            spinnerSize={15}
+            animate={
+              {
+                "color": "#6A7BFF",
+              }
+            }
+            collapsable={false}
+            rawSize={20}
             style={
-              Object {
-                "height": 15,
-                "width": 15,
+              {
+                "height": 20,
+                "width": 20,
               }
             }
             variant="spinner"
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "bottom": 0,
                   "justifyContent": "center",
@@ -3689,65 +4046,68 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               }
             >
               <View
+                collapsable={false}
                 style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
                         "rotate": "82.5deg",
                       },
-                      Object {
+                      {
                         "rotate": "0deg",
                       },
                     ],
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
                   collapsable={false}
                   style={
-                    Object {
-                      "height": 7.5,
+                    {
+                      "height": 10,
                       "overflow": "hidden",
-                      "width": 15,
+                      "width": 20,
                     }
                   }
                 >
                   <View
+                    collapsable={false}
                     style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
                             "translateY": 0,
                           },
-                          Object {
+                          {
                             "rotate": "-172.5deg",
                           },
                         ],
-                        "width": 15,
+                        "width": 20,
                       }
                     }
                   >
                     <View
                       collapsable={false}
                       style={
-                        Object {
-                          "height": 7.5,
+                        {
+                          "height": 10,
                           "overflow": "hidden",
-                          "width": 15,
+                          "width": 20,
                         }
                       }
                     >
                       <View
+                        collapsable={false}
                         style={
-                          Object {
+                          {
                             "borderColor": "#6A7BFF",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
                           }
                         }
                       />
@@ -3757,8 +4117,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               </View>
             </View>
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "bottom": 0,
                   "justifyContent": "center",
@@ -3770,66 +4131,69 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               }
             >
               <View
+                collapsable={false}
                 style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
                         "rotate": "82.5deg",
                       },
-                      Object {
+                      {
                         "rotate": "0deg",
                       },
                     ],
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
                   collapsable={false}
                   style={
-                    Object {
-                      "height": 7.5,
+                    {
+                      "height": 10,
                       "overflow": "hidden",
-                      "top": 7.5,
-                      "width": 15,
+                      "top": 10,
+                      "width": 20,
                     }
                   }
                 >
                   <View
+                    collapsable={false}
                     style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": -7.5,
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
                           },
-                          Object {
+                          {
                             "rotate": "352.5deg",
                           },
                         ],
-                        "width": 15,
+                        "width": 20,
                       }
                     }
                   >
                     <View
                       collapsable={false}
                       style={
-                        Object {
-                          "height": 7.5,
+                        {
+                          "height": 10,
                           "overflow": "hidden",
-                          "width": 15,
+                          "width": 20,
                         }
                       }
                     >
                       <View
+                        collapsable={false}
                         style={
-                          Object {
+                          {
                             "borderColor": "#6A7BFF",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
                           }
                         }
                       />
@@ -3843,59 +4207,76 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
       </View>
     </View>
     <View
+      animate={{}}
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
-          },
+        {
+          "value": {},
         }
       }
       collapsable={false}
       style={
-        Object {
-          "alignSelf": "stretch",
-          "display": "flex",
+        {
           "flexDirection": "column",
-          "transform": Array [],
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
       <View
+        animate={
+          {
+            "backgroundColor": "#EDF1F7",
+            "height": 100,
+            "width": 200,
+          }
+        }
         animatedStyle={
-          Object {
-            "value": Object {
-              "transform": Array [],
+          {
+            "value": {
+              "backgroundColor": "#EDF1F7",
+              "height": 100,
+              "width": 200,
             },
           }
         }
         collapsable={false}
         style={
-          Object {
+          {
             "backgroundColor": "#EDF1F7",
-            "display": "flex",
             "height": 100,
-            "transform": Array [],
             "width": 200,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
           }
         }
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "flex": 1,
                 "justifyContent": "center",
               },
-              Array [
-                Object {
+              [
+                {
                   "bottom": 0,
                   "left": 0,
                   "position": "absolute",
                   "right": 0,
                   "top": 0,
                 },
-                Object {
+                {
                   "color": "#6A7BFF",
                   "flex": 0,
                 },
@@ -3907,19 +4288,25 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
             accessibilityLabel="Loading indicator"
             accessibilityRole="progressbar"
             accessible={true}
-            animating={true}
-            spinnerSize={15}
+            animate={
+              {
+                "color": "#6A7BFF",
+              }
+            }
+            collapsable={false}
+            rawSize={20}
             style={
-              Object {
-                "height": 15,
-                "width": 15,
+              {
+                "height": 20,
+                "width": 20,
               }
             }
             variant="spinner"
           >
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "bottom": 0,
                   "justifyContent": "center",
@@ -3931,65 +4318,68 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               }
             >
               <View
+                collapsable={false}
                 style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
                         "rotate": "82.5deg",
                       },
-                      Object {
+                      {
                         "rotate": "0deg",
                       },
                     ],
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
                   collapsable={false}
                   style={
-                    Object {
-                      "height": 7.5,
+                    {
+                      "height": 10,
                       "overflow": "hidden",
-                      "width": 15,
+                      "width": 20,
                     }
                   }
                 >
                   <View
+                    collapsable={false}
                     style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
                             "translateY": 0,
                           },
-                          Object {
+                          {
                             "rotate": "-172.5deg",
                           },
                         ],
-                        "width": 15,
+                        "width": 20,
                       }
                     }
                   >
                     <View
                       collapsable={false}
                       style={
-                        Object {
-                          "height": 7.5,
+                        {
+                          "height": 10,
                           "overflow": "hidden",
-                          "width": 15,
+                          "width": 20,
                         }
                       }
                     >
                       <View
+                        collapsable={false}
                         style={
-                          Object {
+                          {
                             "borderColor": "#6A7BFF",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
                           }
                         }
                       />
@@ -3999,8 +4389,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               </View>
             </View>
             <View
+              collapsable={false}
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "bottom": 0,
                   "justifyContent": "center",
@@ -4012,66 +4403,69 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
               }
             >
               <View
+                collapsable={false}
                 style={
-                  Object {
-                    "height": 15,
-                    "transform": Array [
-                      Object {
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
                         "rotate": "82.5deg",
                       },
-                      Object {
+                      {
                         "rotate": "0deg",
                       },
                     ],
-                    "width": 15,
+                    "width": 20,
                   }
                 }
               >
                 <View
                   collapsable={false}
                   style={
-                    Object {
-                      "height": 7.5,
+                    {
+                      "height": 10,
                       "overflow": "hidden",
-                      "top": 7.5,
-                      "width": 15,
+                      "top": 10,
+                      "width": 20,
                     }
                   }
                 >
                   <View
+                    collapsable={false}
                     style={
-                      Object {
-                        "height": 15,
-                        "transform": Array [
-                          Object {
-                            "translateY": -7.5,
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
                           },
-                          Object {
+                          {
                             "rotate": "352.5deg",
                           },
                         ],
-                        "width": 15,
+                        "width": 20,
                       }
                     }
                   >
                     <View
                       collapsable={false}
                       style={
-                        Object {
-                          "height": 7.5,
+                        {
+                          "height": 10,
                           "overflow": "hidden",
-                          "width": 15,
+                          "width": 20,
                         }
                       }
                     >
                       <View
+                        collapsable={false}
                         style={
-                          Object {
+                          {
                             "borderColor": "#6A7BFF",
-                            "borderRadius": 7.5,
-                            "borderWidth": 1.5,
-                            "height": 15,
-                            "width": 15,
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
                           }
                         }
                       />

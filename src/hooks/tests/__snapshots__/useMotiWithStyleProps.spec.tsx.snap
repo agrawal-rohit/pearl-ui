@@ -3,27 +3,31 @@
 exports[`useMotiWithStyleProps transforms Moti 'animate' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={
+      {
+        "backgroundColor": "#ffc0cb",
+        "padding": "s",
+      }
+    }
     animatedStyle={
-      Object {
-        "value": Object {
+      {
+        "value": {
           "backgroundColor": "#ffc0cb",
-          "padding": 12,
-          "transform": Array [],
+          "padding": "s",
         },
       }
     }
     collapsable={false}
     style={
-      Object {
+      {
         "backgroundColor": "#ffc0cb",
-        "padding": 12,
-        "transform": Array [],
+        "padding": "s",
       }
     }
   />
@@ -33,25 +37,26 @@ exports[`useMotiWithStyleProps transforms Moti 'animate' props correctly 1`] = `
 exports[`useMotiWithStyleProps transforms Moti 'exit' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "transform": Array [],
+    exit={
+      {
+        "backgroundColor": "#ffc0cb",
+        "padding": "s",
       }
     }
+    style={{}}
   />
 </View>
 `;
@@ -59,25 +64,25 @@ exports[`useMotiWithStyleProps transforms Moti 'exit' props correctly 1`] = `
 exports[`useMotiWithStyleProps transforms Moti 'exitTransition' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "transform": Array [],
+    exitTransition={
+      {
+        "type": "timing",
       }
     }
+    style={{}}
   />
 </View>
 `;
@@ -85,27 +90,32 @@ exports[`useMotiWithStyleProps transforms Moti 'exitTransition' props correctly 
 exports[`useMotiWithStyleProps transforms Moti 'from' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
+      {
+        "value": {
           "backgroundColor": "#ffc0cb",
-          "padding": 12,
-          "transform": Array [],
+          "padding": "s",
         },
       }
     }
     collapsable={false}
-    style={
-      Object {
+    from={
+      {
         "backgroundColor": "#ffc0cb",
-        "padding": 12,
-        "transform": Array [],
+        "padding": "s",
+      }
+    }
+    style={
+      {
+        "backgroundColor": "#ffc0cb",
+        "padding": "s",
       }
     }
   />
@@ -115,25 +125,32 @@ exports[`useMotiWithStyleProps transforms Moti 'from' props correctly 1`] = `
 exports[`useMotiWithStyleProps transforms Moti 'state' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "transform": Array [],
+    state={
+      {
+        "from": {
+          "backgroundColor": "pink",
+          "p": "s",
+        },
+        "to": {
+          "backgroundColor": "silver",
+          "p": "xs",
+        },
       }
     }
+    style={{}}
   />
 </View>
 `;
@@ -141,23 +158,23 @@ exports[`useMotiWithStyleProps transforms Moti 'state' props correctly 1`] = `
 exports[`useMotiWithStyleProps transforms Moti 'transition' props correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
+    animate={{}}
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    style={
-      Object {
-        "transform": Array [],
+    style={{}}
+    transition={
+      {
+        "type": "timing",
       }
     }
   />

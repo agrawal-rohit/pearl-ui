@@ -3,35 +3,30 @@
 exports[`Atoms/Screen passes the snapshot test 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <RCTSafeAreaView
     animatedStyle={
-      Object {
-        "value": Object {
-          "transform": Array [],
-        },
+      {
+        "value": {},
       }
     }
     collapsable={false}
-    emulateUnlessSupported={true}
     style={
-      Object {
-        "backgroundColor": "#FFFFFF",
+      {
         "flex": 1,
-        "paddingTop": 0,
-        "transform": Array [],
       }
     }
   >
     <RCTScrollView
       animatedStyle={
-        Object {
-          "value": Object {
-            "transform": Array [],
+        {
+          "value": {
+            "backgroundColor": "#FFFFFF",
+            "padding": 16,
           },
         }
       }
@@ -39,12 +34,12 @@ exports[`Atoms/Screen passes the snapshot test 1`] = `
       bounces={true}
       collapsable={false}
       contentContainerStyle={
-        Object {
+        {
           "flexGrow": 1,
         }
       }
       contentInset={
-        Object {
+        {
           "bottom": 0,
         }
       }
@@ -60,37 +55,44 @@ exports[`Atoms/Screen passes the snapshot test 1`] = `
       keyboardSpace={0}
       onScroll={[Function]}
       resetKeyboardSpace={[Function]}
-      scrollEnabled={true}
       scrollEventThrottle={1}
       scrollForExtraHeightOnAndroid={[Function]}
       scrollIntoView={[Function]}
       scrollToEnd={[Function]}
       scrollToFocusedInput={[Function]}
       scrollToPosition={[Function]}
-      scrollable={true}
-      showScrollBar={false}
       showsVerticalScrollIndicator={false}
       update={[Function]}
       viewIsInsideTabBar={false}
     >
       <View>
         <View
+          animate={
+            {
+              "backgroundColor": "#FFFFFF",
+              "padding": 16,
+            }
+          }
           animatedStyle={
-            Object {
-              "value": Object {
-                "transform": Array [],
+            {
+              "value": {
+                "backgroundColor": "#FFFFFF",
+                "padding": 16,
               },
             }
           }
           collapsable={false}
           style={
-            Object {
+            {
               "backgroundColor": "#FFFFFF",
-              "display": "flex",
-              "flex": 1,
-              "flexDirection": "column",
               "padding": 16,
-              "transform": Array [],
+            }
+          }
+          transition={
+            {
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
             }
           }
         />

@@ -2,6 +2,7 @@ import React from "react";
 import Pressable from "./pressable";
 import { fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../theme/src/theme-context";
+import { MotiPressable } from "moti/interactions";
 
 jest.useFakeTimers();
 
@@ -41,6 +42,7 @@ describe("Atoms/Pressable", () => {
 
     const component = await render(
       <ThemeProvider>
+        <MotiPressable> </MotiPressable>
         <Pressable onPress={onPress} testID="testOnPress">
           Button press
         </Pressable>
