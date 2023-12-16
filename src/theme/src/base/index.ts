@@ -14,8 +14,9 @@ import {
 } from "./typography";
 import { merge } from "lodash";
 import components from "./components";
+import { ThemeSkeleton } from "../types";
 
-export const baseTheme = {
+export const baseTheme: ThemeSkeleton = {
   palette,
   spacing,
   borderRadii,
@@ -28,7 +29,7 @@ export const baseTheme = {
   fontWeights,
   letterSpacings,
   lineHeights,
-  components,
+  components: components as any,
 };
 
 /**
