@@ -11,7 +11,7 @@ import {
   fontWeights,
   letterSpacings,
   lineHeights,
-} from "./typography";
+} from "./typography"; 
 import { merge } from "lodash";
 import components from "./components";
 import { ThemeSkeleton } from "../types";
