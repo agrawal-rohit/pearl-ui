@@ -14,7 +14,7 @@ Pearl UI is a user-friendly UI library for React Native, offering ready-to-use c
 
 <p align="center" style="width: 80%; margin: auto">
 
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/agrawal-rohit/pearl-ui/Publish">
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/agrawal-rohit/pearl-ui/Publish.yml">
 <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/d0c9aeda98434aa4adfa8446823aead4">
 <img alt="npm" src="https://img.shields.io/npm/v/pearl-ui">
 <img alt="npm" src="https://img.shields.io/npm/dw/pearl-ui">
