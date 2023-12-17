@@ -13,20 +13,11 @@ Pearl UI is a user-friendly UI library for React Native, offering ready-to-use c
 <br />
 
 <p align="center" style="width: 80%; margin: auto">
-
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/agrawal-rohit/pearl-ui/Publish.yml">
 <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/d0c9aeda98434aa4adfa8446823aead4">
-<img alt="npm" src="https://img.shields.io/npm/v/pearl-ui">
 <img alt="npm" src="https://img.shields.io/npm/dw/pearl-ui">
 <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/d0c9aeda98434aa4adfa8446823aead4">
-<img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui">
-<!-- <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/w/agrawal-rohit/pearl-ui/next"> -->
-<a href="https://github.com/agrawal-rohit/pearl-ui/discussions">
-<img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/agrawal-rohit/pearl-ui">
-</a>
-<a href="https://twitter.com/_rohitagrawal_">
-<img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2F_rohitagrawal_">
-</a>
+<img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui"> 
 </p>
 
 <br />
@@ -79,11 +70,6 @@ For comprehensive usage instructions and API documentation, please visit our [of
 ## Changelog
 
 To keep track of all the changes and updates, please refer to our [changelog](https://github.com/agrawal-rohit/pearl-ui/blob/main/CHANGELOG.md) and [GitHub releases](https://github.com/agrawal-rohit/pearl-ui/releases).
-
-## Support
-
-If you find our project useful and want to support us, consider buying us a coffee. Click on the image below to proceed:
-<a href="https://www.buymeacoffee.com/rohitagrawal" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Contributing
 
