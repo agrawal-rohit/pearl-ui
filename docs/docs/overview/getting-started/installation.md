@@ -38,7 +38,25 @@ yarn add pearl-ui
 </TabItem>
 </Tabs>
 
+## Add the reanimated plugin in the babel configuration
+
+To add the reanimated plugin, modify your `babel.config.js` file as follows:
+
+```jsx
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ["babel-preset-expo"],
+    plugins: ["react-native-reanimated/plugin"],
+  };
+};
+```
+
 ## Setting up Pearl UI
+
+:::info
+For optimal performance, we recommend using the **"hermes"** JavaScript engine. You may encounter issues with the "jsc" engine.
+:::
 
 To get started with Pearl UI, you need to set up the theme provider and load the required fonts. This guide will walk you through the process.
 

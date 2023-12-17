@@ -9,5 +9,4 @@ export { baseTheme, extendTheme } from "./src/base/index";
 export { generatePalette } from "./utils/utils";
 
 // Types
-export type * from "./src/types";
-export type * from "./src/style-functions";
+export * from "./src/types";

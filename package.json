@@ -146,6 +146,7 @@
           "dist/**/*.{js,ts}",
           "package.json",
           "package-lock.json",
+          "yarn.lock",
           "CHANGELOG.md"
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
