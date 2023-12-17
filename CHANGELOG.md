@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.1...v2.2.2) (2023-12-17)
+
+
+### Bug Fixes
+
+* Fixed type export issue and broken expo snacks in the docs ([9ee0b02](https://github.com/agrawal-rohit/pearl-ui/commit/9ee0b0204ff78c03240914ba041f29326d494fdc))
+
 ## [2.2.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.0...v2.2.1) (2023-12-17)
 
 
