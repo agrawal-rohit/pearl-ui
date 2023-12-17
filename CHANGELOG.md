@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.0...v2.2.1) (2023-12-17)
+
+
+### Performance Improvements
+
+* Dummy commit to trigger major release version bump ([3167f80](https://github.com/agrawal-rohit/pearl-ui/commit/3167f80721b9357ddac6b8976924f2b4f2b07e5f))
+
 # [2.2.0](https://github.com/agrawal-rohit/pearl-ui/compare/v2.1.1...v2.2.0) (2023-12-17)
 
 
