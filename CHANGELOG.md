@@ -1,3 +1,10 @@
+## [2.2.6](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.5...v2.2.6) (2023-12-18)
+
+
+### Bug Fixes
+
+* Fixed attached badge positioning for web, updated Expo snacks ([6a4b846](https://github.com/agrawal-rohit/pearl-ui/commit/6a4b8461fa23cfb5af7f0f63291fc725469354d6))
+
 ## [2.2.5](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.4...v2.2.5) (2023-12-18)
 
 
