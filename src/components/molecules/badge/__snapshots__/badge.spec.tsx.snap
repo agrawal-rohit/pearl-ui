@@ -2111,53 +2111,131 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
       }
     }
   >
-    <Text />
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animate={
         {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
+          "alignSelf": "flex-start",
         }
       }
-      accessibilityValue={
+      animatedStyle={
         {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
+          "value": {
+            "alignSelf": "flex-start",
+          },
         }
       }
-      accessible={true}
       collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         {
           "alignSelf": "flex-start",
-          "height": 25,
-          "position": "absolute",
-          "right": -5,
-          "top": -5,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
+      <Text />
       <View
-        animatedStyle={
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
           {
-            "value": {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignSelf": "flex-start",
+            "height": 25,
+            "position": "absolute",
+            "right": -5,
+            "top": -5,
+          }
+        }
+      >
+        <View
+          animatedStyle={
+            {
+              "value": {
+                "alignItems": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "height": 25,
+                "justifyContent": "center",
+                "minWidth": 25,
+                "position": "absolute",
+                "right": -5,
+                "top": -5,
+                "zIndex": 1300,
+              },
+            }
+          }
+          collapsable={false}
+          onLayout={[Function]}
+          state={
+            {
+              "__state": {
+                "_isReanimatedSharedValue": true,
+                "_value": {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "minWidth": 25,
+                  "position": "absolute",
+                  "right": -5,
+                  "top": -5,
+                  "zIndex": 1300,
+                },
+                "addListener": [Function],
+                "modify": [Function],
+                "removeListener": [Function],
+                "value": {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "height": 25,
+                  "justifyContent": "center",
+                  "minWidth": 25,
+                  "position": "absolute",
+                  "right": -5,
+                  "top": -5,
+                  "zIndex": 1300,
+                },
+              },
+            }
+          }
+          style={
+            {
               "alignItems": "center",
               "backgroundColor": "#6A7BFF",
               "borderRadius": 1000,
@@ -2168,108 +2246,58 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
               "right": -5,
               "top": -5,
               "zIndex": 1300,
-            },
-          }
-        }
-        collapsable={false}
-        onLayout={[Function]}
-        state={
-          {
-            "__state": {
-              "_isReanimatedSharedValue": true,
-              "_value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "height": 25,
-                "justifyContent": "center",
-                "minWidth": 25,
-                "position": "absolute",
-                "right": -5,
-                "top": -5,
-                "zIndex": 1300,
-              },
-              "addListener": [Function],
-              "modify": [Function],
-              "removeListener": [Function],
-              "value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "height": 25,
-                "justifyContent": "center",
-                "minWidth": 25,
-                "position": "absolute",
-                "right": -5,
-                "top": -5,
-                "zIndex": 1300,
-              },
-            },
-          }
-        }
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "height": 25,
-            "justifyContent": "center",
-            "minWidth": 25,
-            "position": "absolute",
-            "right": -5,
-            "top": -5,
-            "zIndex": 1300,
-          }
-        }
-        transition={
-          {
-            "duration": 50,
-          }
-        }
-      >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-              "paddingHorizontal": 8,
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-                "paddingHorizontal": 8,
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Medium",
-              "fontSize": 13.799999999999999,
-              "fontStyle": "normal",
-              "fontWeight": "500",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 22,
-              "paddingHorizontal": 8,
             }
           }
           transition={
             {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
+              "duration": 50,
             }
           }
-          variant="p4"
         >
-          28
-        </Text>
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "paddingHorizontal": 8,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "paddingHorizontal": 8,
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#FFFFFF",
+                "fontFamily": "Poppins-Medium",
+                "fontSize": 13.799999999999999,
+                "fontStyle": "normal",
+                "fontWeight": "500",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+                "paddingHorizontal": 8,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+            variant="p4"
+          >
+            28
+          </Text>
+        </View>
       </View>
     </View>
   </View>
@@ -2290,87 +2318,79 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
       }
     }
   >
-    <Text />
     <View
-      accessibilityLabel="Press me!"
-      accessibilityRole="button"
-      accessibilityState={
+      animate={
         {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": false,
-          "expanded": undefined,
-          "selected": undefined,
+          "alignSelf": "flex-start",
         }
       }
-      accessibilityValue={
+      animatedStyle={
         {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
+          "value": {
+            "alignSelf": "flex-start",
+          },
         }
       }
-      accessible={true}
       collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         {
           "alignSelf": "flex-start",
-          "bottom": -5,
-          "height": 30,
-          "position": "absolute",
-          "right": -5,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
+      <Text />
       <View
-        animatedStyle={
+        accessibilityLabel="Press me!"
+        accessibilityRole="button"
+        accessibilityState={
           {
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#6A7BFF",
-              "borderRadius": 1000,
-              "bottom": -5,
-              "height": 30,
-              "justifyContent": "center",
-              "minWidth": 30,
-              "position": "absolute",
-              "right": -5,
-              "zIndex": 1300,
-            },
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
           }
         }
-        collapsable={false}
-        onLayout={[Function]}
-        state={
+        accessibilityValue={
           {
-            "__state": {
-              "_isReanimatedSharedValue": true,
-              "_value": {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "bottom": -5,
-                "height": 30,
-                "justifyContent": "center",
-                "minWidth": 30,
-                "position": "absolute",
-                "right": -5,
-                "zIndex": 1300,
-              },
-              "addListener": [Function],
-              "modify": [Function],
-              "removeListener": [Function],
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignSelf": "flex-start",
+            "bottom": -5,
+            "height": 30,
+            "position": "absolute",
+            "right": -5,
+          }
+        }
+      >
+        <View
+          animatedStyle={
+            {
               "value": {
                 "alignItems": "center",
                 "backgroundColor": "#6A7BFF",
@@ -2383,30 +2403,66 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
                 "right": -5,
                 "zIndex": 1300,
               },
-            },
+            }
           }
-        }
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#6A7BFF",
-            "borderRadius": 1000,
-            "bottom": -5,
-            "height": 30,
-            "justifyContent": "center",
-            "minWidth": 30,
-            "position": "absolute",
-            "right": -5,
-            "zIndex": 1300,
+          collapsable={false}
+          onLayout={[Function]}
+          state={
+            {
+              "__state": {
+                "_isReanimatedSharedValue": true,
+                "_value": {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "bottom": -5,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "minWidth": 30,
+                  "position": "absolute",
+                  "right": -5,
+                  "zIndex": 1300,
+                },
+                "addListener": [Function],
+                "modify": [Function],
+                "removeListener": [Function],
+                "value": {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "bottom": -5,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "minWidth": 30,
+                  "position": "absolute",
+                  "right": -5,
+                  "zIndex": 1300,
+                },
+              },
+            }
           }
-        }
-        transition={
-          {
-            "duration": 50,
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "bottom": -5,
+              "height": 30,
+              "justifyContent": "center",
+              "minWidth": 30,
+              "position": "absolute",
+              "right": -5,
+              "zIndex": 1300,
+            }
           }
-        }
-      >
-        <Text />
+          transition={
+            {
+              "duration": 50,
+            }
+          }
+        >
+          <Text />
+        </View>
       </View>
     </View>
   </View>

@@ -3336,45 +3336,22 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       >
         <View
-          accessibilityRole="image"
-          accessible={true}
           animate={
             {
-              "alignItems": "center",
-              "backgroundColor": "#00ffff",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
+                "alignSelf": "flex-start",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "alignItems": "center",
-              "backgroundColor": "#00ffff",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           transition={
@@ -3386,40 +3363,45 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         >
           <View
+            accessibilityRole="image"
+            accessible={true}
             animate={
               {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
               }
             }
             animatedStyle={
               {
                 "value": {
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
+                  "alignItems": "center",
+                  "backgroundColor": "#00ffff",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 70,
+                  "justifyContent": "center",
+                  "width": 70,
                 },
               }
             }
             collapsable={false}
             style={
               {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
               }
             }
             transition={
@@ -3431,76 +3413,104 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             }
           >
             <View
-              style={
-                [
-                  {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "justifyContent": "center",
+              animate={
+                {
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "bottom": 0,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
                   },
-                  [
-                    {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                    {
-                      "color": "#C5CEE0",
-                      "flex": 0,
-                    },
-                  ],
-                ]
+                }
+              }
+              collapsable={false}
+              style={
+                {
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
               }
             >
               <View
-                accessibilityLabel="Loading indicator"
-                accessibilityRole="progressbar"
-                accessible={true}
-                animate={
-                  {
-                    "color": "#C5CEE0",
-                  }
-                }
-                collapsable={false}
-                rawSize={20}
                 style={
-                  {
-                    "height": 20,
-                    "width": 20,
-                  }
-                }
-                variant="spinner"
-              >
-                <View
-                  collapsable={false}
-                  style={
+                  [
                     {
                       "alignItems": "center",
-                      "bottom": 0,
+                      "flex": 1,
                       "justifyContent": "center",
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
+                    },
+                    [
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      {
+                        "color": "#C5CEE0",
+                        "flex": 0,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="Loading indicator"
+                  accessibilityRole="progressbar"
+                  accessible={true}
+                  animate={
+                    {
+                      "color": "#C5CEE0",
                     }
                   }
+                  collapsable={false}
+                  rawSize={20}
+                  style={
+                    {
+                      "height": 20,
+                      "width": 20,
+                    }
+                  }
+                  variant="spinner"
                 >
                   <View
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "rotate": "82.5deg",
-                          },
-                          {
-                            "rotate": "0deg",
-                          },
-                        ],
-                        "width": 20,
+                        "alignItems": "center",
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
                       }
                     }
                   >
@@ -3508,8 +3518,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
+                          "height": 20,
+                          "transform": [
+                            {
+                              "rotate": "82.5deg",
+                            },
+                            {
+                              "rotate": "0deg",
+                            },
+                          ],
                           "width": 20,
                         }
                       }
@@ -3518,15 +3535,8 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 20,
-                            "transform": [
-                              {
-                                "translateY": 0,
-                              },
-                              {
-                                "rotate": "-172.5deg",
-                              },
-                            ],
+                            "height": 10,
+                            "overflow": "hidden",
                             "width": 20,
                           }
                         }
@@ -3535,8 +3545,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                           collapsable={false}
                           style={
                             {
-                              "height": 10,
-                              "overflow": "hidden",
+                              "height": 20,
+                              "transform": [
+                                {
+                                  "translateY": 0,
+                                },
+                                {
+                                  "rotate": "-172.5deg",
+                                },
+                              ],
                               "width": 20,
                             }
                           }
@@ -3545,47 +3562,40 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                             collapsable={false}
                             style={
                               {
-                                "borderColor": "#C5CEE0",
-                                "borderRadius": 10,
-                                "borderWidth": 2,
-                                "height": 20,
+                                "height": 10,
+                                "overflow": "hidden",
                                 "width": 20,
                               }
                             }
-                          />
+                          >
+                            <View
+                              collapsable={false}
+                              style={
+                                {
+                                  "borderColor": "#C5CEE0",
+                                  "borderRadius": 10,
+                                  "borderWidth": 2,
+                                  "height": 20,
+                                  "width": 20,
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
                     </View>
                   </View>
-                </View>
-                <View
-                  collapsable={false}
-                  style={
-                    {
-                      "alignItems": "center",
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                >
                   <View
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "rotate": "82.5deg",
-                          },
-                          {
-                            "rotate": "0deg",
-                          },
-                        ],
-                        "width": 20,
+                        "alignItems": "center",
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
                       }
                     }
                   >
@@ -3593,9 +3603,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
-                          "top": 10,
+                          "height": 20,
+                          "transform": [
+                            {
+                              "rotate": "82.5deg",
+                            },
+                            {
+                              "rotate": "0deg",
+                            },
+                          ],
                           "width": 20,
                         }
                       }
@@ -3604,15 +3620,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 20,
-                            "transform": [
-                              {
-                                "translateY": -10,
-                              },
-                              {
-                                "rotate": "352.5deg",
-                              },
-                            ],
+                            "height": 10,
+                            "overflow": "hidden",
+                            "top": 10,
                             "width": 20,
                           }
                         }
@@ -3621,8 +3631,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                           collapsable={false}
                           style={
                             {
-                              "height": 10,
-                              "overflow": "hidden",
+                              "height": 20,
+                              "transform": [
+                                {
+                                  "translateY": -10,
+                                },
+                                {
+                                  "rotate": "352.5deg",
+                                },
+                              ],
                               "width": 20,
                             }
                           }
@@ -3631,14 +3648,25 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                             collapsable={false}
                             style={
                               {
-                                "borderColor": "#C5CEE0",
-                                "borderRadius": 10,
-                                "borderWidth": 2,
-                                "height": 20,
+                                "height": 10,
+                                "overflow": "hidden",
                                 "width": 20,
                               }
                             }
-                          />
+                          >
+                            <View
+                              collapsable={false}
+                              style={
+                                {
+                                  "borderColor": "#C5CEE0",
+                                  "borderRadius": 10,
+                                  "borderWidth": 2,
+                                  "height": 20,
+                                  "width": 20,
+                                }
+                              }
+                            />
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -3647,87 +3675,51 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               </View>
             </View>
           </View>
-        </View>
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessibilityState={
-            {
-              "busy": undefined,
-              "checked": undefined,
-              "disabled": false,
-              "expanded": undefined,
-              "selected": undefined,
-            }
-          }
-          accessibilityValue={
-            {
-              "max": undefined,
-              "min": undefined,
-              "now": undefined,
-              "text": undefined,
-            }
-          }
-          accessible={true}
-          collapsable={false}
-          focusable={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            {
-              "alignSelf": "flex-start",
-              "bottom": -0,
-              "height": 15,
-              "position": "absolute",
-              "right": -0,
-            }
-          }
-        >
           <View
-            animatedStyle={
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessibilityState={
               {
-                "value": {
-                  "alignItems": "center",
-                  "backgroundColor": "#38A169",
-                  "borderRadius": 1000,
-                  "bottom": -0,
-                  "height": 15,
-                  "justifyContent": "center",
-                  "minWidth": 15,
-                  "position": "absolute",
-                  "right": -0,
-                  "zIndex": 1300,
-                },
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
               }
             }
-            collapsable={false}
-            onLayout={[Function]}
-            state={
+            accessibilityValue={
               {
-                "__state": {
-                  "_isReanimatedSharedValue": true,
-                  "_value": {
-                    "alignItems": "center",
-                    "backgroundColor": "#38A169",
-                    "borderRadius": 1000,
-                    "bottom": -0,
-                    "height": 15,
-                    "justifyContent": "center",
-                    "minWidth": 15,
-                    "position": "absolute",
-                    "right": -0,
-                    "zIndex": 1300,
-                  },
-                  "addListener": [Function],
-                  "modify": [Function],
-                  "removeListener": [Function],
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignSelf": "flex-start",
+                "bottom": -0,
+                "height": 15,
+                "position": "absolute",
+                "right": -0,
+              }
+            }
+          >
+            <View
+              animatedStyle={
+                {
                   "value": {
                     "alignItems": "center",
                     "backgroundColor": "#38A169",
@@ -3740,29 +3732,65 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                     "right": -0,
                     "zIndex": 1300,
                   },
-                },
+                }
               }
-            }
-            style={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#38A169",
-                "borderRadius": 1000,
-                "bottom": -0,
-                "height": 15,
-                "justifyContent": "center",
-                "minWidth": 15,
-                "position": "absolute",
-                "right": -0,
-                "zIndex": 1300,
+              collapsable={false}
+              onLayout={[Function]}
+              state={
+                {
+                  "__state": {
+                    "_isReanimatedSharedValue": true,
+                    "_value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#38A169",
+                      "borderRadius": 1000,
+                      "bottom": -0,
+                      "height": 15,
+                      "justifyContent": "center",
+                      "minWidth": 15,
+                      "position": "absolute",
+                      "right": -0,
+                      "zIndex": 1300,
+                    },
+                    "addListener": [Function],
+                    "modify": [Function],
+                    "removeListener": [Function],
+                    "value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#38A169",
+                      "borderRadius": 1000,
+                      "bottom": -0,
+                      "height": 15,
+                      "justifyContent": "center",
+                      "minWidth": 15,
+                      "position": "absolute",
+                      "right": -0,
+                      "zIndex": 1300,
+                    },
+                  },
+                }
               }
-            }
-            transition={
-              {
-                "duration": 50,
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#38A169",
+                  "borderRadius": 1000,
+                  "bottom": -0,
+                  "height": 15,
+                  "justifyContent": "center",
+                  "minWidth": 15,
+                  "position": "absolute",
+                  "right": -0,
+                  "zIndex": 1300,
+                }
               }
-            }
-          />
+              transition={
+                {
+                  "duration": 50,
+                }
+              }
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -3814,42 +3842,20 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         <View
           animate={
             {
-              "alignItems": "center",
-              "backgroundColor": "#00ffff",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
+                "alignSelf": "flex-start",
               },
             }
           }
           collapsable={false}
-          onLayout={[Function]}
           style={
             {
-              "alignItems": "center",
-              "backgroundColor": "#00ffff",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           transition={
@@ -3860,33 +3866,45 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             }
           }
         >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
+          <View
             animate={
               {
-                "color": "#1A2138",
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
               }
             }
             animatedStyle={
               {
                 "value": {
-                  "color": "#1A2138",
+                  "alignItems": "center",
+                  "backgroundColor": "#00ffff",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 1000,
+                  "borderWidth": 2,
+                  "height": 70,
+                  "justifyContent": "center",
+                  "width": 70,
                 },
               }
             }
             collapsable={false}
+            onLayout={[Function]}
             style={
               {
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 23,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 32,
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
               }
             }
             transition={
@@ -3896,57 +3914,145 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                 "type": "spring",
               }
             }
-            variant="p2"
           >
-            RA
-          </Text>
-        </View>
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessibilityState={
-            {
-              "busy": undefined,
-              "checked": undefined,
-              "disabled": false,
-              "expanded": undefined,
-              "selected": undefined,
-            }
-          }
-          accessibilityValue={
-            {
-              "max": undefined,
-              "min": undefined,
-              "now": undefined,
-              "text": undefined,
-            }
-          }
-          accessible={true}
-          collapsable={false}
-          focusable={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            {
-              "alignSelf": "flex-start",
-              "bottom": -0,
-              "height": 25,
-              "position": "absolute",
-              "right": -0,
-            }
-          }
-        >
+            <Text
+              accessibilityRole="text"
+              accessible={true}
+              allowFontScaling={true}
+              animate={
+                {
+                  "color": "#1A2138",
+                }
+              }
+              animatedStyle={
+                {
+                  "value": {
+                    "color": "#1A2138",
+                  },
+                }
+              }
+              collapsable={false}
+              style={
+                {
+                  "color": "#1A2138",
+                  "fontFamily": "Poppins-Regular",
+                  "fontSize": 23,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "includeFontPadding": false,
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                }
+              }
+              transition={
+                {
+                  "dampingRatio": 1,
+                  "duration": 100,
+                  "type": "spring",
+                }
+              }
+              variant="p2"
+            >
+              RA
+            </Text>
+          </View>
           <View
-            animatedStyle={
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessibilityState={
               {
-                "value": {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignSelf": "flex-start",
+                "bottom": -0,
+                "height": 25,
+                "position": "absolute",
+                "right": -0,
+              }
+            }
+          >
+            <View
+              animatedStyle={
+                {
+                  "value": {
+                    "alignItems": "center",
+                    "backgroundColor": "#FF4B42",
+                    "borderRadius": 1000,
+                    "bottom": -0,
+                    "height": 25,
+                    "justifyContent": "center",
+                    "minWidth": 25,
+                    "position": "absolute",
+                    "right": -0,
+                    "zIndex": 1300,
+                  },
+                }
+              }
+              collapsable={false}
+              onLayout={[Function]}
+              state={
+                {
+                  "__state": {
+                    "_isReanimatedSharedValue": true,
+                    "_value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#FF4B42",
+                      "borderRadius": 1000,
+                      "bottom": -0,
+                      "height": 25,
+                      "justifyContent": "center",
+                      "minWidth": 25,
+                      "position": "absolute",
+                      "right": -0,
+                      "zIndex": 1300,
+                    },
+                    "addListener": [Function],
+                    "modify": [Function],
+                    "removeListener": [Function],
+                    "value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#FF4B42",
+                      "borderRadius": 1000,
+                      "bottom": -0,
+                      "height": 25,
+                      "justifyContent": "center",
+                      "minWidth": 25,
+                      "position": "absolute",
+                      "right": -0,
+                      "zIndex": 1300,
+                    },
+                  },
+                }
+              }
+              style={
+                {
                   "alignItems": "center",
                   "backgroundColor": "#FF4B42",
                   "borderRadius": 1000,
@@ -3957,108 +4063,58 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                   "position": "absolute",
                   "right": -0,
                   "zIndex": 1300,
-                },
-              }
-            }
-            collapsable={false}
-            onLayout={[Function]}
-            state={
-              {
-                "__state": {
-                  "_isReanimatedSharedValue": true,
-                  "_value": {
-                    "alignItems": "center",
-                    "backgroundColor": "#FF4B42",
-                    "borderRadius": 1000,
-                    "bottom": -0,
-                    "height": 25,
-                    "justifyContent": "center",
-                    "minWidth": 25,
-                    "position": "absolute",
-                    "right": -0,
-                    "zIndex": 1300,
-                  },
-                  "addListener": [Function],
-                  "modify": [Function],
-                  "removeListener": [Function],
-                  "value": {
-                    "alignItems": "center",
-                    "backgroundColor": "#FF4B42",
-                    "borderRadius": 1000,
-                    "bottom": -0,
-                    "height": 25,
-                    "justifyContent": "center",
-                    "minWidth": 25,
-                    "position": "absolute",
-                    "right": -0,
-                    "zIndex": 1300,
-                  },
-                },
-              }
-            }
-            style={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#FF4B42",
-                "borderRadius": 1000,
-                "bottom": -0,
-                "height": 25,
-                "justifyContent": "center",
-                "minWidth": 25,
-                "position": "absolute",
-                "right": -0,
-                "zIndex": 1300,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-              }
-            }
-          >
-            <Text
-              accessibilityRole="text"
-              accessible={true}
-              allowFontScaling={true}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "paddingHorizontal": 8,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "paddingHorizontal": 8,
-                  },
-                }
-              }
-              collapsable={false}
-              style={
-                {
-                  "color": "#FFFFFF",
-                  "fontFamily": "Poppins-Medium",
-                  "fontSize": 13.799999999999999,
-                  "fontStyle": "normal",
-                  "fontWeight": "500",
-                  "includeFontPadding": false,
-                  "letterSpacing": 0,
-                  "lineHeight": 22,
-                  "paddingHorizontal": 8,
                 }
               }
               transition={
                 {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
+                  "duration": 50,
                 }
               }
-              variant="p4"
             >
-              0
-            </Text>
+              <Text
+                accessibilityRole="text"
+                accessible={true}
+                allowFontScaling={true}
+                animate={
+                  {
+                    "color": "#FFFFFF",
+                    "paddingHorizontal": 8,
+                  }
+                }
+                animatedStyle={
+                  {
+                    "value": {
+                      "color": "#FFFFFF",
+                      "paddingHorizontal": 8,
+                    },
+                  }
+                }
+                collapsable={false}
+                style={
+                  {
+                    "color": "#FFFFFF",
+                    "fontFamily": "Poppins-Medium",
+                    "fontSize": 13.799999999999999,
+                    "fontStyle": "normal",
+                    "fontWeight": "500",
+                    "includeFontPadding": false,
+                    "letterSpacing": 0,
+                    "lineHeight": 22,
+                    "paddingHorizontal": 8,
+                  }
+                }
+                transition={
+                  {
+                    "dampingRatio": 1,
+                    "duration": 100,
+                    "type": "spring",
+                  }
+                }
+                variant="p4"
+              >
+                0
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -4104,42 +4160,20 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         <View
           animate={
             {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignItems": "center",
-                "backgroundColor": "#ff0000",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
+                "alignSelf": "flex-start",
               },
             }
           }
           collapsable={false}
-          onLayout={[Function]}
           style={
             {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "alignSelf": "flex-start",
             }
           }
           transition={
@@ -4149,87 +4183,101 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               "type": "spring",
             }
           }
-        />
-        <View
-          accessibilityLabel="Press me!"
-          accessibilityRole="button"
-          accessibilityState={
-            {
-              "busy": undefined,
-              "checked": undefined,
-              "disabled": false,
-              "expanded": undefined,
-              "selected": undefined,
-            }
-          }
-          accessibilityValue={
-            {
-              "max": undefined,
-              "min": undefined,
-              "now": undefined,
-              "text": undefined,
-            }
-          }
-          accessible={true}
-          collapsable={false}
-          focusable={true}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            {
-              "alignSelf": "flex-start",
-              "bottom": -5,
-              "height": 30,
-              "position": "absolute",
-              "right": -5,
-            }
-          }
         >
           <View
+            animate={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#ff0000",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
+              }
+            }
             animatedStyle={
               {
                 "value": {
                   "alignItems": "center",
-                  "backgroundColor": "#6A7BFF",
+                  "backgroundColor": "#ff0000",
+                  "borderColor": "#FFFFFF",
                   "borderRadius": 1000,
-                  "bottom": -5,
-                  "height": 30,
+                  "borderWidth": 2,
+                  "height": 70,
                   "justifyContent": "center",
-                  "minWidth": 30,
-                  "position": "absolute",
-                  "right": -5,
-                  "zIndex": 1300,
+                  "width": 70,
                 },
               }
             }
             collapsable={false}
             onLayout={[Function]}
-            state={
+            style={
               {
-                "__state": {
-                  "_isReanimatedSharedValue": true,
-                  "_value": {
-                    "alignItems": "center",
-                    "backgroundColor": "#6A7BFF",
-                    "borderRadius": 1000,
-                    "bottom": -5,
-                    "height": 30,
-                    "justifyContent": "center",
-                    "minWidth": 30,
-                    "position": "absolute",
-                    "right": -5,
-                    "zIndex": 1300,
-                  },
-                  "addListener": [Function],
-                  "modify": [Function],
-                  "removeListener": [Function],
+                "alignItems": "center",
+                "backgroundColor": "#ff0000",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
+              }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
+              }
+            }
+          />
+          <View
+            accessibilityLabel="Press me!"
+            accessibilityRole="button"
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignSelf": "flex-start",
+                "bottom": -5,
+                "height": 30,
+                "position": "absolute",
+                "right": -5,
+              }
+            }
+          >
+            <View
+              animatedStyle={
+                {
                   "value": {
                     "alignItems": "center",
                     "backgroundColor": "#6A7BFF",
@@ -4242,30 +4290,66 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                     "right": -5,
                     "zIndex": 1300,
                   },
-                },
+                }
               }
-            }
-            style={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderRadius": 1000,
-                "bottom": -5,
-                "height": 30,
-                "justifyContent": "center",
-                "minWidth": 30,
-                "position": "absolute",
-                "right": -5,
-                "zIndex": 1300,
+              collapsable={false}
+              onLayout={[Function]}
+              state={
+                {
+                  "__state": {
+                    "_isReanimatedSharedValue": true,
+                    "_value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#6A7BFF",
+                      "borderRadius": 1000,
+                      "bottom": -5,
+                      "height": 30,
+                      "justifyContent": "center",
+                      "minWidth": 30,
+                      "position": "absolute",
+                      "right": -5,
+                      "zIndex": 1300,
+                    },
+                    "addListener": [Function],
+                    "modify": [Function],
+                    "removeListener": [Function],
+                    "value": {
+                      "alignItems": "center",
+                      "backgroundColor": "#6A7BFF",
+                      "borderRadius": 1000,
+                      "bottom": -5,
+                      "height": 30,
+                      "justifyContent": "center",
+                      "minWidth": 30,
+                      "position": "absolute",
+                      "right": -5,
+                      "zIndex": 1300,
+                    },
+                  },
+                }
               }
-            }
-            transition={
-              {
-                "duration": 50,
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#6A7BFF",
+                  "borderRadius": 1000,
+                  "bottom": -5,
+                  "height": 30,
+                  "justifyContent": "center",
+                  "minWidth": 30,
+                  "position": "absolute",
+                  "right": -5,
+                  "zIndex": 1300,
+                }
               }
-            }
-          >
-            <Text />
+              transition={
+                {
+                  "duration": 50,
+                }
+              }
+            >
+              <Text />
+            </View>
           </View>
         </View>
       </View>
