@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.3...v2.2.4) (2023-12-18)
+
+
+### Bug Fixes
+
+* Fixed layout issue in the Badge component ([36d69f6](https://github.com/agrawal-rohit/pearl-ui/commit/36d69f6e67e32bf3dff4b53651f923f3e734169c))
+
 ## [2.2.3](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.2...v2.2.3) (2023-12-18)
 
 
