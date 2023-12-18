@@ -99,22 +99,24 @@ const withBadge =
     // Render the wrapped component with the badge
     return (
       <Box>
-        <WrappedComponent
-          {...(props as P)}
-          onLayout={onBaseComponentLayoutChange}
-        />
+        <Box alignSelf="flex-start">
+          <WrappedComponent
+            {...(props as P)}
+            onLayout={onBaseComponentLayoutChange}
+          />
 
-        {!hidden && (
-          <Badge
-            {...badgeProps}
-            onLayout={onBadgeLayoutChange}
-            position="absolute"
-            zIndex="overlay"
-            style={computedPositionWithWebMarginsForBadge}
-          >
-            {badgeValue}
-          </Badge>
-        )}
+          {!hidden && (
+            <Badge
+              {...badgeProps}
+              onLayout={onBadgeLayoutChange}
+              position="absolute"
+              zIndex="overlay"
+              style={computedPositionWithWebMarginsForBadge}
+            >
+              {badgeValue}
+            </Badge>
+          )}
+        </Box>
       </Box>
     ) as React.ReactElement<P>;
   };
