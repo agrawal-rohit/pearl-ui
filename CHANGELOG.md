@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.2...v2.2.3) (2023-12-18)
+
+
+### Bug Fixes
+
+* Updated web support ([db1dcc9](https://github.com/agrawal-rohit/pearl-ui/commit/db1dcc99340d791e2413c6cd57260ce58fe23da8))
+
 ## [2.2.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.1...v2.2.2) (2023-12-17)
 
 
