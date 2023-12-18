@@ -50,7 +50,7 @@ const withBadge =
     const [badgeWidth, setBadgeWidth] = useState(0);
 
     // Function to compute the position of the badge based on the placement option
-    const computePositionForBadge = useCallback(() => {
+    const computePositionForBadge = useMemo(() => {
       const positionValue = -1 * offset;
 
       if (placement === "topLeft")
@@ -78,24 +78,6 @@ const withBadge =
       setBaseComponentWidth(width);
     };
 
-    // Function to compute the position of the badge with margins for web platform
-    const computedPositionWithWebMarginsForBadge = useMemo(() => {
-      const position = computePositionForBadge();
-      if (Platform.OS === "web") {
-        return {
-          ...position,
-          margin:
-            position.right !== undefined
-              ? baseComponentWidth - badgeWidth - position.right
-              : position.left,
-          marginVertical: 0,
-          marginRight: 0,
-        };
-      }
-
-      return position;
-    }, [computePositionForBadge, baseComponentWidth, badgeWidth]);
-
     // Render the wrapped component with the badge
     return (
       <Box>
@@ -111,7 +93,7 @@ const withBadge =
               onLayout={onBadgeLayoutChange}
               position="absolute"
               zIndex="overlay"
-              style={computedPositionWithWebMarginsForBadge}
+              style={computePositionForBadge}
             >
               {badgeValue}
             </Badge>

@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  Text,
-  Stack,
-  HStack,
-  VStack,
-  CheckBox,
-  Radio,
-  RadioGroup,
-} from "../../src";
+import { Text, Stack, HStack, VStack, Radio, RadioGroup } from "../../src";
 import DemoSection from "./demo-section";
 
 const RadioDemo = () => {

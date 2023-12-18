@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { VStack, Image, Icon, Button, Text, Center, Video } from "../../src";
+import { VStack, Icon, Button, Text, Center, Video } from "../../src";
 import DemoSection from "./demo-section";
 import { ResizeMode } from "expo-av";
 
@@ -109,7 +109,7 @@ const VideoDemo = () => {
                     color="neutral.400"
                   />
                   <Text fontSize={10} fontWeight="400" color="neutral.500">
-                    The image could not be loaded
+                    The video could not be loaded
                   </Text>
                 </VStack>
               </Center>

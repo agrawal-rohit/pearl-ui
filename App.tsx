@@ -331,68 +331,6 @@ const Index = () => {
             paddingHorizontal: 20,
           }}
         >
-          <Text key={colorMode} fontWeight="semibold">
-            Box
-          </Text>
-          <IconButton
-            size="s"
-            variant="ghost"
-            onPress={toggleColorMode}
-            icon={
-              <Icon
-                rawSize={15}
-                iconFamily="Feather"
-                iconName={colorMode === "light" ? "sun" : "moon"}
-              />
-            }
-          />
-        </Box>
-
-        <Box
-          p="5"
-          from={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ type: "timing", duration: 150 }}
-        >
-          <Box
-            width="100%"
-            height={200}
-            backgroundColor="primary.500"
-            marginBottom="4"
-          />
-          <Box
-            width="100%"
-            height={200}
-            backgroundColor="secondary.500"
-            borderRadius="full"
-          />
-          <Box
-            width="100%"
-            height={200}
-            backgroundColor="white"
-            borderWidth={1}
-            borderRadius="s"
-            marginTop="3"
-          />
-        </Box>
-      </Stack>
-    </Screen>
-  );
-
-  return (
-    <Screen p="0" scrollable={false}>
-      <Stack direction="vertical" flex={1} spacing="0" pb="20">
-        <Box
-          py="1.5"
-          flexDirection="row"
-          borderBottomWidth={1}
-          borderColor={{ light: "neutral.300", dark: "neutral.600" }}
-          justifyContent="space-between"
-          alignItems="center"
-          style={{
-            paddingHorizontal: 20,
-          }}
-        >
           <HStack alignItems="center">
             {!!activeComponent && (
               <Pressable onPress={() => setActiveComponent(undefined)}>
