@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.4...v2.2.5) (2023-12-18)
+
+
+### Bug Fixes
+
+* Fixed animateable Box for web ([7c532eb](https://github.com/agrawal-rohit/pearl-ui/commit/7c532eb584c1d9c7f25af64cae8e420c2f2c34d3))
+
 ## [2.2.4](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.3...v2.2.4) (2023-12-18)
 
 

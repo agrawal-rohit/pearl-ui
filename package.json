@@ -5,7 +5,7 @@
   "types": "lib/typescript/src/index.d.ts",
   "typings": "lib/typescript/src/index.d.ts",
   "react-native": "src/index.ts",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "source": "src/index",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",
