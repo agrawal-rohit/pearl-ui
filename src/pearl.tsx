@@ -11,7 +11,7 @@ import { useAtomicComponentConfig } from "./hooks/useAtomicComponentConfig";
 import { boxStyleFunctions, BoxStyleProps } from "./theme/src/style-functions";
 import { useStyleProps } from "./hooks/useStyleProps";
 import { useMolecularComponentConfig } from "./hooks/useMolecularComponentConfig";
-import { motify } from "moti";
+import { MotiView, motify } from "moti";
 import { useMotiWithStyleProps } from "./hooks/useMotiWithStyleProps";
 import { useTheme } from "./hooks/useTheme";
 import { Platform } from "react-native";
@@ -80,7 +80,9 @@ export function pearl<
       }
     };
 
-    FinalComponent = motify(ConvertedClassComponent)();
+    if (Platform.OS === "web" && config.componentName === "Box")
+      FinalComponent = MotiView;
+    else FinalComponent = motify(ConvertedClassComponent)();
   } else {
     FinalComponent = Component;
   }
