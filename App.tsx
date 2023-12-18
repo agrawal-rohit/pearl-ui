@@ -59,7 +59,8 @@ import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { useTheme } from "./src";
+import { useResponsiveProp, useTheme } from "./src";
+import { MotiView } from "moti";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -249,6 +250,10 @@ const Index = () => {
   const [activeComponent, setActiveComponent] = useState<string | undefined>(
     undefined
   );
+  const numColumns = useResponsiveProp({
+    phone: 2,
+    largeTablet: 8,
+  });
 
   const renderMainComponent = () => {
     if (!activeComponent)
@@ -256,7 +261,7 @@ const Index = () => {
         <FlatList
           data={componentList}
           horizontal={false}
-          numColumns={2}
+          numColumns={numColumns}
           renderItem={({ item, index }) => (
             <ComponentCard
               label={item.label}

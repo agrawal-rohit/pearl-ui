@@ -13,6 +13,8 @@ import { useStyleProps } from "./hooks/useStyleProps";
 import { useMolecularComponentConfig } from "./hooks/useMolecularComponentConfig";
 import { motify } from "moti";
 import { useMotiWithStyleProps } from "./hooks/useMotiWithStyleProps";
+import { useTheme } from "./hooks/useTheme";
+import { Platform } from "react-native";
 
 /**
  * Configuration object that adds metadata to a component that's required by Pearl UI
@@ -60,7 +62,7 @@ export function pearl<
   } = {}
 ) {
   let FinalComponent: any | undefined;
-  const isAnimatable = config.animatable && config.type !== "molecule";
+  const isAnimatable = !!config.animatable && config.type !== "molecule";
 
   if (isAnimatable) {
     const ConvertedClassComponent = class extends React.Component<any, any> {
@@ -96,9 +98,8 @@ export function pearl<
           },
         ref: any
       ) => {
-        /**
-         * The converted props that will be passed to the final component
-         */
+        const { colorMode } = useTheme();
+
         let convertedProps;
         if (config.type === "atom") {
           convertedProps = useAtomicComponentConfig(
@@ -143,6 +144,14 @@ export function pearl<
         return (
           <FinalComponent
             {...convertedProps}
+            key={
+              Platform.OS === "web" &&
+              ["Text", "Icon", "Box"].includes(config.componentName as string)
+                ? convertedProps.key
+                  ? `${convertedProps.key}-${colorMode}`
+                  : `${colorMode}-${Math.random()}`
+                : convertedProps.key
+            }
             transition={
               convertedProps.transition ?? {
                 type: "spring",

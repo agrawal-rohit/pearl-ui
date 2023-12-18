@@ -225,11 +225,11 @@ export type RNStyleProperty =
 export type PropValue =
   | string
   | number
-  | undefined
   | boolean
-  | null
   | object
-  | symbol;
+  | symbol
+  | undefined
+  | null;
 
 export type ComponentTypes = "basic" | "atom" | "molecule";
 

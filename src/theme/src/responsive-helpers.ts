@@ -12,15 +12,15 @@ import {
  * Returns the value of a responsive object for the current screen size.
  * @param responsiveValue - The responsive object to get the value from.
  * @param breakpoints - The breakpoints object from the theme.
- * @param dimensions - The dimensions object containing the current screen width and height.
+ * @param dimensions - The dimensions object containing the current scree n width and height.
  * @returns The value of the responsive object for the current screen size.
  */
-export const getValueForScreenSize = ({
+export const getValueForScreenSize = <T extends PropValue = PropValue>({
   responsiveValue,
   breakpoints,
   dimensions,
 }: {
-  responsiveValue: AtLeastOneResponsiveValue;
+  responsiveValue: AtLeastOneResponsiveValue<T>;
   breakpoints: FinalPearlTheme["breakpoints"];
   dimensions: Dimensions;
 }) => {

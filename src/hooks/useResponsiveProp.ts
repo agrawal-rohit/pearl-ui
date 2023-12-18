@@ -1,5 +1,9 @@
 import { useTheme } from "./useTheme";
-import { PropValue, ResponsiveValue } from "../theme/src/types";
+import {
+  AtLeastOneResponsiveValue,
+  PropValue,
+  ResponsiveValue,
+} from "../theme/src/types";
 import {
   getValueForScreenSize,
   isResponsiveObjectValue,
@@ -12,7 +16,9 @@ import { useWindowDimensions } from "react-native";
  * @param propValue An object that specifies the values based on the different breakpoints
  * @returns The appropriate value from the responsive style object based on the current screen size
  */
-export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
+export const useResponsiveProp = <T extends PropValue = PropValue>(
+  propValue: ResponsiveValue<T>
+): T => {
   const { theme } = useTheme();
   const dimensions = useWindowDimensions();
 
@@ -21,14 +27,14 @@ export const useResponsiveProp = (propValue: ResponsiveValue<PropValue>) => {
   return useMemo(() => {
     if (isResponsiveObjectValue(propValue, theme)) {
       const valueForScreenSize = getValueForScreenSize({
-        responsiveValue: propValue,
+        responsiveValue: propValue as AtLeastOneResponsiveValue<T>,
         breakpoints: theme.breakpoints,
         dimensions,
       });
-      return valueForScreenSize;
+      return valueForScreenSize as T;
     }
 
     // If the propValue is not a responsive object value, return the propValue as is
-    return propValue;
+    return propValue as T;
   }, [propValue, theme, dimensions]);
 };
