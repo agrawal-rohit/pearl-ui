@@ -35,17 +35,17 @@ Pearl UI is a user-friendly UI library for React Native, offering ready-to-use c
 
 Pearl UI is a comprehensive UI library for React Native projects, offering a wide range of features:
 
-- **Open Source and Free** 🆓: Pearl UI is completely open source and free to use.
+- **Open Source and Free** 🆓: Completely open source and free to use.
 - **Universal Compatibility** 🌐: Write once and run on both iOS and Android platforms, thanks to the power of [Expo](https://docs.expo.dev/) and [React Native](https://reactnative.dev/).
-- **Rich Component Library** 📚: Over 15 built-in components are available, with the flexibility to create custom components as needed.
-- **Theming Control** 🎨: Full control over the theme allows for a highly customizable UI.
+- **Rich Component Library** 📚: Growing library of built-in components with the flexibility to create custom components as needed.
+- **Theming Control** 🎨: Full control over the theme for a highly customizable UI.
 - **Animation Support** 🎬: Out-of-the-box support for animations using [Moti](https://moti.fyi/).
-- **Dark Mode** 🌙: Dark mode is supported out-of-the-box, making it easy to cater to user preferences.
-- **Responsive Design** 📱: Support for responsive design using breakpoints ensures your UI looks great on any device.
+- **Dark Mode** 🌙: Dark mode support out-of-the-box, to make it easy to cater to user preferences.
+- **Responsive Design** 📱: Support for responsive design using breakpoints to ensure your application looks great on any device.
 - **Fast Development** ⚡: Speed up your development process with [style props](https://docs.pearl-ui.dev/docs/core-features/style-props).
-- **Accessibility** ♿: Pearl UI is accessible by default, adhering to official Android and Apple guidelines.
-- **Strong Typescript Support** 🦾: Typescript is fully supported, ensuring type safety and enhancing developer productivity.
-- **Powerful API** 💪: A powerful API is available for creating custom components, providing flexibility and control.
+- **Accessibility** ♿: Accessible by default, adhering to official Android and Apple guidelines.
+- **Fully Typed** 🦾: Completely types using Typescript to ensure type safety and enhancing developer productivity.
+- **Powerful API** 💪: Powerful API for creating custom components, providing flexibility and control.
 
 ## Installation
 
@@ -65,19 +65,11 @@ $ yarn add pearl-ui
 
 ## Documentation
 
-For comprehensive usage instructions and API documentation, please visit our [official website](https://www.pearl-ui.dev/).
-
-## Changelog
-
-To keep track of all the changes and updates, please refer to our [changelog](https://github.com/agrawal-rohit/pearl-ui/blob/main/CHANGELOG.md) and [GitHub releases](https://github.com/agrawal-rohit/pearl-ui/releases).
+For comprehensive usage instructions and API documentation, please visit the [official website](https://docs.pearl-ui.dev/).
 
 ## Contributing
 
-We welcome contributions from the community. For instructions on how to set up the repository locally, build, test, and contribute, please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
-
-## Code of Conduct
-
-We believe in fostering an open and welcoming environment. To ensure that, we have a [Code of Conduct](./CODE_OF_CONDUCT.md) that we expect all contributors to adhere to.
+Contributions from the community as encouraged. For instructions on how to set up the repository locally, build, test, and contribute, please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) guide.
 
 ## License
 
