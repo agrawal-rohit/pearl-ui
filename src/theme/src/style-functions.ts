@@ -88,6 +88,8 @@ export const createStyleFunction = ({
 
         // For color palettes with multiple shades
         if (themeKey === "palette") {
+          const isTransparent = (value as string).includes("(transparent)");
+          value = (value as string).replace("(transparent)", "");
           if (typeof value === "string" && value.match(/^[a-z]+\.\d+$/)) {
             themeTokenValue = getNestedObject(theme, [
               themeKey,
@@ -95,6 +97,7 @@ export const createStyleFunction = ({
               value.split(".")[1],
             ]);
           }
+          if (isTransparent) themeTokenValue = `${themeTokenValue}00`;
         }
 
         // Apply the value

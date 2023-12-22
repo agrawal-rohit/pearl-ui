@@ -149,7 +149,10 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
     },
     ghost: {
       pressable: {
-        backgroundColor: "transparent",
+        bgColor: {
+          light: "primary.50(transparent)",
+          dark: "primary.900(transparent)",
+        },
         _pressed: {
           bgColor: {
             light: "primary.50",
