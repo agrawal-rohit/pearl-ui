@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Screen, Center, Text, Icon } from "../../src";
+import { Platform } from "react-native";
 
 const ScreenDemo = () => {
   const [value, setValue] = useState("Before");
@@ -17,10 +18,12 @@ const ScreenDemo = () => {
         );
       }}
     >
-      <Center>
-        <Text variant="h6">Pull me down to toggle value!</Text>
-        <Icon mt="1" size="l" iconFamily="AntDesign" iconName="arrowdown" />
-      </Center>
+      {Platform.OS !== "web" && (
+        <Center>
+          <Text variant="h6">Pull me down to toggle value!</Text>
+          <Icon mt="1" size="l" iconFamily="AntDesign" iconName="arrowdown" />
+        </Center>
+      )}
 
       <Center
         width="100%"

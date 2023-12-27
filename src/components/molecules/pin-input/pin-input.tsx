@@ -57,52 +57,35 @@ const BasePinInput = React.memo(
         Array(numFields).fill("")
       );
 
+      // Use effect to handle changes in value and children props
       useEffect(() => {
+        // If value prop is provided, split it into individual characters and set it as pinValues
         if (value) {
           let paddedValue = value.split("");
+          // If the length of the value is less than numFields, pad it with empty strings
           while (paddedValue.length < numFields) {
             paddedValue.push("");
           }
           setPinValues(paddedValue);
         }
 
+        // If children prop is provided and it is an array, adjust the length of inputRefs accordingly
         if (children && isArray(children))
           inputRefs.current = inputRefs.current.slice(0, children.length);
-      }, [children, value]);
-
-      // Function to handle key press in the input fields
-      const handleOnKeyPress = (index: number, event: any) => {
-        if (!manageFocus) return;
-
-        // If the key pressed is a valid value and there is a next input field, focus it
-        if (
-          event.nativeEvent.key !== "Backspace" &&
-          inputRefs.current[index + 1] &&
-          (type !== "number" ||
-            (type === "number" && !Number.isNaN(Number(event.nativeEvent.key))))
-        ) {
-          inputRefs.current[index + 1].focus();
-        }
-
-        // If the key pressed is the Backspace and there is a previous input field, focus it
-        else if (
-          event.nativeEvent.key === "Backspace" &&
-          inputRefs.current[index - 1]
-        ) {
-          inputRefs.current[index - 1].focus();
-        }
-      };
+      }, [children, value]); // Depend on children and value props
 
       // Function to handle text changes in the input fields
       const handleOnChangeText = (index: number, value: string) => {
         // Update the value at the current index
         let newPinValues = [...pinValues];
+        // If the type is "number" and the value is not a number, return without making changes
         if (type === "number" && Number.isNaN(Number(value))) return;
         newPinValues[index] = value;
 
         // If the value becomes "", then replace the pinValues value with "" at the index
         if (value === "") newPinValues[index] = "";
 
+        // Update the state with the new pin values
         setPinValues(newPinValues);
 
         // If all input fields have values, call the onComplete function
@@ -112,6 +95,45 @@ const BasePinInput = React.memo(
 
         // If an onChangeText function is provided, call it with the current pin values
         onChangeText(newPinValues.join(""));
+
+        // If the value becomes "", and there is a previous input field, focus it
+        if (value === "" && inputRefs.current[index - 1] && manageFocus) {
+          inputRefs.current[index - 1].focus();
+        }
+
+        // If the value is a valid value and there is a next input field, focus it
+        else if (
+          value !== "" &&
+          inputRefs.current[index + 1] &&
+          manageFocus &&
+          (type !== "number" ||
+            (type === "number" && !Number.isNaN(Number(value))))
+        ) {
+          inputRefs.current[index + 1].focus();
+        }
+      };
+
+      // Function to handle key press events in the input fields
+      const handleOnKeyPress = (index: number, event: any) => {
+        // If the pressed key is "Backspace", the current field is empty, and there is a previous field, focus the previous field
+        if (
+          event.nativeEvent.key === "Backspace" &&
+          pinValues[index] === "" &&
+          inputRefs.current[index - 1] &&
+          manageFocus
+        ) {
+          inputRefs.current[index - 1].focus();
+        }
+        // If the pressed key is not "Backspace", the current field is not empty, the next field is empty, and there is a next field, focus the next field
+        else if (
+          event.nativeEvent.key !== "Backspace" &&
+          pinValues[index] !== "" &&
+          pinValues[index + 1] === "" &&
+          inputRefs.current[index + 1] &&
+          manageFocus
+        ) {
+          inputRefs.current[index + 1].focus();
+        }
       };
 
       return (
@@ -121,7 +143,7 @@ const BasePinInput = React.memo(
               <Input
                 maxLength={1}
                 key={fieldIdx}
-                keyboardType={type === "number" ? "numeric" : "default"}
+                inputMode={type === "number" ? "numeric" : "none"}
                 autoFocus={!!autoFocus && fieldIdx === 0 ? true : false}
                 {...restInputProps}
                 placeholder="O"
@@ -129,7 +151,7 @@ const BasePinInput = React.memo(
                 onChangeText={(value: string) =>
                   handleOnChangeText(fieldIdx, value)
                 }
-                onKeyPress={(e) => handleOnKeyPress(fieldIdx, e)}
+                onKeyPress={(event: any) => handleOnKeyPress(fieldIdx, event)}
                 value={pinValues[fieldIdx]}
               />
             );

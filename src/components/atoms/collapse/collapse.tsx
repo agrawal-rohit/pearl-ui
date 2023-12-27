@@ -69,7 +69,7 @@ const Collapse = React.memo(
                 transition={
                   {
                     dampingRatio: 1,
-                    duration: 100,
+                    duration: 150,
                     easing: Easing.inOut,
                     ...transition,
                     type: "spring",
@@ -85,7 +85,7 @@ const Collapse = React.memo(
                 exitTransition={
                   {
                     dampingRatio: 1,
-                    duration: 100,
+                    duration: 150,
                     easing: Easing.inOut,
                     ...exitTransition,
                     type: "spring",

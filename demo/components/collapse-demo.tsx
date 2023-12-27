@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { VStack, Box, Button, Text, Collapse } from "../../src";
+import { Platform } from "react-native";
 
 const CollapseDemo = () => {
   const [show, setShow] = useState(true);
@@ -18,8 +19,9 @@ const CollapseDemo = () => {
       <Collapse show={show}>
         <Box mb="4" p="4" bgColor="primary.500" borderRadius="m">
           <Text variant="p3" color="white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            mi, aliquet sed augue ac, ullamcorper vulputate nisi.
+            {Platform.OS === "web"
+              ? `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+              : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus mi, aliquet sed augue ac, ullamcorper vulputate nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}
           </Text>
         </Box>
       </Collapse>

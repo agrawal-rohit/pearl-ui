@@ -239,7 +239,6 @@ const Input = React.memo(
         if (value.length > 0) {
           setIsCleared(false);
         }
-
         onChangeText(value);
       };
 

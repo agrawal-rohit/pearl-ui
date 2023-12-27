@@ -221,43 +221,54 @@ const BaseVideo = React.memo(
               },
             ]}
           >
-            <PearlExpoVideo
-              {...restVideoProps}
-              {...borderRadiiStyles}
-              ref={ref}
-              visible={hasVideoLoaded}
-              onLoad={async (status) => {
-                await new Promise((resolve) =>
-                  setTimeout(resolve, sourceDelay)
-                );
-
-                if (onLoad) onLoad(status);
-
-                if (status.isLoaded)
-                  Animated.timing(intensity, {
-                    toValue: 0,
-                    duration: overlayTransitionDuration,
-                    useNativeDriver: Platform.OS === "android",
-                  }).start();
-
-                setHasVideoLoaded(true);
+            <View
+              style={{
+                width: "100%",
+                height: "100%",
+                display: !hasVideoLoaded ? "none" : undefined,
               }}
-              onLoadStart={() => {
-                if (Platform.OS === "ios") {
-                  setTimeout(() => {
-                    if (!hasVideoLoaded) {
-                      setError(true);
-                    }
-                  }, 1000);
-                }
-                if (onLoadStart) onLoadStart();
-              }}
-              onError={onErrorHandler}
-              testID={testID}
-              source={source}
-              width="100%"
-              height="100%"
-            />
+            >
+              <PearlExpoVideo
+                {...restVideoProps}
+                {...borderRadiiStyles}
+                ref={ref}
+                onLoad={async (status) => {
+                  await new Promise((resolve) =>
+                    setTimeout(resolve, sourceDelay)
+                  );
+
+                  if (onLoad) onLoad(status);
+
+                  if (Platform.OS === "web" || status.isLoaded)
+                    Animated.timing(intensity, {
+                      toValue: 0,
+                      duration: overlayTransitionDuration,
+                      useNativeDriver: Platform.OS === "android",
+                    }).start();
+
+                  setHasVideoLoaded(true);
+                }}
+                onLoadStart={() => {
+                  if (Platform.OS === "ios") {
+                    setTimeout(() => {
+                      if (!hasVideoLoaded) {
+                        setError(true);
+                      }
+                    }, 1000);
+                  }
+                  if (onLoadStart) onLoadStart();
+                }}
+                onError={onErrorHandler}
+                testID={testID}
+                source={source}
+                videoStyle={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                width="100%"
+                height="100%"
+              />
+            </View>
           </AnimatedView>
         );
       }, [
@@ -305,7 +316,7 @@ const BaseVideo = React.memo(
       }, [intensity, previewSource, borderRadiiStyles, atoms.previewImage]);
 
       const renderImageLoader = useCallback(() => {
-        if ((intensity as any)._value === 0) return null;
+        if (hasVideoLoaded) return null;
 
         if (loaderType === "progressive") {
           if (!!previewSource) {
@@ -348,8 +359,8 @@ const BaseVideo = React.memo(
                       tint === "none"
                         ? undefined
                         : tint === "light"
-                        ? "white"
-                        : "black"
+                          ? "white"
+                          : "black"
                     }
                   >
                     {renderFallback()}

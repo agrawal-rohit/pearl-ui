@@ -56,11 +56,11 @@ import ScaleFadeDemo from "./demo/components/scale-fade-demo";
 import SlideDemo from "./demo/components/slide-demo";
 import SlideFadeDemo from "./demo/components/slide-fade-demo";
 import CollapseDemo from "./demo/components/collapse-demo";
-import Stack, { HStack, VStack } from "./src/components/atoms/stack/stack";
+import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { PinInput, useResponsiveProp, useTheme } from "./src";
+import { useResponsiveProp, useTheme } from "./src";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -338,7 +338,10 @@ const Index = () => {
         >
           <HStack alignItems="center">
             {!!activeComponent && (
-              <Pressable onPress={() => setActiveComponent(undefined)}>
+              <Pressable
+                onPress={() => setActiveComponent(undefined)}
+                alignSelf="center"
+              >
                 <Icon
                   rawSize={15}
                   color={{

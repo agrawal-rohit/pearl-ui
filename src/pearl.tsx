@@ -151,8 +151,8 @@ export function pearl<
               ["Text", "Icon", "Box"].includes(config.componentName as string)
                 ? convertedProps.key
                   ? `${convertedProps.key}-${colorMode}`
-                  : `${colorMode}-${Math.random()}`
-                : convertedProps.key
+                  : `${colorMode}`
+                : undefined
             }
             ref={ref}
           >
