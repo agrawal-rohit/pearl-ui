@@ -69,6 +69,7 @@ module.exports = {
         "components/forms/Button",
         "components/forms/Icon Button",
         "components/forms/Input",
+        "components/forms/Pin Input",
         "components/forms/Textarea",
         "components/forms/CheckBox",
         "components/forms/Radio",

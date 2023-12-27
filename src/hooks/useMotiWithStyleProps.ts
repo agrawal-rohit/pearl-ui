@@ -110,6 +110,13 @@ export const useMotiWithStyleProps = (
               [finalKey]: propsWithObjectValues[key],
             };
           }, props[prop]);
+
+          if (prop === "transition" && !props[prop])
+            props[prop] = {
+              type: "spring",
+              dampingRatio: 1,
+              duration: 100,
+            };
         }
       }
     }

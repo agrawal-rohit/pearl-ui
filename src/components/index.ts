@@ -71,6 +71,10 @@ export {
 export { default as Image, ImageProps } from "./molecules/image/image";
 export { default as Input, InputProps } from "./molecules/input/input";
 export {
+  default as PinInput,
+  PinInputProps,
+} from "./molecules/pin-input/pin-input";
+export {
   default as Progress,
   ProgressProps,
 } from "./molecules/progress/progress";

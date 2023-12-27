@@ -8,14 +8,14 @@ import { BadgeAtoms } from "./badge.config";
 export type BaseBadgeProps = PressableProps;
 
 /**
- * CustomBadge is a component that renders a badge with a value.
+ * BaseBadge is a component that renders a badge with a value.
  * The value can be a number, a string, or a React element.
  * If the value is a number or a string, it will be rendered inside a Text component.
  * If the value is a React element, it will be cloned and rendered as is.
  * If the value is an array, it will be joined into a string and rendered inside a Text component.
  * If the value is undefined, nothing will be rendered.
  */
-const CustomBadge = React.memo(
+const BaseBadge = React.memo(
   React.forwardRef(
     (
       {
@@ -54,7 +54,7 @@ const CustomBadge = React.memo(
 
 /** A Badge is a small component typically used to communicate a numerical value or indicate the status of an item to the user. */
 const Badge = pearl<BaseBadgeProps, "molecule">(
-  CustomBadge,
+  BaseBadge,
   {
     componentName: "Badge",
     type: "molecule",

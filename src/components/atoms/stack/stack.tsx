@@ -3,7 +3,10 @@ import { FinalPearlTheme, ResponsiveValue } from "../../../theme/src/types";
 import { getKeys } from "../../../theme/utils/type-helpers";
 import { useStyleProps } from "../../../hooks/useStyleProps";
 import Box, { BoxProps } from "../box/box";
-import { positionStyleFunction } from "../../../theme/src/style-functions";
+import {
+  createStyleFunction,
+  positionStyleFunction,
+} from "../../../theme/src/style-functions";
 
 export type StackProps = BoxProps & {
   /**
@@ -37,6 +40,12 @@ export type ZStackProps = BoxProps & {
   reversed?: boolean;
 };
 
+const spacingStyleFunction = createStyleFunction({
+  property: "spacing",
+  styleProperty: "spacing",
+  themeKey: "spacing",
+});
+
 /**
  * Stack is a layout component that makes it easy to stack elements together and apply a space between them.
  */
@@ -47,6 +56,9 @@ const Stack = React.memo(
       ref: any
     ) => {
       const arrayChildren = React.Children.toArray(children);
+      const {
+        style: { spacing: transformedSpacingValue },
+      } = useStyleProps({ spacing }, [spacingStyleFunction]);
 
       /**
        * Renders the children of the stack.
@@ -58,44 +70,41 @@ const Stack = React.memo(
           const isLast = index === arrayChildren.length - 1;
 
           return (
-            <Box
-              key={index}
-              flexDirection={direction === "horizontal" ? "row" : "column"}
-              mr={
-                !isLast
-                  ? direction === "horizontal"
-                    ? spacing
-                    : undefined
-                  : undefined
-              }
-              mb={
-                !isLast
-                  ? direction === "vertical"
-                    ? spacing
-                    : undefined
-                  : undefined
-              }
-            >
-              {React.cloneElement(child as ReactElement)}
+            <React.Fragment key={index}>
+              {React.cloneElement(child as ReactElement, {
+                style: {
+                  ...(child as ReactElement).props.style,
+                  marginRight: !isLast
+                    ? direction === "horizontal"
+                      ? transformedSpacingValue
+                      : undefined
+                    : undefined,
+                  marginBottom: !isLast
+                    ? direction === "vertical"
+                      ? transformedSpacingValue
+                      : undefined
+                    : undefined,
+                },
+              })}
               {rest.divider &&
                 !isLast &&
                 React.cloneElement(rest.divider, {
                   orientation:
                     direction === "horizontal" ? "vertical" : "horizontal",
-                  ml: direction === "horizontal" ? spacing : undefined,
-                  mt: direction === "vertical" ? spacing : undefined,
+                  mr: direction === "horizontal" ? spacing : undefined,
+                  mb: direction === "vertical" ? spacing : undefined,
                 })}
-            </Box>
+            </React.Fragment>
           );
         });
       }, [arrayChildren, direction, spacing, rest.divider]);
 
       return (
         <Box
-          {...rest}
+          ref={ref}
           flexDirection={direction === "horizontal" ? "row" : "column"}
           flexWrap={direction === "horizontal" ? "wrap" : "nowrap"}
-          ref={ref}
+          {...rest}
         >
           {renderChildren}
         </Box>
@@ -171,8 +180,8 @@ export const ZStack = React.memo(
             zIndex: isOverridenZIndexProvided
               ? computedZIndex.style.zIndex
               : reversed
-              ? arrayChildren.length - index
-              : index,
+                ? arrayChildren.length - index
+                : index,
             ...(child as ReactElement).props.style,
           },
         });

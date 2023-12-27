@@ -11,6 +11,7 @@ import CheckBoxConfig from "../../../components/molecules/checkbox/checkbox.conf
 import IconButtonConfig from "../../../components/molecules/icon-button/icon-button.config";
 import ImageConfig from "../../../components/molecules/image/image.config";
 import InputConfig from "../../../components/molecules/input/input.config";
+import PinInputConfig from "../../../components/molecules/pin-input/pin-input.config";
 import ProgressConfig from "../../../components/molecules/progress/progress.config";
 import RadioConfig from "../../../components/molecules/radio/radio.config";
 import SwitchConfig from "../../../components/molecules/switch/switch.config";
@@ -26,6 +27,7 @@ interface Config {
   Button: typeof ButtonConfig;
   IconButton: typeof IconButtonConfig;
   Input: typeof InputConfig;
+  PinInput: typeof PinInputConfig;
   CheckBox: typeof CheckBoxConfig;
   Radio: typeof RadioConfig;
   Badge: typeof BadgeConfig;
@@ -47,6 +49,7 @@ export default {
   Button: ButtonConfig,
   IconButton: IconButtonConfig,
   Input: InputConfig,
+  PinInput: PinInputConfig,
   CheckBox: CheckBoxConfig,
   Radio: RadioConfig,
   Badge: BadgeConfig,

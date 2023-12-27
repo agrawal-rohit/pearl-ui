@@ -153,6 +153,11 @@ export const useMolecularComponentConfig = <
   if (!partForOverridenAnimationProps) {
     finalComponentProps = {
       ...finalComponentProps,
+      transition: {
+        type: "spring",
+        dampingRatio: 1,
+        duration: 100,
+      },
       ...removeUndefined(overridenAnimationProps),
     };
   }
@@ -252,6 +257,11 @@ export const useMolecularComponentConfig = <
     ) {
       currentComponentPartProps = {
         ...currentComponentPartProps,
+        transition: {
+          type: "spring",
+          dampingRatio: 1,
+          duration: 100,
+        },
         ...removeUndefined(overridenAnimationProps),
       };
     }

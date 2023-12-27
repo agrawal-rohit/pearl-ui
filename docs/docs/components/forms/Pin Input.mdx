@@ -1,0 +1,137 @@
+---
+sidebar_position: 5
+title: Pin Input
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/pin-input/pin-input.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/pin-input/pin-input.config.ts"
+  />
+</div>
+
+The `PinInput` component in Pearl UI is a specialized input component optimized for entering sequences of digits quickly. It supports various sizes, variants, color schemes, and additional features like automatic focus management and input type restrictions. By default, it renders a sequence of 4 input fields with a medium size and filled variant.
+
+## Import
+
+```jsx
+import { PinInput } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<PinInput onComplete={(pinValue) => console.log(pinValue)} />
+```
+
+### Pin Input Sizes
+
+Use the `size` prop to change the size of the pin input fields. You can set the value to the keys available in <t>PearlTheme.components.PinInput["sizes"]</t>, which are <t>"xs"</t>, <t>"s"</t>, <t>"m"</t>, and <t>"l"</t> in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/pin-input/pin-input.config.ts).
+
+```jsx
+<PinInput size="xs" />
+
+<PinInput size="s" />
+
+<PinInput size="m" />
+
+<PinInput size="l"/>
+```
+
+### Pin Input Variants
+
+The `variant` prop allows you to change the visual style of the pin input fields. The available variants are <t>"filled"</t> and <t>"outline"</t> as defined in the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/pin-input/pin-input.config.ts).
+
+```jsx
+<PinInput variant="filled" />
+
+<PinInput variant="outline" />
+```
+
+### Pin Input Color Schemes
+
+The `colorScheme` prop allows you to change the color palette of the pin input fields. The available color schemes are <t>"primary"</t>, <t>"secondary"</t>, <t>"neutral"</t>, etc as defined in the [default Pearl theme](../../overview/theming/default-theme#color-palette).
+
+```jsx
+<PinInput colorScheme="primary" />
+
+<PinInput colorScheme="secondary" />
+```
+
+### Auto Focus Management
+
+The `manageFocus` prop allows you to enable or disable automatic focus management. When enabled, focus will move automatically to the next input once the current input is filled.
+
+```jsx
+<PinInput manageFocus placeholder="Pin input with auto focus management" />
+```
+
+### Changing Input Types
+
+The `type` prop allows you to restrict the type of values the pin-input should allow. The available types are <t>"number"</t> and <t>"alphanumeric"</t>.
+
+```jsx
+<PinInput type="number" />
+
+<PinInput type="alphanumeric" />
+```
+
+### Changing Number of Input Fields
+
+The `numFields` prop allows you to specify the number of input fields in the pin input. By default, there are 4 input fields.
+
+```jsx
+<PinInput numFields={6} />
+```
+
+### Masking Input Values
+
+The `secureTextEntry` prop allows you to mask the input fields, useful for password-based pin inputs. When enabled, the input fields will display dots instead of the actual characters.
+
+```jsx
+<PinInput secureTextEntry />
+```
+
+### Overriding Styles
+
+The `PinInput` component supports a variety of style props which can be used to override the pre-defined variant style in the theme. Manual style props passed into the component have a higher precedence than the [default component configuration](https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/pin-input/pin-input.config.ts).
+
+```jsx
+// The marginTop prop adds a top margin to the pin input field
+// The backgroundColor prop overrides the default component config value of backgroundColor="neutral.200"
+<PinInput variant="filled" marginTop="3" backgroundColor="green" />
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/pin-input" />
+
+## Accessibility
+
+- `PinInput` has the `role` of `text field`.
+- When `PinInput` is disabled, it is reflected as `disabled` in screen readers.
+- `PinInput` has the default accessibility label set as the placeholder value passed into it. A custom label can be specified using the `accessibilityLabel` prop.
+
+## Component Properties
+
+### Supported Style Properties
+
+The `PinInput` component is a composition of the [Input](./Input) component, which means all [Input](./Input) props can be passed to it.
+
+### Additional Properties
+
+| Name          | Required | Type                              | Default    | Description                                                                    |
+| ------------- | -------- | --------------------------------- | ---------- | ------------------------------------------------------------------------------ |
+| `numFields`   | No       | <t>number</t>                     | `4`        | Determines the number of input fields in the pin input.                        |
+| `manageFocus` | No       | <t>boolean</t>                    | `true`     | If set to `true`, focus will move automatically to the next input once filled. |
+| `type`        | No       | <t>"alphanumeric" \| "number"</t> | `"number"` | The type of values the pin-input should allow.                                 |
+| `onComplete`  | No       | <t>(value: string) => void</t>    |            | Function called when all inputs have valid values.                             |
