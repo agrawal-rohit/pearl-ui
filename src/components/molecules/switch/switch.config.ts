@@ -31,8 +31,6 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
       },
     },
     knob: {
-      h: "100%",
-      aspectRatio: 1,
       bgColor: "neutral.50",
       borderRadius: "full",
       animate: {
@@ -52,6 +50,8 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
         h: 15,
       },
       knob: {
+        w: 9,
+        h: 9,
         _checked: {
           translateX: 9,
         },
@@ -63,6 +63,8 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
         h: 20,
       },
       knob: {
+        w: 14,
+        h: 14,
         _checked: {
           translateX: 13,
         },
@@ -74,6 +76,8 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
         h: 25,
       },
       knob: {
+        w: 19,
+        h: 19,
         _checked: {
           translateX: 17,
         },
@@ -85,6 +89,8 @@ const SwitchConfig: MolecularComponentConfig<SwitchAtoms> = {
         h: 30,
       },
       knob: {
+        w: 24,
+        h: 24,
         _checked: {
           translateX: 21,
         },

@@ -269,47 +269,15 @@ html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
   height: 10px;
   font-weight: 800;
 }
-html[data-theme="dark"] .menu__link[href*="Image"]:after,
-html[data-theme="dark"] .menu__link[href*="Avatar"]:after,
-html[data-theme="dark"] .menu__link[href*="/Button"]:after,
-html[data-theme="dark"] .menu__link[href*="/Icon Button"]:after,
-html[data-theme="dark"] .menu__link[href*="Progress"]:after,
-html[data-theme="dark"] .menu__link[href*="Video"]:after,
-html[data-theme="dark"] .menu__link[href*="Input"]:after,
-html[data-theme="dark"] .menu__link[href*="Switch"]:after,
-html[data-theme="dark"] .menu__link[href*="Textarea"]:after,
-html[data-theme="dark"] .menu__link[href*="CheckBox"]:after,
-html[data-theme="dark"] .menu__link[href*="Radio"]:after,
-html[data-theme="dark"] .menu__link[href*="Badge"]:after {
+
+html[data-theme="dark"] .menu__link[href*="Pin Input"]:after {
   background-color: #212f35;
 }
 
 /*
   Mark pages as "new" using href attribute:
 */
-.menu__link[href*="Textarea"]:before,
-.menu__link[href*="Skeleton"]:before,
-.menu__link[href*="Progress"]:before,
-.menu__link[href*="Video"]:before,
-.menu__link[href*="Fade"]:before,
-.menu__link[href*="Scale Fade"]:before,
-.menu__link[href*="Slide"]:before,
-.menu__link[href*="Slide Fade"]:before,
-.menu__link[href*="Grid"]:before,
-.menu__link[href*="Collapse"]:before,
-.menu__link[href*="Pin Input"]:before,
-.menu__link[href*="Switch"]:before,
-.menu__link[href*="responsivity"]:before,
-.menu__link[href*="animation-support"]:before,
-.menu__link[href*="useMotiWithStyleProps"]:before,
-.menu__link[href*="useDynamicStateStyle"]:before,
-.menu__link[href*="useFocusedState"]:before,
-.menu__link[href*="usePressedState"]:before,
-.menu__link[href*="useDisabledState"]:before,
-.menu__link[href*="useCheckedState"]:before,
-.menu__link[href*="/Icon Button"]:before,
-.menu__link[href*="useInvalidState"]:before,
-.menu__link[href*="useAnimationState"]:before {
+.menu__link[href*="Pin Input"]:before {
   content: "New";
   display: inline-block;
   position: absolute;
@@ -330,11 +298,7 @@ html[data-theme="dark"] .menu__link[href*="Badge"]:after {
 /*
   Mark pages as "updated" using href attribute:
 */
-.menu__link[href*="pearl"]:before,
-.menu__link[href*="/Button"]:before,
-.menu__link[href*="/style-props"]:before,
-.menu__link[href*="/style-functions"]:before,
-.menu__link[href*="extensibility"]:before {
+/* .menu__link[href*="pearl"]:before {
   content: "Updated";
   display: inline-block;
   position: absolute;
@@ -350,7 +314,7 @@ html[data-theme="dark"] .menu__link[href*="Badge"]:after {
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-}
+} */
 
 code {
   background-color: var(--code-text-bgcolor);

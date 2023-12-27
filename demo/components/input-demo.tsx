@@ -123,14 +123,24 @@ const InputDemo = () => {
             <Text variant="p4" textDecorationLine="underline">
               Focused
             </Text>
-            <Input autoFocus value={value} placeholder="Auto-focused input" />
+            <Input
+              autoFocus
+              value={value}
+              onChangeText={(val) => setValue(val)}
+              placeholder="Auto-focused input"
+            />
           </Stack>
 
           <Stack spacing="3.5">
             <Text variant="p4" textDecorationLine="underline">
               Invalid
             </Text>
-            <Input isInvalid value={value} placeholder="Invalid input" />
+            <Input
+              isInvalid
+              value={value}
+              onChangeText={(val) => setValue(val)}
+              placeholder="Invalid input"
+            />
           </Stack>
 
           <Stack spacing="3.5">

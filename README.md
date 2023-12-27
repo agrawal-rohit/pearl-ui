@@ -34,7 +34,7 @@ Pearl UI is a user-friendly UI library for React Native, offering ready-to-use c
 Pearl UI is a comprehensive UI library for React Native projects, offering a wide range of features:
 
 - **Open Source and Free** 🆓: Completely open source and free to use.
-- **Universal Compatibility** 🌐: Write once and run on both iOS and Android platforms, thanks to the power of [Expo](https://docs.expo.dev/) and [React Native](https://reactnative.dev/).
+- **Universal Compatibility** 🌐: Write once and run on iOS, Android, and Web, thanks to the power of [Expo](https://docs.expo.dev/), [React Native](https://reactnative.dev/), and [React Native for Web](https://necolas.github.io/react-native-web/).
 - **Rich Component Library** 📚: Growing library of built-in components with the flexibility to create custom components as needed.
 - **Theming Control** 🎨: Full control over the theme for a highly customizable UI.
 - **Animation Support** 🎬: Out-of-the-box support for animations using [Moti](https://moti.fyi/).

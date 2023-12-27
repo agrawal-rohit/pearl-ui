@@ -44,6 +44,7 @@ const TextareaDemo = () => {
             <Textarea
               autoFocus
               value={value}
+              onChangeText={(val) => setValue(val)}
               placeholder="Auto-focused textarea"
             />
           </Stack>
@@ -52,7 +53,12 @@ const TextareaDemo = () => {
             <Text variant="p4" textDecorationLine="underline">
               Invalid
             </Text>
-            <Textarea isInvalid value={value} placeholder="Invalid textarea" />
+            <Textarea
+              isInvalid
+              value={value}
+              onChangeText={(val) => setValue(val)}
+              placeholder="Invalid textarea"
+            />
           </Stack>
 
           <Stack spacing="3.5">
