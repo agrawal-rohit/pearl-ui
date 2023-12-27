@@ -154,13 +154,6 @@ export function pearl<
                   : `${colorMode}-${Math.random()}`
                 : convertedProps.key
             }
-            transition={
-              convertedProps.transition ?? {
-                type: "spring",
-                dampingRatio: 1,
-                duration: 100,
-              }
-            }
             ref={ref}
           >
             {children}

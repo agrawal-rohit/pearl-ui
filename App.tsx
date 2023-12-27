@@ -42,6 +42,7 @@ import PressableDemo from "./demo/components/pressable-demo";
 import ButtonDemo from "./demo/components/button-demo";
 import IconButtonDemo from "./demo/components/icon-button-demo";
 import InputDemo from "./demo/components/input-demo";
+import PinInputDemo from "./demo/components/pin-input-demo";
 import SwitchDemo from "./demo/components/switch-demo";
 import TextareaDemo from "./demo/components/textarea-demo";
 import CheckboxDemo from "./demo/components/checkbox-demo";
@@ -55,12 +56,11 @@ import ScaleFadeDemo from "./demo/components/scale-fade-demo";
 import SlideDemo from "./demo/components/slide-demo";
 import SlideFadeDemo from "./demo/components/slide-fade-demo";
 import CollapseDemo from "./demo/components/collapse-demo";
-import Stack, { HStack } from "./src/components/atoms/stack/stack";
+import Stack, { HStack, VStack } from "./src/components/atoms/stack/stack";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { useResponsiveProp, useTheme } from "./src";
-import { MotiView } from "moti";
+import { PinInput, useResponsiveProp, useTheme } from "./src";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -177,6 +177,11 @@ const componentList: {
     label: "Input",
     imageSrc: require("./demo/assets/input.png"),
     component: <InputDemo />,
+  },
+  {
+    label: "Pin Input",
+    imageSrc: require("./demo/assets/pin-input.png"),
+    component: <PinInputDemo />,
   },
   {
     label: "Switch",
@@ -319,7 +324,7 @@ const Index = () => {
 
   return (
     <Screen p="0" scrollable={false}>
-      <Stack direction="vertical" flex={1} spacing="0" pb="20">
+      <Stack direction="vertical" flex={1} spacing="0">
         <Box
           py="1.5"
           flexDirection="row"

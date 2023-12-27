@@ -297,6 +297,7 @@ html[data-theme="dark"] .menu__link[href*="Badge"]:after {
 .menu__link[href*="Slide Fade"]:before,
 .menu__link[href*="Grid"]:before,
 .menu__link[href*="Collapse"]:before,
+.menu__link[href*="Pin Input"]:before,
 .menu__link[href*="Switch"]:before,
 .menu__link[href*="responsivity"]:before,
 .menu__link[href*="animation-support"]:before,
