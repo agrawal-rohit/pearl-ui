@@ -195,13 +195,14 @@ html[data-theme="dark"] .header-twitter-link:before {
 .menu__link[href*="Divider"]:after,
 .menu__link[href*="Collapse"]:after,
 .menu__link[href*="Fade"]:after,
+.menu__link[href*="List"]:after,
 .menu__link[href*="Scale Fade"]:after,
 .menu__link[href*="Slide"]:after,
 .menu__link[href*="Slide Fade"]:after,
 .menu__link[href*="Spacer"]:after,
 .menu__link[href*="Text"]:not([href*="Textarea"]):after,
 .menu__link[href*="Screen"]:after,
-.menu__link[href*="Icon"]:after,
+.menu__link[href*="/Icon"]:after,
 .menu__link[href*="Pressable"]:after,
 .menu__link[href*="Spinner"]:after {
   content: "Atom";
@@ -229,13 +230,14 @@ html[data-theme="dark"] .menu__link[href*="Skeleton"]:after,
 html[data-theme="dark"] .menu__link[href*="Divider"]:after,
 html[data-theme="dark"] .menu__link[href*="Collapse"]:after,
 html[data-theme="dark"] .menu__link[href*="Fade"]:after,
+html[data-theme="dark"] .menu__link[href*="List"]:after,
 html[data-theme="dark"] .menu__link[href*="Scale Fade"]:after,
 html[data-theme="dark"] .menu__link[href*="Slide"]:after,
 html[data-theme="dark"] .menu__link[href*="Slide Fade"]:after,
 html[data-theme="dark"] .menu__link[href*="Spacer"]:after,
 html[data-theme="dark"] .menu__link[href*="Text"]:not([href*="Textarea"]):after,
 html[data-theme="dark"] .menu__link[href*="Screen"]:after,
-html[data-theme="dark"] .menu__link[href*="Icon"]:after,
+html[data-theme="dark"] .menu__link[href*="/Icon"]:after,
 html[data-theme="dark"] .menu__link[href*="Pressable"]:after,
 html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
   background-color: #402636;
@@ -270,13 +272,26 @@ html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
   font-weight: 800;
 }
 
-html[data-theme="dark"] .menu__link[href*="Pin Input"]:after {
+html[data-theme="dark"] .menu__link[href*="Pin Input"]:after,
+html[data-theme="dark"] .menu__link[href*="Image"]:after,
+html[data-theme="dark"] .menu__link[href*="Avatar"]:after,
+html[data-theme="dark"] .menu__link[href*="/Button"]:after,
+html[data-theme="dark"] .menu__link[href*="/Icon Button"]:after,
+html[data-theme="dark"] .menu__link[href*="Progress"]:after,
+html[data-theme="dark"] .menu__link[href*="Video"]:after,
+html[data-theme="dark"] .menu__link[href*="Input"]:after,
+html[data-theme="dark"] .menu__link[href*="Switch"]:after,
+html[data-theme="dark"] .menu__link[href*="Textarea"]:after,
+html[data-theme="dark"] .menu__link[href*="CheckBox"]:after,
+html[data-theme="dark"] .menu__link[href*="Radio"]:after,
+html[data-theme="dark"] .menu__link[href*="Badge"]:after {
   background-color: #212f35;
 }
 
 /*
   Mark pages as "new" using href attribute:
 */
+.menu__link[href*="List"]:before,
 .menu__link[href*="Pin Input"]:before,
 .menu__link[href*="useHoveredState"]:before {
   content: "New";

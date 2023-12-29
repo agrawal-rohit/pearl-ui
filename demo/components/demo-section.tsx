@@ -17,14 +17,24 @@ const DemoSection: React.FC<DemoSectionProps> = ({
       borderRadius="m"
       bgColor={{ light: "white", dark: "neutral.900" }}
       borderColor={{ light: "neutral.300", dark: "neutral.600" }}
+      transition={{
+        type: "spring",
+        dampingRatio: 1,
+        duration: 100,
+      }}
       {...props}
     >
       <Box
         px="5"
         py="3"
-        bgColor={{ light: "neutral.100", dark: "neutral.700" }}
         borderBottomWidth={1}
+        bgColor={{ light: "neutral.100", dark: "neutral.700" }}
         borderColor={{ light: "neutral.300", dark: "neutral.600" }}
+        transition={{
+          type: "spring",
+          dampingRatio: 1,
+          duration: 100,
+        }}
       >
         <Text variant="h6" fontWeight="500">
           {label}

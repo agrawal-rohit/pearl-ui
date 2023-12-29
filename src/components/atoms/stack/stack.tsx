@@ -25,6 +25,10 @@ export type StackProps = BoxProps & {
   divider?: React.ReactElement;
 };
 
+export type HStackProps = Omit<StackProps, "direction">;
+
+export type VStackProps = Omit<StackProps, "direction">;
+
 export type ZStackProps = BoxProps & {
   /**
    * The spacing between the elements
@@ -117,30 +121,26 @@ const Stack = React.memo(
  * HStack is a layout component that stacks elements horizontally and apply a space between them.
  */
 export const HStack = React.memo(
-  React.forwardRef(
-    ({ children, ...rest }: Omit<StackProps, "direction">, ref) => {
-      return (
-        <Stack {...rest} direction="horizontal" ref={ref}>
-          {children}
-        </Stack>
-      );
-    }
-  )
+  React.forwardRef(({ children, ...rest }: HStackProps, ref) => {
+    return (
+      <Stack {...rest} direction="horizontal" ref={ref}>
+        {children}
+      </Stack>
+    );
+  })
 );
 
 /**
  * VStack is a layout component that stacks elements vertically and apply a space between them.
  */
 export const VStack = React.memo(
-  React.forwardRef(
-    ({ children, ...rest }: Omit<StackProps, "direction">, ref) => {
-      return (
-        <Stack {...rest} direction="vertical" ref={ref}>
-          {children}
-        </Stack>
-      );
-    }
-  )
+  React.forwardRef(({ children, ...rest }: VStackProps, ref) => {
+    return (
+      <Stack {...rest} direction="vertical" ref={ref}>
+        {children}
+      </Stack>
+    );
+  })
 );
 
 /**
@@ -149,12 +149,7 @@ export const VStack = React.memo(
 export const ZStack = React.memo(
   React.forwardRef(
     (
-      {
-        children,
-        reversed = false,
-        spacing = "2",
-        ...rest
-      }: Omit<ZStackProps, "direction">,
+      { children, reversed = false, spacing = "2", ...rest }: ZStackProps,
       ref: any
     ) => {
       const arrayChildren = React.Children.toArray(children);

@@ -3,7 +3,6 @@ import Box, { BoxProps } from "../box/box";
 import {
   FinalPearlTheme,
   ResponsiveValue,
-  boxStyleFunctions,
   spacingStyleFunction,
 } from "../../../theme";
 import { useStyleProps } from "../../../hooks";

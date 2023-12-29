@@ -31,7 +31,7 @@ import { boxStyleFunctions } from "pearl-ui";
 
 ### Text Style Functions
 
-These are the style functions used to construct the [Text](../../components/typography/Text) component. The collection includes the following style functions:
+These are the style functions used to construct the [Text](../../components/data-display/Text) component. The collection includes the following style functions:
 
 - [Color](#color)
 - [Background Color](#background-color)

@@ -1,9 +1,9 @@
 import { MolecularComponentConfig } from "../../../theme/src/types";
-import { StackProps } from "../../atoms/stack/stack";
+import { HStackProps } from "../../atoms/stack/stack";
 import { BasePinInputProps } from "./pin-input";
 
 export type PinInputAtoms = {
-  container: StackProps;
+  container: HStackProps;
   input: BasePinInputProps;
 };
 

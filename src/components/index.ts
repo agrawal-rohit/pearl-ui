@@ -14,6 +14,12 @@ export {
   default as ScaleFade,
   ScaleFadeProps,
 } from "./atoms/scale-fade/scale-fade";
+export {
+  default as List,
+  OrderedList,
+  UnorderedList,
+  ListProps,
+} from "./atoms/list/list";
 export { default as Screen, ScreenProps } from "./atoms/screen/screen";
 export { default as Skeleton, SkeletonProps } from "./atoms/skeleton/skeleton";
 export {
@@ -36,6 +42,8 @@ export {
   HStack,
   VStack,
   ZStack,
+  HStackProps,
+  VStackProps,
   StackProps,
 } from "./atoms/stack/stack";
 export { default as Text, TextProps } from "./atoms/text/text";

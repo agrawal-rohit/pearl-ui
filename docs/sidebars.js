@@ -58,8 +58,8 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Typography",
-      items: ["components/typography/Text"],
+      label: "Data Display",
+      items: ["components/data-display/Text", "components/data-display/List"],
     },
     {
       type: "category",

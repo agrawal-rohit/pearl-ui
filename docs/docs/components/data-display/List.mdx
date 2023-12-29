@@ -1,0 +1,105 @@
+---
+sidebar_position: 2
+title: List
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/atoms/list/list.tsx"
+  />
+</div>
+
+The `List` component is a layout component that arranges its children into a list. Each child is given an equal amount of space. An optional icon can be displayed next to each child.
+
+## Import
+
+Pearl UI provides three list-related components for different use cases:
+
+1. `List`: This is a layout component that arranges its children into a list. Each child is given an equal amount of space. An optional icon can be displayed next to each child.
+2. `OrderedList`: This is a component that arranges its children into a numbered list.
+3. `UnorderedList`: This is a component that arranges its children into a bulleted list.
+
+```jsx
+import { List, OrderedList, UnorderedList } from "pearl-ui";
+```
+
+## Usage
+
+The `List` component can be used to display any list within your application. Here's an example:
+
+```jsx
+<List>
+  <Text>Item 1</Text>
+  <Text>Item 2</Text>
+  <Text>Item 3</Text>
+</List>
+```
+
+### List with Icons
+
+The `List` component comes with a `renderIcon` prop that allows you to display an icon next to each child. You can pass a function that returns a React element to `renderIcon`. The function receives the index of the child as an argument.
+
+```jsx
+<List
+  renderIcon={() => (
+    <Icon
+      mt="0.75"
+      size="xs"
+      iconName="star"
+      iconFamily="AntDesign"
+      color="primary.500"
+    />
+  )}
+>
+  <Text variant="p3">First Item</Text>
+  <Text variant="p3">Second Item</Text>
+  <Text variant="p3">Third Item</Text>
+  <Text variant="p3">Fourth Item</Text>
+  <Text variant="p3">Fifth Item</Text>
+</List>
+```
+
+### Ordered List
+
+The `OrderedList` component can be used to display a numbered list within your application. Here's an example:
+
+```jsx
+<OrderedList>
+  <Text>Item 1</Text>
+  <Text>Item 2</Text>
+  <Text>Item 3</Text>
+</OrderedList>
+```
+
+### Unordered List
+
+The `UnorderedList` component can be used to display a bulleted list within your application. Here's an example:
+
+```jsx
+<UnorderedList>
+  <Text>Item 1</Text>
+  <Text>Item 2</Text>
+  <Text>Item 3</Text>
+</UnorderedList>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/list" />
+
+## Component Properties
+
+### Supported Style Properties
+
+The `List` component is built upon the [Stack](./Stack) component, and as such, it inherits all the properties related to [Stack](./Stack).
+
+### Additional Properties
+
+| Name         | Required | Type                                         | Default | Description                                                                                                                                       |
+| ------------ | -------- | -------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `renderIcon` | No       | <t>(index: number) => React.ReactElement</t> |         | Function that returns a React element to be displayed as an icon next to each child. The function receives the index of the child as an argument. |
