@@ -43,6 +43,7 @@ import ButtonDemo from "./demo/components/button-demo";
 import IconButtonDemo from "./demo/components/icon-button-demo";
 import InputDemo from "./demo/components/input-demo";
 import PinInputDemo from "./demo/components/pin-input-demo";
+import ListDemo from "./demo/components/list-demo";
 import SwitchDemo from "./demo/components/switch-demo";
 import TextareaDemo from "./demo/components/textarea-demo";
 import CheckboxDemo from "./demo/components/checkbox-demo";
@@ -137,6 +138,11 @@ const componentList: {
     label: "Text",
     imageSrc: require("./demo/assets/text.png"),
     component: <TextDemo />,
+  },
+  {
+    label: "List",
+    imageSrc: require("./demo/assets/list.png"),
+    component: <ListDemo />,
   },
   {
     label: "Icon",

@@ -50,6 +50,8 @@ const BasePinInput = React.memo(
         type = "number",
         onChangeText = () => {},
         onComplete = () => {},
+        spacing,
+        divider,
         ...restInputProps
       } = atoms.input;
       const inputRefs = useRef<any[]>([]);
@@ -137,7 +139,12 @@ const BasePinInput = React.memo(
       };
 
       return (
-        <HStack {...atoms.container} ref={ref}>
+        <HStack
+          ref={ref}
+          spacing={spacing}
+          divider={divider}
+          {...atoms.container}
+        >
           {[...Array(numFields).keys()].map((fieldIdx) => {
             return (
               <Input
