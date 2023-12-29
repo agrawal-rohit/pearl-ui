@@ -19,6 +19,9 @@ const PressableDemo = () => {
           w="100%"
           borderRadius="m"
           backgroundColor="primary.500"
+          _hovered={{
+            opacity: 0.85,
+          }}
           _pressed={{
             opacity: 0.7,
           }}
@@ -36,6 +39,9 @@ const PressableDemo = () => {
           w="100%"
           borderRadius="m"
           backgroundColor="secondary.500"
+          _hovered={{
+            opacity: 0.85,
+          }}
           _pressed={{
             opacity: 0.7,
           }}

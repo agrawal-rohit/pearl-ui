@@ -26,6 +26,7 @@ Here's an example of how you can use `usePressedState` to manage a pressed state
 ```js
 import { usePressedState } from "pearl-ui";
 import { useState } from "react";
+import { Button as RNButton } from "react-native";
 
 const Button = ({ isPressed, ...props }) => {
   // Use the hook to transform the props based on the pressed state
@@ -38,7 +39,7 @@ const Button = ({ isPressed, ...props }) => {
   );
 
   // Render the button with the transformed props
-  return <button {...propsWithPressedStyles} />;
+  return <RNButton {...propsWithPressedStyles} />;
 };
 
 const App = () => {

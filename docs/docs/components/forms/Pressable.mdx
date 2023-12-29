@@ -48,6 +48,7 @@ The `Pressable` component allows you to customize the appearance of the componen
     console.log("I was pressed!");
   }}
   backgroundColor="primary.500"
+  _hovered={{ backgroundColor: "primary.700" }}
   _pressed={{ backgroundColor: "primary.800" }}
 >
   <Text>Press me!</Text>
@@ -103,4 +104,5 @@ import Snack from "../../../src/components/ExpoSnack";
 | `hitSlop`        | No       | <t>[Rect](https://reactnative.dev/docs/rect) \| number</t>                              |         | Sets additional distance outside of element in which a press can be detected.                                                   |
 | `isDisabled`     | No       | <t>boolean</t>                                                                          | `false` | If true, the press behavior is disabled.                                                                                        |
 | `_pressed`       | No       | <t>object</t>                                                                           | `{}`    | Style properties that are applied when the component is in a pressed state.                                                     |
+| `_hovered_`      | No       | <t>object</t>                                                                           | `{}`    | Style properties that are applied when the component is in a hovered state.                                                     |
 | `_disabled`      | No       | <t>object</t>                                                                           | `{}`    | Style properties that are applied when the component is in a disabled state.                                                    |

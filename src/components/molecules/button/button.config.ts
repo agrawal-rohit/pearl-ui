@@ -112,6 +112,9 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         borderWidth: 1,
         borderColor: "primary.500",
         backgroundColor: "primary.500",
+        _hovered: {
+          bgColor: "primary.400",
+        },
         _pressed: {
           bgColor: "primary.400",
         },
@@ -132,6 +135,12 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         },
         borderWidth: 1,
         borderColor: "primary.500",
+        _hovered: {
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
+        },
         _pressed: {
           bgColor: {
             light: "primary.50",
@@ -153,6 +162,12 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
           light: "primary.50(transparent)",
           dark: "primary.900(transparent)",
         },
+        _hovered: {
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
+        },
         _pressed: {
           bgColor: {
             light: "primary.50",
@@ -173,6 +188,7 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         px: "0",
         py: "0",
         backgroundColor: "transparent",
+        _hovered: { opacity: 0.85 },
         _pressed: { opacity: 0.7 },
       },
       text: { color: "primary.500", textDecorationLine: "underline" },

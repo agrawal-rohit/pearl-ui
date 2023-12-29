@@ -10,6 +10,7 @@ import { useStyleProps } from "../../../hooks/useStyleProps";
 import { useMotiWithStyleProps } from "../../../hooks/useMotiWithStyleProps";
 import { MotiPressable } from "./moti-pressable";
 import _ from "lodash";
+import { useHoveredState } from "../../../hooks/state/useHoveredState";
 
 // Define the properties for the BasePressable component
 export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
@@ -41,7 +42,7 @@ export type PressableProps = Omit<BoxProps, keyof MotiPressableProps> &
     | "exitTransition"
     | "animateInitialState"
   > & { testID?: RNPressableProps["testID"] } & StateProps<
-    "_pressed" | "_disabled"
+    "_pressed" | "_hovered" | "_disabled"
   > & {
     /**
      * Duration (in milliseconds) to wait after press down before calling onPressIn.
@@ -84,6 +85,8 @@ const Pressable = React.memo(
         accessibilityState = undefined,
         onPress = undefined,
         onPressIn = undefined,
+        onHoverIn = undefined,
+        onHoverOut = undefined,
         onPressOut = undefined,
         onLongPress = undefined,
         ...props
@@ -94,6 +97,13 @@ const Pressable = React.memo(
       props = useMotiWithStyleProps(props, boxStyleFunctions);
 
       // Use State for dynamic styles
+      const { setHovered, propsWithHoveredStyles } = useHoveredState(
+        props,
+        boxStyleFunctions
+      );
+      // Update props with hovered styles
+      props = propsWithHoveredStyles;
+
       const { setPressed, propsWithPressedStyles } = usePressedState(
         props,
         boxStyleFunctions
@@ -129,6 +139,17 @@ const Pressable = React.memo(
         if (onPressOut) onPressOut();
       };
 
+      // Methods to handle local hovered state
+      const onHoverInHandler = () => {
+        setHovered(true);
+        if (onHoverIn) onHoverIn();
+      };
+
+      const onHoverOutHandler = () => {
+        setHovered(false);
+        if (onHoverOut) onHoverOut();
+      };
+
       return (
         <MotiPressable
           ref={ref}
@@ -136,6 +157,8 @@ const Pressable = React.memo(
           onPress={!isDisabled ? onPress : undefined}
           onPressIn={!isDisabled ? onPressInHandler : undefined}
           onPressOut={!isDisabled ? onPressOutHandler : undefined}
+          onHoverIn={!isDisabled ? onHoverInHandler : undefined}
+          onHoverOut={!isDisabled ? onHoverOutHandler : undefined}
           onLongPress={!isDisabled ? onLongPress : undefined}
           disabled={isDisabled}
           transition={{

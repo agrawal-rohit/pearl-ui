@@ -129,6 +129,7 @@ module.exports = {
         "utils/hooks/useFocusedState",
         "utils/hooks/useInvalidState",
         "utils/hooks/usePressedState",
+        "utils/hooks/useHoveredState",
         "utils/hooks/pearl",
       ],
     },
