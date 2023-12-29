@@ -84,6 +84,9 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         borderWidth: 1,
         borderColor: "primary.500",
         backgroundColor: "primary.500",
+        _hovered: {
+          bgColor: "primary.400",
+        },
         _pressed: {
           bgColor: "primary.400",
         },
@@ -103,6 +106,12 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         },
         borderWidth: 1,
         borderColor: "primary.500",
+        _hovered: {
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
+        },
         _pressed: {
           bgColor: {
             light: "primary.50",
@@ -120,6 +129,12 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
     ghost: {
       pressable: {
         backgroundColor: "transparent",
+        _hovered: {
+          bgColor: {
+            light: "primary.50",
+            dark: "primary.900",
+          },
+        },
         _pressed: {
           bgColor: {
             light: "primary.50",

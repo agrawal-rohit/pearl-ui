@@ -1,0 +1,79 @@
+---
+sidebar_position: 5
+title: useHoveredState
+---
+
+:::info
+Please note that this hook is primarily targeted for web applications as the hover functionality does not exist on mobile platforms.
+:::
+
+The `useHoveredState` hook is a powerful utility in Pearl UI that not only manages a hovered state but also transforms the `_hovered` props into appropriate styles. This hook is instrumental in creating dynamic, responsive components that react to hover events with custom styles.
+
+## Import
+
+```js
+import { useHoveredState } from "pearl-ui";
+```
+
+## Return value
+
+The `useHoveredState` hook returns an object with three properties:
+
+- `hovered`: A boolean representing the current hovered state. This is a local state which is useful in case the `parentStateValue` is not provided.
+- `setHovered`: A function that can be used to set the `hovered` state. This function updates the local state.
+- `propsWithHoveredStyles`: The props object of the component with updated styles according to the current 'hovered' state. This is achieved by using the `useDynamicStateStyle` hook internally, which manages a dynamic state and composes extra styling while a component is in a certain state.
+
+## Usage
+
+Here's an example of how you can use `useHoveredState` to manage a hovered state and compose extra styling while a button is hovered:
+
+```js
+import { useHoveredState } from "pearl-ui";
+import { useState } from "react";
+import { Button as RNButton } from "react-native";
+
+const Button = ({ isHovered, ...props }) => {
+  // Use the hook to transform the props based on the hovered state
+  const { hovered, setHovered, propsWithHoveredStyles } = useHoveredState(
+    props,
+    allStyleFunctions,
+    "basic",
+    false,
+    isHovered
+  );
+
+  // Render the button with the transformed props
+  return <RNButton {...propsWithHoveredStyles} />;
+};
+
+const App = () => {
+  // Use a state variable to manage the hovered state
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Render the Button and a toggle button to change the hovered state
+  return (
+    <div>
+      <Button
+        isHovered={isHovered}
+        // Specify the styling of the component when the isHovered value is true
+        _hovered={{ backgroundColor: "blue", color: "white" }}
+      />
+      <button onClick={() => setIsHovered(!isHovered)}>
+        Toggle Hovered State
+      </button>
+    </div>
+  );
+};
+```
+
+In the provided example, the `useHoveredState` hook is utilized within a `Button` component. The purpose of this hook is to dynamically alter the button's background and text colors in response to changes in the `isHovered` prop. Specifically, when `isHovered` is set to true, the button's background color transitions to blue, and the text color changes to white.
+
+## Parameters
+
+| Name                  | Required | Type                                                         | Default                                                            | Description                                                                       |
+| --------------------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `props`               | Yes      | <t>object</t>                                                |                                                                    | The props of the component.                                                       |
+| `styleFunctions`      | No       | <t>Array of [Style Functions](../others/style-functions)</t> | [boxStyleFunctions](../others/style-functions#box-style-functions) | The style functions to use.                                                       |
+| `activeComponentType` | No       | <t>"basic" \|"atom" \|"molecule"</t>                         | `"basic"`                                                          | The active component type.                                                        |
+| `animateable`         | No       | <t>boolean</t>                                               | `true`                                                             | Whether the component is animateable.                                             |
+| `parentStateValue`    | No       | <t>boolean</t>                                               | `undefined`                                                        | A override value to control the 'hovered' state instead of the local state value. |

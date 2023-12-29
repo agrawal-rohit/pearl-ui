@@ -20,6 +20,10 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
       borderColor={{ light: "neutral.300", dark: "neutral.600" }}
       bgColor={{ light: "white", dark: "neutral.700" }}
       boxShadow="none"
+      _hovered={{
+        borderColor: "primary.500",
+        boxShadow: "s",
+      }}
       _pressed={{
         borderColor: "primary.500",
         boxShadow: "s",

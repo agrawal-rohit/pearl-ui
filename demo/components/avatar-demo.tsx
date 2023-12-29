@@ -36,6 +36,7 @@ const AvatarWithEdit = withBadge<AvatarProps>(
       duration: 100,
     },
     offset: 0,
+    _hovered: { backgroundColor: "primary.400" },
     _pressed: { backgroundColor: "primary.400" },
   }
 )(Avatar);

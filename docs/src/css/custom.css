@@ -277,7 +277,8 @@ html[data-theme="dark"] .menu__link[href*="Pin Input"]:after {
 /*
   Mark pages as "new" using href attribute:
 */
-.menu__link[href*="Pin Input"]:before {
+.menu__link[href*="Pin Input"]:before,
+.menu__link[href*="useHoveredState"]:before {
   content: "New";
   display: inline-block;
   position: absolute;
