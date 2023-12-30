@@ -59,7 +59,11 @@ module.exports = {
     {
       type: "category",
       label: "Data Display",
-      items: ["components/data-display/Text", "components/data-display/List"],
+      items: [
+        "components/data-display/Text",
+        "components/data-display/List",
+        "components/data-display/Accordion",
+      ],
     },
     {
       type: "category",

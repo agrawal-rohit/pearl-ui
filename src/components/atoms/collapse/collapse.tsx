@@ -3,8 +3,12 @@ import { ViewStyle } from "react-native";
 import Box, { BoxProps } from "../box/box";
 import { AnimatePresence, MotiView } from "moti";
 import { MotiWithPearlStyleProps } from "../../../theme/src/types";
-import { BoxStyleProps } from "../../../theme/src/style-functions";
+import {
+  BoxStyleProps,
+  boxStyleFunctions,
+} from "../../../theme/src/style-functions";
 import { Easing } from "react-native-reanimated";
+import { useStyleProps } from "../../../hooks";
 
 export type CollapseProps = BoxProps & {
   /** Whether to show the component */
@@ -44,7 +48,8 @@ const Collapse = React.memo(
       }: CollapseProps,
       ref: any
     ) => {
-      const endingHeightRef = useRef<number | string>(endingHeight);
+      const actualHeightRef = useRef<number | string>(endingHeight);
+      const computedStyles = useStyleProps(rest, boxStyleFunctions);
 
       return (
         <AnimatePresence>
@@ -52,7 +57,7 @@ const Collapse = React.memo(
             <React.Fragment>
               <MotiView
                 ref={ref}
-                {...rest}
+                {...computedStyles}
                 from={{
                   ...(animateOpacity && { opacity: 0 }),
                   height: 0,
@@ -60,10 +65,10 @@ const Collapse = React.memo(
                 animate={{
                   ...(animateOpacity && { opacity: 1 }),
                   height: show
-                    ? typeof endingHeightRef.current === "string" &&
-                      endingHeightRef.current.includes("auto")
+                    ? typeof actualHeightRef.current === "string" &&
+                      actualHeightRef.current.includes("auto")
                       ? "auto"
-                      : endingHeightRef.current
+                      : actualHeightRef.current
                     : startingHeight,
                 }}
                 transition={
@@ -98,11 +103,13 @@ const Collapse = React.memo(
                 <Box
                   onLayout={({ nativeEvent }) => {
                     if (
-                      typeof endingHeightRef.current === "string" ||
-                      nativeEvent.layout.height > endingHeightRef.current
+                      typeof actualHeightRef.current === "string" ||
+                      nativeEvent.layout.height > actualHeightRef.current
                     )
-                      endingHeightRef.current = Math.ceil(
-                        nativeEvent.layout.height
+                      actualHeightRef.current = Math.ceil(
+                        nativeEvent.layout.height +
+                          (computedStyles.style.paddingTop || 0) +
+                          (computedStyles.style.paddingBottom || 0)
                       );
                   }}
                 >

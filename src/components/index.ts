@@ -97,3 +97,13 @@ export {
   TextareaProps,
 } from "./molecules/textarea/textarea";
 export { default as Video, VideoProps } from "./molecules/video/video";
+export {
+  default as Accordion,
+  AccordionProps,
+  AccordionItemProps,
+  AccordionButtonProps,
+  AccordionPanelProps,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+} from "./molecules/accordion/accordion";

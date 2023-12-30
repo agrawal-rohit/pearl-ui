@@ -14,7 +14,7 @@ import { useWindowDimensions } from "react-native";
 export const useStyleProps = (
   props: Record<string, any>,
   styleFunctions: StyleFunctionContainer[]
-) => {
+): { style: Record<string, any> } => {
   const { theme, colorMode } = useTheme();
   const dimensions = useWindowDimensions();
 

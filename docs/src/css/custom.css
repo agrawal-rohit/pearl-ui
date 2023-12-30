@@ -250,6 +250,7 @@ html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
 .menu__link[href*="Progress"]:after,
 .menu__link[href*="Video"]:after,
 .menu__link[href*="Input"]:after,
+.menu__link[href*="Accordion"]:after,
 .menu__link[href*="Switch"]:after,
 .menu__link[href*="Textarea"]:after,
 .menu__link[href*="CheckBox"]:after,
@@ -273,6 +274,7 @@ html[data-theme="dark"] .menu__link[href*="Spinner"]:after {
 }
 
 html[data-theme="dark"] .menu__link[href*="Pin Input"]:after,
+html[data-theme="dark"] .menu__link[href*="Accordion"]:after,
 html[data-theme="dark"] .menu__link[href*="Image"]:after,
 html[data-theme="dark"] .menu__link[href*="Avatar"]:after,
 html[data-theme="dark"] .menu__link[href*="/Button"]:after,
@@ -293,6 +295,7 @@ html[data-theme="dark"] .menu__link[href*="Badge"]:after {
 */
 .menu__link[href*="List"]:before,
 .menu__link[href*="Pin Input"]:before,
+.menu__link[href*="Accordion"]:before,
 .menu__link[href*="useHoveredState"]:before {
   content: "New";
   display: inline-block;

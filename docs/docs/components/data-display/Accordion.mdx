@@ -1,0 +1,290 @@
+---
+sidebar_position: 3
+title: Accordion
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/accordion/accordion.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/accordion/accordion.config.ts"
+  />
+</div>
+
+The `Accordion` component in Pearl UI is a versatile and customizable element used to display collapsible content panels for presenting information in a limited amount of space.
+
+## Import
+
+Pearl UI provides four components related to the Accordion functionality:
+
+1. `Accordion`: This is the parent component that acts as a container for multiple `AccordionItem` components.
+2. `AccordionItem`: This component represents a single collapsible content panel within the `Accordion`.
+3. `AccordionButton`: This component controls the visibility of its corresponding `AccordionPanel`.
+4. `AccordionPanel`: This component contains the content that is shown or hidden when the `AccordionButton` is clicked.
+
+```jsx
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+} from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Accordion>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 2</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the second section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+### Accordion with multiple items expanded
+
+The `allowMultiple` prop allows you to have multiple accordion items expanded at once.
+
+```jsx
+<Accordion allowMultiple>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 2</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the second section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+### Accordion with toggle
+
+The `allowToggle` prop allows any expanded accordion item to be collapsed again.
+
+```jsx
+<Accordion allowToggle>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 2</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the second section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+### Accordion with initial index
+
+The `defaultIndices` prop allows you to specify the initial index(es) of the expanded accordion item.
+
+```jsx
+<Accordion defaultIndices={[1]}>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 2</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the second section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+### Accordion with reduced motion
+
+The `reduceMotion` prop allows you to disable height animation and transitions.
+
+```jsx
+<Accordion reduceMotion>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 2</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the second section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+### Accessing the internal state
+
+If you need access to the internal state of each accordion item, you can use a render prop. It provides 2 internal state props: isExpanded and isDisabled.
+
+<Accordion>
+  <AccordionItem>
+    <AccordionButton>
+      <Text>Accordion Section 1</Text>
+    </AccordionButton>
+    <AccordionPanel>
+      <Text>
+        This is the content for the first section of the accordion. It can be
+        replaced with any content you like.
+      </Text>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    {(isExpanded) => (
+      <>
+        <AccordionButton
+          bgColor={isExpanded ? "neutral.200" : undefined}
+        >
+          <Text>Accordion Section 2</Text>
+        </AccordionButton>
+        <AccordionPanel>
+          <Text>
+            This is the content for the second section of the accordion.
+            It can be replaced with any content you like.
+          </Text>
+        </AccordionPanel>
+      </>
+    )}
+  </AccordionItem>
+</Accordion>
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/accordion" />
+
+## Accessibility
+
+- `AccordionButton` has the `role` of `button`.
+- When the `AccordionButton` is pressed, it controls the visibility of the `AccordionPanel`.
+
+## Accordion Component Properties
+
+### Supported Style Properties
+
+The `Accordion` component is a composition of the [Stack](../layout/Stack) component. Therefore, all properties related to the [Stack](../layout/Stack) component can be passed to the `Accordion` component, in addition to the properties listed below.
+
+### Additional Properties
+
+| Property Name    | Required | Data Type       | Default | Description                                                  |
+| ---------------- | -------- | --------------- | ------- | ------------------------------------------------------------ |
+| `allowMultiple`  | No       | <t>boolean</t>  | `false` | If true, multiple accordion items can be expanded at once.   |
+| `allowToggle`    | No       | <t>boolean</t>  | `false` | If true, any expanded accordion item can be collapsed again. |
+| `defaultIndices` | No       | <t>number[]</t> | `[]`    | The initial index(es) of the expanded accordion item.        |
+| `reduceMotion`   | No       | <t>boolean</t>  | `false` | If true, height animation and transitions will be disabled.  |
+
+## AccordionItem Component Properties
+
+### Supported Style Properties
+
+The `AccordionItem` component is a composition of the [Stack](../layout/Stack) component. Therefore, all properties related to the [Stack](../layout/Stack) component can be passed to the `AccordionItem` component, in addition to the properties listed below.
+
+### Additional Properties
+
+| Property Name | Required | Data Type                                                | Default | Description                                                                                                                                            |
+| ------------- | -------- | -------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `index`       | No       | <t>number</t>                                            | `0`     | The index of the accordion item.                                                                                                                       |
+| `children`    | No       | <t>ReactNode or ((isExpanded: boolean) => ReactNode)</t> | `null`  | The children of the accordion item, which can be a function. If it is a function, it receives the expanded state of the accordion item as an argument. |
+
+## AccordionButton Component Properties
+
+### Supported Style Properties
+
+The `AccordionButton` component is a composition of the [Pressable](../forms/Pressable) component. Therefore, all properties related to the [Pressable](../forms/Pressable) component can be passed to the `AccordionButton` component, in addition to the properties listed below.
+
+### Additional Properties
+
+| Property Name | Required | Data Type                      | Default | Description                                                                                                               |
+| ------------- | -------- | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `icon`        | No       | <t>React.ReactElement</t>      | `null`  | Icon to display on the right side of the accordion button.                                                                |
+| `onPress`     | No       | <t>(index: number) => void</t> | `null`  | A function that is called when the accordion item is pressed. It receives the index of the accordion item as an argument. |
+
+## AccordionPanel Component Properties
+
+### Supported Style Properties
+
+The `AccordionPanel` component is a composition of the [Collapse](./Collapse) component. Therefore, all properties related to the [Collapse](./Collapse) component can be passed to the `AccordionPanel` component, in addition to the properties listed below.

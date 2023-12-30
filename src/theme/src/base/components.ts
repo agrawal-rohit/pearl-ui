@@ -4,6 +4,7 @@ import ScreenConfig from "../../../components/atoms/screen/screen.config";
 import SkeletonConfig from "../../../components/atoms/skeleton/skeleton.config";
 import SpinnerConfig from "../../../components/atoms/spinner/spinner.config";
 import TextConfig from "../../../components/atoms/text/text.config";
+import AccordionConfig from "../../../components/molecules/accordion/accordion.config";
 import AvatarConfig from "../../../components/molecules/avatar/avatar.config";
 import BadgeConfig from "../../../components/molecules/badge/badge.config";
 import ButtonConfig from "../../../components/molecules/button/button.config";
@@ -34,6 +35,7 @@ interface Config {
   Divider: typeof DividerConfig;
   Switch: typeof SwitchConfig;
   Image: typeof ImageConfig;
+  Accordion: typeof AccordionConfig;
   Video: typeof VideoConfig;
   Avatar: typeof AvatarConfig;
   Progress: typeof ProgressConfig;
@@ -56,6 +58,7 @@ export default {
   Divider: DividerConfig,
   Switch: SwitchConfig,
   Image: ImageConfig,
+  Accordion: AccordionConfig,
   Video: VideoConfig,
   Avatar: AvatarConfig,
   Progress: ProgressConfig,
