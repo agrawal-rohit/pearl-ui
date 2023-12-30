@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   useFonts,
   Poppins_300Light,
@@ -57,11 +57,20 @@ import ScaleFadeDemo from "./demo/components/scale-fade-demo";
 import SlideDemo from "./demo/components/slide-demo";
 import SlideFadeDemo from "./demo/components/slide-fade-demo";
 import CollapseDemo from "./demo/components/collapse-demo";
+import AccordionDemo from "./demo/components/accordion-demo";
 import Stack, { HStack } from "./src/components/atoms/stack/stack";
 import IconButton from "./src/components/molecules/icon-button/icon-button";
 import Box from "./src/components/atoms/box/box";
 import { FlatList, ScrollView } from "react-native";
-import { useResponsiveProp, useTheme } from "./src";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  useResponsiveProp,
+  useTheme,
+} from "./src";
+import { MotiView } from "moti";
 
 const App = () => {
   const [haveFontsLoaded] = useFonts({
@@ -143,6 +152,11 @@ const componentList: {
     label: "List",
     imageSrc: require("./demo/assets/list.png"),
     component: <ListDemo />,
+  },
+  {
+    label: "Accordion",
+    imageSrc: require("./demo/assets/accordion.png"),
+    component: <AccordionDemo />,
   },
   {
     label: "Icon",
@@ -327,6 +341,36 @@ const Index = () => {
 
     return null;
   };
+
+  // return (
+  //   <Screen>
+  //     <Accordion>
+  //       <AccordionItem>
+  //         <AccordionButton>
+  //           <Text>Accordion Section 1</Text>
+  //         </AccordionButton>
+  //         <AccordionPanel>
+  //           <Text>
+  //             This is the content for the first section of the accordion. It can
+  //             be replaced with any content you like.
+  //           </Text>
+  //         </AccordionPanel>
+  //       </AccordionItem>
+
+  //       <AccordionItem>
+  //         <AccordionButton>
+  //           <Text>Accordion Section 2</Text>
+  //         </AccordionButton>
+  //         <AccordionPanel>
+  //           <Text>
+  //             This is the content for the second section of the accordion. It
+  //             can be replaced with any content you like.
+  //           </Text>
+  //         </AccordionPanel>
+  //       </AccordionItem>
+  //     </Accordion>
+  //   </Screen>
+  // );
 
   return (
     <Screen p="0" scrollable={false}>

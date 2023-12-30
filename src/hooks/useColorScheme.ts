@@ -16,7 +16,12 @@ const replaceColorValuesInObject = (
 ): Record<string, any> => {
   return Object.entries(obj).reduce(
     (updatedObj: Record<string, any>, [key, value]) => {
-      if (typeof value === "object" && !getKeys(obj).includes("$$typeof")) {
+      if (Array.isArray(value)) {
+        updatedObj[key] = value;
+      } else if (
+        typeof value === "object" &&
+        !getKeys(obj).includes("$$typeof")
+      ) {
         updatedObj[key] = replaceColorValuesInObject(newValue, value);
       } else if (typeof value === "string" && value.includes("primary")) {
         updatedObj[key] = value.replace("primary", newValue);
