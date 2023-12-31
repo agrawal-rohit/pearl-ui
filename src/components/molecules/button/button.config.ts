@@ -114,9 +114,11 @@ const ButtonConfig: MolecularComponentConfig<ButtonAtoms> = {
         backgroundColor: "primary.500",
         _hovered: {
           bgColor: "primary.400",
+          borderColor: "primary.400",
         },
         _pressed: {
           bgColor: "primary.400",
+          borderColor: "primary.400",
         },
       },
       text: { color: "neutral.50" },
