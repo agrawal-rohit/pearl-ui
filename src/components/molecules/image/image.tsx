@@ -405,8 +405,8 @@ const CustomImage = React.memo(
                       tint === "none"
                         ? undefined
                         : tint === "light"
-                        ? "white"
-                        : "black"
+                          ? "white"
+                          : "black"
                     }
                   >
                     {renderFallback()}
@@ -501,7 +501,7 @@ const CustomImage = React.memo(
 );
 
 /** The Image component is used to display images. */
-const Image = pearl<BaseImageProps, "molecule">(
+const Image = pearl<BaseImageProps, "molecule", ImageAtoms>(
   CustomImage,
   {
     componentName: "Image",

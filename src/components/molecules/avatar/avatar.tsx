@@ -113,12 +113,12 @@ const CustomAvatar = React.memo(
         typeof otherBoxProps.backgroundColor === "string"
           ? (otherBoxProps.backgroundColor as PaletteColors)
           : typeof otherBoxProps.bgColor === "string"
-          ? (otherBoxProps.bgColor as PaletteColors)
-          : typeof (otherBoxProps.style as ViewStyle)?.backgroundColor ===
-            "string"
-          ? ((otherBoxProps.style as ViewStyle)
-              ?.backgroundColor as PaletteColors)
-          : randomColor,
+            ? (otherBoxProps.bgColor as PaletteColors)
+            : typeof (otherBoxProps.style as ViewStyle)?.backgroundColor ===
+                "string"
+              ? ((otherBoxProps.style as ViewStyle)
+                  ?.backgroundColor as PaletteColors)
+              : randomColor,
         {
           light: "neutral.50",
           dark: "neutral.900",
@@ -150,7 +150,9 @@ const CustomAvatar = React.memo(
 
       // If a source is provided, render the image
       if (finalSource) {
-        return <Image ref={ref} source={finalSource} {...otherBoxProps} />;
+        return (
+          <Image ref={ref} source={finalSource} {...(otherBoxProps as any)} />
+        );
       }
 
       // If no source is provided, render the fallback
@@ -172,7 +174,7 @@ const CustomAvatar = React.memo(
   )
 );
 
-const StyledAvatar = pearl<BaseAvatarProps, "molecule">(
+const StyledAvatar = pearl<BaseAvatarProps, "molecule", AvatarAtoms>(
   CustomAvatar,
   {
     componentName: "Avatar",
@@ -193,8 +195,11 @@ const Avatar = React.forwardRef(
     {
       children,
       ...rest
-    }: Omit<MoleculeComponentProps<"Avatar", BaseAvatarProps>, "atoms"> & {
-      atoms?: Record<string, any>;
+    }: Omit<
+      MoleculeComponentProps<"Avatar", BaseAvatarProps, AvatarAtoms>,
+      "atoms"
+    > & {
+      atoms?: Partial<AvatarAtoms>;
     },
     ref: any
   ) => {
@@ -206,7 +211,7 @@ const Avatar = React.forwardRef(
 
     // Render a fallback
     return (
-      <StyledAvatar {...rest} ref={ref}>
+      <StyledAvatar {...(rest as any)} ref={ref}>
         {children}
       </StyledAvatar>
     );

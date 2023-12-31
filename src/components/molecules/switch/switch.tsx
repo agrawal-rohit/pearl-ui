@@ -75,7 +75,7 @@ const BaseSwitch = React.memo(
 );
 
 /** The Progress component is a visual indicator of completion percentage. */
-const Switch = pearl<BaseSwitchProps, "molecule">(
+const Switch = pearl<BaseSwitchProps, "molecule", SwitchAtoms>(
   BaseSwitch,
   {
     componentName: "Switch",

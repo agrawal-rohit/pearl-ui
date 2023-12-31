@@ -107,7 +107,7 @@ const CustomText = React.forwardRef(
 /**
  * Text is the component which controls the typography across your app. By default, it renders a <Text /> component
  */
-const Text = pearl<BaseTextProps, "atom", TextStyleProps>(
+const Text = pearl<BaseTextProps, "atom", Record<string, any>, TextStyleProps>(
   CustomText,
   {
     componentName: "Text",

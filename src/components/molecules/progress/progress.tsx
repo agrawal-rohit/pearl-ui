@@ -50,7 +50,7 @@ const BaseProgress = React.memo(
 );
 
 /** The Progress component is a visual indicator of completion percentage. */
-const Progress = pearl<BaseProgressProps, "molecule">(
+const Progress = pearl<BaseProgressProps, "molecule", ProgressAtoms>(
   BaseProgress,
   {
     componentName: "Progress",

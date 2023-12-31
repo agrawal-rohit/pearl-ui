@@ -130,7 +130,7 @@ const CustomIcon = React.memo(
 );
 
 /** The `Icon` component can used to add Expo Icons to your app and customize them using style props. */
-const Icon = pearl<BaseIconProps, "atom", IconStyleProps>(
+const Icon = pearl<BaseIconProps, "atom", Record<string, any>, IconStyleProps>(
   CustomIcon,
   { componentName: "Icon", type: "atom", animatable: true },
   iconStyleFunctions

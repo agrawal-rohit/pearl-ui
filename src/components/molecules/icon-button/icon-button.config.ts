@@ -6,7 +6,7 @@ import { IconButtonProps } from "./icon-button";
 export type IconButtonAtoms = {
   pressable: IconButtonProps;
   spinner: SpinnerProps;
-  icon: IconProps;
+  icon: Partial<IconProps>;
 };
 
 const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {

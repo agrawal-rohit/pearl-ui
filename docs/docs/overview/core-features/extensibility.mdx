@@ -54,7 +54,7 @@ const CustomActionButton = ({
   MoleculeComponentProps<"MyActionButton", ButtonProps, ActionButtonAtoms>,
   "atoms"
 > & {
-  atoms?: ActionButtonAtoms;
+  atoms?: Partial<ActionButtonAtoms>;
 }) => {
   return (
     <ActionButton buttonColor={props.style.backgroundColor} {...atoms.button} />

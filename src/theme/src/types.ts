@@ -186,7 +186,7 @@ export type ColorModeColor = {
   dark: ExpandedColors;
 };
 
-export type PaletteColors = ExpandedColors | ColorModeColor;
+export type PaletteColors = ExpandedColors | ColorModeColor | ColorValue;
 
 // Style Functions
 export interface StyleFunctionContainer {
@@ -251,7 +251,7 @@ export type MoleculeComponent<
   ? {
       size?: ResponsiveValue<ComponentSizes<ComponentName>>;
       variant?: ResponsiveValue<ComponentVariants<ComponentName>>;
-      atoms?: ComponentAtoms;
+      atoms?: Partial<ComponentAtoms>;
     }
   : {};
 

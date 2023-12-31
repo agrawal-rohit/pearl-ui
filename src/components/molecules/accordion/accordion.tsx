@@ -61,7 +61,7 @@ export type AccordionButtonProps = Omit<PressableProps, "onPress"> & {
    * The content of the button.
    */
   children?: React.ReactNode;
-  /** Icon to display on the left side of the text input */
+  /** Icon to display on the right side of the section */
   icon?: React.ReactElement;
 };
 
@@ -260,7 +260,7 @@ export const AccordionPanel = React.memo(
 );
 
 /** The Accordion component provides an expandable view. */
-const Accordion = pearl<BaseAccordionProps, "molecule">(
+const Accordion = pearl<BaseAccordionProps, "molecule", AccordionAtoms>(
   BaseAccordion,
   {
     componentName: "Accordion",

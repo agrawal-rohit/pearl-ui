@@ -18,7 +18,7 @@ import Box from "../../atoms/box/box";
 import _ from "lodash";
 import { RadioAtoms } from "./radio.config";
 
-export type RadioProps = PressableProps &
+export type BaseRadioProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
     /** Value of the radio if it is part of a group. */
     value?: string | number | undefined;
@@ -58,10 +58,10 @@ const Radio = React.memo(
         onPress = () => {},
         ...rest
       }: Omit<
-        MoleculeComponentProps<"Radio", RadioProps, RadioAtoms>,
+        MoleculeComponentProps<"Radio", BaseRadioProps, RadioAtoms>,
         "atoms"
       > & {
-        atoms?: RadioAtoms;
+        atoms?: Partial<RadioAtoms>;
       },
       radioRef: any
     ) => {
@@ -169,6 +169,8 @@ const Radio = React.memo(
     }
   )
 );
+
+export type RadioProps = React.ComponentProps<typeof Radio>;
 
 Radio.displayName = "Radio";
 

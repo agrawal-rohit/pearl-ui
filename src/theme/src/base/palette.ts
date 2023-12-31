@@ -42,7 +42,6 @@ export const palette = {
 
   success: {
     50: "#F0FFF4",
-    70: "#dbf6e3",
     100: "#C6F6D5",
     200: "#9AE6B4",
     300: "#68D391",

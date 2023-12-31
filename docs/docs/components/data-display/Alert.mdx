@@ -1,0 +1,133 @@
+---
+sidebar_position: 4
+title: Alert
+---
+
+import SourceButton from "../../../src/components/SourceButton/SourceButton";
+
+<div style={{ display: "flex" }}>
+  <SourceButton
+    label="Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/alert/alert.tsx"
+    style={{ marginRight: "10px" }}
+  />
+  <SourceButton
+    label="Theme Source"
+    href="https://github.com/agrawal-rohit/pearl-ui/blob/main/src/components/molecules/alert/alert.config.ts"
+  />
+</div>
+
+The `Alert` component in Pearl UI is a versatile and customizable element used to display a short, important message in a way that attracts the user's attention without interrupting the user's task.
+
+## Import
+
+```jsx
+import { Alert } from "pearl-ui";
+```
+
+## Usage
+
+```jsx
+<Alert
+  title="Alert Title"
+  description="This is the description of the alert."
+/>
+```
+
+### Alert Variants
+
+The `variant` prop allows you to specify the type of the alert. It can be one of the following: `success`, `info`, `warning`, `danger`.
+
+```jsx
+<Alert
+  variant="success"
+  title="Operation Successful"
+  description="Your changes have been successfully saved."
+/>
+
+<Alert
+  variant="info"
+  title="Note"
+  description="Your password will expire in 3 days."
+/>
+
+<Alert
+  variant="warning"
+  title="Caution"
+  description="Your account will be locked after 5 more unsuccessful attempts."
+/>
+
+<Alert
+  variant="danger"
+  title="Uh oh!"
+  description="Unable to connect to the server. Please check your internet connection."
+/>
+```
+
+### Alert with Close Button
+
+The `withCloseButton` prop allows you to display a close button in the alert. The `onClose` prop allows you to specify a function that will be called when the close button is clicked.
+
+```jsx
+<Alert
+  withCloseButton
+  onClose={() => {
+    console.log("Alert closed");
+  }}
+  title="Operation Successful"
+  description="Your changes have been successfully saved."
+/>
+```
+
+### Alert Composition
+
+The `Alert` component can be composed with other props to customize its appearance and behavior.
+
+```jsx
+<Alert
+  py={4}
+  spacing="3"
+  direction="vertical"
+  atoms={{
+    stack: {
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    description: {
+      textAlign: "center",
+    },
+  }}
+  title="Operation Successful"
+  description="Your changes have been successfully saved."
+/>
+```
+
+## Example
+
+import Snack from "../../../src/components/ExpoSnack";
+
+<Snack snackId="@agrawal-rohit/alert" />
+
+## Accessibility
+
+- `Alert` has the `role` of `alert`.
+- When the `Alert` is displayed, it attracts the user's attention without interrupting the user's task.
+
+## Alert Component Properties
+
+### Supported Style Properties
+
+The `Alert` component is a composition of the [Stack](../layout/Stack) component. Therefore, all properties related to the [Stack](../layout/Stack) component can be passed to the `Alert` component, in addition to the properties listed below.
+
+### Additional Properties
+
+| Property Name     | Required | Data Type                                      | Default     | Description                                                                    |
+| ----------------- | -------- | ---------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| `size`            | No       | <t>PearlTheme.components.Alert["sizes"]</t>    |             | Determines the size of the alert.                                              |
+| `variant`         | No       | <t>PearlTheme.components.Alert["variants"]</t> | `"success"` | Determines the variant of the alert.                                           |
+| `icon`            | No       | <t>React.ReactElement</t>                      |             | Custom icon that overrides the default icon in the alert.                      |
+| `withIcon`        | No       | <t>boolean</t>                                 | `true`      | Boolean flag to indicate if the alert should be displayed with an icon.        |
+| `title`           | No       | <t>string</t>                                  |             | Title text for the alert.                                                      |
+| `description`     | No       | <t>string</t>                                  |             | Description text for the alert.                                                |
+| `withCloseButton` | No       | <t>boolean</t>                                 | `false`     | Boolean flag to indicate if the alert should be displayed with a close button. |
+| `onClose`         | No       | <t>() => void</t>                              |             | Function to be called when the close button is clicked.                        |

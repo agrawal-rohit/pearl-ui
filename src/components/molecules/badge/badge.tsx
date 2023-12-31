@@ -53,7 +53,7 @@ const BaseBadge = React.memo(
 );
 
 /** A Badge is a small component typically used to communicate a numerical value or indicate the status of an item to the user. */
-const Badge = pearl<BaseBadgeProps, "molecule">(
+const Badge = pearl<BaseBadgeProps, "molecule", BadgeAtoms>(
   BaseBadge,
   {
     componentName: "Badge",

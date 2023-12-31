@@ -183,7 +183,7 @@ const CustomComponent = React.forwardRef(
       >,
       "atoms"
     > & {
-      atoms?: ComponentAtoms;
+      atoms?: Partial<ComponentAtoms>;
     },
     ref: any
   ) => {
@@ -270,14 +270,15 @@ const molecularConfig: MolecularComponentConfig<ComponentAtoms> = {
 // Add the molecular configuration to the theme
 theme.components.CustomComponent = molecularConfig;
 
-const PearlMoleculeComponent = pearl<BaseCustomComponentProps, "molecule">(
-  CustomComponent,
-  {
-    componentName: "CustomComponent",
-    type: "molecule",
-    animatable: true,
-  }
-);
+const PearlMoleculeComponent = pearl<
+  BaseCustomComponentProps,
+  "molecule",
+  ComponentAtoms
+>(CustomComponent, {
+  componentName: "CustomComponent",
+  type: "molecule",
+  animatable: true,
+});
 
 // The created component can then be used easily in your application
 <PearlMoleculeComponent size="sm" variant="filled" label="Hello, Pearl UI!" />;

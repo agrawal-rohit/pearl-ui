@@ -250,12 +250,14 @@ The `Accordion` component is a composition of the [Stack](../layout/Stack) compo
 
 ### Additional Properties
 
-| Property Name    | Required | Data Type       | Default | Description                                                  |
-| ---------------- | -------- | --------------- | ------- | ------------------------------------------------------------ |
-| `allowMultiple`  | No       | <t>boolean</t>  | `false` | If true, multiple accordion items can be expanded at once.   |
-| `allowToggle`    | No       | <t>boolean</t>  | `false` | If true, any expanded accordion item can be collapsed again. |
-| `defaultIndices` | No       | <t>number[]</t> | `[]`    | The initial index(es) of the expanded accordion item.        |
-| `reduceMotion`   | No       | <t>boolean</t>  | `false` | If true, height animation and transitions will be disabled.  |
+| Property Name    | Required | Data Type                                          | Default | Description                                                  |
+| ---------------- | -------- | -------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| `size`           | No       | <t>PearlTheme.components.Accordion["sizes"]</t>    |         | Determines the size of the accordion.                        |
+| `variant`        | No       | <t>PearlTheme.components.Accordion["variants"]</t> |         | Determines the variant of the accordion.                     |
+| `allowMultiple`  | No       | <t>boolean</t>                                     | `false` | If true, multiple accordion items can be expanded at once.   |
+| `allowToggle`    | No       | <t>boolean</t>                                     | `false` | If true, any expanded accordion item can be collapsed again. |
+| `defaultIndices` | No       | <t>number[]</t>                                    | `[]`    | The initial index(es) of the expanded accordion item.        |
+| `reduceMotion`   | No       | <t>boolean</t>                                     | `false` | If true, height animation and transitions will be disabled.  |
 
 ## AccordionItem Component Properties
 
