@@ -94,7 +94,12 @@ const BaseSkeleton = React.memo(
 /**
  * A Skeleton component that is used to show placeholders is a loading state
  */
-const Skeleton = pearl<BaseSkeletonProps, "atom", BoxStyleProps>(BaseSkeleton, {
+const Skeleton = pearl<
+  BaseSkeletonProps,
+  "atom",
+  Record<string, any>,
+  BoxStyleProps
+>(BaseSkeleton, {
   componentName: "Skeleton",
   type: "atom",
 });

@@ -63,6 +63,7 @@ module.exports = {
         "components/data-display/Text",
         "components/data-display/List",
         "components/data-display/Accordion",
+        "components/data-display/Alert",
       ],
     },
     {

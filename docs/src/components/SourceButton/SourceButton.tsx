@@ -20,15 +20,16 @@ const SourceButton: React.FC<SourceButtonProps> = ({
       href={href}
       target="_blank"
       className={styles.button}
-      style={
-        isDarkTheme
+      {...props}
+      style={{
+        ...(isDarkTheme
           ? {
               backgroundColor: "#2E3A59",
               borderColor: "#58617A",
             }
-          : undefined
-      }
-      {...props}
+          : {}),
+        ...(props as any).style,
+      }}
     >
       <FaGithub
         className={styles.icon}

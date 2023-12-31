@@ -7,7 +7,7 @@ import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { useButtonGroup } from "../button/button-group";
 import { IconButtonAtoms } from "./icon-button.config";
 
-export type IconButtonProps = PressableProps & {
+export type BaseIconButtonProps = PressableProps & {
   /**
    * Whether the button is in a loading state.
    *
@@ -34,10 +34,14 @@ const IconButton = React.memo(
         isFullWidth = false,
         ...rest
       }: Omit<
-        MoleculeComponentProps<"IconButton", IconButtonProps, IconButtonAtoms>,
+        MoleculeComponentProps<
+          "IconButton",
+          BaseIconButtonProps,
+          IconButtonAtoms
+        >,
         "atoms"
       > & {
-        atoms?: IconButtonAtoms;
+        atoms?: Partial<IconButtonAtoms>;
       },
       ref: any
     ) => {
@@ -88,6 +92,8 @@ const IconButton = React.memo(
     }
   )
 );
+
+export type IconButtonProps = React.ComponentProps<typeof IconButton>;
 
 IconButton.displayName = "IconButton";
 

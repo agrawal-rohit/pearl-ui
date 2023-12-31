@@ -19,7 +19,7 @@ import Center from "../../atoms/center/center";
 import { CheckboxAtoms } from "./checkbox.config";
 import _ from "lodash";
 
-export type CheckBoxProps = PressableProps &
+export type BaseCheckBoxProps = PressableProps &
   StateProps<"_checked" | "_invalid" | "_disabled"> & {
     /** Value of the checkbox if it is part of a group. */
     value?: string | number | undefined;
@@ -95,10 +95,10 @@ const CheckBox = React.memo(
         onPress = () => {},
         ...rest
       }: Omit<
-        MoleculeComponentProps<"CheckBox", CheckBoxProps, CheckboxAtoms>,
+        MoleculeComponentProps<"CheckBox", BaseCheckBoxProps, CheckboxAtoms>,
         "atoms"
       > & {
-        atoms?: CheckboxAtoms;
+        atoms?: Partial<CheckboxAtoms>;
       },
       checkboxRef: any
     ) => {
@@ -246,6 +246,8 @@ const CheckBox = React.memo(
     }
   )
 );
+
+export type CheckBoxProps = React.ComponentProps<typeof CheckBox>;
 
 CheckBox.displayName = "CheckBox";
 

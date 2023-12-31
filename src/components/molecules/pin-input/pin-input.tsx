@@ -172,7 +172,7 @@ const BasePinInput = React.memo(
 /**
  * Similar to the Input component, but is optimized for entering sequences of digits quickly.
  */
-const PinInput = pearl<BasePinInputProps, "molecule">(
+const PinInput = pearl<BasePinInputProps, "molecule", PinInputAtoms>(
   BasePinInput,
   {
     componentName: "PinInput",

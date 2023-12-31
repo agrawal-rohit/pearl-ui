@@ -100,6 +100,8 @@ The `List` component is built upon the [Stack](./Stack) component, and as such, 
 
 ### Additional Properties
 
-| Name         | Required | Type                                         | Default | Description                                                                                                                                       |
-| ------------ | -------- | -------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `renderIcon` | No       | <t>(index: number) => React.ReactElement</t> |         | Function that returns a React element to be displayed as an icon next to each child. The function receives the index of the child as an argument. |
+| Name         | Required | Type                                          | Default | Description                                                                                                                                       |
+| ------------ | -------- | --------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `size`       | No       | <t>PearlTheme.components.List["sizes"]</t>    |         | Determines the size of the list.                                                                                                                  |
+| `variant`    | No       | <t>PearlTheme.components.List["variants"]</t> |         | Determines the variant of the list.                                                                                                               |
+| `renderIcon` | No       | <t>(index: number) => React.ReactElement</t>  |         | Function that returns a React element to be displayed as an icon next to each child. The function receives the index of the child as an argument. |

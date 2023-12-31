@@ -84,13 +84,6 @@ export type BaseInputProps = Omit<
     selectionColor?: ResponsiveValue<PaletteColors>;
   };
 
-export type InputProps = Omit<
-  MoleculeComponentProps<"Input", BaseInputProps, InputAtoms>,
-  "atoms"
-> & {
-  atoms?: InputAtoms;
-};
-
 // Additional style Functions used for this component
 const placeholderTextColorStyleFunction = createStyleFunction({
   property: "placeholderTextColor",
@@ -136,7 +129,12 @@ const Input = React.memo(
         onChangeText = () => {},
         onChange = () => {},
         ...rest
-      }: InputProps,
+      }: Omit<
+        MoleculeComponentProps<"Input", BaseInputProps, InputAtoms>,
+        "atoms"
+      > & {
+        atoms?: Partial<InputAtoms>;
+      },
       textInputRef: any
     ) => {
       const { theme } = useTheme();
@@ -327,6 +325,8 @@ const Input = React.memo(
     }
   )
 );
+
+export type InputProps = React.ComponentProps<typeof Input>;
 
 Input.displayName = "Input";
 

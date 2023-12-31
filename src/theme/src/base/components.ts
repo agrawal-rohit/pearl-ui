@@ -5,6 +5,7 @@ import SkeletonConfig from "../../../components/atoms/skeleton/skeleton.config";
 import SpinnerConfig from "../../../components/atoms/spinner/spinner.config";
 import TextConfig from "../../../components/atoms/text/text.config";
 import AccordionConfig from "../../../components/molecules/accordion/accordion.config";
+import AlertConfig from "../../../components/molecules/alert/alert.config";
 import AvatarConfig from "../../../components/molecules/avatar/avatar.config";
 import BadgeConfig from "../../../components/molecules/badge/badge.config";
 import ButtonConfig from "../../../components/molecules/button/button.config";
@@ -33,6 +34,7 @@ interface Config {
   Radio: typeof RadioConfig;
   Badge: typeof BadgeConfig;
   Divider: typeof DividerConfig;
+  Alert: typeof AlertConfig;
   Switch: typeof SwitchConfig;
   Image: typeof ImageConfig;
   Accordion: typeof AccordionConfig;
@@ -56,6 +58,7 @@ export default {
   Radio: RadioConfig,
   Badge: BadgeConfig,
   Divider: DividerConfig,
+  Alert: AlertConfig,
   Switch: SwitchConfig,
   Image: ImageConfig,
   Accordion: AccordionConfig,

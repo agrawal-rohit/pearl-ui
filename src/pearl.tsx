@@ -45,6 +45,7 @@ interface pearlConfig {
 export function pearl<
   ComponentProps,
   ComponentType extends ComponentTypes = "basic",
+  ComponentAtoms extends Record<string, any> = Record<string, any>,
   StyleProps = BoxStyleProps,
   Animateable extends boolean = true,
 >(
@@ -96,6 +97,7 @@ export function pearl<
         }: PearlComponent<ComponentProps, StyleProps, Animateable> &
           AtomComponent<(typeof config)["componentName"], ComponentType> &
           MoleculeComponent<(typeof config)["componentName"], ComponentType> & {
+            atoms?: Partial<ComponentAtoms>;
             children?: string | JSX.Element | JSX.Element[] | React.ReactNode;
           },
         ref: any
@@ -149,8 +151,8 @@ export function pearl<
             key={
               Platform.OS === "web" &&
               ["Text", "Icon", "Box"].includes(config.componentName as string)
-                ? convertedProps.key
-                  ? `${convertedProps.key}-${colorMode}`
+                ? (convertedProps as any).key!
+                  ? `${(convertedProps as any).key!}-${colorMode}`
                   : `${colorMode}`
                 : undefined
             }

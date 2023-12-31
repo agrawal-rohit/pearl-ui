@@ -21,12 +21,15 @@ import Box, { BoxProps } from "../../atoms/box/box";
 import { MoleculeComponentProps } from "../../../theme/src/types";
 import Spinner from "../../atoms/spinner/spinner";
 import Center from "../../atoms/center/center";
+import { VideoAtoms } from "./video.config";
 
 const PearlRNImage = pearl<RNImageProps, "basic">(RNImage, {
   componentName: "",
   type: "basic",
   animatable: true,
 });
+
+export type PearlRNImageProps = React.ComponentProps<typeof PearlRNImage>;
 
 const PearlExpoVideo = pearl<ExpoVideoProps>(ExpoVideo, {
   componentName: "Video",
@@ -94,7 +97,10 @@ export type BaseVideoProps = BoxProps &
 
 const BaseVideo = React.memo(
   React.forwardRef(
-    ({ atoms }: MoleculeComponentProps<"Video", BaseVideoProps>, ref: any) => {
+    (
+      { atoms }: MoleculeComponentProps<"Video", BaseVideoProps, VideoAtoms>,
+      ref: any
+    ) => {
       const {
         source,
         onError,
@@ -445,7 +451,7 @@ const BaseVideo = React.memo(
 /**
  * Video is the most abstract component on top of which all other Pearl UI components are built.
  */
-const Video = pearl<BaseVideoProps, "molecule">(
+const Video = pearl<BaseVideoProps, "molecule", VideoAtoms>(
   BaseVideo,
   {
     componentName: "Video",

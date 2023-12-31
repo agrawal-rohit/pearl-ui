@@ -107,3 +107,4 @@ export {
   AccordionButton,
   AccordionPanel,
 } from "./molecules/accordion/accordion";
+export { default as Alert, AlertProps } from "./molecules/alert/alert";

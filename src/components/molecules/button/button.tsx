@@ -9,7 +9,7 @@ import { useMolecularComponentConfig } from "../../../hooks/useMolecularComponen
 import { boxStyleFunctions } from "../../../theme/src/style-functions";
 import { ButtonAtoms } from "./button.config";
 
-export type ButtonProps = PressableProps & {
+export type BaseButtonProps = PressableProps & {
   /**
    * Whether the button is in a loading state.
    *
@@ -51,10 +51,10 @@ const Button = React.memo(
         rightIcon = undefined,
         ...rest
       }: Omit<
-        MoleculeComponentProps<"Button", ButtonProps, ButtonAtoms>,
+        MoleculeComponentProps<"Button", BaseButtonProps, ButtonAtoms>,
         "atoms"
       > & {
-        atoms?: ButtonAtoms;
+        atoms?: Partial<ButtonAtoms>;
       },
       ref: any
     ) => {
@@ -186,6 +186,8 @@ const Button = React.memo(
     }
   )
 );
+
+export type ButtonProps = React.ComponentProps<typeof Button>;
 
 Button.displayName = "Button";
 
