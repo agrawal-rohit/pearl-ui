@@ -86,9 +86,11 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
         backgroundColor: "primary.500",
         _hovered: {
           bgColor: "primary.400",
+          borderColor: "primary.400",
         },
         _pressed: {
           bgColor: "primary.400",
+          borderColor: "primary.400",
         },
       },
       spinner: {
