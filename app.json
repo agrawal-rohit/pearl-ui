@@ -1,28 +1,42 @@
 {
   "expo": {
-    "name": "pearl-ui",
+    "name": "Pearl UI - Showcase",
     "slug": "pearl-ui",
     "jsEngine": "hermes",
     "version": "1.0.0",
+    "privacy": "public",
+    "description": "This is the Pearl UI Showcase app, demonstrating the capabilities and features of the Pearl UI library.",
     "orientation": "portrait",
     "splash": {
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/8b782319-5359-4cf2-be2b-193928cd523f"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pearlui.pearlui"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.pearlui.pearlui"
+    },
+    "web": {},
+    "extra": {
+      "eas": {
+        "projectId": "8b782319-5359-4cf2-be2b-193928cd523f"
       }
     },
-    "web": {}
+    "owner": "pearl-ui",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }

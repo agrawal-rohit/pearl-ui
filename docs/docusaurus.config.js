@@ -117,7 +117,7 @@
           ],
         },
         footer: {
-          copyright: `Proudly built in <span style="margin-left: 5px">🇮🇳</span>  by <a href="https://twitter.com/_rohitagrawal_" target="_blank" style="text-decoration: underline">Rohit Agrawal</a>.`,
+          copyright: `Proudly built in <span style="margin-left: 5px; margin-right: 5px">🇮🇳</span>  by <a href="https://twitter.com/_rohitagrawal_" target="_blank" style="text-decoration: underline">Rohit Agrawal</a>.`,
         },
         prism: {
           theme: require("prism-react-renderer/themes/vsDark"),
