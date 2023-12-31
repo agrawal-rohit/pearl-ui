@@ -48,7 +48,7 @@ function HomepageHeader() {
             styles.heroButton
           )}
           to="/docs/overview/getting-started/introduction"
-          style={{ marginRight: 10 }}
+          style={{ marginRight: 10, color: "white" }}
         >
           Read the docs
         </Link>
@@ -82,12 +82,12 @@ function HomepageHeader() {
         <br />
         <br />
         <a
-          href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-review&utm_medium=badge&utm_souce=badge-pearl-ui#discussion-body"
+          href="https://www.producthunt.com/posts/pearl-ui?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pearl&#0045;ui"
           target="_blank"
         >
           <img
-            src={`https://api.producthunt.com/widgets/embed-image/v1/review.svg?post_id=319078&theme=${
-              isDarkTheme ? "dark" : "light"
+            src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=319078&theme=${
+              isDarkTheme ? "neutral" : "light"
             }`}
             alt="Pearl UI - Design system driven UI framework for React Native | Product Hunt"
             style={{ width: 250, height: 54 }}

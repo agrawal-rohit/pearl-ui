@@ -71,6 +71,15 @@ jobs:
           node-version: 18.x
 
       #----------------------------------------------
+      # Setup EAS
+      #----------------------------------------------
+      - name: Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      #----------------------------------------------
       # Cache modules
       #----------------------------------------------
       - name: Use cached node_modules
@@ -145,4 +154,10 @@ jobs:
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+
+      #----------------------------------------------
+      # Build the showcase app
+      #----------------------------------------------
+      - name: Build app
+        run: eas build --non-interactive --profile preview --platform android
 
