@@ -63,7 +63,6 @@ module.exports = {
         "components/data-display/Text",
         "components/data-display/List",
         "components/data-display/Accordion",
-        "components/data-display/Alert",
       ],
     },
     {
@@ -98,6 +97,7 @@ module.exports = {
         "components/feedback/Spinner",
         "components/feedback/Skeleton",
         "components/feedback/Progress",
+        "components/feedback/Alert",
         "components/feedback/Badge",
       ],
     },
