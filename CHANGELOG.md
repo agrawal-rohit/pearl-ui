@@ -1,3 +1,27 @@
+# [2.3.0](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.6...v2.3.0) (2024-01-01)
+
+
+### Bug Fixes
+
+* Fixed black flashing issue in ghost variant of Button ([ee69f23](https://github.com/agrawal-rohit/pearl-ui/commit/ee69f2391aa23634275a4f2a016c8a4383e37204))
+* Fixed black flashing issue in ghost variant of Button ([6d96a90](https://github.com/agrawal-rohit/pearl-ui/commit/6d96a90a68e6e270fbef1eae17fb70123e1b78f8))
+
+
+### Features
+
+* Added a PinInput component ([a9c2fe9](https://github.com/agrawal-rohit/pearl-ui/commit/a9c2fe98d3ef2ccc70b43d5dd6c79a062bf3853d))
+* Added a PinInput component ([b589f3b](https://github.com/agrawal-rohit/pearl-ui/commit/b589f3b1a76b06555cf9d280061468e199e6ff51))
+* Added Accordion Component, fixed Collapse component height issue ([1a29044](https://github.com/agrawal-rohit/pearl-ui/commit/1a2904469cfc9e0bc8dc2cb13ae7f6b9f33cc3fe))
+* Added Accordion Component, fixed Collapse component height issue ([592a501](https://github.com/agrawal-rohit/pearl-ui/commit/592a5017b40755c1e1aaf740c60c94468af0fa77))
+* Added Alert component, fixed the type issues for atoms ([3adcfb0](https://github.com/agrawal-rohit/pearl-ui/commit/3adcfb0edfa44b4bab22f3de95f5ee09ba694621))
+* Added Alert component, fixed the type issues for atoms ([bb211e7](https://github.com/agrawal-rohit/pearl-ui/commit/bb211e739339e10478559dc7bde682a7121f54a9))
+* Added hover state based styling ([479d3ef](https://github.com/agrawal-rohit/pearl-ui/commit/479d3ef8dda521841fcd5faf4c387c96c2dfb272))
+* Added hover state based styling ([a850c91](https://github.com/agrawal-rohit/pearl-ui/commit/a850c917ea07c203b7202a9088bc184f67a29cac))
+* Added List component ([832f197](https://github.com/agrawal-rohit/pearl-ui/commit/832f1971f7444fef06143d36955ecfed0c518bcf))
+* Added List component ([e4fcaee](https://github.com/agrawal-rohit/pearl-ui/commit/e4fcaee8e824f85fb2bae4392c9896881c22c14e))
+* Added Web support ([0fc1416](https://github.com/agrawal-rohit/pearl-ui/commit/0fc14163577c9c4bf5f7515aac866dc6dfd72157))
+* Added Web support ([8485a78](https://github.com/agrawal-rohit/pearl-ui/commit/8485a78ca1ae813580dbdbabb91a1a257e99d961))
+
 ## [2.2.6](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.5...v2.2.6) (2023-12-18)
 
 
