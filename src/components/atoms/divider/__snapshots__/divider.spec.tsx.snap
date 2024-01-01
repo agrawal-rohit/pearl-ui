@@ -29,13 +29,6 @@ exports[`Atoms/Divider passes the snapshot test for different length modes 1`] =
         "width": "50%",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   />
   <View
     animate={
@@ -56,13 +49,6 @@ exports[`Atoms/Divider passes the snapshot test for different length modes 1`] =
         "backgroundColor": "#ee82ee",
         "height": 20,
         "width": 1,
-      }
-    }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
       }
     }
   />
@@ -98,13 +84,6 @@ exports[`Atoms/Divider passes the snapshot test in dark mode 1`] = `
         "width": "100%",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   />
   <View
     animate={
@@ -125,13 +104,6 @@ exports[`Atoms/Divider passes the snapshot test in dark mode 1`] = `
         "backgroundColor": "#58617A",
         "height": "100%",
         "width": 1,
-      }
-    }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
       }
     }
   />
@@ -167,13 +139,6 @@ exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
         "width": "100%",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   />
   <View
     animate={
@@ -194,13 +159,6 @@ exports[`Atoms/Divider passes the snapshot test in light mode 1`] = `
         "backgroundColor": "#E4E9F2",
         "height": "100%",
         "width": 1,
-      }
-    }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
       }
     }
   />

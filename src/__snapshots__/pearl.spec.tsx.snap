@@ -13,13 +13,6 @@ exports[`pearl/atoms passes the snapshot test for a <Text> component 1`] = `
     fontFamily="body"
     fontWeight="hairline"
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     asdasd
   </Text>
@@ -66,13 +59,6 @@ exports[`pearl/atoms passes the snapshot test for a <View> component 1`] = `
         "width": 200,
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   />
 </View>
 `;
@@ -87,13 +73,6 @@ exports[`pearl/basic passes the snapshot test for a <Text> component 1`] = `
 >
   <Text
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     asdasd
   </Text>
@@ -110,13 +89,6 @@ exports[`pearl/basic passes the snapshot test for a <View> component 1`] = `
 >
   <View
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   />
 </View>
 `;
@@ -138,13 +110,6 @@ exports[`pearl/molecules passes the snapshot test for a <View> component 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={{}}
@@ -155,13 +120,6 @@ exports[`pearl/molecules passes the snapshot test for a <View> component 1`] = `
       }
       collapsable={false}
       style={{}}
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     />
     <View
       animate={{}}
@@ -172,13 +130,6 @@ exports[`pearl/molecules passes the snapshot test for a <View> component 1`] = `
       }
       collapsable={false}
       style={{}}
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     />
   </View>
 </View>

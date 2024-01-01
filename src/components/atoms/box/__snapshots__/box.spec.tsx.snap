@@ -17,13 +17,6 @@ exports[`Atoms/Box passes the basic snapshot test 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     asdasd
   </View>

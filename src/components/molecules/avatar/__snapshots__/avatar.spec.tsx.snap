@@ -22,47 +22,26 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
         "flexWrap": "wrap",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
+      accessibilityRole="image"
+      accessible={true}
       animate={
         {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 40,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 40,
         }
       }
       animatedStyle={
         {
           "value": {
-            "marginRight": "s",
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-          "marginRight": "s",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
-    >
-      <View
-        accessibilityRole="image"
-        accessible={true}
-        animate={
-          {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
             "borderColor": "#FFFFFF",
@@ -70,326 +49,23 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "borderWidth": 2,
             "height": 40,
             "justifyContent": "center",
-            "width": 40,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#F7F9FC",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 40,
-              "justifyContent": "center",
-              "width": 40,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 40,
-            "justifyContent": "center",
-            "width": 40,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-      >
-        <View
-          animate={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <View
-            style={
-              [
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                },
-                [
-                  {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  {
-                    "color": "#C5CEE0",
-                    "flex": 0,
-                  },
-                ],
-              ]
-            }
-          >
-            <View
-              accessibilityLabel="Loading indicator"
-              accessibilityRole="progressbar"
-              accessible={true}
-              animate={
-                {
-                  "color": "#C5CEE0",
-                }
-              }
-              collapsable={false}
-              rawSize={20}
-              style={
-                {
-                  "height": 20,
-                  "width": 20,
-                }
-              }
-              variant="spinner"
-            >
-              <View
-                collapsable={false}
-                style={
-                  {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
-                      "width": 20,
-                    }
-                  }
-                >
-                  <View
-                    collapsable={false}
-                    style={
-                      {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "width": 20,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": 0,
-                            },
-                            {
-                              "rotate": "-172.5deg",
-                            },
-                          ],
-                          "width": 20,
-                        }
-                      }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "height": 10,
-                            "overflow": "hidden",
-                            "width": 20,
-                          }
-                        }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-              <View
-                collapsable={false}
-                style={
-                  {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
-                      "width": 20,
-                    }
-                  }
-                >
-                  <View
-                    collapsable={false}
-                    style={
-                      {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "top": 10,
-                        "width": 20,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": -10,
-                            },
-                            {
-                              "rotate": "352.5deg",
-                            },
-                          ],
-                          "width": 20,
-                        }
-                      }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "height": 10,
-                            "overflow": "hidden",
-                            "width": 20,
-                          }
-                        }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      animate={
-        {
-          "marginRight": "s",
-        }
-      }
-      animatedStyle={
-        {
-          "value": {
             "marginRight": "s",
+            "width": 40,
           },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 40,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 40,
         }
       }
       transition={
@@ -401,10 +77,280 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
       }
     >
       <View
-        accessibilityRole="image"
-        accessible={true}
         animate={
           {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animate={
+              {
+                "color": "#C5CEE0",
+              }
+            }
+            collapsable={false}
+            rawSize={20}
+            style={
+              {
+                "height": 20,
+                "width": 20,
+              }
+            }
+            variant="spinner"
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 10,
+                      "overflow": "hidden",
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "height": 10,
+                          "overflow": "hidden",
+                          "width": 20,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 10,
+                      "overflow": "hidden",
+                      "top": 10,
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
+                          },
+                          {
+                            "rotate": "352.5deg",
+                          },
+                        ],
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "height": 10,
+                          "overflow": "hidden",
+                          "width": 20,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityRole="image"
+      accessible={true}
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 55,
+          "justifyContent": "center",
+          "marginRight": "s",
+          "width": 55,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
             "borderColor": "#FFFFFF",
@@ -412,326 +358,23 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "borderWidth": 2,
             "height": 55,
             "justifyContent": "center",
-            "width": 55,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#F7F9FC",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 55,
-              "justifyContent": "center",
-              "width": 55,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 55,
-            "justifyContent": "center",
-            "width": 55,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-      >
-        <View
-          animate={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <View
-            style={
-              [
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                },
-                [
-                  {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  {
-                    "color": "#C5CEE0",
-                    "flex": 0,
-                  },
-                ],
-              ]
-            }
-          >
-            <View
-              accessibilityLabel="Loading indicator"
-              accessibilityRole="progressbar"
-              accessible={true}
-              animate={
-                {
-                  "color": "#C5CEE0",
-                }
-              }
-              collapsable={false}
-              rawSize={20}
-              style={
-                {
-                  "height": 20,
-                  "width": 20,
-                }
-              }
-              variant="spinner"
-            >
-              <View
-                collapsable={false}
-                style={
-                  {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
-                      "width": 20,
-                    }
-                  }
-                >
-                  <View
-                    collapsable={false}
-                    style={
-                      {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "width": 20,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": 0,
-                            },
-                            {
-                              "rotate": "-172.5deg",
-                            },
-                          ],
-                          "width": 20,
-                        }
-                      }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "height": 10,
-                            "overflow": "hidden",
-                            "width": 20,
-                          }
-                        }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-              <View
-                collapsable={false}
-                style={
-                  {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              >
-                <View
-                  collapsable={false}
-                  style={
-                    {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
-                      "width": 20,
-                    }
-                  }
-                >
-                  <View
-                    collapsable={false}
-                    style={
-                      {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "top": 10,
-                        "width": 20,
-                      }
-                    }
-                  >
-                    <View
-                      collapsable={false}
-                      style={
-                        {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": -10,
-                            },
-                            {
-                              "rotate": "352.5deg",
-                            },
-                          ],
-                          "width": 20,
-                        }
-                      }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "height": 10,
-                            "overflow": "hidden",
-                            "width": 20,
-                          }
-                        }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      animate={
-        {
-          "marginRight": "s",
-        }
-      }
-      animatedStyle={
-        {
-          "value": {
             "marginRight": "s",
+            "width": 55,
           },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 55,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 55,
         }
       }
       transition={
@@ -743,154 +386,114 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
       }
     >
       <View
-        accessibilityRole="image"
-        accessible={true}
         animate={
           {
-            "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#F7F9FC",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
             },
           }
         }
         collapsable={false}
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
       >
         <View
-          animate={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
           style={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
           }
         >
           <View
-            style={
-              [
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                },
-                [
-                  {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  {
-                    "color": "#C5CEE0",
-                    "flex": 0,
-                  },
-                ],
-              ]
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animate={
+              {
+                "color": "#C5CEE0",
+              }
             }
+            collapsable={false}
+            rawSize={20}
+            style={
+              {
+                "height": 20,
+                "width": 20,
+              }
+            }
+            variant="spinner"
           >
             <View
-              accessibilityLabel="Loading indicator"
-              accessibilityRole="progressbar"
-              accessible={true}
-              animate={
-                {
-                  "color": "#C5CEE0",
-                }
-              }
               collapsable={false}
-              rawSize={20}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
-              variant="spinner"
             >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -898,15 +501,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
                       "width": 20,
                     }
                   }
@@ -915,8 +511,15 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -925,15 +528,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": 0,
-                            },
-                            {
-                              "rotate": "-172.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -942,40 +538,47 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
               </View>
+            </View>
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -983,15 +586,9 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
+                      "top": 10,
                       "width": 20,
                     }
                   }
@@ -1000,9 +597,15 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "top": 10,
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
+                          },
+                          {
+                            "rotate": "352.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -1011,15 +614,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": -10,
-                            },
-                            {
-                              "rotate": "352.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -1028,25 +624,14 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
@@ -1057,16 +642,48 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
       </View>
     </View>
     <View
-      animate={{}}
+      accessibilityRole="image"
+      accessible={true}
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
+          "marginRight": "s",
+          "width": 70,
+        }
+      }
       animatedStyle={
         {
-          "value": {},
+          "value": {
+            "alignItems": "center",
+            "backgroundColor": "#F7F9FC",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "height": 70,
+            "justifyContent": "center",
+            "marginRight": "s",
+            "width": 70,
+          },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
+          "marginRight": "s",
+          "width": 70,
         }
       }
       transition={
@@ -1078,10 +695,279 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
       }
     >
       <View
-        accessibilityRole="image"
-        accessible={true}
         animate={
           {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animate={
+              {
+                "color": "#C5CEE0",
+              }
+            }
+            collapsable={false}
+            rawSize={20}
+            style={
+              {
+                "height": 20,
+                "width": 20,
+              }
+            }
+            variant="spinner"
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 10,
+                      "overflow": "hidden",
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "height": 10,
+                          "overflow": "hidden",
+                          "width": 20,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  {
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
+                  }
+                }
+              >
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "height": 10,
+                      "overflow": "hidden",
+                      "top": 10,
+                      "width": 20,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    style={
+                      {
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
+                          },
+                          {
+                            "rotate": "352.5deg",
+                          },
+                        ],
+                        "width": 20,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={false}
+                      style={
+                        {
+                          "height": 10,
+                          "overflow": "hidden",
+                          "width": 20,
+                        }
+                      }
+                    >
+                      <View
+                        collapsable={false}
+                        style={
+                          {
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
+                            "width": 20,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityRole="image"
+      accessible={true}
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 85,
+          "justifyContent": "center",
+          "width": 85,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
             "alignItems": "center",
             "backgroundColor": "#F7F9FC",
             "borderColor": "#FFFFFF",
@@ -1090,142 +976,139 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "height": 85,
             "justifyContent": "center",
             "width": 85,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#F7F9FC",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 85,
+          "justifyContent": "center",
+          "width": 85,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#F7F9FC",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 85,
-              "justifyContent": "center",
-              "width": 85,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
             },
           }
         }
         collapsable={false}
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#F7F9FC",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 85,
-            "justifyContent": "center",
-            "width": 85,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
       >
         <View
-          animate={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
           style={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
           }
         >
           <View
-            style={
-              [
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                },
-                [
-                  {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  {
-                    "color": "#C5CEE0",
-                    "flex": 0,
-                  },
-                ],
-              ]
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animate={
+              {
+                "color": "#C5CEE0",
+              }
             }
+            collapsable={false}
+            rawSize={20}
+            style={
+              {
+                "height": 20,
+                "width": 20,
+              }
+            }
+            variant="spinner"
           >
             <View
-              accessibilityLabel="Loading indicator"
-              accessibilityRole="progressbar"
-              accessible={true}
-              animate={
-                {
-                  "color": "#C5CEE0",
-                }
-              }
               collapsable={false}
-              rawSize={20}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
-              variant="spinner"
             >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -1233,15 +1116,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
                       "width": 20,
                     }
                   }
@@ -1250,8 +1126,15 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -1260,15 +1143,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": 0,
-                            },
-                            {
-                              "rotate": "-172.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -1277,40 +1153,47 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
               </View>
+            </View>
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -1318,15 +1201,9 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
+                      "top": 10,
                       "width": 20,
                     }
                   }
@@ -1335,9 +1212,15 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "top": 10,
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
+                          },
+                          {
+                            "rotate": "352.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -1346,15 +1229,8 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": -10,
-                            },
-                            {
-                              "rotate": "352.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -1363,25 +1239,14 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
@@ -1413,45 +1278,24 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
         "marginTop": "s",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
         {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 40,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 40,
         }
       }
       animatedStyle={
         {
           "value": {
-            "marginRight": "s",
-          },
-        }
-      }
-      collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-          "marginRight": "s",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
-    >
-      <View
-        animate={
-          {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
             "borderColor": "#FFFFFF",
@@ -1459,105 +1303,24 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "borderWidth": 2,
             "height": 40,
             "justifyContent": "center",
-            "width": 40,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 40,
-              "justifyContent": "center",
-              "width": 40,
-            },
-          }
-        }
-        collapsable={false}
-        size="xs"
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 40,
-            "justifyContent": "center",
-            "width": 40,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-      >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Regular",
-              "fontSize": 13.799999999999999,
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 22,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p4"
-        >
-          RA
-        </Text>
-      </View>
-    </View>
-    <View
-      animate={
-        {
-          "marginRight": "s",
-        }
-      }
-      animatedStyle={
-        {
-          "value": {
             "marginRight": "s",
+            "width": 40,
           },
         }
       }
       collapsable={false}
+      size="xs"
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 40,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 40,
         }
       }
       transition={
@@ -1568,9 +1331,57 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
         }
       }
     >
-      <View
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
         animate={
           {
+            "color": "#FFFFFF",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#FFFFFF",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#FFFFFF",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+        variant="p4"
+      >
+        RA
+      </Text>
+    </View>
+    <View
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 55,
+          "justifyContent": "center",
+          "marginRight": "s",
+          "width": 55,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
             "borderColor": "#FFFFFF",
@@ -1578,105 +1389,110 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "borderWidth": 2,
             "height": 55,
             "justifyContent": "center",
+            "marginRight": "s",
             "width": 55,
+          },
+        }
+      }
+      collapsable={false}
+      size="s"
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 55,
+          "justifyContent": "center",
+          "marginRight": "s",
+          "width": 55,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#FFFFFF",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 55,
-              "justifyContent": "center",
-              "width": 55,
+              "color": "#FFFFFF",
             },
           }
         }
         collapsable={false}
-        size="s"
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 55,
-            "justifyContent": "center",
-            "width": 55,
+            "color": "#FFFFFF",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 18.4,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 28,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
+        variant="p2"
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Regular",
-              "fontSize": 18.4,
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 28,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p2"
-        >
-          J
-        </Text>
-      </View>
+        J
+      </Text>
     </View>
     <View
       animate={
         {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       animatedStyle={
         {
           "value": {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "height": 70,
+            "justifyContent": "center",
             "marginRight": "s",
+            "width": 70,
           },
         }
       }
       collapsable={false}
+      size="m"
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       transition={
@@ -1687,121 +1503,56 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
         }
       }
     >
-      <View
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
         animate={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "color": "#FFFFFF",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "color": "#FFFFFF",
             },
           }
         }
         collapsable={false}
-        size="m"
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "color": "#FFFFFF",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 23,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 32,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
+        variant="p2"
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Regular",
-              "fontSize": 23,
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 32,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p2"
-        >
-          SG
-        </Text>
-      </View>
+        SG
+      </Text>
     </View>
     <View
-      animate={{}}
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 85,
+          "justifyContent": "center",
+          "width": 85,
+        }
+      }
       animatedStyle={
         {
-          "value": {},
-        }
-      }
-      collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
-    >
-      <View
-        animate={
-          {
+          "value": {
             "alignItems": "center",
             "backgroundColor": "#ff0000",
             "borderColor": "#FFFFFF",
@@ -1810,85 +1561,64 @@ exports[`Molecules/Avatar passes the snapshot test for different sizes 1`] = `
             "height": 85,
             "justifyContent": "center",
             "width": 85,
+          },
+        }
+      }
+      collapsable={false}
+      size="l"
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 85,
+          "justifyContent": "center",
+          "width": 85,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#FFFFFF",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 85,
-              "justifyContent": "center",
-              "width": 85,
+              "color": "#FFFFFF",
             },
           }
         }
         collapsable={false}
-        size="l"
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 85,
-            "justifyContent": "center",
-            "width": 85,
+            "color": "#FFFFFF",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 29.9,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 40,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
+        variant="p2"
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Regular",
-              "fontSize": 29.9,
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 40,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p2"
-        >
-          Y
-        </Text>
-      </View>
+        Y
+      </Text>
     </View>
   </View>
 </View>
@@ -1916,32 +1646,48 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         "flexWrap": "wrap",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
         {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       animatedStyle={
         {
           "value": {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "height": 70,
+            "justifyContent": "center",
             "marginRight": "s",
+            "width": 70,
           },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       transition={
@@ -1952,114 +1698,83 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         }
       }
     >
-      <View
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
         animate={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "color": "#FFFFFF",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "color": "#FFFFFF",
             },
           }
         }
         collapsable={false}
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "color": "#FFFFFF",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 23,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 32,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
+        variant="p2"
       >
-        <Text
-          accessibilityRole="text"
-          accessible={true}
-          allowFontScaling={true}
-          animate={
-            {
-              "color": "#FFFFFF",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "color": "#FFFFFF",
-              "fontFamily": "Poppins-Regular",
-              "fontSize": 23,
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "includeFontPadding": false,
-              "letterSpacing": 0,
-              "lineHeight": 32,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          variant="p2"
-        >
-          RA
-        </Text>
-      </View>
+        RA
+      </Text>
     </View>
     <View
+      accessibilityRole="image"
+      accessible={true}
       animate={
         {
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       animatedStyle={
         {
           "value": {
+            "alignItems": "center",
+            "backgroundColor": "#ff0000",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "height": 70,
+            "justifyContent": "center",
             "marginRight": "s",
+            "width": 70,
           },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#ff0000",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
           "marginRight": "s",
+          "width": 70,
         }
       }
       transition={
@@ -2071,154 +1786,114 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       }
     >
       <View
-        accessibilityRole="image"
-        accessible={true}
         animate={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
         animatedStyle={
           {
             "value": {
-              "alignItems": "center",
-              "backgroundColor": "#ff0000",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
+              "bottom": 0,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "100%",
             },
           }
         }
         collapsable={false}
         style={
           {
-            "alignItems": "center",
-            "backgroundColor": "#ff0000",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
       >
         <View
-          animate={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "bottom": 0,
-                "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
           style={
-            {
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
+            [
+              {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "color": "#C5CEE0",
+                  "flex": 0,
+                },
+              ],
+            ]
           }
         >
           <View
-            style={
-              [
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                  "justifyContent": "center",
-                },
-                [
-                  {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  },
-                  {
-                    "color": "#C5CEE0",
-                    "flex": 0,
-                  },
-                ],
-              ]
+            accessibilityLabel="Loading indicator"
+            accessibilityRole="progressbar"
+            accessible={true}
+            animate={
+              {
+                "color": "#C5CEE0",
+              }
             }
+            collapsable={false}
+            rawSize={20}
+            style={
+              {
+                "height": 20,
+                "width": 20,
+              }
+            }
+            variant="spinner"
           >
             <View
-              accessibilityLabel="Loading indicator"
-              accessibilityRole="progressbar"
-              accessible={true}
-              animate={
-                {
-                  "color": "#C5CEE0",
-                }
-              }
               collapsable={false}
-              rawSize={20}
               style={
                 {
-                  "height": 20,
-                  "width": 20,
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
                 }
               }
-              variant="spinner"
             >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -2226,15 +1901,8 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
                       "width": 20,
                     }
                   }
@@ -2243,8 +1911,15 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": 0,
+                          },
+                          {
+                            "rotate": "-172.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -2253,15 +1928,8 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": 0,
-                            },
-                            {
-                              "rotate": "-172.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -2270,40 +1938,47 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
               </View>
+            </View>
+            <View
+              collapsable={false}
+              style={
+                {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "justifyContent": "center",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
               <View
                 collapsable={false}
                 style={
                   {
-                    "alignItems": "center",
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "height": 20,
+                    "transform": [
+                      {
+                        "rotate": "82.5deg",
+                      },
+                      {
+                        "rotate": "0deg",
+                      },
+                    ],
+                    "width": 20,
                   }
                 }
               >
@@ -2311,15 +1986,9 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                   collapsable={false}
                   style={
                     {
-                      "height": 20,
-                      "transform": [
-                        {
-                          "rotate": "82.5deg",
-                        },
-                        {
-                          "rotate": "0deg",
-                        },
-                      ],
+                      "height": 10,
+                      "overflow": "hidden",
+                      "top": 10,
                       "width": 20,
                     }
                   }
@@ -2328,9 +1997,15 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                     collapsable={false}
                     style={
                       {
-                        "height": 10,
-                        "overflow": "hidden",
-                        "top": 10,
+                        "height": 20,
+                        "transform": [
+                          {
+                            "translateY": -10,
+                          },
+                          {
+                            "rotate": "352.5deg",
+                          },
+                        ],
                         "width": 20,
                       }
                     }
@@ -2339,15 +2014,8 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "translateY": -10,
-                            },
-                            {
-                              "rotate": "352.5deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -2356,25 +2024,14 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "borderColor": "#C5CEE0",
+                            "borderRadius": 10,
+                            "borderWidth": 2,
+                            "height": 20,
                             "width": 20,
                           }
                         }
-                      >
-                        <View
-                          collapsable={false}
-                          style={
-                            {
-                              "borderColor": "#C5CEE0",
-                              "borderRadius": 10,
-                              "borderWidth": 2,
-                              "height": 20,
-                              "width": 20,
-                            }
-                          }
-                        />
-                      </View>
+                      />
                     </View>
                   </View>
                 </View>
@@ -2385,16 +2042,43 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
       </View>
     </View>
     <View
-      animate={{}}
+      animate={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }
       animatedStyle={
         {
-          "value": {},
+          "value": {
+            "alignItems": "center",
+            "backgroundColor": "#EDF1F7",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "borderWidth": 2,
+            "height": 70,
+            "justifyContent": "center",
+            "width": 70,
+          },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "row",
+          "alignItems": "center",
+          "backgroundColor": "#EDF1F7",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 1000,
+          "borderWidth": 2,
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
         }
       }
       transition={
@@ -2405,56 +2089,7 @@ exports[`Molecules/Avatar passes the snapshot test for fallback support 1`] = `
         }
       }
     >
-      <View
-        animate={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "alignItems": "center",
-              "backgroundColor": "#EDF1F7",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 1000,
-              "borderWidth": 2,
-              "height": 70,
-              "justifyContent": "center",
-              "width": 70,
-            },
-          }
-        }
-        collapsable={false}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#EDF1F7",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 1000,
-            "borderWidth": 2,
-            "height": 70,
-            "justifyContent": "center",
-            "width": 70,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
-      >
-        <Text />
-      </View>
+      <Text />
     </View>
   </View>
 </View>
@@ -2477,13 +2112,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
     truncatedBackgroundColor="neutral.200"
   >
     <View
@@ -2503,13 +2131,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
       style={
         {
           "alignSelf": "flex-start",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -2607,13 +2228,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
               "right": 0,
               "top": 0,
               "width": "100%",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
             }
           }
         >
@@ -2931,13 +2545,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
               "width": "100%",
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
         >
           <View
             style={
@@ -3243,13 +2850,6 @@ exports[`Molecules/Avatar passes the snapshot test when used in a group 1`] = `
               "lineHeight": 32,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
           variant="p2"
         >
           +1
@@ -3282,76 +2882,80 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         "flexWrap": "wrap",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
-      animate={
-        {
-          "marginRight": "s",
-        }
-      }
+      animate={{}}
       animatedStyle={
         {
-          "value": {
-            "marginRight": "s",
-          },
+          "value": {},
         }
       }
       collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-          "marginRight": "s",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
+      style={{}}
     >
       <View
-        animate={{}}
+        animate={
+          {
+            "alignSelf": "flex-start",
+          }
+        }
         animatedStyle={
           {
-            "value": {},
+            "value": {
+              "alignSelf": "flex-start",
+            },
           }
         }
         collapsable={false}
-        style={{}}
-        transition={
+        style={
           {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "alignSelf": "flex-start",
           }
         }
       >
         <View
+          accessibilityRole="image"
+          accessible={true}
           animate={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "marginRight": "s",
+              "width": 70,
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignSelf": "flex-start",
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "marginRight": "s",
+                "width": 70,
               },
             }
           }
           collapsable={false}
           style={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "marginRight": "s",
+              "width": 70,
             }
           }
           transition={
@@ -3363,154 +2967,114 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
           }
         >
           <View
-            accessibilityRole="image"
-            accessible={true}
             animate={
               {
-                "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
+                "bottom": 0,
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
               }
             }
             animatedStyle={
               {
                 "value": {
-                  "alignItems": "center",
-                  "backgroundColor": "#00ffff",
-                  "borderColor": "#FFFFFF",
-                  "borderRadius": 1000,
-                  "borderWidth": 2,
-                  "height": 70,
-                  "justifyContent": "center",
-                  "width": 70,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
                 },
               }
             }
             collapsable={false}
             style={
               {
-                "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
+                "bottom": 0,
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
               }
             }
           >
             <View
-              animate={
-                {
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  },
-                }
-              }
-              collapsable={false}
               style={
-                {
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
+                [
+                  {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                  },
+                  [
+                    {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    {
+                      "color": "#C5CEE0",
+                      "flex": 0,
+                    },
+                  ],
+                ]
               }
             >
               <View
-                style={
-                  [
-                    {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "justifyContent": "center",
-                    },
-                    [
-                      {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      {
-                        "color": "#C5CEE0",
-                        "flex": 0,
-                      },
-                    ],
-                  ]
+                accessibilityLabel="Loading indicator"
+                accessibilityRole="progressbar"
+                accessible={true}
+                animate={
+                  {
+                    "color": "#C5CEE0",
+                  }
                 }
+                collapsable={false}
+                rawSize={20}
+                style={
+                  {
+                    "height": 20,
+                    "width": 20,
+                  }
+                }
+                variant="spinner"
               >
                 <View
-                  accessibilityLabel="Loading indicator"
-                  accessibilityRole="progressbar"
-                  accessible={true}
-                  animate={
-                    {
-                      "color": "#C5CEE0",
-                    }
-                  }
                   collapsable={false}
-                  rawSize={20}
                   style={
                     {
-                      "height": 20,
-                      "width": 20,
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
-                  variant="spinner"
                 >
                   <View
                     collapsable={false}
                     style={
                       {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "justifyContent": "center",
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "height": 20,
+                        "transform": [
+                          {
+                            "rotate": "82.5deg",
+                          },
+                          {
+                            "rotate": "0deg",
+                          },
+                        ],
+                        "width": 20,
                       }
                     }
                   >
@@ -3518,15 +3082,8 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "rotate": "82.5deg",
-                            },
-                            {
-                              "rotate": "0deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
                           "width": 20,
                         }
                       }
@@ -3535,8 +3092,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
+                            "height": 20,
+                            "transform": [
+                              {
+                                "translateY": 0,
+                              },
+                              {
+                                "rotate": "-172.5deg",
+                              },
+                            ],
                             "width": 20,
                           }
                         }
@@ -3545,15 +3109,8 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                           collapsable={false}
                           style={
                             {
-                              "height": 20,
-                              "transform": [
-                                {
-                                  "translateY": 0,
-                                },
-                                {
-                                  "rotate": "-172.5deg",
-                                },
-                              ],
+                              "height": 10,
+                              "overflow": "hidden",
                               "width": 20,
                             }
                           }
@@ -3562,40 +3119,47 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                             collapsable={false}
                             style={
                               {
-                                "height": 10,
-                                "overflow": "hidden",
+                                "borderColor": "#C5CEE0",
+                                "borderRadius": 10,
+                                "borderWidth": 2,
+                                "height": 20,
                                 "width": 20,
                               }
                             }
-                          >
-                            <View
-                              collapsable={false}
-                              style={
-                                {
-                                  "borderColor": "#C5CEE0",
-                                  "borderRadius": 10,
-                                  "borderWidth": 2,
-                                  "height": 20,
-                                  "width": 20,
-                                }
-                              }
-                            />
-                          </View>
+                          />
                         </View>
                       </View>
                     </View>
                   </View>
+                </View>
+                <View
+                  collapsable={false}
+                  style={
+                    {
+                      "alignItems": "center",
+                      "bottom": 0,
+                      "justifyContent": "center",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                >
                   <View
                     collapsable={false}
                     style={
                       {
-                        "alignItems": "center",
-                        "bottom": 0,
-                        "justifyContent": "center",
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "height": 20,
+                        "transform": [
+                          {
+                            "rotate": "82.5deg",
+                          },
+                          {
+                            "rotate": "0deg",
+                          },
+                        ],
+                        "width": 20,
                       }
                     }
                   >
@@ -3603,15 +3167,9 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                       collapsable={false}
                       style={
                         {
-                          "height": 20,
-                          "transform": [
-                            {
-                              "rotate": "82.5deg",
-                            },
-                            {
-                              "rotate": "0deg",
-                            },
-                          ],
+                          "height": 10,
+                          "overflow": "hidden",
+                          "top": 10,
                           "width": 20,
                         }
                       }
@@ -3620,9 +3178,15 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                         collapsable={false}
                         style={
                           {
-                            "height": 10,
-                            "overflow": "hidden",
-                            "top": 10,
+                            "height": 20,
+                            "transform": [
+                              {
+                                "translateY": -10,
+                              },
+                              {
+                                "rotate": "352.5deg",
+                              },
+                            ],
                             "width": 20,
                           }
                         }
@@ -3631,15 +3195,8 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                           collapsable={false}
                           style={
                             {
-                              "height": 20,
-                              "transform": [
-                                {
-                                  "translateY": -10,
-                                },
-                                {
-                                  "rotate": "352.5deg",
-                                },
-                              ],
+                              "height": 10,
+                              "overflow": "hidden",
                               "width": 20,
                             }
                           }
@@ -3648,25 +3205,14 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                             collapsable={false}
                             style={
                               {
-                                "height": 10,
-                                "overflow": "hidden",
+                                "borderColor": "#C5CEE0",
+                                "borderRadius": 10,
+                                "borderWidth": 2,
+                                "height": 20,
                                 "width": 20,
                               }
                             }
-                          >
-                            <View
-                              collapsable={false}
-                              style={
-                                {
-                                  "borderColor": "#C5CEE0",
-                                  "borderRadius": 10,
-                                  "borderWidth": 2,
-                                  "height": 20,
-                                  "width": 20,
-                                }
-                              }
-                            />
-                          </View>
+                          />
                         </View>
                       </View>
                     </View>
@@ -3675,51 +3221,87 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               </View>
             </View>
           </View>
+        </View>
+        <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignSelf": "flex-start",
+              "bottom": -0,
+              "height": 15,
+              "position": "absolute",
+              "right": -0,
+            }
+          }
+        >
           <View
-            accessibilityLabel="Press me!"
-            accessibilityRole="button"
-            accessibilityState={
+            animatedStyle={
               {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": false,
-                "expanded": undefined,
-                "selected": undefined,
+                "value": {
+                  "alignItems": "center",
+                  "backgroundColor": "#38A169",
+                  "borderRadius": 1000,
+                  "bottom": -0,
+                  "height": 15,
+                  "justifyContent": "center",
+                  "minWidth": 15,
+                  "position": "absolute",
+                  "right": -0,
+                  "zIndex": 1300,
+                },
               }
             }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
             collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
+            onLayout={[Function]}
+            state={
               {
-                "alignSelf": "flex-start",
-                "bottom": -0,
-                "height": 15,
-                "position": "absolute",
-                "right": -0,
-              }
-            }
-          >
-            <View
-              animatedStyle={
-                {
+                "__state": {
+                  "_isReanimatedSharedValue": true,
+                  "_value": {
+                    "alignItems": "center",
+                    "backgroundColor": "#38A169",
+                    "borderRadius": 1000,
+                    "bottom": -0,
+                    "height": 15,
+                    "justifyContent": "center",
+                    "minWidth": 15,
+                    "position": "absolute",
+                    "right": -0,
+                    "zIndex": 1300,
+                  },
+                  "addListener": [Function],
+                  "modify": [Function],
+                  "removeListener": [Function],
                   "value": {
                     "alignItems": "center",
                     "backgroundColor": "#38A169",
@@ -3732,130 +3314,106 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                     "right": -0,
                     "zIndex": 1300,
                   },
-                }
+                },
               }
-              collapsable={false}
-              onLayout={[Function]}
-              state={
-                {
-                  "__state": {
-                    "_isReanimatedSharedValue": true,
-                    "_value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#38A169",
-                      "borderRadius": 1000,
-                      "bottom": -0,
-                      "height": 15,
-                      "justifyContent": "center",
-                      "minWidth": 15,
-                      "position": "absolute",
-                      "right": -0,
-                      "zIndex": 1300,
-                    },
-                    "addListener": [Function],
-                    "modify": [Function],
-                    "removeListener": [Function],
-                    "value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#38A169",
-                      "borderRadius": 1000,
-                      "bottom": -0,
-                      "height": 15,
-                      "justifyContent": "center",
-                      "minWidth": 15,
-                      "position": "absolute",
-                      "right": -0,
-                      "zIndex": 1300,
-                    },
-                  },
-                }
+            }
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#38A169",
+                "borderRadius": 1000,
+                "bottom": -0,
+                "height": 15,
+                "justifyContent": "center",
+                "minWidth": 15,
+                "position": "absolute",
+                "right": -0,
+                "zIndex": 1300,
               }
-              style={
-                {
-                  "alignItems": "center",
-                  "backgroundColor": "#38A169",
-                  "borderRadius": 1000,
-                  "bottom": -0,
-                  "height": 15,
-                  "justifyContent": "center",
-                  "minWidth": 15,
-                  "position": "absolute",
-                  "right": -0,
-                  "zIndex": 1300,
-                }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
               }
-              transition={
-                {
-                  "duration": 50,
-                }
-              }
-            />
-          </View>
+            }
+          />
         </View>
       </View>
     </View>
     <View
-      animate={
-        {
-          "marginRight": "s",
-        }
-      }
+      animate={{}}
       animatedStyle={
         {
-          "value": {
-            "marginRight": "s",
-          },
+          "value": {},
         }
       }
       collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-          "marginRight": "s",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
+      style={{}}
     >
       <View
-        animate={{}}
+        animate={
+          {
+            "alignSelf": "flex-start",
+          }
+        }
         animatedStyle={
           {
-            "value": {},
+            "value": {
+              "alignSelf": "flex-start",
+            },
           }
         }
         collapsable={false}
-        style={{}}
-        transition={
+        style={
           {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "alignSelf": "flex-start",
           }
         }
       >
         <View
           animate={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "marginRight": "s",
+              "width": 70,
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignSelf": "flex-start",
+                "alignItems": "center",
+                "backgroundColor": "#00ffff",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "marginRight": "s",
+                "width": 70,
               },
             }
           }
           collapsable={false}
+          onLayout={[Function]}
           style={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#00ffff",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "marginRight": "s",
+              "width": 70,
             }
           }
           transition={
@@ -3866,45 +3424,147 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
             }
           }
         >
-          <View
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
             animate={
               {
-                "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
+                "color": "#1A2138",
               }
             }
             animatedStyle={
               {
                 "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 23,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 32,
+              }
+            }
+            variant="p2"
+          >
+            RA
+          </Text>
+        </View>
+        <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignSelf": "flex-start",
+              "bottom": -0,
+              "height": 25,
+              "position": "absolute",
+              "right": -0,
+            }
+          }
+        >
+          <View
+            animatedStyle={
+              {
+                "value": {
                   "alignItems": "center",
-                  "backgroundColor": "#00ffff",
-                  "borderColor": "#FFFFFF",
+                  "backgroundColor": "#FF4B42",
                   "borderRadius": 1000,
-                  "borderWidth": 2,
-                  "height": 70,
+                  "bottom": -0,
+                  "height": 25,
                   "justifyContent": "center",
-                  "width": 70,
+                  "minWidth": 25,
+                  "position": "absolute",
+                  "right": -0,
+                  "zIndex": 1300,
                 },
               }
             }
             collapsable={false}
             onLayout={[Function]}
+            state={
+              {
+                "__state": {
+                  "_isReanimatedSharedValue": true,
+                  "_value": {
+                    "alignItems": "center",
+                    "backgroundColor": "#FF4B42",
+                    "borderRadius": 1000,
+                    "bottom": -0,
+                    "height": 25,
+                    "justifyContent": "center",
+                    "minWidth": 25,
+                    "position": "absolute",
+                    "right": -0,
+                    "zIndex": 1300,
+                  },
+                  "addListener": [Function],
+                  "modify": [Function],
+                  "removeListener": [Function],
+                  "value": {
+                    "alignItems": "center",
+                    "backgroundColor": "#FF4B42",
+                    "borderRadius": 1000,
+                    "bottom": -0,
+                    "height": 25,
+                    "justifyContent": "center",
+                    "minWidth": 25,
+                    "position": "absolute",
+                    "right": -0,
+                    "zIndex": 1300,
+                  },
+                },
+              }
+            }
             style={
               {
                 "alignItems": "center",
-                "backgroundColor": "#00ffff",
-                "borderColor": "#FFFFFF",
+                "backgroundColor": "#FF4B42",
                 "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
+                "bottom": -0,
+                "height": 25,
                 "justifyContent": "center",
-                "width": 70,
+                "minWidth": 25,
+                "position": "absolute",
+                "right": -0,
+                "zIndex": 1300,
               }
             }
             transition={
@@ -3921,200 +3581,36 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               allowFontScaling={true}
               animate={
                 {
-                  "color": "#1A2138",
+                  "color": "#FFFFFF",
+                  "paddingHorizontal": 8,
                 }
               }
               animatedStyle={
                 {
                   "value": {
-                    "color": "#1A2138",
+                    "color": "#FFFFFF",
+                    "paddingHorizontal": 8,
                   },
                 }
               }
               collapsable={false}
               style={
                 {
-                  "color": "#1A2138",
-                  "fontFamily": "Poppins-Regular",
-                  "fontSize": 23,
+                  "color": "#FFFFFF",
+                  "fontFamily": "Poppins-Medium",
+                  "fontSize": 13.799999999999999,
                   "fontStyle": "normal",
-                  "fontWeight": "400",
+                  "fontWeight": "500",
                   "includeFontPadding": false,
                   "letterSpacing": 0,
-                  "lineHeight": 32,
+                  "lineHeight": 22,
+                  "paddingHorizontal": 8,
                 }
               }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-              variant="p2"
+              variant="p4"
             >
-              RA
+              0
             </Text>
-          </View>
-          <View
-            accessibilityLabel="Press me!"
-            accessibilityRole="button"
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": false,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "alignSelf": "flex-start",
-                "bottom": -0,
-                "height": 25,
-                "position": "absolute",
-                "right": -0,
-              }
-            }
-          >
-            <View
-              animatedStyle={
-                {
-                  "value": {
-                    "alignItems": "center",
-                    "backgroundColor": "#FF4B42",
-                    "borderRadius": 1000,
-                    "bottom": -0,
-                    "height": 25,
-                    "justifyContent": "center",
-                    "minWidth": 25,
-                    "position": "absolute",
-                    "right": -0,
-                    "zIndex": 1300,
-                  },
-                }
-              }
-              collapsable={false}
-              onLayout={[Function]}
-              state={
-                {
-                  "__state": {
-                    "_isReanimatedSharedValue": true,
-                    "_value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#FF4B42",
-                      "borderRadius": 1000,
-                      "bottom": -0,
-                      "height": 25,
-                      "justifyContent": "center",
-                      "minWidth": 25,
-                      "position": "absolute",
-                      "right": -0,
-                      "zIndex": 1300,
-                    },
-                    "addListener": [Function],
-                    "modify": [Function],
-                    "removeListener": [Function],
-                    "value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#FF4B42",
-                      "borderRadius": 1000,
-                      "bottom": -0,
-                      "height": 25,
-                      "justifyContent": "center",
-                      "minWidth": 25,
-                      "position": "absolute",
-                      "right": -0,
-                      "zIndex": 1300,
-                    },
-                  },
-                }
-              }
-              style={
-                {
-                  "alignItems": "center",
-                  "backgroundColor": "#FF4B42",
-                  "borderRadius": 1000,
-                  "bottom": -0,
-                  "height": 25,
-                  "justifyContent": "center",
-                  "minWidth": 25,
-                  "position": "absolute",
-                  "right": -0,
-                  "zIndex": 1300,
-                }
-              }
-              transition={
-                {
-                  "duration": 50,
-                }
-              }
-            >
-              <Text
-                accessibilityRole="text"
-                accessible={true}
-                allowFontScaling={true}
-                animate={
-                  {
-                    "color": "#FFFFFF",
-                    "paddingHorizontal": 8,
-                  }
-                }
-                animatedStyle={
-                  {
-                    "value": {
-                      "color": "#FFFFFF",
-                      "paddingHorizontal": 8,
-                    },
-                  }
-                }
-                collapsable={false}
-                style={
-                  {
-                    "color": "#FFFFFF",
-                    "fontFamily": "Poppins-Medium",
-                    "fontSize": 13.799999999999999,
-                    "fontStyle": "normal",
-                    "fontWeight": "500",
-                    "includeFontPadding": false,
-                    "letterSpacing": 0,
-                    "lineHeight": 22,
-                    "paddingHorizontal": 8,
-                  }
-                }
-                transition={
-                  {
-                    "dampingRatio": 1,
-                    "duration": 100,
-                    "type": "spring",
-                  }
-                }
-                variant="p4"
-              >
-                0
-              </Text>
-            </View>
           </View>
         </View>
       </View>
@@ -4127,53 +3623,67 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
         }
       }
       collapsable={false}
-      style={
-        {
-          "flexDirection": "row",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
+      style={{}}
     >
       <View
-        animate={{}}
+        animate={
+          {
+            "alignSelf": "flex-start",
+          }
+        }
         animatedStyle={
           {
-            "value": {},
+            "value": {
+              "alignSelf": "flex-start",
+            },
           }
         }
         collapsable={false}
-        style={{}}
-        transition={
+        style={
           {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
+            "alignSelf": "flex-start",
           }
         }
       >
         <View
           animate={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#ff0000",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "width": 70,
             }
           }
           animatedStyle={
             {
               "value": {
-                "alignSelf": "flex-start",
+                "alignItems": "center",
+                "backgroundColor": "#ff0000",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 1000,
+                "borderWidth": 2,
+                "height": 70,
+                "justifyContent": "center",
+                "width": 70,
               },
             }
           }
           collapsable={false}
+          onLayout={[Function]}
           style={
             {
-              "alignSelf": "flex-start",
+              "alignItems": "center",
+              "backgroundColor": "#ff0000",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "borderWidth": 2,
+              "height": 70,
+              "justifyContent": "center",
+              "width": 70,
             }
           }
           transition={
@@ -4183,101 +3693,87 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
               "type": "spring",
             }
           }
+        />
+        <View
+          accessibilityLabel="Press me!"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": false,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignSelf": "flex-start",
+              "bottom": -5,
+              "height": 30,
+              "position": "absolute",
+              "right": -5,
+            }
+          }
         >
           <View
-            animate={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#ff0000",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
-              }
-            }
             animatedStyle={
               {
                 "value": {
                   "alignItems": "center",
-                  "backgroundColor": "#ff0000",
-                  "borderColor": "#FFFFFF",
+                  "backgroundColor": "#6A7BFF",
                   "borderRadius": 1000,
-                  "borderWidth": 2,
-                  "height": 70,
+                  "bottom": -5,
+                  "height": 30,
                   "justifyContent": "center",
-                  "width": 70,
+                  "minWidth": 30,
+                  "position": "absolute",
+                  "right": -5,
+                  "zIndex": 1300,
                 },
               }
             }
             collapsable={false}
             onLayout={[Function]}
-            style={
+            state={
               {
-                "alignItems": "center",
-                "backgroundColor": "#ff0000",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 1000,
-                "borderWidth": 2,
-                "height": 70,
-                "justifyContent": "center",
-                "width": 70,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-          />
-          <View
-            accessibilityLabel="Press me!"
-            accessibilityRole="button"
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": false,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "alignSelf": "flex-start",
-                "bottom": -5,
-                "height": 30,
-                "position": "absolute",
-                "right": -5,
-              }
-            }
-          >
-            <View
-              animatedStyle={
-                {
+                "__state": {
+                  "_isReanimatedSharedValue": true,
+                  "_value": {
+                    "alignItems": "center",
+                    "backgroundColor": "#6A7BFF",
+                    "borderRadius": 1000,
+                    "bottom": -5,
+                    "height": 30,
+                    "justifyContent": "center",
+                    "minWidth": 30,
+                    "position": "absolute",
+                    "right": -5,
+                    "zIndex": 1300,
+                  },
+                  "addListener": [Function],
+                  "modify": [Function],
+                  "removeListener": [Function],
                   "value": {
                     "alignItems": "center",
                     "backgroundColor": "#6A7BFF",
@@ -4290,66 +3786,32 @@ exports[`Molecules/Avatar withBadge HOC works as expected 1`] = `
                     "right": -5,
                     "zIndex": 1300,
                   },
-                }
+                },
               }
-              collapsable={false}
-              onLayout={[Function]}
-              state={
-                {
-                  "__state": {
-                    "_isReanimatedSharedValue": true,
-                    "_value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#6A7BFF",
-                      "borderRadius": 1000,
-                      "bottom": -5,
-                      "height": 30,
-                      "justifyContent": "center",
-                      "minWidth": 30,
-                      "position": "absolute",
-                      "right": -5,
-                      "zIndex": 1300,
-                    },
-                    "addListener": [Function],
-                    "modify": [Function],
-                    "removeListener": [Function],
-                    "value": {
-                      "alignItems": "center",
-                      "backgroundColor": "#6A7BFF",
-                      "borderRadius": 1000,
-                      "bottom": -5,
-                      "height": 30,
-                      "justifyContent": "center",
-                      "minWidth": 30,
-                      "position": "absolute",
-                      "right": -5,
-                      "zIndex": 1300,
-                    },
-                  },
-                }
+            }
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderRadius": 1000,
+                "bottom": -5,
+                "height": 30,
+                "justifyContent": "center",
+                "minWidth": 30,
+                "position": "absolute",
+                "right": -5,
+                "zIndex": 1300,
               }
-              style={
-                {
-                  "alignItems": "center",
-                  "backgroundColor": "#6A7BFF",
-                  "borderRadius": 1000,
-                  "bottom": -5,
-                  "height": 30,
-                  "justifyContent": "center",
-                  "minWidth": 30,
-                  "position": "absolute",
-                  "right": -5,
-                  "zIndex": 1300,
-                }
+            }
+            transition={
+              {
+                "dampingRatio": 1,
+                "duration": 100,
+                "type": "spring",
               }
-              transition={
-                {
-                  "duration": 50,
-                }
-              }
-            >
-              <Text />
-            </View>
+            }
+          >
+            <Text />
           </View>
         </View>
       </View>

@@ -118,7 +118,9 @@ exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -149,13 +151,6 @@ exports[`Molecules/Button passes the snapshot test for basic setup 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -285,7 +280,9 @@ exports[`Molecules/Button passes the snapshot test for different color schemes 1
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -316,13 +313,6 @@ exports[`Molecules/Button passes the snapshot test for different color schemes 1
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -441,7 +431,9 @@ exports[`Molecules/Button passes the snapshot test for different color schemes 1
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -472,13 +464,6 @@ exports[`Molecules/Button passes the snapshot test for different color schemes 1
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -608,7 +593,9 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -623,13 +610,6 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
         style={
           {
             "flexDirection": "row",
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -661,13 +641,6 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
             }
           }
           variant="p3"
@@ -787,7 +760,9 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -802,13 +777,6 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
         style={
           {
             "flexDirection": "row",
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -839,13 +807,6 @@ exports[`Molecules/Button passes the snapshot test for different icons 1`] = `
               "includeFontPadding": false,
               "letterSpacing": 0,
               "lineHeight": 22,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
             }
           }
           variant="p3"
@@ -977,7 +938,9 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1008,13 +971,6 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -1132,7 +1088,9 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1163,13 +1121,6 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -1288,7 +1239,9 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1319,13 +1272,6 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -1444,7 +1390,9 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1475,13 +1423,6 @@ exports[`Molecules/Button passes the snapshot test for different sizes 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 24,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p2"
@@ -1611,7 +1552,9 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1642,13 +1585,6 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -1767,7 +1703,9 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1798,13 +1736,6 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -1857,7 +1788,7 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
           "value": {
             "alignItems": "center",
             "alignSelf": "flex-start",
-            "backgroundColor": "transparent",
+            "backgroundColor": "#F0F2FF00",
             "borderRadius": 8,
             "justifyContent": "center",
             "marginVertical": 4,
@@ -1875,7 +1806,7 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
             "_value": {
               "alignItems": "center",
               "alignSelf": "flex-start",
-              "backgroundColor": "transparent",
+              "backgroundColor": "#F0F2FF00",
               "borderRadius": 8,
               "justifyContent": "center",
               "marginVertical": 4,
@@ -1889,7 +1820,7 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
             "value": {
               "alignItems": "center",
               "alignSelf": "flex-start",
-              "backgroundColor": "transparent",
+              "backgroundColor": "#F0F2FF00",
               "borderRadius": 8,
               "justifyContent": "center",
               "marginVertical": 4,
@@ -1904,7 +1835,7 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
         {
           "alignItems": "center",
           "alignSelf": "flex-start",
-          "backgroundColor": "transparent",
+          "backgroundColor": "#F0F2FF00",
           "borderRadius": 8,
           "justifyContent": "center",
           "marginVertical": 4,
@@ -1915,7 +1846,9 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1946,13 +1879,6 @@ exports[`Molecules/Button passes the snapshot test for different variants 1`] = 
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -2082,7 +2008,9 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2333,13 +2261,6 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
             "lineHeight": 22,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
         variant="p3"
       >
         Basic loading button
@@ -2456,7 +2377,9 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2478,13 +2401,6 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
           {
             "alignItems": "center",
             "flexDirection": "row",
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -2734,13 +2650,6 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
               "marginLeft": 10,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
           variant="p3"
         >
           Loading
@@ -2858,7 +2767,9 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2880,13 +2791,6 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
           {
             "alignItems": "center",
             "flexDirection": "row",
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -2920,13 +2824,6 @@ exports[`Molecules/Button passes the snapshot test for loading state 1`] = `
               "letterSpacing": 0,
               "lineHeight": 22,
               "marginRight": 10,
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
             }
           }
           variant="p3"
@@ -3271,7 +3168,9 @@ exports[`Molecules/Button passes the snapshot test when using style props 1`] = 
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -3302,13 +3201,6 @@ exports[`Molecules/Button passes the snapshot test when using style props 1`] = 
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"

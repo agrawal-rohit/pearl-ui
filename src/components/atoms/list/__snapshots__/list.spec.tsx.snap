@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Grid passes the snapshot test 1`] = `
+exports[`Atoms/List passes the snapshot test 1`] = `
 <View
   style={
     {
@@ -16,12 +16,10 @@ exports[`Atoms/Grid passes the snapshot test 1`] = `
       }
     }
     collapsable={false}
-    style={{}}
-    transition={
+    style={
       {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
       }
     }
   />

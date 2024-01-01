@@ -114,7 +114,9 @@ exports[`Molecules/IconButton passes the snapshot test for basic setup 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -238,7 +240,9 @@ exports[`Molecules/IconButton passes the snapshot test for different color schem
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -279,13 +283,6 @@ exports[`Molecules/IconButton passes the snapshot test for different color schem
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -398,7 +395,9 @@ exports[`Molecules/IconButton passes the snapshot test for different color schem
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -439,13 +438,6 @@ exports[`Molecules/IconButton passes the snapshot test for different color schem
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -569,7 +561,9 @@ exports[`Molecules/IconButton passes the snapshot test for different icons 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -610,13 +604,6 @@ exports[`Molecules/IconButton passes the snapshot test for different icons 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -729,7 +716,9 @@ exports[`Molecules/IconButton passes the snapshot test for different icons 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -770,13 +759,6 @@ exports[`Molecules/IconButton passes the snapshot test for different icons 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -900,7 +882,9 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -941,13 +925,6 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1060,7 +1037,9 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1101,13 +1080,6 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1220,7 +1192,9 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1261,13 +1235,6 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1380,7 +1347,9 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1421,13 +1390,6 @@ exports[`Molecules/IconButton passes the snapshot test for different sizes 1`] =
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1551,7 +1513,9 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1592,13 +1556,6 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1711,7 +1668,9 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1752,13 +1711,6 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -1863,7 +1815,9 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1904,13 +1858,6 @@ exports[`Molecules/IconButton passes the snapshot test for different variants 1`
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         
@@ -2034,7 +1981,9 @@ exports[`Molecules/IconButton passes the snapshot test for loading state 1`] = `
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2369,7 +2318,9 @@ exports[`Molecules/IconButton passes the snapshot test when using style props 1`
       }
       transition={
         {
+          "dampingRatio": 1,
           "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2410,13 +2361,6 @@ exports[`Molecules/IconButton passes the snapshot test when using style props 1`
             },
             {},
           ]
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
         }
       >
         

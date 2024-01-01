@@ -30,13 +30,6 @@ exports[`Atoms/Center passes the snapshot test 1`] = `
         "justifyContent": "center",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     This is centered
   </View>

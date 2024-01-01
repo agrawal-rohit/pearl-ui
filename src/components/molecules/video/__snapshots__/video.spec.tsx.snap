@@ -63,89 +63,95 @@ exports[`Atoms/Video passes the snapshot test 1`] = `
       }
     >
       <View
-        pointerEvents="box-none"
         style={
-          [
-            {
-              "overflow": "hidden",
-            },
-            {
-              "borderRadius": 16,
-              "height": "100%",
-              "opacity": 0,
-              "width": "100%",
-            },
-          ]
+          {
+            "display": "none",
+            "height": "100%",
+            "width": "100%",
+          }
         }
       >
-        <ViewManagerAdapter_ExpoVideoView
-          animate={
-            {
-              "borderRadius": 16,
-              "height": "100%",
-              "opacity": 0,
-              "width": "100%",
-            }
-          }
-          animatedStyle={
-            {
-              "value": {
-                "borderRadius": 16,
-                "height": "100%",
-                "opacity": 0,
-                "width": "100%",
-              },
-            }
-          }
-          collapsable={false}
-          onError={[Function]}
-          onFullscreenUpdate={[Function]}
-          onLoad={[Function]}
-          onLoadStart={[Function]}
-          onReadyForDisplay={[Function]}
-          onStatusUpdate={[Function]}
-          resizeMode="mock"
-          source={
-            {
-              "headers": undefined,
-              "overridingExtension": null,
-              "uri": "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-            }
-          }
-          status={{}}
+        <View
+          pointerEvents="box-none"
           style={
             [
               {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+                "overflow": "hidden",
               },
-              undefined,
-            ]
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-          useNativeControls={true}
-          videoStyle={
-            [
               {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+                "borderRadius": 16,
+                "height": "100%",
+                "width": "100%",
               },
-              undefined,
             ]
           }
-        />
+        >
+          <ViewManagerAdapter_ExpoVideoView
+            animate={
+              {
+                "borderRadius": 16,
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "borderRadius": 16,
+                  "height": "100%",
+                  "width": "100%",
+                },
+              }
+            }
+            collapsable={false}
+            onError={[Function]}
+            onFullscreenUpdate={[Function]}
+            onLoad={[Function]}
+            onLoadStart={[Function]}
+            onReadyForDisplay={[Function]}
+            onStatusUpdate={[Function]}
+            resizeMode="mock"
+            source={
+              {
+                "headers": undefined,
+                "overridingExtension": null,
+                "uri": "https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+              }
+            }
+            status={{}}
+            style={
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+            useNativeControls={true}
+            videoStyle={
+              [
+                {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+          />
+        </View>
       </View>
     </View>
     <View
@@ -183,13 +189,6 @@ exports[`Atoms/Video passes the snapshot test 1`] = `
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >

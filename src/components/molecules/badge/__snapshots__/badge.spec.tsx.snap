@@ -103,7 +103,9 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -137,13 +139,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -247,7 +242,9 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -281,13 +278,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -391,7 +381,9 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -425,13 +417,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -535,7 +520,9 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -569,13 +556,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -679,7 +659,9 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -713,13 +695,6 @@ exports[`Molecules/Badge passes the snapshot test for different color schemes 1`
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -830,7 +805,9 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -864,13 +841,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "letterSpacing": 0,
             "lineHeight": 20,
             "paddingHorizontal": 6,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -970,7 +940,9 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1004,13 +976,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 8,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -1110,7 +1075,9 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1144,13 +1111,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -1250,7 +1210,9 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1284,13 +1246,6 @@ exports[`Molecules/Badge passes the snapshot test for different sizes 1`] = `
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 12,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p3"
@@ -1401,7 +1356,9 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     />
@@ -1497,7 +1454,9 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1531,13 +1490,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -1637,7 +1589,9 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1671,13 +1625,6 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -1777,7 +1724,9 @@ exports[`Molecules/Badge passes the snapshot test for different values types 1`]
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1890,7 +1839,9 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1924,13 +1875,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "letterSpacing": 0,
             "lineHeight": 22,
             "paddingHorizontal": 10,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
         variant="p4"
@@ -2034,7 +1978,9 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2070,13 +2016,6 @@ exports[`Molecules/Badge passes the snapshot test for different variants 1`] = `
             "paddingHorizontal": 10,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
         variant="p4"
       >
         NEW
@@ -2103,13 +2042,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
@@ -2128,13 +2060,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
       style={
         {
           "alignSelf": "flex-start",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -2250,7 +2175,9 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
           }
           transition={
             {
-              "duration": 50,
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
             }
           }
         >
@@ -2286,13 +2213,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
                 "paddingHorizontal": 8,
               }
             }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
             variant="p4"
           >
             28
@@ -2310,13 +2230,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
@@ -2335,13 +2248,6 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
       style={
         {
           "alignSelf": "flex-start",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -2457,7 +2363,9 @@ exports[`Molecules/Badge withBadge HOC works as expected 1`] = `
           }
           transition={
             {
-              "duration": 50,
+              "dampingRatio": 1,
+              "duration": 100,
+              "type": "spring",
             }
           }
         >

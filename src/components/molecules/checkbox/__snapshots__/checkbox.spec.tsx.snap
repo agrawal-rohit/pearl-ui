@@ -82,7 +82,9 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -100,162 +102,100 @@ exports[`Molecules/CheckBox passes the snapshot test for basic setup 1`] = `
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text />
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text />
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Check me!
-          </Text>
-        </View>
+          Check me!
+        </Text>
       </View>
     </View>
   </View>
@@ -344,7 +284,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -362,210 +304,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          colorScheme="primary"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            colorScheme="primary"
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Primary CheckBox
-          </Text>
-        </View>
+          Primary CheckBox
+        </Text>
       </View>
     </View>
   </View>
@@ -643,7 +516,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -661,210 +536,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different color schemes
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          colorScheme="secondary"
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            colorScheme="secondary"
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Secondary CheckBox
-          </Text>
-        </View>
+          Secondary CheckBox
+        </Text>
       </View>
     </View>
   </View>
@@ -953,7 +759,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -971,210 +779,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 1,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 1,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          size="xs"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 1,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 10.35,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 13.799999999999999,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p4"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 1,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 4,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 1,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            size="xs"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 1,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 10.35,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 13.799999999999999,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p4"
-          >
-            Small Checkbox
-          </Text>
-        </View>
+          Small Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -1252,7 +991,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1270,210 +1011,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 2,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 4,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 2,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          size="s"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 4,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 2,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 12.649999999999999,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 2,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 4,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 2,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            size="s"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 4,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 2,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 12.649999999999999,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Regular Checkbox
-          </Text>
-        </View>
+          Regular Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -1551,7 +1223,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1569,210 +1243,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          size="m"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            size="m"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Large Checkbox
-          </Text>
-        </View>
+          Large Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -1850,7 +1455,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -1868,210 +1475,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different sizes 1`] = `
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 4,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 4,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          size="l"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 4,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 17.25,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 18.4,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 24,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p2"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 4,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 4,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            size="l"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 4,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 17.25,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 18.4,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 24,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p2"
-          >
-            Extra Large Checkbox
-          </Text>
-        </View>
+          Extra Large Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -2160,7 +1698,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2178,210 +1718,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="filled"
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="filled"
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Filled Checkbox
-          </Text>
-        </View>
+          Filled Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -2459,7 +1930,9 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2477,210 +1950,141 @@ exports[`Molecules/CheckBox passes the snapshot test for different variants 1`] 
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#C5CEE0",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#C5CEE0",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#C5CEE0",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="outline"
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#1A2138",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#1A2138",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#C5CEE0",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#C5CEE0",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#C5CEE0",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="outline"
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#1A2138",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#1A2138",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#1A2138",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Outline Checkbox
-          </Text>
-        </View>
+          Outline Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -2769,7 +2173,9 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -2787,212 +2193,143 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          isChecked={true}
+          isIndeterminate={true}
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="filled"
+        >
+          <Text
+            accessibilityLabel="remove-outline Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 1,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#6A7BFF",
-                  "borderColor": "#6A7BFF",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            isChecked={true}
-            isIndeterminate={true}
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="filled"
-          >
-            <Text
-              accessibilityLabel="remove-outline Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 1,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 1,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 1,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Indeterminate Checkbox
-          </Text>
-        </View>
+          Indeterminate Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -3070,7 +2407,9 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -3088,211 +2427,142 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#6A7BFF",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          isChecked={true}
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="filled"
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 1,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 1,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#6A7BFF",
-                  "borderColor": "#6A7BFF",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            isChecked={true}
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#6A7BFF",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="filled"
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 1,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 1,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 1,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Checked Checkbox
-          </Text>
-        </View>
+          Checked Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -3370,7 +2640,9 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -3388,212 +2660,143 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          isChecked={true}
+          isIndeterminate={true}
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="outline"
+        >
+          <Text
+            accessibilityLabel="remove-outline Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#6A7BFF",
+                "opacity": 1,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#6A7BFF",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            isChecked={true}
-            isIndeterminate={true}
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="outline"
-          >
-            <Text
-              accessibilityLabel="remove-outline Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#6A7BFF",
-                  "opacity": 1,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#6A7BFF",
-                    "opacity": 1,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#6A7BFF",
-                    "opacity": 1,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Indeterminate Checkbox
-          </Text>
-        </View>
+          Indeterminate Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -3671,7 +2874,9 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -3689,211 +2894,142 @@ exports[`Molecules/CheckBox passes the snapshot test when in a checked/indetermi
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#6A7BFF",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          isChecked={true}
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+          variant="outline"
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#6A7BFF",
+                "opacity": 1,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#6A7BFF",
+                  "opacity": 1,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#6A7BFF",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            isChecked={true}
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "transparent",
-                "borderColor": "#6A7BFF",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-            variant="outline"
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#6A7BFF",
-                  "opacity": 1,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#6A7BFF",
-                    "opacity": 1,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#6A7BFF",
-                    "opacity": 1,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Checked Checkbox
-          </Text>
-        </View>
+          Checked Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -3982,7 +3118,9 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -4000,210 +3138,141 @@ exports[`Molecules/CheckBox passes the snapshot test when in an error state 1`] 
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#FF4B42",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#FF4B42",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          isInvalid={true}
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#FF4B42",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#FF4B42",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#FF4B42",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            isInvalid={true}
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#FF4B42",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Error Checkbox
-          </Text>
-        </View>
+          Error Checkbox
+        </Text>
       </View>
     </View>
   </View>
@@ -4304,7 +3373,9 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
       }
       transition={
         {
-          "duration": 50,
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
         }
       }
     >
@@ -4322,209 +3393,140 @@ exports[`Molecules/CheckBox passes the snapshot test when using style props 1`] 
             "flexWrap": "wrap",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       >
         <View
           animate={
             {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
               "marginRight": 10,
+              "padding": 3,
             }
           }
           animatedStyle={
             {
               "value": {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#EDF1F7",
+                "borderColor": "#E4E9F2",
+                "borderRadius": 8,
+                "borderWidth": 2,
+                "justifyContent": "center",
                 "marginRight": 10,
+                "padding": 3,
+              },
+            }
+          }
+          checkedIconFamily="Ionicons"
+          checkedIconName="checkmark-sharp"
+          collapsable={false}
+          indeterminateIconFamily="Ionicons"
+          indeterminateIconName="remove-outline"
+          shape="square"
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#EDF1F7",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 8,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "marginRight": 10,
+              "padding": 3,
+            }
+          }
+          transition={
+            {
+              "duration": 50,
+              "type": "timing",
+            }
+          }
+        >
+          <Text
+            accessibilityLabel="checkmark-sharp Icon"
+            accessible={true}
+            allowFontScaling={false}
+            animate={
+              {
+                "color": "#FFFFFF",
+                "opacity": 0,
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+              }
+            }
+            collapsable={false}
+            selectable={false}
+            style={
+              [
+                {
+                  "color": undefined,
+                  "fontSize": 14.95,
+                },
+                {
+                  "color": "#FFFFFF",
+                  "opacity": 0,
+                },
+                {
+                  "fontFamily": "ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "alignSelf": "center",
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "alignSelf": "center",
+                "color": "#1A2138",
               },
             }
           }
           collapsable={false}
           style={
             {
-              "flexDirection": "row",
-              "marginRight": 10,
+              "alignSelf": "center",
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
             }
           }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
+          variant="p3"
         >
-          <View
-            animate={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#EDF1F7",
-                  "borderColor": "#E4E9F2",
-                  "borderRadius": 8,
-                  "borderWidth": 2,
-                  "justifyContent": "center",
-                  "padding": 3,
-                },
-              }
-            }
-            checkedIconFamily="Ionicons"
-            checkedIconName="checkmark-sharp"
-            collapsable={false}
-            indeterminateIconFamily="Ionicons"
-            indeterminateIconName="remove-outline"
-            shape="square"
-            style={
-              {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#EDF1F7",
-                "borderColor": "#E4E9F2",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "justifyContent": "center",
-                "padding": 3,
-              }
-            }
-            transition={
-              {
-                "duration": 50,
-                "type": "timing",
-              }
-            }
-          >
-            <Text
-              accessibilityLabel="checkmark-sharp Icon"
-              accessible={true}
-              allowFontScaling={false}
-              animate={
-                {
-                  "color": "#FFFFFF",
-                  "opacity": 0,
-                }
-              }
-              animatedStyle={
-                {
-                  "value": {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                }
-              }
-              collapsable={false}
-              selectable={false}
-              style={
-                [
-                  {
-                    "color": undefined,
-                    "fontSize": 14.95,
-                  },
-                  {
-                    "color": "#FFFFFF",
-                    "opacity": 0,
-                  },
-                  {
-                    "fontFamily": "ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  {},
-                ]
-              }
-              transition={
-                {
-                  "dampingRatio": 1,
-                  "duration": 100,
-                  "type": "spring",
-                }
-              }
-            >
-              
-            </Text>
-          </View>
-        </View>
-        <View
-          animate={{}}
-          animatedStyle={
-            {
-              "value": {},
-            }
-          }
-          collapsable={false}
-          style={
-            {
-              "flexDirection": "row",
-            }
-          }
-          transition={
-            {
-              "dampingRatio": 1,
-              "duration": 100,
-              "type": "spring",
-            }
-          }
-        >
-          <Text
-            accessibilityRole="text"
-            accessible={true}
-            allowFontScaling={true}
-            animate={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-              }
-            }
-            animatedStyle={
-              {
-                "value": {
-                  "alignSelf": "center",
-                  "color": "#1A2138",
-                },
-              }
-            }
-            collapsable={false}
-            style={
-              {
-                "alignSelf": "center",
-                "color": "#1A2138",
-                "fontFamily": "Poppins-Regular",
-                "fontSize": 16.099999999999998,
-                "fontStyle": "normal",
-                "fontWeight": "400",
-                "includeFontPadding": false,
-                "letterSpacing": 0,
-                "lineHeight": 22,
-              }
-            }
-            transition={
-              {
-                "dampingRatio": 1,
-                "duration": 100,
-                "type": "spring",
-              }
-            }
-            variant="p3"
-          >
-            Button press
-          </Text>
-        </View>
+          Button press
+        </Text>
       </View>
     </View>
   </View>

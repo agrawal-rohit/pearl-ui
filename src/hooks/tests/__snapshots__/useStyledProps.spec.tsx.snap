@@ -30,13 +30,6 @@ exports[`useStyleProps return correct style object for props 1`] = `
         "padding": 3,
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <Text
       accessibilityRole="text"
@@ -65,13 +58,6 @@ exports[`useStyleProps return correct style object for props 1`] = `
           "includeFontPadding": false,
           "letterSpacing": 0,
           "lineHeight": 22,
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -98,13 +84,6 @@ exports[`useStyleProps return empty style object for missing props 1`] = `
     }
     collapsable={false}
     style={{}}
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <Text
       accessibilityRole="text"
@@ -133,13 +112,6 @@ exports[`useStyleProps return empty style object for missing props 1`] = `
           "includeFontPadding": false,
           "letterSpacing": 0,
           "lineHeight": 22,
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >

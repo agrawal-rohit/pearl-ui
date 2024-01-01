@@ -111,13 +111,6 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
             "zIndex": 1,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
     <View
@@ -155,13 +148,6 @@ exports[`Molecules/Image loads uses the filesystem url for remote images with ca
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -481,13 +467,6 @@ exports[`Molecules/Image loads uses the local url for local images 1`] = `
             "width": "100%",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
   </View>
@@ -581,13 +560,6 @@ exports[`Molecules/Image loads uses the target url for remote images without cac
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -907,13 +879,6 @@ exports[`Molecules/Image passes the snapshot test for basic setup 1`] = `
             "width": "100%",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
   </View>
@@ -1020,13 +985,6 @@ exports[`Molecules/Image passes the snapshot test for basic setup 1`] = `
             "zIndex": 1,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
     <View
@@ -1064,13 +1022,6 @@ exports[`Molecules/Image passes the snapshot test for basic setup 1`] = `
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -1406,13 +1357,6 @@ exports[`Molecules/Image passes the snapshot test for the fallback methods if th
             "zIndex": 1,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
     <View
@@ -1607,13 +1551,6 @@ exports[`Molecules/Image passes the snapshot test for the fallback methods if th
             "zIndex": 3,
           },
         ]
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
       }
     >
       <ViewManagerAdapter_ExpoBlurView
@@ -1735,13 +1672,6 @@ exports[`Molecules/Image passes the snapshot test for the fallback methods if th
             "zIndex": 1,
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
     <View
@@ -1936,13 +1866,6 @@ exports[`Molecules/Image passes the snapshot test for the fallback methods if th
             "zIndex": 3,
           },
         ]
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
       }
     >
       <ViewManagerAdapter_ExpoBlurView
@@ -2064,13 +1987,6 @@ exports[`Molecules/Image passes the snapshot test for the various progressive lo
             "width": "100%",
           }
         }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
-        }
       />
     </View>
   </View>
@@ -2171,13 +2087,6 @@ exports[`Molecules/Image passes the snapshot test for the various progressive lo
             "top": 0,
             "width": "100%",
             "zIndex": 1,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       />
@@ -2375,13 +2284,6 @@ exports[`Molecules/Image passes the snapshot test for the various progressive lo
           },
         ]
       }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     >
       <ViewManagerAdapter_ExpoBlurView
         blurReductionFactor={4}
@@ -2478,13 +2380,6 @@ exports[`Molecules/Image passes the snapshot test for the various progressive lo
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -2796,13 +2691,6 @@ exports[`Molecules/Image triggers onError to be triggered and final image to be 
           "right": 0,
           "top": 0,
           "width": "100%",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >

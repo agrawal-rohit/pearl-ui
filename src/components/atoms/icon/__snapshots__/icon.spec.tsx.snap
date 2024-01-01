@@ -43,13 +43,6 @@ exports[`Atoms/Icon passes the snapshot test in dark mode 1`] = `
         {},
       ]
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     
   </Text>
@@ -110,13 +103,6 @@ exports[`Atoms/Icon passes the snapshot test when overriden 1`] = `
         },
         {},
       ]
-    }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
     }
   >
     

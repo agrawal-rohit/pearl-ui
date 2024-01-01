@@ -2749,13 +2749,6 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
           "width": 4,
         }
       }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     >
       <View
         collapsable={false}
@@ -2817,13 +2810,6 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
           "width": 4,
         }
       }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     >
       <View
         collapsable={false}
@@ -2883,13 +2869,6 @@ exports[`Atoms/Spinner passes the snapshot test for different variants 1`] = `
           "height": 20,
           "marginHorizontal": 2,
           "width": 4,
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -3923,125 +3902,103 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
         "flexWrap": "nowrap",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
         {
+          "backgroundColor": "#EDF1F7",
+          "height": 100,
           "marginBottom": "l",
+          "width": 200,
         }
       }
       animatedStyle={
         {
           "value": {
+            "backgroundColor": "#EDF1F7",
+            "height": 100,
             "marginBottom": "l",
+            "width": 200,
           },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "column",
+          "backgroundColor": "#EDF1F7",
+          "height": 100,
           "marginBottom": "l",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
+          "width": 200,
         }
       }
     >
       <View
-        animate={
-          {
-            "backgroundColor": "#EDF1F7",
-            "height": 100,
-            "width": 200,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "backgroundColor": "#EDF1F7",
-              "height": 100,
-              "width": 200,
-            },
-          }
-        }
-        collapsable={false}
         style={
-          {
-            "backgroundColor": "#EDF1F7",
-            "height": 100,
-            "width": 200,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "alignSelf": "flex-start",
+              },
+              {
+                "color": "#6A7BFF",
+                "flex": 0,
+              },
+            ],
+          ]
         }
       >
         <View
-          style={
-            [
-              {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-              [
-                {
-                  "alignSelf": "flex-start",
-                },
-                {
-                  "color": "#6A7BFF",
-                  "flex": 0,
-                },
-              ],
-            ]
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#6A7BFF",
+            }
           }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
         >
           <View
-            accessibilityLabel="Loading indicator"
-            accessibilityRole="progressbar"
-            accessible={true}
-            animate={
-              {
-                "color": "#6A7BFF",
-              }
-            }
             collapsable={false}
-            rawSize={20}
             style={
               {
-                "height": 20,
-                "width": 20,
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
               }
             }
-            variant="spinner"
           >
             <View
               collapsable={false}
               style={
                 {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
                 }
               }
             >
@@ -4049,15 +4006,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                 collapsable={false}
                 style={
                   {
-                    "height": 20,
-                    "transform": [
-                      {
-                        "rotate": "82.5deg",
-                      },
-                      {
-                        "rotate": "0deg",
-                      },
-                    ],
+                    "height": 10,
+                    "overflow": "hidden",
                     "width": 20,
                   }
                 }
@@ -4066,8 +4016,15 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                   collapsable={false}
                   style={
                     {
-                      "height": 10,
-                      "overflow": "hidden",
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
                       "width": 20,
                     }
                   }
@@ -4076,15 +4033,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "translateY": 0,
-                          },
-                          {
-                            "rotate": "-172.5deg",
-                          },
-                        ],
+                        "height": 10,
+                        "overflow": "hidden",
                         "width": 20,
                       }
                     }
@@ -4093,40 +4043,47 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
+                          "borderColor": "#6A7BFF",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
                           "width": 20,
                         }
                       }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "borderColor": "#6A7BFF",
-                            "borderRadius": 10,
-                            "borderWidth": 2,
-                            "height": 20,
-                            "width": 20,
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
             <View
               collapsable={false}
               style={
                 {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
                 }
               }
             >
@@ -4134,15 +4091,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                 collapsable={false}
                 style={
                   {
-                    "height": 20,
-                    "transform": [
-                      {
-                        "rotate": "82.5deg",
-                      },
-                      {
-                        "rotate": "0deg",
-                      },
-                    ],
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
                     "width": 20,
                   }
                 }
@@ -4151,9 +4102,15 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                   collapsable={false}
                   style={
                     {
-                      "height": 10,
-                      "overflow": "hidden",
-                      "top": 10,
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
                       "width": 20,
                     }
                   }
@@ -4162,15 +4119,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "translateY": -10,
-                          },
-                          {
-                            "rotate": "352.5deg",
-                          },
-                        ],
+                        "height": 10,
+                        "overflow": "hidden",
                         "width": 20,
                       }
                     }
@@ -4179,25 +4129,14 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
+                          "borderColor": "#6A7BFF",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
                           "width": 20,
                         }
                       }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "borderColor": "#6A7BFF",
-                            "borderRadius": 10,
-                            "borderWidth": 2,
-                            "height": 20,
-                            "width": 20,
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
@@ -4207,113 +4146,102 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
       </View>
     </View>
     <View
-      animate={{}}
+      animate={
+        {
+          "backgroundColor": "#EDF1F7",
+          "height": 100,
+          "width": 200,
+        }
+      }
       animatedStyle={
         {
-          "value": {},
+          "value": {
+            "backgroundColor": "#EDF1F7",
+            "height": 100,
+            "width": 200,
+          },
         }
       }
       collapsable={false}
       style={
         {
-          "flexDirection": "column",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
+          "backgroundColor": "#EDF1F7",
+          "height": 100,
+          "width": 200,
         }
       }
     >
       <View
-        animate={
-          {
-            "backgroundColor": "#EDF1F7",
-            "height": 100,
-            "width": 200,
-          }
-        }
-        animatedStyle={
-          {
-            "value": {
-              "backgroundColor": "#EDF1F7",
-              "height": 100,
-              "width": 200,
-            },
-          }
-        }
-        collapsable={false}
         style={
-          {
-            "backgroundColor": "#EDF1F7",
-            "height": 100,
-            "width": 200,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
-          }
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            [
+              {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              {
+                "color": "#6A7BFF",
+                "flex": 0,
+              },
+            ],
+          ]
         }
       >
         <View
-          style={
-            [
-              {
-                "alignItems": "center",
-                "flex": 1,
-                "justifyContent": "center",
-              },
-              [
-                {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                {
-                  "color": "#6A7BFF",
-                  "flex": 0,
-                },
-              ],
-            ]
+          accessibilityLabel="Loading indicator"
+          accessibilityRole="progressbar"
+          accessible={true}
+          animate={
+            {
+              "color": "#6A7BFF",
+            }
           }
+          collapsable={false}
+          rawSize={20}
+          style={
+            {
+              "height": 20,
+              "width": 20,
+            }
+          }
+          variant="spinner"
         >
           <View
-            accessibilityLabel="Loading indicator"
-            accessibilityRole="progressbar"
-            accessible={true}
-            animate={
-              {
-                "color": "#6A7BFF",
-              }
-            }
             collapsable={false}
-            rawSize={20}
             style={
               {
-                "height": 20,
-                "width": 20,
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
               }
             }
-            variant="spinner"
           >
             <View
               collapsable={false}
               style={
                 {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
                 }
               }
             >
@@ -4321,15 +4249,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                 collapsable={false}
                 style={
                   {
-                    "height": 20,
-                    "transform": [
-                      {
-                        "rotate": "82.5deg",
-                      },
-                      {
-                        "rotate": "0deg",
-                      },
-                    ],
+                    "height": 10,
+                    "overflow": "hidden",
                     "width": 20,
                   }
                 }
@@ -4338,8 +4259,15 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                   collapsable={false}
                   style={
                     {
-                      "height": 10,
-                      "overflow": "hidden",
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": 0,
+                        },
+                        {
+                          "rotate": "-172.5deg",
+                        },
+                      ],
                       "width": 20,
                     }
                   }
@@ -4348,15 +4276,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "translateY": 0,
-                          },
-                          {
-                            "rotate": "-172.5deg",
-                          },
-                        ],
+                        "height": 10,
+                        "overflow": "hidden",
                         "width": 20,
                       }
                     }
@@ -4365,40 +4286,47 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
+                          "borderColor": "#6A7BFF",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
                           "width": 20,
                         }
                       }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "borderColor": "#6A7BFF",
-                            "borderRadius": 10,
-                            "borderWidth": 2,
-                            "height": 20,
-                            "width": 20,
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                 </View>
               </View>
             </View>
+          </View>
+          <View
+            collapsable={false}
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
             <View
               collapsable={false}
               style={
                 {
-                  "alignItems": "center",
-                  "bottom": 0,
-                  "justifyContent": "center",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+                  "height": 20,
+                  "transform": [
+                    {
+                      "rotate": "82.5deg",
+                    },
+                    {
+                      "rotate": "0deg",
+                    },
+                  ],
+                  "width": 20,
                 }
               }
             >
@@ -4406,15 +4334,9 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                 collapsable={false}
                 style={
                   {
-                    "height": 20,
-                    "transform": [
-                      {
-                        "rotate": "82.5deg",
-                      },
-                      {
-                        "rotate": "0deg",
-                      },
-                    ],
+                    "height": 10,
+                    "overflow": "hidden",
+                    "top": 10,
                     "width": 20,
                   }
                 }
@@ -4423,9 +4345,15 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                   collapsable={false}
                   style={
                     {
-                      "height": 10,
-                      "overflow": "hidden",
-                      "top": 10,
+                      "height": 20,
+                      "transform": [
+                        {
+                          "translateY": -10,
+                        },
+                        {
+                          "rotate": "352.5deg",
+                        },
+                      ],
                       "width": 20,
                     }
                   }
@@ -4434,15 +4362,8 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                     collapsable={false}
                     style={
                       {
-                        "height": 20,
-                        "transform": [
-                          {
-                            "translateY": -10,
-                          },
-                          {
-                            "rotate": "352.5deg",
-                          },
-                        ],
+                        "height": 10,
+                        "overflow": "hidden",
                         "width": 20,
                       }
                     }
@@ -4451,25 +4372,14 @@ exports[`Atoms/Spinner passes the snapshot test if the spinner is expanded or no
                       collapsable={false}
                       style={
                         {
-                          "height": 10,
-                          "overflow": "hidden",
+                          "borderColor": "#6A7BFF",
+                          "borderRadius": 10,
+                          "borderWidth": 2,
+                          "height": 20,
                           "width": 20,
                         }
                       }
-                    >
-                      <View
-                        collapsable={false}
-                        style={
-                          {
-                            "borderColor": "#6A7BFF",
-                            "borderRadius": 10,
-                            "borderWidth": 2,
-                            "height": 20,
-                            "width": 20,
-                          }
-                        }
-                      />
-                    </View>
+                    />
                   </View>
                 </View>
               </View>

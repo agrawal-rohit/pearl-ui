@@ -21,13 +21,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
         "flexDirection": "row",
       }
     }
-    transition={
-      {
-        "dampingRatio": 1,
-        "duration": 100,
-        "type": "spring",
-      }
-    }
   >
     <View
       animate={
@@ -49,13 +42,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
         {
           "backgroundColor": "#FF8371",
           "padding": "l",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -86,13 +72,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
@@ -119,13 +98,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
           "flex": 1,
         }
       }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
-        }
-      }
     />
     <View
       animate={
@@ -147,13 +119,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
         {
           "backgroundColor": "#48BB78",
           "padding": "l",
-        }
-      }
-      transition={
-        {
-          "dampingRatio": 1,
-          "duration": 100,
-          "type": "spring",
         }
       }
     >
@@ -184,13 +149,6 @@ exports[`Atoms/Spacer passes the snapshot test 1`] = `
             "includeFontPadding": false,
             "letterSpacing": 0,
             "lineHeight": 22,
-          }
-        }
-        transition={
-          {
-            "dampingRatio": 1,
-            "duration": 100,
-            "type": "spring",
           }
         }
       >
