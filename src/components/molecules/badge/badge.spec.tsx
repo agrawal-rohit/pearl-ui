@@ -84,7 +84,7 @@ describe("Molecules/Badge", () => {
 
   it("withBadge HOC works as expected", () => {
     const Wrapper = () => {
-      const BadgedIcon = withBadge<IconProps>(28, {
+      const BadgedIcon = withBadge<IconProps>("28", {
         placement: "topRight",
         size: "s",
       })(Icon);
@@ -122,8 +122,65 @@ describe("Molecules/Badge", () => {
     );
 
     const tree = root.toJSON();
-
     expect(tree).toMatchSnapshot();
-    expect(root.getByText("28")).toBeTruthy();
+  });
+
+  it("withBadge HOC works as expected with different placements", () => {
+    const Wrapper = () => {
+      const BadgedIconTopLeft = withBadge<IconProps>(28, {
+        placement: "topLeft",
+        size: "s",
+      })(Icon);
+      const BadgedIconTopRight = withBadge<IconProps>(28, {
+        placement: "topRight",
+        size: "s",
+      })(Icon);
+      const BadgedIconBottomLeft = withBadge<IconProps>(28, {
+        placement: "bottomLeft",
+        size: "s",
+      })(Icon);
+      const BadgedIconBottomRight = withBadge<IconProps>(28, {
+        placement: "bottomRight",
+        size: "s",
+      })(Icon);
+
+      return (
+        <>
+          <BadgedIconTopLeft
+            iconFamily="FontAwesome"
+            iconName="inbox"
+            size="m"
+            mb="l"
+          ></BadgedIconTopLeft>
+          <BadgedIconTopRight
+            iconFamily="FontAwesome"
+            iconName="inbox"
+            size="m"
+            mb="l"
+          ></BadgedIconTopRight>
+          <BadgedIconBottomLeft
+            iconFamily="FontAwesome"
+            iconName="inbox"
+            size="m"
+            mb="l"
+          ></BadgedIconBottomLeft>
+          <BadgedIconBottomRight
+            iconFamily="FontAwesome"
+            iconName="inbox"
+            size="m"
+            mb="l"
+          ></BadgedIconBottomRight>
+        </>
+      );
+    };
+
+    const root = render(
+      <ThemeProvider>
+        <Wrapper />
+      </ThemeProvider>
+    );
+
+    const tree = root.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

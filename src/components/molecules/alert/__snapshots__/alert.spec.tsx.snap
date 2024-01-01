@@ -1,0 +1,702 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Alert passes the snapshot test with default props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="alert"
+    accessible={true}
+    animate={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#C6F6D5",
+          "borderRadius": 8,
+          "paddingHorizontal": 16,
+          "paddingVertical": 12,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text />
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "justifyContent": "space-between",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "justifyContent": "space-between",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Alert passes the snapshot test with description prop 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="alert"
+    accessible={true}
+    animate={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#C6F6D5",
+          "borderRadius": 8,
+          "paddingHorizontal": 16,
+          "paddingVertical": 12,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityLabel="checkcircle Icon"
+      accessible={true}
+      allowFontScaling={false}
+      animate={
+        {
+          "alignSelf": "center",
+          "color": "#276749",
+          "marginRight": 16,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+        }
+      }
+      collapsable={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": undefined,
+            "fontSize": 19.549999999999997,
+          },
+          {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+          {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "justifyContent": "space-between",
+            "marginBottom": 2,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "justifyContent": "space-between",
+              "marginBottom": 2,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 2,
+          }
+        }
+      />
+      <View
+        animate={{}}
+        animatedStyle={
+          {
+            "value": {},
+          }
+        }
+        collapsable={false}
+        style={{}}
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "color": "#1A2138",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "color": "#1A2138",
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "color": "#1A2138",
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 14.95,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
+            }
+          }
+        >
+          Test Description
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Alert passes the snapshot test with title prop 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="alert"
+    accessible={true}
+    animate={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#C6F6D5",
+          "borderRadius": 8,
+          "paddingHorizontal": 16,
+          "paddingVertical": 12,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityLabel="checkcircle Icon"
+      accessible={true}
+      allowFontScaling={false}
+      animate={
+        {
+          "alignSelf": "center",
+          "color": "#276749",
+          "marginRight": 16,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+        }
+      }
+      collapsable={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": undefined,
+            "fontSize": 19.549999999999997,
+          },
+          {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+          {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "justifyContent": "space-between",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "justifyContent": "space-between",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <Text
+          accessibilityRole="text"
+          accessible={true}
+          allowFontScaling={true}
+          animate={
+            {
+              "color": "#22543D",
+            }
+          }
+          animatedStyle={
+            {
+              "value": {
+                "color": "#22543D",
+              },
+            }
+          }
+          collapsable={false}
+          style={
+            {
+              "color": "#22543D",
+              "fontFamily": "Poppins-SemiBold",
+              "fontSize": 16.099999999999998,
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "includeFontPadding": false,
+              "letterSpacing": 0,
+              "lineHeight": 22,
+            }
+          }
+        >
+          Test Title
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Alert passes the snapshot test with withCloseButton prop 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityRole="alert"
+    accessible={true}
+    animate={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#C6F6D5",
+          "borderRadius": 8,
+          "paddingHorizontal": 16,
+          "paddingVertical": 12,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#C6F6D5",
+        "borderRadius": 8,
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "paddingHorizontal": 16,
+        "paddingVertical": 12,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityLabel="checkcircle Icon"
+      accessible={true}
+      allowFontScaling={false}
+      animate={
+        {
+          "alignSelf": "center",
+          "color": "#276749",
+          "marginRight": 16,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+        }
+      }
+      collapsable={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": undefined,
+            "fontSize": 19.549999999999997,
+          },
+          {
+            "alignSelf": "center",
+            "color": "#276749",
+            "marginRight": 16,
+          },
+          {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+    <View
+      animate={
+        {
+          "marginRight": 16,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginRight": 16,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "flexWrap": "nowrap",
+          "marginRight": 16,
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "justifyContent": "space-between",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "justifyContent": "space-between",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      />
+    </View>
+    <View
+      accessibilityLabel="Close Alert"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignSelf": "flex-start",
+          "position": "absolute",
+          "right": 7,
+          "top": 5,
+        }
+      }
+    >
+      <View
+        animatedStyle={
+          {
+            "value": {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderRadius": 4,
+              "justifyContent": "center",
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 3,
+              "position": "absolute",
+              "right": 7,
+              "top": 5,
+            },
+          }
+        }
+        collapsable={false}
+        state={
+          {
+            "__state": {
+              "_isReanimatedSharedValue": true,
+              "_value": {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "transparent",
+                "borderRadius": 4,
+                "justifyContent": "center",
+                "marginVertical": 4,
+                "opacity": 1,
+                "padding": 3,
+                "position": "absolute",
+                "right": 7,
+                "top": 5,
+              },
+              "addListener": [Function],
+              "modify": [Function],
+              "removeListener": [Function],
+              "value": {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "transparent",
+                "borderRadius": 4,
+                "justifyContent": "center",
+                "marginVertical": 4,
+                "opacity": 1,
+                "padding": 3,
+                "position": "absolute",
+                "right": 7,
+                "top": 5,
+              },
+            },
+          }
+        }
+        style={
+          {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "transparent",
+            "borderRadius": 4,
+            "justifyContent": "center",
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 3,
+            "position": "absolute",
+            "right": 7,
+            "top": 5,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 100,
+            "type": "spring",
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+</View>
+`;

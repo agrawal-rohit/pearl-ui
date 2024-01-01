@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/List passes the snapshot test 1`] = `
+exports[`Atoms/List passes the snapshot test for List 1`] = `
 <View
   style={
     {
@@ -22,6 +22,649 @@ exports[`Atoms/List passes the snapshot test 1`] = `
         "flexWrap": "nowrap",
       }
     }
-  />
+  >
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 1
+      </Text>
+    </View>
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 2
+      </Text>
+    </View>
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 3
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/List passes the snapshot test for OrderedList 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text />
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 1
+      </Text>
+    </View>
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text />
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 2
+      </Text>
+    </View>
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+    >
+      <Text />
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 3
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/List passes the snapshot test for UnorderedList 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+            "marginRight": 10,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+              "marginRight": 10,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "marginRight": 10,
+          }
+        }
+        variant="p4"
+      >
+        1
+        .
+      </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 1
+      </Text>
+    </View>
+    <View
+      animate={
+        {
+          "marginBottom": 8,
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "marginBottom": 8,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 8,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+            "marginRight": 10,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+              "marginRight": 10,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "marginRight": 10,
+          }
+        }
+        variant="p4"
+      >
+        2
+        .
+      </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 2
+      </Text>
+    </View>
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+            "marginRight": 10,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+              "marginRight": 10,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 13.799999999999999,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+            "marginRight": 10,
+          }
+        }
+        variant="p4"
+      >
+        3
+        .
+      </Text>
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Test Item 3
+      </Text>
+    </View>
+  </View>
 </View>
 `;

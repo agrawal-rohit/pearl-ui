@@ -74,7 +74,9 @@ exports[`pearl/basic passes the snapshot test for a <Text> component 1`] = `
   <Text
     style={{}}
   >
-    asdasd
+    <Text>
+      asdasd
+    </Text>
   </Text>
 </View>
 `;

@@ -1,0 +1,511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules/Switch passes the snapshot test with default props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "height": 25,
+        "width": 42,
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#E4E9F2",
+            "borderColor": "#E4E9F2",
+            "borderRadius": 1000,
+            "borderWidth": 1,
+            "height": 25,
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 2,
+            "width": 42,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#E4E9F2",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 2,
+              "width": 42,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#E4E9F2",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 2,
+              "width": 42,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#E4E9F2",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 1000,
+          "borderWidth": 1,
+          "height": 25,
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 2,
+          "width": 42,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "translateX": 0,
+            "width": 19,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "height": 19,
+              "transform": [
+                {
+                  "translateX": 0,
+                },
+              ],
+              "width": 19,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+            "width": 19,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 50,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Switch passes the snapshot test with isChecked prop 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "height": 25,
+        "width": 42,
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#6A7BFF",
+            "borderColor": "#6A7BFF",
+            "borderRadius": 1000,
+            "borderWidth": 1,
+            "height": 25,
+            "marginVertical": 4,
+            "opacity": 1,
+            "padding": 2,
+            "width": 42,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 2,
+              "width": 42,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#6A7BFF",
+              "borderColor": "#6A7BFF",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 1,
+              "padding": 2,
+              "width": 42,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#6A7BFF",
+          "borderColor": "#6A7BFF",
+          "borderRadius": 1000,
+          "borderWidth": 1,
+          "height": 25,
+          "marginVertical": 4,
+          "opacity": 1,
+          "padding": 2,
+          "width": 42,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "translateX": 17,
+            "width": 19,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "height": 19,
+              "transform": [
+                {
+                  "translateX": 17,
+                },
+              ],
+              "width": 19,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "transform": [
+              {
+                "translateX": 17,
+              },
+            ],
+            "width": 19,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 50,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Molecules/Switch passes the snapshot test with isDisabled prop 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "height": 25,
+        "width": 42,
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#E4E9F2",
+            "borderColor": "#E4E9F2",
+            "borderRadius": 1000,
+            "borderWidth": 1,
+            "height": 25,
+            "marginVertical": 4,
+            "opacity": 0.5,
+            "padding": 2,
+            "width": 42,
+          },
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {
+              "backgroundColor": "#E4E9F2",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 0.5,
+              "padding": 2,
+              "width": 42,
+            },
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {
+              "backgroundColor": "#E4E9F2",
+              "borderColor": "#E4E9F2",
+              "borderRadius": 1000,
+              "borderWidth": 1,
+              "height": 25,
+              "marginVertical": 4,
+              "opacity": 0.5,
+              "padding": 2,
+              "width": 42,
+            },
+          },
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#E4E9F2",
+          "borderColor": "#E4E9F2",
+          "borderRadius": 1000,
+          "borderWidth": 1,
+          "height": 25,
+          "marginVertical": 4,
+          "opacity": 0.5,
+          "padding": 2,
+          "width": 42,
+        }
+      }
+      transition={
+        {
+          "dampingRatio": 1,
+          "duration": 100,
+          "type": "spring",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "translateX": 0,
+            "width": 19,
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 1000,
+              "height": 19,
+              "transform": [
+                {
+                  "translateX": 0,
+                },
+              ],
+              "width": 19,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 1000,
+            "height": 19,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+            "width": 19,
+          }
+        }
+        transition={
+          {
+            "dampingRatio": 1,
+            "duration": 50,
+            "type": "spring",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

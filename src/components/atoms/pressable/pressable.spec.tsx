@@ -3,6 +3,7 @@ import Pressable from "./pressable";
 import { fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../theme/src/theme-context";
 import { MotiPressable } from "moti/interactions";
+import Text from "../text/text";
 
 jest.useFakeTimers();
 
@@ -12,7 +13,9 @@ describe("Atoms/Pressable", () => {
 
     const tree = await render(
       <ThemeProvider>
-        <Pressable onPress={onPress}>Button press</Pressable>
+        <Pressable onPress={onPress}>
+          <Text>Button press</Text>
+        </Pressable>
       </ThemeProvider>
     ).toJSON();
 
@@ -30,7 +33,7 @@ describe("Atoms/Pressable", () => {
           borderColor="neutral.400"
           borderWidth={2}
         >
-          Button press
+          <Text>Button press</Text>
         </Pressable>
       </ThemeProvider>
     ).toJSON();
@@ -44,7 +47,7 @@ describe("Atoms/Pressable", () => {
       <ThemeProvider>
         <MotiPressable> </MotiPressable>
         <Pressable onPress={onPress} testID="testOnPress">
-          Button press
+          <Text>Button press</Text>
         </Pressable>
       </ThemeProvider>
     );
@@ -55,5 +58,34 @@ describe("Atoms/Pressable", () => {
       fireEvent.press(pressableInstance);
       expect(onPress).toHaveBeenCalledTimes(1);
     }
+  });
+
+  it("passes the snapshot test when disabled", async () => {
+    const onPress = jest.fn();
+
+    const tree = await render(
+      <ThemeProvider>
+        <Pressable isDisabled onPress={onPress}>
+          <Text>Button press</Text>
+        </Pressable>
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("does not capture the onPress event when disabled", async () => {
+    const onPress = jest.fn();
+
+    const component = await render(
+      <ThemeProvider>
+        <Pressable onPress={onPress} isDisabled testID="testOnPressDisabled">
+          <Text>Button press</Text>
+        </Pressable>
+      </ThemeProvider>
+    );
+
+    const pressableInstance = component.getByTestId("testOnPressDisabled");
+    fireEvent.press(pressableInstance);
+    expect(onPress).not.toHaveBeenCalled();
   });
 });

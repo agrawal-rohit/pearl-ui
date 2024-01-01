@@ -9,16 +9,60 @@ exports[`Atoms/Box passes the basic snapshot test 1`] = `
   }
 >
   <View
-    animate={{}}
+    animate={
+      {
+        "height": 10,
+        "width": 10,
+      }
+    }
     animatedStyle={
       {
-        "value": {},
+        "value": {
+          "height": 10,
+          "width": 10,
+        },
       }
     }
     collapsable={false}
-    style={{}}
+    style={
+      {
+        "height": 10,
+        "width": 10,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Atoms/Box renders correctly with different props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "backgroundColor": "#ff0000",
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#ff0000",
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "backgroundColor": "#ff0000",
+      }
+    }
   >
-    asdasd
+    Test Text
   </View>
 </View>
 `;

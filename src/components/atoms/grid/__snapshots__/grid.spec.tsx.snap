@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Atoms/Grid passes the snapshot test 1`] = `
+exports[`Atoms/Grid passes the snapshot test with custom numCols 1`] = `
 <View
   style={
     {
@@ -17,6 +17,702 @@ exports[`Atoms/Grid passes the snapshot test 1`] = `
     }
     collapsable={false}
     style={{}}
-  />
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 6,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 6,
+              "paddingLeft": 0,
+              "paddingRight": 6,
+              "paddingTop": 0,
+              "width": "33.333333333333336%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 6,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+      <View
+        animate={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 6,
+            "paddingRight": 6,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 6,
+              "paddingLeft": 6,
+              "paddingRight": 6,
+              "paddingTop": 0,
+              "width": "33.333333333333336%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 6,
+            "paddingRight": 6,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+      <View
+        animate={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 6,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 6,
+              "paddingLeft": 6,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "width": "33.333333333333336%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 6,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "33.333333333333336%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/Grid passes the snapshot test with custom spacing 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={{}}
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "paddingBottom": 10,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 10,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 10,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/Grid passes the snapshot test with custom spacingX 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={{}}
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 6,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/Grid passes the snapshot test with custom spacingY 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={{}}
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "paddingBottom": 4,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 4,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 4,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/Grid passes the snapshot test with default props 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={{}}
+    animatedStyle={
+      {
+        "value": {},
+      }
+    }
+    collapsable={false}
+    style={{}}
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        animate={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "paddingBottom": 6,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 0,
+              "width": "100%",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "paddingBottom": 6,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          animate={{}}
+          animatedStyle={
+            {
+              "value": {},
+            }
+          }
+          collapsable={false}
+          style={{}}
+        >
+          <Text
+            accessibilityRole="text"
+            accessible={true}
+            allowFontScaling={true}
+            animate={
+              {
+                "color": "#1A2138",
+              }
+            }
+            animatedStyle={
+              {
+                "value": {
+                  "color": "#1A2138",
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              {
+                "color": "#1A2138",
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 16.099999999999998,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "includeFontPadding": false,
+                "letterSpacing": 0,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Test
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
 </View>
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./button";
+import ButtonGroup from "./button-group";
 import { fireEvent, render } from "@testing-library/react-native";
 import { ThemeProvider } from "../../../theme/src/theme-context";
 import Icon from "../../atoms/icon/icon";
@@ -177,5 +178,38 @@ describe("Molecules/Button", () => {
       fireEvent.press(pressableInstance);
       expect(onPress).toHaveBeenCalledTimes(0);
     }
+  });
+
+  it("passes the snapshot test for ButtonGroup", async () => {
+    const component = await render(
+      <ThemeProvider>
+        <ButtonGroup>
+          <Button>Button 1</Button>
+          <Button>Button 2</Button>
+        </ButtonGroup>
+      </ThemeProvider>
+    );
+
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("checks if ButtonGroup is disabled", async () => {
+    const onPress = jest.fn();
+
+    const component = await render(
+      <ThemeProvider>
+        <ButtonGroup isDisabled>
+          <Button testID="testOnPress" onPress={onPress}>
+            Button 1
+          </Button>
+          <Button>Button 2</Button>
+        </ButtonGroup>
+      </ThemeProvider>
+    );
+
+    const pressableInstance = component.getByTestId("testOnPress");
+    fireEvent.press(pressableInstance);
+    expect(onPress).toHaveBeenCalledTimes(0);
   });
 });

@@ -5,6 +5,7 @@ import { ThemeProvider } from "../../../theme/src/theme-context";
 import Box from "../box/box";
 import Stack from "../stack/stack";
 import Spinner from "./spinner";
+import Indicator from "./indicators/indicator";
 
 jest.useFakeTimers();
 
@@ -91,5 +92,29 @@ describe("Atoms/Spinner", () => {
     });
     const tree = (comp as any).toJSON();
     expect(tree.children.length).toBe(1);
+  });
+});
+
+describe("Atoms/Indicator", () => {
+  it("passes the snapshot test for different animation durations", () => {
+    const tree = render(
+      <ThemeProvider>
+        <Indicator animationDuration={500} />
+        <Indicator animationDuration={1000} />
+        <Indicator animationDuration={1500} />
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it("passes the snapshot test for different counts", () => {
+    const tree = render(
+      <ThemeProvider>
+        <Indicator count={1} />
+        <Indicator count={2} />
+        <Indicator count={3} />
+      </ThemeProvider>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Collapse passes the snapshot test when show is false 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+/>
+`;
+
+exports[`Atoms/Collapse passes the snapshot test when show is true 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "height": "auto",
+        "opacity": 1,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "height": 0,
+          "opacity": 0,
+        },
+      }
+    }
+    collapsable={false}
+    exit={
+      {
+        "height": 0,
+        "opacity": 0,
+      }
+    }
+    exitTransition={
+      {
+        "dampingRatio": 1,
+        "duration": 150,
+        "easing": [Function],
+        "type": "spring",
+      }
+    }
+    from={
+      {
+        "height": 0,
+        "opacity": 0,
+      }
+    }
+    style={
+      {
+        "height": 0,
+        "opacity": 0,
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 150,
+        "easing": [Function],
+        "type": "spring",
+      }
+    }
+  >
+    <View
+      animate={{}}
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      onLayout={[Function]}
+      style={{}}
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        This is a test
+      </Text>
+    </View>
+  </View>
+</View>
+`;

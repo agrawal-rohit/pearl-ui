@@ -45,10 +45,34 @@ describe("pearl/basic", () => {
   it("passes the snapshot test for a <Text> component", () => {
     const tree = render(
       <ThemeProvider>
-        <PearlTextComponent>asdasd</PearlTextComponent>
+        <PearlTextComponent>
+          <Text>asdasd</Text>
+        </PearlTextComponent>
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("renders the correct children for a <View> component", () => {
+    const { getByText } = render(
+      <ThemeProvider>
+        <PearlViewComponent>
+          <Text>Test</Text>
+        </PearlViewComponent>
+      </ThemeProvider>
+    );
+    expect(getByText("Test")).toBeTruthy();
+  });
+
+  it("renders the correct children for a <Text> component", () => {
+    const { getByText } = render(
+      <ThemeProvider>
+        <PearlTextComponent>
+          <Text>Test</Text>
+        </PearlTextComponent>
+      </ThemeProvider>
+    );
+    expect(getByText("Test")).toBeTruthy();
   });
 });
 
@@ -113,6 +137,28 @@ describe("pearl/atoms", () => {
       </ThemeProvider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("renders the correct children for a <View> component", () => {
+    const { getByText } = render(
+      <ThemeProvider theme={newTheme}>
+        <PearlViewComponent>
+          <Text>Test</Text>
+        </PearlViewComponent>
+      </ThemeProvider>
+    );
+    expect(getByText("Test")).toBeTruthy();
+  });
+
+  it("renders the correct children for a <Text> component", () => {
+    const { getByText } = render(
+      <ThemeProvider theme={newTheme}>
+        <PearlTextComponent>
+          <Text>Test</Text>
+        </PearlTextComponent>
+      </ThemeProvider>
+    );
+    expect(getByText("Test")).toBeTruthy();
   });
 });
 

@@ -87,7 +87,8 @@
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "**/*.{js,jsx,ts,tsx}",
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/index.ts",
       "!App.tsx",
       "!**/*.{json,md}",
       "!commitlint.config.js",

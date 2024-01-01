@@ -23,4 +23,31 @@ describe("Atoms/Text", () => {
     );
     expect(component.queryByText("Hi I am a text")).toBeTruthy();
   });
+
+  it("should render text with different font sizes", () => {
+    const component = render(
+      <ThemeProvider>
+        <Text fontSize={20}>Hi I am a text</Text>
+      </ThemeProvider>
+    );
+    expect(component.queryByText("Hi I am a text")).toBeTruthy();
+  });
+
+  it("should render text with different font weights", () => {
+    const component = render(
+      <ThemeProvider>
+        <Text fontWeight="bold">Hi I am a text</Text>
+      </ThemeProvider>
+    );
+    expect(component.queryByText("Hi I am a text")).toBeTruthy();
+  });
+
+  it("should render text with different font styles", () => {
+    const component = render(
+      <ThemeProvider>
+        <Text fontStyle="italic">Hi I am a text</Text>
+      </ThemeProvider>
+    );
+    expect(component.queryByText("Hi I am a text")).toBeTruthy();
+  });
 });

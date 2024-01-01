@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Atoms/Indicator passes the snapshot test for different animation durations 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={false}
+    style={{}}
+  />
+  <View
+    collapsable={false}
+    style={{}}
+  />
+  <View
+    collapsable={false}
+    style={{}}
+  />
+</View>
+`;
+
+exports[`Atoms/Indicator passes the snapshot test for different counts 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={false}
+    style={{}}
+  />
+  <View
+    collapsable={false}
+    style={{}}
+  />
+  <View
+    collapsable={false}
+    style={{}}
+  />
+</View>
+`;
+
 exports[`Atoms/Spinner passes the snapshot test for different color schemes 1`] = `
 <View
   style={

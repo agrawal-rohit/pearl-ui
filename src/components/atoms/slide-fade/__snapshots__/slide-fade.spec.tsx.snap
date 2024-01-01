@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/SlideFade passes the snapshot test when offsetX is set 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "opacity": 0,
+          "transform": [
+            {
+              "translateX": 10,
+            },
+            {
+              "translateY": 10,
+            },
+          ],
+        },
+      }
+    }
+    collapsable={false}
+    exit={
+      {
+        "opacity": 0,
+        "translateX": 10,
+        "translateY": 10,
+      }
+    }
+    exitTransition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+    from={
+      {
+        "opacity": 0,
+        "translateX": 10,
+        "translateY": 10,
+      }
+    }
+    style={
+      {
+        "opacity": 0,
+        "transform": [
+          {
+            "translateX": 10,
+          },
+          {
+            "translateY": 10,
+          },
+        ],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      animate={
+        {
+          "color": "#1A2138",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "color": "#1A2138",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "color": "#1A2138",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 16.099999999999998,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "includeFontPadding": false,
+          "letterSpacing": 0,
+          "lineHeight": 22,
+        }
+      }
+    >
+      This is a test
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Atoms/SlideFade passes the snapshot test when offsetY is set 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "opacity": 0,
+          "transform": [
+            {
+              "translateY": 20,
+            },
+          ],
+        },
+      }
+    }
+    collapsable={false}
+    exit={
+      {
+        "opacity": 0,
+        "translateY": 20,
+      }
+    }
+    exitTransition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+    from={
+      {
+        "opacity": 0,
+        "translateY": 20,
+      }
+    }
+    style={
+      {
+        "opacity": 0,
+        "transform": [
+          {
+            "translateY": 20,
+          },
+        ],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      animate={
+        {
+          "color": "#1A2138",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "color": "#1A2138",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "color": "#1A2138",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 16.099999999999998,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "includeFontPadding": false,
+          "letterSpacing": 0,
+          "lineHeight": 22,
+        }
+      }
+    >
+      This is a test
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Atoms/SlideFade passes the snapshot test when show is false 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+/>
+`;
+
+exports[`Atoms/SlideFade passes the snapshot test when show is true 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "opacity": 0,
+          "transform": [
+            {
+              "translateY": 10,
+            },
+          ],
+        },
+      }
+    }
+    collapsable={false}
+    exit={
+      {
+        "opacity": 0,
+        "translateY": 10,
+      }
+    }
+    exitTransition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+    from={
+      {
+        "opacity": 0,
+        "translateY": 10,
+      }
+    }
+    style={
+      {
+        "opacity": 0,
+        "transform": [
+          {
+            "translateY": 10,
+          },
+        ],
+      }
+    }
+    transition={
+      {
+        "dampingRatio": 1,
+        "duration": 100,
+        "type": "spring",
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      accessible={true}
+      allowFontScaling={true}
+      animate={
+        {
+          "color": "#1A2138",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "color": "#1A2138",
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        {
+          "color": "#1A2138",
+          "fontFamily": "Poppins-Regular",
+          "fontSize": 16.099999999999998,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "includeFontPadding": false,
+          "letterSpacing": 0,
+          "lineHeight": 22,
+        }
+      }
+    >
+      This is a test
+    </Text>
+  </View>
+</View>
+`;

@@ -72,7 +72,147 @@ exports[`Atoms/Pressable passes the snapshot test for basic setup 1`] = `
         }
       }
     >
-      Button press
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Button press
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/Pressable passes the snapshot test when disabled 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="Press me!"
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+      }
+    }
+  >
+    <View
+      animatedStyle={
+        {
+          "value": {},
+        }
+      }
+      collapsable={false}
+      state={
+        {
+          "__state": {
+            "_isReanimatedSharedValue": true,
+            "_value": {},
+            "addListener": [Function],
+            "modify": [Function],
+            "removeListener": [Function],
+            "value": {},
+          },
+        }
+      }
+      style={{}}
+      transition={
+        {
+          "duration": 50,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Button press
+      </Text>
     </View>
   </View>
 </View>
@@ -168,7 +308,38 @@ exports[`Atoms/Pressable passes the snapshot test when using style props 1`] = `
         }
       }
     >
-      Button press
+      <Text
+        accessibilityRole="text"
+        accessible={true}
+        allowFontScaling={true}
+        animate={
+          {
+            "color": "#1A2138",
+          }
+        }
+        animatedStyle={
+          {
+            "value": {
+              "color": "#1A2138",
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          {
+            "color": "#1A2138",
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 16.099999999999998,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "includeFontPadding": false,
+            "letterSpacing": 0,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Button press
+      </Text>
     </View>
   </View>
 </View>

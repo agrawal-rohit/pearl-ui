@@ -48,7 +48,248 @@ exports[`Atoms/Skeleton passes the snapshot test 1`] = `
           "opacity": 0,
         }
       }
+    >
+      <Text>
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Atoms/SkeletonCircle passes the snapshot test 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "backgroundColor": "#E4E9F2",
+        "borderRadius": 1000,
+        "height": 20,
+        "width": 20,
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "backgroundColor": "#F7F9FC",
+        },
+      }
+    }
+    collapsable={false}
+    from={
+      {
+        "backgroundColor": "#F7F9FC",
+      }
+    }
+    style={
+      {
+        "backgroundColor": "#F7F9FC",
+        "borderRadius": 1000,
+        "height": 20,
+        "width": 20,
+      }
+    }
+    transition={
+      {
+        "duration": 800,
+        "loop": true,
+        "repeatReverse": true,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "opacity": 0,
+        }
+      }
     />
+  </View>
+</View>
+`;
+
+exports[`Atoms/SkeletonText passes the snapshot test 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    animate={
+      {
+        "width": "100%",
+      }
+    }
+    animatedStyle={
+      {
+        "value": {
+          "width": "100%",
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      {
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      animate={
+        {
+          "backgroundColor": "#E4E9F2",
+          "borderRadius": 8,
+          "height": 15,
+          "marginBottom": 12,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#F7F9FC",
+          },
+        }
+      }
+      collapsable={false}
+      from={
+        {
+          "backgroundColor": "#F7F9FC",
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 15,
+          "marginBottom": 12,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "duration": 800,
+          "loop": true,
+          "repeatReverse": true,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "opacity": 0,
+          }
+        }
+      >
+        <Text>
+          Test
+        </Text>
+      </View>
+    </View>
+    <View
+      animate={
+        {
+          "backgroundColor": "#E4E9F2",
+          "borderRadius": 8,
+          "height": 15,
+          "marginBottom": 12,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#F7F9FC",
+          },
+        }
+      }
+      collapsable={false}
+      from={
+        {
+          "backgroundColor": "#F7F9FC",
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 15,
+          "marginBottom": 12,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "duration": 800,
+          "loop": true,
+          "repeatReverse": true,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "opacity": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      animate={
+        {
+          "backgroundColor": "#E4E9F2",
+          "borderRadius": 8,
+          "height": 15,
+          "width": "100%",
+        }
+      }
+      animatedStyle={
+        {
+          "value": {
+            "backgroundColor": "#F7F9FC",
+          },
+        }
+      }
+      collapsable={false}
+      from={
+        {
+          "backgroundColor": "#F7F9FC",
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#F7F9FC",
+          "borderRadius": 8,
+          "height": 15,
+          "width": "100%",
+        }
+      }
+      transition={
+        {
+          "duration": 800,
+          "loop": true,
+          "repeatReverse": true,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "opacity": 0,
+          }
+        }
+      />
+    </View>
   </View>
 </View>
 `;
