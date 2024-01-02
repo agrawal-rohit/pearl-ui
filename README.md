@@ -3,7 +3,7 @@
   <img width="346" alt="logo" src="https://user-images.githubusercontent.com/29514438/133960518-569428c5-fe04-4631-b20e-5935a4c93914.png">
 </a>
 
-<br />
+<br /><br />
 
 <p align="center" style="width: 80%; margin: auto">
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/agrawal-rohit/pearl-ui/Publish.yml">
@@ -13,7 +13,6 @@
 <img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui"> 
 </p>
 
-<br />
 
 <h4>Build consistent cross-platform mobile apps at <span style="color: #6356e5">lightning speed</span></h4>
 
