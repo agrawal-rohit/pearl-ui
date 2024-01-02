@@ -1,3 +1,11 @@
+## [2.3.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.3.0...v2.3.1) (2024-01-02)
+
+
+### Bug Fixes
+
+* Fixed black flashing issue in the ghost variant of icon buttons ([6337c68](https://github.com/agrawal-rohit/pearl-ui/commit/6337c68a586135c56e82692505dc23e830454775))
+* Fixed web support issues for Checkbox ([cefef5a](https://github.com/agrawal-rohit/pearl-ui/commit/cefef5a5e374bf852e91a65955a37e1ce9a228a9))
+
 # [2.3.0](https://github.com/agrawal-rohit/pearl-ui/compare/v2.2.6...v2.3.0) (2024-01-01)
 
 
