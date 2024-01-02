@@ -130,7 +130,10 @@ const IconButtonConfig: MolecularComponentConfig<IconButtonAtoms> = {
     },
     ghost: {
       pressable: {
-        backgroundColor: "transparent",
+        bgColor: {
+          light: "primary.50(transparent)",
+          dark: "primary.900(transparent)",
+        },
         _hovered: {
           bgColor: {
             light: "primary.50",
