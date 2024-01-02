@@ -357,8 +357,8 @@ const Index = () => {
           <HStack alignItems="center">
             {!!activeComponent && (
               <Pressable
-                onPress={() => setActiveComponent(undefined)}
                 alignSelf="center"
+                onPress={() => setActiveComponent(undefined)}
               >
                 <Icon
                   rawSize={15}

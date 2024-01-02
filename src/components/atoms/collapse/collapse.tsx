@@ -7,7 +7,6 @@ import {
   BoxStyleProps,
   boxStyleFunctions,
 } from "../../../theme/src/style-functions";
-import { Easing } from "react-native-reanimated";
 import { useStyleProps } from "../../../hooks";
 
 export type CollapseProps = BoxProps & {
@@ -60,22 +59,16 @@ const Collapse = React.memo(
                 {...computedStyles}
                 from={{
                   ...(animateOpacity && { opacity: 0 }),
-                  height: 0,
+                  height: startingHeight,
                 }}
                 animate={{
                   ...(animateOpacity && { opacity: 1 }),
-                  height: show
-                    ? typeof actualHeightRef.current === "string" &&
-                      actualHeightRef.current.includes("auto")
-                      ? "auto"
-                      : actualHeightRef.current
-                    : startingHeight,
+                  height: actualHeightRef.current,
                 }}
                 transition={
                   {
                     dampingRatio: 1,
                     duration: 150,
-                    easing: Easing.inOut,
                     ...transition,
                     type: "spring",
                   } as MotiWithPearlStyleProps<
@@ -85,13 +78,12 @@ const Collapse = React.memo(
                 }
                 exit={{
                   ...(animateOpacity && { opacity: 0 }),
-                  height: 0,
+                  height: startingHeight as any,
                 }}
                 exitTransition={
                   {
                     dampingRatio: 1,
                     duration: 150,
-                    easing: Easing.inOut,
                     ...exitTransition,
                     type: "spring",
                   } as MotiWithPearlStyleProps<
@@ -102,15 +94,16 @@ const Collapse = React.memo(
               >
                 <Box
                   onLayout={({ nativeEvent }) => {
+                    const currentHeight =
+                      nativeEvent.layout.height +
+                      (computedStyles.style.paddingTop || 0) +
+                      (computedStyles.style.paddingBottom || 0);
+
                     if (
                       typeof actualHeightRef.current === "string" ||
-                      nativeEvent.layout.height > actualHeightRef.current
+                      currentHeight > actualHeightRef.current
                     )
-                      actualHeightRef.current = Math.ceil(
-                        nativeEvent.layout.height +
-                          (computedStyles.style.paddingTop || 0) +
-                          (computedStyles.style.paddingBottom || 0)
-                      );
+                      actualHeightRef.current = Math.ceil(currentHeight);
                   }}
                 >
                   {children}

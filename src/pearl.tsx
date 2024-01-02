@@ -150,10 +150,10 @@ export function pearl<
             {...convertedProps}
             key={
               Platform.OS === "web" &&
-              ["Text", "Icon", "Box"].includes(config.componentName as string)
+              ["Text", "Icon"].includes(config.componentName as string)
                 ? (convertedProps as any).key!
                   ? `${(convertedProps as any).key!}-${colorMode}`
-                  : `${colorMode}`
+                  : `${colorMode}-${Math.random()}`
                 : undefined
             }
             ref={ref}

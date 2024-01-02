@@ -22,6 +22,27 @@ export const MOTI_PROPS = [
   "animateInitialState",
 ];
 
+export const NON_ANIMATEABLE_STYLE_PROPS = [
+  "flex",
+  "flexShrink",
+  "flexGrow",
+  "flexBasis",
+  "flexDirection",
+  "flexWrap",
+  "shadowOffset",
+  "textShadowOffset",
+  "fontFamily",
+  "fontWeight",
+  "fontSize",
+  "lineHeight",
+  "letterSpacing",
+  "fontStyle",
+  "textAlign",
+  "textDecorationLine",
+  "textDecorationStyle",
+  "textTransform",
+];
+
 /**
  * Checks if a key exists in an object and throws an error if it doesn't.
  * @param key - The key to check for.

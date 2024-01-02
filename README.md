@@ -13,6 +13,8 @@
 <img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui"> 
 </p>
 
+<br />
+
 <h4>Build consistent cross-platform mobile apps at <span style="color: #6356e5">lightning speed</span></h4>
 
 <div align="center">
