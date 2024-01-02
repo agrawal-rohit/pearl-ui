@@ -110,7 +110,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -121,14 +120,12 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -136,7 +133,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }
@@ -321,7 +317,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -332,14 +327,12 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -347,7 +340,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowMultiple prop 1`
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }
@@ -566,7 +558,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowToggle prop 1`] 
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -577,14 +568,12 @@ exports[`Molecules/Accordion passes the snapshot test with allowToggle prop 1`] 
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -592,7 +581,6 @@ exports[`Molecules/Accordion passes the snapshot test with allowToggle prop 1`] 
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }
@@ -811,7 +799,6 @@ exports[`Molecules/Accordion passes the snapshot test with default props 1`] = `
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -822,14 +809,12 @@ exports[`Molecules/Accordion passes the snapshot test with default props 1`] = `
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -837,7 +822,6 @@ exports[`Molecules/Accordion passes the snapshot test with default props 1`] = `
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }
@@ -1022,7 +1006,6 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -1033,14 +1016,12 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -1048,7 +1029,6 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }
@@ -1233,7 +1213,6 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
           animatedStyle={
             {
               "value": {
-                "opacity": 1,
                 "width": "100%",
               },
             }
@@ -1244,14 +1223,12 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
               "__state": {
                 "_isReanimatedSharedValue": true,
                 "_value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
                 "addListener": [Function],
                 "modify": [Function],
                 "removeListener": [Function],
                 "value": {
-                  "opacity": 1,
                   "width": "100%",
                 },
               },
@@ -1259,7 +1236,6 @@ exports[`Molecules/Accordion passes the snapshot test with multiple items 1`] = 
           }
           style={
             {
-              "opacity": 1,
               "width": "100%",
             }
           }

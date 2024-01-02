@@ -17,7 +17,6 @@ exports[`Molecules/Textarea passes the snapshot test for basic setup 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -31,7 +30,6 @@ exports[`Molecules/Textarea passes the snapshot test for basic setup 1`] = `
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -47,7 +45,6 @@ exports[`Molecules/Textarea passes the snapshot test for basic setup 1`] = `
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -148,7 +145,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderRadius": 4,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 4,
       }
@@ -162,7 +158,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
           "borderRadius": 4,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 4,
           "paddingVertical": 4,
         },
@@ -178,7 +173,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 4,
       }
@@ -266,7 +260,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderRadius": 4,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 6,
       }
@@ -280,7 +273,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
           "borderRadius": 4,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 4,
           "paddingVertical": 6,
         },
@@ -296,7 +288,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 6,
       }
@@ -384,7 +375,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -398,7 +388,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -414,7 +403,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -502,7 +490,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 10,
         "paddingVertical": 12,
       }
@@ -516,7 +503,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 10,
           "paddingVertical": 12,
         },
@@ -532,7 +518,6 @@ exports[`Molecules/Textarea passes the snapshot test for different sizes 1`] = `
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 10,
         "paddingVertical": 12,
       }
@@ -631,7 +616,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -645,7 +629,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -661,7 +644,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -750,7 +732,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -764,7 +745,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -780,7 +760,6 @@ exports[`Molecules/Textarea passes the snapshot test for different variants 1`] 
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -880,7 +859,6 @@ exports[`Molecules/Textarea passes the snapshot test when using style props 1`] 
         "borderRadius": 8,
         "borderWidth": 1,
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
         "width": "100%",
@@ -895,7 +873,6 @@ exports[`Molecules/Textarea passes the snapshot test when using style props 1`] 
           "borderRadius": 8,
           "borderWidth": 1,
           "height": 100,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
           "width": "100%",
@@ -912,7 +889,6 @@ exports[`Molecules/Textarea passes the snapshot test when using style props 1`] 
         "borderWidth": 1,
         "flexDirection": "row",
         "height": 100,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
         "width": "100%",

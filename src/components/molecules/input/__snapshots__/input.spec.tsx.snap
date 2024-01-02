@@ -16,7 +16,6 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -29,7 +28,6 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -44,7 +42,6 @@ exports[`Molecules/Input passes the snapshot test for basic setup 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -140,7 +137,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -153,7 +149,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -168,7 +163,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -252,7 +246,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
         "borderColor": "#C5CEE0",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -265,7 +258,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
           "borderColor": "#C5CEE0",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -280,7 +272,6 @@ exports[`Molecules/Input passes the snapshot test for different icons 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -377,7 +368,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 4,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 4,
       }
@@ -390,7 +380,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 4,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 4,
           "paddingVertical": 4,
         },
@@ -405,7 +394,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderRadius": 4,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 4,
       }
@@ -488,7 +476,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 4,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 6,
       }
@@ -501,7 +488,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 4,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 4,
           "paddingVertical": 6,
         },
@@ -516,7 +502,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderRadius": 4,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 4,
         "paddingVertical": 6,
       }
@@ -599,7 +584,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -612,7 +596,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -627,7 +610,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -710,7 +692,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 10,
         "paddingVertical": 12,
       }
@@ -723,7 +704,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 10,
           "paddingVertical": 12,
         },
@@ -738,7 +718,6 @@ exports[`Molecules/Input passes the snapshot test for different sizes 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 10,
         "paddingVertical": 12,
       }
@@ -832,7 +811,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -845,7 +823,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -860,7 +837,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -944,7 +920,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
         "borderColor": "#C5CEE0",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -957,7 +932,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
           "borderColor": "#C5CEE0",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
         },
@@ -972,7 +946,6 @@ exports[`Molecules/Input passes the snapshot test for different variants 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
       }
@@ -1067,7 +1040,6 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
         "borderColor": "#E4E9F2",
         "borderRadius": 8,
         "borderWidth": 1,
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
         "width": "100%",
@@ -1081,7 +1053,6 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
           "borderColor": "#E4E9F2",
           "borderRadius": 8,
           "borderWidth": 1,
-          "opacity": 1,
           "paddingHorizontal": 6,
           "paddingVertical": 8,
           "width": "100%",
@@ -1097,7 +1068,6 @@ exports[`Molecules/Input passes the snapshot test when using style props 1`] = `
         "borderRadius": 8,
         "borderWidth": 1,
         "flexDirection": "row",
-        "opacity": 1,
         "paddingHorizontal": 6,
         "paddingVertical": 8,
         "width": "100%",

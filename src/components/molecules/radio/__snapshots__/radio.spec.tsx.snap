@@ -51,7 +51,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -62,14 +61,12 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -77,7 +74,6 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -155,6 +151,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -189,6 +186,7 @@ exports[`Molecules/Radio passes the snapshot test for basic setup 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -286,7 +284,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -297,14 +294,12 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -312,7 +307,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -390,6 +384,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -424,6 +419,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -510,7 +506,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -521,14 +516,12 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -536,7 +529,6 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -614,6 +606,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -648,6 +641,7 @@ exports[`Molecules/Radio passes the snapshot test for different color schemes 1`
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -745,7 +739,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -756,14 +749,12 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -771,7 +762,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -849,6 +839,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -883,6 +874,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -969,7 +961,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -980,14 +971,12 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -995,7 +984,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -1073,6 +1061,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -1107,6 +1096,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -1193,7 +1183,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -1204,14 +1193,12 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -1219,7 +1206,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -1297,6 +1283,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -1331,6 +1318,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -1417,7 +1405,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -1428,14 +1415,12 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -1443,7 +1428,6 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -1521,6 +1505,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -1555,6 +1540,7 @@ exports[`Molecules/Radio passes the snapshot test for different sizes 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -1652,7 +1638,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -1663,14 +1648,12 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -1678,7 +1661,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -1756,6 +1738,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -1790,6 +1773,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -1876,7 +1860,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -1887,14 +1870,12 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -1902,7 +1883,6 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -1980,6 +1960,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -2014,6 +1995,7 @@ exports[`Molecules/Radio passes the snapshot test for different variants 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -2111,7 +2093,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -2122,14 +2103,12 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -2137,7 +2116,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -2215,6 +2193,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -2249,6 +2228,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -2335,7 +2315,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -2346,14 +2325,12 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -2361,7 +2338,6 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -2439,6 +2415,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -2473,6 +2450,7 @@ exports[`Molecules/Radio passes the snapshot test when in a checked state 1`] = 
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -2570,7 +2548,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
         {
           "value": {
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -2581,14 +2558,12 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
             "_isReanimatedSharedValue": true,
             "_value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
             "removeListener": [Function],
             "value": {
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -2596,7 +2571,6 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
       style={
         {
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -2674,6 +2648,7 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -2708,6 +2683,7 @@ exports[`Molecules/Radio passes the snapshot test when in an error state 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
@@ -2808,7 +2784,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
             "borderColor": "#C5CEE0",
             "borderWidth": 2,
             "marginVertical": 4,
-            "opacity": 1,
           },
         }
       }
@@ -2822,7 +2797,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
               "borderColor": "#C5CEE0",
               "borderWidth": 2,
               "marginVertical": 4,
-              "opacity": 1,
             },
             "addListener": [Function],
             "modify": [Function],
@@ -2832,7 +2806,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
               "borderColor": "#C5CEE0",
               "borderWidth": 2,
               "marginVertical": 4,
-              "opacity": 1,
             },
           },
         }
@@ -2843,7 +2816,6 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
           "borderColor": "#C5CEE0",
           "borderWidth": 2,
           "marginVertical": 4,
-          "opacity": 1,
         }
       }
       transition={
@@ -2921,6 +2893,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
           transition={
             {
               "duration": 50,
+              "type": "timing",
             }
           }
         >
@@ -2955,6 +2928,7 @@ exports[`Molecules/Radio passes the snapshot test when using style props 1`] = `
             transition={
               {
                 "duration": 50,
+                "type": "timing",
               }
             }
           />
