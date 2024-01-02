@@ -40,6 +40,12 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
         borderColor: "danger.500",
       },
     },
+    icon: {
+      transition: {
+        type: "timing",
+        duration: 50,
+      },
+    },
     text: {
       alignSelf: "center",
     },
@@ -100,12 +106,10 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
         },
       },
       icon: {
-        animate: {
-          opacity: 0,
-          color: "neutral.50",
-        },
+        opacity: 0,
         _checked: {
           opacity: 1,
+          color: "neutral.50",
         },
       },
     },
@@ -121,9 +125,7 @@ const CheckboxConfig: MolecularComponentConfig<CheckboxAtoms> = {
         },
       },
       icon: {
-        animate: {
-          opacity: 0,
-        },
+        opacity: 0,
         _checked: {
           opacity: 1,
           color: "primary.500",

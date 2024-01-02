@@ -31,6 +31,7 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
         borderColor: "danger.500",
       },
       transition: {
+        type: "timing",
         duration: 50,
       },
     },
@@ -39,6 +40,7 @@ const RadioConfig: MolecularComponentConfig<RadioAtoms> = {
       h: "100%",
       borderRadius: "full",
       transition: {
+        type: "timing",
         duration: 50,
       },
     },

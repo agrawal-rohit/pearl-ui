@@ -1,9 +1,12 @@
-import { boxStyleFunctions } from "../../theme/src/style-functions";
+import _ from "lodash";
+import {
+  allStyleFunctions,
+  boxStyleFunctions,
+} from "../../theme/src/style-functions";
 import { ComponentTypes, StyleFunctionContainer } from "../../theme/src/types";
-import defaultRNStyles from "../../theme/utils/default-rn-styles";
-import { getKeys } from "../../theme/utils/type-helpers";
 import { removeUndefined } from "../../theme/utils/utils";
 import { useStateWithStyleProps } from "../useStateWithStyleProps";
+import { NON_ANIMATEABLE_STYLE_PROPS } from "../utils/utils";
 
 /**
  * Hook to manage a pressed state and compose extra styling while a component is pressed
@@ -27,32 +30,30 @@ export const useDynamicStateStyle = (
   // Override the pressed state if the parentStateValue is provided
   let stateStyles = useStateWithStyleProps(props[stateKey], styleFunctions);
 
+  delete props[stateKey];
+
   // If there are no state styles, return the original props
   if (!stateStyles) return props;
 
-  delete props[stateKey];
+  const animateableStyles = _.omit(stateStyles, NON_ANIMATEABLE_STYLE_PROPS);
+  const allStylePropertyKeys = allStyleFunctions.map((val) => val.property);
+  const animateableStyleProperties = Object.values(
+    _.omit(allStylePropertyKeys, NON_ANIMATEABLE_STYLE_PROPS)
+  ) as string[];
+
   let finalProps = props;
 
   // If the component is animateable, add missing required styles from the 'from' prop to the base style
   if (animateable) {
-    finalProps.animate = getKeys(stateStyles).reduce((final, key: any) => {
-      if (getKeys(defaultRNStyles).includes(key)) {
-        return {
-          [key]: (defaultRNStyles as any)[key],
-          ...removeUndefined(final),
-        };
-      }
-
-      return final;
-    }, finalProps.animate);
-
     // If the current state is true, add the state styles to the animate prop
     if (currentState) {
       finalProps.animate = {
         ...finalProps.animate,
-        ...removeUndefined(stateStyles),
+        ...removeUndefined(animateableStyles),
       };
     }
+
+    if (!finalProps.animate) finalProps.animate = undefined;
   } else {
     // If the component is not animateable and the current state is true, add the state styles to the style prop
     if (currentState) {

@@ -2,14 +2,18 @@ import { useMemo } from "react";
 import { getKeys } from "../theme/utils/type-helpers";
 import { StyleFunctionContainer } from "../theme/src/types";
 import { useTheme } from "./useTheme";
-import { composeCleanStyleProps, composeStyleProps } from "./utils/utils";
+import {
+  NON_ANIMATEABLE_STYLE_PROPS,
+  composeCleanStyleProps,
+  composeStyleProps,
+} from "./utils/utils";
 import {
   layoutPropertiesShorthand,
   spacingPropertiesShorthand,
 } from "../theme/src/style-properties";
-import _ from "lodash";
 import { removeUndefined } from "../theme/utils/utils";
 import { useWindowDimensions } from "react-native";
+import _ from "lodash";
 
 const shorthandPropMapper = {
   ...layoutPropertiesShorthand,
@@ -34,28 +38,7 @@ export const useMotiWithStyleProps = (
     () => composeStyleProps(styleFunctions),
     [styleFunctions]
   );
-
-  const nonAnimateableStyleProps = [
-    "flex",
-    "flexShrink",
-    "flexGrow",
-    "flexBasis",
-    "flexDirection",
-    "flexWrap",
-    "shadowOffset",
-    "textShadowOffset",
-    "fontFamily",
-    "fontWeight",
-    "fontSize",
-    "lineHeight",
-    "fontStyle",
-    "textAlign",
-    "letterSpacing",
-    "textDecorationLine",
-    "textDecorationStyle",
-    "textTransform",
-  ];
-  const animateableStyles = _.omit(props.style, nonAnimateableStyleProps);
+  const animateableStyles = _.omit(props.style, NON_ANIMATEABLE_STYLE_PROPS);
 
   // Convert 'from', 'animate', 'transition', 'exit', 'exitTransition' props
   ["from", "animate", "transition", "exit", "exitTransition"].forEach(
@@ -111,7 +94,7 @@ export const useMotiWithStyleProps = (
             };
           }, props[prop]);
 
-          if (prop === "transition" && !props[prop])
+          if (!props[prop])
             props[prop] = {
               type: "spring",
               dampingRatio: 1,
@@ -122,6 +105,6 @@ export const useMotiWithStyleProps = (
     }
   );
 
-  // props.style = _.pick(props.style, nonAnimateableStyleProps);
+  // props.style = _.pick(props.style, NON_ANIMATEABLE_STYLE_PROPS);
   return props;
 };
