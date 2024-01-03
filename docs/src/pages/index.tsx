@@ -181,9 +181,20 @@ function ExpoQRCodeSection() {
           <section>
             <h1>Check out Pearl UI in action!</h1>
             <p>
-              Simply scan the QR code using the Expo app on your device. This
-              will launch a live demo showcasing the wide array of ready-to-use
-              components and intuitive animations that Pearl UI offers.
+              Simply scan the QR code using the Expo app on your device or click{" "}
+              <a
+                target="_blank"
+                href="https://snack.expo.dev/@agrawal-rohit/pearl-ui---showcase?platform=web"
+                style={{
+                  fontWeight: 500,
+                  color: "white",
+                  textDecoration: "underline",
+                }}
+              >
+                here
+              </a>{" "}
+              to view a live demo showcasing the ready-to-use components and
+              intuitive animations that Pearl UI offers.
             </p>
             <img
               src={require("@site/static/img/showcase-qr-code.png").default}
