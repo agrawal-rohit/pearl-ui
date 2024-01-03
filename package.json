@@ -12,7 +12,7 @@
     "!**/__mocks__"
   ],
   "typings": "lib/typescript/src/index.d.ts",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
   "license": "MIT",
   "private": false,
