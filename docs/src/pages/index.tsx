@@ -165,14 +165,59 @@ function FeaturesSection() {
   );
 }
 
+function ExpoQRCodeSection() {
+  const { isDarkTheme } = useThemeContext();
+
+  return (
+    <section>
+      <div className="container">
+        <main
+          className={`${styles.showcaseContainer} ${
+            isDarkTheme
+              ? styles.darkShowcaseContainer
+              : styles.lightShowcaseContainer
+          }`}
+        >
+          <section>
+            <h1>Check out Pearl UI in action!</h1>
+            <p>
+              Simply scan the QR code using the Expo app on your device. This
+              will launch a live demo showcasing the wide array of ready-to-use
+              components and intuitive animations that Pearl UI offers.
+            </p>
+            <img
+              src={require("@site/static/img/showcase-qr-code.png").default}
+              style={{
+                width: 180,
+                height: 180,
+                padding: 10,
+                marginTop: 20,
+                borderRadius: 8,
+                backgroundColor: "white",
+              }}
+            />
+          </section>
+          <img
+            src={require("@site/static/img/showcase.png").default}
+            style={{
+              width: 200,
+              display: "flex",
+              height: "auto",
+              marginRight: 8,
+            }}
+          />
+        </main>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
-      description="Pearl UI is a design-system-driven framework for developers to build
-      beautiful, accessible mobile apps straight out of the box. Take your
-      idea from a design mockup to a finished product at the speed of light!"
+      description="Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development."
     >
       {/* <Head>
         <script async src="https://snack.expo.dev/embed.js"></script>
@@ -180,6 +225,9 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <br />
       <FeaturesSection />
+      <br />
+      <br />
+      <ExpoQRCodeSection />
       <br />
       <br />
     </Layout>

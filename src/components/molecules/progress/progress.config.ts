@@ -109,7 +109,10 @@ const ProgressConfig: MolecularComponentConfig<ProgressAtoms> = {
   variants: {
     filled: {
       container: {
-        backgroundColor: "neutral.200",
+        bgColor: {
+          light: "neutral.200",
+          dark: "neutral.700",
+        },
       },
       bar: {
         bgColor: "primary.500",

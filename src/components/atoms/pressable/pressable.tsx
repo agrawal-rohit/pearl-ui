@@ -127,10 +127,7 @@ const Pressable = React.memo(
         ..._.pick(props.animate, STYLE_PROPS_FOR_CONTAINER),
         ..._.pick(props.style, STYLE_PROPS_FOR_CONTAINER),
       };
-      const childStyles = _.omit(
-        { ...((props.style as object) || {}) },
-        STYLE_PROPS_FOR_CONTAINER
-      );
+      const childStyles = _.omit(props.style || {}, STYLE_PROPS_FOR_CONTAINER);
 
       // Methods to handle local pressable state
       const onPressInHandler = () => {

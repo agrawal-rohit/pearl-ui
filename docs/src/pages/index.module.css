@@ -71,3 +71,39 @@
     margin-bottom: 10px;
   }
 }
+
+.showcaseContainer {
+  padding: 50px;
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lightShowcaseContainer {
+  background-image: radial-gradient(at top left, #222b45, transparent),
+    radial-gradient(at top right, #6356e5, transparent),
+    radial-gradient(at bottom left, #1a202c 200%, transparent);
+}
+
+.darkShowcaseContainer {
+  background-image: radial-gradient(at top left, #222b45, transparent),
+    radial-gradient(at top right, #6356e5, transparent),
+    radial-gradient(at bottom left, #1a202c 200%, transparent);
+}
+
+.showcaseContainer section {
+  flex: 0.8;
+}
+
+.showcaseContainer section h1 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.showcaseContainer section p {
+  font-size: 16px;
+  font-family: "Poppins";
+}
