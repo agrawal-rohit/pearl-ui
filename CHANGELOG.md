@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/agrawal-rohit/pearl-ui/compare/v2.3.1...v2.3.2) (2024-01-03)
+
+
+### Bug Fixes
+
+* Updated peer dependencies ([5e49f1f](https://github.com/agrawal-rohit/pearl-ui/commit/5e49f1f7594930b9f872bd7c27c7679dac591d2d))
+
 ## [2.3.1](https://github.com/agrawal-rohit/pearl-ui/compare/v2.3.0...v2.3.1) (2024-01-02)
 
 
