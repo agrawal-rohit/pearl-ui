@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/agrawal-rohit/pearl-ui/compare/v2.3.3...v2.3.4) (2024-01-03)
+
+
+### Bug Fixes
+
+* Fixed AppEntry.js issue during build ([aa94f13](https://github.com/agrawal-rohit/pearl-ui/commit/aa94f132dc8db140c0db1b82b5ac8cf56ebdca11))
+
 ## [2.3.3](https://github.com/agrawal-rohit/pearl-ui/compare/v2.3.2...v2.3.3) (2024-01-03)
 
 
