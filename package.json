@@ -70,7 +70,7 @@
     "@types/crypto-js": "^4.1.2",
     "@types/jest": "29.5.5",
     "@types/lodash": "^4.14.199",
-    "@types/react": "18.2.28",
+    "@types/react": "18.2.46",
     "@types/react-test-renderer": "18.0.3",
     "@welldone-software/why-did-you-render": "^7.0.1",
     "babel-loader": "^9.1.3",
