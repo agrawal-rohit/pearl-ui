@@ -13,14 +13,13 @@
 <img alt="Licence" src="https://img.shields.io/github/license/agrawal-rohit/pearl-ui"> 
 </p>
 
-
 <h4>Build consistent cross-platform mobile apps at <span style="color: #6356e5">lightning speed</span></h4>
 
 <div align="center">
-<a href="https://docs.pearl-ui.dev/docs/overview/getting-started/introduction">Getting Started</a> •
-<a href="">Demo</a> •
-<a href="https://docs.pearl-ui.dev/docs/overview/getting-started/installation">Installation</a> •
-<a href="#documentation">Documentation</a>
+<a href="https://docs.pearl-ui.dev/docs/overview/getting-started/introduction" target="_blank">Getting Started</a> •
+<a href="https://snack.expo.dev/@agrawal-rohit/pearl-ui---showcase?platform=web" target="_blank">Demo</a> •
+<a href="https://docs.pearl-ui.dev/docs/overview/getting-started/installation" target="_blank">Installation</a> •
+<a href="https://docs.pearl-ui.dev" target="_blank">Documentation</a>
 
 </div>
 
