@@ -14,7 +14,9 @@
   ],
   "typings": "lib/typescript/src/index.d.ts",
   "version": "2.3.4",
+  "author": "Rohit Agrawal <https://github.com/agrawal-rohit>",
   "repository": "https://github.com/agrawal-rohit/pearl-ui.git",
+  "homepage": "https://docs.pearl-ui.dev/",
   "license": "MIT",
   "private": false,
   "scripts": {
