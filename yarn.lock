@@ -1378,10 +1378,10 @@
   dependencies:
     chalk "^4.1.0"
 
-"@ctrl/tinycolor@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.0.2.tgz#7665b09c0163722ffc20ee885eb9a8ff80d9ebde"
-  integrity sha512-fKQinXE9pJ83J1n+C3rDl2xNLJwfoYNvXLRy5cYZA9hBJJw2q+sbb/AOSNKmLxnTWyNTmy4994dueSwP4opi5g==
+"@ctrl/tinycolor@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.0.3.tgz#c56d96ef0d7be598cf68d1ab53f990849a79f5b4"
+  integrity sha512-e9nEVehVJwkymQpkGhdSNzLT2Lr9UTTby+JePq4Z2SxBbOQjY7pLgSouAaXvfaGQVSAaY0U4eJdwfSDmCbItcw==
 
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
