@@ -5906,10 +5906,10 @@ expo-av@~13.4.1:
   resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-13.4.1.tgz#83029b3202e64bf060f0a7a24591d93bf7ab728c"
   integrity sha512-0K8QEFzZeNGrppzYUs8wOtjOyPPkxzlVYbEHM6WzIQOG1uYYNOJkJB3aQHVFXHmz+AzoHwMrUjcschofwaMNeg==
 
-expo-blur@~12.4.1:
-  version "12.4.1"
-  resolved "https://registry.yarnpkg.com/expo-blur/-/expo-blur-12.4.1.tgz#b391de84914ef9ece0702378e51e09461ad565ab"
-  integrity sha512-lGN8FS9LuGUlEriULTC62cCWyg5V7zSVQeJ6Duh1wSq8aAETinZ2/7wrT6o+Uhd/XVVxFNON2T25AGCOtMG6ew==
+expo-blur@~12.9.1:
+  version "12.9.1"
+  resolved "https://registry.yarnpkg.com/expo-blur/-/expo-blur-12.9.1.tgz#899c3c627ceb483d29131d4bd97dfd508a56b456"
+  integrity sha512-Motzx1vp73qLtEJ1UFVgn2KMyohsl0UM7sUwHoSqBc/BEkaaHS4+FxHt/6+1Tscfwrg/bZ6gv52+TbgGyQPXOA==
 
 expo-constants@~14.4.2:
   version "14.4.2"
