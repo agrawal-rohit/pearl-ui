@@ -38,7 +38,7 @@
     "@expo/webpack-config": "^19.0.0",
     "@react-native-async-storage/async-storage": "1.18.2",
     "crypto-js": "^4.2.0",
-    "expo": "^49.0.13",
+    "expo": "^49.0.22",
     "expo-app-loading": "^2.1.1",
     "expo-av": "~13.4.1",
     "expo-blur": "~12.4.1",
