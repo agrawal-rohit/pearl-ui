@@ -42,7 +42,7 @@
     "expo-app-loading": "^2.1.1",
     "expo-av": "~13.4.1",
     "expo-blur": "~12.4.1",
-    "expo-file-system": "~15.4.5",
+    "expo-file-system": "~16.0.5",
     "expo-status-bar": "~1.6.0",
     "lodash": "^4.17.21",
     "moti": "0.27.2",
@@ -57,7 +57,7 @@
   "peerDependencies": {
     "expo-av": "~13.4.1",
     "expo-blur": "~12.4.1",
-    "expo-file-system": "~15.4.5",
+    "expo-file-system": "~16.0.5",
     "react-native-reanimated": "~3.3.0",
     "react-native-gesture-handler": "~2.14.1"
   },
