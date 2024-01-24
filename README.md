@@ -31,6 +31,8 @@
 Pearl UI is a user-friendly UI library for React Native, offering ready-to-use components, framer-motion-like animations, dark mode, and responsive design. With its design-first approach and intuitive styling system, Pearl UI greatly enhances developer efficiency, simplifying and accelerating app development.
 </p>
 
+_(Interested in creating your own NPM library? Check out my [NPM library template](https://github.com/agrawal-rohit/npm-library-template) to kickstart your library development with best practices and integrated tools.)_
+
 ## Features
 
 Pearl UI is a comprehensive UI library for React Native projects, offering a wide range of features:
