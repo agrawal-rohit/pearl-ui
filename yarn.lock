@@ -5901,10 +5901,10 @@ expo-asset@~8.10.1:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
-expo-av@~13.4.1:
-  version "13.4.1"
-  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-13.4.1.tgz#83029b3202e64bf060f0a7a24591d93bf7ab728c"
-  integrity sha512-0K8QEFzZeNGrppzYUs8wOtjOyPPkxzlVYbEHM6WzIQOG1uYYNOJkJB3aQHVFXHmz+AzoHwMrUjcschofwaMNeg==
+expo-av@~13.10.4:
+  version "13.10.4"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-13.10.4.tgz#04e549240e513753971dbeef323457e6fa30a60a"
+  integrity sha512-Qlj+ILJ8wVK7J8DT9e6B1FyIcI3kM0iPhgmt7vnSqAWAbexOJRK7IP3MlKqKvHAhwm2OxIU3qJkShF7hvk20xA==
 
 expo-blur@~12.4.1:
   version "12.4.1"
