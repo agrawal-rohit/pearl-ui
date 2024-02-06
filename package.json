@@ -40,7 +40,7 @@
     "crypto-js": "^4.2.0",
     "expo": "^49.0.13",
     "expo-app-loading": "^2.1.1",
-    "expo-av": "~13.4.1",
+    "expo-av": "~13.10.5",
     "expo-blur": "~12.4.1",
     "expo-file-system": "~15.4.5",
     "expo-status-bar": "~1.11.1",
@@ -55,7 +55,7 @@
     "react-native-web": "^0.19.9"
   },
   "peerDependencies": {
-    "expo-av": "~13.4.1",
+    "expo-av": "~13.10.5",
     "expo-blur": "~12.4.1",
     "expo-file-system": "~15.4.5",
     "react-native-reanimated": "~3.3.0",
