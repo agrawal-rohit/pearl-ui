@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@commitlint/cli": "^18.4.4",
+    "@commitlint/cli": "^19.2.0",
     "@commitlint/config-conventional": "^18.4.4",
     "@expo-google-fonts/poppins": "^0.2.3",
     "@semantic-release/changelog": "^6.0.3",
